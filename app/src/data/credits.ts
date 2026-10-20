@@ -1,0 +1,13 @@
+export const CREDITS = [
+  { key: 'dune-day', title: 'Sahara Sunrise, Morocco', artist: 'Mustang Joe', year: '2026', license: 'CC0', url: 'https://commons.wikimedia.org/wiki/File:Sahara_Sunrise,_Morocco_-_Flickr_-_Mustang_Joe.jpg' },
+  { key: 'dune-dusk', title: 'Sunset over the Sahara in Morocco', artist: 'Mustang Joe', year: '2026', license: 'CC0', url: 'https://commons.wikimedia.org/wiki/File:Sunset_over_the_Sahara_in_Morocco.jpg' },
+  { key: 'night', title: 'Night Skies at Little Sahara', artist: 'BLM Utah', year: '2018', license: 'Public domain', url: 'https://commons.wikimedia.org/wiki/File:Night_Skies_at_Little_Sahara_(49991333898).jpg' },
+  { key: 'oasis', title: 'Oasis in Libya', artist: 'Sfivat', year: '2005', license: 'Public domain', url: 'https://commons.wikimedia.org/wiki/File:Oasis_in_Libya.jpg' },
+  { key: 'caravan', title: 'Camel Train in the Desert', artist: 'Charles-Théodore Frère', year: '1855', license: 'Public domain', url: 'https://commons.wikimedia.org/wiki/File:%27Camel_Train_in_the_Desert%27_by_Charles-Th%C3%A9odore_Fr%C3%A8re,_1855.jpg' },
+  { key: 'city', title: 'Jerusalem from the Mount of Olives', artist: 'Edward Lear', year: '1858-1859', license: 'Public domain', url: 'https://commons.wikimedia.org/wiki/File:Edward_Lear_-_Jerusalem_from_the_Mount_of_Olives_-_Google_Art_Project.jpg' },
+  { key: 'interior', title: 'Intérieur de la salle de prière de la Grande Mosquée de Kairouan', artist: 'F. Soler (photographer)', year: '1880', license: 'Public domain', url: 'https://commons.wikimedia.org/wiki/File:Int%C3%A9rieur_de_la_salle_de_pri%C3%A8re_de_la_Grande_Mosqu%C3%A9e_de_Kairouan,_1880.png' },
+  { key: 'battle', title: 'Twilight in the Wilderness', artist: 'Frederic Edwin Church', year: '1860', license: 'Public domain', url: 'https://commons.wikimedia.org/wiki/File:Frederic_Edwin_Church_-_Twilight_in_the_Wilderness.jpg' },
+  { key: 'mountain', title: 'Wadi Rum desert', artist: 'Peter Chisholm', year: '2017', license: 'CC0', url: 'https://commons.wikimedia.org/wiki/File:Wadi_rum_desert.jpg' },
+  { key: 'river', title: 'River Scene on the Banks of the Tigris', artist: 'Abdul Qadir al-Rassam', year: '1920', license: 'Public domain', url: 'https://commons.wikimedia.org/wiki/File:Abdul_Qadir_al-Rassam_-_River_Scene_on_the_Banks_of_the_Tigris_-_Google_Art_Project.jpg' },
+  { key: 'dawn', title: 'Syria by the Sea', artist: 'Frederic Edwin Church', year: '1873', license: 'Public domain', url: 'https://commons.wikimedia.org/wiki/File:Syria_by_the_Sea_Frederic_Edwin_Church_1873.jpeg' },
+];
