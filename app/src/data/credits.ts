@@ -10,4 +10,6 @@ export const CREDITS = [
   { key: 'mountain', title: 'Wadi Rum desert', artist: 'Peter Chisholm', year: '2017', license: 'CC0', url: 'https://commons.wikimedia.org/wiki/File:Wadi_rum_desert.jpg' },
   { key: 'river', title: 'River Scene on the Banks of the Tigris', artist: 'Abdul Qadir al-Rassam', year: '1920', license: 'Public domain', url: 'https://commons.wikimedia.org/wiki/File:Abdul_Qadir_al-Rassam_-_River_Scene_on_the_Banks_of_the_Tigris_-_Google_Art_Project.jpg' },
   { key: 'dawn', title: 'Syria by the Sea', artist: 'Frederic Edwin Church', year: '1873', license: 'Public domain', url: 'https://commons.wikimedia.org/wiki/File:Syria_by_the_Sea_Frederic_Edwin_Church_1873.jpeg' },
+  { key: 'blue-marble', title: 'Blue Marble Next Generation, shaded relief and bathymetry', artist: 'NASA Earth Observatory', year: '2004', license: 'Public domain', url: 'https://visibleearth.nasa.gov/collection/1484/blue-marble' },
+  { key: 'aster-gdem', title: 'ASTER Global Digital Elevation Model hillshade', artist: 'METI / NASA', year: '2019', license: 'Free to use with attribution', url: 'https://asterweb.jpl.nasa.gov/gdem.asp' },
 ];

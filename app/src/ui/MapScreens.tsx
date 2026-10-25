@@ -4,7 +4,7 @@ import { EVENTS } from '../data/events';
 import { formatCoord, formatKm, kmBetween, PLACES } from '../data/geo';
 import { MAP_FOOT, MAPS, distanceRows, meccaMedinaSummary, type MapEntry, type MapRegion } from '../data/maps';
 import { tx, ui } from '../i18n';
-import { BirdMap, MAP_H, MAP_W } from './BirdMap';
+import { BirdMap, MAP_H, MAP_W, MapZoom } from './BirdMap';
 import { Chevron, PinIcon } from './icons';
 import { C, TOP, align, font, usePageWidth } from './theme';
 import { useScrollMemory } from './scrollMemory';
@@ -100,11 +100,14 @@ export function MapDetail({ id, onBack, onOpenEvent }: { id: string; onBack: () 
       {!!map.placeNote && <Text style={[s.placeNote, align()]}>{map.placeNote}</Text>}
 
       <View style={[s.frame, { marginTop: 14 }]}>
-        <BirdMap width={mapW} markers={map.show} lines={map.lines} highlight={map.focus} />
+        <MapZoom width={mapW} height={Math.round(mapW * MAP_H / MAP_W)} resetKey={map.id}>
+          <BirdMap width={mapW} markers={map.show} lines={map.lines} highlight={map.focus} animate />
+        </MapZoom>
       </View>
       <Text style={[s.legend, align()]}>
-        Kare Kâbe · Kubbeli nokta Medine · Altın halka bu yer · Kesik çizgi kuş uçuşu{approx ? ' · Baklava yaklaşık konum' : ''}
+        Kare Kâbe · Kubbe Medine · Altın halka bu yer · Eğri çizgi kuş uçuşu{approx ? ' · Baklava yaklaşık konum' : ''}
       </Text>
+      <Text style={[s.legend, align()]}>İki parmakla yakınlaştırın, kaydırın. Çift dokunuş kadrajı sıfırlar.</Text>
 
       <Text style={[s.h, align()]}>{ui('distances')}</Text>
       <View style={s.table}>
@@ -168,7 +171,7 @@ const s = StyleSheet.create({
   sub: { color: C.dim, fontFamily: font.sans, fontSize: 16, lineHeight: 24, marginTop: 8 },
   coord: { color: C.goldDeep, fontFamily: font.sans, fontSize: 13, marginTop: 8, letterSpacing: 0.2 },
   placeNote: { color: C.cream, fontFamily: font.sans, fontSize: 14, lineHeight: 21, marginTop: 8, backgroundColor: 'rgba(228,197,106,0.1)', borderRadius: 12, padding: 12, overflow: 'hidden' },
-  frame: { borderRadius: 18, overflow: 'hidden', borderWidth: 1, borderColor: C.lineStrong, marginTop: 16, backgroundColor: '#0c3c44' },
+  frame: { borderRadius: 18, overflow: 'hidden', borderWidth: 1, borderColor: C.lineStrong, marginTop: 16, backgroundColor: '#071820' },
   note: { color: C.dim, fontFamily: font.sans, fontSize: 13, lineHeight: 20, marginTop: 10 },
   legend: { color: C.faint, fontFamily: font.sans, fontSize: 12, lineHeight: 18, marginTop: 8 },
   group: { color: C.cream, fontFamily: font.serif, fontSize: 22, fontWeight: '700' },
