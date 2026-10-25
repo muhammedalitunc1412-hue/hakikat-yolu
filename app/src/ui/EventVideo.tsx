@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { VideoView, useVideoPlayer } from 'expo-video';
 import { SCENE_VIDEOS } from '../data/sceneVideos';
-import { C, font } from './theme';
+import { C, font, themedStyles } from './theme';
 
 // Olay sonu videosu: assets/videos/<olay-id>-video.mp4 varsa oynatılır (tam ekranda yatay döner), yoksa test yazısı.
 function Player({ src, width }: { src: number; width: number }) {
@@ -30,8 +30,8 @@ export function EventVideo({ evId, width }: { evId: string; width: number }) {
   );
 }
 
-const s = StyleSheet.create({
-  ph: { backgroundColor: '#10211e', alignItems: 'center', justifyContent: 'center' },
+const s = themedStyles(() => StyleSheet.create({
+  ph: { backgroundColor: C.card, alignItems: 'center', justifyContent: 'center' },
   t: { color: C.cream, fontFamily: font.sans, fontSize: 16, fontWeight: '800', marginTop: 8, letterSpacing: 1 },
   d: { color: C.dim, fontFamily: font.sans, fontSize: 12, marginTop: 4 },
-});
+}));

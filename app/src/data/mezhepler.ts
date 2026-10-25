@@ -34,7 +34,7 @@ export const mezhepler: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Hüseyin\'in torunu Zeyd b. Ali, Emevi halifesi Hişâm\'a karşı 122 H.\'de (740) Kûfe\'de ayaklandı ve öldürüldü. Zeyd, imametin Ali soyundan en faziletli ve ayaklanan kişiye ait olduğunu savundu, Ebû Bekir ve Ömer\'in hilafetini de meşru saydı. Bu çizgi Zeydiyye adıyla ayrı bir kol oldu; Taberistan ve Yemen\'de devletler kurdu (TDV: ılımlı bir Şii fırka). İmâmî Şia kaynaklarında ise imametin nasla belirlendiği anlatılır.' },
+      text: { tr: 'Hz. Hüseyin\'in torunu Zeyd b. Ali, Emevi halifesi Hişâm\'a karşı 122 H.\'de (740) Kûfe\'de ayaklandı ve öldürüldü. Zeyd, imametin Ali soyundan en faziletli ve ayaklanan kişiye ait olduğunu savundu, Halife Ebû Bekir ve Halife Ömer\'in hilafetini de meşru saydı. Bu çizgi Zeydiyye adıyla ayrı bir kol oldu; Taberistan ve Yemen\'de devletler kurdu (TDV: ılımlı bir Şii fırka). İmâmî Şia kaynaklarında ise imametin nasla belirlendiği anlatılır.' },
       art: { bg: 'dune-dusk', props: ['swords', 'flags'], actors: [{ kind: 'man', x: 36, label: { tr: 'Zeyd b. Ali' } }, { kind: 'crowd', x: 68, scale: 5 }] },
       by: 'both',
     },
@@ -62,7 +62,7 @@ export const mezhepler: HistEvent = {
   ],
   shia: [
     { book: 'TDV İslâm Ansiklopedisi, "Şîa" (Mustafa Öz, İlyas Üzüm, C. 39, s. 111-121)', ref: 'islamansiklopedisi.org.tr/sia', says: { tr: 'Şîa kavramı; Selman, Ebû Zer, Mikdâd, Ammâr; Sakîfe; Cemel, Sıffîn, Kerbelâ; Muhtâr ve Keysâniyye; Zeydiyye, İsmâiliyye, On İki İmam.' }, grade: { tr: 'İKİNCİL (maddenin ilk 100.000 karakteri okundu; Beyyine rivayeti bu bölümde görünmedi)' }, url: 'https://islamansiklopedisi.org.tr/sia', status: 'verified' },
-    { book: 'TDV İslâm Ansiklopedisi, "Zeydiyye"', ref: 'islamansiklopedisi.org.tr/zeydiyye', says: { tr: 'Zeyd b. Ali\'nin 122/740 ayaklanması, Ebû Bekir ve Ömer\'in hilafetini meşru sayması, Kasım er-Ressî (ö. 246/860), Taberistan ve Yemen devletleri.' }, grade: { tr: 'İKİNCİL' }, url: 'https://islamansiklopedisi.org.tr/zeydiyye', status: 'verified' },
+    { book: 'TDV İslâm Ansiklopedisi, "Zeydiyye"', ref: 'islamansiklopedisi.org.tr/zeydiyye', says: { tr: 'Zeyd b. Ali\'nin 122/740 ayaklanması, Halife Ebû Bekir ve Halife Ömer\'in hilafetini meşru sayması, Kasım er-Ressî (ö. 246/860), Taberistan ve Yemen devletleri.' }, grade: { tr: 'İKİNCİL' }, url: 'https://islamansiklopedisi.org.tr/zeydiyye', status: 'verified' },
     { book: 'TDV İslâm Ansiklopedisi, "İsmâiliyye"', ref: 'islamansiklopedisi.org.tr/ismailiyye', says: { tr: 'İsmâil\'in babasından önce ölmesi ve ayrılığın nedenleri; Muhammed b. İsmâil; Fâtımî devleti (909-1171).' }, grade: { tr: 'İKİNCİL' }, url: 'https://islamansiklopedisi.org.tr/ismailiyye', status: 'verified' },
     { book: 'WikiShia, "Al-Mukhtar al-Thaqafi"', ref: 'en.wikishia.net/view/Al-Mukhtar_al-Thaqafi', says: { tr: 'Muhtâr\'ın 14 Rebîülevvel 66 (685) ayaklanması, 14 Ramazan 67\'de (687) ölümü; Keysâniyye bağlantısının tartışmalı olması; Şii âlimlerin farklı tutumları.' }, grade: { tr: 'İKİNCİL (ansiklopedik site)' }, url: 'https://en.wikishia.net/view/Al-Mukhtar_al-Thaqafi', status: 'verified' },
     { book: 'WikiShia, "Imam al-Sadiq (a)"', ref: 'en.wikishia.net/view/Imam_al-Sadiq_(a)', says: { tr: 'Tûsî Ricâl\'inde yaklaşık 3200, Müfid\'e göre 4000 ravi; Dört Yüz Usûl; Câferî mezhebi; Mâlik ve Ebû Hanîfe ile ilişki; Abbasi baskısı; vefat 148/765.' }, grade: { tr: 'İKİNCİL; ravi sayıları Şii kaynaklara dayanır' }, url: 'https://en.wikishia.net/view/Imam_al-Sadiq_(a)', status: 'verified' },

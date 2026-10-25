@@ -3,9 +3,11 @@ import { BackHandler, Pressable, Text, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { DuaList, DuaScreen, EventScreen, Home, Method } from './src/ui/Screens';
 import { MapDetail, MapList } from './src/ui/MapScreens';
+import { QiblaScreen } from './src/ui/Qibla';
+import { ImamDetail, ImamList } from './src/ui/ImamScreens';
 import { EVENTS } from './src/data/events';
 import { DUAS } from './src/data/duas';
-import { C, PAGE_MAX, TOP, font } from './src/ui/theme';
+import { C, PAGE_MAX, TOP, font, setTheme } from './src/ui/theme';
 
 type Route =
   | { name: 'home' }
@@ -14,6 +16,9 @@ type Route =
   | { name: 'duas' }
   | { name: 'dua'; id: string }
   | { name: 'maps' }
+  | { name: 'qibla' }
+  | { name: 'imams' }
+  | { name: 'imam'; id: string }
   | { name: 'map'; id: string };
 
 export default function App() {
@@ -33,6 +38,9 @@ export default function App() {
     return () => sub.remove();
   }, []);
 
+  // Kerbela ve Hz. Hüseyin alanları kan kırmızısı temayla açılır
+  setTheme((route.name === 'event' && route.id === 'kerbela') || (route.name === 'imam' && route.id === 'huseyin') ? 'blood' : 'default');
+
   const ev = route.name === 'event' ? EVENTS.find(e => e.id === route.id) : undefined;
   const dua = route.name === 'dua' ? DUAS.find(d => d.id === route.id) : undefined;
 
@@ -41,7 +49,7 @@ export default function App() {
       <StatusBar style="light" />
       <View style={{ flex: 1, width: '100%', maxWidth: PAGE_MAX, backgroundColor: C.bg }}>
         {route.name === 'home' && (
-          <Home events={EVENTS} onOpen={id => push({ name: 'event', id })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onMaps={() => push({ name: 'maps' })} />
+          <Home events={EVENTS} onOpen={id => push({ name: 'event', id })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onMaps={() => push({ name: 'maps' })} onQibla={() => push({ name: 'qibla' })} onImams={() => push({ name: 'imams' })} />
         )}
         {route.name === 'event' && ev && <EventScreen key={ev.id} ev={ev} onBack={back} onOpenMap={id => push({ name: 'map', id })} />}
         {route.name === 'event' && !ev && <Missing onBack={back} />}
@@ -49,6 +57,9 @@ export default function App() {
         {route.name === 'duas' && <DuaList duas={DUAS} onOpen={id => push({ name: 'dua', id })} onBack={back} />}
         {route.name === 'dua' && dua && <DuaScreen key={dua.id} dua={dua} onBack={back} />}
         {route.name === 'dua' && !dua && <Missing onBack={back} />}
+        {route.name === 'qibla' && <QiblaScreen onBack={back} />}
+        {route.name === 'imams' && <ImamList onOpen={id => push({ name: 'imam', id })} onBack={back} />}
+        {route.name === 'imam' && <ImamDetail key={route.id} id={route.id} onBack={back} onOpenEvent={id => push({ name: 'event', id })} />}
         {route.name === 'maps' && <MapList onOpen={id => push({ name: 'map', id })} onBack={back} />}
         {route.name === 'map' && <MapDetail key={route.id} id={route.id} onBack={back} onOpenEvent={id => push({ name: 'event', id })} />}
       </View>

@@ -14,7 +14,13 @@
       "bundler": "metro"
     },
     "plugins": [
-      "expo-video"
+      "expo-video",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Kıble yönünü hesaplamak için konumun yalnızca telefonunda kullanılır; hiçbir yere gönderilmez ve kaydedilmez."
+        }
+      ]
     ]
   }
 }

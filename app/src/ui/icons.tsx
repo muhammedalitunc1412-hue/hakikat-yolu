@@ -13,6 +13,16 @@ export function StarMark({ size = 68 }: { size?: number }) {
   );
 }
 
+export function CompassIcon({ size = 22, color = C.gold }: { size?: number; color?: string }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Circle cx={12} cy={12} r={9.5} stroke={color} strokeWidth={1.6} fill="none" />
+      <Path d="M15.5 8.5l-2 5-5 2 2-5z" stroke={color} strokeWidth={1.4} fill={color} fillOpacity={0.25} />
+      <Circle cx={12} cy={12} r={1.2} fill={color} />
+    </Svg>
+  );
+}
+
 export function PinIcon({ size = 22, color = C.gold }: { size?: number; color?: string }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 24 24">

@@ -8,22 +8,22 @@ export const cemel: HistEvent = {
   hook: { tr: 'Müslümanların ilk kez Müslümanlara karşı saf tuttuğu gün.', en: 'The first day Muslims stood in battle lines against Muslims.' },
   scenes: [
     {
-      text: { tr: 'Osman\'ın şehit edilmesinin ardından Medine karışıktı. Ensar ve Muhacirin\'in önde gelenleri Hz. Ali\'ye gelip hilafeti kabul etmesini istedi. Hz. Ali önce çekindi; ısrar üzerine Mescid-i Nebevi\'de biat alındı.' },
+      text: { tr: 'Halife Osman\'ın şehit edilmesinin ardından Medine karışıktı. Ensar ve Muhacirin\'in önde gelenleri Hz. Ali\'ye gelip hilafeti kabul etmesini istedi. Hz. Ali önce çekindi; ısrar üzerine Mescid-i Nebevi\'de biat alındı.' },
       art: { bg: 'city', props: ['minbar', 'palms'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'ali', x: 66, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Talha ve Zübeyr de biat etti; ancak bu biatın gönüllü mü, baskı altında mı olduğu kaynaklarda tartışılır. Hz. Ali, işe Osman\'ın atadığı valileri değiştirmekle başladı. Bu karar, sonraki itirazların zeminini hazırladı.' },
+      text: { tr: 'Talha ve Zübeyr de biat etti; ancak bu biatın gönüllü mü, baskı altında mı olduğu kaynaklarda tartışılır. Hz. Ali, işe Halife Osman\'ın atadığı valileri değiştirmekle başladı. Bu karar, sonraki itirazların zeminini hazırladı.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 24, label: { tr: 'Talha' } }, { kind: 'man', x: 46, label: { tr: 'Zübeyr' } }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Şam valisi Muaviye, Osman\'ın kanı yerini bulmadan biat etmeyeceğini bildirdi. Hz. Ali\'ye göre önce düzen kurulmalı, sonra dava yoluyla hesap sorulmalıydı. Muaviye\'ye göre ise önce kısas gerekiyordu.' },
+      text: { tr: 'Şam valisi Muaviye, Halife Osman\'ın kanı yerini bulmadan biat etmeyeceğini bildirdi. Hz. Ali\'ye göre önce düzen kurulmalı, sonra dava yoluyla hesap sorulmalıydı. Muaviye\'ye göre ise önce kısas gerekiyordu.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 34, label: { tr: 'Muaviye' } }, { kind: 'crowd', x: 70, scale: 7 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Umre için Mekke\'de bulunan Aişe, Talha ve Zübeyr, Osman\'ın kanını gerekçe göstererek Basra\'ya doğru yola çıktı. Amaçları, kendi anlayışlarına göre durumu düzeltmekti.' },
+      text: { tr: 'Umre için Mekke\'de bulunan Aişe, Talha ve Zübeyr, Halife Osman\'ın kanını gerekçe göstererek Basra\'ya doğru yola çıktı. Amaçları, kendi anlayışlarına göre durumu düzeltmekti.' },
       art: { bg: 'dune-day', props: ['sun', 'camels'], actors: [{ kind: 'woman', x: 24, label: { tr: 'Aişe' } }, { kind: 'man', x: 50, label: { tr: 'Talha' } }, { kind: 'man', x: 74, label: { tr: 'Zübeyr' } }] },
       by: 'both',
     },
@@ -72,7 +72,7 @@ export const cemel: HistEvent = {
   ],
   disputes: [
     {
-      title: { tr: 'Osman\'ın kanı: önce kısas mı, önce düzen mi?' },
+      title: { tr: 'Halife Osman\'ın kanı: önce kısas mı, önce düzen mi?' },
       sunni: { tr: 'Sünni görüş çoğunlukla Hz. Ali\'nin gerekçesini ictihad sayar; karşı tarafın da ictihad ettiğini söyler.' },
       shia: { tr: 'Hz. Ali\'nin tutumu, dağınık bir ortamda önce otoriteyi sağlamak ve sonra davayı yargı yoluyla görmekti; karşı çıkış bu gerekçeyle meşru görülmez.' },
     },
@@ -83,7 +83,7 @@ export const cemel: HistEvent = {
     },
     {
       title: { tr: 'Aişe\'nin pişmanlığı' },
-      sunni: { tr: 'Pişmanlık rivayetleri vardır, ancak her birinin senedi ve neye pişman olduğu ayrıca tartışılır. Madelung\'a göre bir rivayet Osman\'a karşı isyanı kışkırtmasına dairdir.' },
+      sunni: { tr: 'Pişmanlık rivayetleri vardır, ancak her birinin senedi ve neye pişman olduğu ayrıca tartışılır. Madelung\'a göre bir rivayet Halife Osman\'a karşı isyanı kışkırtmasına dairdir.' },
       shia: { tr: 'Aynı rivayetlere atıf yapılır; Aişe\'nin Hz. Ali\'ye karşı çıkışı yanlış bir adım olarak değerlendirilir.' },
     },
   ],
@@ -93,5 +93,5 @@ export const cemel: HistEvent = {
     { tr: 'Hz. Ali, savaştan sonra esirleri bıraktı ve Aişe\'yi saygıyla Medine\'ye gönderdi. Böyle bir davranış, onun savaşa girme nedeni hakkında ne söyler sizce?' },
     { tr: 'Ehl-i Sünnet\'in çoğunluğu Cemel\'de Hz. Ali\'yi hakka daha yakın bulur ve isyancılarla savaş kurallarını onun uygulamasından çıkarır. Bir hukuk kuralının kaynağı olan kişiye, başka konularda da danışmak gerekmez mi sizce?' },
   ],
-  summary: { tr: 'Osman\'ın şehadetinden sonra Hz. Ali\'ye biat edildi; Talha, Zübeyr ve Aişe\'nin Basra\'ya çıkışı Cemel\'e yol açtı ve Hz. Ali, savaşın ardından af ve saygıyla davrandı.' },
+  summary: { tr: 'Halife Osman\'ın şehadetinden sonra Hz. Ali\'ye biat edildi; Talha, Zübeyr ve Aişe\'nin Basra\'ya çıkışı Cemel\'e yol açtı ve Hz. Ali, savaşın ardından af ve saygıyla davrandı.' },
 };

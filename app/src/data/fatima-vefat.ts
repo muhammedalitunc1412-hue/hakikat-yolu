@@ -44,7 +44,7 @@ export const fatimaVefat: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Buhari\'ye göre Hz. Ali, Hz. Fatıma\'yı geceleyin defnetti, cenaze namazını kendisi kıldı ve Ebu Bekir\'e haber vermedi. Şii kaynaklara göre Selman, Ebu Zer, Mikdad ve Ammar gibi yakınlar da hazır bulundu.' },
+      text: { tr: 'Buhari\'ye göre Hz. Ali, Hz. Fatıma\'yı geceleyin defnetti, cenaze namazını kendisi kıldı ve Halife Ebu Bekir\'e haber vermedi. Şii kaynaklara göre Selman, Ebu Zer, Mikdad ve Ammar gibi yakınlar da hazır bulundu.' },
       art: { bg: 'night', props: ['stars', 'moon'], actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 54, scale: 0.7 }, { kind: 'husayn', x: 62, scale: 0.65 }, { kind: 'man', x: 76, scale: 0.9 }] },
       by: 'both',
     },
@@ -60,7 +60,7 @@ export const fatimaVefat: HistEvent = {
     { book: 'Belâzurî, Ensâbü\'l-Eşrâf', ref: 'cilt 1, sayfa 586', says: { tr: 'Evde toplananlara yönelik tehdit.' }, grade: { tr: 'İKİNCİL (Wikishia)' }, status: 'check' },
     { book: 'İbn Abdirabbih, el-Ikdü\'l-Ferîd', ref: 'cilt 5, sayfa 13', says: { tr: 'Elinde ateşle gelme tehdidi.' }, grade: { tr: 'İKİNCİL (Wikishia)' }, status: 'check' },
     { book: 'İbn Kuteybe\'ye atfedilen el-İmame ve\'s-Siyase', ref: 'cilt 1, sayfa 30-31', says: { tr: 'Ali\'nin evine gelme anlatımı.' }, grade: { tr: 'Eserin İbn Kuteybe\'ye aidiyeti tartışmalıdır. İKİNCİL (Wikishia).' }, status: 'check' },
-    { book: 'Buhari, Sahih', ref: 'No. 4240', says: { tr: 'Hz. Fatıma ölünceye kadar Ebu Bekir\'le konuşmadı; Hz. Ali onu geceleyin defnetti, Ebu Bekir\'e haber vermedi, cenaze namazını kıldı.' }, grade: { tr: 'Sahih. DOĞRULANDI (özet düzeyinde, ihadis.com)' }, url: 'https://ihadis.com/en/bukhari/hadith/4240', status: 'verified' },
+    { book: 'Buhari, Sahih', ref: 'No. 4240', says: { tr: 'Hz. Fatıma ölünceye kadar Halife Ebu Bekir\'le konuşmadı; Hz. Ali onu geceleyin defnetti, Halife Ebu Bekir\'e haber vermedi, cenaze namazını kıldı.' }, grade: { tr: 'Sahih. DOĞRULANDI (özet düzeyinde, ihadis.com)' }, url: 'https://ihadis.com/en/bukhari/hadith/4240', status: 'verified' },
     { book: 'Buhari, Sahih', ref: 'No. 3714 ve 3767; Müslim No. 2449', says: { tr: '"Hz. Fatıma benden bir parçadır; onu kızdıran beni kızdırmıştır."' }, grade: { tr: 'Sahih. Numaralar DOĞRULANMADI, baskıdan kontrol edilmeli.' }, status: 'check' },
     { book: 'Belâzurî, Ensâbü\'l-Eşrâf; Taberî, Tarîh', ref: 'Belâzurî c.2 s.34; Taberî c.2 s.473-474 (Wikishia atfı)', says: { tr: 'Hz. Ali\'nin Hz. Fatıma\'yı yıkaması ve Esma bint Umeys\'in yardımı.' }, grade: { tr: 'İKİNCİL (Wikishia)' }, status: 'check' },
     { book: 'İbn Sa\'d, et-Tabakâtü\'l-Kübrâ', ref: 'cilt 8, sayfa 29', says: { tr: 'Hz. Fatıma geceleyin defnedildi; kabrin yeri kesin bilinmez.' }, grade: { tr: 'İKİNCİL (Wikishia)' }, status: 'check' },
@@ -100,7 +100,7 @@ export const fatimaVefat: HistEvent = {
   ],
   questions: [
     { tr: 'Ömer\'in evi yakma tehdidi iki mezhebin kitabında da geçiyor. Peygamber\'in kızının bulunduğu bir evin önünde böyle bir söz sarf edilmesi, biat için uygun bir yöntem olabilir mi sizce?' },
-    { tr: 'Buhari\'ye göre Hz. Ali, Hz. Fatıma\'yı geceleyin defnetti ve Ebu Bekir\'e haber vermedi. Şii kaynaklara göre bu Hz. Fatıma\'nın vasiyetiydi. Bu vasiyet sizce neyi anlatıyor?' },
+    { tr: 'Buhari\'ye göre Hz. Ali, Hz. Fatıma\'yı geceleyin defnetti ve Halife Ebu Bekir\'e haber vermedi. Şii kaynaklara göre bu Hz. Fatıma\'nın vasiyetiydi. Bu vasiyet sizce neyi anlatıyor?' },
     { tr: 'Hz. Fatıma\'nın kabri bugün bile kesin olarak bilinmiyor. Peygamber\'in en sevdiği kızının mezarının kaybolmasını neden bu kadar az konuşuyoruz sizce?' },
     { tr: 'Aynı olay hakkında kitaplar farklı ayrıntılar aktarıyorsa, hangi rivayeti kabul edeceğimizi belirlerken ravinin mezhebine mi, yoksa metnin diğer kaynaklarla uyumuna mı bakmak daha adildir sizce?' },
   ],

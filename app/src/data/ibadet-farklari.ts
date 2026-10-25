@@ -10,12 +10,12 @@ export const ibadetFarklari: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Ezan. Ezan, Peygamber döneminde Bilal\'in okuduğu çağrıdır ve Şii kaynaklarında olduğu gibi Sünni kaynaklarında da bu şekilde anlatılır. Fark üç ifadededir. Şii kaynaklarında "Hayye alâ hayri\'l-amel" ezanın aslındadır; Ömer\'in bunu kaldırdığı rivayet edilir. Bazı Sünni kaynaklarında da İbn Ömer\'in ve Ebu Mahzure\'nin bu ifadeyi zaman zaman kullandığına dair rivayetler bulunur; bu uygulama sonradan terk edilmiş olarak aktarılır.' },
+      text: { tr: 'Ezan. Ezan, Peygamber döneminde Bilal\'in okuduğu çağrıdır ve Şii kaynaklarında olduğu gibi Sünni kaynaklarında da bu şekilde anlatılır. Fark üç ifadededir. Şii kaynaklarında "Hayye alâ hayri\'l-amel" ezanın aslındadır; Halife Ömer\'in bunu kaldırdığı rivayet edilir. Bazı Sünni kaynaklarında da İbn Halife Ömer\'in ve Ebu Mahzure\'nin bu ifadeyi zaman zaman kullandığına dair rivayetler bulunur; bu uygulama sonradan terk edilmiş olarak aktarılır.' },
       art: { bg: 'dawn', props: ['moon'], actors: [{ kind: 'man', x: 50, pose: 'raise', label: { tr: 'Bilal' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Şii kaynaklarına göre Ömer, savaş ruhunu zayıflatır diye "Hayye alâ hayri\'l-amel"i kaldırdı; Şii fakihler onu ezanın cüzü sayar. "Eşhedü enne Aliyyen veliyyullah" ise mevcut Şii ulema görüşüne göre ezanın şartı değil; müstehap, bir şiar olarak okunur. "Es-salâtü hayrun mine\'n-nevm" Şii fıkhında ezanda okunmaz; Sünni kaynaklarda ise sabah ezanında okunur ve sabit sünnet olarak anılır.' },
+      text: { tr: 'Şii kaynaklarına göre Halife Ömer, savaş ruhunu zayıflatır diye "Hayye alâ hayri\'l-amel"i kaldırdı; Şii fakihler onu ezanın cüzü sayar. "Eşhedü enne Aliyyen veliyyullah" ise mevcut Şii ulema görüşüne göre ezanın şartı değil; müstehap, bir şiar olarak okunur. "Es-salâtü hayrun mine\'n-nevm" Şii fıkhında ezanda okunmaz; Sünni kaynaklarda ise sabah ezanında okunur ve sabit sünnet olarak anılır.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'man', x: 40, pose: 'raise', label: { tr: 'Müezzin' } }, { kind: 'crowd', x: 72, scale: 0.7 }] },
     },
     {
@@ -40,7 +40,7 @@ export const ibadetFarklari: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Teravih. Buhari 2010\'a göre Ömer, Ramazan gecesi insanları dağınık görüp Ubey b. Ka\'b arkasında topladı ve "Ne güzel bid\'at bu" dedi. Şii fıkhında teravih cemaatle farz veya sünnet değildir, Ramazan gecelerinde bireysel nafile namaz kılınır; cemaatle kılmak Ömer\'in uygulaması olduğu için sünnet kabul edilmez. Sünni mezheplerde ise teravih sünnettir ve Ömer\'in cemaate toplaması sahabenin kabulüyle meşru sayılır. Buradaki tartışma, Ömer\'in kendi sözündeki "bid\'at" nitelemesinin sonradan nasıl yorumlandığıdır.' },
+      text: { tr: 'Teravih. Buhari 2010\'a göre Halife Ömer, Ramazan gecesi insanları dağınık görüp Ubey b. Ka\'b arkasında topladı ve "Ne güzel bid\'at bu" dedi. Şii fıkhında teravih cemaatle farz veya sünnet değildir, Ramazan gecelerinde bireysel nafile namaz kılınır; cemaatle kılmak Halife Ömer\'in uygulaması olduğu için sünnet kabul edilmez. Sünni mezheplerde ise teravih sünnettir ve Halife Ömer\'in cemaate toplaması sahabenin kabulüyle meşru sayılır. Buradaki tartışma, Halife Ömer\'in kendi sözündeki "bid\'at" nitelemesinin sonradan nasıl yorumlandığıdır.' },
       art: { bg: 'night', props: ['moon', 'stars'], actors: [{ kind: 'man', x: 34, label: { tr: 'Ömer' } }, { kind: 'crowd', x: 68, scale: 0.7 }] },
     },
     {
@@ -65,13 +65,13 @@ export const ibadetFarklari: HistEvent = {
     },
   ],
   sunni: [
-    { book: 'Buhari, Sahih', ref: 'No. 2010 (Salâtü\'t-Terâvih)', says: { tr: 'Ömer Ramazan gecesi insanları Ubey b. Ka\'b arkasında toplar ve "Ne güzel bid\'at bu" der; gecenin son kısmında kılınan namazın daha faziletli olduğunu da söyler.' }, grade: { tr: 'Sahih' }, url: 'https://ihadis.com/en/bukhari/hadith/2010', status: 'verified' },
+    { book: 'Buhari, Sahih', ref: 'No. 2010 (Salâtü\'t-Terâvih)', says: { tr: 'Halife Ömer Ramazan gecesi insanları Ubey b. Ka\'b arkasında toplar ve "Ne güzel bid\'at bu" der; gecenin son kısmında kılınan namazın daha faziletli olduğunu da söyler.' }, grade: { tr: 'Sahih' }, url: 'https://ihadis.com/en/bukhari/hadith/2010', status: 'verified' },
     { book: 'Buhari, Sahih', ref: 'No. 6585 (Rikak, Havz bölümü)', says: { tr: 'Peygamber, arkadaşlarından bazılarının havz başında uzaklaştırılacağını söyler; "Onların senden sonra neler ihdas ettiklerini bilmezsin" cevabı verilir.' }, grade: { tr: 'Sahih' }, url: 'https://ihadis.com/en/bukhari/hadith/6585', status: 'verified' },
     { book: 'Buhari, Sahih', ref: 'No. 335 (Teyemmüm)', says: { tr: 'Cabir\'den: "Yeryüzü bana ve ümmetime mescit ve teyemmüm vasıtası kılındı." Sünni kaynaklarda toprağın secde yeri olduğuna delil gösterilir.' }, grade: { tr: 'Sahih' }, url: 'https://ihadis.com/en/bukhari/hadith/335', status: 'verified' },
     { book: 'Müslim, Sahih', ref: 'No. 705 (Cem hadisi, İbn Abbas) — numara DOĞRULANMADI; site erişilemedi', says: { tr: 'İbn Abbas, Peygamber\'in korku ve yağmur olmaksızın Medine\'de öğle-ikindi ve akşam-yatsıyı birleştirdiğini, gerekçenin ümmetini zora sokmamak olduğunu söyler.' }, status: 'check' },
     { book: 'Müslim, Sahih', ref: 'Fedâilü\'s-Sahâbe, Kisâ (Âişe) hadisi; numara DOĞRULANMADI', says: { tr: 'Peygamber, Ali, Fatıma, Hasan ve Hüseyin\'i abasının altına alır ve Ahzâb 33:33 ayetini okur.' }, status: 'check' },
-    { book: 'Beyhakî, es-Sünenü\'l-Kübrâ; Ebu Davud, Sünen (Ezan bölümü)', ref: 'DOĞRULANMADI (ezan ifadeleri, İbn Ömer ve Ebu Mahzure rivayetleri)', says: { tr: 'Ezan sözlerinin rivayet farkları; İbn Ömer\'in "hayye alâ hayri\'l-amel" dediğine dair rivayet ikincil kaynaklardan bilinir, sıhhati tartışmalıdır.' }, status: 'check' },
-    { book: 'Mâlik, Muvatta\'; el-Müdevvene', ref: 'DOĞRULANMADI', says: { tr: 'Maliki mezhebinde namazda elleri sarkıtma (sadl) görüşünün aktarılması; Ramazan kıyamı ile ilgili Ömer rivayeti.' }, status: 'check' },
+    { book: 'Beyhakî, es-Sünenü\'l-Kübrâ; Ebu Davud, Sünen (Ezan bölümü)', ref: 'DOĞRULANMADI (ezan ifadeleri, İbn Halife Ömer ve Ebu Mahzure rivayetleri)', says: { tr: 'Ezan sözlerinin rivayet farkları; İbn Halife Ömer\'in "hayye alâ hayri\'l-amel" dediğine dair rivayet ikincil kaynaklardan bilinir, sıhhati tartışmalıdır.' }, status: 'check' },
+    { book: 'Mâlik, Muvatta\'; el-Müdevvene', ref: 'DOĞRULANMADI', says: { tr: 'Maliki mezhebinde namazda elleri sarkıtma (sadl) görüşünün aktarılması; Ramazan kıyamı ile ilgili Halife Ömer rivayeti.' }, status: 'check' },
     { book: 'Tirmizî, Sünen', ref: 'Menâkıb, Ali bölümü, "men kuntu mevlâ" hadisi; numara DOĞRULANMADI', says: { tr: 'Gadir hadisi Sünni hadis kitaplarında da yer alır.' }, status: 'check' },
   ],
   shia: [
@@ -83,8 +83,8 @@ export const ibadetFarklari: HistEvent = {
   disputes: [
     {
       title: { tr: 'Ezan ifadeleri' },
-      shia: { tr: '"Hayye alâ hayri\'l-amel" ezanın bir parçasıdır, Ömer kaldırmıştır; "Eşhedü enne Aliyyen veliyyullah" şart değil, müstehap bir şiardır; "es-salâtü hayrun mine\'n-nevm" ezanda yoktur.' },
-      sunni: { tr: 'İlk ifade ezanda okunmaz, ancak İbn Ömer\'e dair bazı rivayetler vardır; üçüncüsü sabah ezanının sünnetidir.' },
+      shia: { tr: '"Hayye alâ hayri\'l-amel" ezanın bir parçasıdır, Halife Ömer kaldırmıştır; "Eşhedü enne Aliyyen veliyyullah" şart değil, müstehap bir şiardır; "es-salâtü hayrun mine\'n-nevm" ezanda yoktur.' },
+      sunni: { tr: 'İlk ifade ezanda okunmaz, ancak İbn Halife Ömer\'e dair bazı rivayetler vardır; üçüncüsü sabah ezanının sünnetidir.' },
     },
     {
       title: { tr: 'Kolların durumu' },
@@ -104,7 +104,7 @@ export const ibadetFarklari: HistEvent = {
     {
       title: { tr: 'Teravih' },
       shia: { tr: 'Cemaatle teravih sünnet değildir; Ramazan gecelerinde bireysel nafile kılınır.' },
-      sunni: { tr: 'Teravih sünnettir; Ömer\'in uygulaması sahabece kabul görmüştür (Buhari 2010).' },
+      sunni: { tr: 'Teravih sünnettir; Halife Ömer\'in uygulaması sahabece kabul görmüştür (Buhari 2010).' },
     },
     {
       title: { tr: 'Humus' },
@@ -130,7 +130,7 @@ export const ibadetFarklari: HistEvent = {
   questions: [
     { tr: 'Müslim 705\'te Peygamber\'in cemi "ümmetini zora sokmamak" diye anlatılıyorsa, bu gerekçe cem hükmünü genişletir mi daraltır mı?' },
     { tr: 'Her iki mezhepte de toprağa secde delili varsa, fark "toprak şart mı, tercih mi" noktasında mı toplanır?' },
-    { tr: 'Ömer\'in teravih uygulamasına "güzel bid\'at" demesi, ibadette yenilik ve sünnet ilişkisini nasıl düşündürür?' },
+    { tr: 'Halife Ömer\'in teravih uygulamasına "güzel bid\'at" demesi, ibadette yenilik ve sünnet ilişkisini nasıl düşündürür?' },
     { tr: 'Ammar b. Yasir olayı takiyyenin kapsamı hakkında hangi sınırları gösterir?' },
     { tr: 'Havz hadisi (Buhari 6585) sahabe adaletini genel bir ilke olarak mı, istisnalı bir ilke olarak mı düşündürür?' },
   ],

@@ -3,7 +3,7 @@ import { Modal, Pressable, ScrollView, StyleProp, StyleSheet, Text, TextStyle, V
 import { tx } from '../i18n';
 import type { L } from '../types';
 import { VERSES } from '../data/verses';
-import { C, font } from './theme';
+import { C, font, themedStyles } from './theme';
 
 // Metindeki ayet göndermelerini (örn. "Ahzâb 33:33", "Mâide suresi 6. ayet") dokunulabilir yapar;
 // dokununca Arapça metin ve Türkçe meal açılır penceresi görünür.
@@ -79,7 +79,7 @@ export function Rich({ text, style, selectable }: { text: L | string | undefined
   );
 }
 
-const r = StyleSheet.create({
+const r = themedStyles(() => StyleSheet.create({
   bold: { fontWeight: '800', color: C.cream },
   link: { color: C.gold, textDecorationLine: 'underline', fontWeight: '700' },
   backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.72)', justifyContent: 'center', padding: 18 },
@@ -90,4 +90,4 @@ const r = StyleSheet.create({
   body: { color: C.text, fontFamily: font.sans, fontSize: 16, lineHeight: 25 },
   close: { marginTop: 14, minHeight: 48, padding: 12, borderRadius: 14, backgroundColor: C.gold, alignItems: 'center', justifyContent: 'center' },
   closeText: { color: C.ink, fontFamily: font.sans, fontWeight: '800' },
-});
+}));

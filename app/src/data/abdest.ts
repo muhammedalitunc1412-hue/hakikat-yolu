@@ -25,7 +25,7 @@ export const abdest: HistEvent = {
     },
     {
       by: 'sunni',
-      text: { tr: 'Sünni kaynaklarda ayak yıkama hadislerle desteklenir. Buhari 165\'te Ebu Hureyre, Peygamber\'in "Topuklara ateşten vay" dediğini aktarır; Müslim 241 de aynı uyarıyı Abdullah b. Amr\'dan nakleder. Osman\'ın Peygamber gibi abdest aldığını anlatan rivayette ayakların yıkandığı geçer (Buhari 159, Müslim 226). Bu yüzden Sünni mezheplerin çoğunluğu ayakların yıkanmasını farz sayar; Nevevî bu konuda âlimlerin ittifakını aktarır.' },
+      text: { tr: 'Sünni kaynaklarda ayak yıkama hadislerle desteklenir. Buhari 165\'te Ebu Hureyre, Peygamber\'in "Topuklara ateşten vay" dediğini aktarır; Müslim 241 de aynı uyarıyı Abdullah b. Amr\'dan nakleder. Halife Osman\'ın Peygamber gibi abdest aldığını anlatan rivayette ayakların yıkandığı geçer (Buhari 159, Müslim 226). Bu yüzden Sünni mezheplerin çoğunluğu ayakların yıkanmasını farz sayar; Nevevî bu konuda âlimlerin ittifakını aktarır.' },
       art: { bg: 'oasis', props: ['well', 'palms'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'Abdest alan' } }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }] },
     },
     {
@@ -52,7 +52,7 @@ export const abdest: HistEvent = {
   sunni: [
     { book: 'Buhari, Sahih', ref: 'No. 165 (ihadis numarası; USC-MSA 166), Abdest, "Topukların yıkanması" bölümü', says: { tr: 'Ebu Hureyre, abdesti tam almalarını söyler ve Peygamber\'in "Topuklara ateşten vay" dediğini aktarır.' }, grade: { tr: 'Sahih' }, url: 'https://ihadis.com/en/bukhari/hadith/165', status: 'verified' },
     { book: 'Müslim, Sahih', ref: 'No. 241 (Abdullah b. Amr), 242 (Ebu Hureyre)', says: { tr: 'Topuklara ateşten vay uyarısı (numaralar IslamQA aktarımından; metne bu oturumda ulaşılamadı).' }, url: 'https://islamqa.info/en/answers/316320', status: 'check' },
-    { book: 'Buhari, Sahih; Müslim, Sahih', ref: 'Buhari 159, Müslim 226 (Osman\'ın abdest tarifi)', says: { tr: 'Osman\'ın Peygamber\'in abdestini tarif edişinde ayakların yıkanması geçer. Metne bu oturumda ulaşılamadı.' }, status: 'check' },
+    { book: 'Buhari, Sahih; Müslim, Sahih', ref: 'Buhari 159, Müslim 226 (Halife Osman\'ın abdest tarifi)', says: { tr: 'Halife Osman\'ın Peygamber\'in abdestini tarif edişinde ayakların yıkanması geçer. Metne bu oturumda ulaşılamadı.' }, status: 'check' },
     { book: 'İbn Mace, Sünen', ref: 'No. 458 (Rubeyyi\' bint Muavviz)', says: { tr: 'Peygamber\'in ayaklarını yıkadığı anlatılır; İbn Abbas insanların yıkamakta ısrar ettiğini, kendisinin Allah\'ın kitabında meshi bulduğunu söyler.' }, grade: { tr: 'Zayıf; Elbânî İbn Abbas\'ın sözünü münker bulur (arama sonucu özetinden)' }, url: 'https://sunnah.com/ibnmajah:458', status: 'check' },
     { book: 'İbn Kesîr, Tefsîr (Mâide 6)', ref: 'Sayfa DOĞRULANMADI', says: { tr: 'Quran.com\'daki metin ayetin ayakların yıkanmasını gerektirdiğini söyler; İbn Abbas\'ın ve Enes\'in yıkama rivayetlerini ve İkrime\'yi yıkama diyenler arasında anar. Metin okunuş farkına değinmez.' }, url: 'https://quran.com/5:6/tafsirs/en-tafisr-ibn-kathir', status: 'verified' },
     { book: 'İbn Ebi Şeybe, el-Musannef', ref: 'Şa\'bî ve Enes nakilleri; numara DOĞRULANMADI', says: { tr: 'Şa\'bî\'den mesh caizdir görüşü ve Cebrail\'in mesh getirdiği sözü; Enes\'in meshederken ayaklarını ıslattığı rivayeti.' }, url: 'https://en.tohed.com/hadith/musannaf-ibn-abi-shaybah/chapter/1429/sub/42745/', status: 'check' },
@@ -79,7 +79,7 @@ export const abdest: HistEvent = {
       sunni: { tr: 'Esre, yanındaki "başlarınız" kelimesinden gelen dilbilgisel bir uyumdur; anlam yıkamadır.' },
     },
     {
-      title: { tr: 'Topuklara ateşten vay ve Osman\'ın abdesti' },
+      title: { tr: 'Topuklara ateşten vay ve Halife Osman\'ın abdesti' },
       shia: { tr: 'Bu hadisler, ayakları iyi temizlemek veya yıkamayı ihmal edenlerin uyarılması anlamında okunabilir; Ehl-i Beyt rivayetleri ayet doğrultusunda meshi bildirir.' },
       sunni: { tr: 'Hadisler Peygamber\'in ayaklarını yıkadığını gösterir; ayete bu uygulamayla uyulur.' },
     },

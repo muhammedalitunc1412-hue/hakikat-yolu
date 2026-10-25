@@ -18,12 +18,12 @@ export const fedek: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Ebu Bekir cevap verdi: "Resulullah\'ı şöyle derken işittim: Biz peygamberler miras bırakmayız; bıraktığımız sadakadır." Hadisi Ebu Bekir tek başına rivayet ettiği için Şii kaynakları bunu eleştirir.' },
+      text: { tr: 'Halife Ebu Bekir cevap verdi: "Resulullah\'ı şöyle derken işittim: Biz peygamberler miras bırakmayız; bıraktığımız sadakadır." Hadisi Halife Ebu Bekir tek başına rivayet ettiği için Şii kaynakları bunu eleştirir.' },
       art: { bg: 'city', props: ['sun'], actors: [{ kind: 'fatima', x: 30, label: { tr: 'Hz. Fatıma' } }, { kind: 'man', x: 66, pose: 'raise', label: { tr: 'Ebu Bekir' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Buhari\'nin rivayetine göre Hz. Fatıma buna kızdı, Ebu Bekir\'i terk etti ve vefat edene kadar onunla konuşmadı.' },
+      text: { tr: 'Buhari\'nin rivayetine göre Hz. Fatıma buna kızdı, Halife Ebu Bekir\'i terk etti ve vefat edene kadar onunla konuşmadı.' },
       art: { bg: 'interior', actors: [{ kind: 'fatima', x: 50, pose: 'sit', label: { tr: 'Hz. Fatıma' } }] },
       by: 'both',
     },
@@ -33,20 +33,20 @@ export const fedek: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Fatıma, Peygamber\'den yaklaşık altı ay sonra vefat etti. Kocası Hz. Ali onu geceleyin defnetti, cenaze namazını kendisi kıldı ve Ebu Bekir\'e haber verilmedi.' },
+      text: { tr: 'Hz. Fatıma, Peygamber\'den yaklaşık altı ay sonra vefat etti. Kocası Hz. Ali onu geceleyin defnetti, cenaze namazını kendisi kıldı ve Halife Ebu Bekir\'e haber verilmedi.' },
       art: { bg: 'night', props: ['stars', 'moon'], actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 54, scale: 0.7 }, { kind: 'husayn', x: 62, scale: 0.65 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Ali, Hz. Fatıma\'nın vefatından sonra Ebu Bekir\'e biat etti. Yüzyıllar sonra Ömer b. Abdülaziz Fedek\'i Hz. Fatıma\'nın soyuna iade etti; sonraki halife geri aldı.' },
+      text: { tr: 'Hz. Ali, Hz. Fatıma\'nın vefatından sonra Halife Ebu Bekir\'e biat etti. Yüzyıllar sonra Ömer b. Abdülaziz Fedek\'i Hz. Fatıma\'nın soyuna iade etti; sonraki halife geri aldı.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 38, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 64, label: { tr: 'Ebu Bekir' } }] },
       by: 'both',
     },
   ],
   sunni: [
-    { book: 'Buhari, Sahih', ref: 'No. 4240 (Meğâzî)', says: { tr: 'Hz. Fatıma, Ebu Bekir\'den mirasını ister; reddedilir; Hz. Fatıma kızar, ölünceye kadar küs kalır; Hz. Ali geceleyin defneder, Ebu Bekir\'e haber vermez; Hz. Ali sonradan biat eder.' }, grade: { tr: 'Sahih' }, url: 'https://ihadis.com/en/bukhari/hadith/4240', status: 'verified' },
+    { book: 'Buhari, Sahih', ref: 'No. 4240 (Meğâzî)', says: { tr: 'Hz. Fatıma, Halife Ebu Bekir\'den mirasını ister; reddedilir; Hz. Fatıma kızar, ölünceye kadar küs kalır; Hz. Ali geceleyin defneder, Halife Ebu Bekir\'e haber vermez; Hz. Ali sonradan biat eder.' }, grade: { tr: 'Sahih' }, url: 'https://ihadis.com/en/bukhari/hadith/4240', status: 'verified' },
     { book: 'Buhari, Sahih', ref: 'No. 3093 ve 6725', says: { tr: 'Aynı olayın paralel rivayetleri: miras talebi ve "peygamberler miras bırakmaz" cevabı.' }, grade: { tr: 'Sahih' }, status: 'check' },
-    { book: 'Müslim, Sahih', ref: 'No. 1759', says: { tr: 'Peygamber mirası hakkında Ebu Bekir\'in rivayeti ve Hz. Fatıma\'nın talebi.' }, grade: { tr: 'Sahih' }, status: 'check' },
+    { book: 'Müslim, Sahih', ref: 'No. 1759', says: { tr: 'Peygamber mirası hakkında Halife Ebu Bekir\'in rivayeti ve Hz. Fatıma\'nın talebi.' }, grade: { tr: 'Sahih' }, status: 'check' },
     { book: 'Buhari, Sahih', ref: 'No. 3714 ve 3767; Müslim No. 2449', says: { tr: '"Hz. Fatıma benden bir parçadır; onu kızdıran beni kızdırmıştır."' }, grade: { tr: 'Sahih' }, status: 'check' },
     { book: 'Belâzurî, Fütûhu\'l-Büldân', ref: 'cilt 1, sayfa 37-41', says: { tr: 'Ömer b. Abdülaziz\'in ve Me\'mun\'un Fedek\'i Hz. Fatıma\'nın soyuna iadesi.' }, status: 'check' },
   ],
@@ -63,12 +63,12 @@ export const fedek: HistEvent = {
     },
     {
       title: { tr: '"Peygamberler miras bırakmaz"' },
-      sunni: { tr: 'Hadis sahihtir; Ebu Bekir tek değil, başka sahabilerin de buna şahit olduğu rivayet edilir. Kur\'an\'daki miras ayetleri ilim ve peygamberlik mirasıdır.' },
+      sunni: { tr: 'Hadis sahihtir; Halife Ebu Bekir tek değil, başka sahabilerin de buna şahit olduğu rivayet edilir. Kur\'an\'daki miras ayetleri ilim ve peygamberlik mirasıdır.' },
       shia: { tr: 'Hadisi davalı taraf rivayet ediyor. Kur\'an\'da Süleyman\'ın Davud\'a, Yahya\'nın Zekeriyya\'ya mirasçı olduğu geçiyor; üstelik Hz. Ali ve Hz. Fatıma bu hükümden habersiz kalmış olur.' },
     },
     {
       title: { tr: 'Hz. Fatıma\'nın küskünlüğü' },
-      sunni: { tr: 'Hukuki bir anlaşmazlıktan doğan insani kırgınlıktır; Ebu Bekir sahih bir hadise uymuştur. Bazı rivayetlerde sonradan barıştıkları anlatılır, ancak bu rivayetler zayıf sayılır.' },
+      sunni: { tr: 'Hukuki bir anlaşmazlıktan doğan insani kırgınlıktır; Halife Ebu Bekir sahih bir hadise uymuştur. Bazı rivayetlerde sonradan barıştıkları anlatılır, ancak bu rivayetler zayıf sayılır.' },
       shia: { tr: 'Buhari\'nin sahih rivayetinde Hz. Fatıma\'nın küs ölmesi, "onu kızdıran beni kızdırmıştır" hadisiyle birlikte düşünüldüğünde Ehl-i Beyt\'e yapılan haksızlığın delilidir.' },
     },
     {
@@ -78,8 +78,8 @@ export const fedek: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Peygamber "Hz. Fatıma benden bir parçadır; onu kızdıran beni kızdırmıştır" demişti. Buhari\'ye göre Hz. Fatıma, Ebu Bekir\'e kızdı ve ölünceye kadar onunla konuşmadı. Ebu Bekir imanlı ve adaletli biriyse, Peygamber\'in ciğerparesi neden ölene kadar onunla konuşmadı sizce?' },
-    { tr: 'Hz. Fatıma\'nın cenazesinin gece defnedilip Ebu Bekir\'e haber verilmemesi, bir küskünlükten fazlasını anlatmıyor mu? Hz. Ali bunu neden yaptı?' },
+    { tr: 'Peygamber "Hz. Fatıma benden bir parçadır; onu kızdıran beni kızdırmıştır" demişti. Buhari\'ye göre Hz. Fatıma, Halife Ebu Bekir\'e kızdı ve ölünceye kadar onunla konuşmadı. Halife Ebu Bekir imanlı ve adaletli biriyse, Peygamber\'in ciğerparesi neden ölene kadar onunla konuşmadı sizce?' },
+    { tr: 'Hz. Fatıma\'nın cenazesinin gece defnedilip Halife Ebu Bekir\'e haber verilmemesi, bir küskünlükten fazlasını anlatmıyor mu? Hz. Ali bunu neden yaptı?' },
     { tr: 'Peygamber\'in mirasıyla ilgili hadisi, davanın karşı tarafı olan kişi rivayet ediyorsa, bu durum davayı adil kılar mı?' },
     { tr: 'Fedek\'i yüzyıllar sonra Ömer b. Abdülaziz ve Me\'mun Hz. Fatıma\'nın soyuna iade ettiyse, bu iade kararı ne anlama gelir?' },
   ],

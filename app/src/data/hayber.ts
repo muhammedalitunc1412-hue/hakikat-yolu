@@ -45,7 +45,7 @@ export const hayber: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Hayber fethedilince bölgenin halkı, toprağı işleyip ürünün yarısını vermek şartıyla yerlerinde bırakıldı. Fedek halkı ise savaşmadan anlaşmıştı; bu yüzden Fedek Peygamber\'in tasarrufuna girdi. Fedek meselesi, Peygamber\'in vefatından sonra Hz. Fatıma ile Ebu Bekir arasında tartışma konusu olacaktır.' },
+      text: { tr: 'Hayber fethedilince bölgenin halkı, toprağı işleyip ürünün yarısını vermek şartıyla yerlerinde bırakıldı. Fedek halkı ise savaşmadan anlaşmıştı; bu yüzden Fedek Peygamber\'in tasarrufuna girdi. Fedek meselesi, Peygamber\'in vefatından sonra Hz. Fatıma ile Halife Ebu Bekir arasında tartışma konusu olacaktır.' },
       art: { bg: 'river', props: ['palms'], actors: [{ kind: 'crowd', x: 50, scale: 5 }] },
     },
   ],

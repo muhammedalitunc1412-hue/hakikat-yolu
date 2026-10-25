@@ -20,6 +20,33 @@ export const C = {
   ink: '#14211c',
 };
 
+export type ThemeName = 'default' | 'blood';
+const BASE = { ...C };
+const PALETTES: Record<ThemeName, typeof C> = {
+  default: BASE,
+  // Kerbela ve Hz. Hüseyin: kan kırmızısı
+  blood: {
+    ...BASE,
+    bg: '#150608', bgDeep: '#0b0305', card: '#25090c', card2: '#2f0d11',
+    gold: '#e03a45', goldDeep: '#b3202c', cream: '#f8ecea', text: '#f5e8e6', dim: '#cfb0b2', faint: '#a88488',
+    line: 'rgba(224,58,69,0.20)', lineStrong: 'rgba(224,58,69,0.50)', ink: '#fff3f1',
+  },
+};
+export const BLOOD = PALETTES.blood;
+let current: ThemeName = 'default';
+// Rengi yerinde değiştirir; stiller themedStyles ile bir sonraki çizimde yenilenir.
+export function setTheme(name: ThemeName) {
+  if (name === current) return;
+  current = name;
+  Object.assign(C, PALETTES[name]);
+}
+// StyleSheet'i temaya göre yeniden kuran sarmalayıcı: s.xxx her okunduğunda geçerli temanın stilini verir.
+export function themedStyles<T extends object>(build: () => T): T {
+  const cache: Partial<Record<ThemeName, T>> = {};
+  const get = () => (cache[current] ??= build());
+  return new Proxy({} as T, { get: (_t, k) => (get() as any)[k] });
+}
+
 export const PAGE_MAX = 760;
 
 export const font = {

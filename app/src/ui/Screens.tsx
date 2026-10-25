@@ -7,8 +7,9 @@ import { CATEGORIES } from '../data/events';
 import { mapsForEvent } from '../data/maps';
 import { Rich } from './Rich';
 import { EventVideo } from './EventVideo';
-import { ArchIcon, BookIcon, Chevron, PinIcon, SearchIcon, StarMark } from './icons';
-import { C, TOP, align, font, usePageWidth } from './theme';
+import { ArchIcon, BookIcon, Chevron, CompassIcon, PinIcon, SearchIcon, StarMark } from './icons';
+import { C, TOP, align, font, usePageWidth, themedStyles, BLOOD } from './theme';
+import { rememberScene, rememberedScene, useScrollMemory } from './scrollMemory';
 
 const webHit = Platform.OS === 'web' ? { cursor: 'pointer' as const } : null;
 
@@ -24,20 +25,23 @@ function Back({ onPress }: { onPress: () => void }) {
   );
 }
 
-export function Home({ events, onOpen, onMethod, onDuas, onMaps }: {
+export function Home({ events, onOpen, onMethod, onDuas, onMaps, onQibla, onImams }: {
   events: HistEvent[];
   onOpen: (id: string) => void;
   onMethod: () => void;
   onDuas: () => void;
   onMaps: () => void;
+  onQibla: () => void;
+  onImams: () => void;
 }) {
+  const sc = useScrollMemory('home');
   const width = usePageWidth();
   const [q, setQ] = useState('');
   const query = norm(q.trim());
   const wide = width >= 560;
   let shown = 0;
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page} keyboardShouldPersistTaps="handled">
+    <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page} keyboardShouldPersistTaps="handled">
       <View style={s.hero}>
         <View style={{ flex: 1 }}>
           <Text style={s.kicker}>{ui('kicker')}</Text>
@@ -66,6 +70,24 @@ export function Home({ events, onOpen, onMethod, onDuas, onMaps }: {
           <Chevron color={C.gold} />
         </Pressable>
       </View>
+
+      <Pressable style={({ pressed }) => [s.feature, { marginTop: 12 }, pressed && s.pressed, webHit]} onPress={onImams} accessibilityRole="button">
+        <View style={s.bubble}><Text style={{ color: C.gold, fontFamily: font.serif, fontSize: 17, fontWeight: '700' }}>12</Text></View>
+        <View style={{ flex: 1 }}>
+          <Text style={[s.featureTitle, align()]}>{ui('imams')}</Text>
+          <Text style={[s.featureSub, align()]}>{ui('imamsShort')}</Text>
+        </View>
+        <Chevron color={C.gold} />
+      </Pressable>
+
+      <Pressable style={({ pressed }) => [s.feature, { marginTop: 12 }, pressed && s.pressed, webHit]} onPress={onQibla} accessibilityRole="button">
+        <View style={s.bubble}><CompassIcon /></View>
+        <View style={{ flex: 1 }}>
+          <Text style={[s.featureTitle, align()]}>{ui('qibla')}</Text>
+          <Text style={[s.featureSub, align()]}>{ui('qiblaShort')}</Text>
+        </View>
+        <Chevron color={C.gold} />
+      </Pressable>
 
       <View style={s.search}>
         <SearchIcon />
@@ -97,18 +119,22 @@ export function Home({ events, onOpen, onMethod, onDuas, onMaps }: {
             <Text style={s.catIndex}>{String(catIndex + 1).padStart(2, '0')}</Text>
             <Text style={[s.catTitle, align()]}>{cat.title}</Text>
             <Text style={[s.catSub, align()]}>{cat.sub}</Text>
-            {list.map((e, i) => (
-              <Pressable key={e.id} onPress={() => onOpen(e.id)} accessibilityRole="button" style={({ pressed }) => [s.card, pressed && s.pressed, webHit]}>
-                <View style={s.numWrap}><Text style={s.num}>{i + 1}</Text></View>
-                <View style={{ flex: 1 }}>
-                  <Text style={[s.cardTitle, align()]}>{tx(e.title)}</Text>
-                  <Text style={[s.cardDate, align()]}>{tx(e.date)}</Text>
-                  {!!e.key && <Text style={[s.keyLine, align()]}>{tx(e.key)}</Text>}
-                  <Text style={[s.cardHook, align()]}>{tx(e.hook)}</Text>
-                </View>
-                <View style={{ marginTop: 4 }}><Chevron /></View>
-              </Pressable>
-            ))}
+            {list.map((e, i) => {
+              // Kerbela'ya giden kart kan kırmızısı (içine girince açılan tema ile aynı)
+              const red = e.id === 'kerbela';
+              return (
+                <Pressable key={e.id} onPress={() => onOpen(e.id)} accessibilityRole="button" style={({ pressed }) => [s.card, red && { backgroundColor: BLOOD.card, borderColor: BLOOD.lineStrong, borderLeftWidth: 4, borderLeftColor: BLOOD.gold }, pressed && s.pressed, webHit]}>
+                  <View style={[s.numWrap, red && { backgroundColor: BLOOD.gold }]}><Text style={[s.num, red && { color: BLOOD.ink }]}>{i + 1}</Text></View>
+                  <View style={{ flex: 1 }}>
+                    <Text style={[s.cardTitle, red && { color: BLOOD.gold }, align()]}>{tx(e.title)}</Text>
+                    <Text style={[s.cardDate, red && { color: BLOOD.gold }, align()]}>{tx(e.date)}</Text>
+                    {!!e.key && <Text style={[s.keyLine, red && { color: BLOOD.gold }, align()]}>{tx(e.key)}</Text>}
+                    <Text style={[s.cardHook, red && { color: BLOOD.dim }, align()]}>{tx(e.hook)}</Text>
+                  </View>
+                  <View style={{ marginTop: 4 }}><Chevron color={red ? BLOOD.gold : undefined} /></View>
+                </Pressable>
+              );
+            })}
           </View>
         );
       })}
@@ -201,8 +227,9 @@ type Panel = 'shia' | 'sunni' | 'disputes';
 type Page = HistEvent['scenes'][number] | 'video';
 
 export function EventScreen({ ev, onBack, onOpenMap }: { ev: HistEvent; onBack: () => void; onOpenMap: (mapId: string) => void }) {
+  const sc = useScrollMemory('event:' + ev.id);
   const width = usePageWidth();
-  const [idx, setIdx] = useState(0);
+  const [idx, setIdx] = useState(() => rememberedScene('event:' + ev.id));
   const [open, setOpen] = useState<Panel[]>([]);
   const listRef = useRef<FlatList<Page>>(null);
   const toggle = (p: Panel) => setOpen(o => (o.includes(p) ? o.filter(x => x !== p) : [...o, p]));
@@ -216,9 +243,11 @@ export function EventScreen({ ev, onBack, onOpenMap }: { ev: HistEvent; onBack: 
     const next = Math.max(0, Math.min(total - 1, i));
     listRef.current?.scrollToOffset({ offset: width * next, animated: true });
     setIdx(next);
+    rememberScene('event:' + ev.id, next);
   };
   const sync = (x: number) => {
     const i = Math.max(0, Math.min(total - 1, Math.round(x / Math.max(width, 1))));
+    rememberScene('event:' + ev.id, i);
     setIdx(cur => (cur === i ? cur : i));
   };
 
@@ -230,7 +259,7 @@ export function EventScreen({ ev, onBack, onOpenMap }: { ev: HistEvent; onBack: 
 
   return (
     <View style={{ flex: 1, backgroundColor: C.bg }}>
-      <ScrollView contentContainerStyle={{ paddingBottom: 64 }} keyboardShouldPersistTaps="handled">
+      <ScrollView {...sc} contentContainerStyle={{ paddingBottom: 64 }} keyboardShouldPersistTaps="handled">
         <View style={s.evHead}>
           <Back onPress={onBack} />
           <Text style={[s.evTitle, align()]}>{tx(ev.title)}</Text>
@@ -253,6 +282,7 @@ export function EventScreen({ ev, onBack, onOpenMap }: { ev: HistEvent; onBack: 
         <FlatList
           ref={listRef}
           data={pages}
+          initialScrollIndex={Math.min(idx, pages.length - 1)}
           horizontal
           pagingEnabled
           nestedScrollEnabled
@@ -355,8 +385,9 @@ export function EventScreen({ ev, onBack, onOpenMap }: { ev: HistEvent; onBack: 
 }
 
 export function DuaList({ duas, onOpen, onBack }: { duas: Dua[]; onOpen: (id: string) => void; onBack: () => void }) {
+  const sc = useScrollMemory('duas');
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page}>
+    <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page}>
       <Back onPress={onBack} />
       <Text style={[s.kicker, align()]}>DUA</Text>
       <Text style={[s.evTitle, align()]}>{ui('duas')}</Text>
@@ -378,6 +409,7 @@ export function DuaList({ duas, onOpen, onBack }: { duas: Dua[]; onOpen: (id: st
 }
 
 export function DuaScreen({ dua, onBack }: { dua: Dua; onBack: () => void }) {
+  const sc = useScrollMemory('dua:' + dua.id);
   const [show, setShow] = useState({ ar: true, ok: true, me: true });
   const ok = dua.status === 'verified';
   const Chip = ({ k, label }: { k: 'ar' | 'ok' | 'me'; label: string }) => (
@@ -386,7 +418,7 @@ export function DuaScreen({ dua, onBack }: { dua: Dua; onBack: () => void }) {
     </Pressable>
   );
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page}>
+    <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page}>
       <Back onPress={onBack} />
       <Text style={[s.evTitle, align()]}>{tx(dua.title)}</Text>
       {!!dua.when && <Text style={[s.cardDate, align(), { marginTop: 6 }]}>{dua.when}</Text>}
@@ -417,6 +449,7 @@ export function DuaScreen({ dua, onBack }: { dua: Dua; onBack: () => void }) {
 }
 
 export function Method({ onBack }: { onBack: () => void }) {
+  const sc = useScrollMemory('method');
   const paragraphs = [
     'Bu uygulama Şii bakışını esas alır. Her olay önce hikâye olarak anlatılır; her sahnenin altında o anlatımı hangi mezhebin kaynaklarının kabul ettiği (Sünni ve Şii / Şii / Sünni) yazar.',
     'Olayın sonunda "Şii kaynakları" ve "Sünni kaynakları" düğmelerine basınca ilgili kaynaklar açılır. Her kaynak kartında kitabın adı, numarası ve ne anlattığı bulunur. Şii kaynak ve yorum her zaman üstte gösterilir.',
@@ -428,7 +461,7 @@ export function Method({ onBack }: { onBack: () => void }) {
     'Haritalar bölümündeki mesafeler, yerlerin koordinatından kuş uçuşu (büyük daire) olarak hesaplanır. Kara yolu ve eski kervan yolu daha uzun olabilir; bilinen farklar haritada ayrıca belirtilir.',
   ];
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page}>
+    <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page}>
       <Back onPress={onBack} />
       <Text style={[s.kicker, align()]}>YÖNTEM</Text>
       <Text style={[s.evTitle, align()]}>{ui('method')}</Text>
@@ -442,7 +475,7 @@ export function Method({ onBack }: { onBack: () => void }) {
   );
 }
 
-const s = StyleSheet.create({
+const s = themedStyles(() => StyleSheet.create({
   page: { paddingHorizontal: 18, paddingTop: TOP, paddingBottom: 56 },
   hero: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   kicker: { color: C.gold, fontFamily: font.sans, fontSize: 12, fontWeight: '700', letterSpacing: 2.4 },
@@ -528,10 +561,10 @@ const s = StyleSheet.create({
   arabic: { color: '#fff8e0', fontFamily: font.arabic, fontSize: 28, lineHeight: 52, textAlign: 'right', writingDirection: 'rtl' },
   methodCard: { flexDirection: 'row', gap: 12, backgroundColor: C.card, borderRadius: 16, padding: 14, marginTop: 12, borderWidth: 1, borderColor: C.line },
   methodNum: { color: C.gold, fontFamily: font.serif, fontSize: 16, fontWeight: '700', width: 28 },
-  ph: { backgroundColor: '#10211e', alignItems: 'center', justifyContent: 'center' },
+  ph: { backgroundColor: C.card, alignItems: 'center', justifyContent: 'center' },
   phTitle: { color: C.cream, fontFamily: font.sans, fontSize: 16, fontWeight: '800', marginTop: 6, letterSpacing: 0.8 },
   phSub: { color: C.dim, fontFamily: font.sans, fontSize: 13, marginTop: 4, textAlign: 'center', paddingHorizontal: 16 },
   phFile: { color: C.faint, fontFamily: font.sans, fontSize: 11, marginTop: 6 },
   imgCount: { position: 'absolute', right: 10, bottom: 10, backgroundColor: 'rgba(7,20,16,0.72)', borderRadius: 12, paddingHorizontal: 10, paddingVertical: 5 },
   imgCountText: { color: C.cream, fontFamily: font.sans, fontSize: 12, fontWeight: '700' },
-});
+}));

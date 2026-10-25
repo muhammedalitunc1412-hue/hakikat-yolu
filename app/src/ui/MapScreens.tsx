@@ -7,6 +7,7 @@ import { tx, ui } from '../i18n';
 import { BirdMap, MAP_H, MAP_W } from './BirdMap';
 import { Chevron, PinIcon } from './icons';
 import { C, TOP, align, font, usePageWidth } from './theme';
+import { useScrollMemory } from './scrollMemory';
 
 const GROUPS: { id: MapRegion; title: string; sub: string }[] = [
   { id: 'hicaz', title: 'Hicaz ve Arabistan', sub: 'Mekke, Medine ve yol üstündeki yerler' },
@@ -14,11 +15,12 @@ const GROUPS: { id: MapRegion; title: string; sub: string }[] = [
 ];
 
 export function MapList({ onOpen, onBack }: { onOpen: (id: string) => void; onBack: () => void }) {
+  const sc = useScrollMemory('maps');
   const width = usePageWidth();
   const mapW = width - 36;
   const nums = Object.fromEntries(MAPS.map((m, i) => [m.focus, i + 1])) as Partial<Record<MapEntry['focus'], number>>;
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page} keyboardShouldPersistTaps="handled">
+    <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page} keyboardShouldPersistTaps="handled">
       <Back onPress={onBack} />
       <Text style={[s.kicker, align()]}>KUŞ BAKIŞI</Text>
       <Text style={[s.title, align()]}>{ui('maps')}</Text>
@@ -70,6 +72,7 @@ export function MapList({ onOpen, onBack }: { onOpen: (id: string) => void; onBa
 }
 
 export function MapDetail({ id, onBack, onOpenEvent }: { id: string; onBack: () => void; onOpenEvent: (eventId: string) => void }) {
+  const sc = useScrollMemory('map:' + id);
   const width = usePageWidth();
   const map = MAPS.find(m => m.id === id);
   if (!map) {
@@ -88,7 +91,7 @@ export function MapDetail({ id, onBack, onOpenEvent }: { id: string; onBack: () 
   const mapW = width - 36;
   const approx = map.show.some(pid => PLACES[pid].approx);
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page}>
+    <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page}>
       <Back onPress={onBack} />
       <Text style={[s.kicker, align()]}>{map.region === 'hicaz' ? 'HİCAZ VE ARABİSTAN' : 'IRAK VE ŞAM'}</Text>
       <Text style={[s.title, align()]}>{map.title}</Text>
