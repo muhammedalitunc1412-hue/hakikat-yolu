@@ -9,7 +9,7 @@ export const duaNudbe: Dua = {
     "tr": "İmam-ı Zaman'ın (a.f.) hasreti için yakarış"
   },
   "when": "Cuma sabahları ve dört bayramda (Fıtır, Kurban, Gadir ve Cuma) okunur.",
-  "intro": "Gaip İmam'ın (a.f.) ayrılığı karşısında duyulan özlemi dile getiren bu dua, Ehl-i Beyt'in faziletini ve çektiği sıkıntıyı anar. Mefâtîhu'l-Cinân, İbn Meşhedî'nin el-Mezâru'l-Kebîr'i ve Seyyid İbn Tâvûs'un eserlerinde nakledilir. Sayfa baskıya göre değişir.",
+  "intro": "Gaib İmam'ın (a.f.) ayrılığı karşısında duyulan özlem ve feryadı dile getiren bu dua, Ehl-i Beyt'in fazileti ve mazlumiyetini anar. Mefâtîhu'l-Cinân, İbn Meşhedî'nin el-Mezâru'l-Kebîr'i ve Seyyid İbn Tâvûs'un eserlerinde nakledilir.",
   "source": "Mefâtîhu'l-Cinân; İbn Meşhedî, el-Mezâru'l-Kebîr; Seyyid İbn Tâvûs. Arapça metin duas.org (Dua Nudba) sayfasından alınmıştır.",
   "url": "https://www.duas.org/nudba.htm",
   "status": "verified",

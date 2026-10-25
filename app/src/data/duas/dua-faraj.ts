@@ -5,7 +5,7 @@ export const duaFaraj: Dua = {
   title: { tr: 'Dua-i Ferec (İmam-ı Zaman için dua)' },
   subtitle: { tr: 'Allâhümme kün li-veliyyike el-Huccet ibnil Hasen' },
   when: 'Günlük, özellikle sabah-akşam ve cuma günleri; İmam-ı Zaman (a.s.) için hıfz ve ferec dileğiyle okunur.',
-  intro: 'On İkinci İmam Muhammed el-Mehdî (a.f.) için Allah\'tan koruma, yardım ve ferec dileyen kısa bir duadır. Ca\'ferî gelenekte sabah-akşam okunur. Gaybet inancı Şiîdir; metin dua kitaplarından alınmıştır, Buhari ve Müslim\'de yoktur.',
+  intro: 'On İkinci İmam Mehdi (a.f.) için Allah\'tan koruma, yardım ve uzun ömür dileyen kısa bir duadır.',
   parts: [
     {
       ar: 'اللّهُمّ كُنْ لِوَلِيّكَ الحُجّةِ ابْنِ الحَسَنِ',

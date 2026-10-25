@@ -6,7 +6,7 @@ export const muta: HistEvent = {
   id: 'muta',
   date: { tr: 'Peygamber dönemi ve sonrası', en: 'The Prophet\'s era and after' },
   title: { tr: 'Mut\'a nikâhı (geçici evlilik) konusundaki ayrılık', en: 'The disagreement over mut\'a (temporary marriage)' },
-  hook: { tr: 'Bir ayetin kelimesi, Hz. Peygamber (s.a.v.) dönemindeki bir izin ve Ömer\'in yasağı. İki fıkıh bugün de ayrılır.', en: 'One word in a verse, a caliph\'s ban, and two legal traditions that still differ today.' },
+  hook: { tr: 'Bir ayetin kelimesi, bir halifenin yasağı ve bugün bile süren iki ayrı fıkıh.', en: 'One word in a verse, a caliph\'s ban, and two legal traditions that still differ today.' },
   scenes: [
     {
       text: { tr: 'Nisâ suresi 4:24, evlenilmesi helal olan kadınlardan söz ederken şöyle der: "Onlardan faydalandığınız (istemte\'tum) kadınlara, mehirlerini farz olarak verin." Ayrılığın başladığı yer bu "istemte\'tum" kelimesidir: bu, olağan nikâhtan faydalanmak mıdır, yoksa süreli nikâh (mut\'a) mıdır?' },
@@ -51,15 +51,15 @@ export const muta: HistEvent = {
     { book: 'Müslim, Sahih', ref: 'No. 1405a (Cabir b. Abdillah, Seleme b. Ekva\')', says: { tr: 'Peygamber\'in sözcüsü gelip faydalanma izni verildiğini duyurur.' }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/muslim:1405a', status: 'verified' },
     { book: 'Müslim, Sahih', ref: 'No. 1217a (Cabir; Ömer\'in konuşması)', says: { tr: 'Hac mut\'ası ve kadın mut\'ası; Ömer ikisini yasakladığını ve cezalandıracağını söyler. Metin hadithunlocked üzerinde okundu; "iki mut\'a Peygamber döneminde vardı" cümlesi bu rivayetin paralellerinde geçer, tam lafız ayrıca kontrol edilmeli.' }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/muslim:1217a', status: 'verified' },
     { book: 'Tirmizi, el-Câmi\'', ref: 'No. 1122 (İbn Abbas)', says: { tr: '"Mut\'a İslam\'ın başında idi" diyen rivayet; ayet 23:6 ile haram olduğu söylenir.' }, grade: { tr: 'Ali Za\'i: zayıf; İbn Hacer: zayıf ve şâz, zincir kopuk' }, url: 'https://hadithunlocked.com/tirmidhi:1122', status: 'verified' },
-    { book: 'İbn Hacer, Fethu\'l-Bârî', ref: 'mut\'a bölümü (tahminî sayfa kaldırıldı)', says: { tr: 'Mut\'a rivayetlerinin ve İbn Abbas\'ın vazgeçme rivayetlerinin değerlendirmesi.' }, grade: { tr: 'İKİNCİL: tohed.com aktarımı' }, status: 'check' },
+    { book: 'İbn Hacer, Fethu\'l-Bârî', ref: 'C. 9, s. 148 (tahminî; kontrol edilecek)', says: { tr: 'Mut\'a rivayetlerinin ve İbn Abbas\'ın vazgeçme rivayetlerinin değerlendirmesi.' }, grade: { tr: 'İKİNCİL: tohed.com aktarımı' }, status: 'check' },
     { book: 'Nevevî, Şerhu Müslim; Taberî, Câmiu\'l-Beyân', ref: 'Nisâ 4:24 ve Müslim 1406 şerhi', says: { tr: 'Nevevî mut\'anın izinden sonra yasaklandığını ve icmâ ile haram olduğunu belirtir; Taberî ayeti tefsir eder. Sayfa/numara kontrol edilecek.' }, grade: { tr: 'DOĞRULANMADI' }, status: 'check' },
   ],
   shia: [
-    { book: 'Kuleynî, el-Kâfî', ref: 'C. 5, Kitâbü\'n-Nikâh, Bâbü\'l-Mut\'a (hadis no kontrol edilecek)', says: { tr: 'Mut\'anın şartları: belli süre, belli mehir; kadının iddeti.' }, grade: { tr: 'DOĞRULANMADI (al-islam.org ikincil atfı; sayfa kaldırıldı)' }, status: 'check' },
+    { book: 'Kuleynî, el-Kâfî', ref: 'C. 5, Kitâbü\'n-Nikâh, Bâbü\'l-Mut\'a (hadis no kontrol edilecek)', says: { tr: 'Mut\'anın şartları: belli süre, belli mehir; kadının iddeti.' }, grade: { tr: 'DOĞRULANMADI (al-islam.org ikincil atfı: C. 5, s. 453)' }, status: 'check' },
     { book: 'Tûsî, et-Tehzîb', ref: 'C. 7, Mut\'a bölümü (no kontrol edilecek)', says: { tr: 'Mut\'a hükümleri ve rivayetleri.' }, grade: { tr: 'DOĞRULANMADI' }, status: 'check' },
-    { book: 'Hürr el-Âmilî, Vesâilü\'ş-Şîa', ref: 'C. 14, Ebvâbü\'l-Mut\'a', says: { tr: 'Başlıklarının tümünde "mut\'a" terimi geçen, Şii rivayetleri bir araya getiren derleme.' }, grade: { tr: 'İKİNCİL: al-islam.org atfı (sayfa kaldırıldı)' }, url: 'https://www.al-islam.org/shiite-encyclopedia/temporary-marriage-islam-part-6-similarities-and-differences-muta-and-regular', status: 'check' },
+    { book: 'Hürr el-Âmilî, Vesâilü\'ş-Şîa', ref: 'C. 14, Ebvâbü\'l-Mut\'a', says: { tr: 'Başlıklarının tümünde "mut\'a" terimi geçen, Şii rivayetleri bir araya getiren derleme.' }, grade: { tr: 'İKİNCİL: al-islam.org atfı (C. 14, s. 452)' }, url: 'https://www.al-islam.org/shiite-encyclopedia/temporary-marriage-islam-part-6-similarities-and-differences-muta-and-regular', status: 'check' },
     { book: 'Şerîf Murtazâ, el-İntisâr', ref: 'Mut\'a mes\'elesi (sayfa kontrol edilecek)', says: { tr: 'Mut\'anın cevazına dair İmâmiyye icmâ iddiası ve delilleri.' }, grade: { tr: 'DOĞRULANMADI' }, status: 'check' },
-    { book: 'Taberî, Câmiu\'l-Beyân (Şii aktarımıyla)', ref: 'Nisâ 4:24 (al-islam.org atfı; sayfa doğrulanmadı)', says: { tr: '4:24\'te "ilâ ecelin müsemmâ" okuyuşunun İbn Abbas, Übey, İbn Mes\'ud ve başkalarından rivayeti.' }, grade: { tr: 'İKİNCİL: partizan makaleden; birincil metin görülmedi' }, url: 'https://al-islam.org/node/39099', status: 'check' },
+    { book: 'Taberî, Câmiu\'l-Beyân (Şii aktarımıyla)', ref: 'C. 5, s. 18 (al-islam.org atfı)', says: { tr: '4:24\'te "ilâ ecelin müsemmâ" okuyuşunun İbn Abbas, Übey, İbn Mes\'ud ve başkalarından rivayeti.' }, grade: { tr: 'İKİNCİL: partizan makaleden; birincil metin görülmedi' }, url: 'https://al-islam.org/node/39099', status: 'check' },
   ],
   disputes: [
     {

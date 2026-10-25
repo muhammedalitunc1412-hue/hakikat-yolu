@@ -5,10 +5,10 @@ export const gadir: HistEvent = {
   id: 'gadir',
   date: { tr: '18 Zilhicce 10 H (632)', en: '18 Dhu al-Hijjah 10 AH (632)' },
   title: { tr: 'Gadir Hum', en: 'Ghadir Khumm' },
-  hook: { tr: 'Çölün ortasında durdurulan kafile ve göğe kaldırılan bir el: Hz. Ali (a.s.).', en: 'A caravan halted in the desert, and a raised hand.' },
+  hook: { tr: 'Çölün ortasında durdurulan kafile ve kaldırılan bir el.', en: 'A caravan halted in the desert, and a raised hand.' },
   scenes: [
     {
-      text: { tr: 'Veda Haccı bitmişti. Hz. Peygamber (s.a.v.) binlerce Müslümanla Mekke\'den Medine\'ye dönüyordu. Hz. Ali de Yemen\'den gelmiş, hacda ona katılmıştı. Yol, ayrılmadan önce bir su başına uğrayacaktı.' },
+      text: { tr: 'Veda Haccı tamamlanmıştı. Peygamber binlerce Müslümanla Mekke\'den Medine\'ye dönüyordu. Hz. Ali de Yemen\'den gelip hacda ona katılmıştı.' },
       art: { bg: 'dune-day', props: ['sun', 'camels'], actors: [{ kind: 'crowd', x: 40, scale: 8 }, { kind: 'prophet', x: 74, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 88, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
@@ -23,7 +23,7 @@ export const gadir: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Sonra Hz. Ali\'nin elinden tutup yukarı kaldırdı: «Ben kimin mevlâsıysam, Ali de onun mevlâsıdır. Allah\'ım, onu dost edineni dost edin, ona düşman olana düşman ol.» Çölün sıcağında, yollar dağılmadan söylenen bu cümle, Ca\'ferî yolda velayetin ilanıdır. Tirmizi 3713 ve İbn Mâce 121 gibi Sünni kaynaklar da sözün kendisini aktarır.' },
+      text: { tr: 'Sonra Hz. Ali\'nin elinden tutup yukarı kaldırdı: "Ben kimin mevlâsıysam, Hz. Ali de onun mevlâsıdır. Allah\'ım, onu dost edineni dost edin, ona düşman olana düşman ol."' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 62, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 78, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
@@ -78,5 +78,5 @@ export const gadir: HistEvent = {
     { tr: 'Aynı konuşmada Kitap ve Ehl-i Beyt\'i birlikte emanet etti ve "ayrılmazlar" dedi. Ehl-i Beyt\'in rolünü bu söz nasıl belirler?' },
     { tr: 'Müslim 2404\'e göre Muaviye, Sa\'d\'dan Hz. Ali\'ye sövmesini istedi. Sa\'d da bu faziletleri sayarak karşı çıktı. İnsanlar neden Hz. Ali\'ye sövmeye zorlanıyordu?' },
   ],
-  summary: { tr: 'Gadir Hum\'da Hz. Peygamber (s.a.v.), Hz. Ali\'nin (a.s.) elini kaldırıp «Ben kimin mevlâsıysam Ali de onun mevlâsıdır» dedi. Söz Tirmizi, İbn Mâce ve Ahmed\'de de, Ca\'ferî kitaplarda da vardır. Ca\'ferî yolda «mevlâ», hutbenin başındaki «evlâ» sorusuna bağlı bir önderliktir. Sünni okuma ise dostluk ve yakınlık der.' },
+  summary: { tr: 'Gadir Hum\'da Peygamber Hz. Ali\'nin elini kaldırıp "Ben kimin mevlâsıysam Hz. Ali de onun mevlâsıdır" dedi. Bu söz Tirmizi ve Ahmed gibi Sünni kaynaklarında da, Şii kaynaklarında da geçer; Şii kaynaklarında "mevlâ" önder anlamında anlaşılır ve Gadir, Hz. Ali\'nin velayetinin ilanı olarak anılır.' },
 };

@@ -6,7 +6,7 @@ export const abdest: HistEvent = {
   id: 'abdest',
   date: { tr: 'Peygamber dönemi ve sonrası' },
   title: { tr: 'Abdestte ayak: mesh mi, yıkama mı?' },
-  hook: { tr: 'Aynı ayetin iki okunuşu var. Biri ayağı başa, diğeri yıkanan uzva bağlar. Ehl-i Beyt yolu neden mesh eder?' },
+  hook: { tr: 'Aynı ayetin iki okunuşu var; biri ayağı başa, diğeri ele benzetir. Müslümanlar abdestte ayağa neden farklı davranıyor?' },
   scenes: [
     {
       by: 'both',
@@ -57,13 +57,13 @@ export const abdest: HistEvent = {
     { book: 'İbn Kesîr, Tefsîr (Mâide 6)', ref: 'Sayfa DOĞRULANMADI', says: { tr: 'Quran.com\'daki metin ayetin ayakların yıkanmasını gerektirdiğini söyler; İbn Abbas\'ın ve Enes\'in yıkama rivayetlerini ve İkrime\'yi yıkama diyenler arasında anar. Metin okunuş farkına değinmez.' }, url: 'https://quran.com/5:6/tafsirs/en-tafisr-ibn-kathir', status: 'verified' },
     { book: 'İbn Ebi Şeybe, el-Musannef', ref: 'Şa\'bî ve Enes nakilleri; numara DOĞRULANMADI', says: { tr: 'Şa\'bî\'den mesh caizdir görüşü ve Cebrail\'in mesh getirdiği sözü; Enes\'in meshederken ayaklarını ıslattığı rivayeti.' }, url: 'https://en.tohed.com/hadith/musannaf-ibn-abi-shaybah/chapter/1429/sub/42745/', status: 'check' },
     { book: 'Nevevî, el-Minhâc; İslamQA özeti', ref: 'Cilt/sayfa DOĞRULANMADI', says: { tr: 'Nevevî\'ye göre âlimler yıkamanın farz olduğunda ittifak etmiştir; Taberî\'ye muhayyerlik, Cübbâî\'ye mesh nispet edilir; cer okunuşuna dört cevap (komşuluk, hadisler, mest-çıplak ayak ayrımı, hafif yıkama).' }, url: 'https://islamqa.info/en/answers/316320', status: 'check' },
-    { book: 'Taberî, Câmi\'u\'l-Beyân; Kurtubî; Fahreddin Râzî, Mefâtîhu\'l-Gayb', ref: 'Mâide 6; DOĞRULANMADI', says: { tr: 'Bu oturumda açılamadı; Râzî\'ye atıf WikiShia dipnotundandır, sayfa doğrulanmadı.' }, status: 'check' },
+    { book: 'Taberî, Câmi\'u\'l-Beyân; Kurtubî; Fahreddin Râzî, Mefâtîhu\'l-Gayb', ref: 'Mâide 6; DOĞRULANMADI', says: { tr: 'Bu oturumda açılamadı; Râzî\'ye atıf WikiShia dipnotundan (c. 11, s. 306).' }, status: 'check' },
   ],
   shia: [
     { book: 'WikiShia, Al-Wudu\' Verse', ref: 'İkincil kaynak', says: { tr: 'Şiiler eli aşağı doğru yıkar, ayağın üst kısmına mesh yapar; okunuş ve iki görüşün delillerini özetler.' }, url: 'https://en.wikishia.net/view/Al-Wudu%27_Verse', status: 'verified' },
-    { book: 'Tûsî, Tehzîbü\'l-Ahkâm', ref: 'abdest bölümü (WikiShia dipnotu; sayfa doğrulanmadı)', says: { tr: 'Abdest ayetiyle ilgili Ehl-i Beyt rivayeti olarak anılır. Metni bu oturumda okunmadı.' }, url: 'https://en.wikishia.net/view/Al-Wudu%27_Verse', status: 'check' },
-    { book: 'Hurr el-Âmilî, Vesâilü\'ş-Şîa', ref: 'ayak meshi (WikiShia dipnotu; sayfa doğrulanmadı)', says: { tr: 'Ehl-i Beyt\'ten ayak meshi rivayetlerinin derlemesi. Metin açılmadı.' }, status: 'check' },
-    { book: 'Tabâtabâî, el-Mîzân', ref: 'Mâide 6 (WikiShia dipnotu; sayfa doğrulanmadı)', says: { tr: 'Cer okunuşunu tercih eder; Malang dergisi özetine göre Şîrâzî ile birlikte çoğunluk Şii görüşünü yansıtır. Metin açılmadı.' }, url: 'https://ejournal.uin-malang.ac.id/index.php/ululalbab/article/view/32133', status: 'check' },
+    { book: 'Tûsî, Tehzîbü\'l-Ahkâm', ref: 'c. 1, s. 62, h. 20 (WikiShia dipnotu)', says: { tr: 'Abdest ayetiyle ilgili Ehl-i Beyt rivayeti olarak anılır. Metni bu oturumda okunmadı.' }, url: 'https://en.wikishia.net/view/Al-Wudu%27_Verse', status: 'check' },
+    { book: 'Hurr el-Âmilî, Vesâilü\'ş-Şîa', ref: 'c. 1, s. 387, 418 (WikiShia dipnotu)', says: { tr: 'Ehl-i Beyt\'ten ayak meshi rivayetlerinin derlemesi. Metin açılmadı.' }, status: 'check' },
+    { book: 'Tabâtabâî, el-Mîzân', ref: 'c. 5, s. 363, 387 (WikiShia dipnotu)', says: { tr: 'Cer okunuşunu tercih eder; Malang dergisi özetine göre Şîrâzî ile birlikte çoğunluk Şii görüşünü yansıtır. Metin açılmadı.' }, url: 'https://ejournal.uin-malang.ac.id/index.php/ululalbab/article/view/32133', status: 'check' },
     { book: 'Kuleynî, el-Kâfî; Tabersî, Mecmeu\'l-Beyân', ref: 'DOĞRULANMADI', says: { tr: 'Abdest bahsi ve Mâide 6 tefsiri; bu oturumda okunamadı.' }, status: 'check' },
     { book: 'WikiShia, Wiping over khuffayn', ref: 'İkincil kaynak', says: { tr: 'Şii görüş: meshin çıplak ayağa yapılması, takiyye ve zorunluluk dışında mest üstüne mesh yapılmaması.' }, url: 'https://en.wikishia.net/view/Wiping_over_khuffayn', status: 'verified' },
   ],

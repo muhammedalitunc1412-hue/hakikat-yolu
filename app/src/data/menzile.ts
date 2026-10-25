@@ -6,7 +6,7 @@ export const menzile: HistEvent = {
   id: 'menzile',
   date: { tr: 'Tebük Seferi, Hicretin 9. yılı (630)', en: 'The Tabuk expedition, 9 AH (630)' },
   title: { tr: 'Hadis-i Menzile: Tebük\'te "Harun Musa\'ya nasılsa sen de bana öylesin"', en: 'The Hadith of the Position: at Tabuk, "as Aaron was to Moses"' },
-  hook: { tr: 'Hz. Peygamber (s.a.v.) Tebük\'e giderken Hz. Ali\'yi (a.s.) Medine\'de bıraktı. «Harun Musa\'ya nasılsa» sözü neyin kapısını açar?', en: 'The Prophet left Ali in Medina when he marched to Tabuk. What did he say to him, and what does it mean?' },
+  hook: { tr: 'Peygamber Tebük\'e giderken Hz. Ali\'yi Medine\'de bıraktı; ardından ona hangi sözü söyledi ve bu söz ne anlama geliyor?', en: 'The Prophet left Ali in Medina when he marched to Tabuk. What did he say to him, and what does it mean?' },
   scenes: [
     {
       by: 'both',
@@ -25,7 +25,7 @@ export const menzile: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Hz. Ali «Ey Allah\'ın Resulü, beni kadınlar ve çocuklarla mı bırakıyorsun?» diye sorunca Hz. Peygamber (s.a.v.) şöyle buyurdu: «Harun\'un Musa nezdindeki yeri gibi benim nezdimde yerinin olmasına razı değil misin? Ancak benden sonra peygamber yoktur.» Bu söz Buhari 3706\'da ve Müslim 2404\'te sahihtir. Buhari 4416 da Tebük\'te vekâleti ve aynı sözü anlatır. Ca\'ferî yolda «peygamber yoktur» kaydı, nübüvvet dışındaki makamı Hz. Ali\'ye bırakır.' },
+      text: { tr: 'Hz. Ali "Ey Allah\'ın Resulü, beni çocuklar ve kadınlarla mı bırakıyorsun?" diye sorunca Peygamber şöyle buyurdu: "Harun\'un Musa nezdindeki yeri gibi benim nezdimde yerinin olmasına razı değil misin? Ancak benden sonra peygamber yoktur." Bu söz Buhari 3706 ve 4416\'da, Müslim 2404\'te geçer.' },
       art: { bg: 'dune-dusk', actors: [{ kind: 'prophet', x: 42, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, label: { tr: 'Hz. Ali' } }] },
     },
     {
@@ -51,7 +51,7 @@ export const menzile: HistEvent = {
   ],
   sunni: [
     { book: 'Buhari, Sahih', ref: 'No. 3706 (Menâkıb; Sa\'d b. Ebi Vakkas)', says: { tr: '"Harun Musa\'ya nasıl ise sen bana öylesin" hadisi.' }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/bukhari:3706', status: 'verified' },
-    { book: 'Buhari, Sahih', ref: 'No. 4416 (Megâzî; Tebük)', says: { tr: 'Peygamber Tebük\'e çıkarken Hz. Ali\'yi Medine\'de vekil bırakır ve Menzile sözünü söyler.' }, grade: { tr: 'Sahih' }, url: 'https://sunnah.com/bukhari:4416', status: 'verified' },
+    { book: 'Buhari, Sahih', ref: 'No. 4416 (Megāzī; Tebük gazvesi; numara kontrol edilecek)', says: { tr: 'Peygamber Tebük\'e çıkarken Hz. Ali\'yi Medine\'de vekil bırakır; Menzile sözü.' }, grade: { tr: 'Sahih' }, status: 'check' },
     { book: 'Müslim, Sahih', ref: 'No. 2404 (Fezâilü\'s-sahâbe; sitede 2404a-c)', says: { tr: 'Menzile hadisi "benden sonra nebi yok" kaydıyla (Tebük); Muaviye-Sa\'d konuşması.' }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/muslim:2404a', status: 'verified' },
     { book: 'İbn Mace, Sünen', ref: 'No. 121 (Fazl-ı Ali)', says: { tr: 'Sa\'d b. Ebi Vakkas, Muaviye\'ye üç sözü hatırlatır: mevlâ, Menzile, Hayber sancağı.' }, grade: { tr: 'Albani: sahih' }, url: 'https://hadithunlocked.com/ibnmajah:121', status: 'verified' },
   ],

@@ -27,7 +27,7 @@ import { ibadetFarklari } from './ibadet-farklari';
 const KEYS: Record<string, string> = {
   "pence-aba": "Pence-i Âl-i Aba: örtünün altındaki beş nur",
   "ehlibeyt": "Mübahele: Peygamber yanında yalnızca Ehl-i Beyt'i getirdi",
-  "ali-kimdir": "Hz. Ali (a.s.): Peygamber'in kardeşi, vasisi ve ilk imam",
+  "ali-kimdir": "Hz. Ali: Peygamber'in kardeşi, vasisi ve ilk imam",
   "hayber": "Sancak, Allah ve Resulü'nü seven Hz. Ali'ye verildi",
   "menzile": "«Harun Musa'ya nasılsa sen de bana öylesin»",
   "gadir": "Hz. Ali'nin velayet hakkı: «Ben kimin mevlâsıysam Ali de onun mevlâsıdır»",

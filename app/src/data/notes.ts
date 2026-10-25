@@ -2,7 +2,7 @@
 // Rakamlar ve kaynaklar olay sayfalarındaki metinlerle uyumludur; kesin olmayanlar bu şekilde belirtilmiştir.
 export const NOTES: Record<string, string[]> = {
   'pence-aba': [
-    "Kisa olayı Müslim 2424'te Hz. Aişe'den, Tirmizi 3787'de Ümmü Seleme'nin evinden aktarılır.",
+    "Kisa olayı Müslim 2424'te Aişe'den aktarılır.",
     "Peygamber, Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin'i siyah bir örtünün altına aldı.",
     "Ardından «Allah sizden kiri gidermek ister, ey Ehl-i Beyt» ayetini (Ahzâb 33:33) okudu.",
     "Bu beş kişiye «Pence-i Âl-i Aba» (örtü ehlinin beşi) denir.",
@@ -20,13 +20,13 @@ export const NOTES: Record<string, string[]> = {
     "İlk iman edenlerden biridir; sıra konusunda kaynaklarda farklı anlatımlar vardır.",
     "Hicret gecesi Peygamber'in yatağında yattı.",
     "Medine'de Peygamber onu kardeş edindi ve kızı Hz. Fatıma ile evlendirdi.",
-    "Hayber sancağı sahihtir. Tirmizi 3723 «hikmetin evi» der ve garib münker sayar. «İlmin şehri» başka rivayetlerdedir, sıhhati tartışmalıdır.",
+    "Hayber sancağı gibi faziletleri ortaktır; «ilmin kapısı» hadisinin sıhhati tartışmalıdır.",
   ],
   hayber: [
     "Hayber, Hicretin 7. yılında Medine'nin kuzeyindeki Yahudi vahasıydı.",
     "Kalelerden biri günlerce alınamadı.",
     "Peygamber «Sancağı Allah ve Resulü'nü seven birine vereceğim» dedi (Buhari 2942, Müslim 2406).",
-    "Sancak Hz. Ali'ye verildi; gözleri Peygamber'in tükürüğüyle iyileşti (Buhari 2942, Müslim 2406). Merhab'ın öldürülmesi Müslim 1807'nin Hayber bölümündedir.",
+    "Sancak Hz. Ali'ye verildi; gözleri Peygamber'in tükürüğüyle iyileşti.",
     "Söz Hz. Ali'nin faziletinde ortaktır; hilafete delil olup olmadığı tartışılır.",
   ],
   menzile: [
@@ -95,7 +95,7 @@ export const NOTES: Record<string, string[]> = {
   ],
   siffin: [
     "Sıffin'de Hz. Ali ile Muaviye'nin orduları karşılaştı.",
-    "Ammar Hz. Ali'nin safında şehit oldu. «Onu azgın bir grup öldürecek» Buhari 447 ve Müslim 2915'tedir. Müslim 1064, hakka daha yakın tarafın Haricîleri öldüreceğini söyler.",
+    "Ammar b. Yasir Hz. Ali'nin safında şehit oldu; «onu azgın bir grup öldürecek» hadisi anıldı.",
     "Şamlılar mushafları mızraklara bağlayıp hakemlik istedi.",
     "Hakemi reddeden grup ayrıldı; bunlara Haricîler denir.",
     "İbn Mülcem Ramazan 40'ta Hz. Ali'yi yaraladı; Hz. Ali yaklaşık iki gün sonra vefat etti.",

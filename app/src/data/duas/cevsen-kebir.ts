@@ -126,7 +126,7 @@ export const cevsenKebir: Dua = {
   subtitle: { tr: 'Dua-i Cevşen Kebir (100 bölüm)' },
   when: 'Özellikle Ramazan geceleri ve kadir geceleri',
   intro:
-    "Ca'ferî gelenekte çok sevilen bir isim duasıdır. Rivayete göre savaşta ağır zırh Hz. Peygamber'i (s.a.v.) sıkınca Cebrail bu duayı öğretmiş ve zırhı çıkarmasını söylemiştir. Bu haber Kef'amî'nin el-Beledü'l-Emîn'i ve Mefâtîhu'l-Cinân yoluyla gelir. Buhari ve Müslim'de yoktur. Yüz bölümden oluşur. Her bölümün sonunda «Sübhâneke yâ lâ ilâhe illâ ente, el-gavs el-gavs, hallisnâ mine'n-nâr yâ Rabb» nakaratı okunur.",
+    "Rivayete göre savaşta ağır zırhı Peygamber'i sıkınca Cebrail bu duayı ona öğretmiş ve zırhı çıkarmasını söylemiştir. Yüz bölümden oluşur; bin kadar isim ve sıfat içerir. Her bölümün sonunda \"Sübhâneke yâ lâ ilâhe illâ ente, el-gavs el-gavs, hallisnâ mine'n-nâr yâ Rabb\" nakaratı okunur.",
   source:
     "duas.org — Dua Jawshan Kabeer (Beledü'l-Emîn ve İbrahim Kef'amî, el-Misbah rivayeti; Mefâtîhu'l-Cinân'da da yer alır)",
   url: 'http://www.duas.org/mobile/ramadan-dua-jawshan-kabeer.html',
