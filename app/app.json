@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
-    "backgroundColor": "#0f1a1a",
+    "backgroundColor": "#071410",
     "android": {
       "package": "com.tuncgames.hakikatyolu",
       "versionCode": 1

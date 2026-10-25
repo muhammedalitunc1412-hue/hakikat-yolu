@@ -3,13 +3,12 @@ import { Modal, Pressable, ScrollView, StyleProp, StyleSheet, Text, TextStyle, V
 import { tx } from '../i18n';
 import type { L } from '../types';
 import { VERSES } from '../data/verses';
+import { C, font } from './theme';
 
 // Metindeki ayet göndermelerini (örn. "Ahzâb 33:33", "Mâide suresi 6. ayet") dokunulabilir yapar;
 // dokununca Arapça metin ve Türkçe meal açılır penceresi görünür.
 const SURAH: Record<string, number> = { 'Bakara': 2, 'Âl-i İmrân': 3, 'Nisâ': 4, 'Mâide': 5, 'Enfâl': 8, 'Nahl': 16, 'Ahzâb': 33, 'Şûrâ': 42, 'Beyyine': 98, "A'râf": 7, 'Tâhâ': 20 };
 const RE = /(Bakara|Âl-i İmrân|Nisâ|Mâide|Enfâl|Nahl|Ahzâb|Şûrâ|Beyyine|A'râf|Tâhâ)(?: suresi)?\s+(?:(\d{1,3}):)?(\d{1,3})(?![\d:])/g;
-
-const K = { bg: '#16242a', text: '#eef3f0', dim: '#9fb4b0', gold: '#e6c36a', shia: '#3fbf7f', line: 'rgba(255,255,255,0.12)' };
 
 type Part = { t: string; key?: string };
 function split(text: string): Part[] {
@@ -50,13 +49,13 @@ function emph(t: string): React.ReactNode[] {
   return out;
 }
 
-export function Rich({ text, style }: { text: L | string | undefined; style?: StyleProp<TextStyle> }) {
+export function Rich({ text, style, selectable }: { text: L | string | undefined; style?: StyleProp<TextStyle>; selectable?: boolean }) {
   const [open, setOpen] = useState<string | null>(null);
   const parts = split(tx(text));
   const v = open ? VERSES[open] : null;
   return (
     <>
-      <Text style={style}>
+      <Text style={style} selectable={selectable}>
         {parts.map((p, i) => p.key
           ? <Text key={i} style={r.link} onPress={() => setOpen(p.key!)}>{p.t}</Text>
           : <Text key={i}>{emph(p.t)}</Text>)}
@@ -68,7 +67,7 @@ export function Rich({ text, style }: { text: L | string | undefined; style?: St
               <ScrollView showsVerticalScrollIndicator={false}>
                 <Text style={r.title}>{v.sure} Suresi, {v.ayah}. ayet</Text>
                 <Text style={r.arabic}>{v.ar}</Text>
-                <Text style={[r.label, { color: K.shia }]}>MEAL (Diyanet İşleri)</Text>
+                <Text style={[r.label, { color: C.shia }]}>MEAL (Diyanet İşleri)</Text>
                 <Text style={r.body}>{v.meal}</Text>
               </ScrollView>
             )}
@@ -81,14 +80,14 @@ export function Rich({ text, style }: { text: L | string | undefined; style?: St
 }
 
 const r = StyleSheet.create({
-  bold: { fontWeight: '800', color: '#ffffff' },
-  link: { color: K.gold, textDecorationLine: 'underline', fontWeight: '700' },
-  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.7)', justifyContent: 'center', padding: 16 },
-  card: { backgroundColor: K.bg, borderRadius: 16, borderWidth: 1, borderColor: K.line, padding: 16, maxHeight: '86%' },
-  title: { color: K.gold, fontSize: 17, fontWeight: '800', marginBottom: 10 },
-  arabic: { color: '#fff8e0', fontSize: 26, lineHeight: 46, textAlign: 'right', writingDirection: 'rtl', marginBottom: 8 },
-  label: { fontWeight: '800', fontSize: 12, letterSpacing: 1, marginTop: 10, marginBottom: 3 },
-  body: { color: K.text, fontSize: 15, lineHeight: 23 },
-  close: { marginTop: 12, padding: 12, borderRadius: 12, backgroundColor: K.gold, alignItems: 'center' },
-  closeText: { color: '#0b1412', fontWeight: '800' },
+  bold: { fontWeight: '800', color: C.cream },
+  link: { color: C.gold, textDecorationLine: 'underline', fontWeight: '700' },
+  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.72)', justifyContent: 'center', padding: 18 },
+  card: { backgroundColor: C.card, borderRadius: 18, borderWidth: 1, borderColor: C.line, padding: 18, maxHeight: '86%' },
+  title: { color: C.gold, fontFamily: font.serif, fontSize: 18, fontWeight: '700', marginBottom: 10 },
+  arabic: { color: '#fff8e0', fontFamily: font.arabic, fontSize: 26, lineHeight: 48, textAlign: 'right', writingDirection: 'rtl', marginBottom: 8 },
+  label: { fontFamily: font.sans, fontWeight: '800', fontSize: 12, letterSpacing: 1, marginTop: 10, marginBottom: 3 },
+  body: { color: C.text, fontFamily: font.sans, fontSize: 16, lineHeight: 25 },
+  close: { marginTop: 14, minHeight: 48, padding: 12, borderRadius: 14, backgroundColor: C.gold, alignItems: 'center', justifyContent: 'center' },
+  closeText: { color: C.ink, fontFamily: font.sans, fontWeight: '800' },
 });
