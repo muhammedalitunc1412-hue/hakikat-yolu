@@ -36,7 +36,7 @@ export const MAPS: MapEntry[] = [
     show: ['mekke', 'medine'],
     lines: [MM],
     paragraphs: [
-      'Mekke, Kâbe\'nin ve Mescid-i Haram\'ın şehridir. Şii kaynakları Hz. Ali\'nin Kâbe\'nin içinde doğduğunu güçlü biçimde anlatır; annesi Fâtıma bint Esed\'in doğum sancısıyla Kâbe\'ye sığındığı rivayeti bazı Sünni kitaplarında da geçer. Peygamber burada doğdu, ilk vahiy burada geldi, Veda Haccı burada yapıldı.',
+      'Mekke, Kâbe\'nin ve Mescid-i Haram\'ın şehridir. Rivayete göre Hz. Ali (a.s.) burada, Kâbe\'nin içinde doğdu. Annesi Fâtıma bint Esed\'in doğum sancısıyla Kâbe\'ye sığındığı haberini Ca\'ferî kitaplar güçlü biçimde anlatır; bazı Sünni eserler de aktarır. Başka bir rivayet bu doğumu Hakîm b. Hizâm\'a özgü sayar. Hz. Peygamber (s.a.v.) burada doğdu, ilk vahiy burada geldi, Veda Haccı burada yapıldı.',
       'Haritadaki nokta Kâbe\'nin yeridir. Gadir Hum, hac dönüşünde Medine yolunun üzerinde, bu şehrin kuzeyindedir. Çizgi iki harem arasındaki kuş uçuşunu gösterir.',
     ],
     roadNotes: [
@@ -54,7 +54,7 @@ export const MAPS: MapEntry[] = [
     show: ['medine', 'mekke'],
     lines: [MM],
     paragraphs: [
-      'Medine, hicretten sonra Peygamber\'in şehri ve Mescid-i Nebevî\'nin yeridir. Sakîfe-i Benî Sâide, mescidin yanındaki Benî Sâide gölgeliğidir. Peygamber\'in cenazesi hazırlanırken biat burada konuşuldu. Hz. Fatıma\'nın evi mescidin bitişiğindeydi; Fedek talebi, hastalığı ve gece defni bu şehirde geçer. Kırtas rivayeti de Peygamber\'in hastalığı sırasında Medine\'dedir. Pence-i Âl-i Aba anlatısı aynı eve bağlanır.',
+      'Medine, hicretten sonra Hz. Peygamber\'in (s.a.v.) şehri ve Mescid-i Nebevî\'nin yeridir. Sakîfe-i Benî Sâide, mescidin yanındaki Benî Sâide gölgeliğidir. Peygamber\'in cenazesi hazırlanırken biat burada konuşuldu. Hz. Ali ve Haşimoğulları o sırada yıkama ve defin işindeydi. Hz. Fatıma\'nın (s.a.) evi mescidin bitişiğindeydi. Fedek talebi, küskünlüğü ve gece defni bu şehirde geçer. Kırtas haberi de Peygamber\'in hastalığı sırasında Medine\'dedir. Pence-i Âl-i Abâ anlatısı aynı eve bağlanır.',
       'Bu ölçekte mahalleler ayrılmaz: Sakîfe, mescid ve ev aynı yerleşimin içindedir. Çizgi, Kâbe ile Mescid-i Nebevî arasını gösterir. Hz. Hasan\'ın kabri Bakî\'dedir. İmam Sâdık da derslerini Medine\'de verdi. Nokta, Mescid-i Nebevî\'nin koordinatıdır.',
     ],
     roadNotes: [
@@ -72,7 +72,7 @@ export const MAPS: MapEntry[] = [
     show: ['gadir', 'mekke', 'medine'],
     lines: [['gadir', 'mekke'], ['gadir', 'medine'], MM],
     paragraphs: [
-      'Gadir Hum, Mekke ile Medine arasında, Kızıldeniz kıyısındaki Cuhfe mîkatının hemen yanında bir su başıdır. Veda Haccı\'ndan dönen kafile burada durdurulmuştu: yollar Medine, Mısır ve Irak yönlerine ayrılıyordu. 18 Zilhicce 10 (632) günü Peygamber, Hz. Ali\'nin elini kaldırarak «Ben kimin mevlâsıysam Ali de onun mevlâsıdır» dedi.',
+      'Gadir Hum, Mekke ile Medine arasında, Kızıldeniz kıyısındaki Cuhfe mîkatının hemen yanında bir su başıdır. Veda Haccı\'ndan dönen kafile burada durdurulmuştu: yollar Medine, Mısır ve Irak yönlerine ayrılıyordu. 18 Zilhicce 10 (632) günü Hz. Peygamber (s.a.v.), Hz. Ali\'nin (a.s.) elini kaldırarak «Ben kimin mevlâsıysam Ali de onun mevlâsıdır» dedi. Ca\'ferî yolda bu, velayetin ilanıdır. Sözün kendisi Tirmizi ve Ahmed gibi Sünni kaynaklarda da vardır. «Mevlâ»nın önderlik mi, dostluk mu demek olduğu ise ayrılığın adıdır.',
       'Düz çizgi iki şehri birleştirir. Eski kervan ise su ve geçit yüzünden kıyıyı izler, Cuhfe\'ye uğrardı. Bu yüzden Gadir, Mekke–Medine çizgisinin biraz batısında, denize daha yakın durur. Nokta, su başının bilinen koordinatıdır.',
     ],
     roadNotes: [
@@ -91,7 +91,7 @@ export const MAPS: MapEntry[] = [
     show: ['hayber', 'fedek', 'medine', 'mekke'],
     lines: [['hayber', 'medine'], ['hayber', 'mekke'], ['hayber', 'fedek'], MM],
     paragraphs: [
-      'Hayber, Medine\'nin kuzeyinde, hurmalıklar ve birbirine yakın kalelerden oluşan bir vahadır. Hicretin 7. yılında (628) Peygamber burayı kuşattı. Kaleler günlerce direnince sancak, «Allah\'ı ve Resulü\'nü seven» kişi diye andığı Hz. Ali\'ye verildi.',
+      'Hayber, Medine\'nin kuzeyinde, hurmalıklar ve birbirine yakın kalelerden oluşan bir vahadır. Hicretin 7. yılında (628) Hz. Peygamber burayı kuşattı. Kaleler günlerce direnince sancak, «Allah\'ı ve Resulü\'nü seven, Allah\'ın ve Resulü\'nün de sevdiği» kişiye, Hz. Ali\'ye (a.s.) verildi. Bu söz Buhari 2942 ve Müslim 2406\'da sahihtir.',
       'Fedek, Hayber\'in kuzeydoğusunda ayrı bir yerleşimdi; halkı savaşmadan anlaşmıştı. Haritada her iki vaha da işaretlidir. Seçili nokta Hayber\'dir.',
     ],
     roadNotes: [
@@ -109,7 +109,7 @@ export const MAPS: MapEntry[] = [
     show: ['fedek', 'hayber', 'medine', 'mekke'],
     lines: [['fedek', 'medine'], ['fedek', 'mekke'], ['fedek', 'hayber'], MM],
     paragraphs: [
-      'Fedek, Hayber yakınlarında hurmalıklarıyla bilinen bir köydü. Halkı savaşmadan anlaştığı için toprak ganimet sayılmadı; Peygamber\'in tasarrufunda kaldı. Vefatından sonra Hz. Fatıma bu hakkı istedi. Talebin kabul edilmemesi, küskünlüğünün anlatıldığı yerdir.',
+      'Fedek, Hayber yakınlarında hurmalıklarıyla bilinen bir köydü. Halkı savaşmadan anlaştığı için toprak ganimet sayılmadı. Hz. Peygamber\'in tasarrufunda kaldı. Vefatından sonra Hz. Fatıma (s.a.) bu hakkı istedi. Buhari 4240, talebin reddini, onun ölünceye dek küskün kaldığını ve gece defnini aktarır. Ca\'ferî yolda bu, Ehl-i Beyt\'e yapılmış bir haksızlıktır.',
       'Bugün Fedek çoğu araştırmacı tarafından Medine\'nin kuzeyindeki el-Hâit ile özdeşleştirilir. Haritadaki nokta bu özdeşleştirmedir. Hayber, karşılaştırma için aynı haritada durur.',
     ],
     roadNotes: [
@@ -128,7 +128,7 @@ export const MAPS: MapEntry[] = [
     show: ['tebuk', 'medine', 'mekke'],
     lines: [['tebuk', 'medine'], ['tebuk', 'mekke'], MM],
     paragraphs: [
-      'Tebük, Hicaz\'ın kuzeyinde, Bizans sınırına giden yol üzerindeki bir vahadır. Hicretin 9. yılında (630) Peygamber «Zorluk Ordusu» ile buraya yürüdü ve Hz. Ali\'yi Medine\'de bıraktı. Ayrılık sırasında «Harun Musa\'ya nasılsa sen de bana öylesin» sözü söylendi.',
+      'Tebük, Hicaz\'ın kuzeyinde, Bizans sınırına giden yol üzerindeki bir vahadır. Hicretin 9. yılında (630) Hz. Peygamber «Zorluk Ordusu» ile buraya yürüdü ve Hz. Ali\'yi (a.s.) Medine\'de vekil bıraktı. Ayrılık sırasında «Harun Musa\'ya nasılsa sen de bana öylesin; ancak benden sonra peygamber yoktur» dedi. Söz Buhari 3706 ve Müslim 2404\'te sahihtir. Ca\'ferî yolda bu, nübüvvet dışındaki makamın delilidir.',
       'Sözün söylendiği yer Medine\'dir; Tebük, ordunun vardığı sınır vahasıdır. Nokta bugünkü şehirdir. Seferin konakladığı kaynak bu çevrededir.',
     ],
     roadNotes: [
@@ -147,7 +147,7 @@ export const MAPS: MapEntry[] = [
     lines: [['necran', 'mekke'], ['necran', 'medine'], MM],
     paragraphs: [
       'Necran, Arabistan\'ın güneyinde, bugünkü Necran şehrinin bulunduğu vadidir. Hicretin son yıllarında Necran Hristiyanlarından bir heyet Medine\'ye geldi. Tartışma uzayınca Âl-i İmrân 61. ayetteki mübahele, iki tarafın karşılıklı beddua etmesi, gündeme geldi.',
-      'Kaynaklar, Peygamber\'in bu çağrıya Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin\'i yanında götürdüğünü aktarır. Buluşma Medine\'deydi. Heyet bedduaya girmeyip anlaşmayı kabul etti. Harita, heyetin yurdunu ve buluşmanın şehrini birlikte gösterir.',
+      'Hz. Peygamber (s.a.v.) bu çağrıya Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin\'i yanında götürdü. Müslim 2404d, «Allah\'ım, bunlar ehlimdir» sözünü Sa\'d\'dan aktarır. Aynı dörtlü Sünni tefsirlerde de anılır. Buluşma Medine\'deydi. Heyet bedduaya girmeyip anlaşmayı kabul etti. Harita, heyetin yurdunu ve buluşmanın şehrini birlikte gösterir.',
     ],
     roadNotes: [
       'Heyet Necran\'dan Medine\'ye geldi. Tablodaki iki mesafe kuş uçuşudur; kervan yolu daha uzun sürerdi.',
@@ -164,7 +164,7 @@ export const MAPS: MapEntry[] = [
     show: ['kufe', 'kerbela', 'sam', 'mekke', 'medine'],
     lines: [['kufe', 'mekke'], ['kufe', 'medine'], ['kufe', 'sam'], ['kufe', 'kerbela']],
     paragraphs: [
-      'Kûfe, Fırat kıyısında, Hz. Ali\'nin hilafet merkezi yaptığı şehirdir. Cemel ve Sıffin için ordu buradan çıktı. Hz. Ali, Kûfe Ulu Camii\'nde sabah namazında yaralandı ve burada şehit oldu. Hz. Hasan biatı Kûfe\'de aldı; iç savaşı durdurmak için yönetimi Muaviye\'ye bıraktı, sonra Medine\'ye döndü.',
+      'Kûfe, Fırat kıyısında, Hz. Ali\'nin (a.s.) hilafet merkezi yaptığı şehirdir. Cemel ve Sıffin için ordu buradan çıktı. Hz. Ali, Kûfe Ulu Camii\'nde sabah namazında yaralandı ve yaklaşık iki gün sonra şehit oldu. Hz. Hasan biatı Kûfe\'de aldı. Kan dökülmesin diye yönetimi Muaviye\'ye bıraktı, sonra Medine\'ye döndü.',
       'Şehir bugünkü Necef\'in hemen yanındadır. Nokta Ulu Cami\'dir. Kerbela, Fırat\'ın batısında, bir günlük yoldadır. Şam, Muaviye\'nin merkezidir.',
     ],
     roadNotes: [
@@ -218,7 +218,7 @@ export const MAPS: MapEntry[] = [
     show: ['kerbela', 'kufe', 'sam', 'mekke', 'medine'],
     lines: [['kerbela', 'mekke'], ['kerbela', 'medine'], ['kerbela', 'kufe'], ['kerbela', 'sam']],
     paragraphs: [
-      'Kerbela, Fırat\'ın batısında, Kûfe\'ye yaklaşık bir günlük mesafedeki ovadır. Hz. Hüseyin biat etmeyerek Medine\'den Mekke\'ye geçti, oradan Kûfe\'ye çağrıldığı için yola çıktı. 10 Muharrem 61 (10 Ekim 680) günü kafile Kûfe\'ye varmadan bu ovada durduruldu.',
+      'Kerbela, Fırat\'ın batısında, Kûfe\'ye yaklaşık bir günlük mesafedeki ovadır. Hz. Hüseyin (a.s.) Yezid\'e biat etmedi. Medine\'den Mekke\'ye geçti, Kûfe\'nin daveti üzerine yola çıktı. 10 Muharrem 61 (10 Ekim 680) günü kafile Kûfe\'ye varmadan bu ovada durduruldu. Su yolu kesildi. Hz. Hüseyin, ailesi ve arkadaşlarıyla şehit edildi. Haksız öldürüldüğü iki yolun da anlattığı bir yasdır.',
       'Şehitlerin türbesi bugün şehrin merkezindedir. Esirler önce Kûfe\'ye, oradan Şam\'a götürüldü. Haritadaki nokta Hz. Hüseyin türbesinin koordinatıdır. Yakın planda Kûfe ile Kerbela\'nın Fırat\'ın iki yakasındaki duruşu görünür.',
     ],
     roadNotes: [
@@ -236,7 +236,7 @@ export const MAPS: MapEntry[] = [
     show: ['sam', 'kufe', 'kerbela', 'siffin', 'mekke', 'medine'],
     lines: [['sam', 'mekke'], ['sam', 'medine'], ['sam', 'kufe'], ['sam', 'kerbela'], ['sam', 'siffin']],
     paragraphs: [
-      'Şam, Emevîlerin merkezidir. Muaviye buradan Hz. Ali\'ye biat etmedi; Sıffin\'de Şam ordusu onun bayrağı altındaydı. Hz. Hasan\'ın sulhünden sonra yönetim Şam\'da toplandı. Cuma minberlerinde Hz. Ali\'ye sövme uygulaması bu dönemde yayıldı; Ömer b. Abdülaziz bunu kaldırdı.',
+      'Şam, Emevîlerin merkezidir. Muaviye buradan Hz. Ali\'ye biat etmedi. Sıffin\'de Şam ordusu onun bayrağı altındaydı. Hz. Hasan\'ın sulhünden sonra yönetim Şam\'da toplandı. Cuma minberlerinde Hz. Ali\'ye (a.s.) sövme bu dönemde yayıldı. Müslim 2404, Muaviye\'nin Sa\'d\'a neden sövmediğini sorduğunu aktarır. Ömer b. Abdülaziz uygulamayı kaldırdı.',
       'Kerbela\'dan sonra Ehl-i Beyt esirleri Yezid\'in meclisine Şam\'a getirildi. Nokta, Emevî Camii çevresindeki eski şehirdir.',
     ],
     roadNotes: [],

@@ -5,7 +5,7 @@ export const tesbihFatima: Dua = {
   title: { tr: 'Tesbih-i Hz. Fâtıma (s.a.)' },
   subtitle: { tr: 'Tesbihât-ı Zehrâ' },
   when: 'Her farz namazın ardından; ayrıca yatmadan önce okunur.',
-  intro: 'Peygamber Efendimiz\'in kızı Hz. Fâtıma\'ya öğrettiği zikirdir. Hem Sünni hem Şii kaynaklarda geçer; Şii gelenekte namaz sonrası çok vurgulanır.',
+  intro: 'Hz. Peygamber\'in (s.a.v.) kızı Hz. Fâtıma\'ya (s.a.) öğrettiği zikirdir. Buhari ve Müslim\'de de, Ca\'ferî dua kitaplarında da geçer. Şii gelenekte her farz namazın ardından okunur. Sayılar ortaktır: 34 tekbir, 33 hamd, 33 tesbih. Sünni uygulamada tesbih çoğu kez öne alınır.',
   parts: [
     {
       heading: '34 defa',
@@ -26,8 +26,8 @@ export const tesbihFatima: Dua = {
       meal: 'Allah her türlü eksiklikten uzaktır. (33 defa)',
     },
   ],
-  source: 'Wikipedia "Tasbih of Fatimah" maddesi (sibtayn.com ve al-islam.org kaynaklarına atıfla)',
-  url: 'https://en.wikipedia.org/wiki/Tasbih_of_Fatimah',
+  source: 'Buhari 3113: yatarken 34 tekbir, 33 hamd, 33 tesbih. Müslim 2727\'de sıra tekbir, tesbih, hamd; Müslim 2728\'de tesbih öndedir. Şii dua kitapları Buhari 3113\'teki sırayı esas alır. Eski Vikipedi atfı kaldırıldı.',
+  url: 'https://sunnah.com/bukhari:3113',
   status: 'verified',
-  note: 'Sıra Şii gelenekte 34 Allahü ekber, 33 Elhamdülillah, 33 Sübhanallah şeklindedir; Sünni gelenekte Sübhanallah önce okunur. Şii rivayetlerde ardından bir kez "Lâ ilâhe illallâh" denmesi tavsiye edilir.',
+  note: 'Buhari 3113\'teki sıra bu metinle aynıdır: 34 Allahü ekber, 33 Elhamdülillah, 33 Sübhanallah. Müslim 2728 tesbihi öne alır. Bazı Şii rivayetlerde ardından bir kez "Lâ ilâhe illallâh" denmesi tavsiye edilir.',
 };

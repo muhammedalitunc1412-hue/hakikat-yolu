@@ -9,7 +9,7 @@ export const duaKumeyl: Dua = {
     "tr": "Hz. Ali (a.s.) tarafından Kümeyl b. Ziyad'a öğretilen dua"
   },
   "when": "Perşembe geceleri (Cuma gecesi) ve Şaban ayının 15. gecesi okunur.",
-  "intro": "İmam Ali (a.s.), bu duayı Kümeyl b. Ziyad en-Nehaî'ye öğretmiş; her Cuma gecesi, mümkün değilse ayda bir ya da en azından yılda bir okumasını tavsiye etmiştir. Dua, tövbe, Allah'a sığınma ve bağışlanma dileği üzerine kuruludur.",
+  "intro": "Hz. Ali (a.s.), bu duayı Kümeyl b. Ziyad en-Nehaî'ye öğretmiş; her Cuma gecesi, mümkün değilse ayda bir, hiç olmazsa yılda bir okumasını tavsiye etmiştir. Dua, kulun aczini Allah'ın rahmetine bırakır: tövbe, sığınma ve bağışlanma.",
   "source": "Şeyh Tûsî, Mısbâhu'l-Mütehecchid; Mefâtîhu'l-Cinân. Arapça metin duas.org (Dua Kumayl) sayfasından alınmıştır.",
   "url": "https://www.duas.org/dua-kumayl.html",
   "status": "verified",

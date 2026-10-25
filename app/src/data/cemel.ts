@@ -5,50 +5,50 @@ export const cemel: HistEvent = {
   id: 'cemel',
   date: { tr: 'Zilhicce 35 - 15 Cemaziyelevvel 36 H (656)', en: 'Dhu al-Hijjah 35 - 15 Jumada al-Awwal 36 AH (656)' },
   title: { tr: 'Biat ve Cemel', en: 'The Pledge and the Battle of the Camel' },
-  hook: { tr: 'Müslümanların ilk kez Müslümanlara karşı saf tuttuğu gün.', en: 'The first day Muslims stood in battle lines against Muslims.' },
+  hook: { tr: 'Hz. Ali (a.s.) biati istemeden aldı. Müslümanlar ilk kez Müslümanlara karşı neden saf tuttu?', en: 'The first day Muslims stood in battle lines against Muslims.' },
   scenes: [
     {
-      text: { tr: 'Osman\'ın şehit edilmesinin ardından Medine karışıktı. Ensar ve Muhacirin\'in önde gelenleri Hz. Ali\'ye gelip hilafeti kabul etmesini istedi. Hz. Ali önce çekindi; ısrar üzerine Mescid-i Nebevi\'de biat alındı.' },
+      text: { tr: 'Osman\'ın şehadetinden sonra Medine karışıktı. Ensar ve Muhacirin\'in önde gelenleri Hz. Ali\'ye (a.s.) gelip hilafeti kabul etmesini istedi. O önce çekindi. Israr üzerine Mescid-i Nebevî\'de biat alındı. İsteyen o değildi; istenen oydu.' },
       art: { bg: 'city', props: ['minbar', 'palms'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'ali', x: 66, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Talha ve Zübeyr de biat etti; ancak bu biatın gönüllü mü, baskı altında mı olduğu kaynaklarda tartışılır. Hz. Ali, işe Osman\'ın atadığı valileri değiştirmekle başladı. Bu karar, sonraki itirazların zeminini hazırladı.' },
+      text: { tr: 'Talha ve Zübeyr de biat etti. Bu biatın gönüllü mü, baskı altında mı olduğu tartışılır. Hz. Ali işe Osman\'ın valilerini değiştirmekle başladı. Sonraki itirazların zemini bu kararda aranır; o ise düzeni, akrabalığa değil emanete göre kurmak istiyordu.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 24, label: { tr: 'Talha' } }, { kind: 'man', x: 46, label: { tr: 'Zübeyr' } }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Şam valisi Muaviye, Osman\'ın kanı yerini bulmadan biat etmeyeceğini bildirdi. Hz. Ali\'ye göre önce düzen kurulmalı, sonra dava yoluyla hesap sorulmalıydı. Muaviye\'ye göre ise önce kısas gerekiyordu.' },
+      text: { tr: 'Şam valisi Muaviye, Osman\'ın kanı yerini bulmadan biat etmeyeceğini bildirdi. Hz. Ali\'ye göre önce düzen kurulmalı, sonra dava yoluyla hesap sorulmalıydı. Muaviye\'ye göre önce kısas gerekiyordu. İki gerekçe, iki orduyu karşı karşıya getirecekti.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 34, label: { tr: 'Muaviye' } }, { kind: 'crowd', x: 70, scale: 7 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Umre için Mekke\'de bulunan Aişe, Talha ve Zübeyr, Osman\'ın kanını gerekçe göstererek Basra\'ya doğru yola çıktı. Amaçları, kendi anlayışlarına göre durumu düzeltmekti.' },
+      text: { tr: 'Umre için Mekke\'de bulunan Hz. Aişe, Talha ve Zübeyr, Osman\'ın kanını gerekçe göstererek Basra\'ya yöneldi. Amaçları, kendi anlayışlarına göre durumu düzeltmekti. Müslümanlar ilk kez Müslümanlara karşı saf tutmaya bu yoldan geldi.' },
       art: { bg: 'dune-day', props: ['sun', 'camels'], actors: [{ kind: 'woman', x: 24, label: { tr: 'Aişe' } }, { kind: 'man', x: 50, label: { tr: 'Talha' } }, { kind: 'man', x: 74, label: { tr: 'Zübeyr' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Yolda Havab suyunda köpek sesleri duyulunca, Peygamber\'in bir hanımına söylediği bir uyarı anılır. Bu rivayet Müsned\'de geçer ve bazı muhaddisler onu sahih bulmuştur. Basra\'da ise vali Osman b. Huneyf ile çatışma çıktı.' },
+      text: { tr: 'Yolda Havab suyunda köpek sesleri duyulunca, Hz. Peygamber\'in (s.a.v.) bir hanımına söylediği uyarı anılır. Rivayet Müsned\'de geçer; bazı muhaddisler onu sahih bulmuştur. Basra\'da vali Osman b. Huneyf ile çatışma çıktı. Uyarı hatırlanmış, yol yine de sürmüştür.' },
       art: { bg: 'night', props: ['moon', 'stars', 'well'], actors: [{ kind: 'woman', x: 40, label: { tr: 'Aişe' } }, { kind: 'crowd', x: 72, scale: 6 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Ali, Kufe\'den destek toplayıp Basra\'ya yürüdü ve savaşı önlemek için elçiler gönderdi. Anlatıldığına göre Zübeyr\'e, Peygamber\'in "Sen Hz. Ali ile haksızlıkla savaşacaksın" sözünü hatırlattı. Zübeyr de saftan ayrıldı.' },
+      text: { tr: 'Hz. Ali Kûfe\'den destek toplayıp Basra\'ya yürüdü ve savaşı önlemek için elçiler gönderdi. Anlatıldığına göre Zübeyr\'e, Peygamber\'in «Sen Hz. Ali ile haksızlıkla savaşacaksın» sözünü hatırlattı. Zübeyr saftan ayrıldı. Barış kapısı son ana kadar açık tutulmuştu.' },
       art: { bg: 'dune-dusk', props: ['tents'], actors: [{ kind: 'ali', x: 34, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 68, label: { tr: 'Zübeyr' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Barış çabaları sonuçsuz kalınca iki ordu karşılaştı. Aişe\'nin bindiği devenin çevresi sabahtan akşama kadar süren çatışmanın merkezi oldu; deve durdurulunca savaş sona erdi. Talha ve Zübeyr de bu süreçte hayatını kaybetti.' },
+      text: { tr: 'Barış çabaları sonuçsuz kalınca iki ordu karşılaştı. Hz. Aişe\'nin bindiği devenin çevresi sabahtan akşama savaşın merkezi oldu. Deve durdurulunca savaş bitti. Talha ve Zübeyr bu süreçte hayatını kaybetti. Ümmetin ilk iç savaşı, bir devenin çevresinde kapanmıştı.' },
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'crowd', x: 24, scale: 7 }, { kind: 'woman', x: 56, label: { tr: 'Aişe' } }, { kind: 'ali', x: 84, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Ali savaştan sonra esirleri bıraktı ve mal ile kadın-çocuklar üzerinde ganimet hükmü uygulamadı. Aişe saygıyla ağırlandı ve kardeşi Muhammed b. Ebi Bekir eşliğinde Medine\'ye uğurlandı.' },
+      text: { tr: 'Hz. Ali savaştan sonra esirleri bıraktı; malı, kadınları ve çocukları ganimet saymadı. Hz. Aişe saygıyla ağırlandı ve kardeşi Muhammed b. Ebi Bekir ile Medine\'ye uğurlandı. Sünnî fıkıh, bağîlerle savaş kurallarının çoğunu bu uygulamadan çıkarır.' },
       art: { bg: 'dawn', props: ['camels'], actors: [{ kind: 'ali', x: 26, label: { tr: 'Hz. Ali' } }, { kind: 'woman', x: 54, label: { tr: 'Aişe' } }, { kind: 'man', x: 80, label: { tr: 'Muhammed b. Ebi Bekir' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Aişe\'nin yaptığına sonradan üzüldüğünü gösteren rivayetler Sünni kaynaklarında da yer alır. Bunların senedi ve neye üzüldüğü ayrıca tartışılır. Birçok Sünni kaynağında Hz. Ali, hakka daha yakın taraf olarak anılır.' },
+      text: { tr: 'Hz. Aişe\'nin sonradan üzüldüğünü gösteren rivayetler Sünnî kaynaklarda da vardır. Senedi ve neye üzüldüğü ayrıca tartışılır. Birçok Sünnî kaynak Hz. Ali\'yi hakka daha yakın taraf sayar. Ca\'ferî yolda bu, onun adaletinin savaşın içindeki delilidir.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'woman', x: 36, pose: 'sit', label: { tr: 'Aişe' } }, { kind: 'crowd', x: 72, scale: 5 }] },
       by: 'sunni',
     },
@@ -93,5 +93,5 @@ export const cemel: HistEvent = {
     { tr: 'Hz. Ali, savaştan sonra esirleri bıraktı ve Aişe\'yi saygıyla Medine\'ye gönderdi. Böyle bir davranış, onun savaşa girme nedeni hakkında ne söyler sizce?' },
     { tr: 'Ehl-i Sünnet\'in çoğunluğu Cemel\'de Hz. Ali\'yi hakka daha yakın bulur ve isyancılarla savaş kurallarını onun uygulamasından çıkarır. Bir hukuk kuralının kaynağı olan kişiye, başka konularda da danışmak gerekmez mi sizce?' },
   ],
-  summary: { tr: 'Osman\'ın şehadetinden sonra Hz. Ali\'ye biat edildi; Talha, Zübeyr ve Aişe\'nin Basra\'ya çıkışı Cemel\'e yol açtı ve Hz. Ali, savaşın ardından af ve saygıyla davrandı.' },
+  summary: { tr: 'Osman\'ın şehadetinden sonra Hz. Ali\'ye (a.s.) biat edildi. Talha, Zübeyr ve Hz. Aişe\'nin Basra\'ya çıkışı Cemel\'e yol açtı. O, savaşı önlemeye çalıştı; bitince esirleri bıraktı ve Hz. Aişe\'yi saygıyla Medine\'ye uğurladı.' },
 };

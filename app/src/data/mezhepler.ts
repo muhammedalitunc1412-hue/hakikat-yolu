@@ -6,10 +6,10 @@ export const mezhepler: HistEvent = {
   id: 'mezhepler',
   date: { tr: '11-329 H (632-941); mezheplerin teşekkülü 1.-4. yüzyıl H.', en: '11-329 AH (632-941)' },
   title: { tr: 'Mezheplerin ortaya çıkışı', en: 'The emergence of the sects and schools' },
-  hook: { tr: 'Tek bir ümmet, siyasi ayrılıklardan fıkıh ve kelam ekollerine uzanan yolda nasıl farklı çizgilere ayrıldı?', en: 'How did one community branch into different schools, from political disputes to law and theology?' },
+  hook: { tr: 'Tek ümmet, Sakife\'den Sıffin\'e, oradan ilim halkalarına nasıl ayrıldı? Ca\'ferî çizgi bu yolda nerede durur?', en: 'How did one community branch into different schools, from political disputes to law and theology?' },
   scenes: [
     {
-      text: { tr: '"Şîatü Alî" (Ali\'nin taraftarları) ifadesi Şii kaynaklarına göre daha Hz. Peygamber döneminde vardı ve Ali\'ye bağlılık bizzat Peygamber\'in yönlendirmesiyle oluştu. Şii kaynakları bunu Gadir-i Hum ve benzeri olaylarla ilişkilendirir. TDV, "Şîa" sözcüğünün "taraftar" demek olduğunu, terim olarak Peygamber\'den sonra devlet başkanlığının Ali ve soyuna ait olduğunu savunan grupları anlattığını yazar.' },
+      text: { tr: '«Şîatü Alî», Ali\'nin taraftarları demektir. Şiî kaynaklara göre bu bağlılık daha Hz. Peygamber (s.a.v.) döneminde, onun yönlendirmesiyle oluştu; Gadir-i Hum bu çizgiye bağlanır. TDV, sözcüğün «taraftar» demek olduğunu, terim olarak ise Peygamber\'den sonra başkanlığın Hz. Ali (a.s.) ve soyuna ait olduğunu savunanları anlattığını yazar.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'prophet', x: 38, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
     },

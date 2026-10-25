@@ -5,7 +5,7 @@ export const ziyaretAsura: Dua = {
   title: { tr: 'Ziyâret-i Âşûrâ', en: 'Ziyarat Ashura', ar: 'زيارة عاشوراء' },
   when: 'Âşûrâ günü ve Muharrem ayında; her gün de okunabilir',
   intro:
-    'İmam Hüseyin\'i (a.s) kabri başında ya da uzaktan ziyaret metni. Şii kaynaklarda Alkame b. Muhammed el-Hadramî\'nin İmam Muhammed el-Bâkır\'dan (a.s) rivayeti olarak geçer; Şeyh Tûsî\'nin Mısbâhu\'l-Mütehecchid\'inde (s. 774), Kâmilü\'z-Ziyârât\'ta ve Şeyh Abbas Kummî\'nin Mefâtîhu\'l-Cinân\'ında yer alır. Metin lanet ve berâet (uzaklaşma) ifadeleri içerir; bunlar aslına sadık olarak çevrilmiştir.',
+    'Hz. Hüseyin\'i (a.s.) kabri başında ya da uzaktan anan ziyaret metnidir. Ca\'ferî kaynaklarda Alkame b. Muhammed el-Hadramî\'nin İmam Muhammed el-Bâkır\'dan (a.s.) rivayeti olarak geçer. Şeyh Tûsî\'nin Mısbâhu\'l-Müteheccid\'inde, Kâmilü\'z-Ziyârât\'ta ve Şeyh Abbas Kummî\'nin Mefâtîhu\'l-Cinân\'ında yer alır. Eski "sayfa 774" kaydı baskıya göre değiştiği için kaldırıldı. Metindeki lanet ve berâet, zulme karşı uzak duruşun dilidir. Aslına sadık çevrilmiştir.',
   parts: [
     {
       heading: 'Selâm',

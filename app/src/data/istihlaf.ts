@@ -5,46 +5,46 @@ export const istihlaf: HistEvent = {
   id: 'istihlaf',
   date: { tr: '13 H (634) ve 23-24 H (644)', en: '13 AH (634) and 23-24 AH (644)' },
   title: { tr: 'Ebu Bekir\'in Ömer\'i tayini ve altı kişilik şura', en: 'Abu Bakr\'s appointment of Umar and the six-man council' },
-  hook: { tr: 'Halife kendinden sonrakini atayınca, Ömer de işi altı kişiye bırakınca; Hz. Ali neden "bunlardan biri mi sayıldım?" dedi?', en: 'Why did Imam Ali ask, "Was I counted as one of these?"' },
+  hook: { tr: 'Halife kendinden sonrakini seçti, Ömer de işi altı kişiye bıraktı. Hz. Ali (a.s.) neden «bunlardan biri mi sayıldım?» diye sordu?', en: 'Why did Imam Ali ask, "Was I counted as one of these?"' },
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Ebu Bekir hastalanıp ölümün yaklaştığını anlayınca, kendinden sonra yerine Ömer\'in geçmesini istedi. Bu, halifeliğin halka danışılarak belirlenmesinden çok, ölen halifenin seçtiği kişiye geçmesi demekti.' },
+      text: { tr: 'Ebu Bekir hastalığı ağırlaşınca yerine Ömer\'in geçmesini istedi. Hilafet bu kez danışmayla değil, ölen halifenin seçtiği kişiye geçiyordu.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'Ebu Bekir' } }, { kind: 'man', x: 66, label: { tr: 'Ömer' } }] },
     },
     {
       by: 'sunni',
-      text: { tr: 'Kaynaklarda anlatıldığına göre Ebu Bekir önce Abdurrahman b. Avf ve Osman\'a danıştı. Bir grup sahabi, Ömer\'in sertliğinden söz edip "Rabbine ne cevap vereceksin?" dedi; Talha\'nın bu itirazı aktarılır. Ebu Bekir, Allah\'a "O\'nun kulları içinde en hayırlıyı seçtim" diyeceğini söyledi.' },
+      text: { tr: 'Rivayete göre önce Abdurrahman b. Avf ve Osman\'a danıştı. Bazı sahabiler Ömer\'in sertliğinden çekindi; Talha\'nın «Rabbine ne cevap vereceksin?» dediği aktarılır. Ebu Bekir, Allah\'a «kullarının en hayırlısını seçtim» diyeceğini söyledi.' },
       art: { bg: 'interior', actors: [{ kind: 'man', x: 30, label: { tr: 'Talha' } }, { kind: 'man', x: 68, pose: 'sit', label: { tr: 'Ebu Bekir' } }, { kind: 'crowd', x: 50, scale: 0.6 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Ebu Bekir vefat etti, Ömer halife oldu. On yıl kadar süren halifeliğinde fetihler hızla genişledi. Hz. Ali bu dönemde Medine\'de yaşadı ve Ömer\'in danıştığı kişilerden biri oldu.' },
+      text: { tr: 'Ebu Bekir vefat edince Ömer halife oldu. On yıl süren döneminde fetihler genişledi. Hz. Ali (a.s.) Medine\'de kaldı ve Ömer\'in danıştığı kişiler arasında yer aldı. Fazilet hadisleri ortadayken o, yine de sabırla bekledi.' },
       art: { bg: 'city', props: ['sun', 'minbar'], actors: [{ kind: 'man', x: 60, pose: 'raise', label: { tr: 'Ömer' } }, { kind: 'ali', x: 34, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Sabah namazında Ömer hançerlendi; Buhari\'nin 3700 numaralı hadisine göre saldırgan Arap olmayan biriydi ve on üç kişiyi yaraladı. Ömer yerine geçecek kimseyi tek başına seçmedi.' },
+      text: { tr: 'Sabah namazında Ömer hançerlendi. Buhari 3700\'e göre saldırgan Arap olmayan biriydi ve on üç kişiyi yaraladı. Ömer, yerine geçecek kimseyi bu kez tek başına seçmedi.' },
       art: { bg: 'dawn', actors: [{ kind: 'man', x: 50, pose: 'sit', label: { tr: 'Ömer' } }, { kind: 'crowd', x: 78, scale: 0.7 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Ömer, Peygamber\'in kendilerinden razı ayrıldığı altı kişiyi belirledi: Hz. Ali, Osman, Zübeyr, Talha, Sa\'d ve Abdurrahman b. Avf. Oğlu Abdullah\'ın tanık olacağını, ama hilafette payı olmayacağını söyledi.' },
+      text: { tr: 'Hz. Peygamber\'in (s.a.v.) razı ayrıldığı altı kişiyi gösterdi: Hz. Ali, Osman, Zübeyr, Talha, Sa\'d ve Abdurrahman b. Avf. Oğlu Abdullah tanık olacaktı; hilafette payı yoktu.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 22, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 40, label: { tr: 'Osman' } }, { kind: 'man', x: 58, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'crowd', x: 78, scale: 0.7 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Zübeyr ile Talha haklarını Hz. Ali ve Osman lehine, Sa\'d da Abdurrahman lehine bıraktı. Böylece karar fiilen Abdurrahman b. Avf\'ın eline geçti; o Hz. Ali ile Osman\'a ayrı ayrı adil davranma ve seçilene itaat şartını öne sürdü.' },
+      text: { tr: 'Zübeyr ile Talha haklarını Hz. Ali ve Osman lehine, Sa\'d da Abdurrahman lehine bıraktı. Karar fiilen tek kişinin, Abdurrahman b. Avf\'ın eline geçti. O, ikisinden de adil davranma ve seçilene itaat sözü istedi.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 52, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'ali', x: 26, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 76, label: { tr: 'Osman' } }] },
     },
     {
       by: 'sunni',
-      text: { tr: 'Taberî\'de şöyle anlatılır: Abdurrahman, Hz. Ali\'den Allah\'ın kitabı, Peygamber\'in sünneti ve Ebu Bekir ile Ömer\'in yolu üzerine biat etmesini istedi. Hz. Ali "Allah\'ın kitabı, Peygamber\'in sünneti ve kendi içtihadım" diye cevap verdi. Aynı şart Osman\'a sunulunca Osman kabul etti; biat ona yapıldı.' },
+      text: { tr: 'Taberî\'de şöyle anlatılır: Abdurrahman, Hz. Ali\'den Allah\'ın kitabı, Peygamber\'in sünneti ve Ebu Bekir ile Ömer\'in yolu üzerine biat istedi. Hz. Ali «Allah\'ın kitabı, Peygamber\'in sünneti ve kendi içtihadım» diye cevap verdi. Aynı şart Osman\'a sunulunca kabul etti; biat ona yapıldı. Ca\'ferî okuyuşta bu cevap, onun ilmini başkasının uygulamasına bağlamayışıdır.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 30, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 56, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'man', x: 78, label: { tr: 'Osman' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Hz. Ali, Nehcü\'l-Belağa\'nın 3. hutbesinde (Şıkşıkıyye) şikayet eder: Ebu Bekir hilafeti üstlenmişti; sonra Ömer\'e bıraktı; Ömer de işi altı kişilik şuraya vererek onu o kişilerden biri saymıştı. Hutbede şuranın düzeninin sonucu baştan belirlediği de vurgulanır. Hutbenin Şerif er-Radî\'den önceki kaynaklarda bulunup bulunmadığı araştırmacılar arasında tartışılır.' },
+      text: { tr: 'Nehcü\'l-Belağa\'nın 3. hutbesinde (Şıkşıkıyye) Hz. Ali (a.s.) yakınır: hilafet elden ele geçmiş, sonra altı kişilik şurada kendisi onlardan biri sayılmıştır. Hutbe, şuranın düzeninin sonucu baştan belirlediğini de söyler. Metnin Şerif er-Radî\'den önceki kaynaklarda bulunup bulunmadığı tartışılır; Ca\'ferî gelenekte bu söz, sabrın ve hakkın birlikte anlatımıdır.' },
       art: { bg: 'mountain', props: ['stars'], actors: [{ kind: 'ali', x: 50, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
     },
   ],
@@ -84,5 +84,5 @@ export const istihlaf: HistEvent = {
     { tr: 'Karar yetkisi tek bir kişinin (Abdurrahman b. Avf) eline geçtiyse ve o da Osman\'ı seçtiyse, bu şura gerçekten ümmetin ortak iradesini yansıtıyor mu?' },
     { tr: 'Hz. Ali, Abdurrahman\'ın "iki şeyhin yolu" şartına "kendi içtihadım" dedi. Bir imamın başkasının uygulamasıyla bağlı olmaması neden bu kadar önemli sizce?' },
   ],
-  summary: { tr: 'Ebu Bekir Ömer\'i atadı, Ömer yaralanınca işi altı kişilik şuraya bıraktı; Abdurrahman b. Avf\'ın şartını Hz. Ali kabul etmeyince Osman seçildi, Şıkşıkıyye hutbesinde Hz. Ali ise bu süreçten yakınır.' },
+  summary: { tr: 'Ebu Bekir Ömer\'i atadı. Ömer yaralanınca işi altı kişiye bıraktı. Abdurrahman\'ın «iki halifenin yolu» şartını Hz. Ali (a.s.) kabul etmeyince Osman seçildi. Şıkşıkıyye\'de o bu süreci anlatır; hutbenin erken kaynaklarda bulunup bulunmadığı tartışılır.' },
 };

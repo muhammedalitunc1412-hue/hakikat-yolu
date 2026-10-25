@@ -5,45 +5,45 @@ export const osman: HistEvent = {
   id: 'osman',
   date: { tr: 'Yaklaşık 30-35 H (650-656); şehadet: Zilhicce 35 H (Haziran 656)', en: 'c. 30-35 AH (650-656); martyrdom: Dhu al-Hijjah 35 AH (June 656)' },
   title: { tr: 'Osman Dönemi, Medine Kuşatması ve Hz. Ali', en: 'The Era of Uthman, the Siege of Medina and Imam Ali' },
-  hook: { tr: 'Şikâyetler büyürken Medine\'de arabuluculuk yapan ve sonra kendisine biat istenen kişi.', en: 'The man who mediated in Medina as grievances grew, and was then asked for allegiance.' },
+  hook: { tr: 'Şikâyetler büyürken Medine\'de arabuluculuk yapan, sonra da biat istenen kişi Hz. Ali (a.s.) idi.', en: 'The man who mediated in Medina as grievances grew, and was then asked for allegiance.' },
   scenes: [
     {
-      text: { tr: 'Osman\'ın halifeliğinin ilk yılları sakin geçti. İkinci yarısında ise valilik ve mal dağıtımı şikâyet konusu oldu. Yakınlarının, özellikle Emevî ailesinden kişilerin önemli görevlere getirilmesi eleştirildi. Osman\'ın faziletleri de hadislerde anılır; Peygamber\'in ona verdiği bir söz, kuşatma günü kendisi tarafından hatırlatılmıştır.' },
+      text: { tr: 'Osman\'ın ilk yılları sakin geçti. İkinci yarıda valilikler ve mal dağıtımı şikâyet oldu. Yakınlarının, özellikle Emevî ailesinden kişilerin görevlere getirilmesi eleştirildi. Onun faziletleri de hadislerde anılır; Hz. Peygamber\'in (s.a.v.) ona verdiği bir söz, kuşatma günü kendisi tarafından hatırlatılmıştır.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'crowd', x: 34, scale: 7 }, { kind: 'man', x: 66, label: { tr: 'Osman' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Mısır, Kûfe ve Basra\'dan gelen heyetler valilerinden şikâyetçiydi. Şii kaynaklarına göre bu şikâyetler Emevî atamaları ve beytülmalin kullanımı üzerineydi. İsyancıların niyetleri ve taleplerinin ölçüsü ise kaynaklarda ayrıca tartışılır. Medine halkı ve sahabenin önde gelenleri durumu yakından izliyordu.' },
+      text: { tr: 'Mısır, Kûfe ve Basra\'dan heyetler valilerinden şikâyetle geldi. Şiî anlatımda şikâyetlerin özü Emevî atamaları ve beytülmalin kullanımıdır. İsyancıların niyeti ve taleplerin ölçüsü ayrıca tartışılır. Medine, bu gerginliği yakından izliyordu.' },
       art: { bg: 'caravan', props: ['camels'], actors: [{ kind: 'crowd', x: 40, scale: 9 }, { kind: 'man', x: 76 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Ali, Osman\'la konuşup onu uyardı. Kaynaklarda Hz. Ali\'nin halkın şikâyetlerini ona ilettiği, tutumunu değiştirmesini istediği anlatılır. Mısırlı heyet Medine yakınlarına gelince Osman\'ın isteğiyle Hz. Ali, Muhammed b. Mesleme ile birlikte onlarla görüştü; şikâyetlerin giderileceği sözüyle geri dönmelerini sağladığı aktarılır.' },
+      text: { tr: 'Hz. Ali (a.s.) Osman\'la konuşup onu uyardı. Halkın şikâyetlerini ilettiği, tutumunu değiştirmesini istediği anlatılır. Mısırlı heyet yaklaşınca Osman\'ın isteğiyle Hz. Ali, Muhammed b. Mesleme ile birlikte onlarla görüştü; şikâyetlerin giderileceği sözüyle geri dönmelerini sağladığı aktarılır. Hem hakkı söyleyen hem de kanı önlemeye çalışan oydu.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 38, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 70, label: { tr: 'Osman' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Şii kaynaklarına göre anlaşma sonradan bozuldu. Hz. Ali, Osman\'a Mervan\'ın onu zora sokacağını söyleyip ondan uzak durmasını öğütledi. Bazı kaynaklarda bu bozulmanın nedeni olarak bir mektup meselesi anlatılır; mektubu kimin yazdığı tartışmalıdır.' },
+      text: { tr: 'Şiî kaynaklara göre anlaşma sonradan bozuldu. Hz. Ali, Osman\'a Mervan\'ın onu zora sokacağını söyleyip ondan uzak durmasını öğütledi. Bazı anlatılarda bozulmanın nedeni bir mektuptur; mektubu kimin yazdığı tartışmalıdır. Rivayet, uyarıyı Hz. Ali\'ye bağlar.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'ali', x: 36, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 64, label: { tr: 'Osman' } }, { kind: 'man', x: 84, label: { tr: 'Mervan' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Medine\'de kuşatma başladı. Osman evine çekildi; su ve yiyecek girişi güçleşti. Sünnî kaynaklar, Osman\'ın "Peygamber benden bir söz aldı, ona sabrediyorum" dediğini aktarır. Bu söz Tirmizî 3711\'de yer alır.' },
+      text: { tr: 'Medine kuşatıldı. Osman evine çekildi; su ve yiyecek girişi güçleşti. Sünnî kaynaklar onun «Resulullah benden bir söz aldı, ona sabrediyorum» dediğini aktarır. Söz Tirmizî 3711\'dedir ve hasen sahih sayılmıştır.' },
       art: { bg: 'night', props: ['stars', 'moon'], actors: [{ kind: 'crowd', x: 30, scale: 8 }, { kind: 'man', x: 74, label: { tr: 'Osman' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Şii kaynaklarına göre Hz. Ali, kuşatma sırasında Osman\'a su ulaşmasını sağlamaya çalıştı. Beladurî\'ye dayanan bir rivayet, Hz. Ali\'nin oğulları Hz. Hasan ile Hz. Hüseyin\'i Osman\'ın evini korumaları için gönderdiğini anlatır. Bu rivayeti bazı Şii âlimler zayıf bulur; Hz. Hasan\'ın bu sırada yaralandığını söyleyenler de vardır.' },
+      text: { tr: 'Şiî kaynaklara göre Hz. Ali, kuşatma sırasında Osman\'a su ulaştırmaya çalıştı. Belâzurî\'ye dayanan bir rivayet, oğulları Hz. Hasan ile Hz. Hüseyin\'i (a.s.) evi korumaları için gönderdiğini anlatır. Bazı Şiî âlimler bu rivayeti zayıf bulur; Hz. Hasan\'ın yaralandığını söyleyenler de vardır. Kanı onaylamadığı, kaynakların ortak çizgisidir.' },
       art: { bg: 'city', actors: [{ kind: 'hasan', x: 32, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 48, label: { tr: 'Hz. Hüseyin' } }, { kind: 'ali', x: 68, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 86, label: { tr: 'Osman' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Osman 35 H Zilhicce ayında şehit edildi. Olayın ayrıntıları kaynaklarda farklıdır; bu anlatım ayrıntıya girmez. Nehcü\'l-Belâğa\'daki bir hutbede Hz. Ali, durumu şöyle özetler: Osman\'ı öldürmesi için emir vermiş olsaydı katil sayılırdı; insanları ondan alıkoymuş olsaydı yardımcısı olurdu. Hz. Ali son hükmü Allah\'a bırakır.' },
+      text: { tr: 'Osman 35 H Zilhicce\'de şehit edildi. Ayrıntılar kaynaklarda ayrılır; bu anlatım oraya girmez. Nehcü\'l-Belâğa\'da Hz. Ali durumu şöyle özetler: emir verseydi katil, engelleseydi yardımcı sayılırdı. Son hükmü Allah\'a bırakır. Hutbe numarası ikincil kaynakta görülmüştür, birincil nüshadan ayrıca kontrol edilmelidir.' },
       art: { bg: 'dawn', actors: [{ kind: 'crowd', x: 34, scale: 7 }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Medine bir süre yönetimsiz kaldı. Sahabenin önde gelenleri ve halk Hz. Ali\'ye gelip biat etmesini istedi. Hz. Ali önce kabul etmedi; "Beni bırakın, başkasını arayın" dediği Şii kaynaklardaki hutbelerde geçer. Israr üzerine Mescid-i Nebevî\'de biat alındı. Talha ile Zübeyr\'in biatının gönüllü olup olmadığı tartışmalıdır.' },
+      text: { tr: 'Medine bir süre yönetimsiz kaldı. Önde gelenler ve halk Hz. Ali\'ye gelip biat istedi. O önce kabul etmedi; «Beni bırakın, başkasını arayın» dediği Şiî kaynaklardaki hutbelerde geçer. Israr üzerine Mescid-i Nebevî\'de biat alındı. Talha ile Zübeyr\'in biatının gönüllü olup olmadığı tartışmalıdır. Hilafeti isteyen değil, istenen oydu.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'crowd', x: 32, scale: 9 }, { kind: 'man', x: 56, label: { tr: 'Talha' } }, { kind: 'ali', x: 78, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
@@ -54,7 +54,7 @@ export const osman: HistEvent = {
     { book: 'Taberî, Târîh (SUNY çevirisi c.15)', ref: 'Osman dönemi, 35. yıl olayları (sayfa kontrol edilecek)', says: { tr: 'Heyetler, kuşatma ve şehadet ayrıntılı anlatılır.' }, url: 'https://redshelf.com/book/1750815', status: 'check' },
     { book: 'İbn Kesîr, el-Bidâye ve\'n-Nihâye', ref: 'c.7, Osman\'ın öldürülmesi (sayfa kontrol edilecek)', says: { tr: 'Hz. Hasan\'ın yaralanması ve Hz. Ali\'nin tutumu bu anlatım içinde yer alır.' }, status: 'check' },
     { book: 'İbn Sa\'d, Tabakât; İbn Esîr, el-Kâmil', ref: 'Osman bölümü, 35. yıl (kontrol edilecek)', says: { tr: 'Osman\'ın halifeliği, heyetler ve kuşatma.' }, status: 'check' },
-    { book: 'Belâzurî, Ensâbü\'l-Eşrâf', ref: 'c.5, s.98, 101 civarı (ikincil kaynak üzerinden; birincil metin okunmadı)', says: { tr: 'Hz. Ali\'nin Hz. Hasan ve Hz. Hüseyin\'i Osman\'ın evini korumakla görevlendirdiği rivayeti.' }, url: 'https://en.wikishia.net/view/Special:MobileDiff/12298', status: 'check' },
+    { book: 'Belâzurî, Ensâbü\'l-Eşrâf', ref: 'Osman\'ın kuşatması (WikiShia dipnotundaki sayfa bu çalışmada doğrulanmadı)', says: { tr: 'Hz. Ali\'nin Hz. Hasan ve Hz. Hüseyin\'i Osman\'ın evini korumakla görevlendirdiği rivayeti.' }, url: 'https://en.wikishia.net/view/Special:MobileDiff/12298', status: 'check' },
   ],
   shia: [
     { book: 'Nehcü\'l-Belâğa', ref: 'Hutbe 30 (Osman\'ın öldürülmesi hakkında)', says: { tr: 'Hz. Ali: emir verseydim katil, engellemiş olsaydım yardımcı olurdum; hüküm Allah\'ındır. Numara ikincil kaynakta görüldü, metin birincil nüshadan kontrol edilmeli.' }, url: 'https://cois.uokerbala.edu.iq/wp/en/?p=6898', status: 'check' },
@@ -68,7 +68,7 @@ export const osman: HistEvent = {
     {
       title: { tr: 'Hz. Hasan ve Hz. Hüseyin Osman\'ın kapısında mıydı?' },
       sunni: { tr: 'Bazı Sünnî kaynaklar bu rivayeti aktarır; Hz. Hasan\'ın yaralandığı da söylenir. Hz. Ali\'nin isyancılar üzerinde denetimi olmadığı belirtilir.' },
-      shia: { tr: 'Beladurî\'ye dayanan rivayet aktarılır, ancak bazı Şiî âlimler zinciri yüzünden zayıf bulur. Hz. Ali\'nin kuşatmayı desteklemediği, ama Osman\'a da yardım etmediği iddiası farklı tartışılır.' },
+      shia: { tr: 'Belâzurî\'ye dayanan rivayet aktarılır, ancak bazı Şiî âlimler zinciri yüzünden zayıf bulur. Hz. Ali\'nin kuşatmayı desteklemediği, ama Osman\'a da yardım etmediği iddiası farklı tartışılır.' },
     },
     {
       title: { tr: 'Hz. Ali\'nin tutumu nasıl değerlendirilir?' },

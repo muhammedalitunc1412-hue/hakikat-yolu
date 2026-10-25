@@ -6,7 +6,7 @@ export const ibadetFarklari: HistEvent = {
   id: 'ibadet-farklari',
   date: { tr: 'Çeşitli', en: 'Various' },
   title: { tr: 'İbadet ve inanç farkları', en: 'Differences in worship and belief' },
-  hook: { tr: 'Aynı Kur\'an, aynı Peygamber; peki ezanda, namazda ve ibadetlerde farklar nereden doğdu ve her iki tarafın delili nedir?', en: 'Same Quran, same Prophet; where do the differences in the call to prayer and worship come from?' },
+  hook: { tr: 'Aynı Kur\'an, aynı Peygamber (s.a.v.). Ezan, namaz ve ibadetteki farklar nereden doğdu; iki yolun delili nedir?', en: 'Same Quran, same Prophet; where do the differences in the call to prayer and worship come from?' },
   scenes: [
     {
       by: 'both',
@@ -68,11 +68,11 @@ export const ibadetFarklari: HistEvent = {
     { book: 'Buhari, Sahih', ref: 'No. 2010 (Salâtü\'t-Terâvih)', says: { tr: 'Ömer Ramazan gecesi insanları Ubey b. Ka\'b arkasında toplar ve "Ne güzel bid\'at bu" der; gecenin son kısmında kılınan namazın daha faziletli olduğunu da söyler.' }, grade: { tr: 'Sahih' }, url: 'https://ihadis.com/en/bukhari/hadith/2010', status: 'verified' },
     { book: 'Buhari, Sahih', ref: 'No. 6585 (Rikak, Havz bölümü)', says: { tr: 'Peygamber, arkadaşlarından bazılarının havz başında uzaklaştırılacağını söyler; "Onların senden sonra neler ihdas ettiklerini bilmezsin" cevabı verilir.' }, grade: { tr: 'Sahih' }, url: 'https://ihadis.com/en/bukhari/hadith/6585', status: 'verified' },
     { book: 'Buhari, Sahih', ref: 'No. 335 (Teyemmüm)', says: { tr: 'Cabir\'den: "Yeryüzü bana ve ümmetime mescit ve teyemmüm vasıtası kılındı." Sünni kaynaklarda toprağın secde yeri olduğuna delil gösterilir.' }, grade: { tr: 'Sahih' }, url: 'https://ihadis.com/en/bukhari/hadith/335', status: 'verified' },
-    { book: 'Müslim, Sahih', ref: 'No. 705 (Cem hadisi, İbn Abbas) — numara DOĞRULANMADI; site erişilemedi', says: { tr: 'İbn Abbas, Peygamber\'in korku ve yağmur olmaksızın Medine\'de öğle-ikindi ve akşam-yatsıyı birleştirdiğini, gerekçenin ümmetini zora sokmamak olduğunu söyler.' }, status: 'check' },
-    { book: 'Müslim, Sahih', ref: 'Fedâilü\'s-Sahâbe, Kisâ (Âişe) hadisi; numara DOĞRULANMADI', says: { tr: 'Peygamber, Ali, Fatıma, Hasan ve Hüseyin\'i abasının altına alır ve Ahzâb 33:33 ayetini okur.' }, status: 'check' },
+    { book: 'Müslim, Sahih', ref: 'No. 705d (İbn Abbas; cem)', says: { tr: 'Peygamber Medine\'de korku ve yağmur olmaksızın öğle ile ikindiyi, akşam ile yatsıyı birleştirdi. İbn Abbas gerekçeyi ümmeti zora sokmamak diye açıklar. 705b yağmuru değil yolculuğu nefyet eder.' }, grade: { tr: 'Sahih' }, url: 'https://sunnah.com/muslim:705d', status: 'verified' },
+    { book: 'Müslim, Sahih', ref: 'No. 2424 (Âişe; Kisâ)', says: { tr: 'Peygamber, Ali, Fatıma, Hasan ve Hüseyin\'i abasının altına alır ve Ahzâb 33:33 ayetini okur.' }, grade: { tr: 'Sahih' }, url: 'https://sunnah.com/muslim:2424', status: 'verified' },
     { book: 'Beyhakî, es-Sünenü\'l-Kübrâ; Ebu Davud, Sünen (Ezan bölümü)', ref: 'DOĞRULANMADI (ezan ifadeleri, İbn Ömer ve Ebu Mahzure rivayetleri)', says: { tr: 'Ezan sözlerinin rivayet farkları; İbn Ömer\'in "hayye alâ hayri\'l-amel" dediğine dair rivayet ikincil kaynaklardan bilinir, sıhhati tartışmalıdır.' }, status: 'check' },
     { book: 'Mâlik, Muvatta\'; el-Müdevvene', ref: 'DOĞRULANMADI', says: { tr: 'Maliki mezhebinde namazda elleri sarkıtma (sadl) görüşünün aktarılması; Ramazan kıyamı ile ilgili Ömer rivayeti.' }, status: 'check' },
-    { book: 'Tirmizî, Sünen', ref: 'Menâkıb, Ali bölümü, "men kuntu mevlâ" hadisi; numara DOĞRULANMADI', says: { tr: 'Gadir hadisi Sünni hadis kitaplarında da yer alır.' }, status: 'check' },
+    { book: 'Tirmizî, el-Câmi\'', ref: 'No. 3713 (Menâkıb)', says: { tr: '«Ben kimin mevlâsıysam Ali de onun mevlâsıdır.» Tirmizî hadisi hasen garib sayar.' }, grade: { tr: 'Hasen garib' }, url: 'https://sunnah.com/tirmidhi:3713', status: 'verified' },
   ],
   shia: [
     { book: 'Kuleynî, el-Kâfî', ref: 'Ezan, humus, takiyye ve Gadir bölümleri; cilt/numara DOĞRULANMADI', says: { tr: 'İmamlardan ezan, humus ve takiyyeye dair rivayetler ve Gadir\'in anlamı.' }, status: 'check' },

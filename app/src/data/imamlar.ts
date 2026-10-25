@@ -6,10 +6,10 @@ export const imamlar: HistEvent = {
   id: 'imamlar',
   date: { tr: '61-260 H (680-874); gaybet 260-329 H (874-941)', en: '61-260 AH (680-874)' },
   title: { tr: 'Kerbela\'dan sonra imamlar: Zeynelâbidîn\'den Mehdi\'ye', en: 'The imams after Karbala: from Zayn al-Abidin to the Mahdi' },
-  hook: { tr: 'Kerbela\'dan sağ kalan hasta bir genç, nasıl bir ilim ve sabır çizgisinin başlangıcı oldu?', en: 'How did a sick young survivor of Karbala begin a line of learning and patience?' },
+  hook: { tr: 'Kerbela\'dan sağ kalan hasta bir genç, nasıl bir ilim, dua ve sabır çizgisinin başı oldu?', en: 'How did a sick young survivor of Karbala begin a line of learning and patience?' },
   scenes: [
     {
-      text: { tr: 'Şii kaynaklarına göre Hz. Hüseyin\'den sonra imamet oğlu Ali\'ye geçti. Hastalığı yüzünden Kerbela\'da savaşa katılamayan İmam Zeynelâbidîn, ailenin sağ kalan tek erkek çocuğuydu; esirlik yolculuğundan sonra Medine\'ye döndü. (Hastalığı ve sağ kalışı Sünni kaynaklarda da geçer.)' },
+      text: { tr: 'Şiî kaynaklara göre Hz. Hüseyin\'den (a.s.) sonra imamet oğlu Ali\'ye geçti. Hastalığı yüzünden Kerbela\'da savaşa katılamayan İmam Zeynelâbidîn (a.s.), ailenin sağ kalan tek erkek çocuğuydu. Esirlik yolculuğundan sonra Medine\'ye döndü. Hastalığı ve sağ kalışı Sünnî kaynaklarda da geçer. Zincir, hasta bir gencin sabrıyla sürdü.' },
       art: { bg: 'dune-dusk', props: ['tents'], actors: [] },
       by: 'both',
     },
@@ -71,12 +71,12 @@ export const imamlar: HistEvent = {
     { book: 'TDV İslâm Ansiklopedisi, "Mehdî el-Muntazar" (Mustafa Öz, 2003)', ref: 'islamansiklopedisi.org.tr/mehdi-el-muntazar', says: { tr: 'İbn Teymiye gibi bazı âlimlerin On İkinci İmam\'ı hayali bir şahıs saydığı eleştirisi.' }, grade: { tr: 'İKİNCİL' }, url: 'https://islamansiklopedisi.org.tr/mehdi-el-muntazar', status: 'verified' },
   ],
   shia: [
-    { book: 'Şeyh Müfid, el-İrşâd', ref: 'imamlar bölümleri; Mûsâ el-Kâzım için s. 298-302, Hasan el-Askerî için s. 335-345 (TDV dipnotlarındaki sayfalar; kitap okunmadı)', says: { tr: 'Her imamın doğumu, ilmi, imametine nass ve vefatı. Şii inancın temel kaynaklarından.' }, grade: { tr: 'Şii birincil kaynak; doğrudan okunmadı (al-islam.org 403 verdi). DOĞRULANMADI' }, url: 'https://al-islam.org/kitab-al-irshad-book-shaykh-al-mufid', status: 'check' },
+    { book: 'Şeyh Müfid, el-İrşâd', ref: 'imamlar bölümleri (TDV dipnotlarındaki sayfalar bu çalışmada doğrulanmadı)', says: { tr: 'Her imamın doğumu, ilmi, imametine nass ve vefatı. Şii inancın temel kaynaklarından.' }, grade: { tr: 'Şii birincil kaynak; doğrudan okunmadı (al-islam.org 403 verdi). DOĞRULANMADI' }, url: 'https://al-islam.org/kitab-al-irshad-book-shaykh-al-mufid', status: 'check' },
     { book: 'Kuleynî, el-Kâfî', ref: 'Hüccet kitabı (hadis numarası kontrol edilecek)', says: { tr: 'İmamlar hakkındaki rivayetler ve nass bölümleri; Mehdi\'nin doğumu ve gaybeti için de başvurulur.' }, grade: { tr: 'Şii birincil kaynak; DOĞRULANMADI' }, status: 'check' },
     { book: 'Nu\'mânî, el-Gaybe; Şeyh Sadûk, Kemâlü\'d-dîn; Şeyh Tûsî, el-Gaybe', ref: 'cilt/sayfa kontrol edilecek (TDV maddesi bu eserleri Mehdi literatürü olarak sayar)', says: { tr: 'Gaybet-i suğra, dört nâib ve gaybet-i kübra anlatısı.' }, grade: { tr: 'Şii birincil kaynak; DOĞRULANMADI' }, status: 'check' },
     { book: 'Şeyh Sadûk, Uyûnü Ahbâri\'r-Rızâ', ref: 'cilt/sayfa kontrol edilecek (Wikishia\'da anılır)', says: { tr: 'İmam Rızâ\'nın Me\'mun ile ilişkisi, Nişabur\'daki "Silsiletü\'z-zeheb" hadisi.' }, grade: { tr: 'Şii birincil kaynak; İKİNCİL aktarımla biliniyor' }, url: 'https://en.wikishia.net/view/%27Uyun_akhbar_al-Rida_(book)', status: 'check' },
     { book: 'Wikishia, "Imam al-Rida\'s (a) Succession of al-Ma\'mun"', ref: 'en.wikishia.net/view/Imam_al-Rida%27s_(a)_Succession_of_al-Ma%27mun', says: { tr: 'Me\'mun\'un önce hilafeti bırakmayı, İmam\'ın reddi üzerine veliahtlığı teklif etmesi; Müfid\'e göre Me\'mun\'un görevlisinin Celûdî olması; İmam\'ın yönetimi meşrulaştırmayan şartlar koyması.' }, grade: { tr: 'İKİNCİL (ansiklopedik site)' }, url: 'https://en.wikishia.net/view/Imam_al-Rida%27s_(a)_Succession_of_al-Ma%27mun', status: 'check' },
-    { book: 'Nevbahtî, Fıraku\'ş-Şîa s. 78-94; Sa\'d b. Abdullah el-Kummî, el-Makâlât ve\'l-fırak s. 101-116; Tabersî, İ\'lâmü\'l-verâ s. 349-360', ref: 'TDV Hasan el-Askerî maddesi dipnotları; kitaplar okunmadı', says: { tr: 'İmam Askerî\'nin ölümünden sonra İmâmîlerin on dört-on beş fırkaya bölündüğü; oğul haberinin "resmî İmâmî görüş" olması.' }, grade: { tr: 'İKİNCİL aktarım; DOĞRULANMADI' }, status: 'check' },
+    { book: 'Nevbahtî, Fıraku\'ş-Şîa; Sa\'d b. Abdullah el-Kummî, el-Makâlât ve\'l-fırak; Tabersî, İ\'lâmü\'l-verâ', ref: 'TDV Hasan el-Askerî maddesi dipnotları; sayfalar doğrulanmadı', says: { tr: 'İmam Askerî\'nin ölümünden sonra İmâmîlerin on dört-on beş fırkaya bölündüğü; oğul haberinin "resmî İmâmî görüş" olması.' }, grade: { tr: 'İKİNCİL aktarım; DOĞRULANMADI' }, status: 'check' },
     { book: 'Şeyh Sadûk, Risâletü\'l-Hukûk (Hısâl ve Mektebetü\'l-İmâm)', ref: 'TDV: Sadûk ve İbn Şu\'be eserlerinde; Chittick 1988, s. 279-292', says: { tr: 'Zeynelâbidîn\'e nispet edilen hak ve görevler risalesi.' }, grade: { tr: 'İKİNCİL; nispet tartışmalıdır' }, status: 'check' },
   ],
   disputes: [

@@ -5,7 +5,7 @@ export const fedek: HistEvent = {
   id: 'fedek',
   date: { tr: '11 H (632)', en: '11 AH (632)' },
   title: { tr: 'Fedek ve Hz. Fatıma\'nın küskünlüğü', en: 'Fadak and Fatima\'s estrangement' },
-  hook: { tr: 'Peygamber\'in kızı, ölünceye kadar halifeyle neden konuşmadı?', en: 'Why did the Prophet\'s daughter never speak to the caliph again?' },
+  hook: { tr: 'Hz. Peygamber (s.a.v.) «onu kızdıran beni kızdırır» demişti. Kızı Hz. Fatıma (s.a.) ölünceye kadar neden konuşmadı?', en: 'Why did the Prophet\'s daughter never speak to the caliph again?' },
   scenes: [
     {
       text: { tr: 'Fedek, Medine\'nin kuzeyinde, Hayber yakınında bir köydü. Halkı savaşmadan Peygamber ile anlaşmıştı; bu yüzden toprak Peygamber\'in tasarrufundaydı.' },
@@ -23,12 +23,12 @@ export const fedek: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Buhari\'nin rivayetine göre Hz. Fatıma buna kızdı, Ebu Bekir\'i terk etti ve vefat edene kadar onunla konuşmadı.' },
+      text: { tr: 'Buhari 4240\'ın lafzı açıktır: Hz. Fatıma buna kırıldı, Ebû Bekir\'den yüz çevirdi ve vefat edene kadar onunla konuşmadı. Bu, bir fıkıh ihtilafının kenar notu değil, Peygamber\'in kızının son hâlidir.' },
       art: { bg: 'interior', actors: [{ kind: 'fatima', x: 50, pose: 'sit', label: { tr: 'Hz. Fatıma' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Aynı Peygamber, Hz. Fatıma için "Hz. Fatıma benden bir parçadır; onu kızdıran beni kızdırmıştır" demişti.' },
+      text: { tr: 'Aynı Peygamber, kızı için şunu söylemişti: «Fatıma benden bir parçadır. Onu kızdıran beni kızdırmıştır.» Buhari 3714 ve 3767 bu lafızdadır. Müslim 2449\'da «onu üzen beni üzer» diye geçer. İki sahih de aynı kapıya çıkar. Küskünlük haberiyle yan yana okunduğunda, Ca\'ferî gönül burada durur.' },
       art: { bg: 'city', props: ['sun'], actors: [{ kind: 'prophet', x: 36, label: { tr: 'Hz. Peygamber' } }, { kind: 'fatima', x: 62, label: { tr: 'Hz. Fatıma' } }] },
       by: 'both',
     },
@@ -47,13 +47,13 @@ export const fedek: HistEvent = {
     { book: 'Buhari, Sahih', ref: 'No. 4240 (Meğâzî)', says: { tr: 'Hz. Fatıma, Ebu Bekir\'den mirasını ister; reddedilir; Hz. Fatıma kızar, ölünceye kadar küs kalır; Hz. Ali geceleyin defneder, Ebu Bekir\'e haber vermez; Hz. Ali sonradan biat eder.' }, grade: { tr: 'Sahih' }, url: 'https://ihadis.com/en/bukhari/hadith/4240', status: 'verified' },
     { book: 'Buhari, Sahih', ref: 'No. 3093 ve 6725', says: { tr: 'Aynı olayın paralel rivayetleri: miras talebi ve "peygamberler miras bırakmaz" cevabı.' }, grade: { tr: 'Sahih' }, status: 'check' },
     { book: 'Müslim, Sahih', ref: 'No. 1759', says: { tr: 'Peygamber mirası hakkında Ebu Bekir\'in rivayeti ve Hz. Fatıma\'nın talebi.' }, grade: { tr: 'Sahih' }, status: 'check' },
-    { book: 'Buhari, Sahih', ref: 'No. 3714 ve 3767; Müslim No. 2449', says: { tr: '"Hz. Fatıma benden bir parçadır; onu kızdıran beni kızdırmıştır."' }, grade: { tr: 'Sahih' }, status: 'check' },
-    { book: 'Belâzurî, Fütûhu\'l-Büldân', ref: 'cilt 1, sayfa 37-41', says: { tr: 'Ömer b. Abdülaziz\'in ve Me\'mun\'un Fedek\'i Hz. Fatıma\'nın soyuna iadesi.' }, status: 'check' },
+    { book: 'Buhari, Sahih; Müslim, Sahih', ref: 'Buhari 3714 ve 3767; Müslim 2449', says: { tr: 'Buhari: "Fatıma benden bir parçadır; onu kızdıran beni kızdırmıştır." Müslim\'de yaygın lafız: "onu üzen beni üzer."' }, grade: { tr: 'Sahih' }, url: 'https://sunnah.com/bukhari:3714', status: 'verified' },
+    { book: 'Belâzurî, Fütûhu\'l-Büldân', ref: 'Fedek\'in iadesi (sayfa bu çalışmada doğrulanmadı)', says: { tr: 'Ömer b. Abdülaziz\'in ve Me\'mun\'un Fedek\'i Hz. Fatıma\'nın soyuna iadesi.' }, status: 'check' },
   ],
   shia: [
-    { book: 'Kuleynî, el-Kâfî', ref: 'cilt 1, sayfa 543', says: { tr: 'Fedek\'in Hz. Fatıma\'ya verilmesi ve şahitler.' }, status: 'check' },
+    { book: 'Kuleynî, el-Kâfî', ref: 'Fedek ve Hz. Fatıma\'nın talebi (eski "cilt 1, sayfa 543" kaydı bu çalışmada doğrulanamadığı için kaldırıldı)', says: { tr: 'Fedek\'in Hz. Fatıma\'ya verilmesi ve şahitler. Sayfa baskıya göre değişir.' }, status: 'check' },
     { book: 'Ahmed b. Ebi Tâhir, Belâğatü\'n-Nisâ', ref: 'Fedek hutbesi', says: { tr: 'Hz. Fatıma\'nın Fedek hutbesi olarak aktarılan konuşma. Bazı Sünni âlimler bu eserin atfını kabul etmez.' }, status: 'check' },
-    { book: 'Şeyh Müfid, el-İhtisâs', ref: 'sayfa 186', says: { tr: 'Biat sürecindeki gerginlikler.' }, status: 'check' },
+    { book: 'Şeyh Müfid, el-İhtisâs', ref: 'biat gerginliği (sayfa bu çalışmada doğrulanmadı)', says: { tr: 'Biat sürecindeki gerginlikler.' }, status: 'check' },
   ],
   disputes: [
     {
