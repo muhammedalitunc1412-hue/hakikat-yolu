@@ -227,7 +227,7 @@ function Marker({ x, y, id, hot, n, small, pulse }: { x: number; y: number; id: 
   const glow = (mekke ? 11 : 9) * k;
   return (
     <G>
-      <Circle cx={x} cy={y} r={glow + 3} fill={hot ? 'rgba(228,197,106,0.22)' : 'rgba(8,16,14,0.28)'} />
+      <Circle cx={x} cy={y} r={glow + 1.5} fill={hot ? 'rgba(228,197,106,0.2)' : 'rgba(8,16,14,0.22)'} />
       {hot && (
         <Circle
           cx={x}
@@ -611,7 +611,7 @@ export function BirdMap({
         {!compact && REGIONS.map(r => {
           const q = proj.p(r.lat, r.lon);
           if (!inBox(q.x, q.y, 18)) return null;
-          if (points.some(p => Math.hypot(p.x - q.x, p.y - q.y) < 36)) return null;
+          if (points.some(p => Math.hypot(p.x - q.x, p.y - q.y) < 52)) return null;
           if (hitsInset(q.x, q.y, 6)) return null;
           const fill = r.sea ? 'rgba(226,240,236,0.72)' : 'rgba(246,236,210,0.62)';
           return (
@@ -642,10 +642,10 @@ export function BirdMap({
             <Polyline
               points={r.curved.pts}
               fill="none"
-              stroke={r.role === 'context' ? 'rgba(244,228,180,0.72)' : '#f7e7b8'}
-              strokeWidth={r.role === 'context' ? 1 : 1.55}
-              strokeDasharray={`${r.curved.len} ${r.curved.len}`}
-              strokeDashoffset={r.curved.len * (1 - (r.role === 'context' ? 1 : draw))}
+              stroke={r.role === 'context' ? 'rgba(244,228,180,0.7)' : '#f7e7b8'}
+              strokeWidth={r.role === 'context' ? 1.05 : 1.45}
+              strokeDasharray={r.role === 'context' || draw > 0.98 ? '1.4 5.2' : `${r.curved.len} ${r.curved.len}`}
+              strokeDashoffset={r.role === 'context' || draw > 0.98 ? 0 : r.curved.len * (1 - draw)}
               strokeLinecap="round"
             />
             {r.tagOk && (
@@ -762,26 +762,12 @@ function gridLines(bounds: Bounds, proj: Proj, step: number) {
   for (let lat = Math.ceil(bounds.minLat / step) * step; lat < bounds.maxLat; lat += step) {
     const a = proj.p(lat, bounds.minLon);
     const b = proj.p(lat, bounds.maxLon);
-    nodes.push(<Line key={'la' + lat} x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke="rgba(255,255,255,0.16)" strokeWidth={0.6} />);
-    if (a.y > 14 && a.y < MAP_H - 36) {
-      nodes.push(
-        <SvgText key={'lat' + lat} x={8} y={a.y - 2} fontSize={7} fill="rgba(246,241,230,0.55)" stroke="rgba(6,14,12,0.55)" strokeWidth={1.4} fontFamily={uiFont}>
-          {Math.round(lat)}°K
-        </SvgText>,
-      );
-    }
+    nodes.push(<Line key={'la' + lat} x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke="rgba(255,255,255,0.1)" strokeWidth={0.55} />);
   }
   for (let lon = Math.ceil(bounds.minLon / step) * step; lon < bounds.maxLon; lon += step) {
     const a = proj.p(bounds.minLat, lon);
     const b = proj.p(bounds.maxLat, lon);
-    nodes.push(<Line key={'lo' + lon} x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke="rgba(255,255,255,0.16)" strokeWidth={0.6} />);
-    if (a.x > 28 && a.x < MAP_W - 28) {
-      nodes.push(
-        <SvgText key={'lon' + lon} x={a.x + 2} y={12} fontSize={7} fill="rgba(246,241,230,0.55)" stroke="rgba(6,14,12,0.55)" strokeWidth={1.4} fontFamily={uiFont}>
-          {Math.round(lon)}°D
-        </SvgText>,
-      );
-    }
+    nodes.push(<Line key={'lo' + lon} x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke="rgba(255,255,255,0.1)" strokeWidth={0.55} />);
   }
   return nodes;
 }
