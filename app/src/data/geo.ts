@@ -152,6 +152,22 @@ export const HIJAZ_RIDGE: [number, number][] = [
   [18.4, 42.6],
 ];
 
+/** Water names drawn on the wide plate, in viewBox-friendly anchors that sit on water. */
+export const WATERS: { t: string; lon: number; lat: number }[] = [
+  { t: 'Kızıldeniz', lon: 38.15, lat: 22.0 },
+  { t: 'Akdeniz', lon: 31.2, lat: 34.2 },
+  { t: 'Basra Körfezi', lon: 50.6, lat: 27.15 },
+  { t: 'Hürmüz Boğazı', lon: 56.5, lat: 26.55 },
+  { t: 'Umman Körfezi', lon: 58.6, lat: 24.7 },
+  { t: 'Arap Denizi', lon: 59.8, lat: 16.8 },
+  { t: 'Aden Körfezi', lon: 48.6, lat: 12.7 },
+  { t: "Babu'l-Mendeb", lon: 43.55, lat: 12.7 },
+  { t: 'Süveyş Körfezi', lon: 32.9, lat: 28.95 },
+  { t: 'Akabe Körfezi', lon: 34.85, lat: 28.7 },
+  { t: 'Karadeniz', lon: 40.2, lat: 43.35 },
+  { t: 'Hazar Denizi', lon: 50.8, lat: 42.4 },
+];
+
 export const REGIONS: { t: string; lat: number; lon: number; sea?: boolean }[] = [
   { t: 'HİCAZ', lat: 23.4, lon: 41.3 },
   { t: 'NECID', lat: 25.2, lon: 45.2 },

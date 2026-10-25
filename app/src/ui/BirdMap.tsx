@@ -4,12 +4,12 @@ import Svg, {
   Circle, Defs, G, Line, Path, Polyline, RadialGradient, Rect, Stop, Text as SvgText,
 } from 'react-native-svg';
 import { COUNTRIES } from '../data/borders';
-import { IMAGERY_CREDIT_SHORT, imageryFor, type Imagery } from '../data/imagery';
-import { MODERN_CITIES } from '../data/modern';
+import { IMAGERY, IMAGERY_CREDIT_SHORT, PLATE, imageryFor, type Imagery } from '../data/imagery';
 import {
   EUPHRATES, PLACES, REGIONS, TIGRIS, distanceKm, formatKm, kmBetween, type PlaceId,
 } from '../data/geo';
 import { font } from './theme';
+import { placeOverlay } from './overlayLabels';
 
 export const MAP_W = 360;
 export const MAP_H = 430;
@@ -54,6 +54,39 @@ function fitAspect(b: Bounds, aspect: number): Bounds {
     maxLat += extra;
   }
   return { minLat, maxLat, minLon, maxLon };
+}
+
+export type Camera = { s: number; x: number; y: number };
+
+/** Geographic window of the wide plate. Zoom 1 fills the detail map with this. */
+export const MIDDLE_EAST: Bounds = {
+  minLon: PLATE.west,
+  maxLon: PLATE.east,
+  minLat: PLATE.south,
+  maxLat: PLATE.north,
+};
+
+export function regionCamera(ids: PlaceId[], width: number, height: number): Camera {
+  const place = frameBounds(ids.length ? ids : ['mekke', 'medine']);
+  const regionLon = MIDDLE_EAST.maxLon - MIDDLE_EAST.minLon;
+  const s = Math.max(1, regionLon / Math.max(1e-6, place.maxLon - place.minLon));
+  const proj = makeProj(MIDDLE_EAST, 0, 0, MAP_W, MAP_H);
+  const q = proj.p((place.minLat + place.maxLat) / 2, (place.minLon + place.maxLon) / 2);
+  const ox = (q.x - MAP_W / 2) * (width / MAP_W);
+  const oy = (q.y - MAP_H / 2) * (height / MAP_H);
+  let x = -ox * s;
+  let y = -oy * s;
+  const maxX = (width * (s - 1)) / 2;
+  const maxY = (height * (s - 1)) / 2;
+  x = Math.max(-maxX, Math.min(maxX, x));
+  y = Math.max(-maxY, Math.min(maxY, y));
+  return { s, x, y };
+}
+
+export function screenToVb(screenX: number, screenY: number, cam: Camera, width: number, height: number) {
+  const px = (screenX - cam.x - width / 2) / Math.max(0.001, cam.s) + width / 2;
+  const py = (screenY - cam.y - height / 2) / Math.max(0.001, cam.s) + height / 2;
+  return { x: (px / Math.max(1, width)) * MAP_W, y: (py / Math.max(1, height)) * MAP_H };
 }
 
 function frameBounds(ids: PlaceId[]): Bounds {
@@ -141,14 +174,14 @@ function inBox(x: number, y: number, m = 8) {
   return x > m && y > m && x < MAP_W - m && y < MAP_H - m;
 }
 
-/** Pinch scale collapsed to the bands that reveal another tier of labels. */
+/** Camera scale collapsed to the bands that reveal another tier of towns.
+ *  1 is the whole Middle East, not the place frame. */
 export function zoomBand(scale: number): number {
-  if (scale < 1.25) return 1;
-  if (scale < 1.6) return 1.45;
-  if (scale < 2.05) return 1.8;
-  if (scale < 2.6) return 2.3;
-  if (scale < 3.3) return 2.9;
-  return 3.8;
+  if (scale < 1.65) return 1;
+  if (scale < 2.5) return 1.65;
+  if (scale < 4) return 2.5;
+  if (scale < 6.5) return 4;
+  return 6.5;
 }
 
 function lineHits(line: number[], bounds: Bounds) {
@@ -178,51 +211,21 @@ function strokePath(bounds: Bounds, proj: Proj): string {
   return d;
 }
 
-type ModernLabel = { key: string; text: string; x: number; y: number; size: number; country: boolean };
-
-function modernLabels(bounds: Bounds, proj: Proj, zoom: number, markers: { x: number; y: number }[]): ModernLabel[] {
-  const placed: { x: number; y: number; r: number }[] = [];
-  const blocked = (x: number, y: number, r: number) => placed.some(p => Math.hypot(p.x - x, p.y - y) < p.r + r);
-  const labels: ModernLabel[] = [];
-  const cx = (bounds.minLon + bounds.maxLon) / 2;
-  const cy = (bounds.minLat + bounds.maxLat) / 2;
-  const underToggle = (x: number, y: number) => y < 34 && x > 78 && x < MAP_W - 78;
-  const overChrome = (x: number, y: number) => (y > MAP_H - 42 && x < 168) || (y > MAP_H - 24 && x > MAP_W - 132);
-
-  for (const country of COUNTRIES) {
-    if (!country.name || zoom + 1e-6 < country.tier) continue;
-    let best: { lon: number; lat: number; d: number } | null = null;
-    for (const [lon, lat] of country.labels) {
-      if (lon < bounds.minLon || lon > bounds.maxLon || lat < bounds.minLat || lat > bounds.maxLat) continue;
-      const d = (lon - cx) ** 2 + ((lat - cy) * 1.15) ** 2;
-      if (!best || d < best.d) best = { lon, lat, d };
-    }
-    if (!best) continue;
-    const q = proj.p(best.lat, best.lon);
-    if (!inBox(q.x, q.y, 16) || underToggle(q.x, q.y) || overChrome(q.x, q.y)) continue;
-    const r = 30 / zoom;
-    if (blocked(q.x, q.y, r)) continue;
-    placed.push({ x: q.x, y: q.y, r });
-    labels.push({ key: country.id, text: country.name, x: q.x, y: q.y, size: 11, country: true });
+function starPath(x: number, y: number, r: number) {
+  let d = '';
+  for (let i = 0; i < 10; i++) {
+    const a = -Math.PI / 2 + (i * Math.PI) / 5;
+    const rad = i % 2 === 0 ? r : r * 0.42;
+    const px = x + Math.cos(a) * rad;
+    const py = y + Math.sin(a) * rad;
+    d += `${i === 0 ? 'M' : 'L'}${px.toFixed(2)} ${py.toFixed(2)}`;
   }
-
-  for (const city of MODERN_CITIES) {
-    if (zoom + 1e-6 < city.tier) continue;
-    if (city.lon < bounds.minLon || city.lon > bounds.maxLon || city.lat < bounds.minLat || city.lat > bounds.maxLat) continue;
-    const q = proj.p(city.lat, city.lon);
-    if (!inBox(q.x, q.y, 12) || underToggle(q.x, q.y) || overChrome(q.x, q.y)) continue;
-    if (markers.some(m => Math.hypot(m.x - q.x, m.y - q.y) < 20 / zoom)) continue;
-    const r = 14 / zoom;
-    if (blocked(q.x, q.y, r)) continue;
-    placed.push({ x: q.x, y: q.y, r });
-    labels.push({ key: city.name, text: city.name, x: q.x, y: q.y, size: 8.2, country: false });
-  }
-  return labels;
+  return d + 'Z';
 }
 
 type Curve = { pts: string; len: number; label: { x: number; y: number } };
 
-function curveBetween(a: { x: number; y: number }, b: { x: number; y: number }): Curve {
+function curveBetween(a: { x: number; y: number }, b: { x: number; y: number }, unit = 1): Curve {
   const dx = b.x - a.x;
   const dy = b.y - a.y;
   const len = Math.hypot(dx, dy) || 1;
@@ -231,7 +234,7 @@ function curveBetween(a: { x: number; y: number }, b: { x: number; y: number }):
   const mx = (a.x + b.x) / 2;
   const my = (a.y + b.y) / 2;
   const away = -Math.sign((MAP_W / 2 - mx) * nx + (MAP_H / 2 - my) * ny) || 1;
-  const bow = Math.max(10, Math.min(32, len * 0.13)) * away;
+  const bow = Math.max(10 * unit, Math.min(32 * unit, len * 0.13)) * away;
   const cx = mx + nx * bow;
   const cy = my + ny * bow;
   const parts: string[] = [];
@@ -249,8 +252,8 @@ function curveBetween(a: { x: number; y: number }, b: { x: number; y: number }):
   }
   const midT = 0.5;
   const u = 1 - midT;
-  const lx = u * u * a.x + 2 * u * midT * cx + midT * midT * b.x + nx * away * 13;
-  const ly = u * u * a.y + 2 * u * midT * cy + midT * midT * b.y + ny * away * 13;
+  const lx = u * u * a.x + 2 * u * midT * cx + midT * midT * b.x + nx * away * 13 * unit;
+  const ly = u * u * a.y + 2 * u * midT * cy + midT * midT * b.y + ny * away * 13 * unit;
   return { pts: parts.join(' '), len: arc, label: { x: lx, y: ly } };
 }
 
@@ -283,10 +286,10 @@ function Terrain({
   );
 }
 
-function NameTag({ x, y, text, anchor, size, hot }: { x: number; y: number; text: string; anchor: Anchor; size: number; hot?: boolean }) {
-  const w = text.length * size * 0.58 + 12;
-  const h = size + 8;
-  let left = anchor === 'start' ? x - 6 : anchor === 'end' ? x - w + 6 : x - w / 2;
+function NameTag({ x, y, text, anchor, size, hot, unit = 1 }: { x: number; y: number; text: string; anchor: Anchor; size: number; hot?: boolean; unit?: number }) {
+  const w = text.length * size * 0.58 + 12 * unit;
+  const h = size + 8 * unit;
+  let left = anchor === 'start' ? x - 6 * unit : anchor === 'end' ? x - w + 6 * unit : x - w / 2;
   let top = y - size;
   if (left < 3) { left = 3; }
   if (left + w > MAP_W - 3) left = MAP_W - 3 - w;
@@ -295,16 +298,16 @@ function NameTag({ x, y, text, anchor, size, hot }: { x: number; y: number; text
   const tx = anchor === 'start' ? left + 6 : anchor === 'end' ? left + w - 6 : left + w / 2;
   return (
     <G>
-      <Rect x={left} y={top} width={w} height={h} rx={6} fill="rgba(6,16,14,0.84)" stroke={hot ? 'rgba(228,197,106,0.95)' : 'rgba(228,197,106,0.45)'} strokeWidth={0.8} />
-      <SvgText x={tx} y={top + size + 1} fontSize={size} fontWeight="700" textAnchor={anchor} fill={hot ? '#f3e2a6' : '#f6f1e6'} fontFamily={nameFont}>{text}</SvgText>
+      <Rect x={left} y={top} width={w} height={h} rx={6 * unit} fill="rgba(6,16,14,0.84)" stroke={hot ? 'rgba(228,197,106,0.95)' : 'rgba(228,197,106,0.45)'} strokeWidth={0.8 * unit} />
+      <SvgText x={tx} y={top + size + unit} fontSize={size} fontWeight="700" textAnchor={anchor} fill={hot ? '#f3e2a6' : '#f6f1e6'} fontFamily={nameFont}>{text}</SvgText>
     </G>
   );
 }
 
-function Marker({ x, y, id, hot, n, small, pulse }: { x: number; y: number; id: PlaceId; hot: boolean; n?: number; small?: boolean; pulse: number }) {
+function Marker({ x, y, id, hot, n, small, pulse, unit = 1 }: { x: number; y: number; id: PlaceId; hot: boolean; n?: number; small?: boolean; pulse: number; unit?: number }) {
   const mekke = id === 'mekke';
   const medine = id === 'medine';
-  const k = (small ? 0.82 : 1) * (hot ? 1.12 : 1);
+  const k = (small ? 0.82 : 1) * (hot ? 1.12 : 1) * unit;
   const glow = (mekke ? 11 : 9) * k;
   return (
     <G>
@@ -313,7 +316,7 @@ function Marker({ x, y, id, hot, n, small, pulse }: { x: number; y: number; id: 
         <Circle
           cx={x}
           cy={y}
-          r={14 * k + pulse * 5}
+          r={14 * k + pulse * 5 * unit}
           fill="rgba(228,197,106,0.14)"
           stroke="#f0d78c"
           strokeWidth={1.15}
@@ -338,8 +341,8 @@ function Marker({ x, y, id, hot, n, small, pulse }: { x: number; y: number; id: 
       )}
       {n != null && (
         <G>
-          <Circle cx={x + 12} cy={y - 12} r={7.6} fill="#e4c56a" stroke="#1a140c" strokeWidth={0.7} />
-          <SvgText x={x + 12} y={y - 9.1} fontSize={8.5} fontWeight="700" textAnchor="middle" fill="#1a140c" fontFamily={uiFont}>{n}</SvgText>
+          <Circle cx={x + 12 * unit} cy={y - 12 * unit} r={7.6 * unit} fill="#e4c56a" stroke="#1a140c" strokeWidth={0.7 * unit} />
+          <SvgText x={x + 12 * unit} y={y - 9.1 * unit} fontSize={8.5 * unit} fontWeight="700" textAnchor="middle" fill="#1a140c" fontFamily={uiFont}>{n}</SvgText>
         </G>
       )}
     </G>
@@ -443,26 +446,36 @@ function buildInsets(points: XY[], mainScale: number): Inset[] {
 }
 
 export function MapZoom({
-  width, height, resetKey, onScale, children,
+  width, height, resetKey, home, maxScale, flyToken = 0, onCamera, children,
 }: {
   width: number;
   height: number;
   resetKey?: string;
-  onScale?: (scale: number) => void;
+  /** Place frame. Double-tap and a new map return here. Zoom 1 is the whole region. */
+  home: Camera;
+  maxScale: number;
+  /** Bumps to animate out to the full Middle East. */
+  flyToken?: number;
+  onCamera?: (cam: Camera) => void;
   children: React.ReactNode;
 }) {
-  const [view, setView] = useState({ s: 1, x: 0, y: 0 });
-  const g = useRef({ s: 1, x: 0, y: 0, mode: '', dist: 1, px: 0, py: 0, fx: 0, fy: 0, sx: 1, lastTap: 0 });
+  const [view, setView] = useState(home);
+  const g = useRef({ s: home.s, x: home.x, y: home.y, mode: '', dist: 1, px: 0, py: 0, fx: 0, fy: 0, sx: 1, lastTap: 0 });
   const size = useRef({ width, height });
   size.current = { width, height };
   const host = useRef<View>(null);
-  const onScaleRef = useRef(onScale);
-  onScaleRef.current = onScale;
+  const onCameraRef = useRef(onCamera);
+  onCameraRef.current = onCamera;
+  const homeRef = useRef(home);
+  homeRef.current = home;
+  const maxRef = useRef(maxScale);
+  maxRef.current = maxScale;
+  const flyGen = useRef(0);
 
   const apply = (s: number, x: number, y: number) => {
     const W = size.current.width;
     const H = size.current.height;
-    s = Math.max(1, Math.min(4.2, s));
+    s = Math.max(1, Math.min(maxRef.current, s));
     if (s <= 1.001) { s = 1; x = 0; y = 0; }
     const maxX = (W * (s - 1)) / 2;
     const maxY = (H * (s - 1)) / 2;
@@ -472,16 +485,37 @@ export function MapZoom({
     g.current.x = x;
     g.current.y = y;
     setView({ s, x, y });
-    onScaleRef.current?.(s);
+    onCameraRef.current?.({ s, x, y });
   };
   const applyRef = useRef(apply);
   applyRef.current = apply;
 
   useEffect(() => {
-    g.current.s = 1; g.current.x = 0; g.current.y = 0;
-    setView({ s: 1, x: 0, y: 0 });
-    onScaleRef.current?.(1);
+    const h = homeRef.current;
+    flyGen.current += 1;
+    g.current.s = h.s; g.current.x = h.x; g.current.y = h.y;
+    setView(h);
+    onCameraRef.current?.(h);
   }, [resetKey]);
+
+  useEffect(() => {
+    if (!flyToken) return;
+    const id = ++flyGen.current;
+    const fromS = g.current.s;
+    const fromX = g.current.x;
+    const fromY = g.current.y;
+    const t0 = Date.now();
+    let raf = 0;
+    const step = () => {
+      if (flyGen.current !== id) return;
+      const t = Math.min(1, (Date.now() - t0) / 520);
+      const e = 1 - (1 - t) ** 3;
+      applyRef.current(fromS + (1 - fromS) * e, fromX * (1 - e), fromY * (1 - e));
+      if (t < 1) raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+    return () => { flyGen.current += 1; cancelAnimationFrame(raf); };
+  }, [flyToken]);
 
   useEffect(() => {
     if (Platform.OS !== 'web') return;
@@ -489,6 +523,7 @@ export function MapZoom({
     if (!el || typeof el.addEventListener !== 'function') return;
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
+      flyGen.current += 1;
       const rect = el.getBoundingClientRect();
       const fx = e.clientX - rect.left;
       const fy = e.clientY - rect.top;
@@ -508,12 +543,13 @@ export function MapZoom({
       ref={host}
       style={{ width, height, overflow: 'hidden' }}
       pointerEvents="box-only"
-      accessibilityHint="İki parmakla yakınlaştırılıp kaydırılabilir"
+      accessibilityHint="İki parmakla yakınlaştırılır, uzaklaştırılır ve kaydırılır"
       onStartShouldSetResponder={() => false}
       onMoveShouldSetResponder={(e) => (e.nativeEvent.touches?.length ?? 0) >= 2 || g.current.s > 1.02}
       onMoveShouldSetResponderCapture={(e) => (e.nativeEvent.touches?.length ?? 0) >= 2}
       onResponderTerminationRequest={() => g.current.mode !== 'pinch' && g.current.s <= 1.02}
       onResponderGrant={(e) => {
+        flyGen.current += 1;
         const t = e.nativeEvent.touches ?? [];
         if (t.length >= 2) {
           g.current.mode = 'pinch';
@@ -555,7 +591,10 @@ export function MapZoom({
       }}
       onResponderRelease={() => {
         const now = Date.now();
-        if (g.current.mode === 'pan' && now - g.current.lastTap < 300) apply(1, 0, 0);
+        if (g.current.mode === 'pan' && now - g.current.lastTap < 300) {
+          const h = homeRef.current;
+          apply(h.s, h.x, h.y);
+        }
         g.current.lastTap = now;
         g.current.mode = '';
       }}
@@ -579,6 +618,9 @@ export function BirdMap({
   animate,
   modern,
   zoom = 1,
+  wide,
+  camera = 1,
+  view,
 }: {
   width: number;
   markers: PlaceId[];
@@ -590,20 +632,30 @@ export function BirdMap({
   animate?: boolean;
   /** Present-day borders and names. Default off. */
   modern?: boolean;
-  /** Pinch-zoom band from MapZoom, so labels can multiply as the map grows. */
+  /** Quantized camera scale. Towns appear as this grows. 1 is the whole region. */
   zoom?: number;
+  /** Detail map: the plate is the whole Middle East and pinch can zoom out to it. */
+  wide?: boolean;
+  /** Raw camera scale, used to keep symbols a constant size on screen. */
+  camera?: number;
+  /** Camera translation, so labels can be culled to the visible window. */
+  view?: Camera;
 }) {
   const uid = useId().replace(/[^a-zA-Z0-9]/g, '');
   const height = Math.max(1, Math.round(width * MAP_H / MAP_W));
   const ids = markers.length ? markers : (['mekke', 'medine'] as PlaceId[]);
-  const bounds = frameBounds(ids);
+  const bounds = wide ? MIDDLE_EAST : frameBounds(ids);
   const proj = makeProj(bounds, 0, 0, MAP_W, MAP_H);
   const img = imageryFor(bounds);
-  const rect = imageRect(img, proj);
+  const plates = wide
+    ? [...IMAGERY].sort((a, b) => a.width / (a.east - a.west) - b.width / (b.east - b.west))
+    : [img];
   const points: XY[] = ids.map(id => {
     const q = proj.p(PLACES[id].lat, PLACES[id].lon);
     return { id, ...q, lat: PLACES[id].lat, lon: PLACES[id].lon };
   });
+  const unit = wide ? 1 / Math.max(1, camera) : 1;
+  const cam = view ?? { s: Math.max(1, camera), x: 0, y: 0 };
   const boundKey = `${bounds.minLat.toFixed(4)}|${bounds.maxLat.toFixed(4)}|${bounds.minLon.toFixed(4)}|${bounds.maxLon.toFixed(4)}`;
   const borderD = useMemo(
     () => (modern && !compact ? strokePath(bounds, proj) : ''),
@@ -611,13 +663,61 @@ export function BirdMap({
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [modern, compact, boundKey],
   );
-  const overlayLabels = useMemo(
-    () => (modern && !compact ? modernLabels(bounds, proj, zoom, points) : []),
+  const markerKey = ids.join(',');
+  const camKey = `${camera.toFixed(2)}|${Math.round(cam.x)}|${Math.round(cam.y)}|${width}`;
+  const overlayLabels = useMemo(() => {
+    if (compact || !wide) return [];
+    const sightA = screenToVb(0, 0, cam, width, height);
+    const sightB = screenToVb(width, height, cam, width, height);
+    const sight = {
+      minX: Math.min(sightA.x, sightB.x),
+      maxX: Math.max(sightA.x, sightB.x),
+      minY: Math.min(sightA.y, sightB.y),
+      maxY: Math.max(sightA.y, sightB.y),
+    };
+    const boxOf = (x0: number, y0: number, x1: number, y1: number) => {
+      const a = screenToVb(x0, y0, cam, width, height);
+      const b = screenToVb(x1, y1, cam, width, height);
+      const minX = Math.min(a.x, b.x);
+      const minY = Math.min(a.y, b.y);
+      return { x: minX, y: minY, w: Math.abs(b.x - a.x), h: Math.abs(b.y - a.y) };
+    };
+    const reserved = [
+      boxOf(6, 6, 108, 52),
+      boxOf(Math.max(0, width - 170), 6, width - 4, 52),
+      boxOf(4, height - 42, 180, height - 2),
+      boxOf(width - 130, height - 26, width - 2, height - 2),
+    ];
+    const shown = (labels ?? ids);
+    for (const id of shown) {
+      const p = points.find(q => q.id === id);
+      if (!p) continue;
+      const n = NUDGE[id];
+      const size = (id === highlight ? 12.5 : 11) * unit;
+      const w = PLACES[id].name.length * size * 0.58 + 12 * unit;
+      const h = size + 8 * unit;
+      const x = p.x + n.dx * unit;
+      const y = p.y + n.dy * unit;
+      let left = n.anchor === 'start' ? x - 6 * unit : n.anchor === 'end' ? x - w + 6 * unit : x - w / 2;
+      const top = y - size;
+      reserved.push({ x: left, y: top, w, h });
+    }
+    return placeOverlay({
+      modern: !!modern,
+      unit,
+      zoom,
+      project: (lat, lon) => proj.p(lat, lon),
+      sight,
+      reserved,
+      markers: shown.map(id => {
+        const p = points.find(q => q.id === id);
+        return { x: p?.x ?? 0, y: p?.y ?? 0, text: PLACES[id].name };
+      }),
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [modern, compact, zoom, boundKey],
-  );
+  }, [compact, wide, modern, zoom, camKey, markerKey, highlight, width, height]);
   const mainScale = MAP_H / proj.latSpan;
-  const insets = compact ? [] : buildInsets(points, mainScale);
+  const insets = wide || compact ? [] : buildInsets(points, mainScale);
   const insetBorders = useMemo(() => {
     if (!modern || compact) return new Map<string, string>();
     const m = new Map<string, string>();
@@ -690,19 +790,22 @@ export function BirdMap({
     const pa = proj.p(PLACES[a].lat, PLACES[a].lon);
     const pb = proj.p(PLACES[b].lat, PLACES[b].lon);
     const role = roleOf(a, b);
-    const curved = curveBetween(pa, pb);
+    const curved = curveBetween(pa, pb, unit);
     const bothInset = hidden.has(a) && hidden.has(b);
     const label = formatKm(kmBetween(a, b));
     const tw = label.length * 5.2 + 14;
     const { x: lx, y: ly } = curved.label;
-    const near = points.some(p => Math.hypot(p.x - lx, p.y - ly) < 16);
-    const tagOk = !compact && role === 'primary' && !bothInset && curved.len > 70 && !near && inBox(lx, ly, 10) && !hitsInset(lx, ly, 4);
+    const near = points.some(p => Math.hypot(p.x - lx, p.y - ly) < 16 * unit);
+    const showKm = !(wide && camera < 1.9);
+    const tagOk = showKm && !compact && role === 'primary' && !bothInset && curved.len > 70 * unit && !near && inBox(lx, ly, 10) && !hitsInset(lx, ly, 4);
     return { i, role, curved, label, tw, lx, ly, tagOk };
   });
 
   return (
     <View style={{ width, height, overflow: 'hidden', backgroundColor: '#071820' }}>
-      <Terrain source={img.source} rect={rect} sx={sx} sy={sy} />
+      {plates.map(plate => (
+        <Terrain key={plate.id} source={plate.source} rect={imageRect(plate, proj)} sx={sx} sy={sy} />
+      ))}
       <Svg width={width} height={height} viewBox={`0 0 ${MAP_W} ${MAP_H}`} style={StyleSheet.absoluteFill} pointerEvents="none">
         <Defs>
           <RadialGradient id={`${uid}vig`} cx="50%" cy="46%" r="72%">
@@ -716,39 +819,47 @@ export function BirdMap({
 
         {([EUPHRATES, TIGRIS] as const).map((river, i) => (
           <G key={'rv' + i}>
-            <Polyline points={chain(river, proj.p)} fill="none" stroke="rgba(6,28,32,0.55)" strokeWidth={compact ? 2.2 : 3.4} strokeLinecap="round" strokeLinejoin="round" />
-            <Polyline points={chain(river, proj.p)} fill="none" stroke="rgba(214,236,232,0.82)" strokeWidth={compact ? 0.7 : 1.05} strokeLinecap="round" strokeLinejoin="round" />
+            <Polyline points={chain(river, proj.p)} fill="none" stroke="rgba(6,28,32,0.55)" strokeWidth={(compact ? 2.2 : 3.4) * unit} strokeLinecap="round" strokeLinejoin="round" />
+            <Polyline points={chain(river, proj.p)} fill="none" stroke="rgba(214,236,232,0.82)" strokeWidth={(compact ? 0.7 : 1.05) * unit} strokeLinecap="round" strokeLinejoin="round" />
           </G>
         ))}
 
         {!!borderD && (
           <G>
-            <Path d={borderD} fill="none" stroke="rgba(6,14,12,0.78)" strokeWidth={2.6 / zoom} strokeLinejoin="round" strokeLinecap="round" />
-            <Path d={borderD} fill="none" stroke="rgba(246,241,230,0.92)" strokeWidth={1.05 / zoom} strokeLinejoin="round" strokeLinecap="round" />
+            <Path d={borderD} fill="none" stroke="rgba(6,14,12,0.78)" strokeWidth={(wide ? 2.5 : 2.6) * (wide ? unit : 1 / zoom)} strokeLinejoin="round" strokeLinecap="round" />
+            <Path d={borderD} fill="none" stroke="rgba(246,241,230,0.92)" strokeWidth={(wide ? 1.15 : 1.05) * (wide ? unit : 1 / zoom)} strokeLinejoin="round" strokeLinecap="round" />
           </G>
         )}
 
         {overlayLabels.map(l => (
-          !hitsInset(l.x, l.y, 2) ? (
-            <SvgText
-              key={l.key}
-              x={l.x}
-              y={l.y}
-              fontSize={l.size / zoom}
-              fontWeight="700"
-              letterSpacing={l.country ? 0.8 / zoom : 0}
-              textAnchor="middle"
-              fill={l.country ? 'rgba(246,236,210,0.94)' : '#f7f3e8'}
-              stroke="rgba(6,14,12,0.88)"
-              strokeWidth={(l.country ? 2.4 : 2) / zoom}
-              fontFamily={l.country ? uiFont : nameFont}
-            >
-              {l.text}
-            </SvgText>
-          ) : null
+          <G key={l.key}>
+            {l.star && (
+              <G>
+                <Circle cx={l.star.x} cy={l.star.y} r={l.star.r * 1.65} fill="rgba(6,14,12,0.82)" stroke="#f6f1e6" strokeWidth={Math.max(0.35, l.star.r * 0.22)} />
+                <Path d={starPath(l.star.x, l.star.y, l.star.r)} fill="#e4c56a" stroke="#1a140c" strokeWidth={Math.max(0.25, l.star.r * 0.14)} />
+              </G>
+            )}
+            {!!l.text && (
+              <SvgText
+                x={l.x}
+                y={l.y}
+                fontSize={l.size}
+                fontWeight="700"
+                fontStyle={l.kind === 'sea' || l.kind === 'river' ? 'italic' : 'normal'}
+                letterSpacing={l.kind === 'country' ? 0.3 * unit : 0}
+                textAnchor="middle"
+                fill={l.kind === 'capital' ? '#f3e2a6' : l.kind === 'sea' || l.kind === 'river' ? 'rgba(226,244,240,0.94)' : 'rgba(246,236,210,0.95)'}
+                stroke="rgba(6,14,12,0.9)"
+                strokeWidth={(l.kind === 'country' ? 2.3 : 1.8) * unit}
+                fontFamily={l.kind === 'country' ? uiFont : nameFont}
+              >
+                {l.text}
+              </SvgText>
+            )}
+          </G>
         ))}
 
-        {!compact && !modern && REGIONS.map(r => {
+        {!compact && !wide && !modern && REGIONS.map(r => {
           const q = proj.p(r.lat, r.lon);
           if (!inBox(q.x, q.y, 18)) return null;
           if (points.some(p => Math.hypot(p.x - q.x, p.y - q.y) < 52)) return null;
@@ -761,7 +872,7 @@ export function BirdMap({
           );
         })}
 
-        {!compact && [
+        {!compact && !wide && [
           { t: 'Fırat', lat: 34.4, lon: 40.55 },
           { t: 'Dicle', lat: 34.85, lon: 43.35 },
         ].map(r => {
@@ -778,20 +889,20 @@ export function BirdMap({
 
         {routes.map(r => (
           <G key={'ln' + r.i}>
-            <Polyline points={r.curved.pts} fill="none" stroke={r.role === 'context' ? 'rgba(243,226,166,0.18)' : 'rgba(243,226,166,0.38)'} strokeWidth={r.role === 'context' ? 3 : 4.5} strokeLinecap="round" />
+            <Polyline points={r.curved.pts} fill="none" stroke={r.role === 'context' ? 'rgba(243,226,166,0.18)' : 'rgba(243,226,166,0.38)'} strokeWidth={(r.role === 'context' ? 3 : 4.5) * unit} strokeLinecap="round" />
             <Polyline
               points={r.curved.pts}
               fill="none"
               stroke={r.role === 'context' ? 'rgba(244,228,180,0.7)' : '#f7e7b8'}
-              strokeWidth={r.role === 'context' ? 1.05 : 1.45}
+              strokeWidth={(r.role === 'context' ? 1.05 : 1.45) * unit}
               strokeDasharray={r.role === 'context' || draw > 0.98 ? '1.4 5.2' : `${r.curved.len} ${r.curved.len}`}
               strokeDashoffset={r.role === 'context' || draw > 0.98 ? 0 : r.curved.len * (1 - draw)}
               strokeLinecap="round"
             />
             {r.tagOk && (
               <G>
-                <Rect x={r.lx - r.tw / 2} y={r.ly - 8} width={r.tw} height={16} rx={8} fill="rgba(6,16,14,0.88)" stroke="rgba(228,197,106,0.7)" strokeWidth={0.7} />
-                <SvgText x={r.lx} y={r.ly + 3.5} fontSize={9} fontWeight="700" textAnchor="middle" fill="#f6f1e6" fontFamily={uiFont}>{r.label}</SvgText>
+                <Rect x={r.lx - (r.tw * unit) / 2} y={r.ly - 8 * unit} width={r.tw * unit} height={16 * unit} rx={8 * unit} fill="rgba(6,16,14,0.88)" stroke="rgba(228,197,106,0.7)" strokeWidth={0.7 * unit} />
+                <SvgText x={r.lx} y={r.ly + 3.5 * unit} fontSize={9 * unit} fontWeight="700" textAnchor="middle" fill="#f6f1e6" fontFamily={uiFont}>{r.label}</SvgText>
               </G>
             )}
           </G>
@@ -810,17 +921,17 @@ export function BirdMap({
         })}
 
         {points.map(p => (
-          <Marker key={p.id} x={p.x} y={p.y} id={p.id} hot={p.id === highlight} n={compact ? undefined : numbers?.[p.id]} small={compact} pulse={animate && p.id === highlight ? pulse : 0} />
+          <Marker key={p.id} x={p.x} y={p.y} id={p.id} hot={p.id === highlight} n={compact ? undefined : numbers?.[p.id]} small={compact} pulse={animate && p.id === highlight ? pulse : 0} unit={unit} />
         ))}
 
         {labelIds.map(id => {
           const p = points.find(q => q.id === id);
           if (!p) return null;
           const n = NUDGE[id];
-          return <NameTag key={'lb' + id} x={p.x + n.dx} y={p.y + n.dy} text={PLACES[id].name} anchor={n.anchor} size={id === highlight ? 12.5 : 11} hot={id === highlight} />;
+          return <NameTag key={'lb' + id} x={p.x + n.dx * unit} y={p.y + n.dy * unit} text={PLACES[id].name} anchor={n.anchor} size={(id === highlight ? 12.5 : 11) * unit} hot={id === highlight} unit={unit} />;
         })}
 
-        {!compact && (
+        {!compact && !wide && (
           <G>
             <Rect x={chrome.x - 8} y={chrome.y - 16} width={barPx + 54} height={32} rx={8} fill="rgba(6,16,14,0.62)" />
             <Line x1={chrome.x} y1={chrome.y} x2={chrome.x + barPx} y2={chrome.y} stroke="#f6f1e6" strokeWidth={1.5} />
@@ -894,6 +1005,38 @@ export function BirdMap({
         );
       })}
     </View>
+  );
+}
+
+export function MapChrome({ width, height, scale }: { width: number; height: number; scale: number }) {
+  const lat = (MIDDLE_EAST.minLat + MIDDLE_EAST.maxLat) / 2;
+  const kmPerDeg = distanceKm({ lat, lon: 40 }, { lat, lon: 41 });
+  const vbPerDeg = MAP_W / (MIDDLE_EAST.maxLon - MIDDLE_EAST.minLon);
+  const kmPerScreen = (kmPerDeg / vbPerDeg) / ((width / MAP_W) * Math.max(scale, 1));
+  const targetPx = Math.min(108, Math.max(64, width * 0.24));
+  const rawKm = Math.max(1, targetPx * kmPerScreen);
+  const mag = Math.pow(10, Math.floor(Math.log10(rawKm)));
+  let barKm = mag;
+  for (const m of [1, 2, 5, 10]) {
+    const c = m * mag;
+    if (Math.abs(c - rawKm) < Math.abs(barKm - rawKm)) barKm = c;
+  }
+  const barPx = Math.max(36, Math.min(140, barKm / Math.max(kmPerScreen, 1e-6)));
+  const left = 14;
+  const y = height - 22;
+  const compass = left + barPx + 28;
+  return (
+    <Svg width={width} height={height} style={StyleSheet.absoluteFill} pointerEvents="none">
+      <Rect x={left - 8} y={y - 16} width={barPx + 54} height={32} rx={8} fill="rgba(6,16,14,0.62)" />
+      <Line x1={left} y1={y} x2={left + barPx} y2={y} stroke="#f6f1e6" strokeWidth={1.5} />
+      <Line x1={left} y1={y - 3.5} x2={left} y2={y + 3.5} stroke="#f6f1e6" strokeWidth={1.1} />
+      <Line x1={left + barPx} y1={y - 3.5} x2={left + barPx} y2={y + 3.5} stroke="#f6f1e6" strokeWidth={1.1} />
+      <SvgText x={left + barPx / 2} y={y + 12} fontSize={11} fontWeight="700" textAnchor="middle" fill="#f6f1e6" fontFamily={uiFont}>{formatKm(barKm)}</SvgText>
+      <Circle cx={compass} cy={y - 1} r={9} fill="rgba(8,18,16,0.35)" stroke="#e4c56a" strokeWidth={0.8} />
+      <Path d={`M ${compass} ${y - 8} L ${compass + 3.2} ${y + 1} L ${compass} ${y - 1} L ${compass - 3.2} ${y + 1} Z`} fill="#e4c56a" />
+      <SvgText x={compass} y={y - 12} fontSize={11} fontWeight="700" textAnchor="middle" fill="#f6f1e6" fontFamily={uiFont}>K</SvgText>
+      <SvgText x={width - 10} y={height - 8} fontSize={11} textAnchor="end" fill="rgba(246,241,230,0.82)" stroke="rgba(6,14,12,0.65)" strokeWidth={2} fontFamily={uiFont}>{IMAGERY_CREDIT_SHORT}</SvgText>
+    </Svg>
   );
 }
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { EVENTS } from '../data/events';
 import { formatCoord, formatKm, kmBetween, PLACES } from '../data/geo';
@@ -6,7 +6,7 @@ import { MAP_FOOT, MAPS, distanceRows, meccaMedinaSummary, type MapEntry, type M
 import { MODERN_WHERE } from '../data/modern';
 import { TRAVEL_NOTE, formatDays, travelFor } from '../data/travel';
 import { tx, ui } from '../i18n';
-import { BirdMap, MAP_H, MAP_W, MapZoom, zoomBand } from './BirdMap';
+import { BirdMap, MAP_H, MAP_W, MapChrome, MapZoom, regionCamera, zoomBand, type Camera } from './BirdMap';
 import { CamelIcon, Chevron, PinIcon } from './icons';
 import { C, TOP, align, font, usePageWidth } from './theme';
 import { useScrollMemory } from './scrollMemory';
@@ -76,13 +76,25 @@ export function MapList({ onOpen, onBack }: { onOpen: (id: string) => void; onBa
 export function MapDetail({ id, onBack, onOpenEvent }: { id: string; onBack: () => void; onOpenEvent: (eventId: string) => void }) {
   const sc = useScrollMemory('map:' + id);
   const width = usePageWidth();
-  const [modern, setModern] = useState(false);
-  const [zoom, setZoom] = useState(1);
-  useEffect(() => {
-    setModern(false);
-    setZoom(1);
-  }, [id]);
+  const mapW = width - 36;
+  const mapH = Math.round(mapW * MAP_H / MAP_W);
   const map = MAPS.find(m => m.id === id);
+  const home = useMemo(
+    () => regionCamera(map?.show ?? ['mekke', 'medine'], mapW, mapH),
+    [map, mapW, mapH],
+  );
+  const [modern, setModern] = useState(false);
+  const [zoom, setZoom] = useState(() => zoomBand(home.s));
+  const [cam, setCam] = useState<Camera>(home);
+  const [fly, setFly] = useState(0);
+  const seen = useRef(id);
+  if (seen.current !== id) {
+    seen.current = id;
+    setModern(false);
+    setZoom(zoomBand(home.s));
+    setCam(home);
+    setFly(0);
+  }
   if (!map) {
     return (
       <View style={{ flex: 1, backgroundColor: C.bg, padding: 20, paddingTop: TOP }}>
@@ -97,7 +109,6 @@ export function MapDetail({ id, onBack, onOpenEvent }: { id: string; onBack: () 
   const related = [map.eventId, ...map.also]
     .map(eid => EVENTS.find(e => e.id === eid))
     .filter((e): e is NonNullable<typeof e> => !!e);
-  const mapW = width - 36;
   const approx = map.show.some(pid => PLACES[pid].approx);
   return (
     <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page}>
@@ -111,17 +122,35 @@ export function MapDetail({ id, onBack, onOpenEvent }: { id: string; onBack: () 
 
       <View style={[s.frame, { marginTop: 14 }]}>
         <MapZoom
+          key={map.id}
           width={mapW}
-          height={Math.round(mapW * MAP_H / MAP_W)}
+          height={mapH}
           resetKey={map.id}
-          onScale={(scale) => {
-            const band = zoomBand(scale);
+          home={home}
+          maxScale={home.s * 4.2}
+          flyToken={fly}
+          onCamera={(next) => {
+            const s = Math.round(next.s * 40) / 40;
+            const x = Math.round(next.x / 2) * 2;
+            const y = Math.round(next.y / 2) * 2;
+            setCam(prev => (prev.s === s && prev.x === x && prev.y === y ? prev : { s, x, y }));
+            const band = zoomBand(next.s);
             setZoom(z => (z === band ? z : band));
           }}
         >
-          <BirdMap width={mapW} markers={map.show} lines={map.lines} highlight={map.focus} animate modern={modern} zoom={zoom} />
+          <BirdMap width={mapW} markers={map.show} lines={map.lines} highlight={map.focus} animate modern={modern} zoom={zoom} wide camera={cam.s} view={cam} />
         </MapZoom>
+        <MapChrome width={mapW} height={mapH} scale={cam.s} />
         <View pointerEvents="box-none" style={s.toggleWrap}>
+          <Pressable
+            onPress={() => setFly(n => n + 1)}
+            accessibilityRole="button"
+            accessibilityLabel="Tüm bölgeyi göster"
+            style={s.regionBtn}
+          >
+            <Text style={s.regionBtnText}>Tüm bölge</Text>
+          </Pressable>
+          <View style={{ flex: 1 }} pointerEvents="none" />
           <Pressable
             onPress={() => setModern(v => !v)}
             accessibilityRole="button"
@@ -138,12 +167,12 @@ export function MapDetail({ id, onBack, onOpenEvent }: { id: string; onBack: () 
       </View>
       <Text style={[s.legend, align()]}>
         Kare Kâbe · Kubbe Medine · Altın halka bu yer · Eğri çizgi kuş uçuşu{approx ? ' · Baklava yaklaşık konum' : ''}
-        {modern ? ' · Açık çizgi bugünkü ülke sınırı' : ''}
+        {modern ? ' · Yıldız başkent · Açık çizgi bugünkü ülke sınırı' : ''}
       </Text>
       {modern && (
-        <Text style={[s.legend, align()]}>Ülke sınırları Natural Earth, kamu malı. Yakınlaştıkça daha çok şehir adı çıkar.</Text>
+        <Text style={[s.legend, align()]}>Başkentler açıkken görünür. Yakınlaştıkça öteki şehirler çıkar. Sınırlar Natural Earth, kamu malı.</Text>
       )}
-      <Text style={[s.legend, align()]}>İki parmakla yakınlaştırın, kaydırın. Çift dokunuş kadrajı sıfırlar.</Text>
+      <Text style={[s.legend, align()]}>İki parmakla yakınlaştırın ya da uzaklaştırın. Tüm bölge bütün haritayı açar. Çift dokunuş bu yerin kadrajına döner.</Text>
 
       <Text style={[s.h, align()]}>{ui('distances')}</Text>
       <View style={s.table}>
@@ -226,7 +255,28 @@ const s = StyleSheet.create({
   sub: { color: C.dim, fontFamily: font.sans, fontSize: 16, lineHeight: 24, marginTop: 8 },
   coord: { color: C.goldDeep, fontFamily: font.sans, fontSize: 13, marginTop: 8, letterSpacing: 0.2 },
   today: { color: C.cream, fontFamily: font.sans, fontSize: 14.5, lineHeight: 21, marginTop: 6, fontWeight: '700' },
-  toggleWrap: { position: 'absolute', top: 0, left: 0, right: 0, alignItems: 'center' },
+  toggleWrap: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+    paddingHorizontal: 8,
+  },
+  regionBtn: {
+    marginTop: 10,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    minHeight: 36,
+    borderRadius: 999,
+    backgroundColor: 'rgba(7,20,16,0.86)',
+    borderWidth: 1,
+    borderColor: 'rgba(228,197,106,0.9)',
+    justifyContent: 'center',
+  },
+  regionBtnText: { color: C.cream, fontFamily: font.sans, fontSize: 12.5, fontWeight: '800' },
   modernBtn: {
     flexDirection: 'row',
     alignItems: 'center',

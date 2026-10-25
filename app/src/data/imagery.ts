@@ -17,6 +17,14 @@ export type Imagery = {
   source: ImageSourcePropType;
 };
 
+/** Full Middle East plate. Same equirectangular frame as the detail map at zoom 1. */
+export const PLATE = {
+  west: 28,
+  east: 62,
+  south: 5.694444,
+  north: 46.305556,
+} as const;
+
 export const IMAGERY: Imagery[] = [
   {
     id: 'mesopotamia',
@@ -48,12 +56,22 @@ export const IMAGERY: Imagery[] = [
     height: 3745,
     source: require('../../assets/maps/arabia.webp'),
   },
+  {
+    id: 'middleeast',
+    west: PLATE.west,
+    east: PLATE.east,
+    south: PLATE.south,
+    north: PLATE.north,
+    width: 3400,
+    height: 4061,
+    source: require('../../assets/maps/middleeast.webp'),
+  },
 ];
 
 export const IMAGERY_CREDIT_SHORT = 'NASA Blue Marble';
 
 export const IMAGERY_CREDIT =
-  'Harita zemini NASA Blue Marble Next Generation görüntüsüdür (gölgeli rölyef ve batimetri, kamu malı). Dağların okunması için üzerine METI ve NASA ASTER GDEM kabartması işlenmiştir. Görüntü bölgeye kırpılıp sıkıştırılmıştır; uygulama çevrimdışı çalışır.';
+  'Harita zemini NASA Blue Marble Next Generation görüntüsüdür (gölgeli rölyef ve batimetri, kamu malı). Dağların okunması için üzerine METI ve NASA ASTER GDEM kabartması işlenmiştir. Yakın kadrajların altında Kızıldeniz’den Hürmüz Boğazı’na uzanan geniş Orta Doğu levhası durur. Görüntüler bölgeye kırpılıp sıkıştırılmıştır; uygulama çevrimdışı çalışır.';
 
 type Window = { minLat: number; maxLat: number; minLon: number; maxLon: number };
 

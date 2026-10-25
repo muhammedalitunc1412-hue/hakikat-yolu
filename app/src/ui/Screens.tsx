@@ -462,7 +462,7 @@ export function Method({ onBack }: { onBack: () => void }) {
     'Dualarda Arapça metin güvenilir bir kaynak sayfasından alınmıştır; Türkçe okunuş ve anlam hazırlanmıştır ve yayın öncesinde bir uzman tarafından kontrol edilmelidir.',
     'Haritalar bölümündeki mesafeler, yerlerin koordinatından kuş uçuşu (büyük daire) olarak hesaplanır. Kara yolu ve eski kervan yolu daha uzun olabilir; bilinen farklar haritada ayrıca belirtilir.',
     TRAVEL_METHOD,
-    'Harita zemini NASA Blue Marble Next Generation görüntüsüdür (gölgeli rölyef ve batimetri, kamu malı). Dağların okunması için üzerine METI ve NASA ASTER GDEM kabartması işlenmiştir. Görüntü bölgeye kırpılıp sıkıştırılmıştır; uygulama çevrimdışı çalışır, bir harita servisine bağlanmaz.',
+    'Harita zemini NASA Blue Marble Next Generation görüntüsüdür (gölgeli rölyef ve batimetri, kamu malı). Dağların okunması için üzerine METI ve NASA ASTER GDEM kabartması işlenmiştir. Yakın kadrajların altında, Kızıldeniz’den Hürmüz Boğazı’na uzanan geniş Orta Doğu levhası durur. Görüntüler bölgeye kırpılıp sıkıştırılmıştır; uygulama çevrimdışı çalışır, bir harita servisine bağlanmaz.',
     BORDERS_CREDIT,
   ];
   return (
