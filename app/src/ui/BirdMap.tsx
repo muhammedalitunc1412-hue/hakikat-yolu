@@ -1,9 +1,11 @@
-import React, { useEffect, useId, useRef, useState } from 'react';
+import React, { useEffect, useId, useMemo, useRef, useState } from 'react';
 import { AccessibilityInfo, Image, Platform, StyleSheet, View, type ImageSourcePropType } from 'react-native';
 import Svg, {
   Circle, Defs, G, Line, Path, Polyline, RadialGradient, Rect, Stop, Text as SvgText,
 } from 'react-native-svg';
+import { COUNTRIES } from '../data/borders';
 import { IMAGERY_CREDIT_SHORT, imageryFor, type Imagery } from '../data/imagery';
+import { MODERN_CITIES } from '../data/modern';
 import {
   EUPHRATES, PLACES, REGIONS, TIGRIS, distanceKm, formatKm, kmBetween, type PlaceId,
 } from '../data/geo';
@@ -137,6 +139,85 @@ function chain(coords: [number, number][], p: Proj['p']) {
 
 function inBox(x: number, y: number, m = 8) {
   return x > m && y > m && x < MAP_W - m && y < MAP_H - m;
+}
+
+/** Pinch scale collapsed to the bands that reveal another tier of labels. */
+export function zoomBand(scale: number): number {
+  if (scale < 1.25) return 1;
+  if (scale < 1.6) return 1.45;
+  if (scale < 2.05) return 1.8;
+  if (scale < 2.6) return 2.3;
+  if (scale < 3.3) return 2.9;
+  return 3.8;
+}
+
+function lineHits(line: number[], bounds: Bounds) {
+  let minLon = Infinity, maxLon = -Infinity, minLat = Infinity, maxLat = -Infinity;
+  for (let i = 0; i < line.length; i += 2) {
+    const lon = line[i];
+    const lat = line[i + 1];
+    if (lon < minLon) minLon = lon;
+    if (lon > maxLon) maxLon = lon;
+    if (lat < minLat) minLat = lat;
+    if (lat > maxLat) maxLat = lat;
+  }
+  return !(maxLon < bounds.minLon || minLon > bounds.maxLon || maxLat < bounds.minLat || minLat > bounds.maxLat);
+}
+
+function strokePath(bounds: Bounds, proj: Proj): string {
+  let d = '';
+  for (const country of COUNTRIES) {
+    for (const line of country.lines) {
+      if (!lineHits(line, bounds)) continue;
+      for (let i = 0; i < line.length; i += 2) {
+        const q = proj.p(line[i + 1], line[i]);
+        d += `${i === 0 ? 'M' : 'L'}${q.x.toFixed(1)} ${q.y.toFixed(1)}`;
+      }
+    }
+  }
+  return d;
+}
+
+type ModernLabel = { key: string; text: string; x: number; y: number; size: number; country: boolean };
+
+function modernLabels(bounds: Bounds, proj: Proj, zoom: number, markers: { x: number; y: number }[]): ModernLabel[] {
+  const placed: { x: number; y: number; r: number }[] = [];
+  const blocked = (x: number, y: number, r: number) => placed.some(p => Math.hypot(p.x - x, p.y - y) < p.r + r);
+  const labels: ModernLabel[] = [];
+  const cx = (bounds.minLon + bounds.maxLon) / 2;
+  const cy = (bounds.minLat + bounds.maxLat) / 2;
+  const underToggle = (x: number, y: number) => y < 34 && x > 78 && x < MAP_W - 78;
+  const overChrome = (x: number, y: number) => (y > MAP_H - 42 && x < 168) || (y > MAP_H - 24 && x > MAP_W - 132);
+
+  for (const country of COUNTRIES) {
+    if (!country.name || zoom + 1e-6 < country.tier) continue;
+    let best: { lon: number; lat: number; d: number } | null = null;
+    for (const [lon, lat] of country.labels) {
+      if (lon < bounds.minLon || lon > bounds.maxLon || lat < bounds.minLat || lat > bounds.maxLat) continue;
+      const d = (lon - cx) ** 2 + ((lat - cy) * 1.15) ** 2;
+      if (!best || d < best.d) best = { lon, lat, d };
+    }
+    if (!best) continue;
+    const q = proj.p(best.lat, best.lon);
+    if (!inBox(q.x, q.y, 16) || underToggle(q.x, q.y) || overChrome(q.x, q.y)) continue;
+    const r = 30 / zoom;
+    if (blocked(q.x, q.y, r)) continue;
+    placed.push({ x: q.x, y: q.y, r });
+    labels.push({ key: country.id, text: country.name, x: q.x, y: q.y, size: 11, country: true });
+  }
+
+  for (const city of MODERN_CITIES) {
+    if (zoom + 1e-6 < city.tier) continue;
+    if (city.lon < bounds.minLon || city.lon > bounds.maxLon || city.lat < bounds.minLat || city.lat > bounds.maxLat) continue;
+    const q = proj.p(city.lat, city.lon);
+    if (!inBox(q.x, q.y, 12) || underToggle(q.x, q.y) || overChrome(q.x, q.y)) continue;
+    if (markers.some(m => Math.hypot(m.x - q.x, m.y - q.y) < 20 / zoom)) continue;
+    const r = 14 / zoom;
+    if (blocked(q.x, q.y, r)) continue;
+    placed.push({ x: q.x, y: q.y, r });
+    labels.push({ key: city.name, text: city.name, x: q.x, y: q.y, size: 8.2, country: false });
+  }
+  return labels;
 }
 
 type Curve = { pts: string; len: number; label: { x: number; y: number } };
@@ -362,11 +443,12 @@ function buildInsets(points: XY[], mainScale: number): Inset[] {
 }
 
 export function MapZoom({
-  width, height, resetKey, children,
+  width, height, resetKey, onScale, children,
 }: {
   width: number;
   height: number;
   resetKey?: string;
+  onScale?: (scale: number) => void;
   children: React.ReactNode;
 }) {
   const [view, setView] = useState({ s: 1, x: 0, y: 0 });
@@ -374,6 +456,8 @@ export function MapZoom({
   const size = useRef({ width, height });
   size.current = { width, height };
   const host = useRef<View>(null);
+  const onScaleRef = useRef(onScale);
+  onScaleRef.current = onScale;
 
   const apply = (s: number, x: number, y: number) => {
     const W = size.current.width;
@@ -388,6 +472,7 @@ export function MapZoom({
     g.current.x = x;
     g.current.y = y;
     setView({ s, x, y });
+    onScaleRef.current?.(s);
   };
   const applyRef = useRef(apply);
   applyRef.current = apply;
@@ -395,6 +480,7 @@ export function MapZoom({
   useEffect(() => {
     g.current.s = 1; g.current.x = 0; g.current.y = 0;
     setView({ s: 1, x: 0, y: 0 });
+    onScaleRef.current?.(1);
   }, [resetKey]);
 
   useEffect(() => {
@@ -491,6 +577,8 @@ export function BirdMap({
   numbers,
   compact,
   animate,
+  modern,
+  zoom = 1,
 }: {
   width: number;
   markers: PlaceId[];
@@ -500,6 +588,10 @@ export function BirdMap({
   numbers?: Partial<Record<PlaceId, number>>;
   compact?: boolean;
   animate?: boolean;
+  /** Present-day borders and names. Default off. */
+  modern?: boolean;
+  /** Pinch-zoom band from MapZoom, so labels can multiply as the map grows. */
+  zoom?: number;
 }) {
   const uid = useId().replace(/[^a-zA-Z0-9]/g, '');
   const height = Math.max(1, Math.round(width * MAP_H / MAP_W));
@@ -512,8 +604,29 @@ export function BirdMap({
     const q = proj.p(PLACES[id].lat, PLACES[id].lon);
     return { id, ...q, lat: PLACES[id].lat, lon: PLACES[id].lon };
   });
+  const boundKey = `${bounds.minLat.toFixed(4)}|${bounds.maxLat.toFixed(4)}|${bounds.minLon.toFixed(4)}|${bounds.maxLon.toFixed(4)}`;
+  const borderD = useMemo(
+    () => (modern && !compact ? strokePath(bounds, proj) : ''),
+    // proj is a pure function of bounds; boundKey is that input.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [modern, compact, boundKey],
+  );
+  const overlayLabels = useMemo(
+    () => (modern && !compact ? modernLabels(bounds, proj, zoom, points) : []),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [modern, compact, zoom, boundKey],
+  );
   const mainScale = MAP_H / proj.latSpan;
   const insets = compact ? [] : buildInsets(points, mainScale);
+  const insetBorders = useMemo(() => {
+    if (!modern || compact) return new Map<string, string>();
+    const m = new Map<string, string>();
+    for (const ins of insets) {
+      m.set(ins.group.map(p => p.id).sort().join('-'), strokePath(ins.bounds, ins.proj));
+    }
+    return m;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [modern, compact, boundKey]);
   const hidden = new Set<PlaceId>(insets.flatMap(ins => ins.group.map(p => p.id)));
   const labelIds = compact ? [] : (labels ?? ids).filter(id => !hidden.has(id));
 
@@ -608,7 +721,34 @@ export function BirdMap({
           </G>
         ))}
 
-        {!compact && REGIONS.map(r => {
+        {!!borderD && (
+          <G>
+            <Path d={borderD} fill="none" stroke="rgba(6,14,12,0.78)" strokeWidth={2.6 / zoom} strokeLinejoin="round" strokeLinecap="round" />
+            <Path d={borderD} fill="none" stroke="rgba(246,241,230,0.92)" strokeWidth={1.05 / zoom} strokeLinejoin="round" strokeLinecap="round" />
+          </G>
+        )}
+
+        {overlayLabels.map(l => (
+          !hitsInset(l.x, l.y, 2) ? (
+            <SvgText
+              key={l.key}
+              x={l.x}
+              y={l.y}
+              fontSize={l.size / zoom}
+              fontWeight="700"
+              letterSpacing={l.country ? 0.8 / zoom : 0}
+              textAnchor="middle"
+              fill={l.country ? 'rgba(246,236,210,0.94)' : '#f7f3e8'}
+              stroke="rgba(6,14,12,0.88)"
+              strokeWidth={(l.country ? 2.4 : 2) / zoom}
+              fontFamily={l.country ? uiFont : nameFont}
+            >
+              {l.text}
+            </SvgText>
+          ) : null
+        ))}
+
+        {!compact && !modern && REGIONS.map(r => {
           const q = proj.p(r.lat, r.lon);
           if (!inBox(q.x, q.y, 18)) return null;
           if (points.some(p => Math.hypot(p.x - q.x, p.y - q.y) < 52)) return null;
@@ -718,6 +858,12 @@ export function BirdMap({
           >
             <Terrain source={ins.img.source} rect={irec} sx={sx} sy={sy} origin={ins.box} />
             <Svg width={ins.iw * sx} height={ins.ih * sy} viewBox={`${ins.box.x} ${ins.box.y} ${ins.iw} ${ins.ih}`} style={StyleSheet.absoluteFill} pointerEvents="none">
+              {(() => {
+                const d = insetBorders.get(ins.group.map(p => p.id).sort().join('-'));
+                return d ? (
+                  <Path d={d} fill="none" stroke="rgba(246,241,230,0.9)" strokeWidth={1.1 / zoom} strokeLinejoin="round" strokeLinecap="round" />
+                ) : null;
+              })()}
               <Polyline points={chain(EUPHRATES, ins.proj.p)} fill="none" stroke="rgba(6,28,32,0.55)" strokeWidth={3} strokeLinecap="round" />
               <Polyline points={chain(TIGRIS, ins.proj.p)} fill="none" stroke="rgba(6,28,32,0.55)" strokeWidth={3} strokeLinecap="round" />
               <Polyline points={chain(EUPHRATES, ins.proj.p)} fill="none" stroke="rgba(214,236,232,0.85)" strokeWidth={1} strokeLinecap="round" />

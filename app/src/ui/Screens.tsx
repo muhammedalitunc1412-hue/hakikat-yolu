@@ -4,7 +4,9 @@ import type { Accept, Dispute, Dua, HistEvent, Source } from '../types';
 import { tx, ui } from '../i18n';
 import { SCENE_IMAGES } from '../data/sceneImages';
 import { CATEGORIES } from '../data/events';
+import { BORDERS_CREDIT } from '../data/borders';
 import { mapsForEvent } from '../data/maps';
+import { TRAVEL_METHOD } from '../data/travel';
 import { Rich } from './Rich';
 import { EventVideo } from './EventVideo';
 import { ArchIcon, BookIcon, Chevron, CompassIcon, PinIcon, SearchIcon, StarMark } from './icons';
@@ -459,7 +461,9 @@ export function Method({ onBack }: { onBack: () => void }) {
     'Uygulamada kimseye hakaret, lanet ya da nefret söylemi yoktur. Hz. Peygamber, Ehl-i Beyt ve sahabeye saygı esastır. Ziyâret-i Âşûrâ gibi dua metinleri kendi aslına sadık olarak verilmiştir.',
     'Dualarda Arapça metin güvenilir bir kaynak sayfasından alınmıştır; Türkçe okunuş ve anlam hazırlanmıştır ve yayın öncesinde bir uzman tarafından kontrol edilmelidir.',
     'Haritalar bölümündeki mesafeler, yerlerin koordinatından kuş uçuşu (büyük daire) olarak hesaplanır. Kara yolu ve eski kervan yolu daha uzun olabilir; bilinen farklar haritada ayrıca belirtilir.',
+    TRAVEL_METHOD,
     'Harita zemini NASA Blue Marble Next Generation görüntüsüdür (gölgeli rölyef ve batimetri, kamu malı). Dağların okunması için üzerine METI ve NASA ASTER GDEM kabartması işlenmiştir. Görüntü bölgeye kırpılıp sıkıştırılmıştır; uygulama çevrimdışı çalışır, bir harita servisine bağlanmaz.',
+    BORDERS_CREDIT,
   ];
   return (
     <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page}>

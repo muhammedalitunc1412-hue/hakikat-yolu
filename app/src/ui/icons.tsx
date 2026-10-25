@@ -59,6 +59,29 @@ export function SearchIcon({ size = 18, color = C.goldDeep }: { size?: number; c
   );
 }
 
+export function CamelIcon({ size = 22, color = C.gold }: { size?: number; color?: string }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path
+        d="M4.2 15.6c.7-1.5 1.8-2.2 3-2.2.4-1.8 1.5-3.1 3.1-3.3.8-1.5 2-2.3 3.2-2.1.6.1.9.7.6 1.3.8-.9 2-.9 2.9-.2.6.4.7 1.1.2 1.6.8.2 1.5.8 1.7 1.6.2.8-.2 1.5-.9 1.8-1.6.6-3.3.1-4.3-1.2-1 .8-2.3 1.1-3.5.7-1.5-.4-2.5-1.5-3-2.9-.7.3-1.4.9-1.6 1.8"
+        stroke={color}
+        strokeWidth={1.4}
+        fill={color}
+        fillOpacity={0.16}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M6.1 17.4v-2.4M9.4 17.4V14.6M14.5 17.4V14.2M17.5 17.4v-3.1"
+        stroke={color}
+        strokeWidth={1.45}
+        strokeLinecap="round"
+      />
+      <Circle cx={18.15} cy={10.55} r={0.55} fill={color} />
+    </Svg>
+  );
+}
+
 export function Chevron({ size = 18, color = C.faint }: { size?: number; color?: string }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 18 18">

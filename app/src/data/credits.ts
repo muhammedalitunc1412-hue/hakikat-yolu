@@ -12,4 +12,5 @@ export const CREDITS = [
   { key: 'dawn', title: 'Syria by the Sea', artist: 'Frederic Edwin Church', year: '1873', license: 'Public domain', url: 'https://commons.wikimedia.org/wiki/File:Syria_by_the_Sea_Frederic_Edwin_Church_1873.jpeg' },
   { key: 'blue-marble', title: 'Blue Marble Next Generation, shaded relief and bathymetry', artist: 'NASA Earth Observatory', year: '2004', license: 'Public domain', url: 'https://visibleearth.nasa.gov/collection/1484/blue-marble' },
   { key: 'aster-gdem', title: 'ASTER Global Digital Elevation Model hillshade', artist: 'METI / NASA', year: '2019', license: 'Free to use with attribution', url: 'https://asterweb.jpl.nasa.gov/gdem.asp' },
+  { key: 'natural-earth', title: 'Admin-0 countries, 1:10m', artist: 'Natural Earth', year: '2022', license: 'Public domain', url: 'https://www.naturalearthdata.com/' },
 ];
