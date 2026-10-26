@@ -71,26 +71,26 @@ export const kerbela: HistEvent = {
   disputes: [
     {
       title: { tr: 'Hz. Hüseyin\'in çıkışı nasıl okunur?' },
-      sunni: { tr: 'Hz. Hüseyin\'in Kerbela\'da haksız öldürüldüğü iki gelenekte de anlatılır. Bu olay Sünni kaynaklarında da geçmektedir (İbn Teymiyye, Minhâcü\'s-Sünne, cilt 4, s. 528-530, 543; İbn Kesir, el-Bidâye ve\'n-Nihâye). Bazı âlimler çıkışını hatalı bir içtihat sayar; bu, onun şehitliğini inkâr etmez.' },
-      shia: { tr: 'Hz. Hüseyin\'in Kerbela\'da haksız öldürüldüğü iki gelenekte de anlatılır. Bu olay Sünni kaynaklarında da geçmektedir (İbn Teymiyye, Minhâcü\'s-Sünne, cilt 4, s. 528-530, 543; İbn Kesir, el-Bidâye ve\'n-Nihâye). Şii anlatıda o imamdır; Yezid\'e biat etmemesi, hakkı korumak için bilinçli bir duruştur.' },
+      sunni: { tr: 'Hz. Hüseyin\'in Kerbela\'da haksız öldürüldüğü tarih kitaplarında da anlatılır (Taberi, Târîhu\'r-Rusül ve\'l-Mülûk; İbn Kesir, el-Bidâye ve\'n-Nihâye). Bazı âlimler çıkışını bir içtihat olarak değerlendirir; bu, şehadetini değiştirmez.' },
+      shia: { tr: 'Hz. Hüseyin\'in Kerbela\'da haksız öldürüldüğü tarih kitaplarında da anlatılır (Taberi, Târîhu\'r-Rusül ve\'l-Mülûk; İbn Kesir, el-Bidâye ve\'n-Nihâye). Caferi anlatıda o imamdır; Yezid\'e biat etmemesi, hakkı korumak için bilinçli bir duruştur.' },
     },
     {
-      title: { tr: 'Yezid\'in sorumluluğu ve lanet tartışması' },
-      sunni: { tr: 'Hz. Hüseyin\'in haksız öldürüldüğü kabul edilir. Yezid\'e lanetin caiz olup olmadığı Sünni âlimler arasında ayrıdır; sorumluluk çoğu zaman İbn Ziyad\'a da yüklenir.' },
-      shia: { tr: 'Hz. Hüseyin\'in haksız öldürüldüğü kabul edilir. Şii anlatıda sorumluluk doğrudan Yezid\'e aittir ve onun lanetle anılması uygun bulunur.' },
+      title: { tr: 'Yezid\'in sorumluluğu' },
+      sunni: { tr: 'Hz. Hüseyin\'in haksız öldürüldüğü kabul edilir. Anlatılarda İbn Ziyad öne çıkar; Yezid\'in payı ayrıca değerlendirilir.' },
+      shia: { tr: 'Hz. Hüseyin\'in haksız öldürüldüğü kabul edilir. Caferi anlatıda emir Yezid\'den gelmiştir; bu acı, Ehl-i Beyt sevgisiyle anılır.' },
     },
     {
       title: { tr: 'Esir kafilesi ve Şam meclisi' },
-      sunni: { tr: 'Ehl-i Beyt\'in esir götürüldüğü anlatılır. Zeynep\'in meclis konuşması Ebu Mihnef\'e dayandığı için bazı Sünni âlimlerce kabul edilmez.' },
-      shia: { tr: 'Ehl-i Beyt\'in esir götürüldüğü anlatılır. Şii anlatıda Zeynep ve Ali b. Hz. Hüseyin\'in Kûfe ve Şam sözleri, bu mazlumiyeti duyuran sahnelerdir.' },
+      sunni: { tr: 'Ehl-i Beyt\'in esir götürüldüğü anlatılır. Zeynep\'in meclis sözü Ebu Mihnef kanalıyla gelir.' },
+      shia: { tr: 'Ehl-i Beyt\'in esir götürüldüğü anlatılır. Caferi anlatıda Zeynep ve Ali b. Hz. Hüseyin\'in Kûfe ve Şam sözleri, bu mazlumiyeti duyuran sahnelerdir.' },
     },
   ],
   questions: [
     { tr: 'Peygamber, Hz. Hasan ve Hz. Hüseyin için cennet gençlerinin efendileri demişti. Bu olay Sünni kaynaklarında da geçmektedir (Tirmizi, No. 3768). Onun torununun Kerbela\'daki hâli, sevginizi nasıl etkiliyor?' },
     { tr: 'Ümmü Seleme rivayetinde Peygamber, Hz. Hüseyin\'in Irak\'ta öldürüleceği toprağı önceden kederle görür. Bu olay Sünni kaynaklarında da geçmektedir (Hâkim, el-Müstedrek, Ümmü Seleme rivayeti). Bu önceden duyulan acı size ne söylüyor?' },
-    { tr: 'Hz. Hüseyin\'in haksız öldürüldüğü ve şehit olduğu, İbn Teymiyye gibi Sünni âlimlerin de kabulüdür. Bu ortak söz, onun duruşunu size nasıl okutuyor?' },
+    { tr: 'Hz. Hüseyin\'in haksız öldürüldüğü, tarih kitaplarında da anlatılır (Taberi, Târîhu\'r-Rusül ve\'l-Mülûk; İbn Kesir, el-Bidâye ve\'n-Nihâye). Bu ortak söz, onun duruşunu size nasıl okutuyor?' },
     { tr: 'Katillerin cezalandırılmadığı da kaynaklarda eleştirilir. Peygamber\'in ailesi için adaletin eksik kalması size ne düşündürüyor?' },
     { tr: 'Hz. Hüseyin, Yezid\'e biat etmeyerek babadan oğula geçen yönetime karşı durdu. Onun duruşu, hakkı söylemek konusunda size ne öğretiyor?' },
   ],
-  summary: { tr: 'Hz. Hüseyin Yezid\'e biat etmedi. Kûfe davetine çıktı ve 10 Muharrem 61\'de Kerbela\'da ailesi ve arkadaşlarıyla şehit edildi; Ehl-i Beyt esir götürüldü. Bu, zulme karşı adalet için bir duruştu. O ve Hz. Hasan, cennet gençlerinin efendileridir. Bu olay Sünni kaynaklarında da geçmektedir (Tirmizi, No. 3768). Kerbela\'da haksız şehit edilişi de anlatılır. Bu olay Sünni kaynaklarında da geçmektedir (Taberi, Târîhu\'r-Rusül ve\'l-Mülûk; İbn Kesir, el-Bidâye ve\'n-Nihâye; İbn Teymiyye, Minhâcü\'s-Sünne, cilt 4, s. 528-530, 543).' },
+  summary: { tr: 'Hz. Hüseyin Yezid\'e biat etmedi. Kûfe davetine çıktı ve 10 Muharrem 61\'de Kerbela\'da ailesi ve arkadaşlarıyla şehit edildi; Ehl-i Beyt esir götürüldü. Bu, zulme karşı adalet için bir duruştu. O ve Hz. Hasan, cennet gençlerinin efendileridir; bu söz Sünni kaynaklarında da geçmektedir (Tirmizi, No. 3768). Haksız şehit edilişi de tarih kitaplarında anlatılır (Taberi, Târîhu\'r-Rusül ve\'l-Mülûk; İbn Kesir, el-Bidâye ve\'n-Nihâye).' },
 };
