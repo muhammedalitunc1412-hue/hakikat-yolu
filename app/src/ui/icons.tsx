@@ -1,17 +1,6 @@
 import React from 'react';
-import Svg, { Circle, Path, Rect } from 'react-native-svg';
+import Svg, { Circle, Path } from 'react-native-svg';
 import { C } from './theme';
-
-export function StarMark({ size = 68 }: { size?: number }) {
-  return (
-    <Svg width={size} height={size} viewBox="0 0 68 68">
-      <Circle cx={34} cy={34} r={31} stroke={C.gold} strokeWidth={0.8} fill="none" opacity={0.45} />
-      <Rect x={18} y={18} width={32} height={32} stroke={C.gold} strokeWidth={1.3} fill="none" />
-      <Rect x={18} y={18} width={32} height={32} stroke={C.gold} strokeWidth={1.3} fill="none" transform="rotate(45 34 34)" />
-      <Circle cx={34} cy={34} r={2.6} fill={C.gold} />
-    </Svg>
-  );
-}
 
 export function CompassIcon({ size = 22, color = C.gold }: { size?: number; color?: string }) {
   return (

@@ -4,14 +4,25 @@
     "slug": "hakikatyolu",
     "version": "1.0.0",
     "orientation": "portrait",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
     "backgroundColor": "#071410",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#95a98e"
+    },
     "android": {
       "package": "com.tuncgames.hakikatyolu",
-      "versionCode": 1
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#95a98e"
+      }
     },
     "web": {
-      "bundler": "metro"
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-video",

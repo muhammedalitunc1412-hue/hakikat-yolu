@@ -9,7 +9,7 @@ import { mapsForEvent } from '../data/maps';
 import { TRAVEL_METHOD } from '../data/travel';
 import { Rich } from './Rich';
 import { EventVideo } from './EventVideo';
-import { ArchIcon, BookIcon, Chevron, CompassIcon, PinIcon, SearchIcon, StarMark } from './icons';
+import { ArchIcon, BookIcon, Chevron, CompassIcon, PinIcon, SearchIcon } from './icons';
 import { C, TOP, align, font, usePageWidth, themedStyles, BLOOD } from './theme';
 import { rememberScene, rememberedScene, useScrollMemory } from './scrollMemory';
 
@@ -50,7 +50,7 @@ export function Home({ events, onOpen, onMethod, onDuas, onMaps, onQibla, onImam
           <Text style={s.brand}>{ui('appName')}</Text>
           <Text style={[s.tagline, align()]}>{ui('tagline')}</Text>
         </View>
-        <StarMark size={72} />
+        <Image source={require('../../assets/logo.png')} resizeMode="contain" accessibilityLabel="Hakikat Yolu" style={s.logo} />
       </View>
       <View style={s.rule} />
 
@@ -483,6 +483,7 @@ export function Method({ onBack }: { onBack: () => void }) {
 const s = themedStyles(() => StyleSheet.create({
   page: { paddingHorizontal: 18, paddingTop: TOP, paddingBottom: 56 },
   hero: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  logo: { width: 84, height: 84 },
   kicker: { color: C.gold, fontFamily: font.sans, fontSize: 12, fontWeight: '700', letterSpacing: 2.4 },
   brand: { color: C.cream, fontFamily: font.serif, fontSize: 34, lineHeight: 40, fontWeight: '700', letterSpacing: 1.2, marginTop: 2 },
   tagline: { color: C.dim, fontFamily: font.sans, fontSize: 15.5, lineHeight: 23, marginTop: 8 },
