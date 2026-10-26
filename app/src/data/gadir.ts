@@ -5,40 +5,40 @@ export const gadir: HistEvent = {
   id: 'gadir',
   date: { tr: '18 Zilhicce 10 H (632)', en: '18 Dhu al-Hijjah 10 AH (632)' },
   title: { tr: 'Gadir Hum', en: 'Ghadir Khumm' },
-  hook: { tr: 'Çölün ortasında durdurulan kafile ve kaldırılan bir el.', en: 'A caravan halted in the desert, and a raised hand.' },
+  hook: { tr: 'Çölün ortasında kafile durdu. Bir el havaya kalktı. O gün Hz. Ali\'nin velayeti ilan edildi.', en: 'A caravan halted in the desert, and a raised hand.' },
   scenes: [
     {
-      text: { tr: 'Veda Haccı tamamlanmıştı. Peygamber binlerce Müslümanla Mekke\'den Medine\'ye dönüyordu. Hz. Ali de Yemen\'den gelip hacda ona katılmıştı.' },
+      text: { tr: 'Veda Haccı bitmişti. Peygamber binlerce Müslümanla Mekke\'den Medine\'ye dönüyordu. Hz. Ali Yemen\'den gelmiş, hacda ona katılmıştı.' },
       art: { bg: 'dune-day', props: ['sun', 'camels'], actors: [{ kind: 'crowd', x: 40, scale: 8 }, { kind: 'prophet', x: 74, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 88, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Yolların ayrıldığı Hum denen su başına gelindi. Peygamber kafileyi durdurdu. İleri gidenler geri çağrıldı, geride kalanlar beklendi. Güneş tepedeydi. Kaynaklarda Veda Haccı\'na katılanların sayısı yüz binin üzerinde aktarılır (bazı rivayetlerde 114 bin ve 124 bin); Gadir Hum, Veda Haccı\'ndan sonra Peygamber\'in yanında toplanan en büyük ikinci topluluk olarak anılır.' },
+      text: { tr: 'Yollar Hum denen su başında ayrılıyordu. Peygamber kafileyi durdurdu. İleri gidenler geri çağrıldı. Geride kalanlar beklendi. Güneş tepedeydi. Veda Haccı\'na katılanların sayısı kaynaklarda yüz binin üzerindedir. Bazı rivayetler 114 bin ve 124 bin der. Gadir Hum, Veda Haccı\'ndan sonra Peygamber\'in yanında toplanan en büyük ikinci topluluk diye anılır. Bu duruş Sünni kaynaklarında da geçmektedir (Ahmed b. Hanbel, Müsned, no. 18479).' },
       art: { bg: 'oasis', props: ['sun', 'palms', 'well'], actors: [{ kind: 'crowd', x: 36, scale: 9 }, { kind: 'prophet', x: 70, label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Peygamber hutbeye başladı: "Ben müminlere kendi canlarından daha yakın (evlâ) değil miyim?" Kalabalık "Evet" dedi.' },
+      text: { tr: 'Peygamber hutbeye başladı. "Ben müminlere kendi canlarından daha yakın değil miyim?" diye sordu. Kalabalık "Evet" dedi. Bu soru, velayet ilanının başıdır.' },
       art: { bg: 'dune-day', props: ['sun', 'minbar'], actors: [{ kind: 'crowd', x: 32, scale: 9 }, { kind: 'prophet', x: 72, label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Sonra Hz. Ali\'nin elinden tutup yukarı kaldırdı: "Ben kimin mevlâsıysam, Hz. Ali de onun mevlâsıdır. Allah\'ım, onu dost edineni dost edin, ona düşman olana düşman ol."' },
+      text: { tr: 'Sonra Hz. Ali\'nin elini tuttu ve yukarı kaldırdı. "Ben kimin mevlâsıysam, Hz. Ali de onun mevlâsıdır. Allah\'ım, onu dost edineni dost edin, ona düşman olana düşman ol." Bu söz Sünni kaynaklarında da geçmektedir (Tirmizi, el-Câmi\', no. 3713; Ahmed b. Hanbel, Müsned, no. 18479). Şia\'da bu, Hz. Ali\'nin velayetinin ilanıdır. Mevlâ, hutbedeki "evlâ" sorusuna bağlı olarak önder demektir. Mevlâ kelimesi dost anlamında da okunur.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 62, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 78, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Aynı hutbede iki ağır emanetten söz etti: Allah\'ın Kitabı ve Ehl-i Beyti. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi, bunu üç kez tekrarladı.' },
+      text: { tr: 'Aynı hutbede iki ağır emaneti andı: Allah\'ın Kitabı ve Ehl-i Beyti. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi. Bunu üç kez tekrarladı. Bu emanet Sünni kaynaklarında da geçmektedir (Müslim, Sahih, no. 2408; Tirmizi, el-Câmi\', no. 3788).' },
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 82, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Bazı rivayetlere göre kalabalıktan insanlar Hz. Ali\'yi tebrik etti; bu rivayetlerde Ömer\'in "Tebrikler ey Ebu Talib\'in oğlu, her mümin erkek ve kadının mevlâsı oldun" dediği geçer. Bu cümlenin rivayet zinciri tartışmalıdır.' },
+      text: { tr: 'Bazı rivayetlere göre insanlar Hz. Ali\'yi tebrik etti. Bu rivayetlerde Ömer şöyle der: "Tebrikler ey Ebu Talib\'in oğlu. Her mümin erkek ve kadının mevlâsı oldun." Bu cümle Sünni kaynaklarında da geçer (Ahmed b. Hanbel, Müsned, no. 18479). Rivayet zinciri tartışmalıdır.' },
       art: { bg: 'dune-dusk', props: ['sun', 'tents'], actors: [{ kind: 'crowd', x: 30, scale: 6 }, { kind: 'man', x: 56 }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Ali\'nin Peygamber katındaki yeri başka sözlerle de belliydi: Tebük\'e giderken "Harun Musa\'ya nasıl ise sen bana öylesin" demişti; Hayber\'de sancağı "Allah ve Resulünü seven, onlarca sevilen birine" vereceğini söyleyip Hz. Ali\'yi çağırmıştı.' },
+      text: { tr: 'Hz. Ali\'nin Peygamber katındaki yeri başka sözlerle de bellidir. Tebük\'te "Harun Musa\'ya nasılsa sen de bana öylesin" demişti. Bu söz Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 3706; Müslim, Sahih, no. 2404). Hayber\'de sancağı "Allah ve Resulünü seven, onlarca sevilen birine" vereceğini söyleyip Hz. Ali\'yi çağırdı (Buhari, Sahih, no. 2942). Menzile ve Hayber, onun Peygamber\'in yanındaki yerini gösterir.' },
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'ali', x: 50, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 22, scale: 5 }] },
       by: 'both',
     },
@@ -63,20 +63,20 @@ export const gadir: HistEvent = {
   disputes: [
     {
       title: { tr: '"Mevlâ" ne demek?' },
-      sunni: { tr: 'Mevlâ; dost, yardımcı, destekçi anlamındadır. Hutbe, Hz. Ali hakkında yapılan şikâyetler sonrası onun yüceltilmesidir. Halifelikle ilgili açık bir ifade yoktur.' },
-      shia: { tr: 'Hutbe, "Ben müminlere kendi canlarından evlâ değil miyim?" sorusuyla başlar; "mevlâ" bu soruya bağlanır ve otorite/önderlik anlamı taşır. Kafilenin çölde durdurulması da olayın önemini gösterir.' },
+      sunni: { tr: 'Peygamber Gadir Hum\'da Hz. Ali\'nin elini kaldırıp "Ben kimin mevlâsıysam, Hz. Ali de onun mevlâsıdır" dedi. Sünni okumada mevlâ dost, yardımcı ve destekçi demektir; hutbe, Hz. Ali hakkındaki şikâyetlerden sonra onu yüceltir ve halifeliği açıkça söylemez.' },
+      shia: { tr: 'Peygamber Gadir Hum\'da Hz. Ali\'nin elini kaldırıp "Ben kimin mevlâsıysam, Hz. Ali de onun mevlâsıdır" dedi. Şia\'da mevlâ, "Ben müminlere kendi canlarından evlâ değil miyim?" sorusuna bağlanır ve önderlik demektir; kafilenin çölde durması da ilanın ağırlığını gösterir.' },
     },
     {
       title: { tr: 'Mâide 3 ve 67 ne zaman indi?' },
-      sunni: { tr: 'Buhari 45\'te Ömer\'den: "Bugün dininizi tamamladım" ayeti Arafat\'ta, Cuma günü indi.' },
-      shia: { tr: 'Aynı ayetin Gadir\'de, Hz. Ali\'nin velâyetinin ilanıyla indiği rivayet edilir.' },
+      sunni: { tr: '"Bugün dininizi tamamladım" ayeti Mâide 3\'tedir. Sünni okumada Buhari, Sahih\'te Ömer\'den gelen rivayete göre ayet Arafat\'ta, Cuma günü inmiştir.' },
+      shia: { tr: '"Bugün dininizi tamamladım" ayeti Mâide 3\'tedir. Şia\'da aynı ayet Gadir\'de, Hz. Ali\'nin velayetinin ilanıyla inmiştir.' },
     },
   ],
   questions: [
-    { tr: 'Peygamber, dönüş yolunda sıcak çölde binlerce kişiyi durdurup bekletti. Bu kadar emek, sadece "Hz. Ali\'yi sevin" demek için mi olurdu?' },
-    { tr: 'Hutbeye "Ben müminlere kendi canlarından daha yakın değil miyim?" diye sorarak başladı, sonra "mevlâ" dedi. Bu soruyla "mevlâ" kelimesi arasında bir bağ olmaz mı?' },
-    { tr: 'Aynı konuşmada Kitap ve Ehl-i Beyt\'i birlikte emanet etti ve "ayrılmazlar" dedi. Ehl-i Beyt\'in rolünü bu söz nasıl belirler?' },
-    { tr: 'Müslim 2404\'e göre Muaviye, Sa\'d\'dan Hz. Ali\'ye sövmesini istedi. Sa\'d da bu faziletleri sayarak karşı çıktı. İnsanlar neden Hz. Ali\'ye sövmeye zorlanıyordu?' },
+    { tr: 'Peygamber sıcak çölde binlerce kişiyi durdurup Hz. Ali\'nin elini kaldırdı. Bu özen, velayet ilanının ağırlığını size nasıl hissettiriyor?' },
+    { tr: 'Hutbe "Ben müminlere kendi canlarından daha yakın değil miyim?" diye açıldı, sonra mevlâ dendi. Bu iki söz yan yana gelince, Hz. Ali\'nin velayeti size ne söylüyor?' },
+    { tr: 'Aynı konuşmada Kitap ve Ehl-i Beyt birlikte emanet edildi. Bu emanet, Ehl-i Beyt sevgisini hayatınızda nereye koyuyor?' },
+    { tr: 'Sa\'d b. Ebi Vakkas, Hz. Ali\'nin faziletlerini saydı. Bu sözler, ona olan sevginizi nasıl derinleştiriyor?' },
   ],
-  summary: { tr: 'Gadir Hum\'da Peygamber Hz. Ali\'nin elini kaldırıp "Ben kimin mevlâsıysam Hz. Ali de onun mevlâsıdır" dedi. Bu söz Tirmizi ve Ahmed gibi Sünni kaynaklarında da, Şii kaynaklarında da geçer; Şii kaynaklarında "mevlâ" önder anlamında anlaşılır ve Gadir, Hz. Ali\'nin velayetinin ilanı olarak anılır.' },
+  summary: { tr: 'Gadir Hum\'da Peygamber, Hz. Ali\'nin elini kaldırıp "Ben kimin mevlâsıysam, Hz. Ali de onun mevlâsıdır" dedi; Şia\'da bu, onun velayetinin ilanıdır ve söz Sünni kaynaklarında da geçmektedir (Tirmizi, el-Câmi\', no. 3713; Ahmed b. Hanbel, Müsned, no. 18479).' },
 };

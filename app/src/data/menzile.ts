@@ -6,46 +6,46 @@ export const menzile: HistEvent = {
   id: 'menzile',
   date: { tr: 'Tebük Seferi, Hicretin 9. yılı (630)', en: 'The Tabuk expedition, 9 AH (630)' },
   title: { tr: 'Hadis-i Menzile: Tebük\'te "Harun Musa\'ya nasılsa sen de bana öylesin"', en: 'The Hadith of the Position: at Tabuk, "as Aaron was to Moses"' },
-  hook: { tr: 'Peygamber Tebük\'e giderken Hz. Ali\'yi Medine\'de bıraktı; ardından ona hangi sözü söyledi ve bu söz ne anlama geliyor?', en: 'The Prophet left Ali in Medina when he marched to Tabuk. What did he say to him, and what does it mean?' },
+  hook: { tr: 'Peygamber Tebük\'e giderken Hz. Ali\'yi Medine\'de bıraktı. Sonra ona ne dedi? Bu söz hangi yeri gösterir?', en: 'The Prophet left Ali in Medina when he marched to Tabuk. What did he say to him, and what does it mean?' },
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Hicretin 9. yılında Bizans\'ın Arap sınırında asker topladığı haberi Medine\'ye ulaştı. Yaz sıcağı, kıtlık ve uzun yola rağmen Peygamber Tebük seferine çıkmaya karar verdi; ordu bu zorluk yüzünden "Zorluk Ordusu" diye anıldı.' },
+      text: { tr: 'Hicretin 9. yılında bir haber geldi. Bizans, Arap sınırında asker topluyordu. Yaz sıcaktı, kıtlık vardı, yol uzundu. Yine de Peygamber Tebük seferine çıktı. Ordu bu zorluk yüzünden "Zorluk Ordusu" diye anıldı.' },
       art: { bg: 'dune-day', props: ['sun', 'tents'], actors: [{ kind: 'crowd', x: 30, scale: 8 }, { kind: 'prophet', x: 68, label: { tr: 'Hz. Peygamber' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Peygamber, Medine\'yi ve ailesini korumak üzere Hz. Ali\'yi yerine vekil bıraktı. Buhari 4416\'da Sa\'d b. Ebi Vakkas bunu anlatır: Peygamber Tebük\'e çıkarken Hz. Ali\'yi Medine\'de bıraktı.' },
+      text: { tr: 'Peygamber, Medine\'yi ve ailesini koruması için Hz. Ali\'yi yerine vekil bıraktı. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih). Sa\'d b. Ebi Vakkas anlatır: Peygamber Tebük\'e çıkarken Hz. Ali\'yi Medine\'de bıraktı.' },
       art: { bg: 'city', props: ['sun'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Siyer kaynaklarında, Medine\'de bırakılan Hz. Ali için münafıkların "Onu yük gördüğü ve ondan kurtulmak istediği için bıraktı" diye dedikodu çıkardığı anlatılır. Hz. Ali silahını kuşanıp Peygamber\'in peşinden yola çıktı ve ordu konaklarken ona yetişti. Bu ayrıntının numarası ve sıhhati kaynaklardan ayrıca kontrol edilmelidir.' },
+      text: { tr: 'Siyer kaynaklarında bir ayrıntı daha vardır. Medine\'de kalan Hz. Ali için münafıklar "Onu yük gördüğü ve ondan kurtulmak istediği için bıraktı" diye konuştu. Hz. Ali silahını kuşandı, Peygamber\'in ardından yola çıktı ve ordu konaklarken ona yetişti. Bu ayrıntının numarası ve sıhhati ayrıca kontrol edilmelidir.' },
       art: { bg: 'dune-dusk', actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 72, scale: 5 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Hz. Ali "Ey Allah\'ın Resulü, beni çocuklar ve kadınlarla mı bırakıyorsun?" diye sorunca Peygamber şöyle buyurdu: "Harun\'un Musa nezdindeki yeri gibi benim nezdimde yerinin olmasına razı değil misin? Ancak benden sonra peygamber yoktur." Bu söz Buhari 3706 ve 4416\'da, Müslim 2404\'te geçer.' },
+      text: { tr: 'Hz. Ali sordu: "Ey Allah\'ın Resulü, beni çocuklarla ve kadınlarla mı bırakıyorsun?" Peygamber buyurdu: "Harun\'un Musa nezdindeki yeri gibi, benim nezdimde yerinin olmasına razı değil misin? Ancak benden sonra peygamber yoktur." Bu söz Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 3706; Müslim, Sahih, no. 2404).' },
       art: { bg: 'dune-dusk', actors: [{ kind: 'prophet', x: 42, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Kur\'an\'da Hz. Musa Tur\'a giderken kardeşi Harun\'a "Kavmim içinde benim yerime geç, ıslah et" der (A\'râf 7:142). Hz. Musa ayrıca Allah\'tan "ailemden bana bir yardımcı (vezir) ver" diye dilemişti (Tâhâ 20:29). Menzile hadisi, Harun\'un Musa nezdindeki bu konumunu Hz. Ali\'nin Peygamber nezdindeki konumuna benzetir.' },
+      text: { tr: 'Kur\'an\'da Hz. Musa, Tur\'a çıkarken kardeşi Harun\'a "Kavmim içinde benim yerime geç, ıslah et" der (A\'râf 7:142). Hz. Musa Allah\'tan "Ailemden bana bir yardımcı ver" diye de dilemişti (Tâhâ 20:29). Yardımcıya vezir denir. Menzile hadisi, Harun\'un Musa yanındaki bu yeri, Hz. Ali\'nin Peygamber yanındaki yerine benzetir.' },
       art: { bg: 'river', props: ['palms'], actors: [{ kind: 'crowd', x: 40, scale: 4 }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Şii kaynaklarında bu söz, Hz. Ali\'nin Peygamber\'in kardeşi, veziri ve halifesi olduğunun açık delili sayılır. "Ancak benden sonra peygamber yoktur" kaydı, Harun\'a ait nübüvvet dışındaki bütün makamların Hz. Ali\'ye verildiği anlamında anlaşılır. Şii kaynaklarında hadisin çok sayıda yolla geldiği belirtilir.' },
+      text: { tr: 'Şia\'da bu söz açıktır. Hz. Ali, Peygamber\'in kardeşi, veziri ve halifesidir. "Benden sonra peygamber yoktur" cümlesi nübüvveti ayırır. Harun\'daki nübüvvet dışındaki makamlar Hz. Ali\'ye verilmiş olur. Şii kaynakları hadisin çok sayıda yolla geldiğini söyler.' },
       art: { bg: 'night', props: ['stars', 'scroll'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Hadis, Müslim 2404\'te Sa\'d b. Ebi Vakkas\'ın anlattığı üç sözün biridir. Muaviye Sa\'d\'a Hz. Ali\'ye neden sövmediğini sorunca Sa\'d, Peygamber\'in Hz. Ali hakkındaki üç sözünü sayar: Menzile, Hayber sancağı ve Mübahele. İbn Mace 121\'de de aynı üç söz geçer.' },
+      text: { tr: 'Bu hadis, Sünni kaynaklarında da Sa\'d b. Ebi Vakkas\'ın saydığı üç sözden biridir (Müslim, Sahih, no. 2404). Muaviye, Sa\'d\'a Hz. Ali\'ye neden sövmediğini sordu. Sa\'d üç sözü andı: Menzile, Hayber sancağı ve Mübahele. Aynı üç söz İbn Mace, Sünen, no. 121\'de de geçer.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'crowd', x: 36, scale: 3 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Tebük\'te savaş olmadı; Bizans güçleri geri çekildi. Peygamber bölge halklarıyla (Eyle, Cerbâ ve Ezruh) anlaşmalar yaptı ve Medine\'ye döndü. Hz. Ali Medine\'de vekil olarak kalmış, Peygamber\'e ordu yolunda yetiştiğinde bu sözü duymuştur.' },
+      text: { tr: 'Tebük\'te savaş çıkmadı. Bizans güçleri geri çekildi. Peygamber, Eyle, Cerbâ ve Ezruh halklarıyla anlaşma yaptı. Sonra Medine\'ye döndü. Hz. Ali Medine\'de vekil kalmıştı. Ordu yolunda Peygamber\'e yetişince bu sözü duydu.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'prophet', x: 44, label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 72, scale: 6 }] },
     },
   ],
@@ -61,19 +61,19 @@ export const menzile: HistEvent = {
   disputes: [
     {
       title: { tr: 'Tebük\'teki vekâlet mi, halefiyet mi?' },
-      sunni: { tr: 'Hz. Ali\'nin vekilliği Tebük seferi boyunca geçici bir görevdir; Peygamber başka seferlerde de Medine\'de başkalarını vekil bırakmıştır. Hadis büyük bir fazilettir, ancak Harun Musa\'dan önce vefat ettiği için hilafet delili sayılmaz.' },
-      shia: { tr: 'Peygamber vekilliği Harun benzetmesiyle ilan etmiştir; Harun Musa\'nın kardeşi, veziri ve halifesidir. "Nübüvvet hariç" kaydı, geriye kalan bütün makamları kapsar.' },
+      sunni: { tr: 'Peygamber Tebük\'te Hz. Ali\'yi Medine\'de yerine bıraktı ve Harun benzetmesini söyledi. Sünni okumada vekillik sefer boyunca geçicidir; başka seferlerde de vekil bırakılmıştır, Harun Musa\'dan önce vefat ettiği için söz hilafet delili sayılmaz, yine de büyük bir fazilettir.' },
+      shia: { tr: 'Peygamber Tebük\'te Hz. Ali\'yi Medine\'de yerine bıraktı ve Harun benzetmesini söyledi. Şia\'da Harun, Musa\'nın kardeşi, veziri ve halifesidir; "nübüvvet hariç" kaydı geri kalan makamların Hz. Ali\'ye verildiğini gösterir.' },
     },
     {
       title: { tr: 'Söz Tebük\'e mi özel, genel mi?' },
-      sunni: { tr: 'Söz belirli bir olay üzerine, Hz. Ali\'yi üzüntüden kurtarmak için söylenmiştir; kapsamı o olayla sınırlıdır.' },
-      shia: { tr: 'Peygamber "menzile" (konum) kelimesini genel bir ifade olarak kullanmıştır; özel bir olayla sınırlanması sözün lafzına aykırıdır.' },
+      sunni: { tr: 'Peygamber bu sözü Tebük\'te, Hz. Ali üzülmesin diye söyledi. Sünni okumada söz o olayla sınırlıdır.' },
+      shia: { tr: 'Peygamber bu sözü Tebük\'te, Hz. Ali üzülmesin diye söyledi. Şia\'da "menzile" genel bir konumdur; sözü tek olaya sıkıştırmak lafzına uymaz.' },
     },
   ],
   questions: [
-    { tr: 'Peygamber sözü "Ancak benden sonra peygamber yoktur" diye bitirmişse, Harun\'un nübüvvet dışındaki makamlarının Hz. Ali\'ye verilmesi sizce nasıl anlaşılmalıdır?' },
-    { tr: 'Peygamber başka seferlerde başkalarını da vekil bıraktığına göre, bu söz neden yalnız Hz. Ali için ayrıca söylenmiştir sizce?' },
-    { tr: 'Müslim 2404\'te Sa\'d üç sözü sayarken Menzile\'yi de anıyorsa, bu sözün önemi hakkında ne söylenebilir?' },
+    { tr: 'Peygamber "Benden sonra peygamber yoktur" dedi. Harun\'un kalan yeri, Hz. Ali\'de size ne gösteriyor?' },
+    { tr: 'Peygamber başka seferlerde de vekil bırakmıştı. Harun sözünü ise Hz. Ali\'ye söyledi. Bu yakınlık, kalbinizde nasıl duruyor?' },
+    { tr: 'Sa\'d b. Ebi Vakkas, Menzile\'yi Hz. Ali\'nin faziletleri arasında saydı. Bu sözü duyunca ona olan sevginiz nereye uzanıyor?' },
   ],
-  summary: { tr: 'Menzile hadisi Buhari 3706 ve Müslim 2404 gibi Sünni kaynaklarında, Şii kaynaklarında olduğu gibi yer alır. Şii kaynaklarında Hz. Ali\'nin Peygamber\'in kardeşi, veziri ve halifesi olduğunun delili olarak anlatılır.' },
+  summary: { tr: 'Tebük\'te Peygamber, Hz. Ali\'ye "Harun Musa\'ya nasılsa, sen de bana öylesin" dedi. "Benden sonra peygamber yoktur" diye de ekledi. Bu söz Sünni kaynaklarında da geçer (Buhari, Sahih, no. 3706; Müslim, Sahih, no. 2404). Şia bunu, Hz. Ali\'nin Peygamber\'in kardeşi, veziri ve halifesi olduğunun delili sayar.' },
 };

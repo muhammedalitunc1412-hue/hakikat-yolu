@@ -6,41 +6,41 @@ export const penceAba: HistEvent = {
   id: 'pence-aba',
   date: { tr: 'Medine, Peygamber dönemi', en: 'Medina, the Prophet\'s era' },
   title: { tr: 'Pence-i Âl-i Aba (Kisa Olayı): Ehl-i Beyt kimdir?', en: 'The Five of the Cloak (Hadith al-Kisa): who are the Ahl al-Bayt?' },
-  hook: { tr: 'Peygamber bir örtünün altına kimleri aldı ve "Ehl-i Beytim" derken kimleri kastetti?', en: 'Whom did the Prophet gather under the cloak, and whom did he mean by "my Ahl al-Bayt"?' },
+  hook: { tr: 'Bir sabah, bir örtünün altında beş kişi. Peygamber onlara "Ehl-i Beytim" diyor. Bu beş kim?', en: 'Whom did the Prophet gather under the cloak, and whom did he mean by "my Ahl al-Bayt"?' },
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Aişe anlatır: Peygamber bir sabah siyah yünlü bir örtüyle çıktı. Önce Hz. Hasan geldi, onu örtünün altına aldı; sonra Hz. Hüseyin, Hz. Fatıma ve Hz. Ali geldi, hepsini örtünün altına aldı. Sonra "Ey Ehl-i Beyt, Allah sizden kiri gidermek ve sizi tertemiz yapmak ister" ayetini (Ahzâb 33:33) okudu. Müslim 2424 bunu aktarır.' },
+      text: { tr: 'Bu olay Sünni kaynaklarında da geçmektedir (Müslim, Sahih, no. 2424). Aişe anlatır. Peygamber bir sabah siyah yünlü bir örtüyle çıktı. Önce Hz. Hasan geldi. Peygamber onu örtünün altına aldı. Sonra Hz. Hüseyin, Hz. Fatıma ve Hz. Ali geldi. Hepsini örtünün altına aldı. Ardından şu ayeti okudu: "Ey Ehl-i Beyt, Allah sizden kiri gidermek ve sizi tertemiz yapmak ister" (Ahzâb 33:33).' },
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 38, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 52, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 62, label: { tr: 'Hz. Fatıma' } }, { kind: 'hasan', x: 72, scale: 0.7, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 80, scale: 0.65, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Tirmizi\'nin aktardığı rivayetlerde Peygamber örtünün altındakiler için "Allah\'ım, bunlar Ehl-i Beytimdir; onlardan kiri uzaklaştır, onları tertemiz yap" diye dua eder. Ümmü Seleme "Ben de onlarla birlikte miyim?" diye sorar; Peygamber ona "Sen hayır üzerindesin" der. Rivayetin lafızları ve numarası kaynaklara göre farklılık gösterir.' },
+      text: { tr: 'Örtünün altındakiler için edilen dua da Sünni kaynaklarında geçmektedir (Tirmizi, el-Câmi\'). Peygamber "Allah\'ım, bunlar Ehl-i Beytimdir. Onlardan kiri uzaklaştır, onları tertemiz yap" diye dua etti. Ümmü Seleme "Ben de onlarla birlikte miyim?" diye sordu. Peygamber "Sen hayır üzerindesin" dedi. Rivayetin lafızları ve numarası kaynaklara göre değişir.' },
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 38, label: { tr: 'Hz. Peygamber' } }, { kind: 'woman', x: 70 }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Ayet-i Tathir\'deki "ehl" kelimesi, örtünün altına alınan beş kişiyi anlatır; Müslim 2424\'e göre Peygamber bu ayeti onların üzerine okudu. Şii kaynaklarında ayetteki "arındırma", onların günahtan korunmuşluğu (ismet) olarak anlaşılır.' },
+      text: { tr: 'Ayet-i Tathir\'deki "ehl", örtünün altına alınan beş kişiyi anlatır. Peygamber bu ayeti onların üzerine okudu. Bu okuyuş Sünni kaynaklarında da geçmektedir (Müslim, Sahih, no. 2424). Şia\'da ayetteki arındırma, onların günahtan korunmuşluğudur. Buna ismet denir.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'woman', x: 66 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Müslim 2408\'deki rivayette Zeyd b. Erkam\'a Ehl-i Beyt\'in kimler olduğu sorulur. Önce hanımlarının bu kapsama girmediğini, zekât yasaklanan Ali, Akîl, Cafer ve Abbas ailelerinin kastedildiğini söyler. Böylece bu rivayette Ehl-i Beyt, Peygamber\'in yakın akrabası olan Haşimoğulları ailelerine dayandırılır.' },
+      text: { tr: 'Ehl-i Beyt\'in kim olduğu Sünni kaynaklarında da sorulur (Müslim, Sahih, no. 2408). Zeyd b. Erkam\'a sorulunca önce hanımların bu kapsama girmediğini söyledi. Zekâtın yasaklandığı Ali, Akîl, Cafer ve Abbas ailelerinin kastedildiğini bildirdi. Bu rivayette Ehl-i Beyt, Peygamber\'in yakın akrabası olan Haşimoğulları ailelerine dayanır.' },
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Örtünün altındaki bu beş kişiye "Pence-i Âl-i Aba" (örtü ehlinin beşi) denir. Pence, Farsça\'da beş demektir. Hz. Peygamber, Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin Şii kaynaklarında ismet sahibi kabul edilir. Bazı Şii geleneklerde alemlerin üstündeki açık el biçimi bu beşi simgeler.' },
+      text: { tr: 'Örtünün altındaki bu beş kişiye Pence-i Âl-i Aba denir. Pence, Farsça\'da beş demektir. Anlamı, örtü ehlinin beşidir. Hz. Peygamber, Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin. Şia bu beşi ismet sahibi bilir. Bazı Şii geleneklerde alemlerin üstündeki açık el, bu beşi simgeler.' },
       art: { bg: 'night', props: ['stars'], actors: [{ kind: 'prophet', x: 20, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 36, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 50, label: { tr: 'Hz. Fatıma' } }, { kind: 'hasan', x: 64, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 76, scale: 0.8, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Şii kaynaklarında Hz. Fatıma\'dan aktarılan ve "Hadis-i Kisa" diye okunan daha uzun bir rivayet vardır. Bu uzun biçimde örtünün altında Cebrail\'in ve Allah\'ın hitabı da anlatılır. Müslim ve Tirmizi\'deki kısa rivayetlerin ayrıntılı bir anlatımı olarak Şii kaynaklarında yer alan bu lafzın senedi, Şii âlimler arasında da tartışılmıştır.' },
+      text: { tr: 'Şii kaynaklarında Hz. Fatıma\'dan gelen daha uzun bir rivayet vardır. Adı Hadis-i Kisa\'dır. Bu uzun biçimde örtünün altında Cebrail\'in ve Allah\'ın hitabı da anlatılır. Müslim ve Tirmizi\'deki kısa rivayetlerin ayrıntılı bir anlatımı olarak okunur. Bu uzun lafzın senedi, Şii âlimler arasında da konuşulmuştur.' },
       art: { bg: 'interior', props: ['scroll', 'stars'], actors: [{ kind: 'fatima', x: 50, label: { tr: 'Hz. Fatıma' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Kisa olayı, Ehl-i Beyt\'in çekirdeğinin Allah tarafından belirlendiğini gösterir. Sonraki imamlar bu beşin soyundan geldiği için Şii kaynaklarında imamet çizgisi bu kapsama dayandırılır. Peygamber\'in bu beş kişiyi örtüsünün altına alması, Şii kaynaklarında olduğu gibi Müslim ve Tirmizi gibi Sünni kaynaklarında da büyük bir fazilet olarak anlatılır.' },
+      text: { tr: 'Kisa olayı şunu gösterir. Ehl-i Beyt\'in çekirdeğini Allah belirlemiştir. Sonraki imamlar bu beşin soyundan gelir. Şia imamet çizgisini bu kapsama dayandırır. Peygamber\'in bu beş kişiyi örtüsünün altına alması, Sünni kaynaklarında da büyük bir fazilet olarak anlatılır (Müslim, Sahih, no. 2424; Tirmizi, el-Câmi\').' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 56, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 68, scale: 0.8, label: { tr: 'Hz. Hüseyin' } }] },
     },
   ],
@@ -56,19 +56,19 @@ export const penceAba: HistEvent = {
   disputes: [
     {
       title: { tr: 'Ehl-i Beyt\'in kapsamı' },
-      sunni: { tr: 'Kapsam geniştir: Peygamber\'in hanımları ve Haşimoğulları da girer; Kisa halkı bunun çekirdeğidir. Ahzâb 33:33 hanımlara hitap eden ayetlerin içinde gelir.' },
-      shia: { tr: 'Ayet-i Tathir ve Kisa hadisi, ismet sahibi Ehl-i Beyt\'i Peygamber, Ali, Fatıma, Hasan ve Hüseyin ile sınırlar; imamlar bunların soyundandır.' },
+      sunni: { tr: 'Peygamber, Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin\'i örtünün altına alıp Ahzâb 33:33\'ü okudu. Sünni okumada kapsam daha geniştir; hanımlar ve Haşimoğulları da Ehl-i Beyt\'e girer, Kisa halkı çekirdektir ve ayet hanımlara seslenen ayetlerin arasındadır.' },
+      shia: { tr: 'Peygamber, Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin\'i örtünün altına alıp Ahzâb 33:33\'ü okudu. Şia\'da Ayet-i Tathir ve Kisa hadisi, ismet sahibi Ehl-i Beyt\'i Peygamber, Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin ile sınırlar; imamlar onların soyundandır.' },
     },
     {
-      title: { tr: 'Ümmü Seleme neden örtünün altında değil?' },
-      sunni: { tr: '"Sen hayır üzerindesin" sözü onu dışlamaz, iyilik üzerinde olduğunu bildirir; hanımların Ehl-i Beyt\'e dahil olduğu görüşünü çürütmez.' },
-      shia: { tr: 'Peygamber onu örtüye almayıp ayrı tutmuştur; bu, ayetin ismet sahibi beş kişiyi özel olarak kastettiğini gösterir.' },
+      title: { tr: 'Ümmü Seleme ve örtü' },
+      sunni: { tr: 'Peygamber Ümmü Seleme\'yi örtünün altına almadı ve ona "Sen hayır üzerindesin" dedi. Sünni okumada bu söz onu dışlamaz; iyilik üzerinde olduğunu bildirir ve hanımların Ehl-i Beyt içinde sayıldığı görüşünü ortadan kaldırmaz.' },
+      shia: { tr: 'Peygamber Ümmü Seleme\'yi örtünün altına almadı ve ona "Sen hayır üzerindesin" dedi. Şia\'da onu örtüye almayıp ayrı tutması, ayetin ismet sahibi beş kişiyi özel olarak kastettiğini gösterir.' },
     },
   ],
   questions: [
-    { tr: 'Peygamber beş kişiyi tek örtünün altına alıp ayeti okuduğuna göre, "Ehl-i Beyt" ifadesinin çekirdeğini sizce kimler oluşturur?' },
-    { tr: 'Zeyd b. Erkam hanımları saymıyorsa, Sünni kaynaklardaki farklı görüşlerin hangisi metne daha yakındır sizce?' },
-    { tr: 'Tathir ayetindeki "kiri gidermek" ifadesi, günahtan korunmuşluğu mu yoksa manevi arınmayı mı anlatır sizce?' },
+    { tr: 'Peygamber beş kişiyi bir örtünün altında topladı. Bu tablo, Ehl-i Beyt sevgisini içinizde nasıl büyütüyor?' },
+    { tr: 'Zeyd b. Erkam, Ehl-i Beyt\'i Peygamber\'in yakın ailesi diye anlattı. Bu söz, o aileye olan sevginize ne katıyor?' },
+    { tr: 'Tathir ayeti "sizi tertemiz yapmak ister" der. Şia bunu günahtan korunmuşluk diye okur. Bu temizlik, onlara duyduğunuz güveni nasıl besliyor?' },
   ],
-  summary: { tr: 'Müslim\'deki Kisa rivayeti, Peygamber\'in Ali, Fatıma, Hasan ve Hüseyin\'i örtünün altına aldığını bildirir. Şii kaynaklarında bu beş kişi (Pence-i Âl-i Aba), ismet sahibi Ehl-i Beyt\'in çekirdeği olarak anılır; olay Müslim ve Tirmizi gibi Sünni kaynaklarında da büyük bir fazilet olarak yer alır.' },
+  summary: { tr: 'Peygamber, Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin\'i örtünün altına alıp onları Ehl-i Beyt diye andı. Bu beş, Pence-i Âl-i Aba\'dır ve Şia\'da ismet sahibi Ehl-i Beyt\'in çekirdeğidir. Olay Sünni kaynaklarında da büyük bir fazilet olarak geçer (Müslim, Sahih, no. 2424; Tirmizi, el-Câmi\').' },
 };
