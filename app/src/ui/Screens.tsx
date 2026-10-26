@@ -483,7 +483,7 @@ export function Method({ onBack }: { onBack: () => void }) {
 const s = themedStyles(() => StyleSheet.create({
   page: { paddingHorizontal: 18, paddingTop: TOP, paddingBottom: 56 },
   hero: { flexDirection: 'row', alignItems: 'center', gap: 8 },
-  logo: { width: 84, height: 84 },
+  logo: { width: 84, height: 84, backgroundColor: 'transparent' },
   kicker: { color: C.gold, fontFamily: font.sans, fontSize: 12, fontWeight: '700', letterSpacing: 2.4 },
   brand: { color: C.cream, fontFamily: font.serif, fontSize: 34, lineHeight: 40, fontWeight: '700', letterSpacing: 1.2, marginTop: 2 },
   tagline: { color: C.dim, fontFamily: font.sans, fontSize: 15.5, lineHeight: 23, marginTop: 8 },
