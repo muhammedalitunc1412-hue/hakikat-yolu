@@ -110,7 +110,7 @@ export const NOTES: Record<string, string[]> = {
   'fatima-vefat': [
     "Fedek talebi ve mesciddeki hutbe, kapı gününe bağlanır.",
     "Evi yakma yemini Sünni kitaplarda da yazılıdır (İbn Ebî Şeybe; Şehristânî, Nazzâm'ın sözünü aktarır, cilt 1, s. 57).",
-    "Kapı sövesi, kaburga ve Muhsin, Süleym'in el-İhticâc aktarımındadır (cilt 1, s. 151). Çivi erken sayfada yoktur.",
+    "Ehl-i Beyt rivayetine göre kapı yakıldı (Süleym, cilt 1, s. 387), kapı ile duvar arasında sıkıştı, çivi göğsüne battı (Mü'temeru ulemâi Bağdâd, s. 135) ve Muhsin düştü (Bihâr, cilt 30, s. 294).",
     "Vefata kadar konuşmadığı ve gece defnedildiği Buhari 4240'tadır.",
     "Ertesi sabah Hz. Ali kabir başında durdu (Delâilü'l-İmâme, cilt 1, s. 137). Kabri gizlidir.",
   ],

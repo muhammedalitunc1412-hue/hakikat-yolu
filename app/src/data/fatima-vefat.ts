@@ -1,8 +1,8 @@
 import type { HistEvent } from '../types';
 
-// Doğrulanan sayfalar: Buhari 4240 (Meğâzî, Hayber); Şehristânî, el-Milel ve'n-Nihal, c. 1, s. 57 (eş-Şâmile);
-// Kitâb Süleym, c. 1, s. 151 (lib.eshia.ir); Delâilü'l-İmâme, Müessesetü'l-Bi'se, c. 1, s. 137.
-// Çivi haberi erken bir sayfada bulunamadı; geç bir kitapta (Mü'temeru ulemâi Bağdâd, s. 135) geçer, omurga yapılmadı.
+// Kapı yangını: Süleym, c. 1, s. 387. Sıkışma ve Muhsin: Bihâr, c. 30, s. 294.
+// Çivi ve duvar-kapı arası: Mü'temeru ulemâi Bağdâd, s. 135 (geç kaynak).
+// Ortak zemin: Buhari 4240; Şehristânî, el-Milel, c. 1, s. 57.
 export const fatimaVefat: HistEvent = {
   id: 'fatima-vefat',
   date: { tr: '11 H (632), Eyyâm-ı Fâtımiyye', en: '11 AH (632), the days of Fatima' },
@@ -22,10 +22,10 @@ export const fatimaVefat: HistEvent = {
       cites: [{ side: 'sunni', i: 1 }, { side: 'sunni', i: 2 }, { side: 'sunni', i: 3 }, { side: 'sunni', i: 4 }],
     },
     {
-      text: { tr: 'Kapı zorlandı. **Hz. Fatıma** eşikte durdu. Süleym\'in kitabında, Künfuz\'un onu kamçıyla vurduğu ve izinin kolunda kaldığı yazar. Aynı haberin el-İhticâc aktarımında kapı sövesine itildiği, kaburgasının kırıldığı ve karnındaki **Muhsin**\'i düşürdüğü de geçer. O, yatağa düşünceye kadar dayandı. Kapı çivisinin göğsüne battığı, ancak çok sonraki bir kitapta anılır; erken sayfada doğrulanamadığı için burada kesin söz sayılmaz.' },
+      text: { tr: 'Ehl-i Beyt rivayetlerine göre ateş kapıya verildi. Kapı yandı, sonra itilip zorlandı. **Hz. Fatıma** kapının ardında durmuştu. Kapı ile duvar arasında sıkıştı. Göğsüne kapının çivisi battı. Karnındaki **Muhsin** düştü. "Babacığım" diye seslendi. **Hz. Ali** yetişti, onu tuttu ve sabretti. Yakma yemini Sünni kitaplarda da yazılıdır. Kapının yanması, sıkışma, çivi ve Muhsin ise bu Şii rivayetlerin anlattığı sahnedir.' },
       art: { bg: 'interior', actors: [{ kind: 'fatima', x: 48, pose: 'sit', label: { tr: 'Hz. Fatıma' } }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
-      cites: [{ side: 'shia', i: 0 }, { side: 'sunni', i: 2 }],
+      cites: [{ side: 'shia', i: 6 }, { side: 'shia', i: 7 }, { side: 'shia', i: 8 }, { side: 'shia', i: 9 }, { side: 'shia', i: 0 }, { side: 'sunni', i: 2 }],
     },
     {
       text: { tr: 'Bundan sonra **Hz. Fatıma** Halife Ebu Bekir\'le konuşmadı. Vefatına kadar sustu. Bu cümle Sünni kaynaklarında da durur: "Ona küstü ve vefat edene kadar onunla konuşmadı." Peygamber\'den sonra altı ay yaşadı. Suskunluğu, kırılan hakkın sesi oldu.' },
@@ -80,12 +80,16 @@ export const fatimaVefat: HistEvent = {
     { book: 'Ahmed b. Ebî Tâhir, Belâğatü\'n-Nisâ', ref: 'Fedek hutbesi (sayfa bu turda açılmadı)', says: { tr: 'Hz. Fatıma\'nın mescidde Fedek için söylediği hutbe bu eserde aktarılır.' }, status: 'check' },
     { book: 'İbn Şehraşûb, Menâkıb Âl-i Ebî Tâlib', ref: 'cilt 3, s. 137 (VikîŞia atfı)', says: { tr: 'Haksızlık edenlerin cenazede bulunmaması ve gizli defin vasiyeti.' }, grade: { tr: 'Sayfa bu çalışmada okunmadı.' }, status: 'check' },
     { book: 'Şeyh Sadûk, Men lâ yahduruhu\'l-fakîh', ref: 'kabir ihtimalleri (ev, Bakî, kabr ile minber arası)', says: { tr: 'Kabrin yeri hakkında üç görüş. Kesin yer bildirilmez.' }, grade: { tr: 'Sayfa bu turda açılmadı.' }, status: 'check' },
+    { book: 'Süleym b. Kays, Kitâb', ref: 'cilt 1, s. 387', says: { tr: 'Ömer ateş istedi, kapıya verdi ve kapıyı yaktı, sonra kapıyı itti. Hz. Fatıma karşıladı. Kınındaki kılıç böğrüne, kamçı koluna vuruldu.' }, url: 'https://lib.eshia.ir/70632/1/387', status: 'verified' },
+    { book: 'Tabersî, el-İhticâc', ref: 'cilt 1, s. 212 (Ca\'fer Murtazâ aktarımı)', says: { tr: 'Künfuz kamçıladı, Hz. Fatıma kapı sövesine sıkıştırıldı, itildi, kaburgası kırıldı ve ceninini düşürdü.' }, grade: { tr: 'Sayfa bu turda kitabın kendi baskısından açılmadı; cümle bu sayfayla aktarılır.' }, status: 'check' },
+    { book: 'Meclisî, Bihârü\'l-Envâr', ref: 'cilt 30, s. 294 (Müessesetü\'l-Vefâ)', says: { tr: 'Kapı tekmelenir. Hz. Fatıma gövdesini kapıya dayamıştır. Sonra duvara yaslanır, karnındakinin öldüğünü söyler. Düşen çocuğa Hz. Ali Muhsin adını verir.' }, url: 'https://lib.eshia.ir/11008/30/294', status: 'verified' },
+    { book: 'Mü\'temeru ulemâi Bağdâd (Şiblüddevle Mukâtil b. Atıyye\'ye nispet)', ref: 's. 135', says: { tr: 'Geç bir kitap. Ömer\'in Hz. Fatıma\'yı duvar ile kapı arasında sıktığı, cenini düşürdüğü ve kapı çivisinin göğsüne battığı burada anlatılır.' }, grade: { tr: 'Geç kaynak. Sayfa, Ca\'fer Murtazâ el-Âmilî\'nin Maa\'sâtü\'z-Zehrâ aktarımıyladır.' }, status: 'check' },
   ],
   disputes: [
     {
       title: { tr: 'Ateş yemini ve kapı' },
       sunni: { tr: 'Evi yakma yemini İbn Ebî Şeybe\'de ve başka tarih kitaplarında anlatılır. Şehristânî, Nazzâm\'ın vurma ve düşük sözünü de kaydeder; bunu Nazzâm\'ın iftirası sayar.' },
-      shia: { tr: 'Yakma yemini iki tarafta da yazılıdır. Kapı, kaburga ve Muhsin, Süleym\'in el-İhticâc aktarımında geçer. Çivi haberi erken sayfada yoktur.' },
+      shia: { tr: 'Yakma yemini iki tarafta da yazılıdır. Kapının yakılması Süleym cilt 1, s. 387\'dedir. Kapı ile duvar arasında sıkışma, çivi ve Muhsin, Bihâr cilt 30, s. 294 ve Mü\'temeru ulemâi Bağdâd s. 135 ile anılır. Bunlar Ehl-i Beyt rivayetidir.' },
     },
     {
       title: { tr: 'Suskunluk ve gece defin' },
@@ -99,5 +103,5 @@ export const fatimaVefat: HistEvent = {
     { tr: 'Kabri bilinmiyor. Aranan ve bulunamayan bir kabir, protestoyu nasıl diri tutar?' },
     { tr: 'Hz. Ali kabri korurken kendi hakkını yere bırakmıştı. Bu sabır, onun faziletini size nasıl anlatır?' },
   ],
-  summary: { tr: 'Fedek reddedildi. Kapıda yakma yemini edildi. Hz. Fatıma vefatına kadar konuşmadı ve Hz. Ali onu gece defnetti. Bu son iki cümle Buhari 4240\'ta da durur. Kapı, Muhsin ve ertesi sabahın kılıcı Şii rivayettedir. Kabri gizlidir.' },
+  summary: { tr: 'Fedek reddedildi. Ehl-i Beyt rivayetlerine göre kapı yakıldı, zorlandı; Hz. Fatıma kapı ile duvar arasında sıkıştı, göğsüne çivi battı ve Muhsin düştü. Vefata kadar konuşmaması ve gece defin Buhari 4240\'ta da durur. Kabri gizlidir.' },
 };
