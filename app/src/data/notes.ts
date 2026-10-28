@@ -149,6 +149,7 @@ export const NOTES: Record<string, string[]> = {
     "Su kesildi. Alemdar Abbas ırmağa vardı. Ali Asgar'ı Harmala'nın oku vurdu (el-Lühûf, s. 169).",
     "Ali b. Hüseyin hastaydı. Zeynep başında bekliyordu. Çadırda öldürmek istediler (el-İrşâd 2/93 ve 2/113).",
     "Başlar aynı gün Kûfe'de İbn Ziyâd'a gönderildi (el-İrşâd 2/113). Yol Şam'da Yezid'e varır (Bihâr, cilt 45, s. 134).",
+    "Mektelde Hz. Rukayye Şam harabesinde babasının başına sarılır ve orada şehit olur (Nefesü'l-Mehmûm, cilt 1, s. 416).",
   ],
   imamlar: [
     "Hz. Hüseyin'den sonra imamet Zeynelâbidîn'e geçti.",

@@ -4,6 +4,8 @@ import type { HistEvent } from '../types';
 // el-Lühûf s. 148-150 ve s. 169; Taberî 5/416 ve 5/455; Bihâr 45/134.
 // Eman kâğıdını yırtmak, mızrakta gezdirmek ve Zeynep'in hasta oğlun üzerine kapanması
 // mektel anlatısıdır; bu turda o üçü için ayrı bir sayfa kilitlenmedi.
+// Hz. Rukayye: Nefesü'l-Mehmûm 1/416 ve Müntehâ'l-Âmâl tercümesi 1/778 açıldı.
+// Kâmil-i Bahâî'nin kendi sayfası açılmadı. Ad ve Şam harabesi o iki sayfada yoktur.
 // Kollar, kırba, göz ve küpeler de mekteldedir.
 export const kerbela: HistEvent = {
   id: 'kerbela',
@@ -95,6 +97,12 @@ export const kerbela: HistEvent = {
       by: 'both',
       cites: [{ side: 'shia', i: 4 }, { side: 'sunni', i: 2 }],
     },
+    {
+      text: { tr: 'Bu sahne bir Ehl-i Beyt mektel rivayetidir. Meclisten sonra gece, Şam harabesine çöktü. **Yezid** esir hâneyi sarayının dibindeki viraneye kapatmıştı. **Muaviye**\'nin oğlu, Peygamber\'in torunlarına bir yıkıntıyı layık görmüştü. Duvarlar ıslaktı. Hasır inceydi. İçerde **Hz. Rukayye** vardı. **Hz. Hüseyin**\'in küçük kızıydı. Mektelin andığı yaş dört yaştı. Güzeldi. Babasının dizini, sesini, sakalının kokusunu soruyordu. "Babam nerede?" diye ağlıyordu. Teyzesi **Hz. Zeynep** onu bağrına basıyor, yolculukta, diyordu. Ağlamak dinmiyordu. Bir ara uyudu. Rüyasında babasını gördü. Uyanınca feryat daha da büyüdü. "Babamı istiyorum." Ses harabenin taşını aşıp saraya vardı. **Yezid** uyandı. Ne bu feryat, diye sordu. Küçük kızın babasını istediğini söylediler. O zaman emir verdi. Babanın mübarek başı bir tepsiye konacaktı. Örtülecekti. Yanına gönderilecekti. Getirdiler. Tepsinin üstünde bir örtü vardı. Altında bir ağırlık. **Hz. Rukayye** örtüyü açtı. Babasının yüzünü gördü. Başı tepsinin içinden kaldırdı, bağrına bastı. "Babacığım, seni kim kana boyadı? Şahdamarını kim kesti? Küçük yaşımda beni kim yetim bıraktı? Senden sonra kime güveneceğim? Bu yetime kim büyüyecek?" diye dertleşti. Dudağını babasının dudağına koydu. Kahır göğsünü doldurdu. Orada, o harabede, **Yezid**\'in zulmünün içinde ruhunu teslim etti. Şehadeti kılıçla olmadı. Babasının başını bir tepside önüne koyan saltanatla oldu.' },
+      art: { bg: 'night', props: ['moon'], actors: [{ kind: 'woman', x: 40, scale: 0.72, label: { tr: 'Rukayye' } }, { kind: 'woman', x: 68, label: { tr: 'Zeynep' } }] },
+      by: 'shia',
+      cites: [{ side: 'shia', i: 11 }, { side: 'shia', i: 12 }, { side: 'shia', i: 13 }],
+    },
   ],
   sunni: [
     { book: 'Tirmizi, el-Câmi\'', ref: 'No. 3768 (Menâkıb)', says: { tr: 'Hz. Hasan ve Hz. Hüseyin cennet gençlerinin efendileridir.' }, status: 'verified' },
@@ -115,6 +123,9 @@ export const kerbela: HistEvent = {
     { book: 'Şeyh Müfid, el-İrşâd', ref: 'cilt 2, s. 93', says: { tr: 'Ali b. Hüseyin, babasının öldürüleceği sabahın akşamında hasta oturduğunu ve teyzesi Zeynep\'in kendisine baktığını söyler.' }, url: 'https://lib.eshia.ir/27035/2/93', status: 'verified' },
     { book: 'Şeyh Müfid, el-İrşâd', ref: 'cilt 2, s. 112', says: { tr: 'Sinân mızrağı saplar. Havlî titrer. Şimr Hz. Hüseyin\'i boğazlar, başı Havlî\'ye verir. Kadınların örtüsü sırtından çekilip alınır. Sayfa, döşeğindeki Ali b. Hüseyin\'de kesilir.' }, url: 'https://lib.eshia.ir/27035/2/112', status: 'verified' },
     { book: 'Şeyh Müfid, el-İrşâd', ref: 'cilt 2, s. 113', says: { tr: 'Ali b. Hüseyin ağır hastadır. "Şu hastayı öldürelim mi?" denir. Humeyd onları geri çevirir. Ömer b. Sa\'d hasta çocuğa dokunulmasın der. Sonra on kişi cesedi atla ezer. Aynı gün baş, Havlî ve Humeyd ile İbn Ziyâd\'a gönderilir. Diğer yetmiş iki baş Şimr, Kays ve Amr ile yollanır.' }, url: 'https://lib.eshia.ir/27035/2/113', grade: { tr: 'Mızrağa takıp gezdirmek bu sayfada yoktur. O, mektel anlatısıdır.' }, status: 'verified' },
+    { book: 'Abbas Kummî, Nefesü\'l-Mehmûm', ref: 'cilt 1, s. 416', says: { tr: 'Hüseyin\'in dört yaşındaki kızı rüyada babasını görür, ağlar. Yezid başı ona gönderir. Kısa rivayette kız hastalanır, birkaç gün içinde Şam\'da vefat eder. Aynı sayfadaki geniş rivayette baş bir mendille örtülüdür, leğene konmuştur. Örtü açılır. Kız başı bağrına alır, "babacığım, seni kim kana boyadı" diye dertleşir, dudağını babasının dudağına kor ve orada ruhunu teslim eder.' }, url: 'https://lib.eshia.ir/86936/1/416', grade: { tr: 'Ehl-i Beyt mektel rivayetidir. Bu sayfada kızın adı ve Şam harabesi geçmez. Mektel onu Hz. Rukayye diye, yeri harabe diye anar. Not, rivayeti Kâmil-i Bahâî cilt 2, s. 178-179\'a bağlar.' }, status: 'verified' },
+    { book: 'Abbas Kummî, Müntehâ\'l-Âmâl', ref: 'Arapça tercüme (Hâşim Mîlânî), cilt 1, s. 778', says: { tr: 'Kâmil-i Bahâî\'den aktarır. Çocuklara babaları yolculukta denir. Yezid onları evine alır. Dört yaşındaki kız rüyada babasını görür. Yezid başı kucağına gönderir. Kız hastalanır, birkaç gün içinde Şam\'da vefat eder.' }, url: 'https://lib.eshia.ir/86690/1/778', grade: { tr: 'Ehl-i Beyt mektel rivayetidir. Bu sayfada ad Rukayye değildir. Harabe, tepsi ve orada dertleşerek vefat yoktur. Onlar Nefesü\'l-Mehmûm\'daki geniş rivayettedir.' }, status: 'verified' },
+    { book: 'İmâdüddîn Taberî, Kâmil-i Bahâî', ref: 'eser adı (kendi sayfası bu turda açılmadı)', says: { tr: 'Nefesü\'l-Mehmûm ve Müntehâ\'l-Âmâl bu küçük kızın rivayetini Kâmil-i Bahâî\'ye bağlar. Nefes\'in notu cilt 2, s. 178-179 diye gösterir.' }, grade: { tr: 'Ehl-i Beyt mektel rivayetidir. Kâmil\'in kendi baskısı açılmadı. Sayfa uydurulmadı. Notta görülen numara, Kâmil\'in sayfası diye kilitlenmedi.' }, status: 'check' },
   ],
   disputes: [
     {
@@ -125,7 +136,7 @@ export const kerbela: HistEvent = {
     {
       title: { tr: 'Çubuk, atlar ve başlar' },
       sunni: { tr: 'Atların cesedi çiğnemesi Taberî cilt 5, s. 455\'tedir. Başın Kûfe\'ye gönderilmesi el-İrşâd cilt 2, s. 113\'tedir. Çubuk sahnesi de Taberî\'de anılır; bazı âlimler başın Şam\'a gidişini zayıf sayar.' },
-      shia: { tr: 'Atlar, mızraktaki başlar ve çubuk, Yezid\'in meclisinin ayıbı diye okunur. Zeynep\'in hutbesi bu mecliste söylenir (Bihâr, cilt 45, s. 134).' },
+      shia: { tr: 'Atlar, mızraktaki başlar ve çubuk, Yezid\'in meclisinin ayıbı diye okunur. Zeynep\'in hutbesi bu mecliste söylenir (Bihâr, cilt 45, s. 134). Mektel, aynı zulmü Hz. Rukayye\'nin harabedeki şehadetine de bağlar (Nefesü\'l-Mehmûm, cilt 1, s. 416).' },
     },
   ],
   questions: [
@@ -135,6 +146,7 @@ export const kerbela: HistEvent = {
     { tr: 'Abbas suyu gördü ve içmedi. Vefa, susuzlukta neye benzer?' },
     { tr: 'Ali Asgar bir yudum su için kaldırıldı. O ok, Ehl-i Beyt sevgisini nerede tutar?' },
     { tr: 'Zeynep, başın önünde ayağa kalktı. Zulmü adlandırmak size hangi cesareti hatırlatır?' },
+    { tr: 'Rukayye babasının başını bağrına aldı. Bir çocuğun kahırdan gitmesi, Yezid\'in zulmünü nerede tutar?' },
   ],
-  summary: { tr: 'Muaviye\'nin oğlu Yezid\'e biat edilmedi. 9 Muharrem akşamı Abbas emanı lanetledi. Su kesildi. Alemdar Abbas, Ali Ekber, Kasım ve Ali Asgar şehit oldu. Hasta Ali b. Hüseyin çadırda kaldı. Şimr son darbeyi vurdu. Atlar cesedi çiğnedi. Başlar Kûfe\'de İbn Ziyâd\'a, oradan Şam\'da Yezid\'e gitti. Ortak cümleler Taberî 5/416, Taberî 5/455 ve Tirmizi 3768\'dedir. Ayrıntı Ehl-i Beyt mektelindedir.' },
+  summary: { tr: 'Muaviye\'nin oğlu Yezid\'e biat edilmedi. 9 Muharrem akşamı Abbas emanı lanetledi. Su kesildi. Alemdar Abbas, Ali Ekber, Kasım ve Ali Asgar şehit oldu. Hasta Ali b. Hüseyin çadırda kaldı. Şimr son darbeyi vurdu. Atlar cesedi çiğnedi. Başlar Kûfe\'de İbn Ziyâd\'a, oradan Şam\'da Yezid\'e gitti. Mektelde Hz. Rukayye harabede babasının başına sarılıp orada şehit olur. Ortak cümleler Taberî 5/416, Taberî 5/455 ve Tirmizi 3768\'dedir. Ayrıntı Ehl-i Beyt mektelindedir.' },
 };
