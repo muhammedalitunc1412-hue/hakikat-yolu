@@ -108,11 +108,11 @@ export const NOTES: Record<string, string[]> = {
     "Fedek'i sonradan Ömer b. Abdülaziz iade etti.",
   ],
   'fatima-vefat': [
-    "Peygamber'in vefatından sonra Hz. Ali'nin evinde toplananlara biat için baskı yapıldı.",
-    "Evi yakma tehdidi her iki mezhebin kaynaklarında da geçer.",
-    "Kapı ve Muhsin ayrıntıları yalnız Şii kaynaklarında anlatılır.",
-    "Hz. Fatıma, Peygamber'den yaklaşık altı ay sonra vefat etti.",
-    "Gece defnedildi ve kabri gizli kaldı.",
+    "Fedek talebi ve mesciddeki hutbe, kapı gününe bağlanır.",
+    "Evi yakma yemini Sünni kitaplarda da yazılıdır (İbn Ebî Şeybe; Şehristânî, Nazzâm'ın sözünü aktarır, cilt 1, s. 57).",
+    "Kapı sövesi, kaburga ve Muhsin, Süleym'in el-İhticâc aktarımındadır (cilt 1, s. 151). Çivi erken sayfada yoktur.",
+    "Vefata kadar konuşmadığı ve gece defnedildiği Buhari 4240'tadır.",
+    "Ertesi sabah Hz. Ali kabir başında durdu (Delâilü'l-İmâme, cilt 1, s. 137). Kabri gizlidir.",
   ],
   cemel: [
     "Halife Osman'ın şehadetinden sonra Hz. Ali'ye biat edildi.",

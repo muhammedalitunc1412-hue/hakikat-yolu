@@ -44,7 +44,7 @@ const KEYS: Record<string, string> = {
   "istihlaf": "Atamayla gelen halifelik, daraltılmış şura",
   "osman": "Üçüncü halife dönemi ve büyüyen huzursuzluk",
   "fedek": "Hz. Fatıma'nın hakkı: Fedek",
-  "fatima-vefat": "Hz. Fatıma'nın acısı ve gizli kabri",
+  "fatima-vefat": "Eyyâm-ı Fâtımiyye: kapı, Muhsin ve gizli kabir",
   "cemel": "Hz. Ali'ye karşı ilk iç savaş",
   "siffin": "Sıffin, mushaflar ve hakem",
   "sebb": "Minberlerde Hz. Ali'ye sövme",
@@ -73,7 +73,7 @@ export function nextStory(id: string): HistEvent | undefined {
 export const CATEGORIES: { id: string; title: string; sub: string; ids: string[] }[] = [
   { id: 'ehlibeyt', title: 'Ehl-i Beyt ve Gadir', sub: 'Pence-i Âl-i Aba, Mübahele, Hz. Ali kimdir, Hayber, Tebük, Gadir Hum', ids: ['pence-aba', 'ehlibeyt', 'ali-kimdir', 'hayber', 'menzile', 'gadir'] },
   { id: 'hilafet', title: 'Peygamber\'den Sonra: Hilafet', sub: 'Kırtas, Sakife, istihlaf ve Şura, Halife Osman dönemi', ids: ['raziyye', 'sakife', 'istihlaf', 'osman'] },
-  { id: 'fatima', title: 'Hz. Fatıma', sub: 'Fedek, evine gelme, vasiyeti ve vefatı', ids: ['fedek', 'fatima-vefat'] },
+  { id: 'fatima', title: 'Hz. Fatıma', sub: 'Fedek hakkı, Eyyâm-ı Fâtımiyye, gece defin ve gizli kabir', ids: ['fedek', 'fatima-vefat'] },
   { id: 'ali', title: 'Hz. Ali Dönemi', sub: 'Cemel, Sıffin, Hakem, Nehrevan, minberlerde sövme', ids: ['cemel', 'siffin', 'sebb'] },
   { id: 'muaviye', title: 'Muaviye Kimdir?', sub: "Ailesi, Hz. Ali'ye karşı Sıffin, Hz. Hasan ile sulhu ve iktidarı", ids: ['muaviye-kimdir', 'muaviye-ali', 'muaviye-hasan', 'muaviye-iktidar'] },
   { id: 'imamlar', title: 'İmamlar ve Kerbela', sub: 'Hz. Hasan, Hz. Hüseyin, Kerbela, imamlar', ids: ['hasan', 'kerbela', 'imamlar'] },

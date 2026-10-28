@@ -21,7 +21,7 @@ function norm(s: string) {
 }
 
 function EventCard({ e, i, onOpen }: { e: HistEvent; i: number; onOpen: (id: string) => void }) {
-  const red = e.id === 'kerbela';
+  const red = e.id === 'kerbela' || e.id === 'fatima-vefat';
   return (
     <Pressable onPress={() => onOpen(e.id)} accessibilityRole="button" style={({ pressed }) => [s.card, red && { backgroundColor: BLOOD.card, borderColor: BLOOD.lineStrong, borderLeftWidth: 4, borderLeftColor: BLOOD.gold }, pressed && s.pressed, webHit]}>
       <View style={[s.numWrap, red && { backgroundColor: BLOOD.gold }]}><Text style={[s.num, red && { color: BLOOD.ink }]}>{i + 1}</Text></View>

@@ -39,7 +39,7 @@ export default function App() {
   }, []);
 
   // Kerbela ve Hz. Hüseyin alanları kan kırmızısı temayla açılır
-  setTheme((route.name === 'event' && route.id === 'kerbela') || (route.name === 'imam' && route.id === 'huseyin') ? 'blood' : 'default');
+  setTheme((route.name === 'event' && (route.id === 'kerbela' || route.id === 'fatima-vefat')) || (route.name === 'imam' && route.id === 'huseyin') ? 'blood' : 'default');
 
   const ev = route.name === 'event' ? EVENTS.find(e => e.id === route.id) : undefined;
   const dua = route.name === 'dua' ? DUAS.find(d => d.id === route.id) : undefined;

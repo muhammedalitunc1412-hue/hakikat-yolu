@@ -33,7 +33,7 @@ export const fedek: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Fatıma, Peygamber\'den yaklaşık altı ay sonra vefat etti. Hz. Ali onu geceleyin defnetti, cenaze namazını kendisi kıldı; Halife Ebu Bekir\'e haber verilmedi. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 4240).' },
+      text: { tr: 'Küskünlük burada bitmedi. Kapının önü, hastalık günleri, gece defin ve gizli kabir sonraki hikâyededir: **Eyyâm-ı Fâtımiyye**. Buhari, konuşmamanın ve gece definin cümlesini de saklar.' },
       art: { bg: 'night', props: ['stars', 'moon'], actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 54, scale: 0.7 }, { kind: 'husayn', x: 62, scale: 0.65 }] },
       by: 'both',
     },
