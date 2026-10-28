@@ -1,5 +1,5 @@
 import React, { useEffect, useId, useMemo, useRef, useState } from 'react';
-import { AccessibilityInfo, Image, Platform, StyleSheet, View, type ImageSourcePropType } from 'react-native';
+import { AccessibilityInfo, Image, Platform, StyleSheet, Text, View, type ImageSourcePropType } from 'react-native';
 import Svg, {
   Circle, Defs, G, Line, Path, Polyline, RadialGradient, Rect, Stop, Text as SvgText,
 } from 'react-native-svg';
@@ -13,6 +13,28 @@ import { placeOverlay } from './overlayLabels';
 
 export const MAP_W = 360;
 export const MAP_H = 430;
+
+export type CrispLabel = {
+  key: string;
+  text: string;
+  x: number;
+  y: number;
+  size: number;
+  color: string;
+  italic?: boolean;
+};
+
+function vbToScreen(vbX: number, vbY: number, cam: Camera, width: number, height: number) {
+  const sx = width / MAP_W;
+  const sy = height / MAP_H;
+  const px = vbX * sx;
+  const py = vbY * sy;
+  const s = Math.max(0.001, cam.s);
+  return {
+    x: (px - width / 2) * s + width / 2 + cam.x,
+    y: (py - height / 2) * s + height / 2 + cam.y,
+  };
+}
 
 type Bounds = { minLat: number; maxLat: number; minLon: number; maxLon: number };
 type XY = { id: PlaceId; x: number; y: number; lat: number; lon: number };
@@ -621,6 +643,8 @@ export function BirdMap({
   wide,
   camera = 1,
   view,
+  deferText,
+  onCrispLabels,
 }: {
   width: number;
   markers: PlaceId[];
@@ -640,6 +664,9 @@ export function BirdMap({
   camera?: number;
   /** Camera translation, so labels can be culled to the visible window. */
   view?: Camera;
+  /** Detail map: text is drawn outside the scaled layer so it stays sharp. */
+  deferText?: boolean;
+  onCrispLabels?: (labels: CrispLabel[]) => void;
 }) {
   const uid = useId().replace(/[^a-zA-Z0-9]/g, '');
   const height = Math.max(1, Math.round(width * MAP_H / MAP_W));
@@ -801,6 +828,42 @@ export function BirdMap({
     return { i, role, curved, label, tw, lx, ly, tagOk };
   });
 
+  const crispKey = useRef('');
+  useEffect(() => {
+    if (!onCrispLabels) return;
+    if (!deferText) {
+      if (crispKey.current) { crispKey.current = ''; onCrispLabels([]); }
+      return;
+    }
+    const px = (base: number) => Math.max(12, Math.round(base * (width / MAP_W)));
+    const out: CrispLabel[] = [];
+    const push = (key: string, text: string, vbX: number, vbY: number, size: number, color: string, italic?: boolean) => {
+      if (!text) return;
+      const p = vbToScreen(vbX, vbY, cam, width, height);
+      if (p.x < -30 || p.y < -16 || p.x > width + 30 || p.y > height + 16) return;
+      out.push({ key, text, x: p.x, y: p.y, size, color, italic });
+    };
+    for (const l of overlayLabels) {
+      const base = l.kind === 'country' ? 15 : l.kind === 'capital' ? 13.5 : 12.5;
+      const color = l.kind === 'capital' ? '#f3e2a6' : l.kind === 'sea' || l.kind === 'river' ? '#e7f6f2' : '#f6ecd2';
+      push(l.key, l.text, l.x, l.y, px(base), color, l.kind === 'sea' || l.kind === 'river');
+    }
+    for (const id of labelIds) {
+      const pnt = points.find(q => q.id === id);
+      if (!pnt) continue;
+      const n = NUDGE[id];
+      push('place-' + id, PLACES[id].name, pnt.x + n.dx * unit, pnt.y + n.dy * unit, px(id === highlight ? 16 : 14), id === highlight ? '#f6e7a8' : '#f6f1e6');
+    }
+    for (const r of routes) {
+      if (!r.tagOk) continue;
+      push('km-' + r.i, r.label, r.lx, r.ly, px(13), '#f6f1e6');
+    }
+    const sig = out.map(l => `${l.key}@${l.x.toFixed(0)},${l.y.toFixed(0)}`).join('|');
+    if (sig === crispKey.current) return;
+    crispKey.current = sig;
+    onCrispLabels(out);
+  });
+
   return (
     <View style={{ width, height, overflow: 'hidden', backgroundColor: '#071820' }}>
       {plates.map(plate => (
@@ -839,7 +902,7 @@ export function BirdMap({
                 <Path d={starPath(l.star.x, l.star.y, l.star.r)} fill="#e4c56a" stroke="#1a140c" strokeWidth={Math.max(0.25, l.star.r * 0.14)} />
               </G>
             )}
-            {!!l.text && (
+            {!!l.text && !deferText && (
               <SvgText
                 x={l.x}
                 y={l.y}
@@ -902,7 +965,7 @@ export function BirdMap({
             {r.tagOk && (
               <G>
                 <Rect x={r.lx - (r.tw * unit) / 2} y={r.ly - 8 * unit} width={r.tw * unit} height={16 * unit} rx={8 * unit} fill="rgba(6,16,14,0.88)" stroke="rgba(228,197,106,0.7)" strokeWidth={0.7 * unit} />
-                <SvgText x={r.lx} y={r.ly + 3.5 * unit} fontSize={9 * unit} fontWeight="700" textAnchor="middle" fill="#f6f1e6" fontFamily={uiFont}>{r.label}</SvgText>
+                {!deferText && <SvgText x={r.lx} y={r.ly + 3.5 * unit} fontSize={9 * unit} fontWeight="700" textAnchor="middle" fill="#f6f1e6" fontFamily={uiFont}>{r.label}</SvgText>}
               </G>
             )}
           </G>
@@ -924,7 +987,7 @@ export function BirdMap({
           <Marker key={p.id} x={p.x} y={p.y} id={p.id} hot={p.id === highlight} n={compact ? undefined : numbers?.[p.id]} small={compact} pulse={animate && p.id === highlight ? pulse : 0} unit={unit} />
         ))}
 
-        {labelIds.map(id => {
+        {!deferText && labelIds.map(id => {
           const p = points.find(q => q.id === id);
           if (!p) return null;
           const n = NUDGE[id];

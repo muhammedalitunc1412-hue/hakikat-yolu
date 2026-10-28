@@ -6,7 +6,7 @@ import { MAP_FOOT, MAPS, distanceRows, meccaMedinaSummary, type MapEntry, type M
 import { MODERN_WHERE } from '../data/modern';
 import { TRAVEL_NOTE, formatDays, travelFor } from '../data/travel';
 import { tx, ui } from '../i18n';
-import { BirdMap, MAP_H, MAP_W, MapChrome, MapZoom, regionCamera, zoomBand, type Camera } from './BirdMap';
+import { BirdMap, MAP_H, MAP_W, MapChrome, MapZoom, regionCamera, zoomBand, type Camera, type CrispLabel } from './BirdMap';
 import { CamelIcon, Chevron, PinIcon } from './icons';
 import { C, TOP, align, font, usePageWidth } from './theme';
 import { useScrollMemory } from './scrollMemory';
@@ -86,6 +86,7 @@ export function MapDetail({ id, onBack, onOpenEvent }: { id: string; onBack: () 
   const [modern, setModern] = useState(false);
   const [zoom, setZoom] = useState(() => zoomBand(home.s));
   const [cam, setCam] = useState<Camera>(home);
+  const [crisp, setCrisp] = useState<CrispLabel[]>([]);
   const [fly, setFly] = useState(0);
   const seen = useRef(id);
   if (seen.current !== id) {
@@ -138,8 +139,31 @@ export function MapDetail({ id, onBack, onOpenEvent }: { id: string; onBack: () 
             setZoom(z => (z === band ? z : band));
           }}
         >
-          <BirdMap width={mapW} markers={map.show} lines={map.lines} highlight={map.focus} animate modern={modern} zoom={zoom} wide camera={cam.s} view={cam} />
+          <BirdMap width={mapW} markers={map.show} lines={map.lines} highlight={map.focus} animate modern={modern} zoom={zoom} wide camera={cam.s} view={cam} deferText onCrispLabels={setCrisp} />
         </MapZoom>
+        <View pointerEvents="none" style={{ position: 'absolute', left: 0, top: 0, right: 0, bottom: 0 }}>
+          {crisp.map(l => (
+            <Text
+              key={l.key}
+              style={{
+                position: 'absolute',
+                left: l.x - 96,
+                top: l.y - l.size * 0.85,
+                width: 192,
+                textAlign: 'center',
+                color: l.color,
+                fontSize: l.size,
+                lineHeight: l.size + 3,
+                fontWeight: '700',
+                fontStyle: l.italic ? 'italic' : 'normal',
+                fontFamily: font.sans,
+                textShadowColor: 'rgba(6,14,12,0.95)',
+                textShadowOffset: { width: 0, height: 1 },
+                textShadowRadius: 4,
+              }}
+            >{l.text}</Text>
+          ))}
+        </View>
         <MapChrome width={mapW} height={mapH} scale={cam.s} />
         <View pointerEvents="box-none" style={s.toggleWrap}>
           <Pressable
