@@ -68,7 +68,7 @@ export const hasan: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Muaviye 60\'ta ölünce yönetim oğlu Yezid\'e geçti. Medine\'de Hz. Hüseyin gibi bazı kişiler Yezid\'e biat konusunda çekimser kaldı. Kerbela\'ya giden yol böyle açıldı.' },
+      text: { tr: '**Muaviye** 60\'ta ölünce tahtı oğlu **Yezid**\'e bıraktı. Hilafet bir eve kapanmıştı. Hz. Hüseyin bu biatı eğmedi. Kerbela, bu saltanatın ucunda durur.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 30, label: { tr: 'Yezid' } }, { kind: 'crowd', x: 54, scale: 4 }, { kind: 'husayn', x: 78, label: { tr: 'Hz. Hüseyin' } }] },
       by: 'both',
     },

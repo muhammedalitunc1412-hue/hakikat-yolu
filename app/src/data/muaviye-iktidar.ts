@@ -36,7 +36,7 @@ export const muaviyeIktidar: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: "Yezid'in veliahtlığı, babadan oğula geçişin kapısını açtı. Şii kaynaklarda bu, Hz. Hasan ile yapılan sulhun halife tayin etmeme şartının çiğnenmesi sayılır. Şartın bu biçimde durduğu Sünni kitaplarda tartışmalıdır." },
+      text: { tr: "**Yezid**'in veliahtlığı, **Muaviye**'nin hilafeti saltanata çevirmesidir. Şii anlatıda Yezid'in ne ilmi ne takvası bu makama yetmezdi; içkiyle anılan bir oğul, babasının zoruyla ümmetin başına kondu. Bu, Hz. Hasan ile anılan halife tayin etmeme sözünün de çiğnenmesi sayılır." },
       art,
     },
     {

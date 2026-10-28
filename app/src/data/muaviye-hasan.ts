@@ -37,7 +37,7 @@ export const muaviyeHasan: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: "Hz. Hasan'ın zehirlenerek vefat ettiği birçok kaynakta geçer. Şii kitaplarda Muaviye'nin, eşi Cü'de bint el-Eş'as'a yüz bin dirhem ve Yezid ile evlilik vaat ettiği aktarılır. Vaad, Cü'de'nin Yezid ile evlenmesiydi. Rivayete göre para gönderilmiş, evlilik tutulmamıştır; bu ayrıntı kontrol edilmelidir." },
+      text: { tr: "Hz. Hasan'ın zehirlenerek vefat ettiği birçok kaynakta geçer. Şii kitaplarda **Muaviye**, eşi Cüde'ye para ve **Yezid** ile evlilik vaat ederek bu işi yoluna koyar. Amaç, tahtın oğula kalmasıdır. Vaadin tutulmadığı da anlatılır. Bu yol, Kerbela'da Yezid'in biat isteğine çıkar." },
       art,
     },
     {

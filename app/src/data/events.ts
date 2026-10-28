@@ -49,7 +49,7 @@ const KEYS: Record<string, string> = {
   "siffin": "Sıffin, mushaflar ve hakem",
   "sebb": "Minberlerde Hz. Ali'ye sövme",
   "hasan": "Hz. Hasan'ın barışı ve şehadeti",
-  "kerbela": "Hz. Hüseyin: zulme biat etmeyen",
+  "kerbela": "Yezid'e biat yok: Kerbela'nın on günü",
   "imamlar": "Kerbela'dan sonra imamet zinciri",
   "mezhepler": "Sakife'den Kerbela'ya mekteplerin doğuşu",
   "sadik": "İmam Sâdık ve ilim mektebi",

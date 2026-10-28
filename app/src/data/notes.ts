@@ -143,11 +143,11 @@ export const NOTES: Record<string, string[]> = {
     "Hz. Hasan zehirlenerek vefat etti; bu, tarih kitaplarında da anlatılır. Caferi mektepte o şehittir.",
   ],
   kerbela: [
-    "Muaviye 60 H'de ölünce yönetim oğlu Yezid'e geçti.",
-    "Hz. Hüseyin Yezid'e biat etmedi ve Kûfelilerin davetiyle yola çıktı.",
-    "Kafile Kerbela'da durduruldu ve su yolu kesildi.",
-    "Hz. Hüseyin 10 Muharrem 61'de Kerbela'da şehit edildi.",
-    "Ehl-i Beyt esir götürüldü; hasta olan Zeynelâbidîn sağ kaldı.",
+    "Muaviye hilafeti oğlu Yezid'e bıraktı. Hz. Hüseyin bu biatı reddetti.",
+    "Hürr kafileyi durdurdu; Aşûrâ sabahı tövbe edip Hz. Hüseyin'in safına geçti (el-İrşâd, cilt 2, s. 78 ve 99).",
+    "Su kesildi. Abbas ırmağa vardı. Ali Asgar'ı Harmala'nın oku vurdu (el-Lühûf, s. 169).",
+    "Ömer b. Sa'd'ın çağrısıyla atlar cesedi çiğnedi (Taberî, cilt 5, s. 455).",
+    "Esirler Kûfe'den Şam'a gitti. Yezid çubukla dudağa vurdu (Bihâr, cilt 45, s. 134).",
   ],
   imamlar: [
     "Hz. Hüseyin'den sonra imamet Zeynelâbidîn'e geçti.",
