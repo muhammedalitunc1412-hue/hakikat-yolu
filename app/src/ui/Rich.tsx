@@ -49,6 +49,21 @@ function emph(t: string): React.ReactNode[] {
   return out;
 }
 
+// **kalın vurgu** ve ==ayrı renk== içerik yazarının işaretidir.
+const MARK = /\*\*([^*]+)\*\*|==([^=]+)==/g;
+function marked(t: string): React.ReactNode[] {
+  const out: React.ReactNode[] = [];
+  let last = 0;
+  for (const m of t.matchAll(MARK)) {
+    if (m.index! > last) out.push(...emph(t.slice(last, m.index)));
+    const phrase = m[1] ?? m[2] ?? '';
+    out.push(<Text key={'m' + m.index} style={m[1] != null ? r.mark : r.accent}>{phrase}</Text>);
+    last = m.index! + m[0].length;
+  }
+  if (last < t.length) out.push(...emph(t.slice(last)));
+  return out.length ? out : emph(t);
+}
+
 export function Rich({ text, style, selectable }: { text: L | string | undefined; style?: StyleProp<TextStyle>; selectable?: boolean }) {
   const [open, setOpen] = useState<string | null>(null);
   const parts = split(tx(text));
@@ -58,7 +73,7 @@ export function Rich({ text, style, selectable }: { text: L | string | undefined
       <Text style={style} selectable={selectable}>
         {parts.map((p, i) => p.key
           ? <Text key={i} style={r.link} onPress={() => setOpen(p.key!)}>{p.t}</Text>
-          : <Text key={i}>{emph(p.t)}</Text>)}
+          : <Text key={i}>{marked(p.t)}</Text>)}
       </Text>
       <Modal visible={!!v} transparent animationType="fade" onRequestClose={() => setOpen(null)}>
         <Pressable style={r.backdrop} onPress={() => setOpen(null)}>
@@ -81,6 +96,8 @@ export function Rich({ text, style, selectable }: { text: L | string | undefined
 
 const r = themedStyles(() => StyleSheet.create({
   bold: { fontWeight: '800', color: C.cream },
+  mark: { fontWeight: '800', color: '#f6e7a8' },
+  accent: { fontWeight: '800', color: '#9be7c4' },
   link: { color: C.gold, textDecorationLine: 'underline', fontWeight: '700' },
   backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.72)', justifyContent: 'center', padding: 18 },
   card: { backgroundColor: C.card, borderRadius: 18, borderWidth: 1, borderColor: C.line, padding: 18, maxHeight: '86%' },

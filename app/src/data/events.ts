@@ -60,6 +60,15 @@ const KEYS: Record<string, string> = {
 
 export const EVENTS: HistEvent[] = [penceAba, ehlibeyt, aliKimdir, hayber, menzile, gadir, raziyye, sakife, fedek, fatimaVefat, istihlaf, osman, cemel, siffin, sebb, muaviyeKimdir, muaviyeAli, muaviyeHasan, muaviyeIktidar, hasan, kerbela, imamlar, mezhepler, sadik, muta, abdest, ibadetFarklari].map(ev => ({ ...ev, key: { tr: KEYS[ev.id] }, notes: (NOTES[ev.id] ?? []).map(tr => ({ tr })) }));
 
+// Öğretici sayfalar roman gibi sahnelenmez. Kısa not, kaynak ve vurgu yeter.
+export const TEACHING_IDS = new Set(['mezhepler', 'sadik', 'muta', 'abdest', 'ibadet-farklari']);
+export const isStory = (id: string) => !TEACHING_IDS.has(id);
+export function nextStory(id: string): HistEvent | undefined {
+  const i = EVENTS.findIndex(e => e.id === id);
+  for (let j = i + 1; j < EVENTS.length; j++) if (isStory(EVENTS[j].id)) return EVENTS[j];
+  return undefined;
+}
+
 // Ana ekranda gösterilen kategoriler (olay kimliklerine göre)
 export const CATEGORIES: { id: string; title: string; sub: string; ids: string[] }[] = [
   { id: 'ehlibeyt', title: 'Ehl-i Beyt ve Gadir', sub: 'Pence-i Âl-i Aba, Mübahele, Hz. Ali kimdir, Hayber, Tebük, Gadir Hum', ids: ['pence-aba', 'ehlibeyt', 'ali-kimdir', 'hayber', 'menzile', 'gadir'] },

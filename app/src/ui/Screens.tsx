@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react';
 import { FlatList, Image, Linking, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
-import type { Accept, Dispute, Dua, HistEvent, Source } from '../types';
+import type { Accept, Dispute, Dua, HistEvent, Scene, Source } from '../types';
 import { tx, ui } from '../i18n';
 import { SCENE_IMAGES } from '../data/sceneImages';
-import { CATEGORIES } from '../data/events';
+import { CATEGORIES, isStory, nextStory } from '../data/events';
+import { SCENE_VIDEOS } from '../data/sceneVideos';
 import { BORDERS_CREDIT } from '../data/borders';
 import { mapsForEvent } from '../data/maps';
 import { TRAVEL_METHOD } from '../data/travel';
@@ -17,6 +18,22 @@ const webHit = Platform.OS === 'web' ? { cursor: 'pointer' as const } : null;
 
 function norm(s: string) {
   return s.toLocaleLowerCase('tr').replace(/â/g, 'a').replace(/î/g, 'i').replace(/û/g, 'u').replace(/ı/g, 'i');
+}
+
+function EventCard({ e, i, onOpen }: { e: HistEvent; i: number; onOpen: (id: string) => void }) {
+  const red = e.id === 'kerbela';
+  return (
+    <Pressable onPress={() => onOpen(e.id)} accessibilityRole="button" style={({ pressed }) => [s.card, red && { backgroundColor: BLOOD.card, borderColor: BLOOD.lineStrong, borderLeftWidth: 4, borderLeftColor: BLOOD.gold }, pressed && s.pressed, webHit]}>
+      <View style={[s.numWrap, red && { backgroundColor: BLOOD.gold }]}><Text style={[s.num, red && { color: BLOOD.ink }]}>{i + 1}</Text></View>
+      <View style={{ flex: 1 }}>
+        <Text style={[s.cardTitle, red && { color: BLOOD.gold }, align()]}>{tx(e.title)}</Text>
+        <Text style={[s.cardDate, red && { color: BLOOD.gold }, align()]}>{tx(e.date)}</Text>
+        {!!e.key && <Text style={[s.keyLine, red && { color: BLOOD.gold }, align()]}>{tx(e.key)}</Text>}
+        <Text style={[s.cardHook, red && { color: BLOOD.dim }, align()]}>{tx(e.hook)}</Text>
+      </View>
+      <View style={{ marginTop: 4 }}><Chevron color={red ? BLOOD.gold : undefined} /></View>
+    </Pressable>
+  );
 }
 
 function Back({ onPress }: { onPress: () => void }) {
@@ -39,8 +56,12 @@ export function Home({ events, onOpen, onMethod, onDuas, onMaps, onQibla, onImam
   const sc = useScrollMemory('home');
   const width = usePageWidth();
   const [q, setQ] = useState('');
+  const [catI, setCatI] = useState(0);
+  const catRef = useRef<FlatList<(typeof CATEGORIES)[number]>>(null);
   const query = norm(q.trim());
   const wide = width >= 560;
+  const cardW = Math.min(width - 64, 460);
+  const gap = 12;
   let shown = 0;
   return (
     <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page} keyboardShouldPersistTaps="handled">
@@ -109,11 +130,11 @@ export function Home({ events, onOpen, onMethod, onDuas, onMaps, onQibla, onImam
         )}
       </View>
 
-      {CATEGORIES.map((cat, catIndex) => {
+      {query ? CATEGORIES.map((cat, catIndex) => {
         const list = cat.ids
           .map(id => events.find(e => e.id === id))
           .filter((e): e is HistEvent => !!e)
-          .filter(e => !query || norm([tx(e.title), tx(e.hook), tx(e.key), tx(e.date), cat.title].join(' ')).includes(query));
+          .filter(e => norm([tx(e.title), tx(e.hook), tx(e.key), tx(e.date), cat.title].join(' ')).includes(query));
         if (!list.length) return null;
         shown += list.length;
         return (
@@ -121,25 +142,52 @@ export function Home({ events, onOpen, onMethod, onDuas, onMaps, onQibla, onImam
             <Text style={s.catIndex}>{String(catIndex + 1).padStart(2, '0')}</Text>
             <Text style={[s.catTitle, align()]}>{cat.title}</Text>
             <Text style={[s.catSub, align()]}>{cat.sub}</Text>
-            {list.map((e, i) => {
-              // Kerbela'ya giden kart kan kırmızısı (içine girince açılan tema ile aynı)
-              const red = e.id === 'kerbela';
-              return (
-                <Pressable key={e.id} onPress={() => onOpen(e.id)} accessibilityRole="button" style={({ pressed }) => [s.card, red && { backgroundColor: BLOOD.card, borderColor: BLOOD.lineStrong, borderLeftWidth: 4, borderLeftColor: BLOOD.gold }, pressed && s.pressed, webHit]}>
-                  <View style={[s.numWrap, red && { backgroundColor: BLOOD.gold }]}><Text style={[s.num, red && { color: BLOOD.ink }]}>{i + 1}</Text></View>
-                  <View style={{ flex: 1 }}>
-                    <Text style={[s.cardTitle, red && { color: BLOOD.gold }, align()]}>{tx(e.title)}</Text>
-                    <Text style={[s.cardDate, red && { color: BLOOD.gold }, align()]}>{tx(e.date)}</Text>
-                    {!!e.key && <Text style={[s.keyLine, red && { color: BLOOD.gold }, align()]}>{tx(e.key)}</Text>}
-                    <Text style={[s.cardHook, red && { color: BLOOD.dim }, align()]}>{tx(e.hook)}</Text>
-                  </View>
-                  <View style={{ marginTop: 4 }}><Chevron color={red ? BLOOD.gold : undefined} /></View>
-                </Pressable>
-              );
-            })}
+            {list.map((e, i) => <EventCard key={e.id} e={e} i={i} onOpen={onOpen} />)}
           </View>
         );
-      })}
+      }) : (
+        <View style={{ marginTop: 22 }}>
+          <FlatList
+            ref={catRef}
+            data={CATEGORIES}
+            horizontal
+            keyExtractor={c => c.id}
+            showsHorizontalScrollIndicator={false}
+            snapToInterval={cardW + gap}
+            decelerationRate="fast"
+            contentContainerStyle={{ paddingRight: 28 }}
+            onMomentumScrollEnd={e => {
+              const i = Math.max(0, Math.min(CATEGORIES.length - 1, Math.round(e.nativeEvent.contentOffset.x / (cardW + gap))));
+              setCatI(i);
+            }}
+            renderItem={({ item: cat, index }) => {
+              const on = index === catI;
+              return (
+                <Pressable
+                  onPress={() => { setCatI(index); catRef.current?.scrollToOffset({ offset: index * (cardW + gap), animated: true }); }}
+                  accessibilityRole="button"
+                  accessibilityState={{ selected: on }}
+                  style={[s.catCard, { width: cardW, marginRight: gap }, on && s.catCardOn, webHit]}
+                >
+                  <Text style={s.catIndex}>{String(index + 1).padStart(2, '0')} / {String(CATEGORIES.length).padStart(2, '0')}</Text>
+                  <Text style={[s.catTitle, align()]} numberOfLines={2}>{cat.title}</Text>
+                  <Text style={[s.catSub, align(), { marginBottom: 0 }]} numberOfLines={3}>{cat.sub}</Text>
+                </Pressable>
+              );
+            }}
+          />
+          <View style={s.catDots}>
+            {CATEGORIES.map((c, i) => <View key={c.id} style={[s.dot, i === catI && s.dotOn]} />)}
+          </View>
+          <Text style={s.swipe}>Sola kaydır, sonraki başlıklar sağda</Text>
+          <View style={{ marginTop: 8 }}>
+            {(CATEGORIES[catI]?.ids ?? [])
+              .map(id => events.find(e => e.id === id))
+              .filter((e): e is HistEvent => !!e)
+              .map((e, i) => <EventCard key={e.id} e={e} i={i} onOpen={onOpen} />)}
+          </View>
+        </View>
+      )}
       {query && shown === 0 && <Text style={[s.empty, align()]}>{ui('noResult')}</Text>}
 
       <Pressable onPress={onMethod} accessibilityRole="button" style={({ pressed }) => [s.method, pressed && s.pressed, webHit]}>
@@ -226,18 +274,44 @@ function AcceptChip({ by }: { by: Accept }) {
 }
 
 type Panel = 'shia' | 'sunni' | 'disputes';
-type Page = HistEvent['scenes'][number] | 'video';
+type StoryPage =
+  | { kind: 'scene'; scene: Scene; n: number }
+  | { kind: 'video' }
+  | { kind: 'sources' };
 
-export function EventScreen({ ev, onBack, onOpenMap }: { ev: HistEvent; onBack: () => void; onOpenMap: (mapId: string) => void }) {
+function SceneCites({ ev, cites }: { ev: HistEvent; cites?: Scene['cites'] }) {
+  const [open, setOpen] = useState(false);
+  const items = (cites ?? []).flatMap(c => {
+    const src = (c.side === 'sunni' ? ev.sunni : ev.shia)[c.i];
+    return src ? [{ src, tone: c.side === 'sunni' ? C.sunni : C.shia }] : [];
+  });
+  if (!items.length) return null;
+  return (
+    <View style={{ marginTop: 14 }}>
+      <Pressable onPress={() => setOpen(v => !v)} accessibilityRole="button" style={s.citeBtn}>
+        <Text style={s.citeBtnText}>{open ? 'Kaynağı gizle' : `Kaynak · ${items.length}`}</Text>
+      </Pressable>
+      {open && items.map((it, i) => <SourceCard key={i} src={it.src} tone={it.tone} />)}
+    </View>
+  );
+}
+
+export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; onBack: () => void; onOpenMap: (mapId: string) => void; onNext?: (id: string) => void }) {
   const sc = useScrollMemory('event:' + ev.id);
   const width = usePageWidth();
   const [idx, setIdx] = useState(() => rememberedScene('event:' + ev.id));
   const [open, setOpen] = useState<Panel[]>([]);
-  const listRef = useRef<FlatList<Page>>(null);
+  const listRef = useRef<FlatList<StoryPage>>(null);
   const toggle = (p: Panel) => setOpen(o => (o.includes(p) ? o.filter(x => x !== p) : [...o, p]));
   const has = (p: Panel) => open.includes(p);
   const nDis = ev.disputes?.length ?? 0;
-  const pages: Page[] = [...ev.scenes, 'video'];
+  const story = isStory(ev.id);
+  const nxt = story ? nextStory(ev.id) : undefined;
+  const pages: StoryPage[] = [
+    ...ev.scenes.map((scene, n) => ({ kind: 'scene' as const, scene, n })),
+    ...(story && SCENE_VIDEOS[ev.id + '-video'] ? [{ kind: 'video' as const }] : []),
+    ...(story ? [{ kind: 'sources' as const }] : []),
+  ];
   const total = pages.length;
   const maps = mapsForEvent(ev.id);
 
@@ -293,7 +367,7 @@ export function EventScreen({ ev, onBack, onOpenMap }: { ev: HistEvent; onBack: 
           onMomentumScrollEnd={e => sync(e.nativeEvent.contentOffset.x)}
           onScrollEndDrag={e => sync(e.nativeEvent.contentOffset.x)}
           getItemLayout={(_, i) => ({ length: width, offset: width * i, index: i })}
-          renderItem={({ item, index }) => item === 'video' ? (
+          renderItem={({ item }) => item.kind === 'video' ? (
             <View style={{ width }}>
               <EventVideo evId={ev.id} width={width} />
               <View style={s.sceneText}>
@@ -301,12 +375,31 @@ export function EventScreen({ ev, onBack, onOpenMap }: { ev: HistEvent; onBack: 
                 <Text style={[s.dim, align(), { marginTop: 6 }]}>{ui('videoHint')}</Text>
               </View>
             </View>
+          ) : item.kind === 'sources' ? (
+            <View style={{ width, paddingHorizontal: 16, paddingTop: 8 }}>
+              <Text style={[s.catTitle, align()]}>Bu olay için bütün kaynaklar</Text>
+              <Text style={[s.catSub, align()]}>Bu hikâyedeki her sahnenin dayandığı kitaplar bir arada.</Text>
+              <Text style={[s.vLabel, { color: C.shia }]}>{ui('shiaSources')}</Text>
+              {ev.shia.length ? ev.shia.map((x, i) => <SourceCard key={'h' + i} src={x} tone={C.shia} />) : <Text style={s.dim}>{ui('none')}</Text>}
+              <Text style={[s.vLabel, { color: C.sunni }]}>{ui('sunniSources')}</Text>
+              {ev.sunni.length ? ev.sunni.map((x, i) => <SourceCard key={'s' + i} src={x} tone={C.sunni} />) : <Text style={s.dim}>{ui('none')}</Text>}
+              {nxt && onNext && (
+                <Pressable onPress={() => onNext(nxt.id)} accessibilityRole="button" style={({ pressed }) => [s.nextStory, pressed && s.pressed, webHit]}>
+                  <View style={{ flex: 1 }}>
+                    <Text style={s.nextKicker}>SONRAKİ HİKÂYE</Text>
+                    <Text style={s.nextTitle}>{tx(nxt.title)}</Text>
+                  </View>
+                  <Chevron color={C.ink} />
+                </Pressable>
+              )}
+            </View>
           ) : (
             <View style={{ width }}>
-              <SceneImage evId={ev.id} n={index + 1} title={tx(ev.title)} width={width} />
+              <SceneImage evId={ev.id} n={item.n + 1} title={tx(ev.title)} width={width} />
               <View style={s.sceneText}>
-                <Rich style={[s.sceneBody, align()]} text={item.text} selectable />
-                {!!item.by && <AcceptChip by={item.by} />}
+                <Rich style={[s.sceneBody, align()]} text={item.scene.text} selectable />
+                {!!item.scene.by && <AcceptChip by={item.scene.by} />}
+                {story && <SceneCites ev={ev} cites={item.scene.cites} />}
               </View>
             </View>
           )}
@@ -317,7 +410,7 @@ export function EventScreen({ ev, onBack, onOpenMap }: { ev: HistEvent; onBack: 
             <Text style={s.pagerIcon}>‹</Text>
           </Pressable>
           <View style={{ flex: 1, alignItems: 'center' }}>
-            <Text style={s.pagerLabel}>{idx < ev.scenes.length ? `${ui('scene')} ${idx + 1} / ${ev.scenes.length}` : ui('video')}</Text>
+            <Text style={s.pagerLabel}>{pages[idx]?.kind === 'video' ? ui('video') : pages[idx]?.kind === 'sources' ? 'Bütün kaynaklar' : `${ui('scene')} ${(pages[idx] && pages[idx].kind === 'scene' ? pages[idx].n : idx) + 1} / ${ev.scenes.length}`}</Text>
             <View style={s.dots}>
               {pages.map((_, i) => <View key={i} style={[s.dot, i === idx && s.dotOn]} />)}
             </View>
@@ -329,10 +422,12 @@ export function EventScreen({ ev, onBack, onOpenMap }: { ev: HistEvent; onBack: 
         {idx === 0 && <Text style={s.swipe}>Kaydır veya oklara bas</Text>}
 
         <View style={{ paddingHorizontal: 16, marginTop: 18, gap: 10 }}>
-          <View style={{ flexDirection: 'row', gap: 10 }}>
-            <Btn p="shia" label={ui('shiaSources')} n={ev.shia.length} color={C.shia} />
-            <Btn p="sunni" label={ui('sunniSources')} n={ev.sunni.length} color={C.sunni} />
-          </View>
+          {!story && (
+            <View style={{ flexDirection: 'row', gap: 10 }}>
+              <Btn p="shia" label={ui('shiaSources')} n={ev.shia.length} color={C.shia} />
+              <Btn p="sunni" label={ui('sunniSources')} n={ev.sunni.length} color={C.sunni} />
+            </View>
+          )}
           {nDis > 0 && <Btn p="disputes" label={ui('disputes')} n={nDis} color={C.warn} />}
         </View>
 
@@ -453,8 +548,8 @@ export function DuaScreen({ dua, onBack }: { dua: Dua; onBack: () => void }) {
 export function Method({ onBack }: { onBack: () => void }) {
   const sc = useScrollMemory('method');
   const paragraphs = [
-    'Bu uygulama Şii bakışını esas alır. Her olay önce hikâye olarak anlatılır; her sahnenin altında o anlatımı hangi mezhebin kaynaklarının kabul ettiği (Sünni ve Şii / Şii / Sünni) yazar.',
-    'Olayın sonunda "Şii kaynakları" ve "Sünni kaynakları" düğmelerine basınca ilgili kaynaklar açılır. Her kaynak kartında kitabın adı, numarası ve ne anlattığı bulunur. Şii kaynak ve yorum her zaman üstte gösterilir.',
+    'Bu uygulama Şii bakışını esas alır. Tarihî olaylar sahne sahne hikâye gibi anlatılır. Her sahnenin altında, o sahnenin dayandığı kaynak küçük bir düğmeyle açılır.',
+    'Hikâyenin son sayfası "Bu olay için bütün kaynaklar"dır. Oradan bir sonraki hikâyeye geçilir. Mezhep ve ibadet farkları gibi öğretici sayfalar sahne romanı değildir; kaynakları sayfanın altındaki düğmelerde durur.',
     '✓ Doğrulandı: Metin ve numara kaynağından okunmuştur. ⚠ Kontrol edilmeli: Numara ya da sayfa, yayın öncesinde birincil kaynaktan teyit edilecektir.',
     '"Ayrılıklar" düğmesi, iki geleneğin aynı olayı nasıl yorumladığını ya da bir rivayeti hangi kaynakların kabul edip etmediğini gösterir.',
     '"Düşünelim" bölümündeki sorular, kaynaklarda yazılanlardan hareketle okuyucuyu kendi sonucunu kurmaya davet eder.',
@@ -499,6 +594,14 @@ const s = themedStyles(() => StyleSheet.create({
   catIndex: { color: C.gold, fontFamily: font.sans, fontSize: 12, fontWeight: '800', letterSpacing: 1.5 },
   catTitle: { color: C.cream, fontFamily: font.serif, fontSize: 24, lineHeight: 30, fontWeight: '700', marginTop: 2 },
   catSub: { color: C.dim, fontFamily: font.sans, fontSize: 13.5, lineHeight: 20, marginTop: 3, marginBottom: 12 },
+  catCard: { backgroundColor: C.card, borderRadius: 18, padding: 16, minHeight: 132, borderWidth: 1, borderColor: C.line, justifyContent: 'center' },
+  catCardOn: { borderColor: C.gold, backgroundColor: '#1a332c' },
+  catDots: { flexDirection: 'row', justifyContent: 'center', gap: 5, marginTop: 10 },
+  citeBtn: { alignSelf: 'flex-start', borderWidth: 1, borderColor: C.lineStrong, borderRadius: 12, paddingHorizontal: 12, paddingVertical: 8 },
+  citeBtnText: { color: C.gold, fontFamily: font.sans, fontSize: 13, fontWeight: '800' },
+  nextStory: { flexDirection: 'row', alignItems: 'center', gap: 12, marginTop: 16, backgroundColor: C.gold, borderRadius: 16, padding: 14, minHeight: 72 },
+  nextKicker: { color: C.ink, fontFamily: font.sans, fontSize: 11, fontWeight: '800', letterSpacing: 1 },
+  nextTitle: { color: C.ink, fontFamily: font.serif, fontSize: 18, fontWeight: '700', marginTop: 2 },
   card: { flexDirection: 'row', gap: 12, alignItems: 'flex-start', backgroundColor: C.card, borderRadius: 18, padding: 14, marginBottom: 10, borderWidth: 1, borderColor: C.line },
   pressed: { opacity: 0.86 },
   numWrap: { width: 32, height: 32, borderRadius: 16, backgroundColor: C.gold, alignItems: 'center', justifyContent: 'center', marginTop: 2 },

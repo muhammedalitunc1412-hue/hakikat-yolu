@@ -25,7 +25,7 @@ export const abdest: HistEvent = {
     },
     {
       by: 'sunni',
-      text: { tr: 'Ebu Hureyre, Peygamber\'in "Topuklara ateşten vay" dediğini aktarır. Bu rivayet Sünni kaynaklarında da geçmektedir (Buhari, Sahih, No. 165). Aynı uyarı Abdullah b. Amr üzerinden de gelir (Müslim, Sahih). Halife Osman\'ın abdest tarifinde ayakların yıkandığı geçer (Buhari, Sahih; Müslim, Sahih). Çoğunluk Sünni mezhep yıkamayı farz sayar; Nevevî âlimlerin ittifakını aktarır. Câferî mektep, Mâide 6\'yı ayak meshi olarak okumayı sürdürür.' },
+      text: { tr: 'Ebu Hureyre, Peygamber\'in "Topuklara ateşten vay" dediğini aktarır (Buhari, Sahih, No. 165). Aynı uyarı Abdullah b. Amr üzerinden de gelir (Müslim, Sahih). Halife Osman\'ın abdest tarifinde ayakların yıkandığı da geçer (Buhari, Sahih; Müslim, Sahih). Câferî mektep bu sözleri, ayağın iyice temizlenmesi uyarısı olarak okur ve **Mâide 6**\'yı ayak meshi olarak uygulamayı sürdürür.' },
       art: { bg: 'oasis', props: ['well', 'palms'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'Abdest alan' } }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }] },
     },
     {

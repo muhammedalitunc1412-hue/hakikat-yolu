@@ -5,12 +5,19 @@ export const aliKimdir: HistEvent = {
   id: 'ali-kimdir',
   date: { tr: '600 (Mekke) - 11 H (632)', en: 'c. 600 (Mecca) - 11 AH (632)' },
   title: { tr: 'Hz. Ali kimdir?', en: 'Who is Imam Ali?' },
-  hook: { tr: 'Kâbe\'de dünyaya geldiği söylenir. Peygamber\'in yatağına yattı. Ona "ilmin kapısı" denir. Bu kişi kimdir?', en: 'Who is the man said to be born in the Kaaba, who lay in the Prophet\'s bed and is called the "gate of knowledge"?' },
+  hook: { tr: 'Kâbe\'nin içinde doğdu. Peygamber\'in yatağına yattı. İlim şehrinin kapısı odur.', en: 'Who is the man said to be born in the Kaaba, who lay in the Prophet\'s bed and is called the "gate of knowledge"?' },
   scenes: [
     {
-      text: { tr: 'Şia\'ya göre Hz. Ali Mekke\'de, Kâbe\'nin içinde doğdu. Annesi Fatıma bint Esed, doğum sancısıyla Kâbe\'ye sığındı. Rivayet Şii kaynaklarında güçlüdür. Sünni kaynaklarında da geçmektedir (Hâkim, el-Müstedrek). Doğum yeri konusunda Sünni âlimler arasında ihtilaf vardır.' },
+      text: { tr: 'Fatıma bint Esed\'in sancısı Kâbe\'nin dibinde tuttu. Allah\'ın evine sığındı. Duvar ona yol verdi, içeri girdi. **Hz. Ali** orada, Beytullah\'ın içinde dünyaya geldi. Bu doğum Sünni kitaplarda da, Şii kitaplarda da anlatılır. Ondan önce de sonra da Kâbe\'de doğan başka bir çocuk bilinmez. Bu, yalnız ona verilen bir ikramdır.' },
       art: { bg: 'dune-dusk', props: ['sun'], actors: [{ kind: 'woman', x: 30, label: { tr: 'Fatıma bint Esed' } }, { kind: 'ali', x: 66, scale: 0.6, label: { tr: 'Hz. Ali' } }] },
-      by: 'shia',
+      by: 'both',
+      cites: [
+        { side: 'sunni', i: 0 },
+        { side: 'sunni', i: 1 },
+        { side: 'shia', i: 0 },
+        { side: 'shia', i: 1 },
+        { side: 'shia', i: 2 },
+      ],
     },
     {
       text: { tr: 'Mekke\'de kıtlık vardı. Peygamber, amcası Ebu Talib\'in yükünü hafifletmek için küçük Ali\'yi yanına aldı. Hz. Ali çocukluğunu onun evinde, onun terbiyesiyle geçirdi. Bu çocukluk, Sünni ve Şii anlatılarda birlikte durur.' },
@@ -59,7 +66,8 @@ export const aliKimdir: HistEvent = {
     },
   ],
   sunni: [
-    { book: 'Hâkim, el-Müstedrek', ref: 'cilt 3 (Hz. Ali\'nin doğumu, Bakara 207 nüzulü; hadis numarası kontrol edilecek)', says: { tr: 'Hz. Ali\'nin Kâbe\'de doğduğu rivayeti ve Bakara 207\'nin Hz. Ali\'nin feda edişi hakkında indiği rivayeti (WikiShia Laylet\'ül-Mebît maddesinin atfı; kitap okunmadı).' }, grade: { tr: 'Kâbe\'de doğum konusunda Sünni âlimler arasında ihtilaf var' }, url: 'https://en.wikishia.net/view/Laylat_al-Mabit', status: 'check' },
+    { book: 'Hâkim en-Nîsâbûrî, el-Müstedrek ale\'s-Sahîhayn', ref: 'cilt 3, s. 483 (Dârü\'l-Ma\'rife baskısı)', says: { tr: 'Hâkim, Mus\'ab ez-Zübeyrî\'nin "Kâbe\'de ondan önce de sonra da kimse doğmadı" sözünü düzeltir ve "Haberler tevatür etmiştir: Fatıma bint Esed, Emîrü\'l-Mü\'minîn Ali b. Ebî Tâlib\'i Kâbe\'nin içinde doğurdu" der. İbnü\'l-Mülakkın, el-Bedrü\'l-Münîr, cilt 6, s. 489\'da bu cümlenin el-Müstedrek\'te Ali\'nin tercümesinde geçtiğini kaydeder.' }, grade: { tr: 'Hâkim\'in kendi hükmü; tevatür burada onun ifadesidir' }, status: 'verified' },
+    { book: 'Mes\'ûdî, Mürûcü\'z-Zeheb ve Meâdinü\'l-Cevher', ref: 'cilt 2, s. 349 (Dârü\'l-Endelüs, Beyrut)', says: { tr: 'Ali b. Ebî Tâlib\'in hilâfeti anlatılırken "Doğumu Kâbe\'de idi" denir.' }, status: 'verified' },
     { book: 'Tirmizi, el-Câmi\'', ref: 'No. 3734-3735 (Menâkıb; metin okunamadı, sunnah.com 403)', says: { tr: 'Hz. Ali\'nin erken müslümanlığı ile ilgili rivayetler; ilk müslüman sırası konusunda ihtilaf vardır.' }, status: 'check' },
     { book: 'Tirmizi, el-Câmi\'', ref: 'No. 3720 (Menâkıb; mü\'ahât)', says: { tr: 'Peygamber\'in Hz. Ali\'ye "dünyada ve ahirette kardeşimsin" demesi.' }, url: 'https://sunnah.com/tirmidhi:3720', status: 'check' },
     { book: 'Buhari, Sahih', ref: 'No. 2942 (Cihâd; Hayber sancağı)', says: { tr: 'Peygamber\'in Hayber\'de sancağı Allah ve Resulü\'nü seven ve onlar tarafından sevilen birine vereceğini söylemesi; kişi Hz. Ali olur.' }, grade: { tr: 'Buhari (sahih kitap)' }, url: 'https://sunnah.com/bukhari:2942', status: 'check' },
@@ -70,7 +78,9 @@ export const aliKimdir: HistEvent = {
     { book: 'İbn Hişâm, es-Sîre; Halebî, es-Sîre', ref: 'Hicret bölümü (WikiShia atfı; kitaplar okunmadı)', says: { tr: 'Hz. Ali\'nin hicret gecesi Peygamber\'in yatağında yatması.' }, status: 'check' },
   ],
   shia: [
-    { book: 'Şeyh Müfid, el-İrşâd', ref: 'Hz. Ali bölümü (cilt/sayfa kontrol edilecek)', says: { tr: 'Hz. Ali\'nin Kâbe\'de doğumu, Peygamber\'in himayesi ve faziletleri.' }, url: 'https://al-islam.org/kitab-al-irshad-book-shaykh-al-mufid', status: 'check' },
+    { book: 'Şeyh Müfid, el-İrşâd', ref: 'cilt 1, s. 5 (Müessesetü Âli\'l-Beyt)', says: { tr: 'Hz. Ali Cuma günü, 13 Receb, Fil yılından otuz yıl sonra Mekke\'de Beytullah\'ta doğdu. Ondan önce de sonra da Allah\'ın evinde doğan olmadı; bu, Allah\'ın ona ikramıdır. Annesi Fatıma bint Esed\'dir.' }, url: 'https://lib.eshia.ir/27035/1/5', status: 'verified' },
+    { book: 'Şeyh Sadûk, İlelü\'ş-Şerâi\'', ref: 'cilt 1, s. 135, hadis 3', says: { tr: 'Yezîd b. Ka\'neb\'den: Fatıma bint Esed sancılanınca Kâbe\'nin yanında dua etti. Evin arkası açıldı, içeri girdi, duvar kapandı.' }, url: 'https://lib.eshia.ir/10107/1/135', status: 'verified' },
+    { book: 'Şeyh Sadûk, el-Emâlî', ref: 's. 195 (Müessesetü\'l-Bi\'se; rivayet bir önceki sayfadan sürer)', says: { tr: 'Yezîd b. Ka\'neb: Kâbe\'nin arkası açıldı, Fatıma bint Esed girdi. Dördüncü gün Hz. Ali elinde çıktı. Sayfadaki dipnot aynı haberi İlelü\'ş-Şerâi\' 135/3 ile bağlar.' }, url: 'https://lib.eshia.ir/15033/1/195', status: 'verified' },
     { book: 'Tûsî, el-Emâlî', ref: 'sayfa 298, 466, 467 (WikiShia atfı; kitap okunmadı)', says: { tr: 'Leyletü\'l-Mebît ve Hz. Ali\'nin Peygamber\'in yatağına yatması.' }, url: 'https://en.wikishia.net/view/Laylat_al-Mabit', status: 'check' },
     { book: 'Meclisî, Bihârü\'l-Envâr', ref: 'cilt 19, sayfa 60, 92 (WikiShia atfı; kitap okunmadı)', says: { tr: 'Hicret gecesi olayı ve Bakara 207 rivayeti.' }, status: 'check' },
     { book: 'Tabâtabâî, el-Mîzân', ref: 'cilt 2 (Bakara 207; WikiShia atfı)', says: { tr: 'Bakara 207\'nin Hz. Ali hakkında indiği görüşü.' }, status: 'check' },
@@ -81,8 +91,8 @@ export const aliKimdir: HistEvent = {
   disputes: [
     {
       title: { tr: 'Kâbe\'de doğum' },
-      shia: { tr: 'Hz. Ali\'nin Kâbe içinde doğduğu rivayeti anlatılır ve Hâkim, el-Müstedrek\'e de bağlanır. Şia\'da bu doğum yaygın kabul görür ve onun bir faziletidir.' },
-      sunni: { tr: 'Hz. Ali\'nin Kâbe içinde doğduğu rivayeti anlatılır ve Hâkim, el-Müstedrek\'e de bağlanır. Sünni âlimler arasında kesin kabul görmez; bazıları bu doğumu Hakîm b. Hizâm\'a özgü sayar.' },
+      shia: { tr: 'Hz. Ali\'nin Kâbe\'de doğduğu hem Şii hem Sünni kitaplarda anlatılır. Şeyh Müfid el-İrşâd 1/5\'te, Şeyh Sadûk İlelü\'ş-Şerâi\' 1/135 ve el-Emâlî s. 195\'te bu doğumu onun fazileti olarak yazar.' },
+      sunni: { tr: 'Hz. Ali\'nin Kâbe\'de doğduğu hem Sünni hem Şii kitaplarda anlatılır. Hâkim el-Müstedrek 3/483\'te haberlerin tevatür ettiğini söyler. Mes\'ûdî Mürûcü\'z-Zeheb 2/349\'da "doğumu Kâbe\'de idi" der. İbnü\'l-Mülakkın (el-Bedrü\'l-Münîr 6/489) Hâkim\'in bu hükmünü zayıf sayar; cümle el-Müstedrek\'te durur.' },
     },
     {
       title: { tr: 'İlk müslüman kimdir?' },
