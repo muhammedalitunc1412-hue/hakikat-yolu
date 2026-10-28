@@ -2,27 +2,15 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Animated, Easing, Pressable, ScrollView, StyleSheet, Text, Vibration, View } from 'react-native';
 import Svg, { Circle, Defs, G, Line, LinearGradient, Path, RadialGradient, Rect, Stop, Text as SvgText } from 'react-native-svg';
 import * as Location from 'expo-location';
+import { Accelerometer, Magnetometer } from 'expo-sensors';
 import { ui } from '../i18n';
+import { angleDiff as diff, magneticDeclination, norm360, qiblaFrom, smoothAngle, trueHeadingFromMagnetic } from '../qibla/bearing';
+import { fieldLooksOff, headingFromSensors, type Vec3 } from '../qibla/orientation';
 import { C, TOP, align, font, usePageWidth } from './theme';
 
-// Kâbe koordinatları
-const KAABA = { lat: 21.4225, lon: 39.8262 };
 const rad = (d: number) => (d * Math.PI) / 180;
-const deg = (r: number) => (r * 180) / Math.PI;
-const norm360 = (d: number) => ((d % 360) + 360) % 360;
-// İki açı arasındaki en kısa fark (-180..180)
-const diff = (a: number, b: number) => ((a - b + 540) % 360) - 180;
 
-// Konumdan Kâbe'ye başlangıç yönü (kuzeyden saat yönünde derece) ve mesafe (km)
-export function qiblaFrom(lat: number, lon: number) {
-  const p1 = rad(lat), p2 = rad(KAABA.lat), dl = rad(KAABA.lon - lon);
-  const y = Math.sin(dl) * Math.cos(p2);
-  const x = Math.cos(p1) * Math.sin(p2) - Math.sin(p1) * Math.cos(p2) * Math.cos(dl);
-  const bearing = norm360(deg(Math.atan2(y, x)));
-  const a = Math.sin((p2 - p1) / 2) ** 2 + Math.cos(p1) * Math.cos(p2) * Math.sin(dl / 2) ** 2;
-  const km = 2 * 6371 * Math.asin(Math.sqrt(a));
-  return { bearing, km };
-}
+export { qiblaFrom };
 
 const DIRS = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
 const dirName = (b: number) => DIRS[Math.round(b / 45) % 8];
@@ -125,6 +113,7 @@ export function QiblaScreen({ onBack }: { onBack: () => void }) {
   const [status, setStatus] = useState<Status>('asking');
   const [pos, setPos] = useState<{ lat: number; lon: number } | null>(null);
   const [heading, setHeading] = useState<number | null>(null);
+  const [needsCal, setNeedsCal] = useState(false);
   const smooth = useRef<number | null>(null);
   const [retry, setRetry] = useState(0);
 
@@ -139,16 +128,48 @@ export function QiblaScreen({ onBack }: { onBack: () => void }) {
   }, [heading, anim]);
 
   useEffect(() => {
-    let sub: Location.LocationSubscription | null = null;
+    let headingSub: Location.LocationSubscription | null = null;
+    let accSub: { remove: () => void } | null = null;
+    let magSub: { remove: () => void } | null = null;
     let alive = true;
+    const grav: { current: Vec3 | null } = { current: null };
+    const mag: { current: Vec3 | null } = { current: null };
+    const decl = { current: 0 };
+    const sensorOn = { current: false };
+    const fieldOff = { current: false };
+    const lowAcc = { current: false };
+    const refreshCal = () => setNeedsCal(fieldOff.current || lowAcc.current);
+
+    const push = (magnetic: number | null, alreadyTrue: number | null) => {
+      const v = alreadyTrue != null && alreadyTrue >= 0
+        ? alreadyTrue
+        : magnetic != null && magnetic >= 0
+          ? trueHeadingFromMagnetic(magnetic, decl.current)
+          : null;
+      if (v == null) return;
+      const next = smoothAngle(smooth.current, v, 0.28);
+      smooth.current = next;
+      setHeading(next);
+    };
+
+    const onSensors = () => {
+      if (!grav.current || !mag.current) return;
+      const raw = headingFromSensors(grav.current, mag.current);
+      if (raw == null) return;
+      const strength = Math.hypot(mag.current.x, mag.current.y, mag.current.z);
+      fieldOff.current = fieldLooksOff(strength);
+      refreshCal();
+      push(raw, trueHeadingFromMagnetic(raw, decl.current));
+    };
+
     (async () => {
       try {
         setStatus('asking');
+        setNeedsCal(false);
         const perm = await Location.requestForegroundPermissionsAsync();
         if (!alive) return;
         if (perm.status !== 'granted') { setStatus('denied'); return; }
         setStatus('locating');
-        // Önce güncel konum (en fazla 8 sn); olmazsa en son bilinen konum
         const fresh = await Promise.race([
           Location.getCurrentPositionAsync({ accuracy: Location.Accuracy.Balanced }).catch(() => null),
           new Promise<null>(res => setTimeout(() => res(null), 8000)),
@@ -157,20 +178,37 @@ export function QiblaScreen({ onBack }: { onBack: () => void }) {
         if (!alive) return;
         if (!p) { setStatus('error'); return; }
         setPos({ lat: p.coords.latitude, lon: p.coords.longitude });
+        decl.current = magneticDeclination(p.coords.latitude, p.coords.longitude);
         setStatus('ready');
-        sub = await Location.watchHeadingAsync(h => {
-          const v = h.trueHeading >= 0 ? h.trueHeading : h.magHeading;
-          if (v < 0) return;
-          const prev = smooth.current;
-          const next = prev == null ? v : norm360(prev + diff(v, prev) * 0.25);
-          smooth.current = next;
-          setHeading(next);
+
+        const magOk = await Magnetometer.isAvailableAsync().catch(() => false);
+        const accOk = await Accelerometer.isAvailableAsync().catch(() => false);
+        if (alive && magOk && accOk) {
+          sensorOn.current = true;
+          Magnetometer.setUpdateInterval(80);
+          Accelerometer.setUpdateInterval(80);
+          accSub = Accelerometer.addListener(v => { grav.current = v; onSensors(); });
+          magSub = Magnetometer.addListener(v => { mag.current = v; onSensors(); });
+        }
+
+        headingSub = await Location.watchHeadingAsync(h => {
+          lowAcc.current = h.accuracy <= 1;
+          refreshCal();
+          if (sensorOn.current) return;
+          const magnetic = h.magHeading >= 0 ? h.magHeading : null;
+          const tru = h.trueHeading >= 0 ? h.trueHeading : null;
+          push(magnetic, tru);
         });
       } catch {
         if (alive) setStatus('error');
       }
     })();
-    return () => { alive = false; sub?.remove(); };
+    return () => {
+      alive = false;
+      headingSub?.remove();
+      accSub?.remove();
+      magSub?.remove();
+    };
   }, [retry]);
 
   const q = useMemo(() => (pos ? qiblaFrom(pos.lat, pos.lon) : null), [pos]);
@@ -219,6 +257,13 @@ export function QiblaScreen({ onBack }: { onBack: () => void }) {
               <Text style={[s.pillText, { color: pill.color }]}>{pill.text}</Text>
             </View>
 
+            {needsCal && (
+              <View style={s.cal}>
+                <Text style={s.calTitle}>{ui('qiblaCalTitle')}</Text>
+                <Text style={[s.calBody, align()]}>{ui('qiblaCal')}</Text>
+              </View>
+            )}
+
             <View style={{ alignItems: 'center', marginTop: 20 }}>
               <View style={[s.halo, { width: size + 30, height: size + 30, borderRadius: (size + 30) / 2, backgroundColor: aligned ? 'rgba(61,190,134,0.10)' : 'rgba(228,197,106,0.06)' }]} />
               <View style={{ width: size, height: size }}>
@@ -264,6 +309,9 @@ const s = StyleSheet.create({
   statLabel: { color: C.faint, fontFamily: font.sans, fontSize: 11, fontWeight: '800', letterSpacing: 2 },
   statValue: { color: C.cream, fontFamily: font.serif, fontSize: 26, fontWeight: '700', marginTop: 6 },
   statSub: { color: C.dim, fontFamily: font.sans, fontSize: 13, marginTop: 2 },
+  cal: { marginTop: 16, backgroundColor: 'rgba(224,164,90,0.12)', borderRadius: 16, borderWidth: 1, borderColor: C.warn, padding: 14 },
+  calTitle: { color: C.warn, fontFamily: font.sans, fontSize: 14, fontWeight: '800', letterSpacing: 0.4 },
+  calBody: { color: C.cream, fontFamily: font.sans, fontSize: 15, lineHeight: 22, marginTop: 6 },
   hint: { color: C.faint, fontFamily: font.sans, fontSize: 13, lineHeight: 19, marginTop: 20, textAlign: 'center' },
   privacy: { color: C.faint, fontFamily: font.sans, fontSize: 12, lineHeight: 17, marginTop: 8, textAlign: 'center' },
 });
