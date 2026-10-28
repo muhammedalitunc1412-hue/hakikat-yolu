@@ -146,6 +146,7 @@ export const NOTES: Record<string, string[]> = {
     "Muaviye hilafeti oğlu Yezid'e bıraktı. Hz. Hüseyin bu biatı reddetti.",
     "9 Muharrem akşamı Şimr, Abbas ve kardeşlerine eman uzattı. Onlar lanetledi (el-İrşâd 2/89, Taberî 5/416, el-Lühûf s. 150).",
     "Hürr kafileyi durdurdu; Aşûrâ sabahı tövbe edip Hz. Hüseyin'in safına geçti (el-İrşâd, cilt 2, s. 78 ve 99).",
+    "Aşûrâ öğlesinde korku namazı kılındı. Saîd bedeniyle siper oldu (Taberî 5/441, el-Lühûf s. 165, Bihâr 45/21).",
     "Su kesildi. Alemdar Abbas ırmağa vardı. Ali Asgar'ı Harmala'nın oku vurdu (el-Lühûf, s. 169).",
     "Ali b. Hüseyin hastaydı. Zeynep başında bekliyordu. Çadırda öldürmek istediler (el-İrşâd 2/93 ve 2/113).",
     "Başlar aynı gün Kûfe'de İbn Ziyâd'a gönderildi (el-İrşâd 2/113). Yol Şam'da Yezid'e varır (Bihâr, cilt 45, s. 134).",
