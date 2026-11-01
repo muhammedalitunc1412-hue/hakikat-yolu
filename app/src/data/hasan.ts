@@ -23,17 +23,17 @@ export const hasan: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Şam\'da Muaviye, ordusuyla hazır bekliyordu. İki taraf birbirine yaklaştı. Ortada yeni bir iç savaş tehlikesi vardı.' },
+      text: { tr: 'Şam\'da **Muaviye** ticaret yollarını elinde tutuyordu. Çok zengindi. Ordusuyla Kûfe üzerine yürüdü. İki taraf birbirine yaklaştı. Ortada yeni bir iç savaş tehlikesi vardı.' },
       art: { bg: 'battle', props: ['flags', 'tents'], actors: [{ kind: 'crowd', x: 24, scale: 7 }, { kind: 'man', x: 78, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Hasan, kan dökülmesin diye Muaviye ile anlaştı ve yönetimi ona bıraktı. Bu yıla Âmü\'l-Cemâa denir. Anlamı birlik yılıdır. O, kardeş kanının dökülmesini durdurmayı seçti.' },
+      text: { tr: '**Muaviye** hile, alış ve rüşvetle **Hz. Hasan**\'ın komutanlarını satın aldı. **Ubeydullah b. Abbas** gece ordudan ayrılıp **Muaviye**\'nin yanına geçti. Ordu içten çürüdü. **Hz. Hasan** güçsüz kaldı. Kan dökülmesin, ==Ehl-i Beyt== dostları kırılmasın diye savaşı bitirdi. Yönetim **Muaviye**\'ye geçti. Bu yıla Âmü\'l-Cemâa denir. Anlamı birlik yılıdır.' },
       art: { bg: 'dawn', props: ['sun', 'scroll'], actors: [{ kind: 'hasan', x: 34, label: { tr: 'Hz. Hasan' } }, { kind: 'man', x: 68, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Anlaşmanın şartları kaynaklara göre değişir. Hz. Hasan hakkından vazgeçmedi. Durum bunu gerektirdiği için sulha razı oldu. Şartların sonradan bozulduğu da vurgulanır.' },
+      text: { tr: 'Anlaşma yazıya geçti. **Hz. Hasan** hakkından vazgeçmedi. **Muaviye** Allah\'ın kitabıyla yürüyecek, kimseye sövdürmeyecek, kendinden sonra halife dikmeyecekti. Bu şartları sonra ==çiğnedi==. Minberlerde **Hz. Ali**\'ye lanet okundu.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'hasan', x: 50, pose: 'sit', label: { tr: 'Hz. Hasan' } }] },
       by: 'shia',
     },
@@ -43,7 +43,8 @@ export const hasan: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: '**Muaviye**, **Yezid**\'in veliahtlığı için **Cü\'de**\'ye yüz bin dirhem ve Yezid ile evlilik vaat etti. Zehir, bu vaadin karşılığında verildi. **Hz. Hasan** şehit sayılır. Peygamber\'in seyyid dediği torun ölünce taht oğula açıldı.' },
+      text: { tr: 'Medine\'de **Muaviye**, **Hz. Hasan**\'ın karısı **Cüde bint Eş\'as**\'a oğlu **Yezid**\'le evlendirme vaadi ve yüz bin dirhem verdi. Zehir bu pazarlıkla içirildi. **Hz. Hasan** şehit oldu. **Muaviye** vaadini tutmadı. Ne evlilik oldu ne para tamamlandı. Peygamber\'in seyyid dediği torun ölünce taht oğula açıldı.' },
+      cites: [{ side: 'shia', i: 5 }, { side: 'shia', i: 9 }],
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 24, label: { tr: 'Muaviye' } }, { kind: 'woman', x: 50, label: { tr: 'Cü\'de' } }, { kind: 'hasan', x: 76, pose: 'sit', label: { tr: 'Hz. Hasan' } }] },
       by: 'shia',
     },
@@ -99,6 +100,7 @@ export const hasan: HistEvent = {
     { book: 'Kuleynî, el-Kâfî', ref: 'cilt 8, sayfa 167 (WikiShia aktarımı)', says: { tr: 'İmam Sâdık\'tan: Hz. Hasan\'ı zehirleyen Cü\'de\'dir.' }, status: 'check' },
     { book: 'Tabersî, el-İhticâc', ref: 'cilt 2, sayfa 13 (WikiShia aktarımı)', says: { tr: 'Bazı rivayetlere göre zehri Muaviye Cü\'de\'ye verdi.' }, status: 'check' },
     { book: 'İbn Ebi\'l-Hadîd, Şerhu Nehci\'l-Belâğa', ref: 'cilt 16, sayfa 11 (WikiShia aktarımı)', says: { tr: 'Muaviye\'ye atfedilen "Peygamber\'in oğluna zehirle yaptığınızı oğluma yapmanızdan korkarım" sözü. Kimin kime söylediği ve sıhhati doğrulanmadı.' }, status: 'check' },
+    { book: 'Meclisî, Bihârü\'l-Envâr', ref: 'Hz. Hasan\'ın zehirlenmesi (cilt ve sayfa kilitlenmedi)', says: { tr: 'Muaviye\'nin Cüde bint Eş\'as\'a Yezid\'le evlilik ve yüz bin dirhem vaat ederek Hz. Hasan\'ı zehirlettiği, vaadini tutmadığı nakledilir. Sayfa uydurulmadı.' }, status: 'check' },
   ],
   disputes: [
     {
@@ -136,5 +138,5 @@ export const hasan: HistEvent = {
     { tr: 'Sulh şartları ve vefat, kitaplarda farklı anlatılıyor. Böyle bir yerde hangi anlatıya neden güvenirsiniz?' },
     { tr: 'Hz. Hasan yönetimi barış için bırakırken, sonraki nesilde yönetim babadan oğula geçti. Bu değişim, Hz. Hüseyin\'in duruşunu anlamakta size ne söyler?' },
   ],
-  summary: { tr: 'Peygamber\'in seyyid dediği Hz. Hasan, babasının şehadetinden sonra biat aldı ve kan dökülmesin diye yönetimi Muaviye\'ye bıraktı. Yaklaşık on yıl sonra zehirlenerek vefat etti. Cenazesinde gerginlik çıktı; Hz. Hüseyin kanı durdurdu. Ardından yönetim Yezid\'e geçti.' },
+  summary: { tr: 'Peygamber\'in seyyid dediği Hz. Hasan, babasının şehadetinden sonra biat aldı. Muaviye orduyu rüşvetle satın alınca kan dökülmesin diye savaşı bitirdi. Sulh şartları sonra çiğnendi. Yaklaşık on yıl sonra zehirlenerek vefat etti.' },
 };

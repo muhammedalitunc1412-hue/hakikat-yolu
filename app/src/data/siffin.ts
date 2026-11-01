@@ -56,7 +56,7 @@ export const siffin: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Ramazan 40\'ta Kûfe Ulu Camii\'nde sabah namazında Haricilerden İbn Mülcem, **Hz. Ali**\'yi zehirli kılıçla yaraladı. **Hz. Ali** iki gün sonra vefat etti. Oğlu **Hz. Hasan**\'a vasiyet etti. Hasan, kan dökülmesin diye yönetimi **Muaviye**\'ye bırakacaktı. Gadir\'de ona verilen hak, bu vefatla sona erdi.' },
+      text: { tr: 'Ramazan 40\'ta Kûfe Ulu Camii\'nde sabah namazında Haricilerden İbn Mülcem, **Hz. Ali**\'yi zehirli kılıçla yaraladı. **Hz. Ali** iki gün sonra vefat etti. Oğlu **Hz. Hasan**\'a vasiyetini bıraktı. Yönetimi **Muaviye**\'ye devret demedi. O devir sonra geldi. Şam\'ın parası, **Hz. Hasan**\'ın ordusunu içten satın aldı. Gadir\'de ilan edilen hak bu vefatla bitmedi.' },
       art: { bg: 'dawn', props: ['moon'], actors: [{ kind: 'ali', x: 42, pose: 'sit', label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 66, label: { tr: 'Hz. Hasan' } }, { kind: 'crowd', x: 86, scale: 4 }] },
       by: 'both',
     },

@@ -12,19 +12,19 @@ export const muaviyeHasan: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Kûfe\'de **Hz. Ali** şehit olunca halk **Hz. Hasan**\'a biat etti. Biat, bağlılık sözüdür. Peygamber\'in seyyid dediği Hasan, babası yeni şehit olmuşken yönetimi üstlendi. **Muaviye** Şam\'dan büyük bir orduyla yürüdü. Ordunun içine gizlice mektup saldı. Kumandanların bir kısmı, onun safını içeriden böldü.' },
+      text: { tr: 'Kûfe\'de **Hz. Ali** şehit olunca halk **Hz. Hasan**\'a biat etti. Biat, bağlılık sözüdür. Peygamber\'in seyyid dediği Hasan yönetimi üstlendi. Babası vasiyetinde yönetimi **Muaviye**\'ye devret dememişti. **Muaviye** Şam\'daki ticaret yollarını elinde tutuyordu. Çok zengindi. Büyük bir orduyla yürüdü. Hile, alış ve rüşvetle komutanları satın aldı. **Ubeydullah b. Abbas** gece **Muaviye**\'nin yanına geçti. Ordu içten çürüdü. **Hz. Hasan** güçsüz kaldı.' },
       art,
       cites: [{ side: 'shia', i: 1 }],
     },
     {
       by: 'both',
-      text: { tr: 'Kûfe\'de **Hz. Hasan**, kan dökülmesin diye yönetimi bıraktı. Peygamber, "Bu oğlum seyyiddir. Allah onunla iki büyük grubu barıştıracak" demişti. Bu sulh zayıflık değildi. O, ümmetin kanını durdurmak için bunu yaptı. Karşı taraf bu merhameti teslim saydı.' },
+      text: { tr: 'Kûfe\'de **Hz. Hasan**, kan dökülmesin ve ==Ehl-i Beyt== dostları kırılmasın diye savaşı bitirdi. Yönetim **Muaviye**\'ye geçti. Peygamber, "Bu oğlum seyyiddir. Allah onunla iki büyük grubu barıştıracak" demişti. Bu sulh zayıflık değildi. Satın alınmış bir ordunun içinde kanı durdurmaktı.' },
       art,
       cites: [{ side: 'sunni', i: 0 }, { side: 'shia', i: 3 }],
     },
     {
       by: 'shia',
-      text: { tr: 'Kûfe\'de yapılan sulhte şart açıktı. **Muaviye** Allah\'ın kitabı ve Peygamber\'in sünnetiyle yürüyecek, kimseye sövdürmeyecek, kendinden sonra halife dikmeyecekti. **Hz. Hasan**, ==Ehl-i Beyt==\'in ırzını ve minberi bu sözle korumak istedi. Şartlar yazıya geçti. Muaviye bunları tutmadı.' },
+      text: { tr: 'Kûfe\'de yapılan sulhte şart açıktı. **Muaviye** Allah\'ın kitabı ve Peygamber\'in sünnetiyle yürüyecek, kimseye sövdürmeyecek, kendinden sonra halife dikmeyecekti. **Hz. Hasan**, ==Ehl-i Beyt==\'in ırzını ve minberi bu sözle korumak istedi. Şartlar yazıya geçti. **Muaviye** bu antlaşmanın şartlarını sonra ==çiğnedi==.' },
       art,
       cites: [{ side: 'shia', i: 1 }, { side: 'shia', i: 3 }],
     },
@@ -42,7 +42,7 @@ export const muaviyeHasan: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: 'Şii kitaplarda, Medine\'de **Muaviye**, **Hz. Hasan**\'ın eşi **Cüde**\'ye para ve **Yezid** ile evlilik vaat etti. Zehir bu vaatle verildi. Amaç, tahtın oğula kalmasıydı. Vaadin tutulmadığı da anlatılır. Peygamber\'in seyyidi, babasının katilinin kurduğu düzende şehit oldu. Bu yol, Kerbela\'da **Yezid**\'in biatına çıkar.' },
+      text: { tr: 'Medine\'de **Muaviye**, **Hz. Hasan**\'ın karısı **Cüde bint Eş\'as**\'a oğlu **Yezid**\'le evlendirme vaadi ve yüz bin dirhem verdi. Zehir bu pazarlıkla içirildi. Amaç, tahtın oğula kalmasıydı. **Muaviye** vaadini tutmadı. Ne evlilik oldu ne para tamamlandı. Peygamber\'in seyyidi, babasının katilinin kurduğu düzende şehit oldu. Bu yol, Kerbela\'da **Yezid**\'in biatına çıkar.' },
       art,
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }],
     },
@@ -68,6 +68,7 @@ export const muaviyeHasan: HistEvent = {
     { book: 'Şeyh Müfid, el-İrşâd', ref: 'Hz. Hasan bölümü (sayfa kontrol edilecek)', says: { tr: "Zehirlenme, Cü'de ve Muaviye'nin vaadi." }, status: 'check' },
     { book: 'Ebü\'l-Ferec el-İsfahânî, Mekâtilü\'t-Tâlibiyyîn', ref: 'Hz. Hasan bölümü (sayfa kontrol edilecek)', says: { tr: "Sulh şartları, Muaviye'nin Nuhayle konuşması ve zehirlenme." }, status: 'check' },
     { book: 'İbn Ebi\'l-Hadîd, Şerhu Nehci\'l-Belâğa', ref: 'Sulh bölümü (cilt/sayfa kontrol edilecek)', says: { tr: "Muaviye'nin şartlara bakışı ve Hz. Hasan'ın sulhunun gerekçeleri." }, status: 'check' },
+    { book: 'Taberî, Târîh; Şeyh Müfid, el-İrşâd', ref: '41 H, Ubeydullah b. Abbas (sayfa kilitlenmedi)', says: { tr: 'Hz. Hasan\'ın komutanı Ubeydullah b. Abbas\'ın gece Muaviye\'nin yanına geçtiği anlatılır. Sayfa uydurulmadı.' }, status: 'check' },
     { book: 'WikiShia, Peace treaty of Imam al-Hasan (ikincil)', ref: 'Madde', says: { tr: "Sulh şartları ve Muaviye'nin bunlara uymaması." }, url: 'https://en.wikishia.net/view/Peace_Treaty_of_Imam_al-Hasan_(a)', status: 'check' },
   ],
   disputes: [
@@ -87,5 +88,5 @@ export const muaviyeHasan: HistEvent = {
     { tr: "Sulhun ardından minberlerde sövme yayıldı ve veliahtlık gündeme geldi. Hz. Hasan'ın niyeti ile sonraki uygulamalar arasındaki fark size ne söylüyor?" },
     { tr: "Bir olay birçok kitapta geçiyor, fail ise ihtilaflı kalıyor. Böyle bir yerde nasıl sakin düşünürsünüz?" },
   ],
-  summary: { tr: "Hz. Hasan, kan dökülmesin diye yönetimi Muaviye'ye bıraktı. Peygamber'in onu seyyid diye anması bu sulha işaret edilerek okunur. Hz. Hasan 50 H civarında zehirlenerek vefat etti. Şii kaynaklar bunu Muaviye ve Cü'de ile anlatır; İbn Teymiye ve İbn Kesîr, Muaviye'nin rolünü sabit görmez." },
+  summary: { tr: "Muaviye Şam'ın ticaret yollarıyla zengindi. Ubeydullah b. Abbas'ı ve komutanları satın aldı. Hz. Hasan kan dökülmesin diye savaşı bitirdi. Muaviye sulhun şartlarını çiğnedi. Hz. Hasan 50 H civarında zehirlenerek vefat etti." },
 };

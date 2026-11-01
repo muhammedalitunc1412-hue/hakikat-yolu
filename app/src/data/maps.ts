@@ -164,7 +164,7 @@ export const MAPS: MapEntry[] = [
     show: ['kufe', 'kerbela', 'sam', 'mekke', 'medine'],
     lines: [['kufe', 'mekke'], ['kufe', 'medine'], ['kufe', 'sam'], ['kufe', 'kerbela']],
     paragraphs: [
-      'Kûfe, Fırat kıyısında, Hz. Ali\'nin hilafet merkezi yaptığı şehirdir. Cemel ve Sıffin için ordu buradan çıktı. Hz. Ali, Kûfe Ulu Camii\'nde sabah namazında yaralandı ve burada şehit oldu. Hz. Hasan biatı Kûfe\'de aldı; iç savaşı durdurmak için yönetimi Muaviye\'ye bıraktı, sonra Medine\'ye döndü.',
+      'Kûfe, Fırat kıyısında, Hz. Ali\'nin hilafet merkezi yaptığı şehirdir. Cemel ve Sıffin için ordu buradan çıktı. Hz. Ali, Kûfe Ulu Camii\'nde sabah namazında yaralandı ve burada şehit oldu. Hz. Hasan biatı Kûfe\'de aldı. Muaviye orduyu rüşvetle çürütünce kan dökülmesin diye savaşı bitirdi, sonra Medine\'ye döndü.',
       'Şehir bugünkü Necef\'in hemen yanındadır. Nokta Ulu Cami\'dir. Kerbela, Fırat\'ın batısında, bir günlük yoldadır. Şam, Muaviye\'nin merkezidir.',
     ],
     roadNotes: [

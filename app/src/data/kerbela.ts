@@ -16,10 +16,10 @@ export const kerbela: HistEvent = {
   hook: { tr: 'Yezid\'e biat yoktu. Su kesildi. On Muharrem\'de Ehl-i Beyt şehit edildi.', en: 'No bay\'ah to Yazid. The water was cut. The Ahl al-Bayt were killed on the tenth of Muharram.' },
   scenes: [
     {
-      text: { tr: '**Hz. Hüseyin**, Gadir\'de eli kaldırılan hakkın torunuydu. Peygamber, onu ve **Hz. Hasan**\'ı cennet gençlerinin efendisi diye anmıştı. Hasan, kan dökülmesin diye sulh yapmıştı. Sonra zehirlendi. **Muaviye** ölünce tahtı oğlu **Yezid**\'e bıraktı. Hilafet bir saltanattı. Yezid\'in bu işe ne ilmi ne takvası vardı. Medine\'de biat istendi. Biat, bağlılık sözüdür. Hüseyin bu biatı vermedi.' },
+      text: { tr: '**Hz. Hüseyin**, Gadir\'de eli kaldırılan hakkın torunuydu. Peygamber, onu ve **Hz. Hasan**\'ı cennet gençlerinin efendisi diye anmıştı. Hasan, kan dökülmesin diye sulh yapmıştı. Ordu satın alınınca savaşı bitirmiş, sonra zehirlenmişti. **Muaviye** ölünce tahtı oğlu **Yezid**\'e bıraktı. **Yezid** dinsizdi. Şaraba düşkündü. Maymun oynatır, köpek ve av eğlencesine dalardı. Zina eder, namazı terk ederdi. Medine valisi Velid biat isteyince **Hz. Hüseyin** dedi: "Yezid fasıktır. Şarap içer. Haram canı öldürür. Benim gibisi onun gibisine biat etmez." Biat, bağlılık sözüdür. Hüseyin eğmedi. Buna şaşılmaz. Dedesi **Ebu Süfyan**, İslam\'a yıllarca savaş açmıştı. Ninesi **Hind**, Uhud\'da **Hz. Hamza**\'nın ciğerini çiğnemişti. Babası **Muaviye**, **Hz. Ali**\'ye karşı isyan etmişti. Böyle bir soydan böyle birinin çıkması gayet doğaldı.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'husayn', x: 70, label: { tr: 'Hz. Hüseyin' } }, { kind: 'man', x: 28, label: { tr: 'Yezid' } }, { kind: 'man', x: 48, label: { tr: 'Vali' } }] },
-      by: 'both',
-      cites: [{ side: 'sunni', i: 0 }, { side: 'shia', i: 5 }],
+      by: 'shia',
+      cites: [{ side: 'sunni', i: 0 }, { side: 'shia', i: 5 }, { side: 'shia', i: 17 }, { side: 'shia', i: 18 }],
     },
     {
       text: { tr: 'Hz. Hüseyin Medine\'den Mekke\'ye geçti. Kûfe\'den davet mektupları peş peşe geldi. O, hemen ordu sürmedi. Amcaoğlu **Müslim b. Akîl**\'i önden gönderdi. Müslim\'in biat aldığı günler kısa sürdü. Vali İbn Ziyâd gelince halk dağıldı. Müslim şehit edildi. Haber kafileye geç ulaştı. Kafile çoktan Kûfe yoluna dönmüştü. Bu davet, **Yezid**\'in valisinin tuzağına dönüştü.' },
@@ -138,6 +138,8 @@ export const kerbela: HistEvent = {
     { book: 'İbn Tâvûs, el-Lühûf (el-Melehüf)', ref: 's. 165', says: { tr: 'Öğle olunca Hz. Hüseyin, Züheyr ile Saîd\'i kalan ashabın yarısıyla önüne geçirir ve korku namazı kılar. Bir ok Hüseyin\'e değer. Saîd bedeniyle örter, kımıldamadan düşer. Bedeninde on üç ok, ayrıca kılıç ve mızrak yarası vardır.' }, url: 'https://lib.eshia.ir/27196/1/165', grade: { tr: 'Omuz, bacak ve kalkan bu sayfada yoktur. "Oklayın" emri de yoktur.' }, status: 'verified' },
     { book: 'Meclisî, Bihârü\'l-Envâr', ref: 'cilt 45, s. 21', says: { tr: 'Ebû Sümâme namazı hatırlatır. Hz. Hüseyin ilk vakit der, düşmandan namaz için durmalarını ister. Husayn b. Nümeyr "kabul olmaz" der. Habîb karşılık verir. Züheyr ile Saîd öne geçer. Saîd ok hedefi olur, on üç okla şehit düşer.' }, url: 'https://lib.eshia.ir/11008/45/21', grade: { tr: '"Dinden çıkmış" sözü ve "oklayın, namaz kılmasın" emri bu sayfada yoktur. Sayfadaki cümle, namazın kabul olmayacağıdır.' }, status: 'verified' },
     { book: 'Ehl-i Beyt mektel rivayeti', ref: 'öğle namazında ok emri, kalkan, omuz ve bacak (sayfa bu turda kilitlenmedi)', says: { tr: 'Komutanlar askere oklayın, namaz kılmasın diye seslenir. Ashab kalkan ve bedenle siper olur. Omuz ve bacaktan ok yer, namaz bozulmasın diye kımıldamaz. Hüseyin dinden çıkmış diye gösterilir.' }, grade: { tr: 'Ehl-i Beyt mektel rivayetidir. Sayfa uydurulmadı. Taberî 5/441, el-Lühûf s. 165 ve Bihâr 45/21 bu üç ayrıntıyı yazmaz.' }, status: 'check' },
+    { book: 'İbn Tâvûs, el-Lühûf; Meclisî, Bihârü\'l-Envâr', ref: 'Velid\'e söylenen söz (sayfa kilitlenmedi)', says: { tr: 'Hz. Hüseyin\'in Velid\'e "Yezid fasık, şarap içen, haram canı öldüren biridir; benim gibisi onun gibisine biat etmez" dediği nakledilir. Sayfa uydurulmadı.' }, status: 'check' },
+    { book: 'Mes\'ûdî, Mürûcü\'z-Zeheb', ref: 'Yezid (sayfa kilitlenmedi)', says: { tr: 'Yezid\'in içki ve maymun eğlencesi bu tarihte anılır. Sayfa uydurulmadı.' }, status: 'check' },
   ],
   disputes: [
     {

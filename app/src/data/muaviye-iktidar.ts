@@ -16,6 +16,12 @@ export const muaviyeIktidar: HistEvent = {
       cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 1 }],
     },
     {
+      by: 'shia',
+      text: { tr: 'Şam valisiyken **Muaviye** Hadrâ Sarayı\'nı yaptırdı. **Ebuzer el-Gifârî** ona dedi: "Bunu Allah\'ın malıyla, beytülmalle yaptıysan hıyanettir, haramdır. Kendi malınla yaptıysan israftır." Beytülmal, ümmetin ortak hazinesidir. **Muaviye** bu sözü hazmedemedi. Ebuzer\'i şikâyet etti. Şam\'dan sürdüler. Ebuzer Rebeze\'de yalnız öldü. Hakkı söyleyen dost, çölde tek başına gitti.' },
+      art,
+      cites: [{ side: 'shia', i: 2 }],
+    },
+    {
       by: 'both',
       text: { tr: '**Muaviye**, **Ziyâd**\'ı Ebu Süfyan\'ın oğlu diye kardeş edindi. Buna istilhak denir. Peygamber\'in "çocuk, yatak sahibinindir" sözü çiğnendi. Bu soyu iktidar için uydurdu. **Ziyâd**, Kûfe ve Basra\'da **Hz. Ali**\'yi sevenlerin üzerine salındı. Bu kardeşlik, o zulme alet edildi.' },
       art,
@@ -69,6 +75,7 @@ export const muaviyeIktidar: HistEvent = {
   shia: [
     { book: 'İbn Ebi\'l-Hadîd, Şerhu Nehci\'l-Belâğa', ref: 'Muaviye ve sövme genelgeleri (cilt/sayfa kontrol edilecek)', says: { tr: "Muaviye'nin valilerine Hz. Ali'ye sövülmesini emretmesi; Medâinî'den aktarım." }, status: 'check' },
     { book: 'WikiShia, Muawiya b. Abi Sufyan (ikincil)', ref: 'Madde', says: { tr: "Muaviye'nin iktidarı, Hucr b. Adî ve Yezid'in veliahtlığı." }, url: 'https://en.wikishia.net/view/Mu%27awiya_b._Abi_Sufyan', status: 'check' },
+    { book: 'Ya\'kûbî, Târîh; Mes\'ûdî, Mürûcü\'z-Zeheb', ref: 'Hadrâ Sarayı ve Ebuzer (sayfa kilitlenmedi)', says: { tr: 'Ebuzer\'in Hadrâ için "Allah\'ın malıysa hıyanet, kendi malınsa israf" dediği, Muaviye\'nin şikâyetiyle Şam\'dan sürülüp Rebeze\'de yalnız öldüğü anlatılır. Sayfa uydurulmadı.' }, status: 'check' },
   ],
   disputes: [
     {
