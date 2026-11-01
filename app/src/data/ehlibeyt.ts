@@ -10,42 +10,42 @@ export const ehlibeyt: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Medine\'ye Necran\'dan bir heyet geldi. Hristiyandılar. Söz, Hz. İsa\'da düğümlendi. Onlar İsa\'yı Allah\'ın oğlu, ilah diye anıyordu. Peygamber, İsa\'nın kul olduğunu söyledi. Konuşma uzadı. İki taraf kendi sözünde durdu. O zaman mübahele indi. Mübahele, iki tarafın Allah\'a yönelmesi ve yalan söyleyen tarafa lanet dilemesidir. Âl-i İmrân 61 şöyle seslendi: oğullarımızı ve oğullarınızı, kadınlarımızı ve kadınlarınızı, kendimizi ve kendinizi çağıralım, sonra yalancıların üzerine Allah\'ın lanetini dileyelim. Sabah Peygamber evinden çıktı. Yanında, kendi nefsi gibi **Hz. Ali** vardı. Kızı **Hz. Fatıma** vardı. Torunları **Hz. Hasan** ve **Hz. Hüseyin** vardı. Başkasını çağırmadı. "Allah\'ım, bunlar ehlimdir" dedi. Necranlılar bu yürüyüşü görünce durdu. Karşılarına bir ordu değil, Peygamber\'in en sevdikleri çıkmıştı. Lanetleşmeye cesaret edemediler. Anlaşmayı kabul ettiler. O gün meydanda duran taraf, Ehl-i Beyt\'ti.' },
+      text: { tr: 'Medine\'ye Necran\'dan bir heyet geldi. Hristiyandılar. Konu Hz. İsa\'da toplandı. Onlar İsa\'yı Allah\'ın oğlu ve ilah diye anıyordu. Peygamber, İsa\'nın kul olduğunu söyledi. Konuşma uzadı. İki taraf da kendi sözünde durdu. O zaman mübahele ayeti indi. Mübahele, iki tarafın Allah\'a yönelmesi ve yalan söyleyen tarafa lanet dilemesidir. Âl-i İmrân 61 şöyle der: oğullarımızı ve oğullarınızı, kadınlarımızı ve kadınlarınızı, kendimizi ve kendinizi çağıralım, sonra yalancıların üzerine Allah\'ın lanetini dileyelim. Sabah Peygamber evinden çıktı. Yanında kendi nefsi gibi, yani kendisi yerine koyduğu **Hz. Ali** vardı. Kızı **Hz. Fatıma** vardı. Torunları **Hz. Hasan** ve **Hz. Hüseyin** vardı. Başkasını çağırmadı. "Allah\'ım, bunlar ehlimdir" dedi. Necranlılar bu yürüyüşü görünce durdular. Karşılarına bir ordu çıkmamıştı. Peygamber\'in en sevdiği kişiler çıkmıştı. Lanetleşmeye cesaret edemediler. Anlaşmayı kabul ettiler. O gün meydanda Ehl-i Beyt duruyordu.' },
       art: { bg: 'dune-day', props: ['sun', 'tents'], actors: [{ kind: 'prophet', x: 44, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 58, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 70, label: { tr: 'Hz. Fatıma' } }, { kind: 'hasan', x: 80, scale: 0.7, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 88, scale: 0.65, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Ayetteki "kendimizi" sözü **Hz. Ali**\'yi de kapsar. Peygamber mübaheleye kendi nefsi olarak onu getirdi. Yakınlık, bir akrabalık değil, aynı yerde durmaktır. Velayet, bu nefsin adıdır.' },
+      text: { tr: 'Mübahele ayetindeki "kendimizi" sözü **Hz. Ali**\'yi de kapsar. Peygamber onu mübaheleye kendi nefsi olarak getirdi. Bu yakınlık yalnız akrabalık değildi. Peygamber, **Hz. Ali**\'yi kendi durduğu yere koymuştu. Velayet, yani önderlik, bu yerin adıdır.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'prophet', x: 44, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 58, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Veda Haccı dönüşünde, Hum suyu başında Peygamber iki ağır emanet bıraktı: Allah\'ın Kitabı ve itreti, ==Ehl-i Beyt==. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi. İkisi, Havz\'a varıncaya dek ayrılmaz. Zeyd\'e sorulunca hanımları çekirdeğin dışında tuttu. Ali, Akîl, Cafer ve Abbas ailelerini andı. Kitap, itsiz bırakılmasın diye bağlanmıştı.' },
+      text: { tr: 'Veda Haccı dönüşünde kafile Hum suyu başına geldi. Peygamber orada iki ağır emanet bıraktı: Allah\'ın Kitabı ve itreti, yani ==Ehl-i Beyt==. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi. Bu ikisi Havz\'a varıncaya dek ayrılmaz. Havz, Kıyamet\'teki havuzdur. Zeyd\'e sorulunca hanımları yakın halkanın dışında tuttu. Ali, Akîl, Cafer ve Abbas ailelerini andı. Peygamber Kitap ile itreti birbirine bağladı ki Kur\'an, Ehl-i Beyt olmadan kalmasın.' },
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 82, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: '"Ehl-i Beytimin örneği Nuh\'un gemisi gibidir. Ona binen kurtulur, geri kalan boğulur." Buna Safine denir. Gadir\'de gösterilen gemi, Sakife\'de terk edilince ümmet fırtınaya çıktı.' },
+      text: { tr: 'Peygamber Ehl-i Beyt için şunu da söyledi: "Ehl-i Beytimin örneği Nuh\'un gemisi gibidir. Ona binen kurtulur, geri kalan boğulur." Bu söze Safine denir. Safine, gemi demektir. Gadir\'de gösterilen gemi Ehl-i Beyt\'ti. Sakife\'de insanlar onları bırakınca ümmet ağır bir sıkıntıya düştü.' },
       art: { bg: 'river', props: ['palms'], actors: [{ kind: 'crowd', x: 40, scale: 5 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Câbir b. Semüre anlatır. Peygamber, "Bu iş, içlerinden on iki halife gelinceye kadar sürecek" dedi. Sonra bir şey daha söyledi. Câbir duyamadı. Babası, "Hepsi Kureyş\'tendir" dediğini bildirdi. Sayı, bir tesadüf değildir. İmamet, on iki halkadır.' },
+      text: { tr: 'Câbir b. Semüre anlatır. Peygamber, "Bu iş, içlerinden on iki halife gelinceye kadar sürecek" dedi. Sonra bir şey daha söyledi. Câbir onu duyamadı. Babası, Peygamber\'in "Hepsi Kureyş\'tendir" dediğini bildirdi. Bu sayı rastgele değildir. İmamet, yani imamların önderliği, on iki kişilik bir sıradır.' },
       art: { bg: 'city', props: ['sun', 'minbar'], actors: [{ kind: 'prophet', x: 60, label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 28, scale: 6 }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Bu on iki, Allah\'ın belirlediği On İki İmam\'dır. Ehl-i Beyt rivayetinde Câbir, **Hz. Fatıma**\'nın elinde bir levha gördü. İmamların adları orada yazılıydı. Sayı, bir levhada ete kemiğe bürünmüştü.' },
+      text: { tr: 'Bu on iki, Allah\'ın belirlediği On İki İmam\'dır. Ehl-i Beyt rivayetinde Câbir, **Hz. Fatıma**\'nın elinde bir levha gördü. İmamların adları orada yazılıydı. Sayı, bu levhada isim isim duruyordu.' },
       art: { bg: 'night', props: ['stars', 'scroll'], actors: [{ kind: 'fatima', x: 50, label: { tr: 'Hz. Fatıma' } }] },
     },
     {
       by: 'shia',
-      text: { tr: '==İmamet==, Allah\'ın nass ile belirlediği önderliktir. İmam günahtan korunmuştur, ilimde üstündür. Yeryüzünden hüccet eksik olmaz. Her imam kendinden sonrakini bildirir. Gadir, bu zincirin ilk halkasını herkese göstermişti.' },
+      text: { tr: '==İmamet==, Allah\'ın nass ile belirlediği önderliktir. Nass, açık bir bildirim demektir. İmam günahtan korunmuştur ve ilimde üstündür. Yeryüzünden hüccet eksik olmaz. Hüccet, Allah\'ın delil kıldığı imamdır. Her imam kendinden sonrakini bildirir. Gadir, bu sıranın ilk kişisini herkese göstermişti.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'ali', x: 42, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 62, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 74, scale: 0.75, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'On İki İmam: **Hz. Ali**, **Hz. Hasan**, **Hz. Hüseyin**, Zeynelabidin, Bâkır, Sâdık, Kâzım, Rızâ, Cevâd, Hâdî, Askerî ve **Mehdi**. On ikinci gizlenmiştir. Buna gaybet denir. Zamanı gelince adaletle çıkacaktır. Kerbela\'da kesilen hat, onda tamamlanır.' },
+      text: { tr: 'On İki İmam şunlardır: **Hz. Ali**, **Hz. Hasan**, **Hz. Hüseyin**, Zeynelabidin, Bâkır, Sâdık, Kâzım, Rızâ, Cevâd, Hâdî, Askerî ve **Mehdi**. On ikinci imam gizlenmiştir. Buna gaybet denir. Zamanı gelince adaletle çıkacaktır. Kerbela\'da **Hz. Hüseyin** şehit edildi. On İki İmam\'ın bu sırası **Mehdi** ile tamamlanır.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 30, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 46, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 60, scale: 0.8, label: { tr: 'Hz. Hüseyin' } }] },
     },
   ],

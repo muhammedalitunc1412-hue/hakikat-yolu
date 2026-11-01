@@ -8,37 +8,37 @@ export const gadir: HistEvent = {
   hook: { tr: 'Çölün ortasında kafile durdu. Bir el havaya kalktı. O gün Hz. Ali\'nin velayeti ilan edildi.', en: 'A caravan halted in the desert, and a raised hand.' },
   scenes: [
     {
-      text: { tr: 'Veda Haccı bitmişti. Peygamber binlerce insanla Mekke\'den Medine\'ye dönüyordu. **Hz. Ali** Yemen\'den gelmiş, hacda ona katılmıştı. Hayber\'de sancak, Tebük\'te Harun benzetmesi söylenmişti. Sıra, o yerin herkesin önünde ilanına gelmişti.' },
+      text: { tr: 'Veda Haccı bitmişti. Peygamber binlerce insanla Mekke\'den Medine\'ye dönüyordu. **Hz. Ali** Yemen\'den gelmiş, hacda ona katılmıştı. Hayber\'de sancak ona verilmiş, Tebük\'te Harun benzetmesi söylenmişti. Sıra, bu yerin herkesin önünde ilanına gelmişti.' },
       art: { bg: 'dune-day', props: ['sun', 'camels'], actors: [{ kind: 'crowd', x: 40, scale: 8 }, { kind: 'prophet', x: 74, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 88, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Yollar Hum suyu başında ayrılıyordu. Peygamber kafileyi durdurdu. İleri gidenler geri çağrıldı. Geride kalanlar beklendi. Güneş tepedeydi. Topluluk yüz bini aşıyordu. Bazı rivayetler 114 bin ve 124 bin der. Çöl, bir velayet için durmuştu.' },
+      text: { tr: 'Yollar Hum suyu başında ayrılıyordu. Peygamber kafileyi durdurdu. İleri gidenler geri çağrıldı. Geride kalanlar beklendi. Güneş tepedeydi. Topluluk yüz bini aşıyordu. Bazı rivayetler 114 bin kişi, bazıları 124 bin kişi der. Peygamber bu kalabalığı çölde durdurdu, çünkü Hz. Ali\'nin önderliğini herkesin önünde söyleyecekti.' },
       art: { bg: 'oasis', props: ['sun', 'palms', 'well'], actors: [{ kind: 'crowd', x: 36, scale: 9 }, { kind: 'prophet', x: 70, label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Peygamber hutbeye başladı. Sesi sıcakta yükseldi. "Ben müminlere kendi canlarından daha yakın değil miyim?" Kalabalık "Evet" dedi. Soru, sevgi sormuyordu. Yer soruyordu. Velayetin kapısı bu evetle açıldı.' },
+      text: { tr: 'Hum\'da Peygamber hutbeye başladı. Sesi sıcakta yükseldi. "Ben müminlere kendi canlarından daha yakın değil miyim?" diye sordu. Kalabalık "Evet" dedi. Soru yalnız sevgi sormuyordu. Peygamber, müminler üzerinde kimin daha hak sahibi olduğunu soruyordu. Bu evetten sonra Peygamber, önderliği kime verdiğini söyleyecekti. Buna velayet, yani önderlik denir.' },
       art: { bg: 'dune-day', props: ['sun', 'minbar'], actors: [{ kind: 'crowd', x: 32, scale: 9 }, { kind: 'prophet', x: 72, label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Sonra **Hz. Ali**\'nin elini tuttu, yukarı kaldırdı. "Ben kimin mevlâsıysam, **Hz. Ali** de onun mevlâsıdır. Allah\'ım, onu dost edineni dost edin, ona düşman olana düşman ol." Mevlâ, az önceki evlâ sorusunun cevabıdır: önder. El, çölün üstünde hakikati gösteriyordu.' },
+      text: { tr: 'Sonra Peygamber **Hz. Ali**\'nin elini tuttu ve yukarı kaldırdı. "Ben kimin mevlâsıysam, **Hz. Ali** de onun mevlâsıdır. Allah\'ım, onu dost edineni dost edin, ona düşman olana düşman ol." Mevlâ, az önceki evlâ sorusunun cevabıdır. Evlâ, kişinin kendisinden daha hak sahibi olması demektir. Mevlâ, önder demektir. Peygamber\'in yukarı kaldırdığı el, herkese **Hz. Ali**\'yi önder olarak gösterdi.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 62, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 78, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Aynı hutbede iki ağır emanet bıraktı: Allah\'ın Kitabı ve ==Ehl-i Beyt==. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi. Bunu üç kez tekrarladı. Kitap ile itret ayrılmasın diye bağlandı.' },
+      text: { tr: 'Aynı hutbede Peygamber iki ağır emanet bıraktı: Allah\'ın Kitabı ve ==Ehl-i Beyt==. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi. Bunu üç kez tekrarladı. İtret, yani Ehl-i Beyt, Kitap\'tan ayrılmasın diye Peygamber ikisini birbirine bağladı.' },
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 82, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'İnsanlar **Hz. Ali**\'yi tebrik etti. Rivayette Ömer şöyle der: "Tebrikler ey Ebu Talib\'in oğlu. Her mümin erkek ve kadının mevlâsı oldun." O gün tebrik edilen el, kısa süre sonra Sakife\'de bekletilecekti.' },
+      text: { tr: 'Hutbeden sonra insanlar **Hz. Ali**\'yi tebrik etti. Rivayette Ömer şöyle der: "Tebrikler ey Ebu Talib\'in oğlu. Her mümin erkek ve kadının mevlâsı oldun." O gün tebrik edilen **Hz. Ali**, kısa süre sonra Sakife\'de bekletilecekti. Onun önderliği orada bir kenara konacaktı.' },
       art: { bg: 'dune-dusk', props: ['sun', 'tents'], actors: [{ kind: 'crowd', x: 30, scale: 6 }, { kind: 'man', x: 56 }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Bu ilan boş bir çöl sözü değildi. Tebük\'te "Harun Musa\'ya nasılsa sen de bana öylesin" demişti. Hayber\'de sancağı, Allah\'ı ve Resulünü seven adama vermişti. **Gadir**, o yerin herkesin gözü önünde mühürlenmesidir. Mühür, Sakife\'de kırılmaya çalışılacaktır.' },
+      text: { tr: 'Bu ilan, çölde söylenip kalacak boş bir söz değildi. Tebük\'te Peygamber, "Harun Musa\'ya nasılsa sen de bana öylesin" demişti. Hayber\'de sancağı, Allah\'ı ve Resulünü seven adama vermişti. **Gadir**, o yerin herkesin gözü önünde ilanıdır. Sakife\'de bu ilanı bozmaya çalışacaklardı.' },
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'ali', x: 50, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 22, scale: 5 }] },
       by: 'both',
     },

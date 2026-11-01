@@ -10,42 +10,42 @@ export const hayber: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Hicretin 7. yılında Peygamber, Medine\'nin kuzeyindeki **Hayber**\'e yürüdü. Kaleler yan yanaydı. Ordu onları birer birer kuşattı. Bu sefer, **Hz. Ali**\'nin kolunun risaletin kalkanı olduğunu gösterecekti.' },
+      text: { tr: 'Hicretin 7. yılında Peygamber, Medine\'nin kuzeyindeki **Hayber**\'e yürüdü. Kaleler yan yanaydı. Ordu onları birer birer kuşattı. Bu sefer şunu gösterecekti: **Hz. Ali**, Peygamber\'in davasını koruyordu.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'crowd', x: 34, scale: 8 }, { kind: 'prophet', x: 68, label: { tr: 'Hz. Peygamber' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Kalelerden biri günlerce alınamadı. Anlatılan o ki önce Ebu Bekir, sonra Ömer sancakla gitti. İkisi de fethi tamamlamadan döndü. Kale duruyordu. Sancak, sahibini arıyordu.' },
+      text: { tr: 'Hayber\'de kalelerden biri günlerce alınamadı. Anlatılan o ki önce Ebu Bekir, sonra Ömer sancakla gitti. İkisi de fethi tamamlamadan döndü. Kale hâlâ duruyordu. Sancak, kaleyi alacak kişiye henüz verilmemişti.' },
       art: { bg: 'dune-dusk', actors: [{ kind: 'crowd', x: 50, scale: 6 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Peygamber buyurdu: "Yarın sancağı, Allah\'ı ve Resulü\'nü seven, Allah\'ın ve Resulü\'nün de sevdiği bir kişiye vereceğim. Allah onun eliyle fethettirecek." O gece çadırlar, sancağın kime verileceğini konuşa konuşa sabahladı.' },
+      text: { tr: 'Bunun üzerine Peygamber buyurdu: "Yarın sancağı, Allah\'ı ve Resulü\'nü seven, Allah\'ın ve Resulü\'nün de sevdiği bir kişiye vereceğim. Allah onun eliyle fethettirecek." O gece çadırlardaki askerler, sancağın kime verileceğini konuşa konuşa sabahladı.' },
       art: { bg: 'night', props: ['stars'], actors: [{ kind: 'prophet', x: 46, label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 74, scale: 5 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Sabah herkes sancağı umdu. Peygamber "Ali nerede?" diye sordu. Gözleri ağrıyordu. **Hz. Ali** getirildi. Peygamber tükürüğünü gözlerine sürdü. Gözler açıldı. Sancağı ona verdi. Bir kişinin onun eliyle hidayete ermesi, kızıl develerden daha hayırlıydı.' },
+      text: { tr: 'Sabah herkes sancağı umdu. Peygamber, "Ali nerede?" diye sordu. **Hz. Ali**\'nin gözleri ağrıyordu. Onu getirdiler. Peygamber tükürüğünü gözlerine sürdü. Gözler açıldı. Sancağı ona verdi. Bir kişinin onun eliyle hidayete ermesi, kızıl develerden daha hayırlıydı.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'prophet', x: 42, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: '**Hz. Ali** kaleye yürüdü. Hayber\'in ünlü savaşçısı Merhab\'ın karşısına dikildi. Kale fethedildi. Sancak, söz verilen elde durmuştu.' },
+      text: { tr: '**Hz. Ali** kaleye yürüdü. Hayber\'in ünlü savaşçısı Merhab\'ın karşısına dikildi. Kale fethedildi. Sancak, söz verildiği gibi **Hz. Ali**\'nin elindeydi.' },
       art: { bg: 'dune-day', actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 74, scale: 3 }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Ehl-i Beyt rivayetinde **Hz. Ali**, Hayber kapısını yerinden söküp kalkan gibi kullandı. Kale kapısı, risaletin kolunda bir kalkan oldu.' },
+      text: { tr: 'Ehl-i Beyt rivayetinde **Hz. Ali**, Hayber kapısını yerinden söküp kalkan gibi kullandı. Kapıyı savaşırken önünde tuttu.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Sancak, Allah\'ı ve Resulünü seven, onlarca sevilen kişiye verilmişti. O kişi **Hz. Ali**\'ydi. Peygamber\'in "kaçıcı değil, saldırgandır" dediği de anlatılır. Bir gün önce dönenlerin yanında, bu söz bir yer tayinidir.' },
+      text: { tr: 'Sancak, Allah\'ı ve Resulünü seven, Allah ve Resulü tarafından sevilen kişiye verilmişti. O kişi **Hz. Ali**\'ydi. Peygamber\'in "kaçıcı değil, saldırgandır" dediği de anlatılır. Bir gün önce fethi tamamlamadan dönenlerin yanında bu söz, **Hz. Ali**\'nin yerini açıkça gösterdi.' },
       art: { bg: 'night', props: ['stars', 'scroll'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Hayber fethedilince halk, ürünün yarısını vermek üzere yerinde kaldı. **Fedek** halkı savaşmadan anlaştı. Toprak Peygamber\'in eline geçti. O, bunu kızına hibe edecekti. Vefatından sonra bu bahçe, **Hz. Fatıma**\'nın elinden alınacak ve Ehl-i Beyt\'in ilk büyük acılarından biri olacaktı.' },
+      text: { tr: 'Hayber fethedilince halk, ürünün yarısını vermek üzere yerinde kaldı. **Fedek** halkı savaşmadan anlaştı. Toprak Peygamber\'in eline geçti. O, bunu kızına hibe edecekti. Hibe, bağış demektir. Vefatından sonra bu bahçe, **Hz. Fatıma**\'nın elinden alınacak ve Ehl-i Beyt\'in ilk büyük acılarından biri olacaktı.' },
       art: { bg: 'river', props: ['palms'], actors: [{ kind: 'crowd', x: 50, scale: 5 }] },
     },
   ],

@@ -10,42 +10,42 @@ export const menzile: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Hicretin 9. yılında Bizans sınırda asker topluyordu. Yaz sıcaktı, kıtlık vardı, yol uzundu. Peygamber yine de **Tebük**\'e çıktı. Ordu "Zorluk Ordusu" diye anıldı. Bu sefer, **Hz. Ali**\'nin yerini bir cümleyle mühürleyecekti.' },
+      text: { tr: 'Hicretin 9. yılında Bizans sınırda asker topluyordu. Yaz sıcaktı, kıtlık vardı, yol uzundu. Peygamber yine de **Tebük**\'e çıktı. Ordu "Zorluk Ordusu" diye anıldı. Bu seferde Peygamber, **Hz. Ali**\'nin yerini bir cümleyle söyleyecekti.' },
       art: { bg: 'dune-day', props: ['sun', 'tents'], actors: [{ kind: 'crowd', x: 30, scale: 8 }, { kind: 'prophet', x: 68, label: { tr: 'Hz. Peygamber' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Peygamber, Medine\'yi ve ailesini koruması için **Hz. Ali**\'yi yerine vekil bıraktı. Şehri, en güvendiği ele emanet etti. Vekâlet, bir kenara itmek değildi.' },
+      text: { tr: 'Tebük\'e çıkarken Peygamber, Medine\'yi ve ailesini koruması için **Hz. Ali**\'yi yerine vekil bıraktı. Vekil, onun adına şehre bakan kişidir. Şehri en güvendiği kişiye emanet etti. Bu, **Hz. Ali**\'yi kenara itmek değildi.' },
       art: { bg: 'city', props: ['sun'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Medine\'de münafıklar fısıldadı: "Onu yük gördüğü için bıraktı." **Hz. Ali** silahını kuşandı, orduya yetişti. Yüreği incinmişti. Peygamber\'in cevabı, o incinmenin üstüne bir makam koyacaktı.' },
+      text: { tr: 'Peygamber yola çıkınca Medine\'de münafıklar fısıldadı: "Onu yük gördüğü için bıraktı." Münafık, inanmış görünüp içten karşı duran kişidir. **Hz. Ali** silahını kuşandı ve orduya yetişti. Yüreği incinmişti. Peygamber\'in cevabı, incinen **Hz. Ali**\'ye makamını söyleyecekti.' },
       art: { bg: 'dune-dusk', actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 72, scale: 5 }] },
     },
     {
       by: 'both',
-      text: { tr: '**Hz. Ali** sordu: "Beni çocuklarla ve kadınlarla mı bırakıyorsun?" Peygamber buyurdu: "Harun\'un Musa nezdindeki yeri gibi, benim nezdimde yerinin olmasına razı değil misin? Ancak benden sonra peygamber yoktur." Kardeş, vezir, halife. Yalnız peygamberlik ayrıldı.' },
+      text: { tr: 'Orduya yetişen **Hz. Ali** sordu: "Beni çocuklarla ve kadınlarla mı bırakıyorsun?" Peygamber buyurdu: "Harun\'un Musa nezdindeki yeri gibi, benim nezdimde yerinin olmasına razı değil misin? Ancak benden sonra peygamber yoktur." Bu söz **Hz. Ali**\'yi kardeş, vezir ve halife yapar. Vezir, yardımcı demektir. Halife, birinin yerine geçen kişidir. Yalnız peygamberlik ayrılmıştır.' },
       art: { bg: 'dune-dusk', actors: [{ kind: 'prophet', x: 42, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Kur\'an\'da Musa, Tur\'a çıkarken Harun\'a "Kavmim içinde benim yerime geç" der (A\'râf 7:142). "Ailemden bana bir yardımcı ver" diye de dilemişti (Tâhâ 20:29). **Menzile**, o yeri **Hz. Ali**\'ye koyar. Gadir, bu benzetmenin çölde ilanıdır.' },
+      text: { tr: 'Kur\'an\'da Musa, Tur\'a çıkarken Harun\'a "Kavmim içinde benim yerime geç" der (A\'râf 7:142). "Ailemden bana bir yardımcı ver" diye de dilemişti (Tâhâ 20:29). **Menzile**, yani makam hadisi, Harun\'un bu yerini **Hz. Ali**\'ye koyar. Gadir\'de Peygamber, bu yeri çölde herkesin önünde ilan edecektir.' },
       art: { bg: 'river', props: ['palms'], actors: [{ kind: 'crowd', x: 40, scale: 4 }] },
     },
     {
       by: 'shia',
-      text: { tr: '**Hz. Ali**, Peygamber\'in kardeşi, veziri ve halifesidir. "Benden sonra peygamber yoktur" cümlesi yalnız nübüvveti ayırır. Geri kalan yer onundur. Bu söz, Sakife\'de unutulacak, Gadir\'de ise herkesin önünde tekrarlanacaktır.' },
+      text: { tr: '**Hz. Ali**, Peygamber\'in kardeşi, veziri ve halifesidir. "Benden sonra peygamber yoktur" cümlesi yalnız nübüvveti ayırır. Nübüvvet, peygamberlik demektir. Geri kalan yer **Hz. Ali**\'nindir. Bu söz Sakife\'de unutulacak, Gadir\'de ise herkesin önünde tekrarlanacaktır.' },
       art: { bg: 'night', props: ['stars', 'scroll'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Yıllar sonra **Muaviye**, Sa\'d\'a **Hz. Ali**\'ye neden sövmediğini soracaktı. Sa\'d üç sözü sayacaktı: **Menzile**, Hayber sancağı ve Mübahele. Minber lanet isterken, bu üç söz hâlâ ayaktaydı.' },
+      text: { tr: 'Yıllar sonra **Muaviye**, Sa\'d\'a **Hz. Ali**\'ye neden sövmediğini sordu. Sa\'d üç sözü saydı: **Menzile**, Hayber sancağı ve Mübahele. Mübahele, lanetleşme günüdür. Minberden **Hz. Ali**\'ye lanet istenirken bu üç söz hâlâ ayaktaydı.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'crowd', x: 36, scale: 3 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Tebük\'te savaş çıkmadı. Peygamber anlaşmalar yapıp Medine\'ye döndü. **Hz. Ali** yolda ona yetişmiş, o sözü duymuştu. Şehir, vekiline emanet kalmıştı. Velayet, bir seferde de boş bırakılmamıştı.' },
+      text: { tr: 'Tebük\'te savaş çıkmadı. Peygamber anlaşmalar yapıp Medine\'ye döndü. **Hz. Ali** yolda ona yetişmiş ve o sözü duymuştu. Şehir, vekili olan **Hz. Ali**\'ye emanet kalmıştı. Velayet, yani önderlik, bu seferde de boş bırakılmamıştı.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'prophet', x: 44, label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 72, scale: 6 }] },
     },
   ],
