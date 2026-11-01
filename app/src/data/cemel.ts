@@ -5,7 +5,7 @@ export const cemel: HistEvent = {
   id: 'cemel',
   date: { tr: 'Zilhicce 35 - 15 Cemaziyelevvel 36 H (656)', en: 'Dhu al-Hijjah 35 - 15 Jumada al-Awwal 36 AH (656)' },
   title: { tr: 'Biat ve Cemel', en: 'The Pledge and the Battle of the Camel' },
-  hook: { tr: 'Hz. Ali hilafeti istemeden kabul etti; Cemel\'de kan dökülmesin diye sabretti.', en: 'The first day Muslims stood in battle lines against Muslims.' },
+  hook: { tr: 'Hz. Ali hilafeti istemeden kabul etti. Cemel\'de kan dökülmesin diye sabretti, hakkı da bırakmadı.', en: 'The first day Muslims stood in battle lines against Muslims.' },
   scenes: [
     {
       text: { tr: 'Halife Osman şehit edilince Medine karıştı. Ensar ve Muhacirlerin önde gelenleri Hz. Ali\'ye gelip hilafeti kabul etmesini istedi. Hz. Ali önce çekindi; ısrar üzerine Mescid-i Nebevi\'de biat alındı.' },

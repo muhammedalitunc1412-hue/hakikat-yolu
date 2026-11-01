@@ -6,7 +6,7 @@ export const menzile: HistEvent = {
   id: 'menzile',
   date: { tr: 'Tebük Seferi, Hicretin 9. yılı (630)', en: 'The Tabuk expedition, 9 AH (630)' },
   title: { tr: 'Hadis-i Menzile: Tebük\'te "Harun Musa\'ya nasılsa sen de bana öylesin"', en: 'The Hadith of the Position: at Tabuk, "as Aaron was to Moses"' },
-  hook: { tr: 'Peygamber Tebük\'e giderken Hz. Ali\'yi Medine\'de bıraktı. Sonra ona ne dedi? Bu söz hangi yeri gösterir?', en: 'The Prophet left Ali in Medina when he marched to Tabuk. What did he say to him, and what does it mean?' },
+  hook: { tr: 'Tebük\'te Peygamber, Hz. Ali\'ye "Harun Musa\'ya nasılsa sen de bana öylesin" dedi.', en: 'The Prophet left Ali in Medina when he marched to Tabuk. What did he say to him, and what does it mean?' },
   scenes: [
     {
       by: 'both',

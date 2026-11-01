@@ -5,7 +5,7 @@ export const raziyye: HistEvent = {
   id: 'raziyye',
   date: { tr: 'Safer-Rebiülevvel 11 H (632)', en: 'Safar-Rabi al-Awwal 11 AH (632)' },
   title: { tr: 'Kırtas Olayı (Raziyye Perşembesi) ve Peygamber\'in vefatı', en: 'The Thursday of Calamity and the Prophet\'s passing' },
-  hook: { tr: 'Peygamber "size bir yazı yazayım ki sapmayasınız" dedi. Bu söz Buhari ve Müslim\'de anlatılır.', en: 'The Prophet said, "Let me write for you so that you do not go astray." Why was it never written?' },
+  hook: { tr: 'Peygamber "size bir yazı yazayım ki sapmayasınız" dedi. Kalem, Ehl-i Beyt\'in hakkı yazılmadan durdu.', en: 'The Prophet said, "Let me write for you so that you do not go astray." Why was it never written?' },
   scenes: [
     {
       text: { tr: 'Peygamber, yirmi yaşlarındaki Usame b. Zeyd\'i Şam yönündeki Belka\'ya gidecek ordunun komutanı yaptı. Ordu Medine dışındaki Cürf\'te toplanmaya başladı.' },

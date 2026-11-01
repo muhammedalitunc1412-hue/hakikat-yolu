@@ -5,7 +5,7 @@ export const sakife: HistEvent = {
   id: 'sakife',
   date: { tr: 'Rebiülevvel 11 H (632)', en: 'Rabi al-Awwal 11 AH (632)' },
   title: { tr: 'Sakife-i Beni Saide ve biat süreci', en: 'Saqifa of Banu Sa\'ida and the pledge of allegiance' },
-  hook: { tr: 'Peygamber\'in ailesi cenazesini hazırlarken Sakife\'de biat alındı. Hz. Ali\'nin biatı, Buhari\'de Hz. Fatıma\'nın vefatından sonraya bağlanır.', en: 'A caliph was chosen while the Prophet\'s body was still being prepared. Hz. Ali did not pledge for six months.' },
+  hook: { tr: 'Peygamber\'in bedeni daha yıkanırken Sakife\'de biat alındı. Ehl-i Beyt cenazenin başında yalnız kaldı.', en: 'A caliph was chosen while the Prophet\'s body was still being prepared. Hz. Ali did not pledge for six months.' },
   scenes: [
     {
       text: { tr: 'Peygamber vefat edince Medine karıştı. Hz. Ali, Abbas ve Haşimoğulları onun yıkama ve defin hazırlığına koyuldu.' },

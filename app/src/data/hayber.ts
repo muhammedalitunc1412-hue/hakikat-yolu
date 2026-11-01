@@ -6,7 +6,7 @@ export const hayber: HistEvent = {
   id: 'hayber',
   date: { tr: 'Hayber Gazvesi, Hicretin 7. yılı (628)', en: 'The battle of Khaybar, 7 AH (628)' },
   title: { tr: 'Hayber ve sancak: "Allah ve Resulü\'nü seven birine vereceğim"', en: 'Khaybar and the banner: "I will give it to one who loves God and His Messenger"' },
-  hook: { tr: 'Hayber\'de kale günlerce durdu. Peygamber sancağı kime verdi? Bu söz Hz. Ali\'nin yerini nasıl gösterir?', en: 'When the fortress of Khaybar resisted for days, to whom did the Prophet give the banner?' },
+  hook: { tr: 'Hayber günlerce durdu. Peygamber sancağı, Allah\'ın ve Resulünün sevdiği Hz. Ali\'ye verdi.', en: 'When the fortress of Khaybar resisted for days, to whom did the Prophet give the banner?' },
   scenes: [
     {
       by: 'both',

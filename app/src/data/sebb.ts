@@ -8,12 +8,14 @@ export const sebb: HistEvent = {
   hook: { tr: 'Minberlerde Hz. Ali\'ye sövüldü; sövmeyi reddeden Hucr b. Adî öldürüldü.', en: 'The Prophet had said that loving Ali is loving him; why was Ali cursed from Friday pulpits for years, and why were objectors killed?' },
   scenes: [
     {
-      text: { tr: 'Hz. Hasan\'ın sulhünden sonra, 41 H\'de yönetim Muaviye\'de toplandı. Emevi döneminde Cuma hutbelerinde Hz. Ali\'ye sövmek yerleşik bir uygulama oldu. Bu, sevenlerin yüreğine ağır gelen bir haksızlıktı.' },
+      text: { tr: '**Hz. Hasan**\'ın sulhünden sonra minber, **Hz. Ali**\'ye ==lanet== okunan bir yer oldu. Cuma hutbesi, Peygamber\'in kardeşine sövmekle açıldı. Bu, ==Ehl-i Beyt== sevgisini suç sayan bir zulümdü. Sevenlerin yüreği, her Cuma yeniden yaralandı.' },
+      cites: [{ side: 'shia', i: 1 }, { side: 'sunni', i: 1 }],
       art: { bg: 'city', props: ['minbar', 'flags'], actors: [{ kind: 'crowd', x: 28, scale: 7 }, { kind: 'man', x: 70, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Muaviye, Kûfe valisi Muğîre b. Şu\'be\'ye Hz. Ali\'yi kötülemesini ve Hz. Osman\'ı övmesini tavsiye etti. Muğîre hutbelerinde Hz. Ali\'ye ve taraftarlarına sövdürdü. Ondan sonra Ziyâd b. Ebîh de aynı yolu tuttu.' },
+      text: { tr: '**Muaviye**, Kûfe valisi Muğîre\'ye **Hz. Ali**\'yi kötülemesini emretti. Muğîre hutbelerde ona ve sevenlerine sövdürdü. Sonra **Ziyâd** aynı zulmü sürdürdü. Lanet, bir valinin ağzından ümmetin kulağına boca edildi.' },
+      cites: [{ side: 'sunni', i: 3 }, { side: 'shia', i: 0 }],
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'man', x: 34, pose: 'raise', label: { tr: 'Muğîre' } }, { kind: 'crowd', x: 68, scale: 6 }] },
       by: 'both',
     },
@@ -23,7 +25,8 @@ export const sebb: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Muaviye valilerine genelge gönderdi. Yazılarda Hz. Ali\'ye sövülmesi ve onu övenlerin cezalandırılması istendi.' },
+      text: { tr: '**Muaviye** valilerine genelge yazdı. **Hz. Ali**\'ye sövülsün, onu öven cezalandırılsın, istedi. Fazilet, bir suç ilan edildi. ==Ehl-i Beyt==\'i seven, o kâğıdın gölgesinde titredi.' },
+      cites: [{ side: 'shia', i: 0 }],
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'Muaviye' } }, { kind: 'crowd', x: 72, scale: 4 }] },
       by: 'shia',
     },
@@ -38,7 +41,8 @@ export const sebb: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'TDV\'ye göre Hz. Ali\'ye sövmeyi reddeden Hucr ve arkadaşları 51\'de (671) Mercü Azra\'da idam edildi; bazıları serbest bırakıldı. Hucr önce iki rekât namaz kıldı, yıkanmak istemedi ve kendini şehit bildi. Âişe bu öldürmeyi yadırgadı; Muaviye kendini savundu.' },
+      text: { tr: '**Hz. Ali**\'ye sövmeyi reddeden **Hucr** ve arkadaşları 51\'de ==Mercü Azra\'da katledildi.== Hucr iki rekât namaz kıldı, kendini şehit bildi. **Muaviye** bu kanı savundu. Bir komutan, laneti kabul etmediği için boynu vuruldu.' },
+      cites: [{ side: 'sunni', i: 1 }],
       art: { bg: 'dune-dusk', props: ['swords'], actors: [{ kind: 'man', x: 34, label: { tr: 'Hucr b. Adî' } }, { kind: 'crowd', x: 70, scale: 5 }] },
       by: 'both',
     },

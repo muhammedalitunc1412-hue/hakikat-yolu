@@ -6,7 +6,7 @@ export const ehlibeyt: HistEvent = {
   id: 'ehlibeyt',
   date: { tr: 'Peygamber dönemi ve sonrası', en: 'The Prophet\'s era and after' },
   title: { tr: 'Mübahele Olayı ve Ehl-i Beyt\'in emaneti', en: 'The Mubahala and the legacy of the Ahl al-Bayt' },
-  hook: { tr: 'Peygamber Necran heyetine kimleri getirdi? Geride hangi iki emaneti bıraktı? "On iki" sayısı neyi gösterir?', en: 'Whom did the Prophet mean by "my family", and why does the number twelve matter?' },
+  hook: { tr: 'Peygamber mübaheleye Ehl-i Beyt\'i çıkardı. Kitap ile itreti, ayrılmasınlar diye emanet bıraktı.', en: 'Whom did the Prophet mean by "my family", and why does the number twelve matter?' },
   scenes: [
     {
       by: 'both',

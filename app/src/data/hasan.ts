@@ -5,7 +5,7 @@ export const hasan: HistEvent = {
   id: 'hasan',
   date: { tr: '40-41 H (661)', en: '40-41 AH (661)' },
   title: { tr: 'Hz. Hasan, sulh ve Emevi iktidarı', en: 'Imam Hasan, the peace treaty and Umayyad rule' },
-  hook: { tr: 'Peygamber\'in seyyid dediği Hz. Hasan, kan dökülmesin diye yönetimi bıraktı.', en: 'Why did the grandson the Prophet called "my son is a master" have to hand over the leadership?' },
+  hook: { tr: 'Peygamber\'in seyyid dediği Hz. Hasan, ümmetin kanı dökülmesin diye hakkını bıraktı ve zehirlendi.', en: 'Why did the grandson the Prophet called "my son is a master" have to hand over the leadership?' },
   scenes: [
     {
       text: { tr: 'Peygamber, küçük torunu Hz. Hasan\'ı çok severdi. Bir gün minberde konuşurken Hz. Hasan yanındaydı. Peygamber bir cemaate, bir ona bakıyordu.' },
@@ -43,7 +43,7 @@ export const hasan: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Muaviye, Yezid\'in veliahtlığı için Cü\'de\'ye yüz bin dirhem ve Yezid ile evlilik vaat etti. Zehirle vefat eden Hz. Hasan şehit sayılır.' },
+      text: { tr: '**Muaviye**, **Yezid**\'in veliahtlığı için **Cü\'de**\'ye yüz bin dirhem ve Yezid ile evlilik vaat etti. Zehir, o vaadin kadehindeydi. **Hz. Hasan** şehit sayılır. Taht, Peygamber\'in seyyidinin canıyla oğula açıldı.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 24, label: { tr: 'Muaviye' } }, { kind: 'woman', x: 50, label: { tr: 'Cü\'de' } }, { kind: 'hasan', x: 76, pose: 'sit', label: { tr: 'Hz. Hasan' } }] },
       by: 'shia',
     },

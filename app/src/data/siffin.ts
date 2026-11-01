@@ -18,17 +18,20 @@ export const siffin: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Yaşlı sahabi Ammar, Sıffin\'de Hz. Ali\'nin safında şehit oldu. Hadis, onu öldürecek grubu azgın diye anar. Ammar\'ın hangi safta düştüğü o günden beri konuşulur.' },
+      text: { tr: 'Yaşlı **Ammar**, **Sıffin**\'de **Hz. Ali**\'nin safında şehit oldu. Peygamber, onu ==bâği bir grubun== öldüreceğini söylemişti. O grup **Muaviye**\'nin ordusuydu. Sevenler o gün, Peygamber\'in haberinin kimin göğsünde gerçekleştiğini gördü.' },
+      cites: [{ side: 'sunni', i: 1 }, { side: 'shia', i: 0 }],
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'man', x: 26, label: { tr: 'Ammar b. Yasir' } }, { kind: 'ali', x: 70, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Rivayete göre Amr b. el-As, "Ammar\'ı öldürdük" diyerek hadisi Muaviye\'ye hatırlattı. Muaviye "Onu biz mi öldürdük? Onu getirenler öldürdü" diye karşılık verdi. Hadis biliniyor, yorumla karşılanıyordu.' },
+      text: { tr: '**Amr b. el-As**, "Ammar\'ı öldürdük" diye hadisi **Muaviye**\'ye hatırlattı. O, "Onu biz mi öldürdük? Onu getirenler öldürdü" diye sözü büktü. Peygamber\'in haberi meydandaydı. ==Bâği grup==, haberi inkâr etmek için dili büktü.' },
+      cites: [{ side: 'sunni', i: 3 }],
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 30, label: { tr: 'Amr b. el-As' } }, { kind: 'man', x: 66, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Savaş Hz. Ali\'nin lehine dönerken Şamlılar mushaf sayfalarını mızraklara bağladı. "Allah\'ın kitabı aramızda hakem olsun" dediler. Hz. Ali bunun bir hile olduğunu söyledi. Ordusunun çoğu, özellikle Kuran okuyanlar, kabul etmesi için ısrar etti.' },
+      text: { tr: 'Savaş **Hz. Ali**\'nin lehine dönerken Şamlılar mushafı mızrağa taktı. "Allah\'ın kitabı aramızda hakem olsun" dediler. Bu ibadet değil, ==bir hileydi.== **Hz. Ali** hileyi o anda söyledi. Ordusunun bir kısmı, Kur\'an\'ın gölgesinde onu durdurdu. Hak, mızrağın ucunda yarım kaldı.' },
+      cites: [{ side: 'sunni', i: 8 }, { side: 'shia', i: 0 }],
       art: { bg: 'battle', props: ['flags', 'scroll', 'sun'], actors: [{ kind: 'crowd', x: 26, scale: 8 }, { kind: 'ali', x: 72, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
