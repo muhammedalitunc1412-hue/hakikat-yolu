@@ -47,7 +47,7 @@ export const hayber: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Hayber fethedilince halk, ürünün yarısını vermek üzere yerinde kaldı. **Fedek** halkı savaşmadan anlaştı. Toprak Peygamber\'in eline geçti. O, bunu kızına hibe edecekti. Hibe, bağış demektir. Vefatından sonra bu bahçe, **Hz. Fatıma**\'nın elinden alınacak ve Ehl-i Beyt\'in ilk büyük acılarından biri olacaktı.' },
+      text: { tr: 'Hayber fethedilince halk, ürünün yarısını vermek üzere yerinde kaldı. **Fedek** halkı savaşmadan anlaştı. Toprak Peygamber\'in eline geçti. O, bu toprağı kızı **Hz. Fatıma**\'ya hibe etti. Hibe, bağış demektir. Ancak bu hibe, Resulullah\'ın vefatından sonra **Hz. Fatıma**\'nın elinden alınacak, Fedek **gasp edilecekti**.' },
       art: { bg: 'river', props: ['palms'], actors: [{ kind: 'crowd', x: 50, scale: 5 }] },
     },
   ],
