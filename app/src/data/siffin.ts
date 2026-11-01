@@ -8,12 +8,12 @@ export const siffin: HistEvent = {
   hook: { tr: 'Sıffin\'de mushaflar mızraklara asıldı; Hz. Ali sabırla hakkı söyledi, hilafeti bir sabah namazında şehadetle bitti.', en: 'Qurans raised on spears, and a caliphate that ended at dawn prayer.' },
   scenes: [
     {
-      text: { tr: 'Hz. Ali Kufe\'yi merkez edindi ve Şam yönüne yürüdü. Fırat kıyısındaki Sıffin\'de Muaviye\'nin ordusuyla karşılaşıldı. Hz. Ali çatışmayı kendisi başlatmaktan kaçındı.' },
+      text: { tr: 'Cemel bitmişti. **Hz. Ali** Kûfe\'yi merkez edindi, Şam\'a yürüdü. Fırat kıyısında, **Sıffin**\'de **Muaviye**\'nin ordusuyla karşılaştı. Çatışmayı kendisi başlatmaktan kaçındı. Hak, kılıcı önce çeken taraf değildi.' },
       art: { bg: 'river', props: ['tents', 'flags'], actors: [{ kind: 'crowd', x: 22, scale: 7 }, { kind: 'ali', x: 52, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 82, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Yıllar önce Medine\'de mescit yapılırken Peygamber, Ammar b. Yasir\'e bakıp "Yazık Ammar\'a, onu azgın bir grup öldürecek" buyurmuştu. Sahabe bu sözü duymuştu.' },
+      text: { tr: 'Yıllar önce mescit yapılırken Peygamber, **Ammar**\'a bakıp "Yazık Ammar\'a, onu azgın bir grup öldürecek" demişti. Sahabe duymuştu. Söz, Sıffin\'in tozunda kimin bâği olduğunu gösterecekti.' },
       art: { bg: 'city', props: ['palms', 'sun'], actors: [{ kind: 'prophet', x: 64, label: { tr: 'Hz. Peygamber' } }, { kind: 'man', x: 30, pose: 'raise', label: { tr: 'Ammar b. Yasir' } }] },
       by: 'both',
     },
@@ -36,27 +36,27 @@ export const siffin: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Anlaşma yazıldı. Hz. Ali adına Ebu Musa el-Eşari, Muaviye adına Amr b. el-As hakem seçildi. Hz. Ali başka isimler istemişti; metinden "Emirü\'l-müminin" unvanı da çıkarıldı. Hakem, onun otoritesini zayıflattı.' },
+      text: { tr: 'Anlaşma yazıldı. **Hz. Ali** başka isimler istemişti. Yine de Ebu Musa ile **Amr b. el-As** oturdu. Metinden "Emirü\'l-müminin" unvanı çıkarıldı. Hakem, Gadir\'de ilan edilen otoriteyi kâğıt üzerinde inceltti.' },
       art: { bg: 'dune-day', props: ['tents', 'scroll'], actors: [{ kind: 'man', x: 24, label: { tr: 'Ebu Musa el-Eşari' } }, { kind: 'ali', x: 52, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 80, label: { tr: 'Amr b. el-As' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hakemi reddeden bir grup "Hüküm yalnız Allah\'ındır" diyerek Hz. Ali\'nin yanından ayrıldı. Bunlara Haricîler denir. Hz. Ali "Söz haktır, ama onunla batıl kastediliyor" dedi. Önce konuşuldu, sonra Nehrevan\'da çatışıldı.' },
+      text: { tr: 'Hakemi reddeden bir grup "Hüküm yalnız Allah\'ındır" diyerek **Hz. Ali**\'nin yanından ayrıldı. Bunlara Haricîler denir. Ali, "Söz haktır, ama onunla batıl kastediliyor" dedi. Önce konuşuldu. Sonra Nehrevan\'da çatışıldı. Hile, kendi safını da yarmıştı.' },
       art: { bg: 'river', props: ['flags'], actors: [{ kind: 'crowd', x: 28, scale: 7 }, { kind: 'ali', x: 74, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Ali, Peygamber\'den Haricîler hakkında bir haber aktarır: onları öldürenlere Allah katında sevap vardır. Hakka daha yakın tarafın onlarla savaşacağı da Müslim\'de anılır ve Hz. Ali\'nin safını gösterir.' },
+      text: { tr: '**Hz. Ali**, Peygamber\'den Haricîler hakkında bir haber aktarır: onları öldürenlere Allah katında sevap vardır. Hakka daha yakın taraf onlarla savaşacaktır. O taraf, Ali\'nin safıdır.' },
       art: { bg: 'dawn', props: ['scroll'], actors: [{ kind: 'ali', x: 44, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 78, scale: 5 }] },
       by: 'sunni',
     },
     {
-      text: { tr: 'Emevi döneminde minberlerde Hz. Ali\'ye sövmek yayıldı. Bu, Ehl-i Beyt\'e yapılmış ağır bir haksızlıktı. Muaviye, Sa\'d b. Ebi Vakkas\'a Hz. Ali\'ye neden sövmediğini sordu; Sa\'d, Peygamber\'in onun hakkındaki üç sözünü saydı. Ömer b. Abdülaziz bu uygulamayı kaldırdı.' },
+      text: { tr: 'Emevi döneminde minberlerde **Hz. Ali**\'ye ==lanet== okundu. **Muaviye**, Sa\'d\'a neden sövmediğini sordu. Sa\'d, Menzile\'yi, Hayber sancağını ve Mübahele\'yi saydı. Ömer b. Abdülaziz bu zulmü yıllar sonra kaldırdı. Yara, o güne kadar ==Ehl-i Beyt==\'in göğsünde durdu.' },
       art: { bg: 'interior', props: ['minbar', 'scroll'], actors: [{ kind: 'man', x: 28, label: { tr: 'Sa\'d b. Ebi Vakkas' } }, { kind: 'man', x: 62, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Haricilerden İbn Mülcem, Ramazan 40\'ta Kufe Ulu Camii\'nde sabah namazında Hz. Ali\'yi zehirli kılıçla yaraladı. Hz. Ali yaklaşık iki gün sonra vefat etti. Oğlu Hz. Hasan\'a vasiyette bulundu. Hz. Hasan da kan dökülmesin diye hilafeti Muaviye\'ye bıraktı.' },
+      text: { tr: 'Haricilerden İbn Mülcem, Ramazan 40\'ta Kûfe Ulu Camii\'nde sabah namazında **Hz. Ali**\'yi zehirli kılıçla yaraladı. İki gün sonra vefat etti. Oğlu **Hz. Hasan**\'a vasiyet etti. Hasan, kan dökülmesin diye yönetimi **Muaviye**\'ye bırakacaktı. Gadir\'in eli, bir secde halinde kapandı.' },
       art: { bg: 'dawn', props: ['moon'], actors: [{ kind: 'ali', x: 42, pose: 'sit', label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 66, label: { tr: 'Hz. Hasan' } }, { kind: 'crowd', x: 86, scale: 4 }] },
       by: 'both',
     },

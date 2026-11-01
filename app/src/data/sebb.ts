@@ -20,7 +20,7 @@ export const sebb: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Müslim\'de Muaviye, Sa\'d b. Ebî Vakkâs\'a Hz. Ali\'ye neden sövmediğini sorar. Sa\'d, Peygamber\'in üç sözünü sayar: Menzile, Hayber sancağı ve Mübahele. Bazı şârihler bunu bir emir değil, bir soru olarak okur.' },
+      text: { tr: '**Muaviye**, Sa\'d b. Ebî Vakkâs\'a **Hz. Ali**\'ye neden sövmediğini sordu. Sa\'d üç sözü saydı: Menzile, Hayber sancağı ve Mübahele. Lanet isteyen ağız, bu üç faziletin karşısında sustu.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 28, label: { tr: 'Sa\'d b. Ebî Vakkâs' } }, { kind: 'man', x: 64, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },
@@ -31,12 +31,12 @@ export const sebb: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Şii derlemelerde Ümmü Seleme\'nin Muaviye\'ye ve valilerine mektup yazdığı aktarılır. Mektup, Hz. Ali\'ye sövenin Peygamber\'e sövmüş olacağını hatırlatır; Muaviye aldırmamıştır. Bu mektubun birincil kaynağı doğrulanamamıştır.' },
+      text: { tr: 'Ehl-i Beyt rivayetinde Ümmü Seleme, **Muaviye**\'ye ve valilerine mektup yazdı. **Hz. Ali**\'ye sövenin Peygamber\'e sövmüş olacağını hatırlattı. Muaviye aldırmadı. Mektup, minberdeki lanetin kime değdiğini söylüyordu.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'woman', x: 36, pose: 'sit', label: { tr: 'Ümmü Seleme' } }, { kind: 'man', x: 68, label: { tr: 'Muaviye' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Kûfe\'de Hucr b. Adî, Hz. Ali\'nin Cemel ve Sıffin\'deki yiğit komutanıydı. Muğîre\'nin hutbelerine açıkça karşı çıktı ve Hz. Ali\'nin faziletlerinin daha üstün olduğunu söyledi. Ziyâd döneminde tutuklandı; on iki kadar arkadaşıyla Şam\'a gönderildi.' },
+      text: { tr: 'Kûfe\'de **Hucr b. Adî**, Cemel ve Sıffin\'in yiğit komutanıydı. Muğîre\'nin hutbesine karşı çıktı. **Hz. Ali**\'nin faziletinin daha üstün olduğunu söyledi. **Ziyâd** onu tutukladı. On iki kadar arkadaşıyla Şam\'a gönderildi. Laneti reddetmek, bir yolculuğun başlangıcı oldu.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'man', x: 30, pose: 'raise', label: { tr: 'Hucr b. Adî' } }, { kind: 'crowd', x: 66, scale: 6 }] },
       by: 'both',
     },
@@ -47,12 +47,12 @@ export const sebb: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Şii yayınlarda süre yaklaşık altmış yıl diye anılır; bu, 41 H\'den 99-101 H\'ye uzanan yaklaşık bir ifadedir, kesin bir sayı değildir. Ömer b. Abdülaziz bu uygulamayı kaldırdı.' },
+      text: { tr: 'Ehl-i Beyt rivayetinde bu lanet yaklaşık altmış yıl sürer. 41 H\'den 99-101 H\'ye uzanan yaklaşık bir ifadedir. Kesin bir sayı diye kilitlenmez. Ömer b. Abdülaziz kaldırana kadar her Cuma, **Hz. Ali**\'nin adı bir küfür gibi okundu.' },
       art: { bg: 'city', props: ['minbar', 'sun'], actors: [{ kind: 'crowd', x: 30, scale: 7 }, { kind: 'man', x: 70, label: { tr: 'Hatip' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Ömer b. Abdülaziz halife olunca bu uygulamayı kaldırdı. İbn Haldun\'a göre bütün beldelere yazıp durdurulmasını emretti. Yaygın anlatıma göre hutbelerde, adaleti ve iyiliği emreden Nahl 90. ayeti okutuldu.' },
+      text: { tr: 'Ömer b. Abdülaziz halife olunca laneti kaldırdı. Beldelere yazıp durdurulmasını emrettiği anlatılır. Hutbelerde Nahl 90, adaleti ve iyiliği emreden ayet okutuldu. Yara kapanmadı. Hiç olmazsa minber, bir süre sustu.' },
       art: { bg: 'dawn', props: ['minbar', 'sun'], actors: [{ kind: 'man', x: 40, pose: 'raise', label: { tr: 'Ömer b. Abdülaziz' } }, { kind: 'crowd', x: 72, scale: 6 }] },
       by: 'both',
     },

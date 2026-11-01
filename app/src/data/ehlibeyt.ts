@@ -15,17 +15,17 @@ export const ehlibeyt: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: 'Ayetteki "kendimizi" sözü Hz. Ali\'yi de kapsar. Peygamber mübaheleye kendi nefsi olarak onu getirdi. Bu, onun Peygamber\'e en yakın kişi olduğunun delilidir.' },
+      text: { tr: 'Ayetteki "kendimizi" sözü **Hz. Ali**\'yi de kapsar. Peygamber mübaheleye kendi nefsi olarak onu getirdi. Yakınlık, bir akrabalık değil, aynı yerde durmaktır. Velayet, bu nefsin adıdır.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'prophet', x: 44, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 58, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Veda Haccı dönüşünde, Hum suyu başında Peygamber iki ağır emanet bıraktığını söyledi: Allah\'ın Kitabı ve itreti, yani Ehl-i Beyt. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi. Tirmizi rivayetinde ikisi, Havz\'da Peygamber\'e varıncaya dek ayrılmaz. Müslim\'deki rivayette Zeyd b. Erkam\'a Ehl-i Beyt sorulunca, önce hanımların bu kapsama girmediğini söyledi. Zekâtın yasaklandığı Ali, Akîl, Cafer ve Abbas ailelerini andı.' },
+      text: { tr: 'Veda Haccı dönüşünde, Hum suyu başında Peygamber iki ağır emanet bıraktı: Allah\'ın Kitabı ve itreti, ==Ehl-i Beyt==. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi. İkisi, Havz\'a varıncaya dek ayrılmaz. Zeyd\'e sorulunca hanımları çekirdeğin dışında tuttu. Ali, Akîl, Cafer ve Abbas ailelerini andı. Kitap, itsiz bırakılmasın diye bağlanmıştı.' },
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 82, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Bir başka söz şöyledir: "Ehl-i Beytimin örneği Nuh\'un gemisi gibidir. Ona binen kurtulur, geri kalan boğulur." Buna Safine hadisi denir.' },
+      text: { tr: '"Ehl-i Beytimin örneği Nuh\'un gemisi gibidir. Ona binen kurtulur, geri kalan boğulur." Buna Safine denir. Gadir\'de gösterilen gemi, Sakife\'de terk edilince ümmet fırtınaya çıktı.' },
       art: { bg: 'river', props: ['palms'], actors: [{ kind: 'crowd', x: 40, scale: 5 }] },
     },
     {
@@ -35,17 +35,17 @@ export const ehlibeyt: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: 'Bu on iki kişi, Allah\'ın belirlediği On İki İmam\'dır. Câbir, Hz. Fatıma\'nın elinde bir levha gördü. Levhada imamların adları yazılıydı.' },
+      text: { tr: 'Bu on iki, Allah\'ın belirlediği On İki İmam\'dır. Ehl-i Beyt rivayetinde Câbir, **Hz. Fatıma**\'nın elinde bir levha gördü. İmamların adları orada yazılıydı. Sayı, bir levhada ete kemiğe bürünmüştü.' },
       art: { bg: 'night', props: ['stars', 'scroll'], actors: [{ kind: 'fatima', x: 50, label: { tr: 'Hz. Fatıma' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'İmamet, Allah\'ın nass ile belirlediği bir önderliktir. İmam günahtan korunmuştur ve ilimde üstündür. Yeryüzünden hüccet hiç eksik olmaz. Her imam kendinden sonrakini bildirir.' },
+      text: { tr: '==İmamet==, Allah\'ın nass ile belirlediği önderliktir. İmam günahtan korunmuştur, ilimde üstündür. Yeryüzünden hüccet eksik olmaz. Her imam kendinden sonrakini bildirir. Gadir, bu zincirin ilk halkasını herkese göstermişti.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'ali', x: 42, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 62, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 74, scale: 0.75, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'On İki İmam sırayla şunlardır: Hz. Ali, Hz. Hasan, Hz. Hüseyin, Ali Zeynelabidin, Muhammed el-Bâkır, Cafer es-Sâdık, Musa el-Kâzım, Ali er-Rızâ, Muhammed el-Cevâd, Ali el-Hâdî, Hasan el-Askerî ve Muhammed el-Mehdi. On ikinci imam gizlenmiştir. Buna gaybet denir. Zamanı gelince ortaya çıkacaktır.' },
+      text: { tr: 'On İki İmam: **Hz. Ali**, **Hz. Hasan**, **Hz. Hüseyin**, Zeynelabidin, Bâkır, Sâdık, Kâzım, Rızâ, Cevâd, Hâdî, Askerî ve **Mehdi**. On ikinci gizlenmiştir. Buna gaybet denir. Zamanı gelince adaletle çıkacaktır. Kerbela\'da kesilen hat, onda tamamlanır.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 30, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 46, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 60, scale: 0.8, label: { tr: 'Hz. Hüseyin' } }] },
     },
   ],
