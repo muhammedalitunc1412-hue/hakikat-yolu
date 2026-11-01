@@ -8,7 +8,7 @@ export const aliKimdir: HistEvent = {
   hook: { tr: 'Kâbe\'nin içinde doğdu. Peygamber\'in yatağına yattı. İlim şehrinin kapısı odur.', en: 'Who is the man said to be born in the Kaaba, who lay in the Prophet\'s bed and is called the "gate of knowledge"?' },
   scenes: [
     {
-      text: { tr: 'Annesi Fâtıma bint Esed\'di. Sancısı Kâbe\'nin dibinde tuttu. Allah\'ın evine sığındı. Duvar ona yol verdi, içeri girdi. **Hz. Ali** orada, Beytullah\'ın içinde dünyaya geldi. Ondan önce de sonra da Kâbe\'de doğan başka bir çocuk bilinmez. Bu, yalnız ona verilen bir ikramdı.' },
+      text: { tr: 'Annesi **Fâtıma bint Esed**\'di. Sancısı Kâbe\'nin eşiğinde tuttu. Allah\'ın evine sığındı. Duvar ona yol verdi. **Hz. Ali** Beytullah\'ın içinde dünyaya geldi. Ondan önce de sonra da Kâbe\'de doğan bir çocuk bilinmez. Velayet, daha ilk nefeste bir ikram olarak konmuştu.' },
       art: { bg: 'dune-dusk', props: ['sun'], actors: [{ kind: 'woman', x: 30, label: { tr: 'Fatıma bint Esed' } }, { kind: 'ali', x: 66, scale: 0.6, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
       cites: [
@@ -20,47 +20,47 @@ export const aliKimdir: HistEvent = {
       ],
     },
     {
-      text: { tr: 'Mekke\'de kıtlık vardı. Peygamber, amcası Ebu Talib\'in yükünü hafifletmek için küçük Ali\'yi yanına aldı. Hz. Ali çocukluğunu onun evinde, onun terbiyesiyle geçirdi.' },
+      text: { tr: 'Mekke\'de kıtlık vardı. Peygamber, amcası Ebu Talib\'in yükünü hafifletmek için küçük **Hz. Ali**\'yi bağrına aldı. Çocuk, vahyin evinde büyüdü. Terbiyesi, ileride ümmetin önüne geçecek kolun terbiyesiydi.' },
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 40, pose: 'sit', label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, scale: 0.6, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Vahiy geldiğinde Hz. Ali henüz çocuktu. Peygamber\'e iman etti. İslam\'ı kabul eden ilk kişi odur.' },
+      text: { tr: 'Vahiy geldiğinde **Hz. Ali** henüz çocuktu. Duraksamadan iman etti. İslam\'ı kabul eden ilk kişi odur. Hak, daha o gün onun göğsünde yer tuttu.' },
       art: { bg: 'night', props: ['stars'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, scale: 0.7, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hicret gecesi müşrikler Peygamber\'in evini kuşattı. Hz. Ali duraksamadan onun yatağına yattı ve yeşil örtüsüne büründü. Canını ona feda etti. Bu geceye Leyletü\'l-Mebît denir. Bu fedakârlık Bakara 207\'nin ("İnsanlardan öylesi vardır ki Allah\'ın rızasını kazanmak için kendini satar") bu olay üzerine indiği de aktarılır (Hâkim, el-Müstedrek). Ayetin iniş sebebi için başka rivayetler de vardır.' },
+      text: { tr: 'Hicret gecesi müşrikler evi kuşattı. **Hz. Ali** duraksamadan Peygamber\'in yatağına yattı, yeşil örtüsüne büründü. Canını, sevdiği adamın canına siper etti. Bu geceye Leyletü\'l-Mebît denir. Bakara 207, Allah rızası için kendini satan insanı anar. O gece yatağında yatan, yarınki velayetin sahibidir.' },
       art: { bg: 'night', props: ['moon', 'stars', 'swords'], actors: [{ kind: 'crowd', x: 22, scale: 5 }, { kind: 'ali', x: 64, pose: 'sit', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Medine\'de Peygamber ashab arasında kardeşlik kurdurdu. Buna mü\'ahât denir. Hz. Ali\'ye "Sen dünyada da ahirette de benim kardeşimsin" buyurdu. Şia bunu, Hz. Ali\'nin ona en yakın kişi oluşunun delili sayar.' },
+      text: { tr: 'Medine\'de Peygamber ashabı kardeş kıldı. **Hz. Ali**\'ye döndü: "Sen dünyada da ahirette de benim kardeşimsin." Kardeşlik, bir sevgi süsü değil, yerinin adıdır.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Bedir\'de, Uhud\'da ve Hendek\'te Hz. Ali sancağı taşıdı, en önde savaştı. Hayber\'de kale uzayınca Peygamber "Sancağı, Allah ve Resulü\'nü seven, Allah ve Resulü\'nün de sevdiği bir adama vereceğim" dedi. O kişi Hz. Ali oldu. Zülfikar kılıcı ve "lâ fetâ illâ Alî, lâ seyfe illâ Zülfikâr" sözü çok anılır. Bu söz hadis ilminde zayıf ve ihtilaflı sayılır. Sağlam bir hadis olarak sunulmaz.' },
+      text: { tr: 'Bedir\'de, Uhud\'da, Hendek\'te sancak onun elindeydi. En önde o durdu. Hayber uzayınca Peygamber, sancağı Allah\'ı ve Resulünü seven, onlarca sevilen adama vereceğini söyledi. O adam **Hz. Ali**\'ydi. Kolu, risaletin kalkanıydı.' },
       art: { bg: 'battle', props: ['flags', 'swords'], actors: [{ kind: 'crowd', x: 22, scale: 6 }, { kind: 'ali', x: 62, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: '"Ben ilmin şehriyim, Ali de onun kapısıdır." Şia bunu, Hz. Ali\'nin ilimdeki yerinin delili sayar. Sıhhati konuşulur. Kimi sahih ya da hasen der, kimi zayıf, hatta uydurma sayar.' },
+      text: { tr: '"Ben ilmin şehriyim, Ali de onun kapısıdır." İlim, kapısız girilmeyen bir şehirdir. Kapı **Hz. Ali**\'dir. Ondan sonra gelen imamlar, bu kapıdan yürüyen ilmin çocuklarıdır.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 38, pose: 'raise', label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Şûrâ 23. ayet, Mevedde ayetidir: "De ki: Ben sizden bunun karşılığında yakınlarıma sevgiden başka bir şey istemiyorum." Yakınlar Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin\'dir.' },
+      text: { tr: 'Şûrâ 23, risaletin karşılığı olarak yakınlara sevgi ister. Yakınlar **Hz. Ali**, **Hz. Fatıma**, **Hz. Hasan** ve **Hz. Hüseyin**\'dir. Sevgi, onların hakkını tanımanın adıdır.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 24, scale: 0.9, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 42, scale: 0.9, label: { tr: 'Hz. Fatıma' } }, { kind: 'hasan', x: 60, scale: 0.7, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 76, scale: 0.7, label: { tr: 'Hz. Hüseyin' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Medine\'de Hz. Ali, Peygamber\'in kızı Hz. Fatıma ile evlendi. Mehir olarak zırhının satılmasından gelen bedel anılır. Şia\'ya göre bu nikâh gökte kıyılmıştır. Peygamber\'in soyu bu evlilikten Hz. Hasan ve Hz. Hüseyin ile yürüdü.' },
+      text: { tr: 'Medine\'de **Hz. Ali**, Peygamber\'in kızı **Hz. Fatıma** ile evlendi. Mehir, satılan bir zırhın bedeliydi. Ehl-i Beyt rivayetinde bu nikâh gökte kıyılmıştır. Soy, **Hz. Hasan** ve **Hz. Hüseyin** ile yürüdü. Velayet, bu evin içinden imamlara geçti.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'ali', x: 36, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 60, label: { tr: 'Hz. Fatıma' } }, { kind: 'prophet', x: 80, scale: 0.9, label: { tr: 'Hz. Peygamber' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Peygamber vefat edince Hz. Ali onu yıkadı ve defin işinde başta durdu. Bu, Şia\'ya göre Peygamber yıkanması için Hz. Ali\'yi vasiyet etmişti. Gözlerini o bağladı. Vefat anında başı Hz. Ali\'nin göğsündeydi.' },
+      text: { tr: 'Peygamber vefat edince başı **Hz. Ali**\'nin göğsündeydi. Gözlerini o bağladı. Yıkamayı o üstlendi. Ehl-i Beyt rivayetinde Peygamber, yıkanması için onu vasiyet etmişti. O saatlerde Sakife\'de biat konuşuluyordu. Hak, cenazenin başında duran adamdaydı.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 40, pose: 'sit', label: { tr: 'Hz. Ali' } }, { kind: 'prophet', x: 64, pose: 'sit', label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },

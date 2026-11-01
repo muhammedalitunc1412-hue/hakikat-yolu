@@ -16,7 +16,7 @@ export const kerbela: HistEvent = {
   hook: { tr: 'Yezid\'e biat yoktu. Su kesildi. On Muharrem\'de Ehl-i Beyt şehit edildi.', en: 'No bay\'ah to Yazid. The water was cut. The Ahl al-Bayt were killed on the tenth of Muharram.' },
   scenes: [
     {
-      text: { tr: 'Peygamber, Hz. Hasan ile **Hz. Hüseyin** için "cennet gençlerinin efendileridir" demişti. **Muaviye** ölünce tahtı oğlu **Yezid**\'e bıraktı. Hilafet bir saltanat olmuştu. Yezid\'in bu işe ne ilmi ne takvası vardı; içkiyle anılır, İslam\'ın ölçüsüyle ilgisi yoktu. Medine\'de biat istendi. Hz. Hüseyin eğmedi.' },
+      text: { tr: 'Gadir\'de eli kaldırılan hakkın torunu **Hz. Hüseyin**\'di. Peygamber, onu ve **Hz. Hasan**\'ı cennet gençlerinin efendisi diye anmıştı. Hasan, kan dökülmesin diye sulh yapmış, sonra zehirlenmişti. **Muaviye** ölünce tahtı oğlu **Yezid**\'e bıraktı. Hilafet bir saltanattı. Yezid\'in bu işe ne ilmi ne takvası vardı. Medine\'de biat istendi. Hüseyin eğmedi.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'husayn', x: 70, label: { tr: 'Hz. Hüseyin' } }, { kind: 'man', x: 28, label: { tr: 'Yezid' } }, { kind: 'man', x: 48, label: { tr: 'Vali' } }] },
       by: 'both',
       cites: [{ side: 'sunni', i: 0 }, { side: 'shia', i: 5 }],

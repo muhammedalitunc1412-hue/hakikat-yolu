@@ -30,7 +30,7 @@ export const ehlibeyt: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Câbir b. Semüre anlatır. Peygamber "Bu iş (hilafet), içlerinden on iki halife gelinceye kadar sürecek" dedi. Sonra bir şey daha söyledi. Câbir onu duyamadı. Babası "Hepsi Kureyş\'tendir" dediğini bildirdi. Bu sayı Buhari "on iki emir", Müslim "on iki halife" der.' },
+      text: { tr: 'Câbir b. Semüre anlatır. Peygamber, "Bu iş, içlerinden on iki halife gelinceye kadar sürecek" dedi. Sonra bir şey daha söyledi. Câbir duyamadı. Babası, "Hepsi Kureyş\'tendir" dediğini bildirdi. Sayı, bir tesadüf değildir. İmamet, on iki halkadır.' },
       art: { bg: 'city', props: ['sun', 'minbar'], actors: [{ kind: 'prophet', x: 60, label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 28, scale: 6 }] },
     },
     {

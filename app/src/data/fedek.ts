@@ -10,7 +10,7 @@ export const fedek: HistEvent = {
   hook: { tr: 'Peygamber\'in kızına bağışladığı Fedek elinden alındı. O, hakkını ayetle söyledi ve küs vefat etti.', en: 'Why did the Prophet\'s daughter never speak to the caliph again?' },
   scenes: [
     {
-      text: { tr: '**Fedek**, Medine\'nin kuzeyinde, Hayber\'e yakın bir köydü. Halkı kılıç çekmeden Peygamber ile anlaşmıştı. Toprak onun elindeydi. O da bu bağı kızına, **Hz. Fatıma**\'ya hibe etti. Bir babanın evladına verdiği helal bir haktı. ==Ehl-i Beyt==\'in geçimi, o hurma bahçesinin gölgesinde duruyordu.' },
+      text: { tr: 'Sakife\'de biat alınırken **Hz. Ali** cenazenin başındaydı. Ardından **Fedek** geldi. Medine\'nin kuzeyinde, Hayber\'e yakın bir köydü. Halkı kılıç çekmeden anlaşmıştı. Peygamber bu bağı kızına, **Hz. Fatıma**\'ya hibe etti. ==Ehl-i Beyt==\'in geçimi, o hurma bahçesinin gölgesinde duruyordu.' },
       art: { bg: 'oasis', props: ['sun', 'palms', 'well'], actors: [{ kind: 'prophet', x: 36, label: { tr: 'Hz. Peygamber' } }, { kind: 'fatima', x: 64, label: { tr: 'Hz. Fatıma' } }] },
       by: 'shia',
       cites: [{ side: 'shia', i: 0 }],

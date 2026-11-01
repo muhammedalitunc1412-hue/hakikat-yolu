@@ -8,42 +8,42 @@ export const sakife: HistEvent = {
   hook: { tr: 'Peygamber\'in bedeni daha yıkanırken Sakife\'de biat alındı. Ehl-i Beyt cenazenin başında yalnız kaldı.', en: 'A caliph was chosen while the Prophet\'s body was still being prepared. Hz. Ali did not pledge for six months.' },
   scenes: [
     {
-      text: { tr: 'Peygamber vefat edince Medine karıştı. Hz. Ali, Abbas ve Haşimoğulları onun yıkama ve defin hazırlığına koyuldu.' },
+      text: { tr: 'Gadir\'de eli kaldırılan **Hz. Ali**, Peygamber\'in başucundaydı. Vefat haberi Medine\'yi karıştırdı. O, Abbas ve Haşimoğullarıyla yıkama ve defin hazırlığına koyuldu. Hak, cenazenin yanında duruyordu.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 34, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 68, scale: 4, label: { tr: 'Haşimoğulları' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Aynı sırada Ensar, Beni Saide gölgeliğinde toplandı. Hasta olan Hazrec reisi Sa\'d b. Ubade de oradaydı; Ensar yönetimi kendilerinden istedi.' },
+      text: { tr: 'Aynı saatlerde Ensar, Beni Saide gölgeliğinde toplandı. Hasta Sa\'d b. Ubade de oradaydı. Yönetimi kendilerinden istediler. Peygamber\'in bedeni henüz yıkanmamıştı. Velayet, o gölgelikte konuşulmuyordu.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'crowd', x: 30, scale: 7, label: { tr: 'Ensar' } }, { kind: 'man', x: 66, pose: 'sit', label: { tr: 'Sa\'d b. Ubade' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Haberi alan Ebu Bekir ve Ömer, Ebu Ubeyde ile birlikte Sakife\'ye gitti. Ebu Bekir Ensar\'ın faziletini andı, sonra Arapların yönetimi Kureyş\'e tanıyacağını söyledi.' },
+      text: { tr: 'Haberi alan Ebu Bekir, Ömer ve Ebu Ubeyde **Sakife**\'ye koştu. Ebu Bekir Ensar\'ı övdü, sonra Arapların yönetimi Kureyş\'ten başkasına vermeyeceğini söyledi. Gadir\'in el kaldırışı, o çatı altında yok sayıldı.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'crowd', x: 24, scale: 5, label: { tr: 'Ensar' } }, { kind: 'man', x: 48, label: { tr: 'Ebu Bekir' } }, { kind: 'man', x: 64, label: { tr: 'Ömer' } }, { kind: 'man', x: 80, label: { tr: 'Ebu Ubeyde' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hubab b. Münzir "bizden bir emir, sizden bir emir" dedi. Beşir b. Sa\'d ise Kureyş lehine konuştu. Sesler yükseldi; Evs ile Hazrec arasındaki rekabet de araya girdi.' },
+      text: { tr: 'Hubab, "bizden bir emir, sizden bir emir" dedi. Beşir, Kureyş lehine konuştu. Sesler yükseldi. Evs ile Hazrec\'in eski rekabeti araya girdi. Hak, bir kabile çekişmesinin içinde kayboldu.' },
       art: { bg: 'city', actors: [{ kind: 'man', x: 28, pose: 'raise', label: { tr: 'Hubab b. Münzir' } }, { kind: 'man', x: 50, label: { tr: 'Beşir b. Sa\'d' } }, { kind: 'crowd', x: 76, scale: 5 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Ömer, Ebu Bekir\'in elini tutup biat etti; ardından Beşir ve diğerleri biat etti. Ortam öyle gerildi ki bir ara "Sa\'d\'ı öldürdünüz" denildi. Sa\'d biat etmedi.' },
+      text: { tr: 'Ömer, Ebu Bekir\'in elini tutup biat etti. Ardından başkaları da etti. Ortam öyle gerildi ki "Sa\'d\'ı öldürdünüz" denildi. Sa\'d biat etmedi. **Hz. Ali** ise hâlâ Peygamber\'in yıkamasındaydı.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'man', x: 30, label: { tr: 'Ömer' } }, { kind: 'man', x: 52, label: { tr: 'Ebu Bekir' } }, { kind: 'crowd', x: 78, scale: 5 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Yıllar sonra Halife Ömer bu biat için "felte" dedi: aceleyle, istişaresiz yapılmış bir iş. Ona göre Allah şerrini savmıştı ve bu bir daha tekrarlanmamalıydı.' },
+      text: { tr: 'Yıllar sonra Halife Ömer bu biata "felte" dedi: aceleyle, istişaresiz bir iş. Allah şerrini savmış, dedi. Bir daha tekrarlanmasın, dedi. O acele, Gadir\'de ilan edilen hakkı bir öğleden sonraya sıkıştırmıştı.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'crowd', x: 30, scale: 6 }, { kind: 'man', x: 68, pose: 'raise', label: { tr: 'Ömer' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Fatıma\'nın vefatından sonra halkın Hz. Ali\'ye bakışı değişti. Hz. Ali, Halife Ebu Bekir\'le barışmak ve biat etmek istedi. Rivayet, onun altı ay biat etmediğini söyler.' },
+      text: { tr: '**Hz. Fatıma** vefat edene kadar **Hz. Ali** biat etmedi. Altı ay, kızın acısının süresiydi. Fedek elinden alınmış, kapının önünde ateş yemini edilmişti. O sustuktan sonra halkın bakışı değişti. Ali, kan dökülmesin diye eğildi. Hakkını unutmadı.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 34, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 66, label: { tr: 'Ebu Bekir' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Yıllar sonra Halife Ömer işi altı kişilik şuraya bıraktı; biat sonunda Halife Osman\'a yapıldı. Nehcü\'l-Belağa\'daki Şıkşıkıyye hutbesinde Hz. Ali, bu günleri sabırla geçirdiğini anlatır.' },
+      text: { tr: 'Sonra iş altı kişilik şuraya bırakıldı. Biat Osman\'a yapıldı. Şıkşıkıyye hutbesinde **Hz. Ali** bu günleri sabırla anar. Sakife\'de başlayan geçiştirme, şurada da sürmüştü. Sabır, hakkın unutulması değildi.' },
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'ali', x: 30, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 56, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'man', x: 78, label: { tr: 'Osman' } }] },
       by: 'shia',
     },

@@ -8,47 +8,47 @@ export const cemel: HistEvent = {
   hook: { tr: 'Hz. Ali hilafeti istemeden kabul etti. Cemel\'de kan dökülmesin diye sabretti, hakkı da bırakmadı.', en: 'The first day Muslims stood in battle lines against Muslims.' },
   scenes: [
     {
-      text: { tr: 'Halife Osman şehit edilince Medine karıştı. Ensar ve Muhacirlerin önde gelenleri Hz. Ali\'ye gelip hilafeti kabul etmesini istedi. Hz. Ali önce çekindi; ısrar üzerine Mescid-i Nebevi\'de biat alındı.' },
+      text: { tr: 'Halife Osman şehit olunca Medine karıştı. Ensar ve Muhacirler **Hz. Ali**\'ye geldi. Gadir\'de ilan edilen hak, yıllar sonra kapıya dayanmıştı. O önce çekindi. Israr üzerine Mescid-i Nebevî\'de biat alındı. Hak, istemeden de olsa yerine oturuyordu.' },
       art: { bg: 'city', props: ['minbar', 'palms'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'ali', x: 66, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Talha ve Zübeyr de biat etti. Hz. Ali, Halife Osman\'ın atadığı valileri değiştirerek işe başladı. Bu adım, sonraki itirazların zemini oldu. Biatın gönülden mi verildiği o günden beri konuşulur.' },
+      text: { tr: 'Talha ve Zübeyr de biat etti. **Hz. Ali**, Halife Osman\'ın valilerini değiştirdi. Şam\'da **Muaviye** duruyordu. Biat edenlerin bir kısmının gönlü, biatın dışında kaldı. İtiraz, bu değişikliğin üstüne kurulacaktı.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 24, label: { tr: 'Talha' } }, { kind: 'man', x: 46, label: { tr: 'Zübeyr' } }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Şam valisi Muaviye, Halife Osman\'ın kanı yerini bulmadan biat etmeyeceğini bildirdi. Hz. Ali ise önce düzenin kurulmasını, sonra davanın mahkemede görülmesini istedi.' },
+      text: { tr: 'Şam valisi **Muaviye**, Halife Osman\'ın kanı yerini bulmadan biat etmeyeceğini bildirdi. Kan, bir gerekçeydi. İktidar, asıl istenendi. **Hz. Ali** önce düzen, sonra mahkeme istedi. Hak, acele bir intikam değildi.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 34, label: { tr: 'Muaviye' } }, { kind: 'crowd', x: 70, scale: 7 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Umre için Mekke\'de bulunan Aişe, Talha ve Zübeyr, Halife Osman\'ın kanını gerekçe göstererek Basra\'ya çıktı. Kendi anlayışlarına göre durumu düzeltmek istiyorlardı.' },
+      text: { tr: 'Umre için Mekke\'de bulunan Aişe, Talha ve Zübeyr, Halife Osman\'ın kanını gerekçe gösterip Basra\'ya çıktı. Biat ettikleri adama karşı ordu yürüdü. **Hz. Ali**\'nin hakkı, daha yeni yerine oturmuşken yeniden tartışmaya açıldı.' },
       art: { bg: 'dune-day', props: ['sun', 'camels'], actors: [{ kind: 'woman', x: 24, label: { tr: 'Aişe' } }, { kind: 'man', x: 50, label: { tr: 'Talha' } }, { kind: 'man', x: 74, label: { tr: 'Zübeyr' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Yolda Havab suyunda köpek sesleri duyulunca, Peygamber\'in bir hanımına söylediği uyarı hatırlandı. Basra\'da vali Osman b. Huneyf ile çatışma çıktı.' },
+      text: { tr: 'Yolda Havab suyunda köpek sesleri duyulunca, Peygamber\'in bir hanımına söylediği uyarı hatırlandı. Basra\'da vali Osman b. Huneyf ile çatışma çıktı. Uyarı duyulmuştu. Yol yine de sürdü.' },
       art: { bg: 'night', props: ['moon', 'stars', 'well'], actors: [{ kind: 'woman', x: 40, label: { tr: 'Aişe' } }, { kind: 'crowd', x: 72, scale: 6 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Ali, Kufe\'den destek toplayıp Basra\'ya yürüdü ve savaşı önlemek için elçiler gönderdi. Zübeyr\'e, Peygamber\'in "Sen Hz. Ali ile haksızlıkla savaşacaksın" sözünü hatırlattı. Zübeyr saftan ayrıldı.' },
+      text: { tr: '**Hz. Ali** Kûfe\'den yürüdü. Savaşı önlemek için elçi gönderdi. Zübeyr\'e, Peygamber\'in "Sen Hz. Ali ile haksızlıkla savaşacaksın" sözünü hatırlattı. Zübeyr saftan ayrıldı. Hatırlatılan söz, bir kılıçtan önce gelmişti.' },
       art: { bg: 'dune-dusk', props: ['tents'], actors: [{ kind: 'ali', x: 34, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 68, label: { tr: 'Zübeyr' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Barış çabaları sonuç vermeyince iki ordu karşılaştı. Aişe\'nin bindiği devenin çevresi sabahtan akşama kadar çatışmanın merkezi oldu. Deve durdurulunca savaş bitti. Talha ve Zübeyr bu süreçte hayatını kaybetti.' },
+      text: { tr: 'Barış yetmeyince iki ordu karşılaştı. Aişe\'nin bindiği devenin çevresi sabahtan akşama çatışmanın merkezi oldu. Deve durunca savaş bitti. Talha ve Zübeyr bu süreçte hayatını kaybetti. **Hz. Ali** kanı istememişti. Kan yine döküldü.' },
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'crowd', x: 24, scale: 7 }, { kind: 'woman', x: 56, label: { tr: 'Aişe' } }, { kind: 'ali', x: 84, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Ali savaştan sonra esirleri serbest bıraktı. Mal, kadın ve çocuklar üzerinde ganimet hükmü uygulamadı. Aişe\'yi saygıyla ağırladı ve kardeşi Muhammed b. Ebi Bekir ile Medine\'ye uğurladı.' },
+      text: { tr: '**Hz. Ali** esirleri serbest bıraktı. Mal, kadın ve çocuk üzerinde ganimet hükmü uygulamadı. Aişe\'yi saygıyla ağırladı, kardeşi Muhammed b. Ebi Bekir ile Medine\'ye uğurladı. Galip, intikam almadı. Hakkın ahlakı buydu.' },
       art: { bg: 'dawn', props: ['camels'], actors: [{ kind: 'ali', x: 26, label: { tr: 'Hz. Ali' } }, { kind: 'woman', x: 54, label: { tr: 'Aişe' } }, { kind: 'man', x: 80, label: { tr: 'Muhammed b. Ebi Bekir' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Aişe\'nin sonradan üzüldüğünü anlatan rivayetler vardır. Üzüntünün konusu ayrıca konuşulur. Birçok Sünni âlim, Cemel\'de Hz. Ali\'yi hakka daha yakın taraf olarak anar.' },
+      text: { tr: 'Aişe\'nin sonradan üzüldüğü anlatılır. **Cemel**, **Hz. Ali**\'nin hakka daha yakın durduğu gündür. O, biatı çiğneyenlere karşı sabrı seçmiş, yine de hakkı bırakmamıştı. Sıra, Şam\'da bekleyen **Muaviye**\'ye gelecekti.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'woman', x: 36, pose: 'sit', label: { tr: 'Aişe' } }, { kind: 'crowd', x: 72, scale: 5 }] },
       by: 'sunni',
     },

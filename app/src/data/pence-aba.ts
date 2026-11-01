@@ -40,7 +40,7 @@ export const penceAba: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: 'Kisa olayı şunu gösterir. Ehl-i Beyt\'in çekirdeğini Allah belirlemiştir. Sonraki imamlar bu beşin soyundan gelir. İmamet çizgisi bu kapsama dayanır.' },
+      text: { tr: 'Kisa, ==Ehl-i Beyt==\'in çekirdeğini Allah\'ın belirlediğini gösterir. Sonraki imamlar bu beşin soyundan gelir. İmamet bu kapsama dayanır. Gadir, bu beşin içinden **Hz. Ali**\'nin elini herkesin önünde kaldıracaktır.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 56, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 68, scale: 0.8, label: { tr: 'Hz. Hüseyin' } }] },
     },
   ],
