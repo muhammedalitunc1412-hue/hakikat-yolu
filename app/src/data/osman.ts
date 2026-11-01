@@ -8,42 +8,42 @@ export const osman: HistEvent = {
   hook: { tr: 'Şikâyetler büyürken Hz. Ali Medine\'de arabuluculuk yaptı. Ardından kendisine biat istendi.', en: 'The man who mediated in Medina as grievances grew, and was then asked for allegiance.' },
   scenes: [
     {
-      text: { tr: 'Halife Osman\'ın ilk yılları sakin geçti. İkinci yarıda valilikler ve mal, şikâyet oldu. Özellikle **Ümeyyeoğulları** önemli görevlere getirildi. Şura, hakkı bir kenara koymuştu. Şimdi o kenar, bir ailenin elinde genişliyordu. Kuşatma günü o, Peygamber\'in verdiği bir sözü hatırlatacaktı.' },
+      text: { tr: 'Halife Osman\'ın Medine\'deki ilk yılları sakin geçti. İkinci yarıda valilikler ve mal, şikâyet konusu oldu. Özellikle **Ümeyyeoğulları** önemli görevlere getirildi. Daha önceki şura, yani danışma kurulu, **Hz. Ali**\'nin hakkını bir kenara koymuştu. Şimdi görevler ve mal, bu ailenin elinde toplandı. Kuşatma günü Osman, Peygamber\'in verdiği bir sözü hatırlatacaktı.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'crowd', x: 34, scale: 7 }, { kind: 'man', x: 66, label: { tr: 'Osman' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Mısır, Kûfe ve Basra\'dan heyetler geldi. Şikâyet, Emevî atamalarına ve beytülmalin kullanımına dayanıyordu. Medine, bu gürültüyü yakından dinliyordu. **Hz. Ali** henüz kenardaydı. Uyarmak ona düşecekti.' },
+      text: { tr: 'Mısır, Kûfe ve Basra\'dan heyetler Medine\'ye geldi. Şikâyet, Emevî atamalarına ve beytülmal denilen ortak hazinenin kullanımına dayanıyordu. Medine halkı bu itirazları yakından duydu. **Hz. Ali** henüz araya girmemişti. Osman\'ı uyarmak ona düşecekti.' },
       art: { bg: 'caravan', props: ['camels'], actors: [{ kind: 'crowd', x: 40, scale: 9 }, { kind: 'man', x: 76 }] },
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Ali** Halife Osman\'ı uyardı. Halkın şikâyetini iletti, tutumun değişmesini istedi. Mısırlı heyet yaklaşınca, Osman\'ın isteğiyle Ali ve Muhammed b. Mesleme onlarla konuştu. Şikâyetlerin giderileceği sözüyle heyet döndü. Ali, kan dökülmesin diye arada durdu.' },
+      text: { tr: '**Hz. Ali**, Medine\'de Halife Osman\'ı uyardı. Halkın şikâyetini iletti ve tutumunun değişmesini istedi. Mısırlı heyet yaklaşınca, Osman\'ın isteğiyle Ali ve Muhammed b. Mesleme onlarla konuştu. Şikâyetlerin giderileceği sözüyle heyet döndü. Ali, kan dökülmesin diye iki tarafın arasında durdu.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 38, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 70, label: { tr: 'Osman' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Anlaşma bozuldu. **Hz. Ali**, Mervan\'ın onu zora sokacağını söyleyip uzak durmasını öğütledi. Bir mektup da anılır. Mektubu kimin yazdığı konuşulur. Öğüt tutulmadı. Yol, kuşatmaya çıktı.' },
+      text: { tr: 'Anlaşma bozuldu. **Hz. Ali**, Mervan\'ın Osman\'ı zora sokacağını söyledi ve ondan uzak durmasını öğütledi. Bir mektup da anılır. Mektubu kimin yazdığı konuşulur. Öğüt tutulmadı. İş, Medine\'de kuşatmaya vardı.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'ali', x: 36, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 64, label: { tr: 'Osman' } }, { kind: 'man', x: 84, label: { tr: 'Mervan' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Medine\'de kuşatma başladı. Halife Osman evine çekildi. Su ve yiyecek zorlaştı. "Peygamber benden bir söz aldı, ona sabrediyorum" dedi. **Hz. Ali** ise hâlâ kanın durmasını istiyordu.' },
+      text: { tr: 'Medine\'de kuşatma başladı. Halife Osman evine çekildi. Su ve yiyecek zorlaştı. Osman, "Peygamber benden bir söz aldı, ona sabrediyorum" dedi. **Hz. Ali** ise hâlâ kanın durmasını istiyordu.' },
       art: { bg: 'night', props: ['stars', 'moon'], actors: [{ kind: 'crowd', x: 30, scale: 8 }, { kind: 'man', x: 74, label: { tr: 'Osman' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Rivayete göre **Hz. Ali**, **Hz. Hasan** ile **Hz. Hüseyin**\'i evi korumaları için gönderdi. Suyu da ulaştırmaya çalıştığı anlatılır. Hasan\'ın yaralandığı da söylenir. Hak sahibi, düşmanının kanını istemiyordu.' },
+      text: { tr: 'Kuşatma sürerken, rivayete göre **Hz. Ali**, **Hz. Hasan** ile **Hz. Hüseyin**\'i Osman\'ın evini korumaları için gönderdi. Suyu da ulaştırmaya çalıştığı anlatılır. Hasan\'ın yaralandığı da söylenir. Gadir\'de hakkı ilan edilen Ali, yine de Osman\'ın kanını istemiyordu.' },
       art: { bg: 'city', actors: [{ kind: 'hasan', x: 32, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 48, label: { tr: 'Hz. Hüseyin' } }, { kind: 'ali', x: 68, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 86, label: { tr: 'Osman' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Halife Osman 35 H Zilhicce\'de şehit edildi. **Hz. Ali** hutbesinde der: öldürmesi için emir vermiş olsaydı katil sayılırdı. İnsanları ondan alıkoymuş olsaydı yardımcısı olurdu. Hükmü Allah\'a bırakır. O, ne kılıcı ne de sırtını bu kana vermişti.' },
+      text: { tr: 'Halife Osman, 35 H Zilhicce\'de Medine\'de şehit edildi. **Hz. Ali** hutbesinde der: öldürmesi için emir vermiş olsaydı katil sayılırdı. İnsanları ondan alıkoymuş olsaydı yardımcısı olurdu. Hükmü Allah\'a bırakır. Ali bu öldürmede kılıç kullanmadı. Bu kanın yanında da yer almadı.' },
       art: { bg: 'dawn', actors: [{ kind: 'crowd', x: 34, scale: 7 }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Medine bir süre yönetimsiz kaldı. Halk **Hz. Ali**\'ye geldi. O, "Beni bırakın, başkasını arayın" dedi. Israr üzerine Mescid-i Nebevî\'de biat alındı. Gadir\'de ilan edilen hak, yıllar sonra kapıya dayanmıştı. Talha ile Zübeyr\'in gönlü, bu biatın içinde tam durmayacaktı. Cemel, bu çatlağın adıdır.' },
+      text: { tr: 'Osman\'ın ardından Medine bir süre yönetimsiz kaldı. Halk **Hz. Ali**\'ye geldi. O, "Beni bırakın, başkasını arayın" dedi. Israr üzerine Mescid-i Nebevî\'de biat alındı. Biat, bağlılık sözüdür. Gadir\'de ilan edilen hak, yıllar sonra halkın bu isteğiyle Ali\'nin önüne geldi. Talha ile Zübeyr\'in gönlü bu biatta tam durmayacaktı. Bu ayrılığın adı Cemel\'dir.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'crowd', x: 32, scale: 9 }, { kind: 'man', x: 56, label: { tr: 'Talha' } }, { kind: 'ali', x: 78, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
