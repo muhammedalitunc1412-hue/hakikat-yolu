@@ -108,9 +108,9 @@ export const NOTES: Record<string, string[]> = {
   'fatima-vefat': [
     "Fedek talebi ve mesciddeki hutbe, kapı gününe bağlanır.",
     "Evi yakma yemini Sünni kitaplarda da yazılıdır (İbn Ebî Şeybe; Şehristânî, Nazzâm'ın sözünü aktarır, cilt 1, s. 57).",
-    "Ehl-i Beyt rivayetine göre kapı yakıldı (Süleym, cilt 1, s. 387), kapı ile duvar arasında sıkıştı, çivi göğsüne battı (Mü'temeru ulemâi Bağdâd, s. 135) ve Muhsin düştü (Bihâr, cilt 30, s. 294).",
+    "Ehl-i Beyt rivayetine göre Halife Ömer kapıyı yaktı ve tekmeledi (Süleym, cilt 1, s. 387). Hz. Fatıma kapı ile duvar arasında kaldı, kaburgası kırıldı, çivi göğsüne battı ve Muhsin düştü (Bihâr, cilt 30, s. 294).",
     "Vefata kadar konuşmadığı ve gece defnedildiği Buhari 4240'tadır.",
-    "Ertesi sabah Hz. Ali kabir başında durdu (Delâilü'l-İmâme, cilt 1, s. 137). Kabri gizlidir.",
+    "Hz. Ali Bakî'de birkaç mezar şekli yaptı. Sabah Halife Ömer mezarları kazdırmak istedi. Hz. Ali Zülfikar ile durdurdu (Delâilü'l-İmâme, cilt 1, s. 137; Bihâr 43/171). Kabri gizlidir.",
   ],
   cemel: [
     "Halife Osman'ın öldürülmesinden sonra Hz. Ali hilafeti bilinçle üstlendi.",
