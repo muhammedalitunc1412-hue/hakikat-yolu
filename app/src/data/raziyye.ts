@@ -8,32 +8,32 @@ export const raziyye: HistEvent = {
   hook: { tr: 'Peygamber "size bir yazı yazayım ki sapmayasınız" dedi. Bu söz Buhari ve Müslim\'de anlatılır.', en: 'The Prophet said, "Let me write for you so that you do not go astray." Why was it never written?' },
   scenes: [
     {
-      text: { tr: 'Peygamber, yirmi yaşlarındaki Usame b. Zeyd\'i Şam yönündeki Belka\'ya gidecek ordunun komutanı yaptı. Ordu Medine dışındaki Cürf\'te toplanmaya başladı. Bu olay Sünni kaynaklarında da geçmektedir (Taberî, Târîh; Vâkıdî, el-Meğâzî; Yakûbî, Târîh).' },
+      text: { tr: 'Peygamber, yirmi yaşlarındaki Usame b. Zeyd\'i Şam yönündeki Belka\'ya gidecek ordunun komutanı yaptı. Ordu Medine dışındaki Cürf\'te toplanmaya başladı.' },
       art: { bg: 'dune-day', props: ['sun', 'tents', 'flags'], actors: [{ kind: 'crowd', x: 30, scale: 8 }, { kind: 'man', x: 62, label: { tr: 'Usame b. Zeyd' } }, { kind: 'prophet', x: 82, label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Genç komutana itirazlar yükseldi, ordu gecikti. Hastalığı ağırlaşan Peygamber minbere çıkıp itiraz edenlere cevap verdi. Bu olay Sünni kaynaklarında da geçmektedir (Taberî, Târîh; İbn Sa\'d, Tabakât).' },
+      text: { tr: 'Genç komutana itirazlar yükseldi, ordu gecikti. Hastalığı ağırlaşan Peygamber minbere çıkıp itiraz edenlere cevap verdi.' },
       art: { bg: 'city', props: ['minbar', 'flags'], actors: [{ kind: 'crowd', x: 30, scale: 7 }, { kind: 'prophet', x: 68, pose: 'raise', label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hastalığı iyice ağırlaşınca Peygamber, odasındakilere döndü: "Gelin, size bir yazı yazayım ki benden sonra asla sapmayasınız." Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 114; Müslim, Sahih, no. 1637a).' },
+      text: { tr: 'Hastalığı iyice ağırlaşınca Peygamber, odasındakilere döndü: "Gelin, size bir yazı yazayım ki benden sonra asla sapmayasınız."' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 32, pose: 'sit', label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 68, scale: 4 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Odada anlaşmazlık çıktı. Ömer\'e atfedilen söz şuydu: "Peygamber\'e ağrı galip geldi; Allah\'ın Kitabı bize yeter." Kimisi yazılmasını, kimisi bu sözü istedi. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 114).' },
+      text: { tr: 'Odada anlaşmazlık çıktı. Ömer\'e atfedilen söz şuydu: "Peygamber\'e ağrı galip geldi; Allah\'ın Kitabı bize yeter." Kimisi yazılmasını, kimisi bu sözü istedi.' },
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 26, pose: 'sit', label: { tr: 'Hz. Peygamber' } }, { kind: 'man', x: 56, pose: 'raise', label: { tr: 'Ömer' } }, { kind: 'crowd', x: 80, scale: 3 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Gürültü artınca Peygamber "Kalkın" dedi. Yazı yazılmadı. İbn Abbas bu günü anarken ağlar ve "Asıl musibet, ihtilaf ve gürültünün Peygamber ile o yazı arasına girmesidir" derdi. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 114 ve no. 3053; Müslim, Sahih, no. 1637a).' },
+      text: { tr: 'Gürültü artınca Peygamber "Kalkın" dedi. Yazı yazılmadı. İbn Abbas bu günü anarken ağlar ve "Asıl musibet, ihtilaf ve gürültünün Peygamber ile o yazı arasına girmesidir" derdi.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 36, pose: 'sit', label: { tr: 'Hz. Peygamber' } }, { kind: 'man', x: 70, label: { tr: 'İbn Abbas' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Aynı rivayet üç vasiyet aktarır: müşrikleri Arap Yarımadası\'ndan çıkarın, gelen heyetleri ağırlayın. Râvi üçüncüsünü unuttuğunu söyler. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 4431).' },
+      text: { tr: 'Aynı rivayet üç vasiyet aktarır: müşrikleri Arap Yarımadası\'ndan çıkarın, gelen heyetleri ağırlayın. Râvi üçüncüsünü unuttuğunu söyler.' },
       art: { bg: 'night', props: ['moon', 'stars'], actors: [{ kind: 'prophet', x: 50, pose: 'sit', label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
@@ -43,7 +43,7 @@ export const raziyye: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Haber duyulunca Medine sarsıldı. Ömer\'in önce ölümü kabul etmediği, Ebu Bekir\'in durumu halka duyurduğu rivayet edilir. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih). Hz. Ali ve Haşimoğulları ise cenaze hazırlığına koyuldu.' },
+      text: { tr: 'Haber duyulunca Medine sarsıldı. Ömer\'in önce ölümü kabul etmediği, Ebu Bekir\'in durumu halka duyurduğu rivayet edilir. Hz. Ali ve Haşimoğulları ise cenaze hazırlığına koyuldu.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'crowd', x: 24, scale: 6 }, { kind: 'man', x: 48, label: { tr: 'Ömer' } }, { kind: 'man', x: 66, label: { tr: 'Ebu Bekir' } }, { kind: 'ali', x: 84, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },

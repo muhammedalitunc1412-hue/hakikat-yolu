@@ -13,32 +13,32 @@ export const fedek: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Peygamber\'in vefatından sonra Hz. Fatıma, babasından kalan malı ve Fedek üzerindeki hakkını Halife Ebu Bekir\'den istedi. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 4240; Müslim, Sahih).' },
+      text: { tr: 'Peygamber\'in vefatından sonra Hz. Fatıma, babasından kalan malı ve Fedek üzerindeki hakkını Halife Ebu Bekir\'den istedi.' },
       art: { bg: 'city', props: ['sun'], actors: [{ kind: 'fatima', x: 34, label: { tr: 'Hz. Fatıma' } }, { kind: 'man', x: 66, label: { tr: 'Ebu Bekir' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Halife Ebu Bekir şöyle cevap verdi: "Resulullah\'ı şöyle derken işittim: Biz peygamberler miras bırakmayız; bıraktığımız sadakadır." Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 4240). Şii kaynaklarda bu hadisin tek başına rivayet edilmesi de anılır.' },
+      text: { tr: 'Halife Ebu Bekir şöyle cevap verdi: "Resulullah\'ı şöyle derken işittim: Biz peygamberler miras bırakmayız; bıraktığımız sadakadır."' },
       art: { bg: 'city', props: ['sun'], actors: [{ kind: 'fatima', x: 30, label: { tr: 'Hz. Fatıma' } }, { kind: 'man', x: 66, pose: 'raise', label: { tr: 'Ebu Bekir' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Buhari\'nin rivayetine göre Hz. Fatıma buna küstü, Halife Ebu Bekir\'den uzak durdu ve vefat edene kadar onunla konuşmadı. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 4240).' },
+      text: { tr: 'Buhari\'nin rivayetine göre Hz. Fatıma buna küstü, Halife Ebu Bekir\'den uzak durdu ve vefat edene kadar onunla konuşmadı.' },
       art: { bg: 'interior', actors: [{ kind: 'fatima', x: 50, pose: 'sit', label: { tr: 'Hz. Fatıma' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Aynı Peygamber, kızı için "Hz. Fatıma benden bir parçadır; onu kızdıran beni kızdırmıştır" demişti. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih; Müslim, Sahih).' },
+      text: { tr: 'Aynı Peygamber, kızı için "Hz. Fatıma benden bir parçadır; onu kızdıran beni kızdırmıştır" demişti.' },
       art: { bg: 'city', props: ['sun'], actors: [{ kind: 'prophet', x: 36, label: { tr: 'Hz. Peygamber' } }, { kind: 'fatima', x: 62, label: { tr: 'Hz. Fatıma' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Küskünlük burada bitmedi. Kapının önü, hastalık günleri, gece defin ve gizli kabir sonraki hikâyededir: **Eyyâm-ı Fâtımiyye**. Buhari, konuşmamanın ve gece definin cümlesini de saklar.' },
+      text: { tr: 'Küskünlük burada bitmedi. Kapının önü, hastalık günleri, gece defin ve gizli kabir sonraki hikâyededir: **Eyyâm-ı Fâtımiyye**.' },
       art: { bg: 'night', props: ['stars', 'moon'], actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 54, scale: 0.7 }, { kind: 'husayn', x: 62, scale: 0.65 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Fatıma\'nın vefatından sonra Hz. Ali, Halife Ebu Bekir\'e biat etti. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 4240). Yüzyıllar sonra Ömer b. Abdülaziz Fedek\'i Hz. Fatıma\'nın soyuna iade etti. Bu olay Sünni kaynaklarında da geçmektedir (Belâzurî, Fütûhu\'l-Büldân). Sonraki halife geri aldı.' },
+      text: { tr: 'Hz. Fatıma\'nın vefatından sonra Hz. Ali, Halife Ebu Bekir\'e biat etti. Yüzyıllar sonra Ömer b. Abdülaziz Fedek\'i Hz. Fatıma\'nın soyuna iade etti. Sonraki halife geri aldı.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 38, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 64, label: { tr: 'Ebu Bekir' } }] },
       by: 'both',
     },

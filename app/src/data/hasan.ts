@@ -13,7 +13,7 @@ export const hasan: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Sonra şöyle dedi: "Bu oğlum seyyiddir. Allah onun aracılığıyla Müslümanların iki büyük grubunu barıştıracak." Bu müjde yıllar sonra sulhta açıldı. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, No. 2704).' },
+      text: { tr: 'Sonra şöyle dedi: "Bu oğlum seyyiddir. Allah onun aracılığıyla Müslümanların iki büyük grubunu barıştıracak." Bu müjde yıllar sonra sulhta açıldı.' },
       art: { bg: 'city', props: ['sun', 'minbar'], actors: [{ kind: 'prophet', x: 44, pose: 'raise', label: { tr: 'Hz. Peygamber' } }, { kind: 'hasan', x: 64, scale: 0.7, label: { tr: 'Hz. Hasan' } }, { kind: 'crowd', x: 22, scale: 5 }] },
       by: 'both',
     },
@@ -33,17 +33,17 @@ export const hasan: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Anlaşmanın şartları kaynaklara göre değişir. Şii anlatıda Hz. Hasan hakkından vazgeçmedi; durumun gereği olarak sulha razı oldu. Şartların sonradan bozulduğu da vurgulanır.' },
+      text: { tr: 'Anlaşmanın şartları kaynaklara göre değişir. Hz. Hasan hakkından vazgeçmedi; durumun gereği olarak sulha razı oldu. Şartların sonradan bozulduğu da vurgulanır.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'hasan', x: 50, pose: 'sit', label: { tr: 'Hz. Hasan' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Hz. Hasan Medine\'de yaklaşık on yıl sessiz yaşadı. 49 ile 51 H arasında, çoğunlukla 50 H\'de, zehirlenerek vefat etti. Erken kaynakların çoğu zehirlendiğini aktarır. Rivayetlere göre zehri eşi Cü\'de bint el-Eş\'as verdi. Bu olay Sünni kaynaklarında da geçmektedir (İbnü\'l-Esîr, el-Kâmil; Üsdü\'l-Gâbe; İbn Kesîr, el-Bidâye ve\'n-Nihâye).' },
+      text: { tr: 'Hz. Hasan Medine\'de yaklaşık on yıl sessiz yaşadı. 49 ile 51 H arasında, çoğunlukla 50 H\'de, zehirlenerek vefat etti. Erken kaynakların çoğu zehirlendiğini aktarır. Rivayetlere göre zehri eşi Cü\'de bint el-Eş\'as verdi.' },
       art: { bg: 'night', props: ['moon', 'stars'], actors: [{ kind: 'hasan', x: 40, pose: 'sit', label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 62, scale: 0.9, label: { tr: 'Hz. Hüseyin' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Şii kaynaklarda Muaviye\'nin, Yezid\'in veliahtlığı için Cü\'de\'ye yüz bin dirhem ve Yezid ile evlilik vaat ettiği aktarılır. Zehirle vefat eden Hz. Hasan şehit sayılır. İbn Teymiye ve İbn Kesîr, Muaviye\'nin bu rolünü sabit görmez.' },
+      text: { tr: 'Muaviye, Yezid\'in veliahtlığı için Cü\'de\'ye yüz bin dirhem ve Yezid ile evlilik vaat etti. Zehirle vefat eden Hz. Hasan şehit sayılır.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 24, label: { tr: 'Muaviye' } }, { kind: 'woman', x: 50, label: { tr: 'Cü\'de' } }, { kind: 'hasan', x: 76, pose: 'sit', label: { tr: 'Hz. Hasan' } }] },
       by: 'shia',
     },
@@ -53,17 +53,17 @@ export const hasan: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Haberi alan Mervan b. el-Hakem buna karşı çıktı. Ona atfedilen söz şudur: "Osman şehrin kenarında gömülürken Hasan mı Peygamber\'in evine gömülecek?" Bazı rivayetlerde Aişe\'nin de katırla gelip engel olmak istediği anlatılır. Bu olay Sünni kaynaklarında da geçmektedir (İbn Asâkir, Târîhu Medîneti Dımaşk; Ebü\'l-Ferec el-İsfahânî, Makâtilü\'t-Tâlibiyyîn).' },
+      text: { tr: 'Haberi alan Mervan b. el-Hakem buna karşı çıktı. Ona atfedilen söz şudur: "Osman şehrin kenarında gömülürken Hasan mı Peygamber\'in evine gömülecek?" Bazı rivayetlerde Aişe\'nin de katırla gelip engel olmak istediği anlatılır.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 26, label: { tr: 'Mervan' } }, { kind: 'woman', x: 52, label: { tr: 'Aişe' } }, { kind: 'husayn', x: 78, scale: 0.9, label: { tr: 'Hz. Hüseyin' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Cenaze Peygamber\'in kabrine götürülürken iki taraf silahlandı. Dîneverî\'ye göre Emeviler cenazeye ok attı. Bu olay Sünni kaynaklarında da geçmektedir (Dîneverî, el-Ahbârü\'t-Tıvâl). İbn Şehraşûb yetmiş okun isabet ettiğini aktarır; bu sayı tek kaynağa dayanır.' },
+      text: { tr: 'Cenaze Peygamber\'in kabrine götürülürken iki taraf silahlandı. Dîneverî\'ye göre Emeviler cenazeye ok attı. İbn Şehraşûb yetmiş okun isabet ettiğini aktarır; bu sayı tek kaynağa dayanır.' },
       art: { bg: 'dune-dusk', props: ['swords'], actors: [{ kind: 'crowd', x: 28, scale: 6 }, { kind: 'hasan', x: 54, label: { tr: 'Hz. Hasan' } }, { kind: 'crowd', x: 78, scale: 5 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Hüseyin, ağabeyinin vasiyetine uydu ve kan dökülmesine izin vermedi. Hz. Hasan Bakî\'de defnedildi. Bu olay Sünni kaynaklarında da geçmektedir (Hâkim, el-Müstedrek, No. 4863). Kabir, ninesi Fatıma bint Esed\'in yanındadır.' },
+      text: { tr: 'Hz. Hüseyin, ağabeyinin vasiyetine uydu ve kan dökülmesine izin vermedi. Hz. Hasan Bakî\'de defnedildi. Kabir, ninesi Fatıma bint Esed\'in yanındadır.' },
       art: { bg: 'night', props: ['moon', 'stars'], actors: [{ kind: 'husayn', x: 40, label: { tr: 'Hz. Hüseyin' } }, { kind: 'crowd', x: 66, scale: 5 }] },
       by: 'both',
     },
@@ -136,5 +136,5 @@ export const hasan: HistEvent = {
     { tr: 'Sulh şartları ve vefat, kitaplarda farklı anlatılıyor. Böyle bir yerde hangi anlatıya neden güvenirsiniz?' },
     { tr: 'Hz. Hasan yönetimi barış için bırakırken, sonraki nesilde yönetim babadan oğula geçti. Bu değişim, Hz. Hüseyin\'in duruşunu anlamakta size ne söyler?' },
   ],
-  summary: { tr: 'Peygamber\'in seyyid dediği Hz. Hasan, babasının şehadetinden sonra biat aldı ve kan dökülmesin diye yönetimi Muaviye\'ye bıraktı. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, No. 2704). Yaklaşık on yıl sonra zehirlenerek vefat etti. Cenazesinde gerginlik çıktı; Hz. Hüseyin kanı durdurdu. Ardından yönetim Yezid\'e geçti.' },
+  summary: { tr: 'Peygamber\'in seyyid dediği Hz. Hasan, babasının şehadetinden sonra biat aldı ve kan dökülmesin diye yönetimi Muaviye\'ye bıraktı. Yaklaşık on yıl sonra zehirlenerek vefat etti. Cenazesinde gerginlik çıktı; Hz. Hüseyin kanı durdurdu. Ardından yönetim Yezid\'e geçti.' },
 };

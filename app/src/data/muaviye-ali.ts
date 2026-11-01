@@ -27,12 +27,12 @@ export const muaviyeAli: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: "Sıffin'de önce Muaviye'nin adamları Fırat suyunu kesti. Hz. Ali'nin ordusu suyu alınca Şamlıların su almasına engel olmadı. Bu incelik, onun savaştaki ahlakını gösterir. Bu olay Sünni kaynaklarında da geçmektedir (Taberî, Târîhu'r-Rusül ve'l-Mülûk)." },
+      text: { tr: "Sıffin'de önce Muaviye'nin adamları Fırat suyunu kesti. Hz. Ali'nin ordusu suyu alınca Şamlıların su almasına engel olmadı. Bu incelik, onun savaştaki ahlakını gösterir." },
       art,
     },
     {
       by: 'both',
-      text: { tr: "Yaşlı sahabi Ammar b. Yasir, Hz. Ali'nin safında şehit oldu. Peygamber, onu azgın bir grubun öldüreceğini haber vermişti. Amr b. el-As bunu Muaviye'ye hatırlatınca Muaviye \"Onu getirenler öldürdü\" dedi. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih; Müslim, Sahih; Ahmed b. Hanbel, Müsned)." },
+      text: { tr: "Yaşlı sahabi Ammar b. Yasir, Hz. Ali'nin safında şehit oldu. Peygamber, onu azgın bir grubun öldüreceğini haber vermişti. Amr b. el-As bunu Muaviye'ye hatırlatınca Muaviye \"Onu getirenler öldürdü\" dedi." },
       art,
     },
     {
@@ -80,5 +80,5 @@ export const muaviyeAli: HistEvent = {
     { tr: "Ammar Hz. Ali'nin safında şehit oldu; Peygamber bunu önceden haber vermişti. Bu haber, Ehl-i Beyt'in yanında durmayı size nasıl düşündürüyor?" },
     { tr: "Mushaflar mızraklara asılınca savaş yarıda kaldı. Bu an, Hz. Ali'nin sabrı ve ümmetin sonraki yolu hakkında size ne söylüyor?" },
   ],
-  summary: { tr: "Muaviye biatı reddetti. Sıffin'de Ammar Hz. Ali'nin yanında şehit oldu. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih; Müslim, Sahih). Mushaflar mızraklara asıldı ve Hakem orduyu böldü. Sonra Mısır alındı, Muhammed b. Ebi Bekir öldürüldü, Mâlik el-Eşter yolda zehirlendi. Hz. Ali 40 H'de şehit edildi." },
+  summary: { tr: "Muaviye biatı reddetti. Sıffin'de Ammar Hz. Ali'nin yanında şehit oldu. Mushaflar mızraklara asıldı ve Hakem orduyu böldü. Sonra Mısır alındı, Muhammed b. Ebi Bekir öldürüldü, Mâlik el-Eşter yolda zehirlendi. Hz. Ali 40 H'de şehit edildi." },
 };

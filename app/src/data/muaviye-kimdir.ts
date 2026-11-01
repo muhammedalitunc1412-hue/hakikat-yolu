@@ -22,17 +22,17 @@ export const muaviyeKimdir: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: "Bedir'de Hind'in babası Utbe, kardeşi ve amcası öldürüldü. Uhud'da Hind, Hz. Hamza'yı öldürmesi için Vahşi'ye özgürlük ve ödül vaat etti. Vahşi onu mızrakla şehit etti. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih)." },
+      text: { tr: "Bedir'de Hind'in babası Utbe, kardeşi ve amcası öldürüldü. Uhud'da Hind, Hz. Hamza'yı öldürmesi için Vahşi'ye özgürlük ve ödül vaat etti. Vahşi onu mızrakla şehit etti." },
       art,
     },
     {
       by: 'both',
-      text: { tr: "Siyer kaynakları, Hind'in Hz. Hamza'nın cesedini parçalayıp ciğerini çiğnediğini, kulak ve burnundan kolye yaptığını aktarır. Peygamber amcasını bu halde görünce derin bir üzüntü duydu. Ayrıntılar kitaplara göre değişir. Bu olay Sünni kaynaklarında da geçmektedir (İbn İshak/İbn Hişam, es-Sîre; Vâkıdî, el-Meğâzî)." },
+      text: { tr: "Siyer kaynakları, Hind'in Hz. Hamza'nın cesedini parçalayıp ciğerini çiğnediğini, kulak ve burnundan kolye yaptığını aktarır. Peygamber amcasını bu halde görünce derin bir üzüntü duydu. Ayrıntılar kitaplara göre değişir." },
       art,
     },
     {
       by: 'both',
-      text: { tr: "Mekke'nin fethinde (8 H, Ramazan) Ebu Süfyan Müslüman oldu. Peygamber, \"Kim Ebu Süfyan'ın evine girerse güvendedir\" diyerek ona ve Mekkelilere aman verdi. Hind de Müslüman oldu; Peygamber onu bağışladı. Bu olay Sünni kaynaklarında da geçmektedir (Müslim, Sahih)." },
+      text: { tr: "Mekke'nin fethinde (8 H, Ramazan) Ebu Süfyan Müslüman oldu. Peygamber, \"Kim Ebu Süfyan'ın evine girerse güvendedir\" diyerek ona ve Mekkelilere aman verdi. Hind de Müslüman oldu; Peygamber onu bağışladı." },
       art,
     },
     {
@@ -42,7 +42,7 @@ export const muaviyeKimdir: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: "Muaviye, Sünni kaynaklarda Peygamber'in kâtiplerinden sayılır. Müslim'de Peygamber'in ona \"Allah karnını doyurmasın\" dediği geçer. Bu olay Sünni kaynaklarında da geçmektedir (Müslim, Sahih). Şii anlatıda kâtiplik tartışılır ve bu söz bir uyarı olarak anılır." },
+      text: { tr: "Muaviye, Sünni kaynaklarda Peygamber'in kâtiplerinden sayılır. Müslim'de Peygamber'in ona \"Allah karnını doyurmasın\" dediği geçer. Şii anlatıda kâtiplik tartışılır ve bu söz bir uyarı olarak anılır." },
       art,
     },
     {
@@ -77,5 +77,5 @@ export const muaviyeKimdir: HistEvent = {
     { tr: "Bir insanın Müslüman olmadan önceki aile geçmişi, sonraki yolunu anlamakta size ne kadar yardımcı olur?" },
     { tr: "Müslim'de Muaviye hakkında geçen söz, farklı gönüllerde farklı duyulabiliyor. Bir metni okurken sevgi ve ihtiyat size ne söylüyor?" },
   ],
-  summary: { tr: "Muaviye, Mekke'de İslam'a karşı duran Ebu Süfyan ile Hind'in oğludur. Uhud'da Hz. Hamza'nın şehit edilmesi bu ailenin Peygamber'le geçmişinin bir parçasıdır. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih; İbn İshak/İbn Hişam, es-Sîre; Vâkıdî, el-Meğâzî). Aile fetihle Müslüman oldu. Onun kâtip sayılması Sünni kitaplarda yer alır; Şii anlatıda tartışılır." },
+  summary: { tr: "Muaviye, Mekke'de İslam'a karşı duran Ebu Süfyan ile Hind'in oğludur. Uhud'da Hz. Hamza'nın şehit edilmesi bu ailenin Peygamber'le geçmişinin bir parçasıdır. Aile fetihle Müslüman oldu. Onun kâtip sayılması Sünni kitaplarda yer alır; Şii anlatıda tartışılır." },
 };

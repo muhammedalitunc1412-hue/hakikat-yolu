@@ -17,7 +17,7 @@ export const muaviyeHasan: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: "Kan dökülmesin diye Hz. Hasan, Muaviye ile anlaştı ve yönetimi ona bıraktı. Bu yıla birlik yılı, Âmü'l-Cemâa denir. Peygamber, \"Bu oğlum seyyiddir; Allah onunla iki büyük grubu barıştıracak\" buyurmuştu. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih)." },
+      text: { tr: "Kan dökülmesin diye Hz. Hasan, Muaviye ile anlaştı ve yönetimi ona bıraktı. Bu yıla birlik yılı, Âmü'l-Cemâa denir. Peygamber, \"Bu oğlum seyyiddir; Allah onunla iki büyük grubu barıştıracak\" buyurmuştu." },
       art,
     },
     {
@@ -32,7 +32,7 @@ export const muaviyeHasan: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: "Sulhtan sonra minberlerde Hz. Ali'ye sövme yayıldı; bunu reddeden Hucr b. Adî öldürüldü. Hz. Hasan Medine'de yaklaşık on yıl sessiz yaşadı ve 50 H civarında zehirlenerek vefat etti. Erken kaynakların çoğu zehirlenmeyi aktarır. Bu olay Sünni kaynaklarında da geçmektedir (İbn Teymiye, Minhâcü's-Sünne; İbn Kesîr, el-Bidâye ve'n-Nihâye)." },
+      text: { tr: "Sulhtan sonra minberlerde Hz. Ali'ye sövme yayıldı; bunu reddeden Hucr b. Adî öldürüldü. Hz. Hasan Medine'de yaklaşık on yıl sessiz yaşadı ve 50 H civarında zehirlenerek vefat etti. Erken kaynakların çoğu zehirlenmeyi aktarır." },
       art,
     },
     {
@@ -79,5 +79,5 @@ export const muaviyeHasan: HistEvent = {
     { tr: "Sulhun ardından minberlerde sövme yayıldı ve veliahtlık gündeme geldi. Hz. Hasan'ın niyeti ile sonraki uygulamalar arasındaki fark size ne söylüyor?" },
     { tr: "Bir olay birçok kitapta geçiyor, fail ise ihtilaflı kalıyor. Böyle bir yerde nasıl sakin düşünürsünüz?" },
   ],
-  summary: { tr: "Hz. Hasan, kan dökülmesin diye yönetimi Muaviye'ye bıraktı. Peygamber'in onu seyyid diye anması bu sulha işaret edilerek okunur. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih). Hz. Hasan 50 H civarında zehirlenerek vefat etti. Şii kaynaklar bunu Muaviye ve Cü'de ile anlatır; İbn Teymiye ve İbn Kesîr, Muaviye'nin rolünü sabit görmez." },
+  summary: { tr: "Hz. Hasan, kan dökülmesin diye yönetimi Muaviye'ye bıraktı. Peygamber'in onu seyyid diye anması bu sulha işaret edilerek okunur. Hz. Hasan 50 H civarında zehirlenerek vefat etti. Şii kaynaklar bunu Muaviye ve Cü'de ile anlatır; İbn Teymiye ve İbn Kesîr, Muaviye'nin rolünü sabit görmez." },
 };

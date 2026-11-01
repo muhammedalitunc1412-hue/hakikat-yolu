@@ -8,42 +8,42 @@ export const osman: HistEvent = {
   hook: { tr: 'Şikâyetler büyürken Hz. Ali Medine\'de arabuluculuk yaptı. Ardından kendisine biat istendi.', en: 'The man who mediated in Medina as grievances grew, and was then asked for allegiance.' },
   scenes: [
     {
-      text: { tr: 'Halife Osman\'ın halifeliğinin ilk yılları sakin geçti. İkinci yarısında valilikler ve mal dağıtımı şikâyet konusu oldu. Yakınlarının, özellikle Emevî ailesinden kişilerin önemli görevlere getirilmesi eleştirildi. Onun faziletleri de hadislerde anılır. Bu olay Sünni kaynaklarında da geçmektedir (Buhârî, Sahih). Peygamber\'in ona verdiği bir sözü kuşatma günü kendisi hatırlattı.' },
+      text: { tr: 'Halife Osman\'ın halifeliğinin ilk yılları sakin geçti. İkinci yarısında valilikler ve mal dağıtımı şikâyet konusu oldu. Yakınlarının, özellikle Emevî ailesinden kişilerin önemli görevlere getirilmesi eleştirildi. Onun faziletleri de hadislerde anılır. Peygamber\'in ona verdiği bir sözü kuşatma günü kendisi hatırlattı.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'crowd', x: 34, scale: 7 }, { kind: 'man', x: 66, label: { tr: 'Osman' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Mısır, Kûfe ve Basra\'dan heyetler valilerinden şikâyet için geldi. Bu olay Sünni kaynaklarında da geçmektedir (Taberî, Târîh; İbn Sa\'d, Tabakât; İbn Esîr, el-Kâmil). Şii kaynaklarında bu şikâyetler Emevî atamaları ve beytülmalin kullanımıyla anılır. İsyancıların niyetleri ve taleplerinin ölçüsü ayrıca tartışılır. Medine halkı ve sahabenin önde gelenleri durumu yakından izliyordu.' },
+      text: { tr: 'Mısır, Kûfe ve Basra\'dan heyetler valilerinden şikâyet için geldi. Şikâyetler Emevî atamalarına ve beytülmalin kullanımına dayanıyordu. İsyancıların niyetleri ve taleplerinin ölçüsü ayrıca tartışılır. Medine halkı ve sahabenin önde gelenleri durumu yakından izliyordu.' },
       art: { bg: 'caravan', props: ['camels'], actors: [{ kind: 'crowd', x: 40, scale: 9 }, { kind: 'man', x: 76 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Ali, Halife Osman\'la konuşup onu uyardı. Halkın şikâyetlerini iletti, tutumunu değiştirmesini istedi. Mısırlı heyet Medine yakınına gelince, Halife Osman\'ın isteğiyle Hz. Ali, Muhammed b. Mesleme ile birlikte onlarla görüştü; şikâyetlerin giderileceği sözüyle geri dönmelerini sağladığı aktarılır. Bu olay Sünni kaynaklarında da geçmektedir (Taberî, Târîh; İbn Kesîr, el-Bidâye ve\'n-Nihâye).' },
+      text: { tr: 'Hz. Ali, Halife Osman\'la konuşup onu uyardı. Halkın şikâyetlerini iletti, tutumunu değiştirmesini istedi. Mısırlı heyet Medine yakınına gelince, Halife Osman\'ın isteğiyle Hz. Ali, Muhammed b. Mesleme ile birlikte onlarla görüştü; şikâyetlerin giderileceği sözüyle geri dönmelerini sağladığı aktarılır.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 38, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 70, label: { tr: 'Osman' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Anlaşma sonradan bozuldu. Hz. Ali, Halife Osman\'a Mervan\'ın onu zora sokacağını söyleyip ondan uzak durmasını öğütledi. Bazı kaynaklar bir mektuptan söz eder; mektubu kimin yazdığı tartışmalıdır. Bu bozulma Şii kaynaklarında anlatılır.' },
+      text: { tr: 'Anlaşma sonradan bozuldu. Hz. Ali, Halife Osman\'a Mervan\'ın onu zora sokacağını söyleyip ondan uzak durmasını öğütledi. Bazı kaynaklar bir mektuptan söz eder; mektubu kimin yazdığı tartışmalıdır. Anlaşma böyle bozuldu.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'ali', x: 36, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 64, label: { tr: 'Osman' } }, { kind: 'man', x: 84, label: { tr: 'Mervan' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Medine\'de kuşatma başladı. Halife Osman evine çekildi; su ve yiyecek girişi güçleşti. O, "Peygamber benden bir söz aldı, ona sabrediyorum" dedi. Bu olay Sünni kaynaklarında da geçmektedir (Tirmizî, el-Câmi\', no. 3711).' },
+      text: { tr: 'Medine\'de kuşatma başladı. Halife Osman evine çekildi; su ve yiyecek girişi güçleşti. O, "Peygamber benden bir söz aldı, ona sabrediyorum" dedi.' },
       art: { bg: 'night', props: ['stars', 'moon'], actors: [{ kind: 'crowd', x: 30, scale: 8 }, { kind: 'man', x: 74, label: { tr: 'Osman' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Rivayete göre Hz. Ali, Hz. Hasan ile Hz. Hüseyin\'i Halife Osman\'ın evini korumaları için gönderdi. Bu olay Sünni kaynaklarında da geçmektedir (Belâzurî, Ensâbü\'l-Eşrâf). Şii kaynaklarında onun su ulaştırmaya çalıştığı da geçer. Bazı Şii âlimler koruma rivayetini zayıf bulur. Hz. Hasan\'ın yaralandığını söyleyenler de vardır (İbn Kesîr, el-Bidâye ve\'n-Nihâye).' },
+      text: { tr: 'Rivayete göre Hz. Ali, Hz. Hasan ile Hz. Hüseyin\'i Halife Osman\'ın evini korumaları için gönderdi. Suyu da ulaştırmaya çalıştığı anlatılır. Hz. Hasan\'ın yaralandığını söyleyenler de vardır (İbn Kesîr, el-Bidâye ve\'n-Nihâye).' },
       art: { bg: 'city', actors: [{ kind: 'hasan', x: 32, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 48, label: { tr: 'Hz. Hüseyin' } }, { kind: 'ali', x: 68, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 86, label: { tr: 'Osman' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Halife Osman 35 H Zilhicce ayında şehit edildi. Bu olay Sünni kaynaklarında da geçmektedir (Taberî, Târîh). Ayrıntılar kaynaklarda farklıdır. Hz. Ali, Nehcü\'l-Belâğa\'daki bir hutbede şöyle der: öldürmesi için emir vermiş olsaydı katil sayılırdı; insanları ondan alıkoymuş olsaydı yardımcısı olurdu. Son hükmü Allah\'a bırakır.' },
+      text: { tr: 'Halife Osman 35 H Zilhicce ayında şehit edildi. Ayrıntılar kaynaklarda farklıdır. Hz. Ali, Nehcü\'l-Belâğa\'daki bir hutbede şöyle der: öldürmesi için emir vermiş olsaydı katil sayılırdı; insanları ondan alıkoymuş olsaydı yardımcısı olurdu. Son hükmü Allah\'a bırakır.' },
       art: { bg: 'dawn', actors: [{ kind: 'crowd', x: 34, scale: 7 }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Medine bir süre yönetimsiz kaldı. Sahabenin önde gelenleri ve halk Hz. Ali\'ye gelip biat etmesini istedi. Hz. Ali önce kabul etmedi; "Beni bırakın, başkasını arayın" sözü Şii kaynaklardaki hutbelerde geçer. Israr üzerine Mescid-i Nebevî\'de biat alındı. Talha ile Zübeyr\'in biatının gönüllü olup olmadığı tartışmalıdır.' },
+      text: { tr: 'Medine bir süre yönetimsiz kaldı. Sahabenin önde gelenleri ve halk Hz. Ali\'ye gelip biat etmesini istedi. Hz. Ali önce kabul etmedi; "Beni bırakın, başkasını arayın" sözü hutbelerinde geçer. Israr üzerine Mescid-i Nebevî\'de biat alındı. Talha ile Zübeyr\'in biatının gönüllü olup olmadığı tartışmalıdır.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'crowd', x: 32, scale: 9 }, { kind: 'man', x: 56, label: { tr: 'Talha' } }, { kind: 'ali', x: 78, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
@@ -83,5 +83,5 @@ export const osman: HistEvent = {
     { tr: 'Hz. Hasan ve Hz. Hüseyin\'in evin yanında olduğu rivayet bazı âlimlerce zayıf sayılıyor. Böyle bir rivayeti sevgiyle ve ihtiyatla nasıl okuruz?' },
     { tr: 'Hz. Ali biatı önce kabul etmedi. Yönetimin ağırlığını bilen birinin çekinmesi, ona duyulan sevgiyi nasıl artırır?' },
   ],
-  summary: { tr: 'Halife Osman\'ın ikinci yarısındaki şikâyetler kuşatmaya ve 35 H\'de şehadetine vardı. Hz. Ali aracılık etti. "Peygamber benden bir söz aldı, ona sabrediyorum" sözü Sünni kaynaklarında da geçmektedir (Tirmizî, el-Câmi\', no. 3711). Gelen biat çağrısını önce geri çevirdi, ısrar üzerine kabul etti.' },
+  summary: { tr: 'Halife Osman\'ın ikinci yarısındaki şikâyetler kuşatmaya ve 35 H\'de şehadetine vardı. Hz. Ali aracılık etti. "Peygamber benden bir söz aldı, ona sabrediyorum" dedi. Gelen biat çağrısını önce geri çevirdi, ısrar üzerine kabul etti.' },
 };

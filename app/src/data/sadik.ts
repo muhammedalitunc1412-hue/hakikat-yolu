@@ -9,7 +9,7 @@ export const sadik: HistEvent = {
   hook: { tr: 'Medine\'de bir ilim kapısı açıldı: İmam Câfer es-Sâdık ve halkasına uğrayan âlimler.', en: 'A circle of learning in Medina, open to the founders of two schools.' },
   scenes: [
     {
-      text: { tr: 'Câfer b. Muhammed 80 (699) veya 83 (702) yılında Medine\'de doğdu; çoğu kaynak 83\'ü esas alır. Babası İmam Muhammed el-Bâkır\'dır, soyu Hz. Ali ve Hz. Fatıma\'ya uzanır. Annesi Ümmü Ferve, Kâsım b. Muhammed\'in kızıdır; Kâsım, Hz. Ebû Bekir\'in torunudur. Şii kaynaklarında Altıncı İmam, Sünni kaynaklarında da büyük bir âlim ve Ehl-i Beyt mensubu olarak anılır. "es-Sâdık", doğru sözlü lakabıyla tanınır. Bu rivayet Sünni kaynaklarında da geçmektedir (TDV İslâm Ansiklopedisi, "Câfer es-Sâdık").' },
+      text: { tr: 'Câfer b. Muhammed 80 (699) veya 83 (702) yılında Medine\'de doğdu; çoğu kaynak 83\'ü esas alır. Babası İmam Muhammed el-Bâkır\'dır, soyu Hz. Ali ve Hz. Fatıma\'ya uzanır. Annesi Ümmü Ferve, Kâsım b. Muhammed\'in kızıdır; Kâsım, Hz. Ebû Bekir\'in torunudur. Şii kaynaklarında Altıncı İmam, Sünni kaynaklarında da büyük bir âlim ve Ehl-i Beyt mensubu olarak anılır. "es-Sâdık", doğru sözlü lakabıyla tanınır.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'man', x: 50, label: { tr: 'İmam Câfer es-Sâdık' } }, { kind: 'crowd', x: 22, scale: 4 }] },
       by: 'both',
     },
@@ -29,7 +29,7 @@ export const sadik: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Ebû Hanîfe ile ilişkisi ilmî bir karşılaşmadır. TDV, Sâdık\'ın onunla Medine\'de ve Irak\'ta konuşmalar yaptığını yazar. Ebû Hanîfe maddesi, onun Sâdık\'ı da içeren Ehl-i Beyt âlimleriyle görüşüp özellikle akaidde yararlandığını söyler; Sâdık\'ı açıkça hocası saymaz. Asıl silsile Hammâd b. Ebû Süleyman, İbrahim en-Nehaî ve Şa\'bî üzerinden gider. Şii kaynaklarında ise Ebû Hanîfe, Sâdık\'ın öğrencisi olarak anılır. Bu rivayet Sünni kaynaklarında da geçmektedir (TDV İslâm Ansiklopedisi, "Câfer es-Sâdık"; "Ebû Hanîfe").' },
+      text: { tr: 'Ebû Hanîfe ile ilişkisi ilmî bir karşılaşmadır. TDV, Sâdık\'ın onunla Medine\'de ve Irak\'ta konuşmalar yaptığını yazar. Ebû Hanîfe maddesi, onun Sâdık\'ı da içeren Ehl-i Beyt âlimleriyle görüşüp özellikle akaidde yararlandığını söyler; Sâdık\'ı açıkça hocası saymaz. Asıl silsile Hammâd b. Ebû Süleyman, İbrahim en-Nehaî ve Şa\'bî üzerinden gider. Şii kaynaklarında ise Ebû Hanîfe, Sâdık\'ın öğrencisi olarak anılır.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 30, label: { tr: 'Ebû Hanîfe' } }, { kind: 'man', x: 62, pose: 'sit', label: { tr: 'İmam Câfer es-Sâdık' } }] },
       by: 'both',
     },
@@ -39,17 +39,17 @@ export const sadik: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Medine\'nin imamı Mâlik b. Enes (ö. 179/795), Sâdık\'tan hadis dinleyenler arasında anılır. Bu rivayet Sünni kaynaklarında da geçmektedir (TDV İslâm Ansiklopedisi, "Câfer es-Sâdık"). Şii kaynaklarında Şeyh Saduk\'un el-Hısâl\'inde Mâlik\'in imama giderek hadis dinlediği aktarılır. Muvatta\'daki yeri ve Mâlik\'in övgü sözleri birincil metinden doğrulanamadı. TDV\'nin Mâlik maddesinde Sâdık\'ın adı geçmez.' },
+      text: { tr: 'Medine\'nin imamı Mâlik b. Enes (ö. 179/795), Sâdık\'tan hadis dinleyenler arasında anılır. Şii kaynaklarında Şeyh Saduk\'un el-Hısâl\'inde Mâlik\'in imama giderek hadis dinlediği aktarılır. Muvatta\'daki yeri ve Mâlik\'in övgü sözleri birincil metinden doğrulanamadı. TDV\'nin Mâlik maddesinde Sâdık\'ın adı geçmez.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'man', x: 34, label: { tr: 'Mâlik b. Enes' } }, { kind: 'man', x: 66, pose: 'sit', label: { tr: 'İmam Câfer es-Sâdık' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Birçok Sünni âlim Sâdık\'ı övdü. Zehebî onu büyük âlimler arasında anar. Şii kaynakları, Tezkiretü\'l-huffâz\'da onu en bilgin kişilerden saydığını aktarır. Bu metin burada okunmadı. Câhiz\'e atfedilen söz, ilmi ve fıkhıyla dünyayı doldurduğu yönündedir. Rivayetleri Kütüb-i Sitte\'de bulunur. Bu rivayet Sünni kaynaklarında da geçmektedir (TDV İslâm Ansiklopedisi, "Câfer es-Sâdık"). TDV\'ye göre Buhârî Sahîh\'inde ondan rivayet almamıştır. Sebep, Sâdık\'ın zayıf görülmesi değil, meclisine girenlerin ona uydurma hadis isnat etmesidir.' },
+      text: { tr: 'Birçok Sünni âlim Sâdık\'ı övdü. Zehebî onu büyük âlimler arasında anar. Şii kaynakları, Tezkiretü\'l-huffâz\'da onu en bilgin kişilerden saydığını aktarır. Bu metin burada okunmadı. Câhiz\'e atfedilen söz, ilmi ve fıkhıyla dünyayı doldurduğu yönündedir. Rivayetleri Kütüb-i Sitte\'de bulunur. TDV\'ye göre Buhârî Sahîh\'inde ondan rivayet almamıştır. Sebep, Sâdık\'ın zayıf görülmesi değil, meclisine girenlerin ona uydurma hadis isnat etmesidir.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 50, pose: 'sit', label: { tr: 'İmam Câfer es-Sâdık' } }, { kind: 'crowd', x: 22, scale: 5 }] },
       by: 'sunni',
     },
     {
-      text: { tr: 'İmam Câfer es-Sâdık 148 H. (765) yılında Medine\'de vefat etti ve Cennetü\'l-Bakî\'ye defnedildi. Şii kaynaklarında o, Ehl-i Beyt mektebinin ve Câferî mezhebinin kurucusudur; ilim halkası bu mektebin dayanağı sayılır. Sünni kaynaklarında da Medine ilminin saygın bir halkası olarak anılır. Bu halka, iki geleneğin ortak andığı bir kapıdır. Bu rivayet Sünni kaynaklarında da geçmektedir (TDV İslâm Ansiklopedisi, "Câfer es-Sâdık").' },
+      text: { tr: 'İmam Câfer es-Sâdık 148 H. (765) yılında Medine\'de vefat etti ve Cennetü\'l-Bakî\'ye defnedildi. Şii kaynaklarında o, Ehl-i Beyt mektebinin ve Câferî mezhebinin kurucusudur; ilim halkası bu mektebin dayanağı sayılır. Sünni kaynaklarında da Medine ilminin saygın bir halkası olarak anılır. Bu halka, iki geleneğin ortak andığı bir kapıdır.' },
       art: { bg: 'dune-dusk', props: ['palms'], actors: [{ kind: 'crowd', x: 40, scale: 6 }, { kind: 'man', x: 74, label: { tr: 'İmam Câfer es-Sâdık' } }] },
       by: 'both',
     },

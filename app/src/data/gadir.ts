@@ -13,7 +13,7 @@ export const gadir: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Yollar Hum denen su başında ayrılıyordu. Peygamber kafileyi durdurdu. İleri gidenler geri çağrıldı. Geride kalanlar beklendi. Güneş tepedeydi. Veda Haccı\'na katılanların sayısı kaynaklarda yüz binin üzerindedir. Bazı rivayetler 114 bin ve 124 bin der. Gadir Hum, Veda Haccı\'ndan sonra Peygamber\'in yanında toplanan en büyük ikinci topluluk diye anılır. Bu duruş Sünni kaynaklarında da geçmektedir (Ahmed b. Hanbel, Müsned, no. 18479).' },
+      text: { tr: 'Yollar Hum denen su başında ayrılıyordu. Peygamber kafileyi durdurdu. İleri gidenler geri çağrıldı. Geride kalanlar beklendi. Güneş tepedeydi. Veda Haccı\'na katılanların sayısı kaynaklarda yüz binin üzerindedir. Bazı rivayetler 114 bin ve 124 bin der. Gadir Hum, Veda Haccı\'ndan sonra Peygamber\'in yanında toplanan en büyük ikinci topluluk diye anılır. Bu duruş' },
       art: { bg: 'oasis', props: ['sun', 'palms', 'well'], actors: [{ kind: 'crowd', x: 36, scale: 9 }, { kind: 'prophet', x: 70, label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
@@ -23,22 +23,22 @@ export const gadir: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Sonra Hz. Ali\'nin elini tuttu ve yukarı kaldırdı. "Ben kimin mevlâsıysam, Hz. Ali de onun mevlâsıdır. Allah\'ım, onu dost edineni dost edin, ona düşman olana düşman ol." Bu söz Sünni kaynaklarında da geçmektedir (Tirmizi, el-Câmi\', no. 3713; Ahmed b. Hanbel, Müsned, no. 18479). Şia\'da bu, Hz. Ali\'nin velayetinin ilanıdır. Mevlâ, hutbedeki "evlâ" sorusuna bağlı olarak önder demektir. Mevlâ kelimesi dost anlamında da okunur.' },
+      text: { tr: 'Sonra Hz. Ali\'nin elini tuttu ve yukarı kaldırdı. "Ben kimin mevlâsıysam, Hz. Ali de onun mevlâsıdır. Allah\'ım, onu dost edineni dost edin, ona düşman olana düşman ol." Bu, Hz. Ali\'nin velayetinin ilanıydı. Mevlâ, hutbedeki "evlâ" sorusuna bağlı olarak önder demektir.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 62, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 78, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Aynı hutbede iki ağır emaneti andı: Allah\'ın Kitabı ve Ehl-i Beyti. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi. Bunu üç kez tekrarladı. Bu emanet Sünni kaynaklarında da geçmektedir (Müslim, Sahih, no. 2408; Tirmizi, el-Câmi\', no. 3788).' },
+      text: { tr: 'Aynı hutbede iki ağır emaneti andı: Allah\'ın Kitabı ve Ehl-i Beyti. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi. Bunu üç kez tekrarladı.' },
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 82, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Bazı rivayetlere göre insanlar Hz. Ali\'yi tebrik etti. Bu rivayetlerde Ömer şöyle der: "Tebrikler ey Ebu Talib\'in oğlu. Her mümin erkek ve kadının mevlâsı oldun." Bu cümle Sünni kaynaklarında da geçer (Ahmed b. Hanbel, Müsned, no. 18479). Rivayet zinciri tartışmalıdır.' },
+      text: { tr: 'Bazı rivayetlere göre insanlar Hz. Ali\'yi tebrik etti. Bu rivayetlerde Ömer şöyle der: "Tebrikler ey Ebu Talib\'in oğlu. Her mümin erkek ve kadının mevlâsı oldun." Rivayet zinciri tartışmalıdır.' },
       art: { bg: 'dune-dusk', props: ['sun', 'tents'], actors: [{ kind: 'crowd', x: 30, scale: 6 }, { kind: 'man', x: 56 }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Ali\'nin Peygamber katındaki yeri başka sözlerle de bellidir. Tebük\'te "Harun Musa\'ya nasılsa sen de bana öylesin" demişti. Bu söz Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 3706; Müslim, Sahih, no. 2404). Hayber\'de sancağı "Allah ve Resulünü seven, onlarca sevilen birine" vereceğini söyleyip Hz. Ali\'yi çağırdı (Buhari, Sahih, no. 2942). Menzile ve Hayber, onun Peygamber\'in yanındaki yerini gösterir.' },
+      text: { tr: 'Hz. Ali\'nin Peygamber katındaki yeri başka sözlerle de bellidir. Tebük\'te "Harun Musa\'ya nasılsa sen de bana öylesin" demişti. Hayber\'de sancağı "Allah ve Resulünü seven, onlarca sevilen birine" vereceğini söyleyip Hz. Ali\'yi çağırdı (Buhari, Sahih, no. 2942). Menzile ve Hayber, onun Peygamber\'in yanındaki yerini gösterir.' },
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'ali', x: 50, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 22, scale: 5 }] },
       by: 'both',
     },
@@ -78,5 +78,5 @@ export const gadir: HistEvent = {
     { tr: 'Aynı konuşmada Kitap ve Ehl-i Beyt birlikte emanet edildi. Bu emanet, Ehl-i Beyt sevgisini hayatınızda nereye koyuyor?' },
     { tr: 'Sa\'d b. Ebi Vakkas, Hz. Ali\'nin faziletlerini saydı. Bu sözler, ona olan sevginizi nasıl derinleştiriyor?' },
   ],
-  summary: { tr: 'Gadir Hum\'da Peygamber, Hz. Ali\'nin elini kaldırıp "Ben kimin mevlâsıysam, Hz. Ali de onun mevlâsıdır" dedi; Şia\'da bu, onun velayetinin ilanıdır ve söz Sünni kaynaklarında da geçmektedir (Tirmizi, el-Câmi\', no. 3713; Ahmed b. Hanbel, Müsned, no. 18479).' },
+  summary: { tr: 'Gadir Hum\'da Peygamber, Hz. Ali\'nin elini kaldırıp "Ben kimin mevlâsıysam, Hz. Ali de onun mevlâsıdır" dedi; bu, onun velayetinin ilanıydı.' },
 };

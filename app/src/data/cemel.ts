@@ -13,7 +13,7 @@ export const cemel: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Talha ve Zübeyr de biat etti. Hz. Ali, Halife Osman\'ın atadığı valileri değiştirerek işe başladı. Bu adım, sonraki itirazların zemini oldu. Biatın gönülden mi verildiği kaynaklarda kısaca konuşulur.' },
+      text: { tr: 'Talha ve Zübeyr de biat etti. Hz. Ali, Halife Osman\'ın atadığı valileri değiştirerek işe başladı. Bu adım, sonraki itirazların zemini oldu. Biatın gönülden mi verildiği o günden beri konuşulur.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 24, label: { tr: 'Talha' } }, { kind: 'man', x: 46, label: { tr: 'Zübeyr' } }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
@@ -28,12 +28,12 @@ export const cemel: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Yolda Havab suyunda köpek sesleri duyulunca, Peygamber\'in bir hanımına söylediği uyarı hatırlandı. Bu olay Sünni kaynaklarında da geçmektedir (Ahmed b. Hanbel, Müsned). Basra\'da vali Osman b. Huneyf ile çatışma çıktı.' },
+      text: { tr: 'Yolda Havab suyunda köpek sesleri duyulunca, Peygamber\'in bir hanımına söylediği uyarı hatırlandı. Basra\'da vali Osman b. Huneyf ile çatışma çıktı.' },
       art: { bg: 'night', props: ['moon', 'stars', 'well'], actors: [{ kind: 'woman', x: 40, label: { tr: 'Aişe' } }, { kind: 'crowd', x: 72, scale: 6 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Ali, Kufe\'den destek toplayıp Basra\'ya yürüdü ve savaşı önlemek için elçiler gönderdi. Zübeyr\'e, Peygamber\'in "Sen Hz. Ali ile haksızlıkla savaşacaksın" sözünü hatırlattı. Zübeyr saftan ayrıldı. Bu olay Sünni kaynaklarında da geçmektedir (Hâkim, el-Müstedrek).' },
+      text: { tr: 'Hz. Ali, Kufe\'den destek toplayıp Basra\'ya yürüdü ve savaşı önlemek için elçiler gönderdi. Zübeyr\'e, Peygamber\'in "Sen Hz. Ali ile haksızlıkla savaşacaksın" sözünü hatırlattı. Zübeyr saftan ayrıldı.' },
       art: { bg: 'dune-dusk', props: ['tents'], actors: [{ kind: 'ali', x: 34, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 68, label: { tr: 'Zübeyr' } }] },
       by: 'both',
     },
@@ -48,7 +48,7 @@ export const cemel: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Aişe\'nin sonradan üzüldüğünü anlatan rivayetler vardır. Bu olay Sünni kaynaklarında da geçmektedir (İbn Sa\'d, et-Tabakâtü\'l-Kübrâ). Üzüntünün konusu ayrıca konuşulur. Birçok Sünni âlim, Cemel\'de Hz. Ali\'yi hakka daha yakın taraf olarak anar.' },
+      text: { tr: 'Aişe\'nin sonradan üzüldüğünü anlatan rivayetler vardır. Üzüntünün konusu ayrıca konuşulur. Birçok Sünni âlim, Cemel\'de Hz. Ali\'yi hakka daha yakın taraf olarak anar.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'woman', x: 36, pose: 'sit', label: { tr: 'Aişe' } }, { kind: 'crowd', x: 72, scale: 5 }] },
       by: 'sunni',
     },
@@ -93,5 +93,5 @@ export const cemel: HistEvent = {
     { tr: 'Hz. Ali savaştan sonra esirleri bıraktı ve Aişe\'yi saygıyla Medine\'ye uğurladı. Bu incelik, onun niyeti hakkında size ne düşündürüyor?' },
     { tr: 'Birçok Sünni âlim, Cemel\'de Hz. Ali\'yi hakka daha yakın bulur. Bu ortak bakış, onu daha yakından tanımak için size bir kapı açıyor mu?' },
   ],
-  summary: { tr: 'Halife Osman\'ın şehadetinden sonra Hz. Ali\'ye biat edildi. Aişe, Talha ve Zübeyr\'in Basra\'ya çıkışı Cemel\'e vardı. Hz. Ali sonuna kadar barışı aradı; sonra esirleri bağışladı ve Aişe\'yi saygıyla Medine\'ye uğurladı. Bu olay Sünni kaynaklarında da geçmektedir (Taberi, Tarihu\'r-Rusul ve\'l-Mulûk; İbnü\'l-Esîr, el-Kâmil fi\'t-Târîh).' },
+  summary: { tr: 'Halife Osman\'ın şehadetinden sonra Hz. Ali\'ye biat edildi. Aişe, Talha ve Zübeyr\'in Basra\'ya çıkışı Cemel\'e vardı. Hz. Ali sonuna kadar barışı aradı; sonra esirleri bağışladı ve Aişe\'yi saygıyla Medine\'ye uğurladı.' },
 };

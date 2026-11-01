@@ -9,12 +9,12 @@ export const istihlaf: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Halife Ebu Bekir hastalanıp ölümün yaklaştığını anlayınca, kendinden sonra Halife Ömer\'in geçmesini istedi. Hilafet, ölen halifenin seçtiği kişiye kalıyordu. Bu olay Sünni kaynaklarında da geçmektedir (İbn Sa\'d, et-Tabakâtü\'l-Kübrâ; Taberî, Târîh).' },
+      text: { tr: 'Halife Ebu Bekir hastalanıp ölümün yaklaştığını anlayınca, kendinden sonra Halife Ömer\'in geçmesini istedi. Hilafet, ölen halifenin seçtiği kişiye kalıyordu.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'Ebu Bekir' } }, { kind: 'man', x: 66, label: { tr: 'Ömer' } }] },
     },
     {
       by: 'sunni',
-      text: { tr: 'Halife Ebu Bekir önce Abdurrahman b. Avf\'a ve Osman\'a danıştı. Bir grup sahabi Halife Ömer\'in sertliğinden söz etti; "Rabbine ne cevap vereceksin?" dendi. Talha\'nın itirazı da aktarılır. Halife Ebu Bekir, Allah\'a "Kullarının en hayırlısını seçtim" diyeceğini söyledi. Bu olay Sünni kaynaklarında da geçmektedir (İbn Sa\'d, et-Tabakâtü\'l-Kübrâ; İbnü\'l-Esîr, el-Kâmil; İbn Kesîr, el-Bidâye).' },
+      text: { tr: 'Halife Ebu Bekir önce Abdurrahman b. Avf\'a ve Osman\'a danıştı. Bir grup sahabi Halife Ömer\'in sertliğinden söz etti; "Rabbine ne cevap vereceksin?" dendi. Talha\'nın itirazı da aktarılır. Halife Ebu Bekir, Allah\'a "Kullarının en hayırlısını seçtim" diyeceğini söyledi.' },
       art: { bg: 'interior', actors: [{ kind: 'man', x: 30, label: { tr: 'Talha' } }, { kind: 'man', x: 68, pose: 'sit', label: { tr: 'Ebu Bekir' } }, { kind: 'crowd', x: 50, scale: 0.6 }] },
     },
     {
@@ -24,27 +24,27 @@ export const istihlaf: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Sabah namazında Halife Ömer hançerlendi. Buhari\'nin anlattığına göre saldırgan Arap olmayan biriydi ve on üç kişiyi yaraladı. Halife Ömer yerine geçecek kişiyi tek başına seçmedi. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 3700).' },
+      text: { tr: 'Sabah namazında Halife Ömer hançerlendi. Buhari\'nin anlattığına göre saldırgan Arap olmayan biriydi ve on üç kişiyi yaraladı. Halife Ömer yerine geçecek kişiyi tek başına seçmedi.' },
       art: { bg: 'dawn', actors: [{ kind: 'man', x: 50, pose: 'sit', label: { tr: 'Ömer' } }, { kind: 'crowd', x: 78, scale: 0.7 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Halife Ömer, Peygamber\'in kendilerinden razı ayrıldığı altı kişiyi saydı: Hz. Ali, Osman, Zübeyr, Talha, Sa\'d ve Abdurrahman b. Avf. Oğlu Abdullah\'ın tanık olacağını, hilafette payı olmayacağını söyledi. Altı kişinin adı Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 3700).' },
+      text: { tr: 'Halife Ömer, Peygamber\'in kendilerinden razı ayrıldığı altı kişiyi saydı: Hz. Ali, Osman, Zübeyr, Talha, Sa\'d ve Abdurrahman b. Avf. Oğlu Abdullah\'ın tanık olacağını, hilafette payı olmayacağını söyledi.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 22, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 40, label: { tr: 'Osman' } }, { kind: 'man', x: 58, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'crowd', x: 78, scale: 0.7 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Zübeyr ile Talha haklarını Hz. Ali ve Osman lehine, Sa\'d da Abdurrahman lehine bıraktı. Karar fiilen Abdurrahman b. Avf\'ın eline geçti. O, Hz. Ali ile Osman\'dan adil davranma ve seçilene itaat sözü istedi. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 3700).' },
+      text: { tr: 'Zübeyr ile Talha haklarını Hz. Ali ve Osman lehine, Sa\'d da Abdurrahman lehine bıraktı. Karar fiilen Abdurrahman b. Avf\'ın eline geçti. O, Hz. Ali ile Osman\'dan adil davranma ve seçilene itaat sözü istedi.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 52, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'ali', x: 26, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 76, label: { tr: 'Osman' } }] },
     },
     {
       by: 'sunni',
-      text: { tr: 'Taberî şöyle anlatır: Abdurrahman, Hz. Ali\'den Allah\'ın kitabı, Peygamber\'in sünneti ve Halife Ebu Bekir ile Halife Ömer\'in yolu üzerine biat etmesini istedi. Hz. Ali "Allah\'ın kitabı, Peygamber\'in sünneti ve kendi içtihadım" diye cevap verdi. Aynı şart Osman\'a sunulunca Osman kabul etti; biat ona yapıldı. Bu olay Sünni kaynaklarında da geçmektedir (Taberî, Târîh).' },
+      text: { tr: 'Taberî şöyle anlatır: Abdurrahman, Hz. Ali\'den Allah\'ın kitabı, Peygamber\'in sünneti ve Halife Ebu Bekir ile Halife Ömer\'in yolu üzerine biat etmesini istedi. Hz. Ali "Allah\'ın kitabı, Peygamber\'in sünneti ve kendi içtihadım" diye cevap verdi. Aynı şart Osman\'a sunulunca Osman kabul etti; biat ona yapıldı.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 30, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 56, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'man', x: 78, label: { tr: 'Osman' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Altı kişilik şura kuruldu ve biat Osman\'a yapıldı. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 3700). Hz. Ali, Şıkşıkıyye hutbesinde bu süreçte kendisinin o altı kişiden biri sayılmasından söz eder. Hutbe, şuranın düzeninin sonucu baştan etkilediğini de söyler. Hutbenin Şerif er-Radî\'den önceki kitaplarda bulunup bulunmadığı araştırmacılar arasında konuşulur.' },
+      text: { tr: 'Altı kişilik şura kuruldu ve biat Osman\'a yapıldı. Hz. Ali, Şıkşıkıyye hutbesinde bu süreçte kendisinin o altı kişiden biri sayılmasından söz eder. Hutbe, şuranın düzeninin sonucu baştan etkilediğini de söyler. Hutbenin Şerif er-Radî\'den önceki kitaplarda bulunup bulunmadığı araştırmacılar arasında konuşulur.' },
       art: { bg: 'mountain', props: ['stars'], actors: [{ kind: 'ali', x: 50, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
     },
   ],
@@ -84,5 +84,5 @@ export const istihlaf: HistEvent = {
     { tr: 'Karar Abdurrahman b. Avf\'ın elinde toplandı ve Osman seçildi. Bu tabloyu Hz. Ali\'ye duyulan sevgiyle düşünmek size ne hatırlatır?' },
     { tr: 'Hz. Ali "kendi içtihadım" dedi. Kitap ve sünnetin yanında kendi ilmine sahip çıkması, ona olan sevgiyi nasıl derinleştirir?' },
   ],
-  summary: { tr: 'Halife Ebu Bekir, Halife Ömer\'i yerine seçti. Halife Ömer yaralanınca altı kişilik şurayı bıraktı; Abdurrahman b. Avf Osman\'ı seçti. Bu şura Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 3700). Şii okumada Hz. Ali\'nin "kendi içtihadım" sözü ve Şıkşıkıyye, onun yerini anlatır.' },
+  summary: { tr: 'Halife Ebu Bekir, Halife Ömer\'i yerine seçti. Halife Ömer yaralanınca altı kişilik şurayı bıraktı; Abdurrahman b. Avf Osman\'ı seçti. Bu şura Şii okumada Hz. Ali\'nin "kendi içtihadım" sözü ve Şıkşıkıyye, onun yerini anlatır.' },
 };

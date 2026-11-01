@@ -14,7 +14,7 @@ export const mezhepler: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Beyyine 98:7 için Peygamber\'in Ali\'ye "Bu, sen ve şiandır" dediği bir rivayet aktarılır. Bu rivayet Sünni kaynaklarında da geçmektedir (Süyûtî, ed-Dürrü\'l-Mensûr; İbn Asâkir, Târîhu Dimaşk). Şii kaynakları bunu, "Şia" sözünün Peygamber döneminde kullanıldığına bir delil sayar. Rivayetin sıhhati hadis âlimleri arasında tartışmalıdır. Ayetle ilişkisi ve senetler kitaplardan ayrıca kontrol edilmelidir.' },
+      text: { tr: 'Beyyine 98:7 için Peygamber\'in Ali\'ye "Bu, sen ve şiandır" dediği bir rivayet aktarılır. Şii kaynakları bunu, "Şia" sözünün Peygamber döneminde kullanıldığına bir delil sayar. Rivayetin sıhhati hadis âlimleri arasında tartışmalıdır. Ayetle ilişkisi ve senetler kitaplardan ayrıca kontrol edilmelidir.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 36, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
@@ -24,7 +24,7 @@ export const mezhepler: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Cemel ve Sıffîn, ümmetin siyasi birliğini böldü. Sıffîn\'de Muâviye\'nin ordusu Kur\'an sayfalarını mızraklara takıp hakem istedi. Ali\'nin ordusundan bir grup, onun itirazına rağmen hakemi kabul etti. Sonra "hüküm ancak Allah\'ındır" diyerek ayrılıp Harûrâ\'ya çekildiler. Bunlar ilk Hâricîler, Muhakkime\'dir. Ali onlarla Nehrevan\'da (658) savaştı. Hâricîler büyük günah işleyeni kâfir saydı. Buna karşı, kişilerin akıbetini Allah\'a bırakan Mürcie doğdu (yaklaşık 680-694). Ali\'ye bağlı kalanlar Şia\'yı oluşturdu. Bu olaylar Sünni kaynaklarında da geçmektedir (TDV İslâm Ansiklopedisi, "Hâricîler"; "Mürcie").' },
+      text: { tr: 'Cemel ve Sıffîn, ümmetin siyasi birliğini böldü. Sıffîn\'de Muâviye\'nin ordusu Kur\'an sayfalarını mızraklara takıp hakem istedi. Ali\'nin ordusundan bir grup, onun itirazına rağmen hakemi kabul etti. Sonra "hüküm ancak Allah\'ındır" diyerek ayrılıp Harûrâ\'ya çekildiler. Bunlar ilk Hâricîler, Muhakkime\'dir. Ali onlarla Nehrevan\'da (658) savaştı. Hâricîler büyük günah işleyeni kâfir saydı. Buna karşı, kişilerin akıbetini Allah\'a bırakan Mürcie doğdu (yaklaşık 680-694). Ali\'ye bağlı kalanlar Şia\'yı oluşturdu. Bu olaylar' },
       art: { bg: 'battle', props: ['swords', 'flags'], actors: [{ kind: 'ali', x: 30, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 62, scale: 5, label: { tr: 'Hakem karşıtı grup' } }] },
       by: 'both',
     },

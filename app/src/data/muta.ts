@@ -14,32 +14,32 @@ export const muta: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Taberî tefsirinde, İbn Abbas, Übey b. Kâ\'b ve İbn Mes\'ud gibi bazı sahabeden ayete "belirli bir süreye kadar" ibaresinin eklendiği bir okuyuş aktarılır. Bu rivayet Sünni kaynaklarında da geçmektedir (Taberî, Câmiu\'l-Beyân). Bu ek, Kur\'an metni sayılmaz. Câferî mektep, Nisâ 24\'ü süresi belli nikâh olarak okumayı sürdürür.' },
+      text: { tr: 'Taberî tefsirinde, İbn Abbas, Übey b. Kâ\'b ve İbn Mes\'ud gibi bazı sahabeden ayete "belirli bir süreye kadar" ibaresinin eklendiği bir okuyuş aktarılır. Bu ek, Kur\'an metni sayılmaz. Câferî mektep, Nisâ 24\'ü süresi belli nikâh olarak okumayı sürdürür.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 36 }, { kind: 'man', x: 64 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Mut\'a, Peygamber döneminde özellikle seferlerde uygulanmıştır. Cabir b. Abdillah\'tan nakledildiğine göre Peygamber\'in sözcüsü gelip faydalanma iznini duyurmuştur. Bu rivayet Sünni kaynaklarında da geçmektedir (Müslim, Sahih, No. 1405a). Cabir, uygulamanın Halife Ebû Bekir döneminde ve Halife Ömer\'in ilk zamanlarında da sürdüğünü anlatır. Câferî mektep, bu erken uygulamayı süresi belli nikâh olarak sürdürür.' },
+      text: { tr: 'Mut\'a, Peygamber döneminde özellikle seferlerde uygulanmıştır. Cabir b. Abdillah\'tan nakledildiğine göre Peygamber\'in sözcüsü gelip faydalanma iznini duyurmuştur. Cabir, uygulamanın Halife Ebû Bekir döneminde ve Halife Ömer\'in ilk zamanlarında da sürdüğünü anlatır. Câferî mektep, bu erken uygulamayı süresi belli nikâh olarak sürdürür.' },
       art: { bg: 'caravan', props: ['camels', 'tents'], actors: [{ kind: 'crowd', x: 40, scale: 7 }, { kind: 'man', x: 74 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hayber gününe dair bir rivayette Peygamber\'in mut\'ayı ve evcil eşek etini yasakladığı geçer. Bu, Hz. Ali\'nin İbn Abbas\'a söylediği bir nakildir. Bu rivayet Sünni kaynaklarında da geçmektedir (Buhari, Sahih, No. 5115). Müslim 1406\'da Mekke\'nin fethi yılında izin verildiği, sonra "Allah bunu kıyamete kadar haram kıldı" denildiği anlatılır. Bazı rivayetler yasağı Evtâs veya Veda Haccı\'na koyar; tarih konusunda rivayetler birbiriyle uyuşmaz. Câferî mektep, Peygamber dönemindeki izin uygulamasını süresi belli nikâh olarak sürdürür.' },
+      text: { tr: 'Hayber gününe dair bir rivayette Peygamber\'in mut\'ayı ve evcil eşek etini yasakladığı geçer. Bu, Hz. Ali\'nin İbn Abbas\'a söylediği bir nakildir. Müslim 1406\'da Mekke\'nin fethi yılında izin verildiği, sonra "Allah bunu kıyamete kadar haram kıldı" denildiği anlatılır. Bazı rivayetler yasağı Evtâs veya Veda Haccı\'na koyar; tarih konusunda rivayetler birbiriyle uyuşmaz. Câferî mektep, Peygamber dönemindeki izin uygulamasını süresi belli nikâh olarak sürdürür.' },
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 32, scale: 6 }] },
       by: 'sunni',
     },
     {
-      text: { tr: 'Halife Ömer\'in bir konuşmasında iki mut\'ayı, hac temettü ve kadınlarla mut\'ayı, yasakladığı ve yapanı cezalandıracağını söylediği aktarılır. Bu rivayet Sünni kaynaklarında da geçmektedir (Müslim, Sahih, No. 1217a). "İkisi de Peygamber döneminde vardı" cümlesi rivayetin paralellerinde geçer; tam lafız ayrıca kontrol edilmelidir. Câferî mektep, kadınlarla mut\'ayı bu sözden önceki Peygamber uygulamasına göre sürdürür.' },
+      text: { tr: 'Halife Ömer\'in bir konuşmasında iki mut\'ayı, hac temettü ve kadınlarla mut\'ayı, yasakladığı ve yapanı cezalandıracağını söylediği aktarılır. "İkisi de Peygamber döneminde vardı" cümlesi rivayetin paralellerinde geçer; tam lafız ayrıca kontrol edilmelidir. Câferî mektep, kadınlarla mut\'ayı bu sözden önceki Peygamber uygulamasına göre sürdürür.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'man', x: 66, label: { tr: 'Halife Ömer' } }, { kind: 'crowd', x: 30, scale: 7 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Ali\'ye "Halife Ömer yasaklamasaydı zinaya ancak bedbaht bir kişi başvururdu" sözü nispet edilir. Benzer bir ifade, İbn Abbas ve Ata üzerinden Abdürrezzak\'ın Musannef\'inde ve Taberî tefsirinde de anılır. Bu rivayet Sünni kaynaklarında da geçmektedir (Taberî, Câmiu\'l-Beyân). Sözün Hz. Ali\'ye mi İbn Abbas\'a mı ait olduğu, zinciri ve sıhhati tartışmalıdır. Birincil metin görülmediği için kesin bir sıhhat hükmü verilmemiştir. Câferî mektep, mut\'ayı Peygamber dönemindeki izin üzere sürdürür.' },
+      text: { tr: 'Hz. Ali\'ye "Halife Ömer yasaklamasaydı zinaya ancak bedbaht bir kişi başvururdu" sözü nispet edilir. Benzer bir ifade, İbn Abbas ve Ata üzerinden Abdürrezzak\'ın Musannef\'inde ve Taberî tefsirinde de anılır. Sözün Hz. Ali\'ye mi İbn Abbas\'a mı ait olduğu, zinciri ve sıhhati tartışmalıdır. Birincil metin görülmediği için kesin bir sıhhat hükmü verilmemiştir. Câferî mektep, mut\'ayı Peygamber dönemindeki izin üzere sürdürür.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 32 }] },
       by: 'shia',
     },
     {
-      text: { tr: 'İbn Abbas\'ın mut\'aya izin verdiği bildirilir. Bu rivayet Sünni kaynaklarında da geçmektedir (Buhari, Sahih). Bu fetva, zorunluluk ve kadın azlığı gibi şartlara bağlanır. İbn Abbas\'ın sonradan tamamen vazgeçtiği haberi zayıf zincirlerle gelir (İbn Hacer, Fethu\'l-Bârî). Câferî fıkıh, mut\'ayı belli süre, belli mehir ve bitişte kadının iddeti şartıyla sürdürür.' },
+      text: { tr: 'İbn Abbas\'ın mut\'aya izin verdiği bildirilir. Bu fetva, zorunluluk ve kadın azlığı gibi şartlara bağlanır. İbn Abbas\'ın sonradan tamamen vazgeçtiği haberi zayıf zincirlerle gelir (İbn Hacer, Fethu\'l-Bârî). Câferî fıkıh, mut\'ayı belli süre, belli mehir ve bitişte kadının iddeti şartıyla sürdürür.' },
       art: { bg: 'dawn', props: ['scroll'], actors: [{ kind: 'man', x: 34 }, { kind: 'woman', x: 52 }, { kind: 'crowd', x: 76, scale: 5 }] },
       by: 'both',
     },

@@ -11,27 +11,27 @@ export const muaviyeIktidar: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: "Peygamber'den şöyle bir hadis aktarılır: \"Hilafet benden sonra otuz yıl sürecek, sonra ısırıcı krallık (mülk) olacak.\" Bu olay Sünni kaynaklarında da geçmektedir (Tirmizi, el-Câmi'; Ebû Dâvûd, Sünen). Muaviye'nin \"ben kralların ilkiyim\" dediği de rivayet edilir. Emevî yönetimi bu çizgide kuruldu." },
+      text: { tr: "Peygamber'den şöyle bir hadis aktarılır: \"Hilafet benden sonra otuz yıl sürecek, sonra ısırıcı krallık (mülk) olacak.\" Muaviye'nin \"ben kralların ilkiyim\" dediği de rivayet edilir. Emevî yönetimi bu çizgide kuruldu." },
       art,
     },
     {
       by: 'both',
-      text: { tr: "Muaviye, Ziyâd b. Ebîh'i Ebu Süfyan'ın oğlu sayıp kardeşi ilan etti. Buna istilhak denir (44 H). Birçok Sünni âlim bunu, Peygamber'in \"çocuk, yatak sahibinindir\" sözüne aykırı bularak eleştirdi. Ziyâd, Kûfe ve Basra'da Hz. Ali'yi sevenlere karşı sert davrandı. Bu olay Sünni kaynaklarında da geçmektedir (Taberî, Târîhu'r-Rusül ve'l-Mülûk; İbn Abdilber, el-İstîâb)." },
+      text: { tr: "Muaviye, Ziyâd b. Ebîh'i Ebu Süfyan'ın oğlu sayıp kardeşi ilan etti. Buna istilhak denir (44 H). Birçok Sünni âlim bunu, Peygamber'in \"çocuk, yatak sahibinindir\" sözüne aykırı bularak eleştirdi. Ziyâd, Kûfe ve Basra'da Hz. Ali'yi sevenlere karşı sert davrandı." },
       art,
     },
     {
       by: 'both',
-      text: { tr: "Muaviye döneminde Cuma hutbelerinde Hz. Ali'ye sövüldü. Bu, Ehl-i Beyt sevgisine ağır bir haksızlıktı. Müslim'de o, Sa'd b. Ebi Vakkas'a neden sövmediğini sorar. Bu olay Sünni kaynaklarında da geçmektedir (Müslim, No. 2404). Valilere emir yazıldığı Şii kitaplarda anlatılır; uygulama Ömer b. Abdülaziz'e kadar sürdü." },
+      text: { tr: "Muaviye döneminde Cuma hutbelerinde Hz. Ali'ye sövüldü. Bu, Ehl-i Beyt sevgisine ağır bir haksızlıktı. Müslim'de o, Sa'd b. Ebi Vakkas'a neden sövmediğini sorar. Valilere emir yazıldığı Şii kitaplarda anlatılır; uygulama Ömer b. Abdülaziz'e kadar sürdü." },
       art,
     },
     {
       by: 'both',
-      text: { tr: "Sövmeyi reddeden Hucr b. Adî, Hz. Ali'nin yiğit komutanıydı. Ziyâd onu on iki kadar arkadaşıyla Şam'a gönderdi; 51 H'de Mercü Azra'da öldürüldüler. Hz. Aişe bu öldürmeyi yadırgadı; Muaviye kendini savundu. Sahabiden Amr b. Hamk el-Huzâî de öldürüldü ve başının şehirler arasında taşındığı aktarılır. Bu olay Sünni kaynaklarında da geçmektedir (Taberî, Târîhu'r-Rusül ve'l-Mülûk; İbn Abdilber, el-İstîâb)." },
+      text: { tr: "Sövmeyi reddeden Hucr b. Adî, Hz. Ali'nin yiğit komutanıydı. Ziyâd onu on iki kadar arkadaşıyla Şam'a gönderdi; 51 H'de Mercü Azra'da öldürüldüler. Hz. Aişe bu öldürmeyi yadırgadı; Muaviye kendini savundu. Sahabiden Amr b. Hamk el-Huzâî de öldürüldü ve başının şehirler arasında taşındığı aktarılır." },
       art,
     },
     {
       by: 'both',
-      text: { tr: "Muaviye oğlu Yezid'i veliaht ilan etti (yaklaşık 56 H). Bu, babadan oğula geçen ilk veliahtlık sayılır. Medine'de Hz. Hüseyin, Abdullah b. Ömer ve Abdullah b. Zübeyr buna razı olmadı. Abdurrahman b. Ebi Bekir de itiraz etti. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih)." },
+      text: { tr: "Muaviye oğlu Yezid'i veliaht ilan etti (yaklaşık 56 H). Bu, babadan oğula geçen ilk veliahtlık sayılır. Medine'de Hz. Hüseyin, Abdullah b. Ömer ve Abdullah b. Zübeyr buna razı olmadı. Abdurrahman b. Ebi Bekir de itiraz etti." },
       art,
     },
     {
@@ -46,7 +46,7 @@ export const muaviyeIktidar: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: "Sünni kaynaklarda Muaviye; sahabi, kâtip, Şam'ı uzun yıllar yöneten, Kıbrıs'ı fetheden ve ilk donanmayı kuran biri olarak anılır. İbn Abbas'ın \"Muaviye fakihtir\" dediği de geçer. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih). Sövme, Hucr'un öldürülmesi ve Yezid'in veliahtlığı ise ayrıca sorulması gereken ağır konulardır." },
+      text: { tr: "Sünni kaynaklarda Muaviye; sahabi, kâtip, Şam'ı uzun yıllar yöneten, Kıbrıs'ı fetheden ve ilk donanmayı kuran biri olarak anılır. İbn Abbas'ın \"Muaviye fakihtir\" dediği de geçer. Sövme, Hucr'un öldürülmesi ve Yezid'in veliahtlığı ise ayrıca sorulması gereken ağır konulardır." },
       art,
     },
   ],
@@ -79,5 +79,5 @@ export const muaviyeIktidar: HistEvent = {
     { tr: "Minberde Hz. Ali'ye sövülmesi ve bunu reddedenlerin öldürülmesi, Ehl-i Beyt sevgisi bakımından size ne söylüyor?" },
     { tr: "Hz. Hüseyin ve Abdurrahman b. Ebi Bekir, Yezid'in veliahtlığına razı olmadı. Onların duruşu, biatı zorlayan bir düzen karşısında size ne öğretiyor?" },
   ],
-  summary: { tr: "Muaviye 41 H'den sonra Şam merkezli bir yönetim kurdu. Ziyâd'ı kardeşi ilan etti. Hutbelerde Hz. Ali'ye sövüldü. Bu olay Sünni kaynaklarında da geçmektedir (Müslim, No. 2404). Hucr b. Adî öldürüldü ve oğlu Yezid veliaht oldu. Sünni kitaplarda Muaviye, sahabi ve yönetici olarak da anılır. Şii anlatıda bu yıllar, Kerbela'ya giden yolu hazırlamıştır." },
+  summary: { tr: "Muaviye 41 H'den sonra Şam merkezli bir yönetim kurdu. Ziyâd'ı kardeşi ilan etti. Hutbelerde Hz. Ali'ye sövüldü. Hucr b. Adî öldürüldü ve oğlu Yezid veliaht oldu. Sünni kitaplarda Muaviye, sahabi ve yönetici olarak da anılır. Şii anlatıda bu yıllar, Kerbela'ya giden yolu hazırlamıştır." },
 };

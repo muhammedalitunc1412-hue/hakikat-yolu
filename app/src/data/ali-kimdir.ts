@@ -8,7 +8,7 @@ export const aliKimdir: HistEvent = {
   hook: { tr: 'Kâbe\'nin içinde doğdu. Peygamber\'in yatağına yattı. İlim şehrinin kapısı odur.', en: 'Who is the man said to be born in the Kaaba, who lay in the Prophet\'s bed and is called the "gate of knowledge"?' },
   scenes: [
     {
-      text: { tr: 'Fatıma bint Esed\'in sancısı Kâbe\'nin dibinde tuttu. Allah\'ın evine sığındı. Duvar ona yol verdi, içeri girdi. **Hz. Ali** orada, Beytullah\'ın içinde dünyaya geldi. Bu doğum Sünni kitaplarda da, Şii kitaplarda da anlatılır. Ondan önce de sonra da Kâbe\'de doğan başka bir çocuk bilinmez. Bu, yalnız ona verilen bir ikramdır.' },
+      text: { tr: 'Annesi Fâtıma bint Esed\'di. Sancısı Kâbe\'nin dibinde tuttu. Allah\'ın evine sığındı. Duvar ona yol verdi, içeri girdi. **Hz. Ali** orada, Beytullah\'ın içinde dünyaya geldi. Ondan önce de sonra da Kâbe\'de doğan başka bir çocuk bilinmez. Bu, yalnız ona verilen bir ikramdı.' },
       art: { bg: 'dune-dusk', props: ['sun'], actors: [{ kind: 'woman', x: 30, label: { tr: 'Fatıma bint Esed' } }, { kind: 'ali', x: 66, scale: 0.6, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
       cites: [
@@ -20,37 +20,37 @@ export const aliKimdir: HistEvent = {
       ],
     },
     {
-      text: { tr: 'Mekke\'de kıtlık vardı. Peygamber, amcası Ebu Talib\'in yükünü hafifletmek için küçük Ali\'yi yanına aldı. Hz. Ali çocukluğunu onun evinde, onun terbiyesiyle geçirdi. Bu çocukluk, Sünni ve Şii anlatılarda birlikte durur.' },
+      text: { tr: 'Mekke\'de kıtlık vardı. Peygamber, amcası Ebu Talib\'in yükünü hafifletmek için küçük Ali\'yi yanına aldı. Hz. Ali çocukluğunu onun evinde, onun terbiyesiyle geçirdi.' },
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 40, pose: 'sit', label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, scale: 0.6, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Vahiy geldiğinde Hz. Ali henüz çocuktu. Peygamber\'e iman etti. Şia\'da İslam\'ı kabul eden ilk kişi odur. Onun ilk Müslümanlardan olduğu Sünni kaynaklarında da geçmektedir (Tirmizi, el-Câmi\'). İlk iman edenlerin sırası kaynaklarda farklı anlatılır.' },
+      text: { tr: 'Vahiy geldiğinde Hz. Ali henüz çocuktu. Peygamber\'e iman etti. İslam\'ı kabul eden ilk kişi odur.' },
       art: { bg: 'night', props: ['stars'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, scale: 0.7, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hicret gecesi müşrikler Peygamber\'in evini kuşattı. Hz. Ali duraksamadan onun yatağına yattı ve yeşil örtüsüne büründü. Canını ona feda etti. Bu geceye Leyletü\'l-Mebît denir. Bu fedakârlık Sünni kaynaklarında da geçmektedir (İbn Hişâm, es-Sîre; Halebî, es-Sîre). Bakara 207\'nin ("İnsanlardan öylesi vardır ki Allah\'ın rızasını kazanmak için kendini satar") bu olay üzerine indiği de aktarılır (Hâkim, el-Müstedrek). Ayetin iniş sebebi için başka rivayetler de vardır.' },
+      text: { tr: 'Hicret gecesi müşrikler Peygamber\'in evini kuşattı. Hz. Ali duraksamadan onun yatağına yattı ve yeşil örtüsüne büründü. Canını ona feda etti. Bu geceye Leyletü\'l-Mebît denir. Bu fedakârlık Bakara 207\'nin ("İnsanlardan öylesi vardır ki Allah\'ın rızasını kazanmak için kendini satar") bu olay üzerine indiği de aktarılır (Hâkim, el-Müstedrek). Ayetin iniş sebebi için başka rivayetler de vardır.' },
       art: { bg: 'night', props: ['moon', 'stars', 'swords'], actors: [{ kind: 'crowd', x: 22, scale: 5 }, { kind: 'ali', x: 64, pose: 'sit', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Medine\'de Peygamber ashab arasında kardeşlik kurdurdu. Buna mü\'ahât denir. Hz. Ali\'ye "Sen dünyada da ahirette de benim kardeşimsin" buyurdu. Bu söz Sünni kaynaklarında da geçmektedir (Tirmizi, el-Câmi\'). Şia bunu, Hz. Ali\'nin ona en yakın kişi oluşunun delili sayar.' },
+      text: { tr: 'Medine\'de Peygamber ashab arasında kardeşlik kurdurdu. Buna mü\'ahât denir. Hz. Ali\'ye "Sen dünyada da ahirette de benim kardeşimsin" buyurdu. Şia bunu, Hz. Ali\'nin ona en yakın kişi oluşunun delili sayar.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Bedir\'de, Uhud\'da ve Hendek\'te Hz. Ali sancağı taşıdı, en önde savaştı. Hayber\'de kale uzayınca Peygamber "Sancağı, Allah ve Resulü\'nü seven, Allah ve Resulü\'nün de sevdiği bir adama vereceğim" dedi. O kişi Hz. Ali oldu. Bu söz Sünni kaynaklarında da geçmektedir (Buhari, Sahih). Zülfikar kılıcı ve "lâ fetâ illâ Alî, lâ seyfe illâ Zülfikâr" sözü çok anılır. Bu söz hadis ilminde zayıf ve ihtilaflı sayılır. Sağlam bir hadis olarak sunulmaz.' },
+      text: { tr: 'Bedir\'de, Uhud\'da ve Hendek\'te Hz. Ali sancağı taşıdı, en önde savaştı. Hayber\'de kale uzayınca Peygamber "Sancağı, Allah ve Resulü\'nü seven, Allah ve Resulü\'nün de sevdiği bir adama vereceğim" dedi. O kişi Hz. Ali oldu. Zülfikar kılıcı ve "lâ fetâ illâ Alî, lâ seyfe illâ Zülfikâr" sözü çok anılır. Bu söz hadis ilminde zayıf ve ihtilaflı sayılır. Sağlam bir hadis olarak sunulmaz.' },
       art: { bg: 'battle', props: ['flags', 'swords'], actors: [{ kind: 'crowd', x: 22, scale: 6 }, { kind: 'ali', x: 62, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: '"Ben ilmin şehriyim, Ali de onun kapısıdır." Bu söz Sünni kaynaklarında da geçmektedir (Tirmizi, el-Câmi\'; Hâkim, el-Müstedrek). Şia bunu, Hz. Ali\'nin ilimdeki yerinin delili sayar. Sıhhati konuşulur. Kimi sahih ya da hasen der, kimi zayıf, hatta uydurma sayar.' },
+      text: { tr: '"Ben ilmin şehriyim, Ali de onun kapısıdır." Şia bunu, Hz. Ali\'nin ilimdeki yerinin delili sayar. Sıhhati konuşulur. Kimi sahih ya da hasen der, kimi zayıf, hatta uydurma sayar.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 38, pose: 'raise', label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Şûrâ 23. ayet, Mevedde ayetidir: "De ki: Ben sizden bunun karşılığında yakınlarıma sevgiden başka bir şey istemiyorum." Şia\'da yakınlar Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin\'dir. Bu yorumun geçtiği Sünni tefsirler de vardır.' },
+      text: { tr: 'Şûrâ 23. ayet, Mevedde ayetidir: "De ki: Ben sizden bunun karşılığında yakınlarıma sevgiden başka bir şey istemiyorum." Yakınlar Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin\'dir.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 24, scale: 0.9, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 42, scale: 0.9, label: { tr: 'Hz. Fatıma' } }, { kind: 'hasan', x: 60, scale: 0.7, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 76, scale: 0.7, label: { tr: 'Hz. Hüseyin' } }] },
       by: 'both',
     },
@@ -60,7 +60,7 @@ export const aliKimdir: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Peygamber vefat edince Hz. Ali onu yıkadı ve defin işinde başta durdu. Bu, Sünni kaynaklarında da geçmektedir (İbn Mâce, es-Sünen). Şia\'ya göre Peygamber yıkanması için Hz. Ali\'yi vasiyet etmişti. Gözlerini o bağladı. Vefat anında başı Hz. Ali\'nin göğsündeydi.' },
+      text: { tr: 'Peygamber vefat edince Hz. Ali onu yıkadı ve defin işinde başta durdu. Bu, Şia\'ya göre Peygamber yıkanması için Hz. Ali\'yi vasiyet etmişti. Gözlerini o bağladı. Vefat anında başı Hz. Ali\'nin göğsündeydi.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 40, pose: 'sit', label: { tr: 'Hz. Ali' } }, { kind: 'prophet', x: 64, pose: 'sit', label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
@@ -127,5 +127,5 @@ export const aliKimdir: HistEvent = {
     { tr: 'İlim şehri sözünün sıhhati konuşulsa da Hz. Ali\'nin ilmi övülür. Sahabenin ona danışması, size onun ilmi hakkında ne söylüyor?' },
     { tr: 'Peygamber\'i yıkayan ve defneden kişi Hz. Ali\'dir. Son vedada yanında olmak, Ehl-i Beyt sevgisine ne katıyor?' },
   ],
-  summary: { tr: 'Hz. Ali, Peygamber\'in yanında büyüdü; ilk iman edenlerdendir, hicret gecesi canını ortaya koydu, savaşlarda sancak taşıdı, Hz. Fatıma ile evlendi ve Peygamber\'i yıkayıp defnetti. Bu faziletlerin çoğu Sünni kaynaklarında da geçmektedir (Tirmizi, el-Câmi\'; Buhari, Sahih; İbn Mâce, es-Sünen; Hâkim, el-Müstedrek).' },
+  summary: { tr: 'Hz. Ali, Peygamber\'in yanında büyüdü; ilk iman edenlerdendir, hicret gecesi canını ortaya koydu, savaşlarda sancak taşıdı, Hz. Fatıma ile evlendi ve Peygamber\'i yıkayıp defnetti.' },
 };

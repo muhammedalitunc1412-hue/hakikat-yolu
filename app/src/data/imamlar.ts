@@ -9,7 +9,7 @@ export const imamlar: HistEvent = {
   hook: { tr: 'Kerbela\'dan sağ çıkan genç bir imam, ilim ve sabırla yürüyen bir rehberlik zincirini nasıl başlattı?', en: 'How did a sick young survivor of Karbala begin a line of learning and patience?' },
   scenes: [
     {
-      text: { tr: 'Hz. Hüseyin\'den sonra imamet, Şii kaynaklarına göre oğlu Ali\'ye geçti. Hastalığı yüzünden Kerbela\'da savaşamayan İmam Zeynelâbidîn, ailenin sağ kalan tek erkek çocuğuydu. Esirlik yolculuğundan sonra Medine\'ye döndü. Bu rivayet Sünni kaynaklarında da geçmektedir (TDV İslâm Ansiklopedisi, "Zeynelâbidîn").' },
+      text: { tr: 'Hz. Hüseyin\'den sonra imamet, Şii kaynaklarına göre oğlu Ali\'ye geçti. Hastalığı yüzünden Kerbela\'da savaşamayan İmam Zeynelâbidîn, ailenin sağ kalan tek erkek çocuğuydu. Esirlik yolculuğundan sonra Medine\'ye döndü.' },
       art: { bg: 'dune-dusk', props: ['tents'], actors: [] },
       by: 'both',
     },
@@ -19,32 +19,32 @@ export const imamlar: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Oğlu İmam Muhammed el-Bâkır, "ilmi yarıp derinliğine inen" anlamındaki lakabıyla anılır. Medine\'de bir ders halkası kurdu. Öğrencileri arasında oğlu Câfer, Katâde, Zührî ve Evzâî sayılır. Sünni kaynaklar onu güvenilir bir ravi olarak anar. Bu rivayet Sünni kaynaklarında da geçmektedir (TDV İslâm Ansiklopedisi, "Muhammed el-Bâkır"). 114 H. (733) civarında vefat etti ve Bakî\'de defnedildi.' },
+      text: { tr: 'Oğlu İmam Muhammed el-Bâkır, "ilmi yarıp derinliğine inen" anlamındaki lakabıyla anılır. Medine\'de bir ders halkası kurdu. Öğrencileri arasında oğlu Câfer, Katâde, Zührî ve Evzâî sayılır. Sünni kaynaklar onu güvenilir bir ravi olarak anar. 114 H. (733) civarında vefat etti ve Bakî\'de defnedildi.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 36, pose: 'sit', label: { tr: 'İmam Muhammed el-Bâkır' } }, { kind: 'crowd', x: 68, scale: 4 }] },
       by: 'both',
     },
     {
-      text: { tr: 'İmam Câfer es-Sâdık, Emevilerin son ve Abbasilerin ilk yıllarında yaşadı. Siyasi isyanlara girmeden ilme yöneldi. Şii fıkhı onun adıyla Câferî mezhebi diye anılır. Hadiste güvenilir ve fıkıhta müctehid sayıldığı da anılır. Bu rivayet Sünni kaynaklarında da geçmektedir (TDV İslâm Ansiklopedisi, "Ca\'fer es-Sâdık"). 148 H. (765) yılında Medine\'de vefat etti.' },
+      text: { tr: 'İmam Câfer es-Sâdık, Emevilerin son ve Abbasilerin ilk yıllarında yaşadı. Siyasi isyanlara girmeden ilme yöneldi. Şii fıkhı onun adıyla Câferî mezhebi diye anılır. Hadiste güvenilir ve fıkıhta müctehid sayıldığı da anılır. 148 H. (765) yılında Medine\'de vefat etti.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'İmam Câfer es-Sâdık' } }, { kind: 'crowd', x: 70, scale: 5 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Şii kaynaklarında Ebû Hanîfe ve Mâlik, İmam Sâdık\'ın ders halkasından yararlananlar arasında anılır. "O iki yıl olmasaydı Nu\'mân helak olurdu" sözü Ebû Hanîfe\'ye atfedilir. Mâlik\'in ondan hadis dinlediği ve Ebû Hanîfe ile ilmî konuşmalar yaptığı da aktarılır. Bu rivayet Sünni kaynaklarında da geçmektedir (TDV İslâm Ansiklopedisi, "Ca\'fer es-Sâdık"). Öğrencilik rivayeti ikincil kaynaklara dayanır.' },
+      text: { tr: 'Şii kaynaklarında Ebû Hanîfe ve Mâlik, İmam Sâdık\'ın ders halkasından yararlananlar arasında anılır. "O iki yıl olmasaydı Nu\'mân helak olurdu" sözü Ebû Hanîfe\'ye atfedilir. Mâlik\'in ondan hadis dinlediği ve Ebû Hanîfe ile ilmî konuşmalar yaptığı da aktarılır. Öğrencilik rivayeti ikincil kaynaklara dayanır.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 30, label: { tr: 'Ebû Hanîfe' } }, { kind: 'man', x: 52, pose: 'sit', label: { tr: 'İmam Câfer es-Sâdık' } }, { kind: 'man', x: 76, label: { tr: 'Mâlik b. Enes' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'İmam Mûsâ el-Kâzım Medine\'de ilmi ve sabrıyla tanındı. Halife Hârûnürreşîd onu Medine\'den Bağdat\'a götürttü. Son dört yılı kâh ev hapsinde, kâh Basra ve Bağdat\'ta gözetim altında geçti. 183 H. (799) yılında Bağdat\'ta vefat etti; kabri bugün Kâzımeyn\'dedir. Ölümünün Yahyâ el-Bermekî\'nin emriyle olduğu aktarılır. Bu rivayet Sünni kaynaklarında da geçmektedir (TDV İslâm Ansiklopedisi, "Mûsâ el-Kâzım").' },
+      text: { tr: 'İmam Mûsâ el-Kâzım Medine\'de ilmi ve sabrıyla tanındı. Halife Hârûnürreşîd onu Medine\'den Bağdat\'a götürttü. Son dört yılı kâh ev hapsinde, kâh Basra ve Bağdat\'ta gözetim altında geçti. 183 H. (799) yılında Bağdat\'ta vefat etti; kabri bugün Kâzımeyn\'dedir. Ölümünün Yahyâ el-Bermekî\'nin emriyle olduğu aktarılır.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 34, label: { tr: 'İmam Mûsâ el-Kâzım' } }, { kind: 'man', x: 70, label: { tr: 'Hârûnürreşîd' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Halife Me\'mun, İmam Ali er-Rızâ\'yı Merv\'e çağırdı. Önce hilafeti bırakmayı önerdi. İmam kabul etmeyince veliahtlığı teklif etti. TDV\'ye göre İmam iki ay direndi, sonra ahidnameyi imzalamak zorunda kaldı. Şii kaynaklarında bu, baskı altında kabul edilmiş ve yönetimi meşrulaştırmayan bir veliahtlıktır. Me\'mun, Bağdat ayaklanması üzerine yola çıkınca İmam Tûs yakınlarında hastalanıp 203 H. (818) yılında vefat etti. Me\'mun cenaze namazını kıldırdı ve onu babası Hârûn\'un yanına defnetti. Kabrin yeri Meşhed adını aldı. Bu rivayet Sünni kaynaklarında da geçmektedir (TDV İslâm Ansiklopedisi, "Ali er-Rızâ").' },
+      text: { tr: 'Halife Me\'mun, İmam Ali er-Rızâ\'yı Merv\'e çağırdı. Önce hilafeti bırakmayı önerdi. İmam kabul etmeyince veliahtlığı teklif etti. TDV\'ye göre İmam iki ay direndi, sonra ahidnameyi imzalamak zorunda kaldı. Şii kaynaklarında bu, baskı altında kabul edilmiş ve yönetimi meşrulaştırmayan bir veliahtlıktır. Me\'mun, Bağdat ayaklanması üzerine yola çıkınca İmam Tûs yakınlarında hastalanıp 203 H. (818) yılında vefat etti. Me\'mun cenaze namazını kıldırdı ve onu babası Hârûn\'un yanına defnetti. Kabrin yeri Meşhed adını aldı.' },
       art: { bg: 'caravan', props: ['camels', 'scroll'], actors: [{ kind: 'man', x: 30, label: { tr: 'İmam Ali er-Rızâ' } }, { kind: 'man', x: 66, label: { tr: 'Me\'mun' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'İmam Muhammed el-Cevâd babasını yedi yaşında kaybetti. Me\'mun onu Bağdat\'a getirip kızı Ümmü\'l-Fazl ile evlendirdi. 220 H. (835) yılında Bağdat\'ta vefat etti. Oğlu İmam Ali el-Hâdî, Halife Mütevekkil tarafından 848\'de Samarra\'ya getirildi ve 254 H. (868) vefatına dek gözetimde yaşadı. Oğlu İmam Hasan el-Askerî, Samarra\'dan ayrılmasına izin verilmediği için Askerî diye anıldı. 8 Rebîülevvel 260\'ta (874) vefat etti. İkisinin zehirlendiği Şii rivayetlerde anlatılır; TDV bunu yalnız bu rivayetlere atfeder. Gözetim yılları ve vefat tarihleri de kayda geçmiştir. Bu rivayet Sünni kaynaklarında da geçmektedir (TDV İslâm Ansiklopedisi, "Muhammed el-Cevâd" ve "Ali el-Hâdî").' },
+      text: { tr: 'İmam Muhammed el-Cevâd babasını yedi yaşında kaybetti. Me\'mun onu Bağdat\'a getirip kızı Ümmü\'l-Fazl ile evlendirdi. 220 H. (835) yılında Bağdat\'ta vefat etti. Oğlu İmam Ali el-Hâdî, Halife Mütevekkil tarafından 848\'de Samarra\'ya getirildi ve 254 H. (868) vefatına dek gözetimde yaşadı. Oğlu İmam Hasan el-Askerî, Samarra\'dan ayrılmasına izin verilmediği için Askerî diye anıldı. 8 Rebîülevvel 260\'ta (874) vefat etti. İkisinin zehirlendiği Şii rivayetlerde anlatılır; TDV bunu yalnız bu rivayetlere atfeder. Gözetim yılları ve vefat tarihleri de kayda geçmiştir.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 26, label: { tr: 'İmam Ali el-Hâdî' } }, { kind: 'man', x: 56, label: { tr: 'İmam Hasan el-Askerî' } }, { kind: 'crowd', x: 82, scale: 3 }] },
       by: 'shia',
     },
@@ -54,7 +54,7 @@ export const imamlar: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Peygamber soyundan gelecek bir Mehdi\'ye dair rivayetler bazı Sünni kitaplarda da vardır. Bu rivayet Sünni kaynaklarında da geçmektedir (TDV İslâm Ansiklopedisi, "Mehdî"). Ahmed b. Hanbel, Ebû Dâvûd ve Tirmizî\'de bulunur; Buhârî ve Müslim\'de yoktur. Sünni kaynaklarda Mehdi, ahir zamanda doğacak biri olarak anlatılır. İbn Haldûn ve bazı âlimler rivayetleri zayıf bulur.' },
+      text: { tr: 'Peygamber soyundan gelecek bir Mehdi\'ye dair rivayetler bazı Sünni kitaplarda da vardır. Ahmed b. Hanbel, Ebû Dâvûd ve Tirmizî\'de bulunur; Buhârî ve Müslim\'de yoktur. Sünni kaynaklarda Mehdi, ahir zamanda doğacak biri olarak anlatılır. İbn Haldûn ve bazı âlimler rivayetleri zayıf bulur.' },
       art: { bg: 'dawn', props: ['sun', 'scroll'], actors: [] },
       by: 'sunni',
     },

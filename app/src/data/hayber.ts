@@ -15,32 +15,32 @@ export const hayber: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Kalelerden biri günlerce alınamadı. Sünni kaynaklarında bir rivayet daha vardır (Hâkim, el-Müstedrek; Ahmed b. Hanbel, Müsned). Önce Ebu Bekir, sonra Ömer sancakla gider. İkisi de fethi tamamlamadan döner. Rivayetin sıhhati ve ayrıntısı ayrıca kontrol edilmelidir.' },
+      text: { tr: 'Kalelerden biri günlerce alınamadı. Önce Ebu Bekir, sonra Ömer sancakla gider. İkisi de fethi tamamlamadan döner. Rivayetin sıhhati ve ayrıntısı ayrıca kontrol edilmelidir.' },
       art: { bg: 'dune-dusk', actors: [{ kind: 'crowd', x: 50, scale: 6 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Peygamber şöyle buyurdu: "Yarın sancağı, Allah\'ı ve Resulü\'nü seven, Allah\'ın ve Resulü\'nün de sevdiği bir kişiye vereceğim. Allah onun eliyle fethettirecek." Bu söz Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 2942; Müslim, Sahih, no. 2406). O gece insanlar, sancağın kime verileceğini konuşa konuşa sabahladı.' },
+      text: { tr: 'Peygamber şöyle buyurdu: "Yarın sancağı, Allah\'ı ve Resulü\'nü seven, Allah\'ın ve Resulü\'nün de sevdiği bir kişiye vereceğim. Allah onun eliyle fethettirecek." O gece insanlar, sancağın kime verileceğini konuşa konuşa sabahladı.' },
       art: { bg: 'night', props: ['stars'], actors: [{ kind: 'prophet', x: 46, label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 74, scale: 5 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Sabah herkes sancağın kendisine verilmesini umdu. Peygamber "Ali nerede?" diye sordu. "Gözleri ağrıyor" dediler. Hz. Ali getirildi. Peygamber mübarek tükürüğünü gözlerine sürdü. Gözleri bir anda iyileşti. Sancağı ona verdi. Bu, Sehl b. Sa\'d rivayetinde Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 2942). Peygamber ona şunu da söyledi: Bir kişinin onun eliyle hidayete ermesi, kızıl develerden daha hayırlıdır.' },
+      text: { tr: 'Sabah herkes sancağın kendisine verilmesini umdu. Peygamber "Ali nerede?" diye sordu. "Gözleri ağrıyor" dediler. Hz. Ali getirildi. Peygamber mübarek tükürüğünü gözlerine sürdü. Gözleri bir anda iyileşti. Sancağı ona verdi. Bu, Sehl b. Sa\'d rivayetinde Peygamber ona şunu da söyledi: Bir kişinin onun eliyle hidayete ermesi, kızıl develerden daha hayırlıdır.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'prophet', x: 42, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Bu sahne Sünni kaynaklarında da geçmektedir (Müslim, Sahih, no. 2406). Seleme b. Ekva anlatır. Hz. Ali kaleye yürür. Hayber\'in ünlü savaşçısı Merhab ile karşılaşır, onu öldürür ve kale fethedilir. Bazı siyer rivayetlerinde Merhab\'ı Muhammed b. Mesleme\'nin öldürdüğü de aktarılır.' },
+      text: { tr: 'Seleme b. Ekva anlatır. Hz. Ali kaleye yürür. Hayber\'in ünlü savaşçısı Merhab ile karşılaşır, onu öldürür ve kale fethedilir. Bazı siyer rivayetlerinde Merhab\'ı Muhammed b. Mesleme\'nin öldürdüğü de aktarılır.' },
       art: { bg: 'dune-day', actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 74, scale: 3 }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Şii kaynaklarında ve bazı siyer rivayetlerinde Hz. Ali\'nin Hayber kapısını yerinden söküp kalkan gibi kullandığı anlatılır. Bu rivayetin senedi tartışmalıdır. Kapının ağırlığı da kaynaklarda farklı yazılır.' },
+      text: { tr: 'Hz. Ali, Hayber kapısını yerinden söküp kalkan gibi kullandı.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Şia\'da bu söz, Hz. Ali\'nin "Allah ve Resulü\'nü seven ve onlarca sevilen" kişi olduğunu gösterir. Sancak ona verilmiştir. Bu, onun ayrıcalıklı yerinin delilidir. Bazı rivayetlerde Peygamber "Kaçıcı değil, saldırgandır" da der. Bu cümle, bir gün önce sancakla dönenlerle karşılaştırılarak anlaşılır.' },
+      text: { tr: 'Bu söz, Hz. Ali\'nin "Allah ve Resulü\'nü seven ve onlarca sevilen" kişi olduğunu gösterir. Sancak ona verilmiştir. Bu, onun ayrıcalıklı yerinin delilidir. Bazı rivayetlerde Peygamber "Kaçıcı değil, saldırgandır" da der. Bu cümle, bir gün önce sancakla dönenlerle karşılaştırılarak anlaşılır.' },
       art: { bg: 'night', props: ['stars', 'scroll'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {

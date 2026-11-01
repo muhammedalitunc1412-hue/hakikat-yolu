@@ -15,7 +15,7 @@ export const menzile: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Peygamber, Medine\'yi ve ailesini koruması için Hz. Ali\'yi yerine vekil bıraktı. Bu olay Sünni kaynaklarında da geçmektedir (Buhari, Sahih). Sa\'d b. Ebi Vakkas anlatır: Peygamber Tebük\'e çıkarken Hz. Ali\'yi Medine\'de bıraktı.' },
+      text: { tr: 'Peygamber, Medine\'yi ve ailesini koruması için Hz. Ali\'yi yerine vekil bıraktı. Sa\'d b. Ebi Vakkas anlatır: Peygamber Tebük\'e çıkarken Hz. Ali\'yi Medine\'de bıraktı.' },
       art: { bg: 'city', props: ['sun'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }] },
     },
     {
@@ -25,7 +25,7 @@ export const menzile: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Hz. Ali sordu: "Ey Allah\'ın Resulü, beni çocuklarla ve kadınlarla mı bırakıyorsun?" Peygamber buyurdu: "Harun\'un Musa nezdindeki yeri gibi, benim nezdimde yerinin olmasına razı değil misin? Ancak benden sonra peygamber yoktur." Bu söz Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 3706; Müslim, Sahih, no. 2404).' },
+      text: { tr: 'Hz. Ali sordu: "Ey Allah\'ın Resulü, beni çocuklarla ve kadınlarla mı bırakıyorsun?" Peygamber buyurdu: "Harun\'un Musa nezdindeki yeri gibi, benim nezdimde yerinin olmasına razı değil misin? Ancak benden sonra peygamber yoktur."' },
       art: { bg: 'dune-dusk', actors: [{ kind: 'prophet', x: 42, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, label: { tr: 'Hz. Ali' } }] },
     },
     {
@@ -35,12 +35,12 @@ export const menzile: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: 'Şia\'da bu söz açıktır. Hz. Ali, Peygamber\'in kardeşi, veziri ve halifesidir. "Benden sonra peygamber yoktur" cümlesi nübüvveti ayırır. Harun\'daki nübüvvet dışındaki makamlar Hz. Ali\'ye verilmiş olur. Şii kaynakları hadisin çok sayıda yolla geldiğini söyler.' },
+      text: { tr: 'Hz. Ali, Peygamber\'in kardeşi, veziri ve halifesidir. "Benden sonra peygamber yoktur" cümlesi nübüvveti ayırır. Harun\'daki nübüvvet dışındaki makamlar Hz. Ali\'ye verilmiş olur.' },
       art: { bg: 'night', props: ['stars', 'scroll'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Bu hadis, Sünni kaynaklarında da Sa\'d b. Ebi Vakkas\'ın saydığı üç sözden biridir (Müslim, Sahih, no. 2404). Muaviye, Sa\'d\'a Hz. Ali\'ye neden sövmediğini sordu. Sa\'d üç sözü andı: Menzile, Hayber sancağı ve Mübahele. Aynı üç söz İbn Mace, Sünen, no. 121\'de de geçer.' },
+      text: { tr: 'Muaviye, Sa\'d b. Ebi Vakkas\'a Hz. Ali\'ye neden sövmediğini sordu. Sa\'d üç sözü andı: Menzile, Hayber sancağı ve Mübahele.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'crowd', x: 36, scale: 3 }] },
     },
     {

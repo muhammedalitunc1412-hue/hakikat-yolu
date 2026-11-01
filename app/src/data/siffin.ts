@@ -18,12 +18,12 @@ export const siffin: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Yaşlı sahabi Ammar, Sıffin\'de Hz. Ali\'nin safında şehit oldu. Hadis, onu öldürecek grubu azgın diye anar. Ammar\'ın hangi safta düştüğü o günden beri konuşulur. Bu olay Sünni kaynaklarında da geçmektedir (Müslim, No. 2915 ve 2916; Ahmed b. Hanbel, Müsned, No. 11166; Buhari, Sahih).' },
+      text: { tr: 'Yaşlı sahabi Ammar, Sıffin\'de Hz. Ali\'nin safında şehit oldu. Hadis, onu öldürecek grubu azgın diye anar. Ammar\'ın hangi safta düştüğü o günden beri konuşulur.' },
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'man', x: 26, label: { tr: 'Ammar b. Yasir' } }, { kind: 'ali', x: 70, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Rivayete göre Amr b. el-As, "Ammar\'ı öldürdük" diyerek hadisi Muaviye\'ye hatırlattı. Muaviye "Onu biz mi öldürdük? Onu getirenler öldürdü" diye karşılık verdi. Hadis biliniyor, yorumla karşılanıyordu. Bu olay Sünni kaynaklarında da geçmektedir (Ahmed b. Hanbel, Müsned; İbn Kesir, el-Bidâye).' },
+      text: { tr: 'Rivayete göre Amr b. el-As, "Ammar\'ı öldürdük" diyerek hadisi Muaviye\'ye hatırlattı. Muaviye "Onu biz mi öldürdük? Onu getirenler öldürdü" diye karşılık verdi. Hadis biliniyor, yorumla karşılanıyordu.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 30, label: { tr: 'Amr b. el-As' } }, { kind: 'man', x: 66, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },
@@ -38,17 +38,17 @@ export const siffin: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Hakemi reddeden bir grup "Hüküm yalnız Allah\'ındır" diyerek Hz. Ali\'nin yanından ayrıldı. Bunlara Haricîler denir. Hz. Ali "Söz haktır, ama onunla batıl kastediliyor" dedi. Önce konuşuldu, sonra Nehrevan\'da çatışıldı. Bu olay Sünni kaynaklarında da geçmektedir (Müslim, No. 1066).' },
+      text: { tr: 'Hakemi reddeden bir grup "Hüküm yalnız Allah\'ındır" diyerek Hz. Ali\'nin yanından ayrıldı. Bunlara Haricîler denir. Hz. Ali "Söz haktır, ama onunla batıl kastediliyor" dedi. Önce konuşuldu, sonra Nehrevan\'da çatışıldı.' },
       art: { bg: 'river', props: ['flags'], actors: [{ kind: 'crowd', x: 28, scale: 7 }, { kind: 'ali', x: 74, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Ali, Peygamber\'den Haricîler hakkında bir haber aktarır: onları öldürenlere Allah katında sevap vardır. Bu olay Sünni kaynaklarında da geçmektedir (Müslim, No. 1066). Hakka daha yakın tarafın onlarla savaşacağı da Müslim\'de anılır ve Hz. Ali\'nin safını gösterir.' },
+      text: { tr: 'Hz. Ali, Peygamber\'den Haricîler hakkında bir haber aktarır: onları öldürenlere Allah katında sevap vardır. Hakka daha yakın tarafın onlarla savaşacağı da Müslim\'de anılır ve Hz. Ali\'nin safını gösterir.' },
       art: { bg: 'dawn', props: ['scroll'], actors: [{ kind: 'ali', x: 44, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 78, scale: 5 }] },
       by: 'sunni',
     },
     {
-      text: { tr: 'Emevi döneminde minberlerde Hz. Ali\'ye sövmek yayıldı. Bu, Ehl-i Beyt\'e yapılmış ağır bir haksızlıktı. Muaviye, Sa\'d b. Ebi Vakkas\'a Hz. Ali\'ye neden sövmediğini sordu; Sa\'d, Peygamber\'in onun hakkındaki üç sözünü saydı. Bu olay Sünni kaynaklarında da geçmektedir (Müslim, No. 2404). Ömer b. Abdülaziz bu uygulamayı kaldırdı.' },
+      text: { tr: 'Emevi döneminde minberlerde Hz. Ali\'ye sövmek yayıldı. Bu, Ehl-i Beyt\'e yapılmış ağır bir haksızlıktı. Muaviye, Sa\'d b. Ebi Vakkas\'a Hz. Ali\'ye neden sövmediğini sordu; Sa\'d, Peygamber\'in onun hakkındaki üç sözünü saydı. Ömer b. Abdülaziz bu uygulamayı kaldırdı.' },
       art: { bg: 'interior', props: ['minbar', 'scroll'], actors: [{ kind: 'man', x: 28, label: { tr: 'Sa\'d b. Ebi Vakkas' } }, { kind: 'man', x: 62, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },
@@ -110,5 +110,5 @@ export const siffin: HistEvent = {
     { tr: 'Ömer b. Abdülaziz, minberlerde Hz. Ali\'ye sövme uygulamasını kaldırdı. Bu adım, o sözlerin ağırlığını size nasıl gösteriyor?' },
     { tr: 'Peygamber, Haricîler hakkında hakka daha yakın tarafın onlarla savaşacağını haber vermişti. Hz. Ali onlarla karşılaştı. Bu haber, onun yerini size nasıl okutuyor?' },
   ],
-  summary: { tr: 'Sıffin\'de Ammar, Hz. Ali\'nin safında şehit oldu. Bu olay Sünni kaynaklarında da geçmektedir (Müslim, No. 2915 ve 2916; Buhari, Sahih). Mushaflar mızraklara asıldı; Hakem ve Nehrevan geldi. Hz. Ali sabırla hakkını korudu ve bir sabah namazında şehit edildi.' },
+  summary: { tr: 'Sıffin\'de Ammar, Hz. Ali\'nin safında şehit oldu. Mushaflar mızraklara asıldı; Hakem ve Nehrevan geldi. Hz. Ali sabırla hakkını korudu ve bir sabah namazında şehit edildi.' },
 };

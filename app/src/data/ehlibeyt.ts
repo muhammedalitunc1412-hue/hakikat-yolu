@@ -10,37 +10,37 @@ export const ehlibeyt: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Necran Hristiyanlarıyla konuşma sürerken Âl-i İmrân 3:61 indi: "Bizim oğullarımızı, sizin oğullarınızı, kadınlarımızı, kadınlarınızı, kendimizi ve kendinizi çağıralım." Peygamber mübahele için Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin\'i yanına aldı. Bu olay Sünni kaynaklarında da geçmektedir (Müslim, Sahih). Sa\'d b. Ebi Vakkas rivayetinde Peygamber "Allah\'ım, bunlar ehlimdir" der. Tefsirlerde Necranlıların bu manzara karşısında mübaheleden çekinip anlaşmayı kabul ettiği anlatılır.' },
+      text: { tr: 'Medine\'ye Necran\'dan bir heyet geldi. Hristiyandılar. Söz, Hz. İsa\'da düğümlendi. Onlar İsa\'yı Allah\'ın oğlu, ilah diye anıyordu. Peygamber, İsa\'nın kul olduğunu söyledi. Konuşma uzadı. İki taraf kendi sözünde durdu. O zaman mübahele indi. Mübahele, iki tarafın Allah\'a yönelmesi ve yalan söyleyen tarafa lanet dilemesidir. Âl-i İmrân 61 şöyle seslendi: oğullarımızı ve oğullarınızı, kadınlarımızı ve kadınlarınızı, kendimizi ve kendinizi çağıralım, sonra yalancıların üzerine Allah\'ın lanetini dileyelim. Sabah Peygamber evinden çıktı. Yanında, kendi nefsi gibi **Hz. Ali** vardı. Kızı **Hz. Fatıma** vardı. Torunları **Hz. Hasan** ve **Hz. Hüseyin** vardı. Başkasını çağırmadı. "Allah\'ım, bunlar ehlimdir" dedi. Necranlılar bu yürüyüşü görünce durdu. Karşılarına bir ordu değil, Peygamber\'in en sevdikleri çıkmıştı. Lanetleşmeye cesaret edemediler. Anlaşmayı kabul ettiler. O gün meydanda duran taraf, Ehl-i Beyt\'ti.' },
       art: { bg: 'dune-day', props: ['sun', 'tents'], actors: [{ kind: 'prophet', x: 44, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 58, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 70, label: { tr: 'Hz. Fatıma' } }, { kind: 'hasan', x: 80, scale: 0.7, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 88, scale: 0.65, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Ayetteki "kendimizi" sözü, Şia\'da Hz. Ali\'yi de kapsar. Peygamber mübaheleye kendi nefsi olarak onu getirdi. Bu, onun Peygamber\'e en yakın kişi olduğunun delilidir. Aynı çıkış Sünni kaynaklarında da büyük bir fazilet olarak geçer (Müslim, Sahih).' },
+      text: { tr: 'Ayetteki "kendimizi" sözü Hz. Ali\'yi de kapsar. Peygamber mübaheleye kendi nefsi olarak onu getirdi. Bu, onun Peygamber\'e en yakın kişi olduğunun delilidir.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'prophet', x: 44, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 58, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Veda Haccı dönüşünde, Hum suyu başında Peygamber iki ağır emanet bıraktığını söyledi: Allah\'ın Kitabı ve itreti, yani Ehl-i Beyt. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi. Bu söz Sünni kaynaklarında da geçmektedir (Müslim, Sahih, no. 2408; Tirmizi, el-Câmi\', no. 3788). Tirmizi rivayetinde ikisi, Havz\'da Peygamber\'e varıncaya dek ayrılmaz. Müslim\'deki rivayette Zeyd b. Erkam\'a Ehl-i Beyt sorulunca, önce hanımların bu kapsama girmediğini söyledi. Zekâtın yasaklandığı Ali, Akîl, Cafer ve Abbas ailelerini andı.' },
+      text: { tr: 'Veda Haccı dönüşünde, Hum suyu başında Peygamber iki ağır emanet bıraktığını söyledi: Allah\'ın Kitabı ve itreti, yani Ehl-i Beyt. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi. Tirmizi rivayetinde ikisi, Havz\'da Peygamber\'e varıncaya dek ayrılmaz. Müslim\'deki rivayette Zeyd b. Erkam\'a Ehl-i Beyt sorulunca, önce hanımların bu kapsama girmediğini söyledi. Zekâtın yasaklandığı Ali, Akîl, Cafer ve Abbas ailelerini andı.' },
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 82, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Bir başka söz şöyledir: "Ehl-i Beytimin örneği Nuh\'un gemisi gibidir. Ona binen kurtulur, geri kalan boğulur." Buna Safine hadisi denir. Sünni kaynaklarında da geçmektedir (Hâkim, el-Müstedrek). Hâkim bunu Ebu Zer\'den aktarır. Şii kaynakları hadisin çok sayıda yolla geldiğini söyler. Rivayet zincirlerinin sıhhati hadis âlimleri arasında konuşulmuştur.' },
+      text: { tr: 'Bir başka söz şöyledir: "Ehl-i Beytimin örneği Nuh\'un gemisi gibidir. Ona binen kurtulur, geri kalan boğulur." Buna Safine hadisi denir.' },
       art: { bg: 'river', props: ['palms'], actors: [{ kind: 'crowd', x: 40, scale: 5 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Câbir b. Semüre anlatır. Peygamber "Bu iş (hilafet), içlerinden on iki halife gelinceye kadar sürecek" dedi. Sonra bir şey daha söyledi. Câbir onu duyamadı. Babası "Hepsi Kureyş\'tendir" dediğini bildirdi. Bu sayı Sünni kaynaklarında da geçmektedir (Buhari, Sahih, no. 7222; Müslim, Sahih, no. 1821). Buhari "on iki emir", Müslim "on iki halife" der.' },
+      text: { tr: 'Câbir b. Semüre anlatır. Peygamber "Bu iş (hilafet), içlerinden on iki halife gelinceye kadar sürecek" dedi. Sonra bir şey daha söyledi. Câbir onu duyamadı. Babası "Hepsi Kureyş\'tendir" dediğini bildirdi. Bu sayı Buhari "on iki emir", Müslim "on iki halife" der.' },
       art: { bg: 'city', props: ['sun', 'minbar'], actors: [{ kind: 'prophet', x: 60, label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 28, scale: 6 }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Bu on iki kişi, Şia\'da Allah\'ın belirlediği On İki İmam\'dır. Kuleynî\'nin el-Kâfî\'sinde, Kitâbü\'l-Hüccet bölümünde, bu isimleri anlatan rivayetler vardır. Numânî\'nin el-Gaybe\'sinde ve Şeyh Saduk\'un Kemâlüddîn\'inde de vardır. Câbir\'in Hz. Fatıma\'nın elinde gördüğü levha bunlardandır. Levhada imamların adları yazılıdır.' },
+      text: { tr: 'Bu on iki kişi, Allah\'ın belirlediği On İki İmam\'dır. Câbir, Hz. Fatıma\'nın elinde bir levha gördü. Levhada imamların adları yazılıydı.' },
       art: { bg: 'night', props: ['stars', 'scroll'], actors: [{ kind: 'fatima', x: 50, label: { tr: 'Hz. Fatıma' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Şia\'da imamet, Allah\'ın nass ile belirlediği bir önderliktir. İmam günahtan korunmuştur ve ilimde üstündür. Yeryüzünden hüccet hiç eksik olmaz. Her imam kendinden sonrakini bildirir.' },
+      text: { tr: 'İmamet, Allah\'ın nass ile belirlediği bir önderliktir. İmam günahtan korunmuştur ve ilimde üstündür. Yeryüzünden hüccet hiç eksik olmaz. Her imam kendinden sonrakini bildirir.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'ali', x: 42, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 62, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 74, scale: 0.75, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {

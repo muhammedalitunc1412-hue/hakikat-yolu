@@ -13,17 +13,17 @@ export const sebb: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Taberî\'ye göre Muaviye, Kûfe valisi Muğîre b. Şu\'be\'ye Hz. Ali\'yi kötülemesini ve Hz. Osman\'ı övmesini tavsiye etti. Muğîre hutbelerinde Hz. Ali\'ye ve taraftarlarına sövdürdü. Ondan sonra Ziyâd b. Ebîh de aynı yolu tuttu. Bu olay Sünni kaynaklarında da geçmektedir (Taberî, Târîhu\'r-Rusül ve\'l-Mülûk; TDV İslâm Ansiklopedisi, "Hucr b. Adî").' },
+      text: { tr: 'Muaviye, Kûfe valisi Muğîre b. Şu\'be\'ye Hz. Ali\'yi kötülemesini ve Hz. Osman\'ı övmesini tavsiye etti. Muğîre hutbelerinde Hz. Ali\'ye ve taraftarlarına sövdürdü. Ondan sonra Ziyâd b. Ebîh de aynı yolu tuttu.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'man', x: 34, pose: 'raise', label: { tr: 'Muğîre' } }, { kind: 'crowd', x: 68, scale: 6 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Müslim\'de Muaviye, Sa\'d b. Ebî Vakkâs\'a Hz. Ali\'ye neden sövmediğini sorar. Sa\'d, Peygamber\'in üç sözünü sayar: Menzile, Hayber sancağı ve Mübahele. Bu olay Sünni kaynaklarında da geçmektedir (Müslim, No. 2404). Bazı şârihler bunu bir emir değil, bir soru olarak okur.' },
+      text: { tr: 'Müslim\'de Muaviye, Sa\'d b. Ebî Vakkâs\'a Hz. Ali\'ye neden sövmediğini sorar. Sa\'d, Peygamber\'in üç sözünü sayar: Menzile, Hayber sancağı ve Mübahele. Bazı şârihler bunu bir emir değil, bir soru olarak okur.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 28, label: { tr: 'Sa\'d b. Ebî Vakkâs' } }, { kind: 'man', x: 64, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Şii kaynaklarda Muaviye\'nin valilerine genelge gönderdiği aktarılır. Bu yazılarda Hz. Ali\'ye sövülmesi ve onu övenlerin cezalandırılması istenir. Rivayet, İbn Ebi\'l-Hadîd\'in Medâinî\'den naklindedir.' },
+      text: { tr: 'Muaviye valilerine genelge gönderdi. Yazılarda Hz. Ali\'ye sövülmesi ve onu övenlerin cezalandırılması istendi.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'Muaviye' } }, { kind: 'crowd', x: 72, scale: 4 }] },
       by: 'shia',
     },
@@ -38,12 +38,12 @@ export const sebb: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'TDV\'ye göre Hz. Ali\'ye sövmeyi reddeden Hucr ve arkadaşları 51\'de (671) Mercü Azra\'da idam edildi; bazıları serbest bırakıldı. Hucr önce iki rekât namaz kıldı, yıkanmak istemedi ve kendini şehit bildi. Âişe bu öldürmeyi yadırgadı; Muaviye kendini savundu. Bu olay Sünni kaynaklarında da geçmektedir (TDV İslâm Ansiklopedisi, "Hucr b. Adî").' },
+      text: { tr: 'TDV\'ye göre Hz. Ali\'ye sövmeyi reddeden Hucr ve arkadaşları 51\'de (671) Mercü Azra\'da idam edildi; bazıları serbest bırakıldı. Hucr önce iki rekât namaz kıldı, yıkanmak istemedi ve kendini şehit bildi. Âişe bu öldürmeyi yadırgadı; Muaviye kendini savundu.' },
       art: { bg: 'dune-dusk', props: ['swords'], actors: [{ kind: 'man', x: 34, label: { tr: 'Hucr b. Adî' } }, { kind: 'crowd', x: 70, scale: 5 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Şii yayınlarda süre yaklaşık altmış yıl diye anılır; bu, 41 H\'den 99-101 H\'ye uzanan yaklaşık bir ifadedir, kesin bir sayı değildir. Ömer b. Abdülaziz bu uygulamayı kaldırdı. Bu olay Sünni kaynaklarında da geçmektedir (TDV İslâm Ansiklopedisi, "Ömer b. Abdülazîz").' },
+      text: { tr: 'Şii yayınlarda süre yaklaşık altmış yıl diye anılır; bu, 41 H\'den 99-101 H\'ye uzanan yaklaşık bir ifadedir, kesin bir sayı değildir. Ömer b. Abdülaziz bu uygulamayı kaldırdı.' },
       art: { bg: 'city', props: ['minbar', 'sun'], actors: [{ kind: 'crowd', x: 30, scale: 7 }, { kind: 'man', x: 70, label: { tr: 'Hatip' } }] },
       by: 'shia',
     },
@@ -106,5 +106,5 @@ export const sebb: HistEvent = {
     { tr: 'Hucr ve arkadaşları sövmeyi reddettikleri için öldürüldü. Hutbede haksızlığa karşı duran bir insanın hâli size ne söylüyor?' },
     { tr: 'Ömer b. Abdülaziz sövmeyi kaldırıp hutbede adalet ayetini okuttu. Bu değişiklik, o sözlerin ağırlığını size nasıl gösteriyor?' },
   ],
-  summary: { tr: 'Emevi döneminde Cuma hutbelerinde Hz. Ali\'ye sövüldü. Bu olay Sünni kaynaklarında da geçmektedir (Müslim, No. 2404; TDV İslâm Ansiklopedisi, "Hucr b. Adî"). Sövmeyi reddeden Hucr b. Adî, 51 H\'de Mercü Azra\'da öldürüldü. Bu olay Sünni kaynaklarında da geçmektedir (TDV İslâm Ansiklopedisi, "Hucr b. Adî"). Ömer b. Abdülaziz uygulamayı kaldırdı. Şii anlatıda bu, yaklaşık altmış yıl süren ağır bir haksızlıktır.' },
+  summary: { tr: 'Emevi döneminde Cuma hutbelerinde Hz. Ali\'ye sövüldü. Sövmeyi reddeden Hucr b. Adî, 51 H\'de Mercü Azra\'da öldürüldü. Ömer b. Abdülaziz uygulamayı kaldırdı. Şii anlatıda bu, yaklaşık altmış yıl süren ağır bir haksızlıktır.' },
 };

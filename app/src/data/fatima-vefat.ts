@@ -16,19 +16,19 @@ export const fatimaVefat: HistEvent = {
       cites: [{ side: 'sunni', i: 0 }, { side: 'shia', i: 3 }],
     },
     {
-      text: { tr: 'Bir grup Hz. Ali\'nin evinde toplanmıştı. **Hz. Fatıma** kapıya geldi. Gelen, odun ve ateş yeminiyle konuştu: o neler bir daha toplanırsa evi içindekiyle yakacağını söyledi. İçeride Peygamber\'in kızı vardı. Bu yemin Sünni kitaplarda da yazılıdır. Şehristânî, Nazzâm\'ın "İçindekilerle birlikte yakın" diye bağırdığını aktardığını da kaydeder.' },
+      text: { tr: 'Bir grup Hz. Ali\'nin evinde toplanmıştı. **Hz. Fatıma** kapıya geldi. Gelen, odun ve ateş yeminiyle konuştu: o neler bir daha toplanırsa evi içindekiyle yakacağını söyledi. İçeride Peygamber\'in kızı vardı. Şehristânî, Nazzâm\'ın "İçindekilerle birlikte yakın" diye bağırdığını aktardığını da kaydeder.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 28, pose: 'raise', label: { tr: 'Ömer' } }, { kind: 'fatima', x: 68, label: { tr: 'Hz. Fatıma' } }] },
       by: 'both',
       cites: [{ side: 'sunni', i: 1 }, { side: 'sunni', i: 2 }, { side: 'sunni', i: 3 }, { side: 'sunni', i: 4 }],
     },
     {
-      text: { tr: 'Ehl-i Beyt rivayetlerine göre ateş kapıya verildi. Kapı yandı, sonra itilip zorlandı. **Hz. Fatıma** kapının ardında durmuştu. Kapı ile duvar arasında sıkıştı. Göğsüne kapının çivisi battı. Karnındaki **Muhsin** düştü. "Babacığım" diye seslendi. **Hz. Ali** yetişti, onu tuttu ve sabretti. Yakma yemini Sünni kitaplarda da yazılıdır. Kapının yanması, sıkışma, çivi ve Muhsin ise bu Şii rivayetlerin anlattığı sahnedir.' },
+      text: { tr: 'Ateş kapıya verildi. Kapı yandı, sonra itilip zorlandı. **Hz. Fatıma** kapının ardında durmuştu. Kapı ile duvar arasında sıkıştı. Göğsüne kapının çivisi battı. Karnındaki **Muhsin** düştü. "Babacığım" diye seslendi. **Hz. Ali** yetişti, onu tuttu ve sabretti.' },
       art: { bg: 'interior', actors: [{ kind: 'fatima', x: 48, pose: 'sit', label: { tr: 'Hz. Fatıma' } }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
       cites: [{ side: 'shia', i: 6 }, { side: 'shia', i: 7 }, { side: 'shia', i: 8 }, { side: 'shia', i: 9 }, { side: 'shia', i: 0 }, { side: 'sunni', i: 2 }],
     },
     {
-      text: { tr: 'Bundan sonra **Hz. Fatıma** Halife Ebu Bekir\'le konuşmadı. Vefatına kadar sustu. Bu cümle Sünni kaynaklarında da durur: "Ona küstü ve vefat edene kadar onunla konuşmadı." Peygamber\'den sonra altı ay yaşadı. Suskunluğu, kırılan hakkın sesi oldu.' },
+      text: { tr: 'Bundan sonra **Hz. Fatıma** Halife Ebu Bekir\'le konuşmadı. Vefatına kadar sustu. Ona küstü ve bir daha onunla konuşmadı. Peygamber\'den sonra altı ay yaşadı. Suskunluğu, kırılan hakkın sesi oldu.' },
       art: { bg: 'interior', props: ['moon'], actors: [{ kind: 'fatima', x: 50, pose: 'sit', label: { tr: 'Hz. Fatıma' } }] },
       by: 'both',
       cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 5 }],
@@ -46,7 +46,7 @@ export const fatimaVefat: HistEvent = {
       cites: [{ side: 'shia', i: 4 }],
     },
     {
-      text: { tr: 'Vefat edince **Hz. Ali** onu gece yıkadı, namazını kendisi kıldı ve karanlıkta defnetti. Halife Ebu Bekir\'e haber vermedi. Bu gece defin Sünni kaynaklarında da yazılıdır. Yanında evin ehli ve birkaç yakın vardı. Sabah olduğunda cenaze çoktan toprağa verilmişti.' },
+      text: { tr: 'Vefat edince **Hz. Ali** onu gece yıkadı, namazını kendisi kıldı ve karanlıkta defnetti. Halife Ebu Bekir\'e haber vermedi. Yanında evin ehli ve birkaç yakın vardı. Sabah olduğunda cenaze çoktan toprağa verilmişti.' },
       art: { bg: 'night', props: ['stars', 'moon'], actors: [{ kind: 'ali', x: 42, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 58, scale: 0.7 }, { kind: 'husayn', x: 68, scale: 0.65 }] },
       by: 'both',
       cites: [{ side: 'sunni', i: 0 }, { side: 'shia', i: 1 }],
