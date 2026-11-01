@@ -95,7 +95,7 @@ export const NOTES: Record<string, string[]> = {
     "Halife Osman'ın ilk yılları sakin geçti; ikinci yarısında valilik ve mal dağıtımı şikâyet konusu oldu.",
     "Mısır, Kûfe ve Basra'dan heyetler şikâyetle Medine'ye geldi.",
     "Hz. Ali arabuluculuk yaptı.",
-    "Medine kuşatıldı ve Halife Osman 35 H Zilhicce'de şehit edildi.",
+    "Medine kuşatıldı ve Halife Osman 35 H Zilhicce'de öldürüldü.",
     "Ardından halk Hz. Ali'ye gelip biat etmesini istedi.",
   ],
   fedek: [
@@ -113,10 +113,10 @@ export const NOTES: Record<string, string[]> = {
     "Ertesi sabah Hz. Ali kabir başında durdu (Delâilü'l-İmâme, cilt 1, s. 137). Kabri gizlidir.",
   ],
   cemel: [
-    "Halife Osman'ın şehadetinden sonra Hz. Ali'ye biat edildi.",
+    "Halife Osman'ın öldürülmesinden sonra Hz. Ali hilafeti bilinçle üstlendi.",
     "Talha, Zübeyr ve Aişe Halife Osman'ın kanını gerekçe gösterip Basra'ya yöneldi.",
     "Muaviye de Halife Osman'ın kanı yerini bulmadan biat etmeyeceğini bildirdi.",
-    "Cemel Savaşı'nda Talha ve Zübeyr hayatını kaybetti.",
+    "Cemel'de Zübeyr, Peygamber'in sözü hatırlatılınca savaş alanından ayrıldı ve sonra öldürüldü. Talha savaşta öldürüldü.",
     "Hz. Ali savaştan sonra esirleri bıraktı ve Aişe'yi saygıyla Medine'ye uğurladı.",
   ],
   siffin: [

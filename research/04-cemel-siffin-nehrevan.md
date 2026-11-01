@@ -11,8 +11,8 @@ Hazırlayan notu: Bu dosya uygulama içeriği için araştırma taslağıdır. H
 ## 1. SAHNE SAHNE ANLATIM (11 sahne)
 
 ### Sahne 1 – Medine'de biat (Zilhicce 35 / Haziran 656)
-Hz. Osman'ın şehit edilmesinin ardından Medine karışıktı. Ensar ve Muhacirin'in önde gelenleri Hz. Ali'ye gelip hilafeti kabul etmesini istedi. Ali önce reddetti; ısrar üzerine Mescid-i Nebevi'de biat alındı. Talha ve Zübeyr'in biatının gönüllü mü zorlama mı olduğu kaynaklarda tartışmalıdır: sonradan "zorla biat verdik" dediler, Ali ise gönüllü verdiklerini savundu. Ali'nin ilk icraatı, Osman'ın atadığı valileri değiştirmek oldu; bu karar sonraki muhalefetin zeminini oluşturdu.
-- Kaynak: Taberi, Tarih (Leiden I/3066 vd., biat bölümü; tam sayfa DOĞRULANMADI) [SÜNNİ][LİTERATÜR]; İbn Kesir, el-Bidaye ve'n-Nihaye, c.7 (Ali'nin hilafeti bölümü) [SÜNNİ][LİTERATÜR]; Nehcü'l-Belağa, Hutbe 3 (Şıkşıkıyye), 229 (biat ısrarı üzerine "Beni bırakın, başkasını arayın" hutbesi, Hutbe 92 numarası da kullanılır; numara DOĞRULANMADI) [Şİİ][LİTERATÜR].
+Hz. Osman'ın öldürülmesinin ardından Medine karışıktı. Ensar ve Muhacirin'in önde gelenleri Hz. Ali'ye geldi. Ali bu ağır görevi bilinçle üstlendi; Mescid-i Nebevi'de biat alındı. Talha ve Zübeyr'in biatının gönüllü mü zorlama mı olduğu kaynaklarda tartışmalıdır: sonradan "zorla biat verdik" dediler, Ali ise gönüllü verdiklerini savundu. Ali'nin ilk icraatı, Osman'ın atadığı valileri değiştirmek oldu; bu karar sonraki muhalefetin zeminini oluşturdu.
+- Kaynak: Taberi, Tarih (Leiden I/3066 vd., biat bölümü; tam sayfa DOĞRULANMADI) [SÜNNİ][LİTERATÜR]; İbn Kesir, el-Bidaye ve'n-Nihaye, c.7 (Ali'nin hilafeti bölümü) [SÜNNİ][LİTERATÜR]; Nehcü'l-Belağa, Hutbe 3 (Şıkşıkıyye). Biat hutbesinin numarası (229 veya 92) DOĞRULANMADI [Şİİ][LİTERATÜR].
 - Görsel öneri: Kalabalığın Ali'nin kapısında beklemesi, Ali'nin tereddüdü.
 
 ### Sahne 2 – Muaviye'nin biat etmemesi ve "Osman'ın kanı" talebi
