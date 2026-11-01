@@ -25,7 +25,7 @@ export type Art = {
 // by: sahnedeki anlatımı hangi mezhebin kaynakları kabul eder ('both' = hem Sünni hem Şii kaynaklarında; 'shia' = yalnız Şii kaynaklarında; 'sunni' = yalnız Sünni kaynaklarında).
 export type Accept = 'both' | 'shia' | 'sunni';
 export type SceneCite = { side: 'sunni' | 'shia'; i: number };
-export type Scene = { text: L; art: Art; by?: Accept; cites?: SceneCite[] };
+export type Scene = { text: L; art: Art; by?: Accept; cites?: SceneCite[]; image?: string };
 export type Dispute = { title: L; sunni: L; shia: L };
 
 export type HistEvent = {

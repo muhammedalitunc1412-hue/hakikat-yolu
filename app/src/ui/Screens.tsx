@@ -231,10 +231,11 @@ function DisputeCard({ d }: { d: Dispute }) {
   );
 }
 
-function SceneImage({ evId, n, title, width }: { evId: string; n: number; title: string; width: number }) {
+function SceneImage({ evId, n, title, width, image }: { evId: string; n: number; title: string; width: number; image?: string }) {
+  const stem = image ?? evId + '-' + n;
   const imgs: number[] = [];
   for (let k = 1; k <= 4; k++) {
-    const f = SCENE_IMAGES[k === 1 ? evId + '-' + n : evId + '-' + n + '-' + k];
+    const f = SCENE_IMAGES[k === 1 ? stem : stem + '-' + k];
     if (f) imgs.push(f);
   }
   const [pick, setPick] = useState(0);
@@ -262,7 +263,7 @@ function SceneImage({ evId, n, title, width }: { evId: string; n: number; title:
       <Text style={{ color: C.gold, fontSize: 28 }}>▣</Text>
       <Text style={s.phTitle}>TEST GÖRSELİ</Text>
       <Text style={s.phSub}>{title} · Sahne {n}</Text>
-      <Text style={s.phFile}>{evId}-{n}.jpg</Text>
+      <Text style={s.phFile}>{stem}.jpg</Text>
     </View>
   );
 }
@@ -395,7 +396,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
             </View>
           ) : (
             <View style={{ width }}>
-              <SceneImage evId={ev.id} n={item.n + 1} title={tx(ev.title)} width={width} />
+              <SceneImage evId={ev.id} n={item.n + 1} title={tx(ev.title)} width={width} image={item.scene.image} />
               <View style={s.sceneText}>
                 <Rich style={[s.sceneBody, align()]} text={item.scene.text} selectable />
                 {!!item.scene.by && <AcceptChip by={item.scene.by} />}
