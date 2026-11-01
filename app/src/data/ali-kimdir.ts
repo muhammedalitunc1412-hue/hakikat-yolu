@@ -4,7 +4,7 @@ import type { HistEvent } from '../types';
 export const aliKimdir: HistEvent = {
   id: 'ali-kimdir',
   date: { tr: '600 (Mekke) - 11 H (632)', en: 'c. 600 (Mecca) - 11 AH (632)' },
-  title: { tr: 'Hz. Ali kimdir?', en: 'Who is Imam Ali?' },
+  title: { tr: 'Hz. Ali kimdir?', en: 'Who is Hz. Ali?' },
   hook: { tr: 'Kâbe\'nin içinde doğdu. Peygamber\'in yatağına yattı. İlim şehrinin kapısı odur.', en: 'Who is the man said to be born in the Kaaba, who lay in the Prophet\'s bed and is called the "gate of knowledge"?' },
   scenes: [
     {
@@ -45,7 +45,7 @@ export const aliKimdir: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Peygamber şöyle buyurdu: "Ben ilmin şehriyim, Ali de onun kapısıdır." Bu sözde ilim bir şehirdir. O şehre **Hz. Ali**\'nin kapısından girilir. Kapı **Hz. Ali**\'dir. Ondan sonra gelen imamlar, bu kapıdan gelen ilmi taşır.' },
+      text: { tr: 'Peygamber şöyle buyurdu: "Ben ilmin şehriyim, Hz. Ali de onun kapısıdır." Bu sözde ilim bir şehirdir. O şehre **Hz. Ali**\'nin kapısından girilir. Kapı **Hz. Ali**\'dir. Ondan sonra gelen imamlar, bu kapıdan gelen ilmi taşır.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 38, pose: 'raise', label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
@@ -66,12 +66,12 @@ export const aliKimdir: HistEvent = {
     },
   ],
   sunni: [
-    { book: 'Hâkim en-Nîsâbûrî, el-Müstedrek ale\'s-Sahîhayn', ref: 'cilt 3, s. 483 (Dârü\'l-Ma\'rife baskısı)', says: { tr: 'Hâkim, Mus\'ab ez-Zübeyrî\'nin "Kâbe\'de ondan önce de sonra da kimse doğmadı" sözünü düzeltir ve "Haberler tevatür etmiştir: Fatıma bint Esed, Emîrü\'l-Mü\'minîn Ali b. Ebî Tâlib\'i Kâbe\'nin içinde doğurdu" der. İbnü\'l-Mülakkın, el-Bedrü\'l-Münîr, cilt 6, s. 489\'da bu cümlenin el-Müstedrek\'te Ali\'nin tercümesinde geçtiğini kaydeder.' }, grade: { tr: 'Hâkim\'in kendi hükmü; tevatür burada onun ifadesidir' }, status: 'verified' },
-    { book: 'Mes\'ûdî, Mürûcü\'z-Zeheb ve Meâdinü\'l-Cevher', ref: 'cilt 2, s. 349 (Dârü\'l-Endelüs, Beyrut)', says: { tr: 'Ali b. Ebî Tâlib\'in hilâfeti anlatılırken "Doğumu Kâbe\'de idi" denir.' }, status: 'verified' },
+    { book: 'Hâkim en-Nîsâbûrî, el-Müstedrek ale\'s-Sahîhayn', ref: 'cilt 3, s. 483 (Dârü\'l-Ma\'rife baskısı)', says: { tr: 'Hâkim, Mus\'ab ez-Zübeyrî\'nin "Kâbe\'de ondan önce de sonra da kimse doğmadı" sözünü düzeltir ve "Haberler tevatür etmiştir: Fatıma bint Esed, Emîrü\'l-Mü\'minîn Hz. Ali b. Ebî Tâlib\'i Kâbe\'nin içinde doğurdu" der. İbnü\'l-Mülakkın, el-Bedrü\'l-Münîr, cilt 6, s. 489\'da bu cümlenin el-Müstedrek\'te Hz. Ali\'nin tercümesinde geçtiğini kaydeder.' }, grade: { tr: 'Hâkim\'in kendi hükmü; tevatür burada onun ifadesidir' }, status: 'verified' },
+    { book: 'Mes\'ûdî, Mürûcü\'z-Zeheb ve Meâdinü\'l-Cevher', ref: 'cilt 2, s. 349 (Dârü\'l-Endelüs, Beyrut)', says: { tr: 'Hz. Ali b. Ebî Tâlib\'in hilâfeti anlatılırken "Doğumu Kâbe\'de idi" denir.' }, status: 'verified' },
     { book: 'Tirmizi, el-Câmi\'', ref: 'No. 3734-3735 (Menâkıb; metin okunamadı, sunnah.com 403)', says: { tr: 'Hz. Ali\'nin erken müslümanlığı ile ilgili rivayetler; ilk müslüman sırası konusunda ihtilaf vardır.' }, status: 'check' },
     { book: 'Tirmizi, el-Câmi\'', ref: 'No. 3720 (Menâkıb; mü\'ahât)', says: { tr: 'Peygamber\'in Hz. Ali\'ye "dünyada ve ahirette kardeşimsin" demesi.' }, url: 'https://sunnah.com/tirmidhi:3720', status: 'check' },
     { book: 'Buhari, Sahih', ref: 'No. 2942 (Cihâd; Hayber sancağı)', says: { tr: 'Peygamber\'in Hayber\'de sancağı Allah ve Resulü\'nü seven ve onlar tarafından sevilen birine vereceğini söylemesi; kişi Hz. Ali olur.' }, grade: { tr: 'Buhari (sahih kitap)' }, url: 'https://sunnah.com/bukhari:2942', status: 'check' },
-    { book: 'Tirmizi, el-Câmi\'', ref: 'No. 3723 (Menâkıb; ilim şehri); Hâkim, el-Müstedrek 3/126 (WikiShia atfı)', says: { tr: '"Ben ilmin şehriyim, Ali de onun kapısıdır."' }, grade: { tr: 'Sıhhati tartışmalı: Tirmizi/Hâkim rivayet etmiştir; bazı hadisçiler zayıf ya da uydurma sayar. İbn Hacer\'in zayıflatılmaması gerektiği görüşü WikiShia aracılığıyla aktarıldı.' }, url: 'https://en.wikishia.net/view/Hadith_of_the_City_of_Knowledge', status: 'check' },
+    { book: 'Tirmizi, el-Câmi\'', ref: 'No. 3723 (Menâkıb; ilim şehri); Hâkim, el-Müstedrek 3/126 (WikiShia atfı)', says: { tr: '"Ben ilmin şehriyim, Hz. Ali de onun kapısıdır."' }, grade: { tr: 'Sıhhati tartışmalı: Tirmizi/Hâkim rivayet etmiştir; bazı hadisçiler zayıf ya da uydurma sayar. İbn Hacer\'in zayıflatılmaması gerektiği görüşü WikiShia aracılığıyla aktarıldı.' }, url: 'https://en.wikishia.net/view/Hadith_of_the_City_of_Knowledge', status: 'check' },
     { book: 'Tirmizi, el-Câmi\'', ref: 'Cihâd bölümü, Zülfikar hadisi (numara kontrol edilecek)', says: { tr: 'Peygamber\'in Zülfikar adlı kılıcına dair rivayet; "lâ fetâ illâ Alî" sözü bu rivayetin parçası değildir.' }, grade: { tr: '"Lâ fetâ illâ Alî" sözü genellikle zayıf/ihtilaflı sayılır' }, status: 'check' },
     { book: 'Buhari, Sahih (Tefsir)', ref: 'Şûrâ 23 ile ilgili İbn Abbas rivayeti (numara kontrol edilecek)', says: { tr: '"Yakınlar" ifadesinin Kureyş\'le akrabalığa işaret ettiği yorumu.' }, status: 'check' },
     { book: 'İbn Mâce, es-Sünen', ref: 'Cenâiz bölümü, Peygamber\'in yıkanması (numara kontrol edilecek)', says: { tr: 'Hz. Ali\'nin Peygamber\'i yıkamada yer aldığı rivayeti.' }, status: 'check' },
@@ -86,7 +86,7 @@ export const aliKimdir: HistEvent = {
     { book: 'Tabâtabâî, el-Mîzân', ref: 'cilt 2 (Bakara 207; WikiShia atfı)', says: { tr: 'Bakara 207\'nin Hz. Ali hakkında indiği görüşü.' }, status: 'check' },
     { book: 'Emînî, el-Gadîr', ref: 'İlim şehri hadisi bölümü (WikiShia atfı)', says: { tr: 'İlim şehri hadisinin birçok Sünni ravisinin sahih saydığı aktarılır; Şia\'ya göre mütevatirdir.' }, status: 'check' },
     { book: 'Kuleynî, el-Kâfî; Şeyh Müfid, el-İrşâd', ref: 'Peygamber\'in yıkanması ve defni bölümü (cilt/sayfa kontrol edilecek)', says: { tr: 'Peygamber\'in vefatı, Hz. Ali\'nin yıkaması ve defni.' }, status: 'check' },
-    { book: 'Şii tefsirleri ve hadis kitapları', ref: 'Şûrâ 23 (Mevedde) - Hz. Ali, Fatıma, Hasan, Hüseyin (kitap/numara kontrol edilecek)', says: { tr: '"Yakınlar" ifadesinin Ehl-i Beyt\'i kastettiği görüşü.' }, status: 'check' },
+    { book: 'Şii tefsirleri ve hadis kitapları', ref: 'Şûrâ 23 (Mevedde) - Hz. Ali, Fatıma, Hz. Hasan, Hz. Hüseyin (kitap/numara kontrol edilecek)', says: { tr: '"Yakınlar" ifadesinin Ehl-i Beyt\'i kastettiği görüşü.' }, status: 'check' },
   ],
   disputes: [
     {
@@ -111,8 +111,8 @@ export const aliKimdir: HistEvent = {
     },
     {
       title: { tr: 'İlim şehri hadisinin sıhhati' },
-      shia: { tr: '"Ben ilmin şehriyim, Ali de onun kapısıdır" sözü Tirmizi, el-Câmi\' ve Hâkim, el-Müstedrek\'te geçer. Şia\'da söz, Hz. Ali\'nin ilimdeki üstünlüğünü gösterir ve çeşitli yollarla rivayet edilmiştir.' },
-      sunni: { tr: '"Ben ilmin şehriyim, Ali de onun kapısıdır" sözü Tirmizi, el-Câmi\' ve Hâkim, el-Müstedrek\'te geçer. Sıhhati tartışmalıdır; sahih ya da hasen diyen de vardır, zayıf ya da uydurma diyen de vardır.' },
+      shia: { tr: '"Ben ilmin şehriyim, Hz. Ali de onun kapısıdır" sözü Tirmizi, el-Câmi\' ve Hâkim, el-Müstedrek\'te geçer. Şia\'da söz, Hz. Ali\'nin ilimdeki üstünlüğünü gösterir ve çeşitli yollarla rivayet edilmiştir.' },
+      sunni: { tr: '"Ben ilmin şehriyim, Hz. Ali de onun kapısıdır" sözü Tirmizi, el-Câmi\' ve Hâkim, el-Müstedrek\'te geçer. Sıhhati tartışmalıdır; sahih ya da hasen diyen de vardır, zayıf ya da uydurma diyen de vardır.' },
     },
     {
       title: { tr: 'Mevedde ayetinde "yakınlar" kimdir?' },

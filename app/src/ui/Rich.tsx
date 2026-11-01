@@ -32,7 +32,7 @@ const LET = "A-Za-zÇĞİÖŞÜçğıöşüÂÎÛâîû";
 const BOLD = [
   'Gadir Hum', 'Gadir', '[Vv]elayet', '[Mm]evlâ', 'Ehl-i Beyt', '[İi]mamet', '[İi]smet', 'Kisa', 'Pence-i Âl-i Aba', 'Mübahele',
   'Sak[iî]fe', 'felte', 'Fedek', 'Kerbel[aâ]', '[ÂAa]şûrâ', 'Cemel', 'Sıff[iî]n', 'Nehrevan', 'Menzile', 'Hayber', 'sancak', 'Tebük',
-  '[Hh]ilafet', '[Şş]ura', 'nass', '[Tt]akiyye', "[Mm]ut['’]a", '[Hh]umus', '[Gg]aybet', 'Mehdi', 'On İki İmam', 'Safine',
+  '[Hh]ilafet', '[Şş]ura', 'nass', '[Tt]akiyye', "[Mm]ut['’]a", '[Hh]umus', '[Gg]aybet', 'Hz. Mehdî', 'On İki İmam', 'Safine',
   'Sakaleyn', 'Kırtas', 'Veda Haccı', 'Şıkşıkıyye', 'Zülfikar', 'Muhsin',
 ];
 const BOLD_RE = new RegExp('(^|[^' + LET + '])(' + BOLD.join('|') + ')([' + LET + "'’]*)", 'g');

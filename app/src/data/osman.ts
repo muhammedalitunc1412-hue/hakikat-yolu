@@ -4,7 +4,7 @@ import type { HistEvent } from '../types';
 export const osman: HistEvent = {
   id: 'osman',
   date: { tr: 'Yaklaşık 30-35 H (650-656); öldürülmesi: Zilhicce 35 H (Haziran 656)', en: 'c. 30-35 AH (650-656); killed: Dhu al-Hijjah 35 AH (June 656)' },
-  title: { tr: 'Halife Osman Dönemi, Medine Kuşatması ve Hz. Ali', en: 'The Era of Uthman, the Siege of Medina and Imam Ali' },
+  title: { tr: 'Halife Osman Dönemi, Medine Kuşatması ve Hz. Ali', en: 'The Era of Uthman, the Siege of Medina and Hz. Ali' },
   hook: { tr: 'Şikâyetler büyürken Hz. Ali Medine\'de arabuluculuk yaptı. Ardından kendisine biat istendi.', en: 'The man who mediated in Medina as grievances grew, and was then asked for allegiance.' },
   scenes: [
     {
@@ -18,7 +18,7 @@ export const osman: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Ali**, Medine\'de Halife Osman\'ı uyardı. Halkın şikâyetini iletti ve tutumunun değişmesini istedi. Mısırlı heyet yaklaşınca, Osman\'ın isteğiyle Ali ve Muhammed b. Mesleme onlarla konuştu. Şikâyetlerin giderileceği sözüyle heyet döndü. Ali, kan dökülmesin diye iki tarafın arasında durdu.' },
+      text: { tr: '**Hz. Ali**, Medine\'de Halife Osman\'ı uyardı. Halkın şikâyetini iletti ve tutumunun değişmesini istedi. Mısırlı heyet yaklaşınca, Osman\'ın isteğiyle Hz. Ali ve Muhammed b. Mesleme onlarla konuştu. Şikâyetlerin giderileceği sözüyle heyet döndü. Hz. Ali, kan dökülmesin diye iki tarafın arasında durdu.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 38, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 70, label: { tr: 'Osman' } }] },
       by: 'both',
     },
@@ -33,12 +33,12 @@ export const osman: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Kuşatma sürerken, rivayete göre **Hz. Ali**, **Hz. Hasan** ile **Hz. Hüseyin**\'i Osman\'ın evini korumaları için gönderdi. Suyu da ulaştırmaya çalıştığı anlatılır. Hasan\'ın yaralandığı da söylenir. Gadir\'de hakkı ilan edilen Ali, yine de Osman\'ın kanını istemiyordu.' },
+      text: { tr: 'Kuşatma sürerken, rivayete göre **Hz. Ali**, **Hz. Hasan** ile **Hz. Hüseyin**\'i Osman\'ın evini korumaları için gönderdi. Suyu da ulaştırmaya çalıştığı anlatılır. Hz. Hasan\'ın yaralandığı da söylenir. Gadir\'de hakkı ilan edilen Hz. Ali, yine de Osman\'ın kanını istemiyordu.' },
       art: { bg: 'city', actors: [{ kind: 'hasan', x: 32, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 48, label: { tr: 'Hz. Hüseyin' } }, { kind: 'ali', x: 68, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 86, label: { tr: 'Osman' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Halife Osman, 35 H Zilhicce\'de Medine\'de öldürüldü. **Hz. Ali** hutbesinde der: öldürmesi için emir vermiş olsaydı katil sayılırdı. İnsanları ondan alıkoymuş olsaydı yardımcısı olurdu. Hükmü Allah\'a bırakır. Ali bu öldürmede kılıç kullanmadı. Bu kanın yanında da yer almadı.' },
+      text: { tr: 'Halife Osman, 35 H Zilhicce\'de Medine\'de öldürüldü. **Hz. Ali** hutbesinde der: öldürmesi için emir vermiş olsaydı katil sayılırdı. İnsanları ondan alıkoymuş olsaydı yardımcısı olurdu. Hükmü Allah\'a bırakır. Hz. Ali bu öldürmede kılıç kullanmadı. Bu kanın yanında da yer almadı.' },
       art: { bg: 'dawn', actors: [{ kind: 'crowd', x: 34, scale: 7 }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
     },
@@ -49,7 +49,7 @@ export const osman: HistEvent = {
     },
   ],
   sunni: [
-    { book: 'Tirmizî, el-Câmi\'', ref: 'No. 3711 (Menâkıb)', says: { tr: 'Halife Osman kuşatma gününde: "Resulullah benden bir söz aldı, ona sabrediyorum."' }, grade: { tr: 'Tirmizî: hasen sahih; Albânî ve Ali Za\'i: sahih (zincirde Süfyan b. Vekî\' zayıf, destekleyici rivayet var)' }, url: 'https://hadithunlocked.com/tirmidhi:3711', status: 'verified' },
+    { book: 'Tirmizî, el-Câmi\'', ref: 'No. 3711 (Menâkıb)', says: { tr: 'Halife Osman kuşatma gününde: "Resulullah benden bir söz aldı, ona sabrediyorum."' }, grade: { tr: 'Tirmizî: hasen sahih; Albânî ve Hz. Ali Za\'i: sahih (zincirde Süfyan b. Vekî\' zayıf, destekleyici rivayet var)' }, url: 'https://hadithunlocked.com/tirmidhi:3711', status: 'verified' },
     { book: 'Buhârî, Sahih', ref: 'Halife Osman\'ın faziletleri ve Rûme kuyusu (numara kontrol edilecek)', says: { tr: 'Halife Osman\'a, başına gelecek bir belâya karşılık cennet müjdesi verilir.' }, status: 'check' },
     { book: 'Taberî, Târîh (SUNY çevirisi c.15)', ref: 'Halife Osman dönemi, 35. yıl olayları (sayfa kontrol edilecek)', says: { tr: 'Heyetler, kuşatma ve öldürülmesi ayrıntılı anlatılır.' }, url: 'https://redshelf.com/book/1750815', status: 'check' },
     { book: 'İbn Kesîr, el-Bidâye ve\'n-Nihâye', ref: 'c.7, Halife Osman\'ın öldürülmesi (sayfa kontrol edilecek)', says: { tr: 'Hz. Hasan\'ın yaralanması ve Hz. Ali\'nin tutumu bu anlatım içinde yer alır.' }, status: 'check' },
@@ -83,5 +83,5 @@ export const osman: HistEvent = {
     { tr: 'Hz. Hasan ve Hz. Hüseyin\'in evin yanında olduğu rivayet bazı âlimlerce zayıf sayılıyor. Böyle bir rivayeti sevgiyle ve ihtiyatla nasıl okuruz?' },
     { tr: 'Hz. Ali hilafeti bilinçle üstlendi. Haksız malları ve bozuk valileri düzeltmeye başlaması, ona duyulan sevgiyi size nasıl anlatıyor?' },
   ],
-  summary: { tr: 'Halife Osman\'ın ikinci yarısındaki şikâyetler kuşatmaya ve 35 H\'de öldürülmesine vardı. Hz. Ali aracılık etti. "Peygamber benden bir söz aldı, ona sabrediyorum" dedi. Halk ona koşunca Ali hilafeti bilinçle üstlendi ve adaleti kurmaya başladı.' },
+  summary: { tr: 'Halife Osman\'ın ikinci yarısındaki şikâyetler kuşatmaya ve 35 H\'de öldürülmesine vardı. Hz. Ali aracılık etti. "Peygamber benden bir söz aldı, ona sabrediyorum" dedi. Halk ona koşunca Hz. Ali hilafeti bilinçle üstlendi ve adaleti kurmaya başladı.' },
 };

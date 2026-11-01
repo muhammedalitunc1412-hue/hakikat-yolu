@@ -81,34 +81,34 @@ export const duaNudbe: Dua = {
       "meal": "Sonra Muhammed'in -salavatın ona ve âline olsun- ecrini onlara muhabbet kıldın; Kitabında şöyle buyurdun: \"De ki: Buna karşılık sizden yakınlara sevgiden başka bir ücret istemiyorum.\" Ve: \"Sizden istediğim her ücret yalnız sizin içindir.\" Ve: \"Ben sizden bunun için hiçbir ücret istemiyorum; ancak dileyen Rabbine bir yol tutsun.\" Böylece onlar sana giden yol ve rızana varan çare oldular."
     },
     {
-      "heading": "Gadir: Ali'nin velayeti",
+      "heading": "Gadir: Hz. Ali'nin velayeti",
       "ar": "فَلَمَّا ٱنْقَضَتْ ايَّامُهُ اقَامَ وَلِيَّهُ عَلِيَّ بْنَ ابِي طَالِبٍ صَلَوَاتُكَ عَلَيْهِمَا وَآلِهِمَا هَادِياً إِِذْ كَانَ هُوَ ٱلْمُنْذِرَ وَلِكُلِّ قَوْمٍ هَادٍ فَقَالَ وَٱلْمَلَا امَامَهُ مَنْ كُنْتُ مَوْلاَهُ فَعَلِيٌّ مَوْلاَهُ اَللَّهُمَّ وَالِ مَنْ وَالاَهُ وَعَادِ مَنْ عَادَاهُ وَٱنْصُرْ مَنْ نَصَرَهُ وَٱخْذُلْ مَنْ خَذَلَهُ",
       "okunus": "falamma inkadat ayyamuhu akama valiyyahu ’aliyya bna abi talibin salavatuka ’alayhima va alihima hadiyan iz kana huva almunzira va likulli kavmin hadin fakala valmala’u amamahu man kuntu mavlahu fa’aliyyun mavlahu allahumma vali man valahu va ’adi man ’adahu vansur man nasarahu vahzul man hazalahu",
-      "meal": "Resulün günleri dolunca, vasisi Ali b. Ebi Talib'i -ikisine ve âlelerine salavatın olsun- halife kıldı; çünkü Resul uyarıcı, Ali ise her kavme hadiydi. İnsanların huzurunda şöyle buyurdu: \"Ben kimin mevlası isem Ali de onun mevlasıdır. Allah'ım! Ali'yi dost edinene dost ol, ona düşman olana düşman ol, ona yardım edene yardım et, onu yalnız bırakanı yalnız bırak.\""
+      "meal": "Resulün günleri dolunca, vasisi Hz. Ali b. Ebi Talib'i -ikisine ve âlelerine salavatın olsun- halife kıldı; çünkü Resul uyarıcı, Hz. Ali ise her kavme hadiydi. İnsanların huzurunda şöyle buyurdu: \"Ben kimin mevlası isem Hz. Ali de onun mevlasıdır. Allah'ım! Hz. Ali'yi dost edinene dost ol, ona düşman olana düşman ol, ona yardım edene yardım et, onu yalnız bırakanı yalnız bırak.\""
     },
     {
       "heading": "Hz. Ali'nin makamı",
       "ar": "وَقَالَ مَنْ كُنْتُ انَا نَبِيَّهُ فَعَلِيٌّ امِيرُهُ وَقَالَ انَا وَعَلِيٌّ مِنْ شَجَرَةٍ وَاحِدَةٍ وَسَائِرُ ٱلنَّاسِ مِنْ شَجَرٍ شَتَّىٰ وَاحَلَّهُ مَحَلَّ هَارُونَ مِنْ مُوسَىٰ فَقَالَ لَهُ انْتَ مِنِّي بِمَنْزِلَةِ هَارُونَ مِنْ مُوسَىٰ إِلاَّ انَّهُ لاََ نَبِيَّ بَعْدِي وَزَوَّجَهُ ٱبْنَتَهُ سَيِّدَةَ نِسَاءِ ٱلْعَالَمِينَ وَاحَلَّ لَهُ مِنْ مَسْجِدِهِ مَا حَلَّ لَهُ وَسَدَّ ٱلابْوَابَ إِِلاَّ بَابَهُ",
       "okunus": "va kala man kuntu ana nabiyyahu fa’aliyyun amiruhu va kala ana va ’aliyyun min şacaratin vahidatin va sa’iru alnnasi min şacarin şatta va ahallahu mahalla haruna min musa fakal lahu anta minni bimanzilati haruna min musa illa annahu la nabiyya ba’di va zavvacahu ibnatahu sayyidata nisa’i al’alamina va ahalla lahu min mascidihi ma halla lahu va sadda alabvaba illa babahu",
-      "meal": "Ve buyurdu: \"Ben kimin peygamberi isem Ali onun emiridir.\" Ve: \"Ben ve Ali aynı ağaçtan, diğer insanlar farklı ağaçlardandır.\" Onu Harun'un Musa'ya olan konumuna koydu: \"Sen bana, Harun'un Musa'ya olduğu gibisin; yalnız benden sonra peygamber yoktur.\" Ona kızını, âlemlerin kadınlarının efendisini nikâhladı; mescidinde kendisine helal olanı ona helal kıldı, onun kapısından başka bütün kapıları kapattı."
+      "meal": "Ve buyurdu: \"Ben kimin peygamberi isem Hz. Ali onun emiridir.\" Ve: \"Ben ve Hz. Ali aynı ağaçtan, diğer insanlar farklı ağaçlardandır.\" Onu Harun'un Musa'ya olan konumuna koydu: \"Sen bana, Harun'un Musa'ya olduğu gibisin; yalnız benden sonra peygamber yoktur.\" Ona kızını, âlemlerin kadınlarının efendisini nikâhladı; mescidinde kendisine helal olanı ona helal kıldı, onun kapısından başka bütün kapıları kapattı."
     },
     {
       "heading": "İlim kapısı ve kardeşlik",
       "ar": "ثُمَّ اوْدَعَهُ عِلْمَهُ وَحِكْمَتَهُ فَقَالَ انَا مَدِينَةُ ٱلْعِلْمِ وَعَلِيٌّ بَابُهَا فَمَنْ ارَادَ ٱلْمَدِينَةَ وَٱلْحِكْمَةَ فَلْيَاتِهَا مِنْ بَابِهَا ثُمَّ قَالَ انْتَ اخِي وَوَصِيِّي وَوَارِثِي لَحْمُكَ مِنْ لَحْمِي وَدَمُكَ مِنْ دَمِي وَسِلْمُكَ سِلْمِي وَحَرْبُكَ حَرْبِي وَٱلإِيـمَانُ مُخَالِطٌ لَحْمَكَ وَدَمَكَ كَمَا خَالَطَ لَحْمِي وَدَمِي",
       "okunus": "summa avda’ahu ’ilmahu va hikmatahu fakala ana madinatu al’ilmi va ’aliyyun babuha faman arada almadinata valhikmata falya’tiha min babiha summa kala anta ahi va vasiyyi va varisi lahmuka min lahmi va damuka min dami va silmuka silmi va harbuka harbi valimanu muhalitun lahmaka va damaka kama halata lahmi va dami",
-      "meal": "Sonra ona ilmini ve hikmetini emanet etti: \"Ben ilmin şehriyim, Ali de onun kapısıdır. Kim bu şehri ve hikmeti isterse kapısından gelsin.\" Sonra ona dedi: \"Sen benim kardeşim, vasim ve varisimsin. Etin etimdendir, kanın kanımdandır, barışın barışım, savaşın savaşımdır. İman, tıpkı benim etime ve kanıma karıştığı gibi, senin etine ve kanına karışmıştır.\""
+      "meal": "Sonra ona ilmini ve hikmetini emanet etti: \"Ben ilmin şehriyim, Hz. Ali de onun kapısıdır. Kim bu şehri ve hikmeti isterse kapısından gelsin.\" Sonra ona dedi: \"Sen benim kardeşim, vasim ve varisimsin. Etin etimdendir, kanın kanımdandır, barışın barışım, savaşın savaşımdır. İman, tıpkı benim etime ve kanıma karıştığı gibi, senin etine ve kanına karışmıştır.\""
     },
     {
       "heading": "Havuz ve şiaların müjdesi",
       "ar": "وَانْتَ غَداً عَلَىٰ الْحَوْضِ خَلِيفَتِي وَانْتَ تَقْضِي دَيْنِي وَتُنْجِزُ عِدَاتِي وَشِيعَتُكَ عَلَىٰ مَنَابِرَ مِنْ نُورٍ مُبْيَضَّةً وُجُوهُهُمْ حَوْلِي فِي ٱلْجَنَّةِ وَهُمْ جِيرَانِي وَلَوْلاَ انْتَ يَا عَلِيُّ لَمْ يُعْرَفِ ٱلْمُؤْمِنُونَ بَعْدِي",
       "okunus": "va anta ğadan ’ala alhavdi halifati va anta takdi dayni va tuncizu ’idati va şi’atuka ’ala manabira min nurin mubyaddatan vucuhuhum havli fi alcannati va hum cirani va lavla anta ya ’aliyyu lam yu’raf almu’minuna ba’di",
-      "meal": "\"Yarın Havuz başında benim yerime sen olacaksın; borçlarımı ödeyeceksin, vaatlerimi yerine getireceksin. Şiaların nurdan minberler üzerinde, yüzleri ak, cennette çevremde olacak; onlar benim komşularımdır. Sen olmasaydın, ey Ali, benden sonra müminler tanınmazdı.\""
+      "meal": "\"Yarın Havuz başında benim yerime sen olacaksın; borçlarımı ödeyeceksin, vaatlerimi yerine getireceksin. Şiaların nurdan minberler üzerinde, yüzleri ak, cennette çevremde olacak; onlar benim komşularımdır. Sen olmasaydın, ey Hz. Ali, benden sonra müminler tanınmazdı.\""
     },
     {
-      "heading": "Ali, hidayet ve nur",
+      "heading": "Hz. Ali, hidayet ve nur",
       "ar": "وَكَانَ بَعْدَهُ هُدىٰ مِنَ ٱلضَّلاَلِ وَنُوراً مِنَ ٱلْعَمَىٰ وَحَبْلَ ٱللَّهِ ٱلْمَتِينَ وَصِرَاطَهُ ٱلْمُسْتَقِيمَ لاََ يُسْبَقُ بِقَرَابَةٍ فِي رَحِمٍ وَلاَ بِسَابِقَةٍ فِي دِينٍ وَلاَ يُلْحَقُ فِي مَنْقَبَةٍ مِنْ مَنَاقِبِهِ",
       "okunus": "va kana ba’dahu hudan min alddalali va nuran min al’ama va habla allahi almatina va siratahu almustakima la yusbaku bikarabatin fi rahimin va la bisabikatin fi dinin va la yulhaku fi mankabatin min manakibihi",
-      "meal": "O halde Ali, Resulden sonra sapkınlığa karşı hidayet, körlüğe karşı nur, Allah'ın sağlam ipi ve doğru yolu idi. Akrabalıkta kimse ona öne geçmedi, dinde bir sebepte de kimse onu geçemedi, hiçbir fazilette kimse ona denk olamadı."
+      "meal": "O halde Hz. Ali, Resulden sonra sapkınlığa karşı hidayet, körlüğe karşı nur, Allah'ın sağlam ipi ve doğru yolu idi. Akrabalıkta kimse ona öne geçmedi, dinde bir sebepte de kimse onu geçemedi, hiçbir fazilette kimse ona denk olamadı."
     },
     {
       "heading": "Cihadı ve düşmanlar",
@@ -132,13 +132,13 @@ export const duaNudbe: Dua = {
       "heading": "Rabbin vaadi ve ağlayış",
       "ar": "وَسُبْحَانَ رَبِّنَا إِِنْ كَانَ وَعْدُ رَبِّنَا لَمَفْعُولاًَ وَلَنْ يُخْلِفَ ٱللَّهُ وَعْدَهُ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ فَعَلَىٰ ٱلاطَائِبِ مِنْ اهْلِ بَيْتِ مُحَمَّد وَعَلِيٍّ صَلَّىٰ ٱللَّهُ عَلَيْهِمَا وَآلِهِمَا فَلْيَبْكِ ٱلْبَاكُونَ وَإِِيَّاهُمْ فَلْيَنْدُبِ ٱلنَّادِبُونَ وَلِمِثْلِهِمْ فَلْتَذْرِفِ ٱلدُّمُوعُ وَلْيَصْرُخِ ٱلصَّارِخُونَ وَيَضِجَّ ٱلضَّاجُّونَ وَيَعِجَّ ٱلْعَاجُّوَنَ",
       "okunus": "va subhana rabbina in kana va’du rabbina lamaf’ulan va lan yuhlifa allahu va’dahu va huva al’azizu alhakimu fa’ala alata’ibi min ahli bayti muhammadin va ’aliyyin salla allahu ’alayhima va alihima falyabki albakuna va iyyahum falyandub alnnadibuna va limislihim faltazrif alddumu’u valyasruh alssarihuna va yadicca alddaccuna va ya’icca al’accuna",
-      "meal": "Rabbimizi tesbih ederiz; Rabbimizin vaadi mutlaka yerine gelir. Allah vaadinden dönmez; O azizdir, hakimdir. Muhammed'in ve Ali'nin -ikisine ve âlelerine Allah'ın salavatı olsun- temiz Ehl-i Beyt'i için ağlayanlar ağlasın, feryat edenler feryat etsin; onlar gibiler için gözyaşları dökülsün, haykıranlar haykırsın, bağıranlar bağırsın, ağlayanlar ağlasın."
+      "meal": "Rabbimizi tesbih ederiz; Rabbimizin vaadi mutlaka yerine gelir. Allah vaadinden dönmez; O azizdir, hakimdir. Muhammed'in ve Hz. Ali'nin -ikisine ve âlelerine Allah'ın salavatı olsun- temiz Ehl-i Beyt'i için ağlayanlar ağlasın, feryat edenler feryat etsin; onlar gibiler için gözyaşları dökülsün, haykıranlar haykırsın, bağıranlar bağırsın, ağlayanlar ağlasın."
     },
     {
-      "heading": "Nerede Hasan, nerede Hüseyin?",
+      "heading": "Nerede Hz. Hasan, nerede Hz. Hüseyin?",
       "ar": "ايْنَ ٱلْحَسَنُ ايْنَ ٱلْحُسَيْنُ ايْنَ ابْنَاءُ ٱلْحُسَيْنِ صَالِحٌ بَعْدَ صَالِحٍ وَصَادِقٌ بَعْدَ صَادِقٍ ايْنَ ٱلسَّبِيلُ بَعْدَ ٱلسَّبِيلِ ايْنَ ٱلْخِيَرَةُ بَعْدَ ٱلْخِيَرَةِ ايْنَ ٱلشُّمُوسُ ٱلطَّالِعَةُ ايْنَ ٱلاقْمَارُ ٱلْمُنِيرَةُ",
       "okunus": "ayna alhasanu ayna alhusaynu ayna abna’u alhusayni salihun ba’da salihin va sadikun ba’da sadikin ayna alssabilu ba’da alssabili ayna alhiyaratu ba’da alhiyarati ayna alşşumusu alttali’atu ayna alakmaru almuniratu",
-      "meal": "Nerede Hasan? Nerede Hüseyin? Nerede Hüseyin'in oğulları; salih biri ardından salih biri, sadık biri ardından sadık biri? Nerede yol ardından yol? Nerede seçkin ardından seçkin? Nerede doğan güneşler? Nerede parlayan aylar? Nerede ışıldayan yıldızlar?"
+      "meal": "Nerede Hz. Hasan? Nerede Hz. Hüseyin? Nerede Hz. Hüseyin'in oğulları; salih biri ardından salih biri, sadık biri ardından sadık biri? Nerede yol ardından yol? Nerede seçkin ardından seçkin? Nerede doğan güneşler? Nerede parlayan aylar? Nerede ışıldayan yıldızlar?"
     },
     {
       "heading": "Nerede intikam alacak olan?",
@@ -162,7 +162,7 @@ export const duaNudbe: Dua = {
       "heading": "Resulün evladına seslenme",
       "ar": "ايْنَ ٱبْنُ ٱلنَّبِيِّ ٱلْمُصْطَفَىٰ وَٱبْنُ عَلِيٍّ ٱلْمُرْتَضَىٰ وَٱبْنُ خَدِيـجَةَ ٱلْغَرَّاءِ وَٱبْنُ فَاطِمَةَ ٱلْكُبْرَىٰ بِابِي انْتَ وَامِّي وَنَفْسِي لَكَ ٱلْوِقَاءُ وَٱلْحِمَىٰ",
       "okunus": "ayna ibnu alnnabiyyi almustafa vabnu ’aliyyin almurtada vabnu hadicata alğarra’i vabnu fatimata alkubra bi’abi anta va ummi va nafsi laka alvika’u valhima",
-      "meal": "Nerede, seçilmiş Peygamberin oğlu, razı olunmuş Ali'nin oğlu, Hatice-i Kübra'nın oğlu, Fatıma-i Zehra'nın oğlu? Babam ve annem sana fedâ olsun, canım sana kalkan ve siper olsun."
+      "meal": "Nerede, seçilmiş Peygamberin oğlu, razı olunmuş Hz. Ali'nin oğlu, Hatice-i Kübra'nın oğlu, Fatıma-i Zehra'nın oğlu? Babam ve annem sana fedâ olsun, canım sana kalkan ve siper olsun."
     },
     {
       "heading": "Ey ... oğlu!",

@@ -30,7 +30,7 @@ export const abdest: HistEvent = {
     },
     {
       by: 'sunni',
-      text: { tr: 'İbn Mace\'de Rubeyyi\' bint Muavviz, Peygamber\'in ayaklarını yıkadığını anlatınca İbn Abbas, insanların yıkamakta ısrar ettiğini, kendisinin ise Allah\'ın kitabında yalnızca mesh bulduğunu söyler. Rivayetin senedi zayıf sayılmış, İbn Abbas\'ın sözü Elbânî tarafından münker bulunmuştur. Mesh görüşü Hz. Ali, Enes, Hasan Basrî, İkrime, Şa\'bî ve Ebü\'l-Âliye\'ye de nispet edilir. Taberî için mesh ile yıkama arasında muhayyerlik, Cübbâî için mesh görüşü aktarılır. İslamQA bu nakillerden yalnız Ali, İbn Abbas ve Enes\'inkini ele alır. Câferî mektep, ayak meshi uygulamasını bu erken okuyuşla sürdürür.' },
+      text: { tr: 'İbn Mace\'de Rubeyyi\' bint Muavviz, Peygamber\'in ayaklarını yıkadığını anlatınca İbn Abbas, insanların yıkamakta ısrar ettiğini, kendisinin ise Allah\'ın kitabında yalnızca mesh bulduğunu söyler. Rivayetin senedi zayıf sayılmış, İbn Abbas\'ın sözü Elbânî tarafından münker bulunmuştur. Mesh görüşü Hz. Ali, Enes, Hasan Basrî, İkrime, Şa\'bî ve Ebü\'l-Âliye\'ye de nispet edilir. Taberî için mesh ile yıkama arasında muhayyerlik, Cübbâî için mesh görüşü aktarılır. İslamQA bu nakillerden yalnız Hz. Ali, İbn Abbas ve Enes\'inkini ele alır. Câferî mektep, ayak meshi uygulamasını bu erken okuyuşla sürdürür.' },
       art: { bg: 'city', actors: [{ kind: 'woman', x: 32, label: { tr: 'Rubeyyi\'' } }, { kind: 'man', x: 66, label: { tr: 'İbn Abbas' } }] },
     },
     {

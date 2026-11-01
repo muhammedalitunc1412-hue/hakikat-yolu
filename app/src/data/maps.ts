@@ -55,7 +55,7 @@ export const MAPS: MapEntry[] = [
     lines: [MM],
     paragraphs: [
       'Medine, hicretten sonra Peygamber\'in şehri ve Mescid-i Nebevî\'nin yeridir. Sakîfe-i Benî Sâide, mescidin yanındaki Benî Sâide gölgeliğidir. Peygamber\'in cenazesi hazırlanırken biat burada konuşuldu. Hz. Fatıma\'nın evi mescidin bitişiğindeydi; Fedek talebi, hastalığı ve gece defni bu şehirde geçer. Kırtas rivayeti de Peygamber\'in hastalığı sırasında Medine\'dedir. Pence-i Âl-i Aba anlatısı aynı eve bağlanır.',
-      'Bu ölçekte mahalleler ayrılmaz: Sakîfe, mescid ve ev aynı yerleşimin içindedir. Çizgi, Kâbe ile Mescid-i Nebevî arasını gösterir. Hz. Hasan\'ın kabri Bakî\'dedir. İmam Sâdık da derslerini Medine\'de verdi. Nokta, Mescid-i Nebevî\'nin koordinatıdır.',
+      'Bu ölçekte mahalleler ayrılmaz: Sakîfe, mescid ve ev aynı yerleşimin içindedir. Çizgi, Kâbe ile Mescid-i Nebevî arasını gösterir. Hz. Hasan\'ın kabri Bakî\'dedir. Hz. Ca\'fer-i Sâdık da derslerini Medine\'de verdi. Nokta, Mescid-i Nebevî\'nin koordinatıdır.',
     ],
     roadNotes: [
       'Mekke ile Medine arasındaki bugünkü kara yolu ve Haremeyn demiryolu yaklaşık 450 km\'dir.',
@@ -72,7 +72,7 @@ export const MAPS: MapEntry[] = [
     show: ['gadir', 'mekke', 'medine'],
     lines: [['gadir', 'mekke'], ['gadir', 'medine'], MM],
     paragraphs: [
-      'Gadir Hum, Mekke ile Medine arasında, Kızıldeniz kıyısındaki Cuhfe mîkatının hemen yanında bir su başıdır. Veda Haccı\'ndan dönen kafile burada durdurulmuştu: yollar Medine, Mısır ve Irak yönlerine ayrılıyordu. 18 Zilhicce 10 (632) günü Peygamber, Hz. Ali\'nin elini kaldırarak «Ben kimin mevlâsıysam Ali de onun mevlâsıdır» dedi.',
+      'Gadir Hum, Mekke ile Medine arasında, Kızıldeniz kıyısındaki Cuhfe mîkatının hemen yanında bir su başıdır. Veda Haccı\'ndan dönen kafile burada durdurulmuştu: yollar Medine, Mısır ve Irak yönlerine ayrılıyordu. 18 Zilhicce 10 (632) günü Peygamber, Hz. Ali\'nin elini kaldırarak «Ben kimin mevlâsıysam Hz. Ali de onun mevlâsıdır» dedi.',
       'Düz çizgi iki şehri birleştirir. Eski kervan ise su ve geçit yüzünden kıyıyı izler, Cuhfe\'ye uğrardı. Bu yüzden Gadir, Mekke–Medine çizgisinin biraz batısında, denize daha yakın durur. Nokta, su başının bilinen koordinatıdır.',
     ],
     roadNotes: [

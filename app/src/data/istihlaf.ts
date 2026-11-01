@@ -5,7 +5,7 @@ export const istihlaf: HistEvent = {
   id: 'istihlaf',
   date: { tr: '13 H (634) ve 23-24 H (644)', en: '13 AH (634) and 23-24 AH (644)' },
   title: { tr: 'Halife Ebu Bekir\'in Halife Ömer\'i tayini ve altı kişilik şura', en: 'Abu Bakr\'s appointment of Umar and the six-man council' },
-  hook: { tr: 'Halife Ebu Bekir yerine Halife Ömer\'i bıraktı. Halife Ömer de işi altı kişiye verdi; bu şura Buhari\'de anlatılır.', en: 'Why did Imam Ali ask, "Was I counted as one of these?"' },
+  hook: { tr: 'Halife Ebu Bekir yerine Halife Ömer\'i bıraktı. Halife Ömer de işi altı kişiye verdi; bu şura Buhari\'de anlatılır.', en: 'Why did Hz. Ali ask, "Was I counted as one of these?"' },
   scenes: [
     {
       by: 'both',
@@ -19,7 +19,7 @@ export const istihlaf: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Ebu Bekir vefat etti. Ömer Medine\'de halife oldu. Fetihler genişledi. **Hz. Ali** Medine\'de yaşadı ve danışılanlardan biri oldu. Ona danışılması, Gadir\'deki hakkının yerine konması değildi. Ali sabretti ve evinde durdu.' },
+      text: { tr: 'Ebu Bekir vefat etti. Ömer Medine\'de halife oldu. Fetihler genişledi. **Hz. Ali** Medine\'de yaşadı ve danışılanlardan biri oldu. Ona danışılması, Gadir\'deki hakkının yerine konması değildi. Hz. Ali sabretti ve evinde durdu.' },
       art: { bg: 'city', props: ['sun', 'minbar'], actors: [{ kind: 'man', x: 60, pose: 'raise', label: { tr: 'Ömer' } }, { kind: 'ali', x: 34, label: { tr: 'Hz. Ali' } }] },
     },
     {
@@ -39,7 +39,7 @@ export const istihlaf: HistEvent = {
     },
     {
       by: 'sunni',
-      text: { tr: 'Abdurrahman, **Hz. Ali**\'den Allah\'ın kitabı, Peygamber\'in sünneti ve iki halifenin yolu üzerine biat etmesini istedi. Biat, bağlılık sözüdür. Ali, "Allah\'ın kitabı, Peygamber\'in sünneti ve kendi içtihadım" dedi. Aynı şart Osman\'a sunulunca Osman kabul etti. Biat ona yapıldı. **Hz. Ali**, Gadir\'deki hakkını iki halifenin yoluna değişmedi.' },
+      text: { tr: 'Abdurrahman, **Hz. Ali**\'den Allah\'ın kitabı, Peygamber\'in sünneti ve iki halifenin yolu üzerine biat etmesini istedi. Biat, bağlılık sözüdür. Hz. Ali, "Allah\'ın kitabı, Peygamber\'in sünneti ve kendi içtihadım" dedi. Aynı şart Osman\'a sunulunca Osman kabul etti. Biat ona yapıldı. **Hz. Ali**, Gadir\'deki hakkını iki halifenin yoluna değişmedi.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 30, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 56, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'man', x: 78, label: { tr: 'Osman' } }] },
     },
     {

@@ -7,14 +7,14 @@ const art = { bg: 'interior' as const, actors: [{ kind: 'crowd' as const, x: 50,
 export const muaviyeHasan: HistEvent = {
   id: 'muaviye-hasan',
   date: { tr: '40-50 H (661-670)', en: '40-50 AH (661-670)' },
-  title: { tr: "Muaviye ve Hz. Hasan: sulh, ihlal ve zehirlenme iddiası", en: 'Muawiya and Hasan: the treaty, its breach and the poisoning claim' },
-  hook: { tr: "Hz. Hasan kan dökülmesin diye sulh yaptı. Muaviye şartı ayağının altına aldı ve onu zehirletti.", en: "Why did Hasan make peace with Muawiya, what became of the terms, and what role did Muawiya play in his poisoning?" },
+  title: { tr: "Muaviye ve Hz. Hasan: sulh, ihlal ve zehirlenme iddiası", en: 'Muawiya and Hz. Hasan: the treaty, its breach and the poisoning claim' },
+  hook: { tr: "Hz. Hasan kan dökülmesin diye sulh yaptı. Muaviye şartı ayağının altına aldı ve onu zehirletti.", en: "Why did Hz. Hasan make peace with Muawiya, what became of the terms, and what role did Muawiya play in his poisoning?" },
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Kûfe\'de **Hz. Ali** şehit olunca halk **Hz. Hasan**\'a biat etti. Biat, bağlılık sözüdür. Peygamber\'in seyyid dediği Hasan yönetimi üstlendi. Babası vasiyetinde yönetimi **Muaviye**\'ye devret dememişti. **Muaviye** Şam\'daki ticaret yollarını elinde tutuyordu. Çok zengindi. Büyük bir orduyla yürüdü. Hile, alış ve rüşvetle komutanları satın aldı. **Ubeydullah b. Abbas** gece **Muaviye**\'nin yanına geçti. Ordu içten çürüdü. **Hz. Hasan** güçsüz kaldı.' },
+      text: { tr: 'Kûfe\'de **Hz. Ali** şehit olunca halk **Hz. Hasan**\'a biat etti. Biat, bağlılık sözüdür. Peygamber\'in seyyid dediği Hz. Hasan yönetimi üstlendi. Babası vasiyetinde yönetimi **Muaviye**\'ye devret dememişti. **Muaviye** Şam\'daki ticaret yollarını elinde tutuyordu. Çok zengindi. Büyük bir orduyla yürüdü. Hile, alış ve rüşvetle komutanları satın aldı. **Ubeydullah b. Abbas** gece **Muaviye**\'nin yanına geçti. Ordu içten çürüdü. **Hz. Hasan** güçsüz kaldı.' },
       art,
-      cites: [{ side: 'shia', i: 1 }],
+      cites: [{ side: 'shia', i: 1 }, { side: 'shia', i: 3 }],
     },
     {
       by: 'both',
@@ -54,7 +54,7 @@ export const muaviyeHasan: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Medine\'de **Hz. Hasan**, Peygamber\'in yanına defnedilmek istedi. Kan dökülecekse Bakî\'de, annesinin yanında gömülmesini vasiyet etti. Mervan ve Emevîler cenazeye karşı durdu. Oklar, bir şehidin tabutuna değdi. **Hz. Hüseyin** kan dökülmesin diye vasiyete uydu. Ardından **Yezid** veliaht diye anıldı. Veliaht, kendinden sonra hükümdar olacak oğuldur. Zehir, tahtın oğula kalmasını sağladı.' },
+      text: { tr: 'Medine\'de **Hz. Hüseyin**, kardeşi **Hz. Hasan**\'ı dedesi Resûlullah\'ın yanına defnetmek için götürdü. Hz. Hasan, "Cenazemde bir damla kan dökülmesin" diye vasiyet etmişti. Kan dökülecekse Bakî\'de, annesinin yanında gömülmesini istemişti. **Aişe** bir katıra binip **Mervan** ve Ümeyyeoğullarıyla geldi. Tabutun Peygamber\'in yanına gömülmesini bizzat engelledi. "Evime sevmediğim birini sokamazsınız" dedi. Tabuta ok atılması emrini de verdi. Mervan\'ın adamları bu emirle okladı. Oklar tabuta saplandı. **İbn Abbas** ona "Bir gün deveye, bir gün katıra" dedi. Cemel\'de deve, o gün katır vardı. **Hz. Hüseyin** kılıcını çekmedi. Kardeşinin vasiyeti vardı. Hz. Hasan Bakî\'de defnedildi.' },
       art,
       cites: [{ side: 'shia', i: 1 }],
     },
@@ -68,6 +68,7 @@ export const muaviyeHasan: HistEvent = {
     { book: 'Şeyh Müfid, el-İrşâd', ref: 'Hz. Hasan bölümü (sayfa kontrol edilecek)', says: { tr: "Zehirlenme, Cü'de ve Muaviye'nin vaadi." }, status: 'check' },
     { book: 'Ebü\'l-Ferec el-İsfahânî, Mekâtilü\'t-Tâlibiyyîn', ref: 'Hz. Hasan bölümü (sayfa kontrol edilecek)', says: { tr: "Sulh şartları, Muaviye'nin Nuhayle konuşması ve zehirlenme." }, status: 'check' },
     { book: 'İbn Ebi\'l-Hadîd, Şerhu Nehci\'l-Belâğa', ref: 'Sulh bölümü (cilt/sayfa kontrol edilecek)', says: { tr: "Muaviye'nin şartlara bakışı ve Hz. Hasan'ın sulhunun gerekçeleri." }, status: 'check' },
+    { book: 'Şeyh Müfid, el-İrşâd; Meclisî, Bihârü\'l-Envâr', ref: 'Hz. Hasan\'ın cenazesi (sayfa kilitlenmedi)', says: { tr: 'Aişe\'nin tabutun Peygamber\'in yanına gömülmesini bizzat engellediği ve ok emrini verdiği, Mervan\'ın adamlarının bu emirle okladığı, İbn Abbas\'ın deve ve katır sözü ve Hz. Hüseyin\'in kılıç çekmeden Bakî\'ye defnettiği nakledilir. Sayfa uydurulmadı.' }, status: 'check' },
     { book: 'Taberî, Târîh; Şeyh Müfid, el-İrşâd', ref: '41 H, Ubeydullah b. Abbas (sayfa kilitlenmedi)', says: { tr: 'Hz. Hasan\'ın komutanı Ubeydullah b. Abbas\'ın gece Muaviye\'nin yanına geçtiği anlatılır. Sayfa uydurulmadı.' }, status: 'check' },
     { book: 'WikiShia, Peace treaty of Imam al-Hasan (ikincil)', ref: 'Madde', says: { tr: "Sulh şartları ve Muaviye'nin bunlara uymaması." }, url: 'https://en.wikishia.net/view/Peace_Treaty_of_Imam_al-Hasan_(a)', status: 'check' },
   ],

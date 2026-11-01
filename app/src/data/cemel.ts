@@ -5,7 +5,7 @@ export const cemel: HistEvent = {
   id: 'cemel',
   date: { tr: 'Zilhicce 35 - 15 Cemaziyelevvel 36 H (656)', en: 'Dhu al-Hijjah 35 - 15 Jumada al-Awwal 36 AH (656)' },
   title: { tr: 'Biat ve Cemel', en: 'The Pledge and the Battle of the Camel' },
-  hook: { tr: 'Halk Hz. Ali\'ye koşunca o, ağır hilafeti bilinçle üstlendi. Adalet kararlılığı Cemel\'i doğurdu.', en: 'When the people came to him, Ali took up the caliphate knowingly. His justice led to the Camel.' },
+  hook: { tr: 'Halk Hz. Ali\'ye koşunca o, ağır hilafeti bilinçle üstlendi. Adalet kararlılığı Cemel\'i doğurdu.', en: 'When the people came to him, Hz. Ali took up the caliphate knowingly. His justice led to the Camel.' },
   scenes: [
     {
       text: { tr: 'Halife Osman 35 H Zilhicce\'de Medine\'de öldürülünce şehir karıştı. Ensar ve Muhacirler Mescid-i Nebevî\'de **Hz. Ali**\'nin yanına koştu. O, bu ağır görevi bilinçle üstlendi. Biat, bağlılık sözüdür. Biat orada alındı. Devraldığı devlet dertliydi. Kendinden önceki halifelerin döneminden kalan hatalar, adaletsizlikler, akraba kayırmacılığı, haksız dağıtılmış mallar ve bozuk valiler duruyordu. İlk işi adaleti kurmak oldu. Haksız dağıtılan malları beytülmale, yani ortak hazineye geri almaya başladı. Bozuk valileri görevden aldı. Bu adalet kararlılığı, Cemel ve Sıffin\'deki muhalefeti doğurdu.' },
@@ -13,7 +13,7 @@ export const cemel: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Medine\'de Talha ve Zübeyr de **Hz. Ali**\'ye biat etti. Ali, Halife Osman\'ın valilerini değiştirmeye ve haksız dağıtılan malları beytülmale çekmeye başladı. Şam\'da **Muaviye** yerinde duruyordu. Biat edenlerin bir kısmı bu sözü gönülden vermemişti. İtirazlarını, valilerin azline ve malın geri alınmasına dayandıracaklardı. Bu itiraz Cemel\'de orduya, Sıffin\'de **Muaviye**\'nin direnişine dönecekti.' },
+      text: { tr: 'Medine\'de Talha ve Zübeyr de **Hz. Ali**\'ye biat etti. Hz. Ali, Halife Osman\'ın valilerini değiştirmeye ve haksız dağıtılan malları beytülmale çekmeye başladı. Şam\'da **Muaviye** yerinde duruyordu. Biat edenlerin bir kısmı bu sözü gönülden vermemişti. İtirazlarını, valilerin azline ve malın geri alınmasına dayandıracaklardı. Bu itiraz Cemel\'de orduya, Sıffin\'de **Muaviye**\'nin direnişine dönecekti.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 24, label: { tr: 'Talha' } }, { kind: 'man', x: 46, label: { tr: 'Zübeyr' } }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
@@ -34,7 +34,7 @@ export const cemel: HistEvent = {
       cites: [{ side: 'sunni', i: 4 }, { side: 'shia', i: 1 }],
     },
     {
-      text: { tr: '**Hz. Ali** Kûfe\'den yola çıktı. Savaşı önlemek için elçi gönderdi. Savaş başlamadan önce Zübeyr\'i çağırdı. Yıllar önce Peygamber, ikisini birlikte görünce Zübeyr\'e sormuştu: "Onu seviyor musun?" Zübeyr "Evet. Sevmemem için ne sebep var?" demişti. Peygamber de "Ama sen bir gün ona karşı çıkacak ve ona zulmederek savaşacaksın" buyurmuştu. Ali bu sözü tek tek hatırlattı. Zübeyr "Unutmuştum" dedi. Savaşa girmeyeceğini söyledi. Atını sürdü. Safları yarıp savaş alanından ayrıldı. Ayrıldıktan sonra öldürüldü.' },
+      text: { tr: '**Hz. Ali** Kûfe\'den yola çıktı. Savaşı önlemek için elçi gönderdi. Savaş başlamadan önce Zübeyr\'i çağırdı. Yıllar önce Peygamber, ikisini birlikte görünce Zübeyr\'e sormuştu: "Onu seviyor musun?" Zübeyr "Evet. Sevmemem için ne sebep var?" demişti. Peygamber de "Ama sen bir gün ona karşı çıkacak ve ona zulmederek savaşacaksın" buyurmuştu. Hz. Ali bu sözü tek tek hatırlattı. Zübeyr "Unutmuştum" dedi. Savaşa girmeyeceğini söyledi. Atını sürdü. Safları yarıp savaş alanından ayrıldı. Ayrıldıktan sonra öldürüldü.' },
       art: { bg: 'dune-dusk', props: ['tents'], actors: [{ kind: 'ali', x: 34, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 68, label: { tr: 'Zübeyr' } }] },
       by: 'both',
       cites: [{ side: 'sunni', i: 5 }, { side: 'sunni', i: 0 }, { side: 'shia', i: 1 }],
@@ -61,7 +61,7 @@ export const cemel: HistEvent = {
     { book: 'İbnü\'l-Esîr, el-Kâmil fi\'t-Târîh', ref: '36. yıl (sayfa kontrol edilecek)', says: { tr: 'Cemel savaşının seyri.' }, status: 'check' },
     { book: 'İbn Sa\'d, et-Tabakâtü\'l-Kübrâ', ref: 'Aişe maddesi, c.8; c.3/1 (cilt/sayfa kontrol edilecek)', says: { tr: 'Aişe ve olaylar hakkında rivayetler; Aişe\'nin pişman olduğunu anlatan rivayetler bu kaynak ve İbn Ebi Şeybe, Zehebi, Hakim gibi eserlerde aktarılır.' }, status: 'check' },
     { book: 'Ahmed b. Hanbel, Müsned', ref: 'No. 24254 ve 24654', says: { tr: 'Aişe gece Benî Âmir sularına varır. Köpekler havlar. Suyun adını sorar. Hav\'eb denince geri dönmek ister. Yanındakiler, Zübeyr de aralarında, yürümesini söyler. O, Peygamber\'in "Biriniz için Hav\'eb köpekleri ona havladığında haliniz nasıl olacak?" sözünü hatırlar.' }, grade: { tr: 'Metin Müsned\'de bu numaralarla okundu' }, url: 'https://hadits.net/ahmad:24254', status: 'verified' },
-    { book: 'Hâkim, el-Müstedrek', ref: 'No. 5573, 5574 ve 5575 (Zübeyr\'in öldürülmesi bölümü; baskıya göre numara kayabilir)', says: { tr: 'No. 5573: Ali, Zübeyr\'e Ensar\'ın bir gölgeliğinde birlikteyken Peygamber\'in "Onu seviyor musun?" diye sorduğunu, Zübeyr\'in evet dediğini ve "Ona karşı çıkıp zulmederek savaşacaksın" buyurduğunu hatırlatır. Zübeyr döner. No. 5574: "Ona karşı savaşacaksın ve ona zulmeden sen olacaksın." Zübeyr unuttuğunu söyler ve ayrılır. Hâkim bu rivayete sahih der. No. 5575: Zübeyr oğlu Abdullah\'a hadisi anlatır, safları yararak ayrılır.' }, url: 'https://hadits.net/hakim:5574', status: 'check' },
+    { book: 'Hâkim, el-Müstedrek', ref: 'No. 5573, 5574 ve 5575 (Zübeyr\'in öldürülmesi bölümü; baskıya göre numara kayabilir)', says: { tr: 'No. 5573: Hz. Ali, Zübeyr\'e Ensar\'ın bir gölgeliğinde birlikteyken Peygamber\'in "Onu seviyor musun?" diye sorduğunu, Zübeyr\'in evet dediğini ve "Ona karşı çıkıp zulmederek savaşacaksın" buyurduğunu hatırlatır. Zübeyr döner. No. 5574: "Ona karşı savaşacaksın ve ona zulmeden sen olacaksın." Zübeyr unuttuğunu söyler ve ayrılır. Hâkim bu rivayete sahih der. No. 5575: Zübeyr oğlu Abdullah\'a hadisi anlatır, safları yararak ayrılır.' }, url: 'https://hadits.net/hakim:5574', status: 'check' },
     { book: 'İbn Hazm, el-Fisal fi\'l-Milel ve\'n-Nihal', ref: 'İmamet bölümü (cilt/sayfa kontrol edilecek)', says: { tr: 'Hz. Ali\'nin Cemel\'de haklı olduğunu söyler; Talha, Zübeyr ve Aişe için ictihad hatası der. Bu aktarım literatürden alınmıştır, birincil metinden doğrulanmamıştır.' }, status: 'check' },
     { book: 'Ebu Hanife (Cessas, Ahkâmü\'l-Kur\'an; İbn Âbidîn, Haşiye)', ref: 'Bağî bölümü (sayfa kontrol edilecek)', says: { tr: 'Hz. Ali\'nin Cemel\'de haklı olduğu ve karşı tarafın hata ettiği görüşü ona nispet edilir; isyancılarla savaş kuralları Hz. Ali\'nin Cemel uygulamasından çıkarılır. Doğrulanmamış aktarım.' }, status: 'check' },
     { book: 'İmam Şafii, el-Ümm', ref: 'Kıtâlü\'l-Bağî bölümü (cilt kontrol edilecek)', says: { tr: 'İsyancılarla savaş hükümleri (yaralıyı öldürmeme, kaçanı kovalamama, malı ganimet saymama) Hz. Ali\'nin Cemel ve Sıffin\'deki davranışından türetilir. Doğrulanmamış aktarım.' }, status: 'check' },
@@ -95,5 +95,5 @@ export const cemel: HistEvent = {
     { tr: 'Hz. Ali savaştan sonra esirleri bıraktı ve Aişe\'yi saygıyla Medine\'ye uğurladı. Bu incelik, onun niyeti hakkında size ne düşündürüyor?' },
     { tr: 'Birçok Sünni âlim, Cemel\'de Hz. Ali\'yi hakka daha yakın bulur. Bu ortak bakış, onu daha yakından tanımak için size bir kapı açıyor mu?' },
   ],
-  summary: { tr: 'Halife Osman\'ın öldürülmesinden sonra Hz. Ali hilafeti bilinçle üstlendi. Hav\'eb\'de Aişe geri dönmek istedi, yine de yürütüldü. Ali, Zübeyr\'e Peygamber\'in sözünü hatırlattı. Zübeyr saftan ayrıldı ve sonra öldürüldü. Ali esirleri bağışladı ve Aişe\'yi saygıyla Medine\'ye uğurladı.' },
+  summary: { tr: 'Halife Osman\'ın öldürülmesinden sonra Hz. Ali hilafeti bilinçle üstlendi. Hav\'eb\'de Aişe geri dönmek istedi, yine de yürütüldü. Hz. Ali, Zübeyr\'e Peygamber\'in sözünü hatırlattı. Zübeyr saftan ayrıldı ve sonra öldürüldü. Hz. Ali esirleri bağışladı ve Aişe\'yi saygıyla Medine\'ye uğurladı.' },
 };

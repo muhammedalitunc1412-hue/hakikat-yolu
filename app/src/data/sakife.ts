@@ -8,7 +8,7 @@ export const sakife: HistEvent = {
   hook: { tr: 'Peygamber\'in bedeni daha yıkanırken Sakife\'de biat alındı. Ehl-i Beyt cenazenin başında yalnız kaldı.', en: 'A caliph was chosen while the Prophet\'s body was still being prepared. Hz. Ali did not pledge for six months.' },
   scenes: [
     {
-      text: { tr: 'Medine\'de Peygamber yeni vefat etmişti. Gadir\'de eli kaldırılan **Hz. Ali**, onun başucundaydı. Vefat haberi şehri karıştırdı. Ali, Abbas ve Haşimoğullarıyla yıkama ve defin hazırlığına koyuldu. O, cenazenin yanından ayrılmadı.' },
+      text: { tr: 'Medine\'de Peygamber yeni vefat etmişti. Gadir\'de eli kaldırılan **Hz. Ali**, onun başucundaydı. Vefat haberi şehri karıştırdı. Hz. Ali, Abbas ve Haşimoğullarıyla yıkama ve defin hazırlığına koyuldu. O, cenazenin yanından ayrılmadı.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 34, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 68, scale: 4, label: { tr: 'Haşimoğulları' } }] },
       by: 'both',
     },
@@ -38,7 +38,7 @@ export const sakife: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Fatıma** vefat edene kadar **Hz. Ali** biat etmedi. Bu süre altı aydı. Ali, kızı Fatıma\'nın acısında yanında durdu. Fedek, Fatıma\'nın elinden alınmıştı. Fatıma\'nın kapısının önünde ateş yemini edilmişti. Fatıma vefat edince halkın Ali\'ye bakışı değişti. Ali, kan dökülmesin diye biat etti. Gadir\'deki hakkını unutmadı.' },
+      text: { tr: '**Hz. Fatıma** vefat edene kadar **Hz. Ali** biat etmedi. Bu süre altı aydı. Hz. Ali, kızı Fatıma\'nın acısında yanında durdu. Fedek, Fatıma\'nın elinden alınmıştı. Fatıma\'nın kapısının önünde ateş yemini edilmişti. Fatıma vefat edince halkın Hz. Ali\'ye bakışı değişti. Hz. Ali, kan dökülmesin diye biat etti. Gadir\'deki hakkını unutmadı.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 34, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 66, label: { tr: 'Ebu Bekir' } }] },
       by: 'both',
     },

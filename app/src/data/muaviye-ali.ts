@@ -7,8 +7,8 @@ const art = { bg: 'dune-day' as const, props: ['sun' as const], actors: [{ kind:
 export const muaviyeAli: HistEvent = {
   id: 'muaviye-ali',
   date: { tr: '36-40 H (656-661)', en: '36-40 AH (656-661)' },
-  title: { tr: "Muaviye ve Hz. Ali: biatı reddetmek, Sıffin ve Hakem", en: 'Muawiya and Ali: refusing allegiance, Siffin and the arbitration' },
-  hook: { tr: "Hz. Ali'nin hakkı ortadayken Muaviye biat etmedi. Sıffin'de Kur'an'ı mızrağa taktı.", en: "Why did Muawiya refuse to pledge to Ali, and what happened from Siffin to the arbitration?" },
+  title: { tr: "Muaviye ve Hz. Ali: biatı reddetmek, Sıffin ve Hakem", en: 'Muawiya and Hz. Ali: refusing allegiance, Siffin and the arbitration' },
+  hook: { tr: "Hz. Ali'nin hakkı ortadayken Muaviye biat etmedi. Sıffin'de Kur'an'ı mızrağa taktı.", en: "Why did Muawiya refuse to pledge to Hz. Ali, and what happened from Siffin to the arbitration?" },
   scenes: [
     {
       by: 'both',

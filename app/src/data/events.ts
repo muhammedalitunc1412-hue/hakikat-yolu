@@ -39,7 +39,7 @@ const KEYS: Record<string, string> = {
   "muaviye-iktidar": "Hilafetten krallığa: Hucr, Ziyâd ve Yezid'in veliahtlığı",
   "hayber": "Sancak, Allah ve Resulü'nü seven Hz. Ali'ye verildi",
   "menzile": "«Harun Musa'ya nasılsa sen de bana öylesin»",
-  "gadir": "Hz. Ali'nin velayet hakkı: «Ben kimin mevlâsıysam Ali de onun mevlâsıdır»",
+  "gadir": "Hz. Ali'nin velayet hakkı: «Ben kimin mevlâsıysam Hz. Ali de onun mevlâsıdır»",
   "raziyye": "Peygamber'in yazdırmak istediği son vasiyet",
   "sakife": "Cenaze hazırlanırken alınan biat",
   "istihlaf": "Atamayla gelen halifelik, daraltılmış şura",
@@ -54,7 +54,7 @@ const KEYS: Record<string, string> = {
   "kerbela": "Yezid'e biat yok: eman reddedildi, Kerbela'nın on günü",
   "imamlar": "Kerbela'dan sonra imamet zinciri",
   "mezhepler": "Sakife'den Kerbela'ya mekteplerin doğuşu",
-  "sadik": "İmam Sâdık ve ilim mektebi",
+  "sadik": "Hz. Ca\'fer-i Sâdık ve ilim mektebi",
   "muta": "Mut'a: Peygamber döneminde vardı",
   "abdest": "Ayakları yıkamak mı, meshetmek mi?",
   "ibadet-farklari": "Ezan, namaz ve secde farkları"
@@ -79,5 +79,5 @@ export const CATEGORIES: { id: string; title: string; sub: string; ids: string[]
   { id: 'ali', title: 'Hz. Ali Dönemi', sub: 'Cemel, Sıffin, Hakem, Nehrevan, minberlerde sövme', ids: ['cemel', 'siffin', 'sebb'] },
   { id: 'muaviye', title: 'Muaviye Kimdir?', sub: "Ailesi, Hz. Ali'ye karşı Sıffin, Hz. Hasan ile sulhu ve iktidarı", ids: ['muaviye-kimdir', 'muaviye-ali', 'muaviye-hasan', 'muaviye-iktidar'] },
   { id: 'imamlar', title: 'İmamlar ve Kerbela', sub: 'Hz. Hasan, Meysem et-Temmâr, Kerbela, imamlar', ids: ['hasan', 'meysem', 'kerbela', 'imamlar'] },
-  { id: 'mezhep', title: 'Mezhepler ve İbadet Farkları', sub: 'Mezheplerin doğuşu, İmam Sâdık, mut\'a, abdest, ezan ve diğer farklar', ids: ['mezhepler', 'sadik', 'muta', 'abdest', 'ibadet-farklari'] },
+  { id: 'mezhep', title: 'Mezhepler ve İbadet Farkları', sub: 'Mezheplerin doğuşu, Hz. Ca\'fer-i Sâdık, mut\'a, abdest, ezan ve diğer farklar', ids: ['mezhepler', 'sadik', 'muta', 'abdest', 'ibadet-farklari'] },
 ];

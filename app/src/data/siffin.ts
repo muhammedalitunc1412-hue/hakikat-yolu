@@ -41,12 +41,12 @@ export const siffin: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Ali**\'nin ordusundan bir grup hakemi reddetti. "Hüküm yalnız Allah\'ındır" diyerek yanından ayrıldılar. Bunlara Haricîler denir. Ali, "Söz haktır, ama onunla batıl kastediliyor" dedi. Önce onlarla konuşuldu. Sonra Nehrevan\'da çatışıldı. Mızraktaki mushaf hilesi, **Hz. Ali**\'nin kendi safını da bölmüştü.' },
+      text: { tr: '**Hz. Ali**\'nin ordusundan bir grup hakemi reddetti. "Hüküm yalnız Allah\'ındır" diyerek yanından ayrıldılar. Bunlara Haricîler denir. Hz. Ali, "Söz haktır, ama onunla batıl kastediliyor" dedi. Önce onlarla konuşuldu. Sonra Nehrevan\'da çatışıldı. Mızraktaki mushaf hilesi, **Hz. Ali**\'nin kendi safını da bölmüştü.' },
       art: { bg: 'river', props: ['flags'], actors: [{ kind: 'crowd', x: 28, scale: 7 }, { kind: 'ali', x: 74, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Ali**, Haricîler hakkında Peygamber\'den bir haber aktarır. Onları öldürenlere Allah katında sevap vardır. Hakka daha yakın taraf onlarla savaşacaktır. O taraf, Ali\'nin safıdır.' },
+      text: { tr: '**Hz. Ali**, Haricîler hakkında Peygamber\'den bir haber aktarır. Onları öldürenlere Allah katında sevap vardır. Hakka daha yakın taraf onlarla savaşacaktır. O taraf, Hz. Ali\'nin safıdır.' },
       art: { bg: 'dawn', props: ['scroll'], actors: [{ kind: 'ali', x: 44, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 78, scale: 5 }] },
       by: 'sunni',
     },
@@ -82,7 +82,7 @@ export const siffin: HistEvent = {
     { book: 'Nehcü\'l-Belâğa (Seyyid Razî)', ref: 'Hutbe numaraları kontrol edilecek', says: { tr: 'Hz. Ali\'nin Sıffin ve Haricilerle ilgili konuşmaları. Hutbelerin nisbeti konusunda tartışma vardır.' }, status: 'check' },
     { book: 'Şeyh Müfîd, el-İrşâd', ref: 'Şehadet ve vasiyetler bölümü (cilt/sayfa kontrol edilecek)', says: { tr: 'Hz. Ali\'nin şehadeti ve vasiyetlerinin ayrıntılı anlatımı.' }, url: 'https://al-islam.org/kitab-al-irshad-book-shaykh-al-mufid', status: 'check' },
     { book: 'Mes\'ûdî, Mürûcü\'z-Zeheb', ref: 'Sayfa kontrol edilecek', says: { tr: 'Olayların genel seyri. Şii eğilimli bir tarihçi olarak kabul edilir.' }, status: 'check' },
-    { book: 'WikiShia, Cursing Imam Ali (ikincil Şii yayın)', ref: 'Madde', says: { tr: 'Sebb geleneğinin yaklaşık altmış yıl sürdüğü iddiası ve İbn Haldun\'a atfen Ömer b. Abdülaziz\'in yasaklaması. İkincil kaynaktır.' }, url: 'https://en.wikishia.net/view/Cursing_Imam_Hz. Ali', status: 'verified' },
+    { book: 'WikiShia, Cursing Imam Ali (ikincil Şii yayın)', ref: 'Madde', says: { tr: 'Sebb geleneğinin yaklaşık altmış yıl sürdüğü iddiası ve İbn Haldun\'a atfen Ömer b. Abdülaziz\'in yasaklaması. İkincil kaynaktır.' }, url: 'https://en.wikishia.net/view/Cursing_Imam_Ali', status: 'verified' },
   ],
   disputes: [
     {

@@ -4,8 +4,8 @@ import type { HistEvent } from '../types';
 export const sebb: HistEvent = {
   id: 'sebb',
   date: { tr: '41 H sonrası - 99-101 H (yaklaşık 661-720)', en: 'After 41 AH - 99-101 AH (c. 661-720)' },
-  title: { tr: 'Minberlerde Hz. Ali\'ye sövme geleneği (sebb) ve Hucr b. Adî', en: 'The practice of cursing Imam Ali from the pulpits (sabb) and Hujr b. Adi' },
-  hook: { tr: 'Minberlerde Hz. Ali\'ye sövüldü; sövmeyi reddeden Hucr b. Adî öldürüldü.', en: 'The Prophet had said that loving Ali is loving him; why was Ali cursed from Friday pulpits for years, and why were objectors killed?' },
+  title: { tr: 'Minberlerde Hz. Ali\'ye sövme geleneği (sebb) ve Hucr b. Adî', en: 'The practice of cursing Hz. Ali from the pulpits (sabb) and Hujr b. Adi' },
+  hook: { tr: 'Minberlerde Hz. Ali\'ye sövüldü; sövmeyi reddeden Hucr b. Adî öldürüldü.', en: 'The Prophet had said that loving Hz. Ali is loving him; why was Hz. Ali cursed from Friday pulpits for years, and why were objectors killed?' },
   scenes: [
     {
       text: { tr: '**Hz. Hasan**\'ın sulhünden sonra minberlerde **Hz. Ali**\'ye ==lanet== okunmaya başlandı. Cuma hutbesi, Peygamber\'in kardeşine sövmekle açıldı. Bu, ==Ehl-i Beyt== sevgisini suç sayan bir zulümdü. Sevenler her Cuma bu sözü duymak zorunda kaldı.' },
@@ -64,7 +64,7 @@ export const sebb: HistEvent = {
     { book: 'Taberî, Târîhu\'r-Rusül ve\'l-Mülûk', ref: 'cilt 5, s. 253 (WikiShia dipnotu 12-13); Hucr olayı 51. yıl (Leiden baskısı; kitap okunmadı)', says: { tr: 'Muaviye\'nin Muğîre\'ye Hz. Ali\'yi kötülemesi ve Hz. Osman\'ı övmesi yönündeki tavsiyesi; Hucr b. Adî olayı.' }, status: 'check' },
     { book: 'İbnü\'l-Esîr, el-Kâmil fi\'t-Târîh', ref: '41-51. yıl olayları (cilt/sayfa kontrol edilecek)', says: { tr: 'Muğîre ve Ziyâd dönemindeki sövme ve Hucr b. Adî\'nin öldürülmesi anlatımı beklenir; okunmadı.' }, status: 'check' },
     { book: 'Zehebî, Târîhu\'l-İslâm', ref: 'cilt 5, s. 231 (WikiShia dipnotu)', says: { tr: 'Mervân\'ın Medine valiliği sırasında Hz. Ali\'ye sövmesi ile ilgili aktarım (WikiShia\'nın Sünni tarihçi olarak andığı kaynak). Doğrudan okunmadı.' }, status: 'check' },
-    { book: 'Ahmed b. Hanbel, Müsned; Hâkim, el-Müstedrek', ref: 'Ümmü Seleme rivayeti: "Kim Ali\'ye söverse bana sövmüştür" (hadis numarası/cilt kontrol edilecek)', says: { tr: 'Ümmü Seleme\'den, Hz. Ali\'ye sövmenin Peygamber\'e sövmek sayıldığı rivayeti. WikiShia bunu İbn Asâkir (Târîhu Dımaşk 42/533) ile verir; Müsned ve Müstedrek numaraları kontrol edilmedi.' }, status: 'check' },
+    { book: 'Ahmed b. Hanbel, Müsned; Hâkim, el-Müstedrek', ref: 'Ümmü Seleme rivayeti: "Kim Hz. Ali\'ye söverse bana sövmüştür" (hadis numarası/cilt kontrol edilecek)', says: { tr: 'Ümmü Seleme\'den, Hz. Ali\'ye sövmenin Peygamber\'e sövmek sayıldığı rivayeti. WikiShia bunu İbn Asâkir (Târîhu Dımaşk 42/533) ile verir; Müsned ve Müstedrek numaraları kontrol edilmedi.' }, status: 'check' },
     { book: 'İbn Abdirabbih, el-Ikdü\'l-Ferîd', ref: 'cilt 3, s. 300 (yalnız bir Şii savunma sitesinin dipnotu; kitap okunmadı)', says: { tr: 'Ümmü Seleme\'nin Muaviye\'ye yazdığı iddia edilen mektup: "Minberlerinizde Allah\'a ve Resulüne sövüyorsunuz." DOĞRULANMADI: sayfa ve lafız kitaptan teyit edilmedi.' }, status: 'check' },
     { book: 'İbn Haldun, Târîh', ref: 'cilt 3, s. 94 (WikiShia dipnotu 9; ikincil aktarım)', says: { tr: 'Ömer b. Abdülaziz\'in bütün İslam beldelerine yazarak lanetin durdurulmasını emrettiği.' }, status: 'check' },
     { book: 'İbn Kesîr, el-Bidâye ve\'n-Nihâye; Suyûtî, Târîhu\'l-Hulefâ', ref: 'Ömer b. Abdülaziz bölümü (cilt/sayfa kontrol edilecek)', says: { tr: 'Sövmenin yerine Nahl 90\'ın okutulması yaygın anlatımdır, ancak bu oturumda metin bu iki kitaptan doğrulanamadı: DOĞRULANMADI.' }, status: 'check' },

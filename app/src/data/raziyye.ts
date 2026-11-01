@@ -38,7 +38,7 @@ export const raziyye: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Peygamber, Rebiülevvel 11\'de bir Pazartesi günü vefat etti. Başucunda **Hz. Ali** vardı. Gadir\'de eli kaldırılan Ali, o saatte Peygamber\'in gözünü kapattı.' },
+      text: { tr: 'Peygamber, Rebiülevvel 11\'de bir Pazartesi günü vefat etti. Başucunda **Hz. Ali** vardı. Gadir\'de eli kaldırılan Hz. Ali, o saatte Peygamber\'in gözünü kapattı.' },
       art: { bg: 'dawn', props: ['palms'], actors: [{ kind: 'prophet', x: 30, label: { tr: 'Hz. Peygamber' } }, { kind: 'woman', x: 66, label: { tr: 'Aişe' } }] },
       by: 'both',
     },

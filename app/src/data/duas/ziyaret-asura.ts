@@ -5,7 +5,7 @@ export const ziyaretAsura: Dua = {
   title: { tr: 'Ziyâret-i Âşûrâ', en: 'Ziyarat Ashura', ar: 'زيارة عاشوراء' },
   when: 'Âşûrâ günü ve Muharrem ayında; her gün de okunabilir',
   intro:
-    'İmam Hüseyin\'i (a.s) kabri başında ya da uzaktan ziyaret metni. Şii kaynaklarda Alkame b. Muhammed el-Hadramî\'nin İmam Muhammed el-Bâkır\'dan (a.s) rivayeti olarak geçer; Şeyh Tûsî\'nin Mısbâhu\'l-Mütehecchid\'inde (s. 774), Kâmilü\'z-Ziyârât\'ta ve Şeyh Abbas Kummî\'nin Mefâtîhu\'l-Cinân\'ında yer alır. Metin lanet ve berâet (uzaklaşma) ifadeleri içerir; bunlar aslına sadık olarak çevrilmiştir.',
+    'Hz. Hüseyin\'i (a.s) kabri başında ya da uzaktan ziyaret metni. Şii kaynaklarda Alkame b. Muhammed el-Hadramî\'nin Hz. Muhammed Bâkır\'dan (a.s) rivayeti olarak geçer; Şeyh Tûsî\'nin Mısbâhu\'l-Mütehecchid\'inde (s. 774), Kâmilü\'z-Ziyârât\'ta ve Şeyh Abbas Kummî\'nin Mefâtîhu\'l-Cinân\'ında yer alır. Metin lanet ve berâet (uzaklaşma) ifadeleri içerir; bunlar aslına sadık olarak çevrilmiştir.',
   parts: [
     {
       heading: 'Selâm',
@@ -37,7 +37,7 @@ export const ziyaretAsura: Dua = {
       okunus:
         'Bi-ebî ente ve ummî, lekad azume musâbî bik. Fe es\'elüllâhelleżî ekreme makâmeke ve ekremenî en yerzukanî talebe sârike maa imâmin mansûrin min ehli beyti Muhammed, sallallâhü aleyhi ve âlih. Allâhümmec\'alnî indeke vecîhen bi\'l-Hüseyni aleyhi\'s-selâm fi\'d-dünyâ vel-âhira.',
       meal:
-        'Anam babam sana feda olsun; senin musibetin benim için çok büyüdü. Senin makamını ve beni de (seni tanımakla) ikrama erdiren Allah\'tan, Muhammed\'in (s.a.a) Ehl-i Beyti\'nden, zafer verilmiş bir imamla birlikte senin kanının intikamını talep etmeyi bana nasip etmesini dilerim. Allah\'ım, beni Hüseyin sayesinde dünyada ve âhirette kendi katında itibarlı kıl.',
+        'Anam babam sana feda olsun; senin musibetin benim için çok büyüdü. Senin makamını ve beni de (seni tanımakla) ikrama erdiren Allah\'tan, Muhammed\'in (s.a.a) Ehl-i Beyti\'nden, zafer verilmiş bir imamla birlikte senin kanının intikamını talep etmeyi bana nasip etmesini dilerim. Allah\'ım, beni Hz. Hüseyin sayesinde dünyada ve âhirette kendi katında itibarlı kıl.',
     },
     {
       heading: 'Yakınlaşma ve berâet (1)',
@@ -45,7 +45,7 @@ export const ziyaretAsura: Dua = {
       okunus:
         'Yâ Eba Abdillâh, innî ütekarrebü ilallâhi ve ilâ resûlihî ve ilâ Emîri\'l-mü\'minîne ve ilâ Fâtımate ve ilel-Hasani ve ileyke bi-muvâlâtik ve bi\'l-berâeti mimmen essese esâse żâlike ve benâ aleyhi büniyânehû ve cerâ fî zulmihî ve cevrihî aleykum ve alâ eşyâikum. Beriü ilallâhi ve ileykum minhüm.',
       meal:
-        'Ey Ebâ Abdillâh, ben Allah\'a, Resûlü\'ne, Müminlerin Emîri\'ne, Fâtıma\'ya, Hasan\'a ve sana; senin velâyetinle (dostluğunla) ve bunun temelini atan, binasını onun üzerine kuran, size ve yandaşlarınıza zulmünde ve haksızlığında devam edenlerden berâet ederek yaklaşırım. Onlardan Allah\'a ve size berâet ederim.',
+        'Ey Ebâ Abdillâh, ben Allah\'a, Resûlü\'ne, Müminlerin Emîri\'ne, Fâtıma\'ya, Hz. Hasan\'a ve sana; senin velâyetinle (dostluğunla) ve bunun temelini atan, binasını onun üzerine kuran, size ve yandaşlarınıza zulmünde ve haksızlığında devam edenlerden berâet ederek yaklaşırım. Onlardan Allah\'a ve size berâet ederim.',
     },
     {
       heading: 'Yakınlaşma ve berâet (2)',
@@ -69,7 +69,7 @@ export const ziyaretAsura: Dua = {
       okunus:
         'Allâhümme inne hâżâ yevmün tebereket bihî Benû Ümeyyete ve\'bnü âkileti\'l-ekbâdi\'l-la\'înü\'bnü\'l-la\'în alâ lisânike ve lisâni nebiyyike sallallâhü aleyhi ve âlihî fî kulli mevtınin ve mevkıfin vekafe fîhi nebiyyük. Allâhümmel\'an Ebâ Süfyâne ve Muâviyete ve Yezîde bne Muâviyete aleyhimü minkel-la\'ne ebede\'l-âbidîn. Ve hâżâ yevmün ferihat bihî âlü Ziyâdin ve âlü Mervâne bi-katlihimü\'l-Hüseyne salavâtullâhi aleyh. Allâhümme fe dâıf aleyhimü\'l-la\'ne vel-azâb. Allâhümme innî ütekarrebü ileyke fî hâże\'l-yevmi ve fî mevkıfî hâżâ ve eyyâmi hayâtî bi\'l-berâeti minhüm vel-la\'neti aleyhim, ve bi\'l-muvâlâti li-nebiyyike ve âli nebiyyike aleyhi ve aleyhimü\'s-selâm.',
       meal:
-        'Allah\'ım, bu gün, Ümeyye oğullarının ve ciğer yiyen kadının oğlunun -lânetlenmiş ve lânetlenmişin oğlunun- senin dilinle ve Peygamberin (s.a.a) dilinle, Peygamberinin durduğu her yerde ve her duruşta lânetlendikleri günlerden biridir; (kendilerince) bereket umdukları gündür. Allah\'ım, Ebû Süfyân\'a, Muâviye\'ye ve Muâviye oğlu Yezîd\'e lânet et; ebediyyen senden onlara lânet olsun. Bu, Ziyâd oğullarının ve Mervân oğullarının Hüseyin\'i (a.s) öldürmeleriyle sevindikleri gündür. Allah\'ım, onlara lânetini ve azabı kat kat artır. Allah\'ım, bu günde, bu duruşumda ve hayatım boyunca onlardan berâet ederek, onlara lânet ederek, Peygamberine ve Peygamberinin Âl\'ine (aleyhi ve aleyhimü\'s-selâm) velâyet göstererek sana yaklaşırım.',
+        'Allah\'ım, bu gün, Ümeyye oğullarının ve ciğer yiyen kadının oğlunun -lânetlenmiş ve lânetlenmişin oğlunun- senin dilinle ve Peygamberin (s.a.a) dilinle, Peygamberinin durduğu her yerde ve her duruşta lânetlendikleri günlerden biridir; (kendilerince) bereket umdukları gündür. Allah\'ım, Ebû Süfyân\'a, Muâviye\'ye ve Muâviye oğlu Yezîd\'e lânet et; ebediyyen senden onlara lânet olsun. Bu, Ziyâd oğullarının ve Mervân oğullarının Hz. Hüseyin\'i (a.s) öldürmeleriyle sevindikleri gündür. Allah\'ım, onlara lânetini ve azabı kat kat artır. Allah\'ım, bu günde, bu duruşumda ve hayatım boyunca onlardan berâet ederek, onlara lânet ederek, Peygamberine ve Peygamberinin Âl\'ine (aleyhi ve aleyhimü\'s-selâm) velâyet göstererek sana yaklaşırım.',
     },
     {
       heading: 'Yüz kere lânet',
@@ -77,15 +77,15 @@ export const ziyaretAsura: Dua = {
       okunus:
         'Allâhümmel\'an evvele zâlimin zeleme hakka Muhammedin ve âli Muhammed, ve âhıra tâbiin lehû alâ żâlik. Allâhümmel\'ani\'l-usbete\'lletî câhedetil-Hüseyne ve şâyaat ve bâyaat ve tâbaat alâ katlih. Allâhümmel\'anhüm cemîan.',
       meal:
-        'Allah\'ım, Muhammed ve Âl-i Muhammed\'in hakkına ilk zulmeden zalime ve bu konuda ona uyan sonuncuya lânet et. Allah\'ım, Hüseyin\'e karşı savaşan, onun öldürülmesinde (diğerlerine) katılan, bîat eden ve tâbi olan topluluğa lânet et. Allah\'ım, hepsine lânet et. (Rivayete göre bu yüz kere söylenir.)',
+        'Allah\'ım, Muhammed ve Âl-i Muhammed\'in hakkına ilk zulmeden zalime ve bu konuda ona uyan sonuncuya lânet et. Allah\'ım, Hz. Hüseyin\'e karşı savaşan, onun öldürülmesinde (diğerlerine) katılan, bîat eden ve tâbi olan topluluğa lânet et. Allah\'ım, hepsine lânet et. (Rivayete göre bu yüz kere söylenir.)',
     },
     {
       heading: 'Yüz kere selâm',
       ar: 'السلام عليك يا أبا عبد الله و على الأرواح التي حلت بفنائك عليك مني سلام الله أبدا ما بقيت و بقي الليل و النهار و لا جعله الله آخر العهد مني لزيارتك السلام على الحسين و علي بن الحسين و على أصحاب الحسين',
       okunus:
-        'Es-selâmü aleyke yâ Eba Abdillâh ve alel-ervâhilletî halle bi-fenâik. Aleyke minnî selâmullâhi ebeden mâ bekîtü ve bekıyel-leylü ven-nehâr, ve lâ cealehullâhü âhıra\'l-ahdi minnî li-ziyâretik. Es-selâmü alel-Hüseyni ve alâ Aliyyi bni\'l-Hüseyni ve alâ ashâbi\'l-Hüseyn.',
+        'Es-selâmü aleyke yâ Eba Abdillâh ve alel-ervâhilletî halle bi-fenâik. Aleyke minnî selâmullâhi ebeden mâ bekîtü ve bekıyel-leylü ven-nehâr, ve lâ cealehullâhü âhıra\'l-ahdi minnî li-ziyâretik. Es-selâmü alel-Hüseyni ve alâ Hz. Aliyyi bni\'l-Hüseyni ve alâ ashâbi\'l-Hüseyn.',
       meal:
-        'Selâm sana ey Ebâ Abdillâh ve senin avlunda konaklamış ruhlara. Ben var oldukça, gece ve gündüz var oldukça sana benden Allah\'ın selâmı olsun; Allah bunu seni ziyaret etmemin son anı kılmasın. Selâm Hüseyin\'e, Ali b. el-Hüseyin\'e ve Hüseyin\'in ashâbına. (Rivayete göre bu yüz kere söylenir.)',
+        'Selâm sana ey Ebâ Abdillâh ve senin avlunda konaklamış ruhlara. Ben var oldukça, gece ve gündüz var oldukça sana benden Allah\'ın selâmı olsun; Allah bunu seni ziyaret etmemin son anı kılmasın. Selâm Hz. Hüseyin\'e, Hz. Zeynelâbidîn\'e ve Hz. Hüseyin\'in ashâbına. (Rivayete göre bu yüz kere söylenir.)',
     },
     {
       heading: 'Lânet dilekçesi',
@@ -101,7 +101,7 @@ export const ziyaretAsura: Dua = {
       okunus:
         'Allâhümme lekel-hamdü hamde\'ş-şâkirîne alâ musâbihim. El-hamdü lillâhi alâ azîmi raziyyetî. Allâhümmerzuknî şefâate\'l-Hüseyni yevme\'l-vürûd, ve sebbit lî kademe sıdkın indeke maa\'l-Hüseyni ve ashâbi\'l-Hüseyni\'lleżîne beżelû mühecehüm dûne\'l-Hüseyn aleyhi\'s-selâm.',
       meal:
-        'Allah\'ım, hamd yalnız sanadır; musibetleri karşısında şükredenlerin hamdi gibi. Büyük musibetim için Allah\'a hamdolsun. Allah\'ım, varış (mahşer) gününde bana Hüseyin\'in şefaatini nasip et; katında beni, Hüseyin\'in uğrunda canlarını feda eden Hüseyin ve ashâbıyla birlikte sağlam bir doğruluk kademesi üzerinde sabit kıl. (Metne göre bu secdede söylenir.)',
+        'Allah\'ım, hamd yalnız sanadır; musibetleri karşısında şükredenlerin hamdi gibi. Büyük musibetim için Allah\'a hamdolsun. Allah\'ım, varış (mahşer) gününde bana Hz. Hüseyin\'in şefaatini nasip et; katında beni, Hz. Hüseyin\'in uğrunda canlarını feda eden Hz. Hüseyin ve ashâbıyla birlikte sağlam bir doğruluk kademesi üzerinde sabit kıl. (Metne göre bu secdede söylenir.)',
     },
     {
       heading: 'Rivayet notu',
@@ -109,11 +109,11 @@ export const ziyaretAsura: Dua = {
       okunus:
         'Kâle Alkameh: Kâle Ebû Ca\'fer salavâtullâhi aleyh: İn istetaa\'te en tezûrehû fî kulli yevmin bi-hâżihi\'z-ziyâreti min dârike fef\'al, ve leke sevâbü cemîi żâlik.',
       meal:
-        'Alkame dedi ki: Ebû Ca\'fer (İmam Bâkır, a.s) şöyle buyurdu: Gücün yeterse, her gün evinden bu ziyâretle O\'nu ziyaret et; bütün bunların sevabı senindir.',
+        'Alkame dedi ki: Ebû Ca\'fer (Hz. Muhammed Bâkır, a.s) şöyle buyurdu: Gücün yeterse, her gün evinden bu ziyâretle O\'nu ziyaret et; bütün bunların sevabı senindir.',
     },
   ],
   source:
-    'Şeyh Tûsî, Mısbâhu\'l-Mütehecchid, s. 774 (Alkame rivayeti, İmam Bâkır\'dan); metin Kâmilü\'z-Ziyârât ve Mefâtîhu\'l-Cinân\'da da bulunur. Arapça, Mısbâh nüshasından okunmuştur.',
+    'Şeyh Tûsî, Mısbâhu\'l-Mütehecchid, s. 774 (Alkame rivayeti, Hz. Muhammed Bâkır\'dan); metin Kâmilü\'z-Ziyârât ve Mefâtîhu\'l-Cinân\'da da bulunur. Arapça, Mısbâh nüshasından okunmuştur.',
   url: 'https://forums.alkafeel.net/node/68744',
   status: 'verified',
   note: 'Arapça metin Mısbâhu\'l-Mütehecchid nüshasından, harekesiz alındı. Mefâtîh/Kâmilü\'z-Ziyârât nüshalarında birkaç ufak ek/fark (ör. selâmda "ve alâ evlâdi\'l-Hüseyn" ibaresi; metin başındaki ziyaret öncesi ve sonrası duâlar, Dua Alkame) bu nüshada yoktur.',

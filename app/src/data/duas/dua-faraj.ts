@@ -5,12 +5,12 @@ export const duaFaraj: Dua = {
   title: { tr: 'Dua-i Ferec (İmam-ı Zaman için dua)' },
   subtitle: { tr: 'Allâhümme kün li-veliyyike el-Huccet ibnil Hasen' },
   when: 'Günlük, özellikle sabah-akşam ve cuma günleri; İmam-ı Zaman (a.s.) için hıfz ve ferec dileğiyle okunur.',
-  intro: 'On İkinci İmam Mehdi (a.f.) için Allah\'tan koruma, yardım ve uzun ömür dileyen kısa bir duadır.',
+  intro: 'On İkinci İmam Hz. Mehdî (a.f.) için Allah\'tan koruma, yardım ve uzun ömür dileyen kısa bir duadır.',
   parts: [
     {
       ar: 'اللّهُمّ كُنْ لِوَلِيّكَ الحُجّةِ ابْنِ الحَسَنِ',
       okunus: 'Allâhümme kün li-veliyyikel Huccetibnil Hasen,',
-      meal: 'Allah\'ım, velin Hasan oğlu Huccet için (yardımcı) ol;',
+      meal: 'Allah\'ım, velin Hz. Hasan Askerî oğlu Huccet için (yardımcı) ol;',
     },
     {
       ar: 'صَلَوَاتُكَ عَلَيْهِ وَعَلَى آبَائِهِ',
@@ -48,7 +48,7 @@ export const duaFaraj: Dua = {
       meal: 've orada ona uzun bir ömür nimeti verirsin.',
     },
   ],
-  source: 'duas.org, İmam Mehdi (a.f.) sayfası, "Dua Faraj" sekmesi',
+  source: 'duas.org, Hz. Mehdî (a.f.) sayfası, "Dua Faraj" sekmesi',
   url: 'https://www.duas.org/mobile/imam-mahdi-ajtfs.html',
   status: 'verified',
   note: 'Dua-i Ahd ve Dua-i Nudbe bu dosyada yoktur. Arapça metin duas.org sayfasından okunarak alındı; okunuş ve meal kendi çevirimizdir.',

@@ -20,7 +20,7 @@ export const ehlibeyt: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Veda Haccı dönüşünde kafile Hum suyu başına geldi. Peygamber orada iki ağır emanet bıraktı: Allah\'ın Kitabı ve itreti, yani ==Ehl-i Beyt==. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi. Bu ikisi Havz\'a varıncaya dek ayrılmaz. Havz, Kıyamet\'teki havuzdur. Zeyd\'e sorulunca hanımları yakın halkanın dışında tuttu. Ali, Akîl, Cafer ve Abbas ailelerini andı. Peygamber Kitap ile itreti birbirine bağladı ki Kur\'an, Ehl-i Beyt olmadan kalmasın.' },
+      text: { tr: 'Veda Haccı dönüşünde kafile Hum suyu başına geldi. Peygamber orada iki ağır emanet bıraktı: Allah\'ın Kitabı ve itreti, yani ==Ehl-i Beyt==. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi. Bu ikisi Havz\'a varıncaya dek ayrılmaz. Havz, Kıyamet\'teki havuzdur. Zeyd\'e sorulunca hanımları yakın halkanın dışında tuttu. Hz. Ali, Akîl, Cafer ve Abbas ailelerini andı. Peygamber Kitap ile itreti birbirine bağladı ki Kur\'an, Ehl-i Beyt olmadan kalmasın.' },
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 82, label: { tr: 'Hz. Ali' } }] },
     },
     {
@@ -45,12 +45,12 @@ export const ehlibeyt: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: 'On İki İmam şunlardır: **Hz. Ali**, **Hz. Hasan**, **Hz. Hüseyin**, Zeynelabidin, Bâkır, Sâdık, Kâzım, Rızâ, Cevâd, Hâdî, Askerî ve **Mehdi**. On ikinci imam gizlenmiştir. Buna gaybet denir. Zamanı gelince adaletle çıkacaktır. Kerbela\'da **Hz. Hüseyin** şehit edildi. On İki İmam\'ın bu sırası **Mehdi** ile tamamlanır.' },
+      text: { tr: 'On İki İmam şunlardır: **Hz. Ali**, **Hz. Hasan**, **Hz. Hüseyin**, Hz. Zeynelâbidîn, Hz. Muhammed Bâkır, Hz. Ca\'fer-i Sâdık, Hz. Musa Kâzım, Hz. Ali Rızâ, Hz. Muhammed Takî, Hz. Ali Nakî, Hz. Hasan Askerî ve **Hz. Mehdî**. On ikinci imam gizlenmiştir. Buna gaybet denir. Zamanı gelince adaletle çıkacaktır. Kerbela\'da **Hz. Hüseyin** şehit edildi. On İki İmam\'ın bu sırası **Hz. Mehdî** ile tamamlanır.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 30, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 46, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 60, scale: 0.8, label: { tr: 'Hz. Hüseyin' } }] },
     },
   ],
   sunni: [
-    { book: 'Müslim, Sahih', ref: 'No. 2404 (Sa\'d b. Ebi Vakkas; mübahele kısmının alt numarası kontrol edilecek)', says: { tr: 'Mübahele ayeti inince Peygamber Ali, Fatıma, Hasan ve Hüseyin\'i çağırıp "Allah\'ım bunlar ehlimdir" der.' }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/muslim:2404a', status: 'check' },
+    { book: 'Müslim, Sahih', ref: 'No. 2404 (Sa\'d b. Ebi Vakkas; mübahele kısmının alt numarası kontrol edilecek)', says: { tr: 'Mübahele ayeti inince Peygamber Hz. Ali, Fatıma, Hz. Hasan ve Hz. Hüseyin\'i çağırıp "Allah\'ım bunlar ehlimdir" der.' }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/muslim:2404a', status: 'check' },
     { book: 'Müslim, Sahih', ref: 'No. 2408a (Zeyd b. Erkam)', says: { tr: 'Hum suyu başında iki ağır emanet: Allah\'ın Kitabı ve Ehl-i Beyt; kapsam tartışması.' }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/muslim:2408a', status: 'verified' },
     { book: 'Tirmizi, el-Câmi\'', ref: 'No. 3788', says: { tr: 'Kitap ve itret Havz\'da Peygamber\'e varıncaya dek ayrılmaz.' }, grade: { tr: 'Tirmizi: hasen garib; Albani: sahih' }, url: 'https://hadithunlocked.com/tirmidhi:3788', status: 'verified' },
     { book: 'Hâkim, el-Müstedrek', ref: 'cilt 3, s. 151 (Safine hadisi, Ebu Zer; numara kontrol edilecek)', says: { tr: 'Ehl-i Beyt\'in Nuh\'un gemisi gibi olduğu; Hâkim sıhhat hükmü verir. Zehebî\'nin Telhîs\'teki hükmü bu oturumda doğrulanamadı.' }, grade: { tr: 'Hâkim: sahih; bazı muhaddisler zayıf sayar (tartışmalı)' }, url: 'https://en.wikishia.net/view/Hadith_of_Safina', status: 'check' },

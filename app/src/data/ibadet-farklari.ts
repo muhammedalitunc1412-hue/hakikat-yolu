@@ -15,7 +15,7 @@ export const ibadetFarklari: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: 'Câferî fıkıhta "Hayye alâ hayri\'l-amel" ezanın bir cüzüdür. Halife Ömer\'in bunu, savaş ruhunu zayıflatır diye kaldırdığı rivayet edilir. "Eşhedü enne Aliyyen veliyyullah" bugünkü Şii ulema görüşüne göre ezanın şartı değildir; müstehap bir şiar olarak okunur. "Es-salâtü hayrun mine\'n-nevm" Câferî ezanında okunmaz. Sünni kaynaklarda bu son ifade sabah ezanında sabit bir sünnet olarak anılır.' },
+      text: { tr: 'Câferî fıkıhta "Hayye alâ hayri\'l-amel" ezanın bir cüzüdür. Halife Ömer\'in bunu, savaş ruhunu zayıflatır diye kaldırdığı rivayet edilir. "Eşhedü enne Hz. Aliyyen veliyyullah" bugünkü Şii ulema görüşüne göre ezanın şartı değildir; müstehap bir şiar olarak okunur. "Es-salâtü hayrun mine\'n-nevm" Câferî ezanında okunmaz. Sünni kaynaklarda bu son ifade sabah ezanında sabit bir sünnet olarak anılır.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'man', x: 40, pose: 'raise', label: { tr: 'Müezzin' } }, { kind: 'crowd', x: 72, scale: 0.7 }] },
     },
     {
@@ -30,7 +30,7 @@ export const ibadetFarklari: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: 'Kerbela toprağının sevilmesi, İmam Hüseyin\'in şehit olduğu yer olmasıyla ilgilidir. Bazı rivayetlerde bu toprağa şifa ve sevap bağlanır. Bu rivayetlerin senet değeri Şii âlimler arasında da tartışılır. Şii fıkhında toprak secdesi sünnet, Kerbela toprağı ise müstehap sayılır. Secde taşı kullanmak Sünni mezheplerde yasak değildir. Câferî mektep, yerden biten şeye secdeyi Peygamber\'in secde uygulamasının devamı sayar.' },
+      text: { tr: 'Kerbela toprağının sevilmesi, Hz. Hüseyin\'in şehit olduğu yer olmasıyla ilgilidir. Bazı rivayetlerde bu toprağa şifa ve sevap bağlanır. Bu rivayetlerin senet değeri Şii âlimler arasında da tartışılır. Şii fıkhında toprak secdesi sünnet, Kerbela toprağı ise müstehap sayılır. Secde taşı kullanmak Sünni mezheplerde yasak değildir. Câferî mektep, yerden biten şeye secdeyi Peygamber\'in secde uygulamasının devamı sayar.' },
       art: { bg: 'dune-dusk', props: ['sun'], actors: [{ kind: 'husayn', x: 50, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
@@ -55,12 +55,12 @@ export const ibadetFarklari: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Gadir hadisi, "Ben kimin mevlası isem Ali de onun mevlasıdır", Sünni kitaplarda da yer alır. "Mevla" kelimesinin yönetim mi dostluk mu olduğu ayrıca konuşulur. Âşûrâ, Sünni kaynaklarda Buhari\'de geçen bir oruç günüdür; Hz. Musa\'nın kurtuluşu anılır, Hüseyin\'in şehadeti de hatırlanır. Câferî gelenekte Muharrem\'in ilk on günü ve Âşûrâ, Kerbela matemidir. 18 Zilhicce ise Gadir bayramı sayılır.' },
+      text: { tr: 'Gadir hadisi, "Ben kimin mevlası isem Hz. Ali de onun mevlasıdır", Sünni kitaplarda da yer alır. "Mevla" kelimesinin yönetim mi dostluk mu olduğu ayrıca konuşulur. Âşûrâ, Sünni kaynaklarda Buhari\'de geçen bir oruç günüdür; Hz. Musa\'nın kurtuluşu anılır, Hz. Hüseyin\'in şehadeti de hatırlanır. Câferî gelenekte Muharrem\'in ilk on günü ve Âşûrâ, Kerbela matemidir. 18 Zilhicce ise Gadir bayramı sayılır.' },
       art: { bg: 'dune-dusk', props: ['flags'], actors: [{ kind: 'husayn', x: 34, label: { tr: 'Hz. Hüseyin' } }, { kind: 'ali', x: 66, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Ahzâb 33:33, "Allah sizden kirleri gidermek ve sizi tertemiz yapmak ister, ey Ehl-i Beyt" der. Müslim\'deki Kisâ hadisinde Peygamber, Hz. Ali, Fatıma, Hasan ve Hüseyin\'i abasının altına alır ve bu ayeti okur. Buhari 6585\'te Peygamber, havz başında bazı arkadaşlarının uzaklaştırılacağını söyler. Câferî okuyuş, Tahir ayetini Ehl-i Beyt\'in ismetine delil sayar; sahabe adaletini ise kişinin davranışı ve ilmiyle ölçer. Sünni kaynaklarda Ehl-i Beyt sevilir, ismet peygamberlere özgü sayılır. Havz hadisi irtidat edenlere veya münafıklara bağlanır.' },
+      text: { tr: 'Ahzâb 33:33, "Allah sizden kirleri gidermek ve sizi tertemiz yapmak ister, ey Ehl-i Beyt" der. Müslim\'deki Kisâ hadisinde Peygamber, Hz. Ali, Fatıma, Hz. Hasan ve Hz. Hüseyin\'i abasının altına alır ve bu ayeti okur. Buhari 6585\'te Peygamber, havz başında bazı arkadaşlarının uzaklaştırılacağını söyler. Câferî okuyuş, Tahir ayetini Ehl-i Beyt\'in ismetine delil sayar; sahabe adaletini ise kişinin davranışı ve ilmiyle ölçer. Sünni kaynaklarda Ehl-i Beyt sevilir, ismet peygamberlere özgü sayılır. Havz hadisi irtidat edenlere veya münafıklara bağlanır.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 36, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 60, label: { tr: 'Hz. Ali' } }] },
     },
   ],
@@ -69,10 +69,10 @@ export const ibadetFarklari: HistEvent = {
     { book: 'Buhari, Sahih', ref: 'No. 6585 (Rikak, Havz bölümü)', says: { tr: 'Peygamber, arkadaşlarından bazılarının havz başında uzaklaştırılacağını söyler; "Onların senden sonra neler ihdas ettiklerini bilmezsin" cevabı verilir.' }, grade: { tr: 'Sahih' }, url: 'https://ihadis.com/en/bukhari/hadith/6585', status: 'verified' },
     { book: 'Buhari, Sahih', ref: 'No. 335 (Teyemmüm)', says: { tr: 'Cabir\'den: "Yeryüzü bana ve ümmetime mescit ve teyemmüm vasıtası kılındı." Sünni kaynaklarda toprağın secde yeri olduğuna delil gösterilir.' }, grade: { tr: 'Sahih' }, url: 'https://ihadis.com/en/bukhari/hadith/335', status: 'verified' },
     { book: 'Müslim, Sahih', ref: 'No. 705 (Cem hadisi, İbn Abbas) — numara DOĞRULANMADI; site erişilemedi', says: { tr: 'İbn Abbas, Peygamber\'in korku ve yağmur olmaksızın Medine\'de öğle-ikindi ve akşam-yatsıyı birleştirdiğini, gerekçenin ümmetini zora sokmamak olduğunu söyler.' }, status: 'check' },
-    { book: 'Müslim, Sahih', ref: 'Fedâilü\'s-Sahâbe, Kisâ (Âişe) hadisi; numara DOĞRULANMADI', says: { tr: 'Peygamber, Ali, Fatıma, Hasan ve Hüseyin\'i abasının altına alır ve Ahzâb 33:33 ayetini okur.' }, status: 'check' },
+    { book: 'Müslim, Sahih', ref: 'Fedâilü\'s-Sahâbe, Kisâ (Âişe) hadisi; numara DOĞRULANMADI', says: { tr: 'Peygamber, Hz. Ali, Fatıma, Hz. Hasan ve Hz. Hüseyin\'i abasının altına alır ve Ahzâb 33:33 ayetini okur.' }, status: 'check' },
     { book: 'Beyhakî, es-Sünenü\'l-Kübrâ; Ebu Davud, Sünen (Ezan bölümü)', ref: 'DOĞRULANMADI (ezan ifadeleri, İbn Halife Ömer ve Ebu Mahzure rivayetleri)', says: { tr: 'Ezan sözlerinin rivayet farkları; İbn Halife Ömer\'in "hayye alâ hayri\'l-amel" dediğine dair rivayet ikincil kaynaklardan bilinir, sıhhati tartışmalıdır.' }, status: 'check' },
     { book: 'Mâlik, Muvatta\'; el-Müdevvene', ref: 'DOĞRULANMADI', says: { tr: 'Maliki mezhebinde namazda elleri sarkıtma (sadl) görüşünün aktarılması; Ramazan kıyamı ile ilgili Halife Ömer rivayeti.' }, status: 'check' },
-    { book: 'Tirmizî, Sünen', ref: 'Menâkıb, Ali bölümü, "men kuntu mevlâ" hadisi; numara DOĞRULANMADI', says: { tr: 'Gadir hadisi Sünni hadis kitaplarında da yer alır.' }, status: 'check' },
+    { book: 'Tirmizî, Sünen', ref: 'Menâkıb, Hz. Ali bölümü, "men kuntu mevlâ" hadisi; numara DOĞRULANMADI', says: { tr: 'Gadir hadisi Sünni hadis kitaplarında da yer alır.' }, status: 'check' },
   ],
   shia: [
     { book: 'Kuleynî, el-Kâfî', ref: 'Ezan, humus, takiyye ve Gadir bölümleri; cilt/numara DOĞRULANMADI', says: { tr: 'İmamlardan ezan, humus ve takiyyeye dair rivayetler ve Gadir\'in anlamı.' }, status: 'check' },
@@ -83,7 +83,7 @@ export const ibadetFarklari: HistEvent = {
   disputes: [
     {
       title: { tr: 'Ezan ifadeleri' },
-      shia: { tr: '"Hayye alâ hayri\'l-amel" ifadesi bazı erken rivayetlerde anılır. Câferî fıkıhta o, ezanın parçasıdır; Ali\'ye şahitlik şart değil, müstehap bir şiardır. "Es-salâtü hayrun mine\'n-nevm" ise Câferî ezanında okunmaz.' },
+      shia: { tr: '"Hayye alâ hayri\'l-amel" ifadesi bazı erken rivayetlerde anılır. Câferî fıkıhta o, ezanın parçasıdır; Hz. Ali\'ye şahitlik şart değil, müstehap bir şiardır. "Es-salâtü hayrun mine\'n-nevm" ise Câferî ezanında okunmaz.' },
       sunni: { tr: '"Hayye alâ hayri\'l-amel" ifadesi bazı erken rivayetlerde anılır. Sünni ezanda bu söz okunmaz; "es-salâtü hayrun mine\'n-nevm" sabah ezanının sünnetidir. İbn Halife Ömer\'e dair rivayetler de vardır.' },
     },
     {
