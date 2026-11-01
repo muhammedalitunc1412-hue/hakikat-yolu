@@ -1,11 +1,11 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Animated, Easing, Pressable, ScrollView, StyleSheet, Text, Vibration, View } from 'react-native';
+import { Animated, Easing, Platform, Pressable, ScrollView, StyleSheet, Text, Vibration, View } from 'react-native';
 import Svg, { Circle, Defs, G, Line, LinearGradient, Path, RadialGradient, Rect, Stop, Text as SvgText } from 'react-native-svg';
 import * as Location from 'expo-location';
 import { Accelerometer, Magnetometer } from 'expo-sensors';
 import { ui } from '../i18n';
-import { angleDiff as diff, magneticDeclination, norm360, qiblaFrom, smoothAngle, trueHeadingFromMagnetic } from '../qibla/bearing';
-import { fieldLooksOff, headingFromSensors, type Vec3 } from '../qibla/orientation';
+import { angleDiff as diff, isFacingQibla, magneticDeclination, norm360, pickTrueHeading, qiblaFrom, smoothAngle } from '../qibla/bearing';
+import { deviceGravity, fieldLooksOff, headingAccuracyIsPoor, headingFromSensors, type Vec3 } from '../qibla/orientation';
 import { C, TOP, align, font, usePageWidth } from './theme';
 
 const rad = (d: number) => (d * Math.PI) / 180;
@@ -69,9 +69,10 @@ function Dial({ size, bearing }: { size: number; bearing: number }) {
         const p = pt(a, R - 32);
         return <SvgText key={t} x={p.x} y={p.y + 7} fontSize={21} fontWeight="700" fill={t === 'N' ? '#ee6a6a' : C.cream} textAnchor="middle">{t}</SvgText>;
       })}
-      {/* Kıble çizgisi ve Kâbe */}
+      {/* Kıble ışını: yerel kuzeye çizilir, sonra kerteriz kadar döner.
+          Uç noktası işaretin y'sine bağlanırsa kerteriz iki kez uygulanır ve ışın ters düşer. */}
       <G rotation={bearing} originX={c} originY={c}>
-        <Line x1={c} y1={c - 14} x2={c} y2={k.y + 24} stroke={C.gold} strokeWidth={2} strokeDasharray="2 6" strokeLinecap="round" opacity={0.9} />
+        <Line x1={c} y1={c - 16} x2={c} y2={c - (R - 66)} stroke={C.gold} strokeWidth={2} strokeDasharray="2 6" strokeLinecap="round" opacity={0.9} />
       </G>
       <Circle cx={k.x} cy={k.y} r={30} fill="url(#glow)" />
       <G rotation={bearing} originX={k.x} originY={k.y}>
@@ -135,17 +136,12 @@ export function QiblaScreen({ onBack }: { onBack: () => void }) {
     const grav: { current: Vec3 | null } = { current: null };
     const mag: { current: Vec3 | null } = { current: null };
     const decl = { current: 0 };
-    const sensorOn = { current: false };
+    const sensorLive = { current: false };
     const fieldOff = { current: false };
     const lowAcc = { current: false };
     const refreshCal = () => setNeedsCal(fieldOff.current || lowAcc.current);
 
-    const push = (magnetic: number | null, alreadyTrue: number | null) => {
-      const v = alreadyTrue != null && alreadyTrue >= 0
-        ? alreadyTrue
-        : magnetic != null && magnetic >= 0
-          ? trueHeadingFromMagnetic(magnetic, decl.current)
-          : null;
+    const pushTrue = (v: number | null) => {
       if (v == null) return;
       const next = smoothAngle(smooth.current, v, 0.28);
       smooth.current = next;
@@ -154,12 +150,19 @@ export function QiblaScreen({ onBack }: { onBack: () => void }) {
 
     const onSensors = () => {
       if (!grav.current || !mag.current) return;
-      const raw = headingFromSensors(grav.current, mag.current);
-      if (raw == null) return;
       const strength = Math.hypot(mag.current.x, mag.current.y, mag.current.z);
       fieldOff.current = fieldLooksOff(strength);
+      const raw = headingFromSensors(grav.current, mag.current);
+      if (raw == null) {
+        refreshCal();
+        return;
+      }
+      // Konum pusulasının accuracy alanı burada kullanılmaz: Android aynı dinleyicide
+      // ivmeölçer doğruluğunu (çoğu cihazda 0) manyetometrenin üzerine yazar.
+      sensorLive.current = true;
+      lowAcc.current = false;
       refreshCal();
-      push(raw, trueHeadingFromMagnetic(raw, decl.current));
+      pushTrue(pickTrueHeading(raw, null, decl.current));
     };
 
     (async () => {
@@ -184,20 +187,21 @@ export function QiblaScreen({ onBack }: { onBack: () => void }) {
         const magOk = await Magnetometer.isAvailableAsync().catch(() => false);
         const accOk = await Accelerometer.isAvailableAsync().catch(() => false);
         if (alive && magOk && accOk) {
-          sensorOn.current = true;
           Magnetometer.setUpdateInterval(80);
           Accelerometer.setUpdateInterval(80);
-          accSub = Accelerometer.addListener(v => { grav.current = v; onSensors(); });
+          accSub = Accelerometer.addListener(v => { grav.current = deviceGravity(v, Platform.OS); onSensors(); });
           magSub = Magnetometer.addListener(v => { mag.current = v; onSensors(); });
         }
 
         headingSub = await Location.watchHeadingAsync(h => {
-          lowAcc.current = h.accuracy <= 1;
+          if (sensorLive.current) return;
+          lowAcc.current = headingAccuracyIsPoor(h.accuracy);
           refreshCal();
-          if (sensorOn.current) return;
-          const magnetic = h.magHeading >= 0 ? h.magHeading : null;
-          const tru = h.trueHeading >= 0 ? h.trueHeading : null;
-          push(magnetic, tru);
+          pushTrue(pickTrueHeading(
+            h.magHeading >= 0 ? h.magHeading : null,
+            h.trueHeading >= 0 ? h.trueHeading : null,
+            decl.current,
+          ));
         });
       } catch {
         if (alive) setStatus('error');
@@ -213,7 +217,7 @@ export function QiblaScreen({ onBack }: { onBack: () => void }) {
 
   const q = useMemo(() => (pos ? qiblaFrom(pos.lat, pos.lon) : null), [pos]);
   const off = q && heading != null ? diff(q.bearing, heading) : null; // + ise sağa dön
-  const aligned = off != null && Math.abs(off) <= 4;
+  const aligned = q != null && heading != null && isFacingQibla(q.bearing, heading);
 
   // Hizalanınca kısa bir titreşim
   const wasAligned = useRef(false);
@@ -265,7 +269,7 @@ export function QiblaScreen({ onBack }: { onBack: () => void }) {
             )}
 
             <View style={{ alignItems: 'center', marginTop: 20 }}>
-              <View style={[s.halo, { width: size + 30, height: size + 30, borderRadius: (size + 30) / 2, backgroundColor: aligned ? 'rgba(61,190,134,0.10)' : 'rgba(228,197,106,0.06)' }]} />
+              <View style={[s.halo, { width: size + 30, height: size + 30, borderRadius: (size + 30) / 2, backgroundColor: aligned ? 'rgba(61,190,134,0.28)' : 'rgba(228,197,106,0.06)' }]} />
               <View style={{ width: size, height: size }}>
                 <Animated.View style={{ width: size, height: size, transform: [{ rotate }] }}>
                   <Dial size={size} bearing={q.bearing} />

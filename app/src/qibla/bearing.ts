@@ -1,7 +1,11 @@
 // Kâbe'ye büyük daire (başlangıç kerterizi) ve manyetik sapma.
 // Kerteriz gerçek kuzeyden saat yönünde derecedir.
 
-export const KAABA = { lat: 21.4225, lon: 39.8262 };
+/** Kâbe (Mescid-i Haram), derece. */
+export const KAABA = { lat: 21.422487, lon: 39.826206 };
+
+/** Kıblede sayılmak için izin verilen sapma, derece. */
+export const QIBLA_ALIGN_DEG = 3;
 
 const rad = (d: number) => (d * Math.PI) / 180;
 const deg = (r: number) => (r * 180) / Math.PI;
@@ -47,4 +51,35 @@ export function magneticDeclination(lat: number, lon: number, when = new Date())
 
 export function trueHeadingFromMagnetic(magHeading: number, declination: number): number {
   return norm360(magHeading + declination);
+}
+
+/**
+ * Gerçek kuzey kerterizi.
+ * trueHeading 0 ve üstüyse olduğu gibi kullanılır (sapma ikinci kez eklenmez).
+ * trueHeading yoksa veya -1 ise manyetik kerterize sapma eklenir.
+ */
+export function pickTrueHeading(
+  magHeading: number | null,
+  trueHeading: number | null,
+  declination: number,
+): number | null {
+  if (trueHeading != null && Number.isFinite(trueHeading) && trueHeading >= 0) return norm360(trueHeading);
+  if (magHeading != null && Number.isFinite(magHeading) && magHeading >= 0) {
+    return trueHeadingFromMagnetic(magHeading, declination);
+  }
+  return null;
+}
+
+export function isFacingQibla(qibla: number, heading: number, tolerance = QIBLA_ALIGN_DEG): boolean {
+  return Math.abs(angleDiff(qibla, heading)) <= tolerance;
+}
+
+/** Kadranın saat yönü dönüşü. RN/CSS pozitif açısı saat yönüdür; kerteriz artınca kadran ters döner. */
+export function dialRotationDeg(heading: number): number {
+  return -heading;
+}
+
+/** Kıble işaretinin ekrandaki açısı. 0, üstteki okun tam altıdır. */
+export function qiblaOnScreen(bearing: number, heading: number): number {
+  return norm360(bearing + dialRotationDeg(heading));
 }

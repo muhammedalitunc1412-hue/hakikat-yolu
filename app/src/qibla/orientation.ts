@@ -35,18 +35,36 @@ export function rotationMatrix(gravity: Vec3, mag: Vec3): number[] | null {
 
 /**
  * Manyetik kuzeyden kerteriz.
- * Telefon yatayken üst kenarın baktığı yön; dik tutulunca kullanıcının baktığı yön
- * (ekranın arkası, yani cihazın -Z ekseni).
+ * İleri yön, telefon yatayken üst kenar (+Y), dik tutulunca ekranın arkası (−Z).
+ * İkisi eğime göre kesintisiz karışır: (0, yukarı·Z, −yukarı·Y).
+ * Sert bir eşikte eksen değiştirmek, telefon hafif yan yatıkken iğneyi zıplatır.
  */
 export function headingFromSensors(gravity: Vec3, mag: Vec3): number | null {
   const R = rotationMatrix(gravity, mag);
   if (!R) return null;
-  const pitch = Math.asin(Math.max(-1, Math.min(1, -R[7])));
-  const upright = Math.abs(pitch) > 0.7;
-  const east = upright ? -R[2] : R[1];
-  const north = upright ? -R[5] : R[4];
+  // R satırları cihaz ekseninde doğu, kuzey, yukarı.
+  const east = R[8] * R[1] - R[7] * R[2];
+  const north = R[8] * R[4] - R[7] * R[5];
   if (Math.hypot(east, north) < 0.05) return null;
   return ((Math.atan2(east, north) * 180) / Math.PI + 360) % 360;
+}
+
+/**
+ * expo-sensors ivmeölçeri Android'de ekran yukarı bakınca +Z verir.
+ * iOS CoreMotion aynı duruşta −Z verir; işaret çevrilmezse doğu ile batı yer değiştirir.
+ */
+export function deviceGravity(reading: Vec3, os: string): Vec3 {
+  if (os === 'ios') return { x: -reading.x, y: -reading.y, z: -reading.z };
+  return reading;
+}
+
+/**
+ * expo-location kerteriz doğruluğu: 3 yüksek, 2 orta, 1 düşük, 0 yok.
+ * Android'de bu değer ivmeölçer ile manyetometre arasında paylaşılır; ivmeölçer çoğu
+ * zaman 0 yazar. Sensör birleşimi açıkken bu eşiğe bakılmaz.
+ */
+export function headingAccuracyIsPoor(accuracy: number): boolean {
+  return accuracy <= 1;
 }
 
 /** Dünya alanının dışında kalan şiddet, kalibrasyon ister. µT. */
