@@ -9,52 +9,52 @@ export const imamlar: HistEvent = {
   hook: { tr: 'Kerbela\'dan sağ çıkan genç bir imam, ilim ve sabırla yürüyen bir rehberlik zincirini nasıl başlattı?', en: 'How did a sick young survivor of Karbala begin a line of learning and patience?' },
   scenes: [
     {
-      text: { tr: 'Kerbela\'da **Hz. Hüseyin** şehit oldu. İmamet, hasta oğlu **Ali**\'ye, Zeynelâbidîn\'e geçti. Meydanda savaşamamıştı. Çadırda sağ kalmıştı. Esirlik yolundan Medine\'ye döndü. Velayet, kılıçla bitmemişti. Bir hasta gencin göğsünde sürmüştü.' },
+      text: { tr: 'Kerbela\'da **Hz. Hüseyin** şehit oldu. İmamet, hasta oğlu **Ali**\'ye, Zeynelâbidîn\'e geçti. Ali meydanda savaşamamıştı. Çadırda sağ kalmıştı. Esirlik yolundan Medine\'ye döndü. Önderlik kılıçla bitmedi. Hasta gencin üzerinde sürdü.' },
       art: { bg: 'dune-dusk', props: ['tents'], actors: [] },
       by: 'both',
     },
     {
-      text: { tr: '**Seccâd**, Medine\'de ibadet ve duayla yaşadı. Duaları Sahife-i Seccâdiyye\'de toplandı. Ehl-i Beyt ona "Âl-i Muhammed\'in Zeburu" der. Risâletü\'l-Hukûk da ona nispet edilir. 94 H. civarında Bakî\'de, amcası **Hz. Hasan**\'ın yanına defnedildi. Ehl-i Beyt rivayetinde zehirlendi. Kerbela\'nın yetimi, duasını ümmete miras bıraktı.' },
+      text: { tr: '**Seccâd**, Medine\'de ibadet ve duayla yaşadı. Duaları Sahife-i Seccâdiyye\'de toplandı. Ehl-i Beyt bu sahifeye "Âl-i Muhammed\'in Zeburu" der. Risâletü\'l-Hukûk da ona nispet edilir. 94 H. civarında Bakî\'de, amcası **Hz. Hasan**\'ın yanına defnedildi. Ehl-i Beyt rivayetinde zehirlendi. Kerbela\'nın bu yetimi, duasını ümmete miras bıraktı.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 50, pose: 'sit', label: { tr: 'İmam Zeynelâbidîn' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Oğlu **Muhammed el-Bâkır**, ilmi yarıp derinliğine inen diye anılır. Medine\'de bir ders halkası kurdu. Yanında oğlu Câfer, Katâde, Zührî ve Evzâî de bulundu. 114 H. civarında Bakî\'de defnedildi. Gadir\'in ilmi, bu halkada nefes alıyordu.' },
+      text: { tr: 'Oğlu **Muhammed el-Bâkır** diye anılır. Bu ad, ilmi yarıp derinliğine inen demektir. Medine\'de bir ders halkası kurdu. Yanında oğlu Câfer, Katâde, Zührî ve Evzâî de bulundu. 114 H. civarında Bakî\'de defnedildi. Gadir\'den gelen ilim bu halkada sürdü.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 36, pose: 'sit', label: { tr: 'İmam Muhammed el-Bâkır' } }, { kind: 'crowd', x: 68, scale: 4 }] },
       by: 'both',
     },
     {
-      text: { tr: '**Câfer es-Sâdık**, isyanlara karışmadan ilme yöneldi. Câferî fıkıh onun adını taşır. 148 H\'de Medine\'de vefat etti. Velayet, kılıçsız bir ilim halkasında ümmeti doğru abdestten doğru imama kadar tuttu.' },
+      text: { tr: '**Câfer es-Sâdık**, isyanlara karışmadan ilme yöneldi. Câferî fıkıh onun adını taşır. 148 H\'de Medine\'de vefat etti. Önderlik burada kılıçsız bir ilim halkasıydı. Bu ilim ümmeti doğru abdestten doğru imama kadar tuttu.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'İmam Câfer es-Sâdık' } }, { kind: 'crowd', x: 70, scale: 5 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Ebû Hanîfe ve Mâlik, **İmam Sâdık**\'ın halkasından yararlananlar arasında anılır. "O iki yıl olmasaydı Nu\'mân helak olurdu" sözü Ebû Hanîfe\'ye atfedilir. Mâlik\'in ondan hadis dinlediği de aktarılır. İlmin kapısı, Medine\'de hâlâ açıktı.' },
+      text: { tr: 'Ebû Hanîfe ve Mâlik, **İmam Sâdık**\'ın halkasından yararlananlar arasında anılır. "O iki yıl olmasaydı Nu\'mân helak olurdu" sözü Ebû Hanîfe\'ye atfedilir. Mâlik\'in ondan hadis dinlediği de aktarılır. Bu ilim halkası Medine\'de açık kaldı.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 30, label: { tr: 'Ebû Hanîfe' } }, { kind: 'man', x: 52, pose: 'sit', label: { tr: 'İmam Câfer es-Sâdık' } }, { kind: 'man', x: 76, label: { tr: 'Mâlik b. Enes' } }] },
       by: 'shia',
     },
     {
-      text: { tr: '**Mûsâ el-Kâzım** Medine\'de ilmi ve sabrıyla tanındı. Hârûnürreşîd onu Bağdat\'a götürttü. Son dört yılı hapis ve gözetimde geçti. 183 H\'de Bağdat\'ta vefat etti. Kabri Kâzımeyn\'dedir. Ölümünün Bermekî emriyle olduğu aktarılır. Velayet, zindanda da sönmedi.' },
+      text: { tr: '**Mûsâ el-Kâzım**, Medine\'de ilmi ve sabrıyla tanındı. Hârûnürreşîd onu Bağdat\'a götürttü. Son dört yılı hapis ve gözetimde geçti. 183 H\'de Bağdat\'ta vefat etti. Kabri Kâzımeyn\'dedir. Ölümünün Bermekî emriyle olduğu aktarılır. Önderlik zindanda da bitmedi.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 34, label: { tr: 'İmam Mûsâ el-Kâzım' } }, { kind: 'man', x: 70, label: { tr: 'Hârûnürreşîd' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Me\'mun, **Ali er-Rızâ**\'yı Merv\'e çağırdı. Hilafeti bırakmayı önerdi. İmam kabul etmedi. Veliahtlık dayatıldı. İki ay direndi, sonra ahidnameyi imzalamak zorunda kaldı. Ehl-i Beyt rivayetinde bu, baskı altında kalan ve yönetimi meşrulaştırmayan bir kâğıttır. 203 H\'de Tûs yakınlarında vefat etti. Kabri Meşhed oldu. Veliahtlık, Kerbela\'dan beri süren gözetimin yeni adıydı.' },
+      text: { tr: 'Me\'mun, **Ali er-Rızâ**\'yı Merv\'e çağırdı. Hilafeti bırakmayı önerdi. İmam kabul etmedi. Veliahtlık dayatıldı. İki ay direndi. Sonra ahidnameyi imzalamak zorunda kaldı. Ehl-i Beyt rivayetinde bu, baskı altında kalan ve yönetimi meşrulaştırmayan bir kâğıttır. 203 H\'de Tûs yakınlarında vefat etti. Kabri Meşhed oldu. Bu veliahtlık, Kerbela\'dan beri süren gözetimin yeni biçimiydi.' },
       art: { bg: 'caravan', props: ['camels', 'scroll'], actors: [{ kind: 'man', x: 30, label: { tr: 'İmam Ali er-Rızâ' } }, { kind: 'man', x: 66, label: { tr: 'Me\'mun' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Muhammed el-Cevâd** babasını yedi yaşında kaybetti. Bağdat\'a götürüldü. 220 H\'de orada vefat etti. Oğlu **Ali el-Hâdî**, Mütevekkil tarafından Samarra\'ya kapatıldı. Oğlu **Hasan el-Askerî** de şehirden çıkamadığı için Askerî diye anıldı. 260\'ta vefat etti. Ehl-i Beyt rivayetinde ikisi de zehirlendi. Gözetim, imametin üstüne bir kafes gibi konmuştu.' },
+      text: { tr: '**Muhammed el-Cevâd** babasını yedi yaşında kaybetti. Bağdat\'a götürüldü. 220 H\'de orada vefat etti. Oğlu **Ali el-Hâdî**, Mütevekkil tarafından Samarra\'ya kapatıldı. Oğlu **Hasan el-Askerî** de şehirden çıkamadığı için Askerî diye anıldı. 260\'ta vefat etti. Ehl-i Beyt rivayetinde ikisi de zehirlendi. Gözetim, imametin üzerine kapanmıştı.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 26, label: { tr: 'İmam Ali el-Hâdî' } }, { kind: 'man', x: 56, label: { tr: 'İmam Hasan el-Askerî' } }, { kind: 'crowd', x: 82, scale: 3 }] },
       by: 'shia',
     },
     {
-      text: { tr: 'İmam Askerî\'nin vefatından kısa süre önce Samarra\'da bir oğlu doğdu: On İkinci İmam **Muhammed el-Mehdî**. Doğumu Abbasi baskısı yüzünden gizlendi. Küçük gaybette dört nâib aracılık etti. Sonra büyük gaybet başladı. O, adaleti yeryüzüne hâkim kılmak için dönecektir. Gadir\'de başlayan hat, gaybette de kopmamıştır.' },
+      text: { tr: 'İmam Askerî\'nin vefatından kısa süre önce Samarra\'da bir oğlu doğdu. Bu çocuk On İkinci İmam **Muhammed el-Mehdî**\'ydi. Doğumu Abbasi baskısı yüzünden gizlendi. Küçük gaybette dört nâib aracılık etti. Sonra büyük gaybet başladı. O, adaleti yeryüzüne hâkim kılmak için dönecektir. Gadir\'de başlayan çizgi gaybette de kopmadı.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'crowd', x: 50, scale: 5 }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Mehdi, Peygamber soyundandır. O, doğmuş ve gizlenmiştir. Ahir zamanda adaleti getirecektir. Kerbela\'da kesilen su, onun dönüşünde yeryüzünün adaletine bırakılmıştır. Sevenler bu bekleyişi, bir masal değil, imametin son halkası bilir.' },
+      text: { tr: 'Mehdi, Peygamber soyundandır. O, doğmuş ve gizlenmiştir. Ahir zamanda adaleti getirecektir. Kerbela\'da kesilen su, onun dönüşünde yeryüzüne gelecek adalete bırakılmıştır. Sevenler bu bekleyişi masal saymaz. Onu imametin son halkası bilir.' },
       art: { bg: 'dawn', props: ['sun', 'scroll'], actors: [] },
       by: 'sunni',
     },
