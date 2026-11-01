@@ -25,12 +25,14 @@ export const hayber: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Sabah herkes sancağı umdu. Peygamber, "Ali nerede?" diye sordu. **Hz. Ali**\'nin gözleri ağrıyordu. Onu getirdiler. Peygamber tükürüğünü gözlerine sürdü. Gözler açıldı. Sancağı ona verdi. Bir kişinin onun eliyle hidayete ermesi, kızıl develerden daha hayırlıydı.' },
+      text: { tr: 'Sabah Hayber önünde herkes sancağı umuyordu. Peygamber "Ali nerede?" diye sordu. **Hz. Ali**\'nin gözleri ağrıyordu. Onu getirdiler. Peygamber tükürüğünü gözlerine sürdü. Gözler açıldı. Sancağı **Hz. Ali**\'ye verdi. Ali sordu: "Ya Resulallah, onlar bizim gibi Müslüman olana kadar mı savaşayım?" Peygamber ona buyurdu: "Yavaşça git. Onların yurduna varınca önce onları İslam\'a davet et. Üzerlerine düşen Allah\'ın haklarını bildir. Allah\'a yemin ederim ki, **Allah\'ın senin vasıtanla tek bir kişiyi hidayete erdirmesi, senin için kızıl develere sahip olmaktan daha hayırlıdır**."' },
+      cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 1 }, { side: 'sunni', i: 2 }],
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'prophet', x: 42, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: '**Hz. Ali** kaleye yürüdü. Hayber\'in ünlü savaşçısı Merhab\'ın karşısına dikildi. Kale fethedildi. Sancak, söz verildiği gibi **Hz. Ali**\'nin elindeydi.' },
+      text: { tr: 'Hayber\'in kapısı önünde Yahudi savaşçısı **Merhab** meydana çıktı. Miğferi başındaydı, zırhı üzerindeydi. Kılıcını sallayarak recez okudu: "Hayber bilir ki ben Merhab\'ım. Silahım tam, savaşta pişmiş bir yiğidim. Savaş alevlenince ben oradayım." **Hz. Ali** karşısına geçti ve recezle cevap verdi: "Ben, annemin Haydar adını verdiği kişiyim. Haydar, aslan demektir. Orman aslanı gibi korkunç bakışlıyım." Ehl-i Beyt rivayetinde Ali **tek bir yara almadan** Zülfikar\'ı indirdi. Tek darbe Merhab\'ın miğferini ve kafasını tepeden ikiye yardı. **Merhab yere yıkıldı. Hz. Ali onu öldürdü, cehenneme yolladı.** Yahudi savaşçılar dehşete düştü. Kale bu darbeden sonra fethedildi.' },
+      cites: [{ side: 'sunni', i: 4 }, { side: 'shia', i: 1 }, { side: 'shia', i: 2 }],
       art: { bg: 'dune-day', actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 74, scale: 3 }] },
     },
     {
@@ -50,13 +52,16 @@ export const hayber: HistEvent = {
     },
   ],
   sunni: [
-    { book: 'Buhari, Sahih', ref: 'No. 2942 (Cihâd; Sehl b. Sa\'d)', says: { tr: 'Hayber\'de sancak Allah ve Resulü\'nü seven, onlarca sevilen kişiye verilir; Hz. Ali çağrılır, gözleri iyileşir.' }, grade: { tr: 'Müttefekun aleyh (Buhari-Müslim)' }, url: 'https://hadithunlocked.com/bukhari:2942', status: 'verified' },
-    { book: 'Buhari, Sahih', ref: 'No. 3009 (Cihâd; numara kontrol edilecek)', says: { tr: 'Hayber sancağı rivayetinin paralel biçimi.' }, grade: { tr: 'Sahih' }, status: 'check' },
-    { book: 'Müslim, Sahih', ref: 'No. 2406 (sitede 1807a; Seleme b. Ekva)', says: { tr: 'Aynı olay; Hz. Ali Merhab\'ı öldürür.' }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/muslim:2406', status: 'verified' },
+    { book: 'Buhari, Sahih', ref: 'No. 2942 (Cihâd; Sehl b. Sa\'d)', says: { tr: 'Hayber\'de sancak Allah ve Resulü\'nü seven kişiye verilir. Hz. Ali\'nin gözleri açılır. Ali "Onlar bizim gibi olana kadar mı savaşayım?" der. Peygamber yavaş gitmesini, İslam\'a davet etmesini söyler ve bir kişiyi hidayete erdirmenin kızıl develerden hayırlı olduğunu bildirir.' }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/bukhari:2942', status: 'verified' },
+    { book: 'Buhari, Sahih', ref: 'Megâzî, Hayber gazvesi, No. 4210 (aynı metin Cihâd\'da No. 3009)', says: { tr: 'Sancak Hz. Ali\'ye verilir. Ali "Onlar bizim gibi Müslüman olana kadar mı savaşayım?" diye sorar. Peygamber: yavaşça git, yurtlarına varınca İslam\'a davet et, Allah\'ın haklarını bildir. "Allah\'ın senin vasıtanla bir kişiyi hidayete erdirmesi, kızıl develerden hayırlıdır." Metin No. 3009\'da okundu; Megâzî numarası 4210 olarak anılır.' }, grade: { tr: 'Sahih' }, url: 'https://sunnah.com/bukhari:3009', status: 'verified' },
+    { book: 'Müslim, Sahih', ref: 'No. 2406 (Fedâilü\'s-Sahâbe, Ali\'nin faziletleri; Sehl b. Sa\'d)', says: { tr: 'Aynı sancak diyaloğu. Ali "Ya Resulallah, onlar bizim gibi olana kadar mı savaşayım?" der. Peygamber yavaşça varıp İslam\'a davet etmesini ve Allah\'ın haklarını bildirmesini söyler. Bir kişiyi hidayete erdirmek, kızıl develere sahip olmaktan hayırlıdır.' }, grade: { tr: 'Sahih' }, url: 'https://sunnah.com/muslim:2406', status: 'verified' },
     { book: 'Hâkim, el-Müstedrek; Ahmed b. Hanbel, Müsned', ref: 'Büreyde rivayeti: sancakla önce Ebu Bekir sonra Ömer gönderilir (numara kontrol edilecek)', says: { tr: 'Önceki iki denemeden sonra sancağın Hz. Ali\'ye verildiği anlatılır.' }, grade: { tr: 'Sıhhati tartışmalı' }, status: 'check' },
+    { book: 'Müslim, Sahih', ref: 'No. 1807a (Kitâbü\'l-Cihâd ve\'s-Siyer, Hayber; Seleme b. el-Ekva)', says: { tr: 'Merhab zırhlı olarak "Hayber bilir ki ben Merhab\'ım" diye meydana çıkar. Hz. Ali "Ben annemin Haydar adını verdiği kişiyim" diye karşılık verir, başına vurur ve onu öldürür. Fetih onun eliyle olur. Miğferi tepeden ikiye yarma, yara almama ve cehenneme gitme bu metinde yoktur.' }, grade: { tr: 'Sahih' }, url: 'https://sunnah.com/muslim:1807a', status: 'verified' },
   ],
   shia: [
     { book: 'WikiShia, Battle of Khaybar (ikincil)', ref: 'Hayber Savaşı maddesi', says: { tr: 'Hayber\'de sancağın Hz. Ali\'ye verilmesi, kapı rivayeti ve olayın Şii kaynaklardaki anlatımı.' }, url: 'https://en.wikishia.net/view/Battle_of_Khaybar', status: 'check' },
+    { book: 'Şeyh Müfid, el-İrşâd', ref: 'Hayber ve Merhab bölümü (sayfa kilitlenmedi)', says: { tr: 'Hz. Ali\'nin Hayber\'de Merhab\'ı öldürmesi. Tek darbede miğfer ve başın ikiye ayrılması bu turda bir sayfaya kilitlenmedi; sahnede Ehl-i Beyt rivayeti diye ayrıldı. Sayfa uydurulmadı.' }, status: 'check' },
+    { book: 'Meclisî, Bihârü\'l-Envâr', ref: 'Hayber, Merhab (cilt ve sayfa kilitlenmedi)', says: { tr: 'Merhab\'ın recezi, Hz. Ali\'nin Haydar recezi ve Merhab\'ın öldürülmesi. Sayfa uydurulmadı.' }, status: 'check' },
   ],
   disputes: [
     {
