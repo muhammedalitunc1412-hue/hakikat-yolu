@@ -314,6 +314,17 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
     ...(story ? [{ kind: 'sources' as const }] : []),
   ];
   const total = pages.length;
+  const [pageHeights, setPageHeights] = useState<number[]>([]);
+  const setPageHeight = (index: number, h: number) => {
+    const next = Math.ceil(h);
+    setPageHeights(prev => {
+      if (Math.abs((prev[index] ?? 0) - next) < 2) return prev;
+      const copy = prev.slice();
+      copy[index] = next;
+      return copy;
+    });
+  };
+  const listHeight = pageHeights[idx];
   const maps = mapsForEvent(ev.id);
 
   const go = (i: number) => {
@@ -336,7 +347,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
 
   return (
     <View style={{ flex: 1, backgroundColor: C.bg }}>
-      <ScrollView {...sc} contentContainerStyle={{ paddingBottom: 64 }} keyboardShouldPersistTaps="handled">
+      <ScrollView {...sc} style={{ flex: 1 }} contentContainerStyle={{ paddingBottom: 64, flexGrow: 0 }} keyboardShouldPersistTaps="handled">
         <View style={s.evHead}>
           <Back onPress={onBack} />
           <Text style={[s.evTitle, align()]}>{tx(ev.title)}</Text>
@@ -364,20 +375,24 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
           pagingEnabled
           nestedScrollEnabled
           showsHorizontalScrollIndicator={false}
+          style={[s.sceneList, listHeight ? { height: listHeight } : null]}
           keyExtractor={(_, i) => String(i)}
           onMomentumScrollEnd={e => sync(e.nativeEvent.contentOffset.x)}
           onScrollEndDrag={e => sync(e.nativeEvent.contentOffset.x)}
           getItemLayout={(_, i) => ({ length: width, offset: width * i, index: i })}
-          renderItem={({ item }) => item.kind === 'video' ? (
+          renderItem={({ item, index }) => item.kind === 'video' ? (
             <View style={{ width }}>
-              <EventVideo evId={ev.id} width={width} />
-              <View style={s.sceneText}>
-                <Text style={[s.sceneBody, align(), { fontWeight: '800', color: C.gold }]}>{ui('video')}</Text>
-                <Text style={[s.dim, align(), { marginTop: 6 }]}>{ui('videoHint')}</Text>
+              <View collapsable={false} onLayout={e => setPageHeight(index, e.nativeEvent.layout.height)}>
+                <EventVideo evId={ev.id} width={width} />
+                <View style={s.sceneText}>
+                  <Text style={[s.sceneBody, align(), { fontWeight: '800', color: C.gold }]}>{ui('video')}</Text>
+                  <Text style={[s.dim, align(), { marginTop: 6 }]}>{ui('videoHint')}</Text>
+                </View>
               </View>
             </View>
           ) : item.kind === 'sources' ? (
-            <View style={{ width, paddingHorizontal: 16, paddingTop: 8 }}>
+            <View style={{ width }}>
+            <View collapsable={false} onLayout={e => setPageHeight(index, e.nativeEvent.layout.height)} style={{ paddingHorizontal: 16, paddingTop: 8 }}>
               <Text style={[s.catTitle, align()]}>Bu olay için bütün kaynaklar</Text>
               <Text style={[s.catSub, align()]}>Bu hikâyedeki her sahnenin dayandığı kitaplar bir arada.</Text>
               <Text style={[s.vLabel, { color: C.shia }]}>{ui('shiaSources')}</Text>
@@ -394,13 +409,16 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
                 </Pressable>
               )}
             </View>
+            </View>
           ) : (
             <View style={{ width }}>
-              <SceneImage evId={ev.id} n={item.n + 1} title={tx(ev.title)} width={width} image={item.scene.image} />
-              <View style={s.sceneText}>
-                <Rich style={[s.sceneBody, align()]} text={item.scene.text} selectable />
-                {!!item.scene.by && <AcceptChip by={item.scene.by} />}
-                {story && <SceneCites ev={ev} cites={item.scene.cites} />}
+              <View collapsable={false} onLayout={e => setPageHeight(index, e.nativeEvent.layout.height)}>
+                <SceneImage evId={ev.id} n={item.n + 1} title={tx(ev.title)} width={width} image={item.scene.image} />
+                <View style={s.sceneText}>
+                  <Rich style={[s.sceneBody, align()]} text={item.scene.text} selectable />
+                  {!!item.scene.by && <AcceptChip by={item.scene.by} />}
+                  {story && <SceneCites ev={ev} cites={item.scene.cites} />}
+                </View>
               </View>
             </View>
           )}
@@ -623,7 +641,8 @@ const s = themedStyles(() => StyleSheet.create({
   mapBtn: { flexDirection: 'row', alignItems: 'center', gap: 10, marginTop: 14, backgroundColor: 'rgba(228,197,106,0.1)', borderRadius: 16, paddingHorizontal: 14, paddingVertical: 12, minHeight: 56, borderWidth: 1, borderColor: 'rgba(228,197,106,0.35)' },
   mapBtnTitle: { color: C.gold, fontFamily: font.sans, fontSize: 12, fontWeight: '800', letterSpacing: 0.6 },
   mapBtnSub: { color: C.cream, fontFamily: font.sans, fontSize: 15, fontWeight: '700', marginTop: 1 },
-  sceneText: { backgroundColor: C.card, paddingHorizontal: 18, paddingVertical: 18, minHeight: 120 },
+  sceneList: { flexGrow: 0, width: '100%' },
+  sceneText: { backgroundColor: C.card, paddingHorizontal: 18, paddingVertical: 18 },
   sceneBody: { color: C.text, fontFamily: font.sans, fontSize: 17, lineHeight: 28 },
   accept: { alignSelf: 'flex-start', marginTop: 12, fontFamily: font.sans, fontSize: 12, fontWeight: '800', borderWidth: 1, borderRadius: 12, paddingHorizontal: 10, paddingVertical: 4 },
   pager: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 12, marginTop: 8 },
