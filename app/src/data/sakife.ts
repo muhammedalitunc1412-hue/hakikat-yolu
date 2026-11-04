@@ -38,7 +38,7 @@ export const sakife: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Fatıma** vefat edene kadar **Hz. Ali** biat etmedi. Bu süre altı aydı. Hz. Ali, kızı Fatıma\'nın acısında yanında durdu. Fedek, Fatıma\'nın elinden alınmıştı. Fatıma\'nın kapısının önünde ateş yemini edilmişti. Fatıma vefat edince halkın Hz. Ali\'ye bakışı değişti. Hz. Ali, kan dökülmesin diye biat etti. Gadir\'deki hakkını unutmadı.' },
+      text: { tr: '**Hz. Fatıma** vefat edene kadar **Hz. Ali** biat etmedi. Bu süre altı aydı. Hz. Ali, kızı Fatıma\'nın acısında yanında durdu. Fedek, Fatıma\'nın elinden alınmıştı. Fatıma\'nın kapısının önünde ateş yemini edilmişti. Fatıma vefat edince halkın Hz. Ali\'ye bakışı değişti. Hz. Ali, kan dökülmesin ve ümmet bölünmesin diye sessizliğini korudu. Barış için sustu. Gadir\'deki hakkını unutmadı.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 34, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 66, label: { tr: 'Ebu Bekir' } }] },
       by: 'both',
     },
