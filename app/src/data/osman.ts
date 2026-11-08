@@ -38,7 +38,7 @@ export const osman: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Halife Osman, 35 H Zilhicce\'de Medine\'de öldürüldü. 23-24 H\'deki şuradan bu ölüme kadar yaklaşık on iki yıl halife kalmıştı. **Hz. Ali** hutbesinde der: öldürmesi için emir vermiş olsaydı katil sayılırdı. İnsanları ondan alıkoymuş olsaydı yardımcısı olurdu. Hükmü Allah\'a bırakır. Hz. Ali bu öldürmede kılıç kullanmadı. Bu kanın yanında da yer almadı.' },
+      text: { tr: 'Halife Osman, 35 H Zilhicce\'de Medine\'de öldürüldü. 18 Zilhicce 35\'te öldürüldü. Hilafeti yaklaşık on iki yıl sürmüştü. **Hz. Ali** hutbesinde der: öldürmesi için emir vermiş olsaydı katil sayılırdı. İnsanları ondan alıkoymuş olsaydı yardımcısı olurdu. Hükmü Allah\'a bırakır. Hz. Ali bu öldürmede kılıç kullanmadı. Bu kanın yanında da yer almadı.' },
       art: { bg: 'dawn', actors: [{ kind: 'crowd', x: 34, scale: 7 }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
     },

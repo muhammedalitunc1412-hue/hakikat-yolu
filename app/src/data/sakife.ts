@@ -50,7 +50,7 @@ export const sakife: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Gece kuyu başında **Hz. Ali**\'nin hakkını andığı bir ağıt, Ehl-i Beyt geleneğinde anlatılır. Sayfa bu turda kilitlenmedi. Şıkşıkıyye hutbesinde, Nehcü\'l-Belâğa derlemesinde, hakkı dururken gözünde diken, boğazında kemik varken sabrettiği yazar. Hutbenin ona aidiyeti tartışılır. Sünni eleştirmenler nisbeti sorar. Şii âlimler hutbeyi ona bağlar. Kelimesi kelimesine yeni bir söz uydurulmadı.' },
+      text: { tr: 'Ehl-i Beyt anlatı geleneğinde, Hz. Ali\'nin gece kuyu başına çıkıp derdini anlattığı söylenir. Bu, doğrulanmış bir tarih olayı diye kilitlenmedi. Klasik bir sayfa bu turda açılmadı. Ayrı bir metin vardır. Nehcü\'l-Belâğa\'nın 3. hutbesinde, hakkı dururken gözünde diken, boğazında kemik varken sabrettiği yazar. Bu, derlenmiş bir hutbedir. Bazı Sünnî âlimler nisbeti sorar. Bazıları kabul eder. Şii âlimler hutbeyi ona bağlar.' },
       image: 'ali-kuyu-1',
       art: { bg: 'night', props: ['moon', 'well'], actors: [{ kind: 'ali', x: 48, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',

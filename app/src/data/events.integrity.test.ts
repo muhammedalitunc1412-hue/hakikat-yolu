@@ -45,7 +45,13 @@ test('Kasım cesedi baş diye değiştirilmedi', () => {
 
 test('yeni resimler kayıtlı, sakife-8 ayrı', () => {
   const img = read('./sceneImages.ts');
-  for (const id of ['ali-kuyu-1', 'muaviye-iktidar-2', 'muaviye-iktidar-7', 'sakife-8']) {
-    assert.match(img, new RegExp("'" + id + "':"));
+  for (const id of ['ali-kuyu-1', 'muaviye-iktidar-2', 'muaviye-iktidar-7', 'sakife-8', 'nehrevan-1', 'nehrevan-2', 'kerbela-zeynep-1']) {
+    assert.match(img, new RegExp("'" + id + "': require\\('../../assets/scenes/" + id + "\\.jpg'\\)"));
   }
+  const sakife = read('./sakife.ts');
+  assert.match(sakife, /image: 'sakife-8'/);
+  assert.match(sakife, /image: 'ali-kuyu-1'/);
+  assert.match(read('./nehrevan.ts'), /image: 'nehrevan-1'/);
+  assert.match(read('./nehrevan.ts'), /image: 'nehrevan-2'/);
+  assert.match(read('./kerbela.ts'), /image: 'kerbela-zeynep-1'/);
 });
