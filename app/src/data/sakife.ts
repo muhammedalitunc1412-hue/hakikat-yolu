@@ -9,41 +9,56 @@ export const sakife: HistEvent = {
   scenes: [
     {
       text: { tr: 'Medine\'de Peygamber yeni vefat etmişti. Gadir\'de eli kaldırılan **Hz. Ali**, onun başucundaydı. Vefat haberi şehri karıştırdı. Hz. Ali, Abbas ve Haşimoğullarıyla yıkama ve defin hazırlığına koyuldu. O, cenazenin yanından ayrılmadı.' },
+      image: 'sakife-1',
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 34, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 68, scale: 4, label: { tr: 'Haşimoğulları' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Aynı saatlerde Ensar, Beni Saide gölgeliğinde toplandı. Hasta Sa\'d b. Ubade de oradaydı. Yönetimin kendilerinden olmasını istediler. Peygamber\'in bedeni henüz yıkanmamıştı. Bu toplantıda Gadir\'de **Hz. Ali** için ilan edilen hak konuşulmadı.' },
+      image: 'sakife-2',
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'crowd', x: 30, scale: 7, label: { tr: 'Ensar' } }, { kind: 'man', x: 66, pose: 'sit', label: { tr: 'Sa\'d b. Ubade' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Haberi alan Ebu Bekir, Ömer ve Ebu Ubeyde **Sakife**\'ye koştu. Ebu Bekir önce Ensar\'ı övdü. Sonra Arapların yönetimi Kureyş\'ten başkasına vermeyeceğini söyledi. Gadir\'de **Hz. Ali**\'nin eli kaldırılmıştı. Bu toplantıda o ilan yok sayıldı.' },
+      image: 'sakife-3',
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'crowd', x: 24, scale: 5, label: { tr: 'Ensar' } }, { kind: 'man', x: 48, label: { tr: 'Ebu Bekir' } }, { kind: 'man', x: 64, label: { tr: 'Ömer' } }, { kind: 'man', x: 80, label: { tr: 'Ebu Ubeyde' } }] },
       by: 'both',
     },
     {
       text: { tr: '**Sakife**\'de Hubab, "bizden bir emir, sizden bir emir" dedi. Beşir, Kureyş lehine konuştu. Sesler yükseldi. Evs ile Hazrec\'in eski rekabeti araya girdi. Biat, yani bağlılık sözü, Gadir\'deki ilana göre değil, bu kabile çekişmesine göre belirlendi.' },
+      image: 'sakife-4',
       art: { bg: 'city', actors: [{ kind: 'man', x: 28, pose: 'raise', label: { tr: 'Hubab b. Münzir' } }, { kind: 'man', x: 50, label: { tr: 'Beşir b. Sa\'d' } }, { kind: 'crowd', x: 76, scale: 5 }] },
       by: 'both',
     },
     {
       text: { tr: '**Sakife**\'de Ömer, Ebu Bekir\'in elini tutup biat etti. Ardından başkaları da etti. Ortam öyle gerildi ki "Sa\'d\'ı öldürdünüz" denildi. Sa\'d biat etmedi. **Hz. Ali** ise o sırada hâlâ Peygamber\'in yıkamasındaydı.' },
+      image: 'sakife-5',
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'man', x: 30, label: { tr: 'Ömer' } }, { kind: 'man', x: 52, label: { tr: 'Ebu Bekir' } }, { kind: 'crowd', x: 78, scale: 5 }] },
       by: 'both',
     },
     {
       text: { tr: 'Yıllar sonra Halife Ömer bu biata "felte" dedi. Felte, aceleyle, danışmadan alınan karardır. Allah şerrini savmış, dedi. Bir daha tekrarlanmasın, dedi. O acele karar, Gadir\'de ilan edilen hakkı bir kenara itti. İş, vefat gününün bir öğleden sonrasında bitmişti.' },
+      image: 'sakife-6',
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'crowd', x: 30, scale: 6 }, { kind: 'man', x: 68, pose: 'raise', label: { tr: 'Ömer' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Hz. Ali biat etmedi. Altı ay boyunca eşi **Hz. Fâtıma**\'nın acısında yanında durdu. Fedek gasp edildi. Hz. Fâtıma\'nın kapısının önünde ateş yemini edilmişti. Hz. Fâtıma vefat edince Hz. Ali, kan dökülmesin ve ümmet bölünmesin diye sessizliğini korudu. Barış için sustu. Gadir\'deki hakkını unutmadı.' },
+      image: 'sakife-7',
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 34, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 66, label: { tr: 'Ebu Bekir' } }] },
       by: 'both',
     },
     {
+      text: { tr: 'Gece kuyu başında **Hz. Ali**\'nin hakkını andığı bir ağıt, Ehl-i Beyt geleneğinde anlatılır. Sayfa bu turda kilitlenmedi. Şıkşıkıyye hutbesinde, Nehcü\'l-Belâğa derlemesinde, hakkı dururken gözünde diken, boğazında kemik varken sabrettiği yazar. Hutbenin ona aidiyeti tartışılır. Sünni eleştirmenler nisbeti sorar. Şii âlimler hutbeyi ona bağlar. Kelimesi kelimesine yeni bir söz uydurulmadı.' },
+      image: 'ali-kuyu-1',
+      art: { bg: 'night', props: ['moon', 'well'], actors: [{ kind: 'ali', x: 48, label: { tr: 'Hz. Ali' } }] },
+      by: 'shia',
+      cites: [{ side: 'shia', i: 0 }],
+    },
+    {
       text: { tr: 'Sonra Halife Ömer, işi altı kişilik şuraya bıraktı. Şura, danışma kuruludur. Biat Osman\'a yapıldı. Şıkşıkıyye hutbesinde **Hz. Ali** bu günleri sabırla anar. Sakife\'de başlayan hakkın bir kenara konması, şurada da sürdü. Onun sabrı, hakkın unutulması değildi.' },
+      image: 'sakife-8',
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'ali', x: 30, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 56, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'man', x: 78, label: { tr: 'Osman' } }] },
       by: 'shia',
     },

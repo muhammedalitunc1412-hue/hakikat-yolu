@@ -8,7 +8,7 @@ export const osman: HistEvent = {
   hook: { tr: 'Şikâyetler büyürken Hz. Ali Medine\'de arabuluculuk yaptı. Ardından kendisine biat istendi.', en: 'The man who mediated in Medina as grievances grew, and was then asked for allegiance.' },
   scenes: [
     {
-      text: { tr: 'Halife Osman\'ın Medine\'deki ilk yılları sakin geçti. İkinci yarıda valilikler ve mal, şikâyet konusu oldu. Özellikle **Ümeyyeoğulları** önemli görevlere getirildi. Daha önceki şura, yani danışma kurulu, **Hz. Ali**\'nin hakkını bir kenara koymuştu. Şimdi görevler ve mal, bu ailenin elinde toplandı. Kuşatma günü Osman, Peygamber\'in verdiği bir sözü hatırlatacaktı.' },
+      text: { tr: 'Halife Osman\'ın Medine\'deki ilk yılları sakin geçti. İkinci yarıda valilikler ve mal, şikâyet konusu oldu. Özellikle **Ümeyyeoğulları** önemli görevlere getirildi. Kayırma, akrabayı işe koymaktır. Hazine, ümmetin ortak malıdır. Şikâyet bu ikisine dayanıyordu. Daha önceki şura, yani danışma kurulu, **Hz. Ali**\'nin hakkını bir kenara koymuştu. Şimdi görevler ve mal, bu ailenin elinde toplandı. Kuşatma günü Osman, Peygamber\'in verdiği bir sözü hatırlatacaktı.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'crowd', x: 34, scale: 7 }, { kind: 'man', x: 66, label: { tr: 'Osman' } }] },
       by: 'both',
     },
@@ -38,7 +38,7 @@ export const osman: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Halife Osman, 35 H Zilhicce\'de Medine\'de öldürüldü. **Hz. Ali** hutbesinde der: öldürmesi için emir vermiş olsaydı katil sayılırdı. İnsanları ondan alıkoymuş olsaydı yardımcısı olurdu. Hükmü Allah\'a bırakır. Hz. Ali bu öldürmede kılıç kullanmadı. Bu kanın yanında da yer almadı.' },
+      text: { tr: 'Halife Osman, 35 H Zilhicce\'de Medine\'de öldürüldü. 23-24 H\'deki şuradan bu ölüme kadar yaklaşık on iki yıl halife kalmıştı. **Hz. Ali** hutbesinde der: öldürmesi için emir vermiş olsaydı katil sayılırdı. İnsanları ondan alıkoymuş olsaydı yardımcısı olurdu. Hükmü Allah\'a bırakır. Hz. Ali bu öldürmede kılıç kullanmadı. Bu kanın yanında da yer almadı.' },
       art: { bg: 'dawn', actors: [{ kind: 'crowd', x: 34, scale: 7 }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
     },

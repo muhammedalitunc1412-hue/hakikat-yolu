@@ -18,6 +18,7 @@ export const SCENE_IMAGES: Record<string, number> = {
   'ali-kimdir-7': require('../../assets/scenes/ali-kimdir-7.jpg'),
   'ali-kimdir-8': require('../../assets/scenes/ali-kimdir-8.jpg'),
   'ali-kimdir-9': require('../../assets/scenes/ali-kimdir-9.jpg'),
+  'ali-kuyu-1': require('../../assets/scenes/ali-kuyu-1.jpg'),
   'cemel-1': require('../../assets/scenes/cemel-1.jpg'),
   'cemel-2': require('../../assets/scenes/cemel-2.jpg'),
   'cemel-3': require('../../assets/scenes/cemel-3.jpg'),

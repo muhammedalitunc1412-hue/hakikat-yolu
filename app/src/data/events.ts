@@ -17,6 +17,7 @@ import { istihlaf } from './istihlaf';
 import { osman } from './osman';
 import { cemel } from './cemel';
 import { siffin } from './siffin';
+import { nehrevan } from './nehrevan';
 import { hasan } from './hasan';
 import { meysem } from './meysem';
 import { kerbela } from './kerbela';
@@ -48,6 +49,7 @@ const KEYS: Record<string, string> = {
   "fatima-vefat": "Eyyâm-ı Fâtımiyye: kapı, Muhsin ve gizli kabir",
   "cemel": "Hz. Ali'ye karşı ilk iç savaş",
   "siffin": "Sıffin, mushaflar ve hakem",
+  "nehrevan": "Hakemden sonra Nehrevan",
   "sebb": "Minberlerde Hz. Ali'ye sövme",
   "hasan": "Hz. Hasan'ın barışı ve şehadeti",
   "meysem": "Meysem et-Temmâr: haber verilen hurma ağacında şehadet",
@@ -60,7 +62,7 @@ const KEYS: Record<string, string> = {
   "ibadet-farklari": "Ezan, namaz ve secde farkları"
 };
 
-export const EVENTS: HistEvent[] = [penceAba, ehlibeyt, aliKimdir, hayber, menzile, gadir, raziyye, sakife, fedek, fatimaVefat, istihlaf, osman, cemel, siffin, sebb, muaviyeKimdir, muaviyeAli, muaviyeHasan, muaviyeIktidar, hasan, meysem, kerbela, imamlar, mezhepler, sadik, muta, abdest, ibadetFarklari].map(ev => ({ ...ev, key: { tr: KEYS[ev.id] }, notes: (NOTES[ev.id] ?? []).map(tr => ({ tr })) }));
+export const EVENTS: HistEvent[] = [penceAba, ehlibeyt, aliKimdir, hayber, menzile, gadir, raziyye, sakife, fedek, fatimaVefat, istihlaf, osman, cemel, siffin, nehrevan, sebb, muaviyeKimdir, muaviyeAli, muaviyeHasan, muaviyeIktidar, hasan, meysem, kerbela, imamlar, mezhepler, sadik, muta, abdest, ibadetFarklari].map(ev => ({ ...ev, key: { tr: KEYS[ev.id] }, notes: (NOTES[ev.id] ?? []).map(tr => ({ tr })) }));
 
 // Öğretici sayfalar roman gibi sahnelenmez. Kısa not, kaynak ve vurgu yeter.
 export const TEACHING_IDS = new Set(['mezhepler', 'sadik', 'muta', 'abdest', 'ibadet-farklari']);
@@ -76,7 +78,7 @@ export const CATEGORIES: { id: string; title: string; sub: string; ids: string[]
   { id: 'ehlibeyt', title: 'Ehl-i Beyt ve Gadir', sub: 'Pence-i Âl-i Aba, Mübahele, Hz. Ali kimdir, Hayber, Tebük, Gadir Hum', ids: ['pence-aba', 'ehlibeyt', 'ali-kimdir', 'hayber', 'menzile', 'gadir'] },
   { id: 'hilafet', title: 'Peygamber\'den Sonra: Hilafet', sub: 'Kırtas, Sakife, istihlaf ve Şura, Halife Osman dönemi', ids: ['raziyye', 'sakife', 'istihlaf', 'osman'] },
   { id: 'fatima', title: 'Hz. Fatıma', sub: 'Fedek hakkı, Eyyâm-ı Fâtımiyye, gece defin ve gizli kabir', ids: ['fedek', 'fatima-vefat'] },
-  { id: 'ali', title: 'Hz. Ali Dönemi', sub: 'Cemel, Sıffin, Hakem, Nehrevan, minberlerde sövme', ids: ['cemel', 'siffin', 'sebb'] },
+  { id: 'ali', title: 'Hz. Ali Dönemi', sub: 'Cemel, Sıffin, Hakem, Nehrevan, minberlerde sövme', ids: ['cemel', 'siffin', 'nehrevan', 'sebb'] },
   { id: 'muaviye', title: 'Muaviye Kimdir?', sub: "Ailesi, Hz. Ali'ye karşı Sıffin, Hz. Hasan ile sulhu ve iktidarı", ids: ['muaviye-kimdir', 'muaviye-ali', 'muaviye-hasan', 'muaviye-iktidar'] },
   { id: 'imamlar', title: 'İmamlar ve Kerbela', sub: 'Hz. Hasan, Meysem et-Temmâr, Kerbela, imamlar', ids: ['hasan', 'meysem', 'kerbela', 'imamlar'] },
   { id: 'mezhep', title: 'Mezhepler ve İbadet Farkları', sub: 'Mezheplerin doğuşu, Hz. Ca\'fer-i Sâdık, mut\'a, abdest, ezan ve diğer farklar', ids: ['mezhepler', 'sadik', 'muta', 'abdest', 'ibadet-farklari'] },

@@ -39,7 +39,7 @@ export const muta: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'İbn Abbas\'ın mut\'aya izin verdiği bildirilir. Bu fetva, zorunluluk ve kadın azlığı gibi şartlara bağlanır. İbn Abbas\'ın sonradan tamamen vazgeçtiği haberi zayıf zincirlerle gelir (İbn Hacer, Fethu\'l-Bârî). Câferî fıkıh, mut\'ayı belli süre, belli mehir ve bitişte kadının iddeti şartıyla sürdürür.' },
+      text: { tr: 'İbn Abbas\'ın mut\'aya izin verdiği bildirilir. Bu fetva, zorunluluk ve kadın azlığı gibi şartlara bağlanır. İbn Abbas\'ın sonradan tamamen vazgeçtiği haberi zayıf zincirlerle gelir (İbn Hacer, Fethu\'l-Bârî). Câferî fıkıh, mut\'ayı erişkin iki taraf, belli süre, belli mehir ve bitişte kadının iddeti şartıyla sürdürür. Bu, gizli bir aldatmaca diye anlatılmaz. Sünni mezhepler haram sayar. Nevevî icmâ der. Câferî mektep bu icmâyı kabul etmez. Evrensel bir ittifak diye kilitlenmedi.' },
       art: { bg: 'dawn', props: ['scroll'], actors: [{ kind: 'man', x: 34 }, { kind: 'woman', x: 52 }, { kind: 'crowd', x: 76, scale: 5 }] },
       by: 'both',
     },

@@ -12,7 +12,7 @@ export const muaviyeAli: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Şam\'da **Muaviye**, yirmi yıldır bir ordu besliyordu. **Hz. Ali** halife olunca hakkı yerini bulmuştu. Valileri değiştirirken Muaviye\'yi Şam\'dan azletti. O, azli de biatı da reddetti. Biat, bağlılık sözüdür. O, Peygamber\'in vasisi Hz. Ali\'nin önünde iktidarını bırakmadı.' },
+      text: { tr: 'Şam\'da **Muaviye**, yirmi yıldır bir ordu besliyordu. **Ömer** onu Şam\'a vali bıraktı. **Osman** vilayeti büyüttü. İlk tayin Osman\'ın değildir. **Hz. Ali** halife olunca valileri adalet için değiştirdi. Muaviye\'yi de Şam\'dan azletmek istedi. Bu, içindeki imanı bir gerçek diye yazmak değildi. Yönetim ve adalet içindi. Muaviye azli de biatı da reddetti. Biat, bağlılık sözüdür. O, Peygamber\'in vasisi Hz. Ali\'nin önünde iktidarını bırakmadı.' },
       art,
       cites: [{ side: 'shia', i: 1 }],
     },
@@ -48,13 +48,13 @@ export const muaviyeAli: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Hakem toplantısında **Ebu Musa** ile **Amr b. el-As** oturdu. Anlatıldığına göre Amr, Ebu Musa\'yı aldattı. Önce ikisi de azledilmiş gibi konuşuldu. Sonra **Muaviye** başa kondu. **Hz. Ali**\'nin emirliği bu söz oyunuyla elinden alındı. Mızraktaki hile, bu mecliste de sürdü.' },
+      text: { tr: 'Hakem toplantısında **Ebu Musa** ile **Amr b. el-As** oturdu. Yaygın bir anlatı vardır. Ebu Musa önce azli ilan eder. Amr ardından **Muaviye**\'yi başa kor. Yüzüğü çıkarmak ve yüzüğü takmak bu anlatının parçası diye anılır. Güveni tartışmalıdır. Kelimesi kelimesine söz yazılmadı. Sayfa bu turda kilitlenmedi. **Hz. Ali** bu sonucu kabul etmedi. Mızraktaki hile, bu mecliste de sürdü.' },
       art,
       cites: [{ side: 'sunni', i: 3 }, { side: 'shia', i: 2 }],
     },
     {
       by: 'both',
-      text: { tr: 'Hakemden sonra **Hz. Ali**\'nin safı bölündü. **Muaviye** Mısır\'a uzandı. Vali Muhammed b. Ebi Bekir öldürüldü. **Mâlik el-Eşter** yolda zehirlendi. Busr b. Ertât Hicaz\'da ve Yemen\'de kan döktü. Hakemdeki hile, bu saldırılarla sürdü. **Hz. Ali** 40 H\'de, bir sabah namazında şehit edildi.' },
+      text: { tr: 'Hakemden sonra **Hz. Ali**\'nin safı bölündü. **Mâlik el-Eşter**, Hz. Ali\'nin sadık komutanıydı. Savaşta öncü, yönetimde güvenilen biri diye anılır. Hz. Ali onu Mısır valiliğine gönderdi. Yolda zehirlendiği aktarılır. Zehrin sayfası bu turda kilitlenmedi. **Muaviye** Mısır\'a uzandı. Vali Muhammed b. Ebi Bekir öldürüldü. Busr b. Ertât Hicaz\'da ve Yemen\'de kan döktü. Hakemdeki hile, bu saldırılarla sürdü. **Hz. Ali** 40 H\'de, bir sabah namazında şehit edildi.' },
       art,
       cites: [{ side: 'sunni', i: 3 }, { side: 'shia', i: 0 }],
     },

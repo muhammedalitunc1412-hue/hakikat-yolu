@@ -59,7 +59,7 @@ export default function App() {
         {route.name === 'dua' && !dua && <Missing onBack={back} />}
         {route.name === 'qibla' && <QiblaScreen onBack={back} />}
         {route.name === 'imams' && <ImamList onOpen={id => push({ name: 'imam', id })} onBack={back} />}
-        {route.name === 'imam' && <ImamDetail key={route.id} id={route.id} onBack={back} onOpenEvent={id => push({ name: 'event', id })} />}
+        {route.name === 'imam' && <ImamDetail key={route.id} id={route.id} onBack={back} onOpenEvent={id => push({ name: 'event', id })} onOpenImam={id => setStack(s => { const n = s.slice(); n[n.length - 1] = { name: 'imam', id }; return n; })} />}
         {route.name === 'maps' && <MapList onOpen={id => push({ name: 'map', id })} onBack={back} />}
         {route.name === 'map' && <MapDetail key={route.id} id={route.id} onBack={back} onOpenEvent={id => push({ name: 'event', id })} />}
       </View>

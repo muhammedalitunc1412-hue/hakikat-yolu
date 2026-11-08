@@ -10,19 +10,19 @@ export const fatimaVefat: HistEvent = {
   hook: { tr: 'Fedek elinden alındı. Kapının önünde ateş yemini edildi. O, suskun öldü ve kabri gizlendi.', en: 'Fadak was taken. A fire was sworn at her door. She died without speaking, and her grave was hidden.' },
   scenes: [
     {
-      text: { tr: 'Medine\'de, Sakife\'nin ardından **Fedek** acısı geldi. Peygamber\'in hibe ettiği bahçe **Hz. Fatıma**\'nın elinden alındı. Hibe, bağış demektir. **Hz. Fatıma** mescitte ayağa kalktı. Hutbe-i Fedekiyye\'yi okudu. Karşılık kısaydı: "Biz peygamberler miras bırakmayız." Bahçe ona verilmedi. Hak yine onundu. Bu acı mescitte bitmedi. Ardından evinin kapısında sürdü.' },
+      text: { tr: 'Medine\'de, Sakife\'nin ardından **Fedek** acısı geldi. İki söz vardı. Hibe, bağış demektir. **Hz. Fatıma**, Peygamber\'in bahçeyi kendisine hibe ettiğini söyledi. Karşı söz mirastı. Miras, ölenin malından varise düşen paydır. Karşılık kısaydı: "Biz peygamberler miras bırakmayız." Bahçe ona verilmedi. Hak yine onundu. Bu acı mescitte bitmedi. Ardından evinin kapısında sürdü.' },
       art: { bg: 'city', props: ['sun'], actors: [{ kind: 'fatima', x: 36, label: { tr: 'Hz. Fatıma' } }, { kind: 'crowd', x: 68, scale: 4 }] },
       by: 'both',
       cites: [{ side: 'sunni', i: 0 }, { side: 'shia', i: 3 }],
     },
     {
-      text: { tr: 'Medine\'de, biat günü, bir grup **Hz. Ali**\'nin evinde toplanmıştı. Kapıya **Halife Ömer** geldi. Odun ve ateş getirtmişti. "Çıkın, yoksa evi içindekilerle yakarım" dedi. "İçeride Fatıma var" denince **Halife Ömer** "Olsa da!" dedi. Ehl-i Beyt rivayetinde kapıyı yakanlardan biri oydu. Ev, **Hz. Ali**\'nin eviydi. Peygamber Gadir\'de onun elini tutmuştu. Aynı kapı ateşle tehdit edildi.' },
+      text: { tr: 'Medine\'de, biat günü, bir grup **Hz. Ali**\'nin evinde toplanmıştı. Kapıya **Ömer** geldi. Odun ve ateş getirtmişti. "Çıkın, yoksa evi içindekilerle yakarım" dedi. "İçeride Fatıma var" denince **Ömer** "Olsa da!" dedi. Ehl-i Beyt rivayetinde kapıyı yakanlardan biri oydu. Ev, **Hz. Ali**\'nin eviydi. Peygamber Gadir\'de onun elini tutmuştu. Aynı kapı ateşle tehdit edildi.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 28, pose: 'raise', label: { tr: 'Ömer' } }, { kind: 'fatima', x: 68, label: { tr: 'Hz. Fatıma' } }] },
       by: 'shia',
       cites: [{ side: 'sunni', i: 1 }, { side: 'sunni', i: 2 }, { side: 'sunni', i: 4 }, { side: 'shia', i: 6 }],
     },
     {
-      text: { tr: 'Ehl-i Beyt rivayetine göre kapıyı tekmeleyip zorla iterek açan **Halife Ömer**\'di. Kapı yandı. **Hz. Fatıma** kapı ile duvar arasında kaldı. Kaburgası kırıldı. Göğsüne çivi battı. Karnındaki **Muhsin** düştü. "Babacığım" diye seslendi. **Hz. Ali** yetişti. Onu tuttu. Sabretti. Bu, **Hz. Ali**\'nin velayetinin bulunduğu evin kapısında oldu.' },
+      text: { tr: 'Ehl-i Beyt rivayetine göre kapıyı tekmeleyip zorla iterek açan **Ömer**\'di. Kapı yandı. **Hz. Fatıma** kapı ile duvar arasında kaldı. Kaburgası kırıldı. Göğsüne çivi battı. Karnındaki **Muhsin** düştü. "Babacığım" diye seslendi. **Hz. Ali** yetişti. Onu tuttu. Sabretti. Bu, **Hz. Ali**\'nin velayetinin bulunduğu evin kapısında oldu.' },
       art: { bg: 'interior', actors: [{ kind: 'fatima', x: 48, pose: 'sit', label: { tr: 'Hz. Fatıma' } }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
       cites: [{ side: 'shia', i: 6 }, { side: 'shia', i: 7 }, { side: 'shia', i: 8 }, { side: 'shia', i: 9 }, { side: 'shia', i: 0 }, { side: 'sunni', i: 2 }],
@@ -58,7 +58,7 @@ export const fatimaVefat: HistEvent = {
       cites: [{ side: 'sunni', i: 6 }, { side: 'shia', i: 5 }, { side: 'shia', i: 1 }],
     },
     {
-      text: { tr: 'Sabah **Halife Ömer** ve Ebu Bekir Bakî\'ye geldi. **Halife Ömer** emretti: "Mezarları kazın. Fatıma\'yı bulup namazını kılalım." Haber **Hz. Ali**\'ye ulaştı. Öfkeyle geldi. Elinde Zülfikar vardı. "Onun mezarından bir taş bile oynatırsanız bu topraklar sizin kanınızla sulanır" dedi. **Halife Ömer** karşılık verince **Hz. Ali** onun yakasına yapıştı. Onu sarsıp yere vurdu. Ebu Bekir araya girdi: "Ey Ebu\'l-Hasan, Resûlullah\'ın hakkı için onu bırak. Hoşuna gitmeyen hiçbir şey yapmayacağız." **Hz. Ali** bırakınca mezarı aramaktan vazgeçtiler. **Hz. Fatıma**\'nın mezarı bu yüzden bugün hâlâ gizlidir.' },
+      text: { tr: 'Sabah **Ömer** ve Ebu Bekir Bakî\'ye geldi. **Ömer** emretti: "Mezarları kazın. Fatıma\'yı bulup namazını kılalım." Haber **Hz. Ali**\'ye ulaştı. Öfkeyle geldi. Elinde Zülfikar vardı. "Onun mezarından bir taş bile oynatırsanız bu topraklar sizin kanınızla sulanır" dedi. **Ömer** karşılık verince **Hz. Ali** onun yakasına yapıştı. Onu sarsıp yere vurdu. Ebu Bekir araya girdi: "Ey Ebu\'l-Hasan, Resûlullah\'ın hakkı için onu bırak. Hoşuna gitmeyen hiçbir şey yapmayacağız." **Hz. Ali** bırakınca mezarı aramaktan vazgeçtiler. **Hz. Fatıma**\'nın mezarı bu yüzden bugün hâlâ gizlidir.' },
       art: { bg: 'dawn', props: ['swords'], actors: [{ kind: 'ali', x: 38, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 68, label: { tr: 'Ömer' } }] },
       by: 'shia',
       cites: [{ side: 'shia', i: 1 }, { side: 'shia', i: 2 }],
@@ -75,12 +75,12 @@ export const fatimaVefat: HistEvent = {
   ],
   shia: [
     { book: 'Süleym b. Kays, Kitâb', ref: 'cilt 1, s. 151', says: { tr: 'Künfuz\'un Hz. Fatıma\'yı kamçıyla vurduğu ve izinin kolunda kaldığı. Sayfadaki el-İhticâc farkında kapı sövesine itildiği, kaburgasının kırıldığı ve cenini düşürdüğü de yazılır. Kitabın bugünkü nüshasının aidiyeti Şii ricalde de tartışılır.' }, url: 'https://lib.eshia.ir/70632/1/151', status: 'verified' },
-    { book: 'Taberî (İmâmî), Delâilü\'l-İmâme', ref: 'cilt 1, s. 137 (Müessesetü\'l-Bi\'se)', says: { tr: 'Gece definden sonra kabir karıştırılmak istenir. Hz. Ali yakayı tutar, yere bırakır ve kabirden taş oynatılırsa kan döküleceğini söyler. Ebu Bekir araya girer, dağılırlar. Bakî\'de birkaç mezar şekli, Halife Ömer\'in kazma emri ve "kanınızla sulanır" sözü bu naklin anlatısındadır. Yeni sayfa uydurulmadı. Dipnot haberi Bihârü\'l-Envâr 43/171\'e bağlar.' }, url: 'https://lib.eshia.ir/15165/1/137', status: 'verified' },
+    { book: 'Taberî (İmâmî), Delâilü\'l-İmâme', ref: 'cilt 1, s. 137 (Müessesetü\'l-Bi\'se)', says: { tr: 'Gece definden sonra kabir karıştırılmak istenir. Hz. Ali yakayı tutar, yere bırakır ve kabirden taş oynatılırsa kan döküleceğini söyler. Ebu Bekir araya girer, dağılırlar. Bakî\'de birkaç mezar şekli, Ömer\'in kazma emri ve "kanınızla sulanır" sözü bu naklin anlatısındadır. Yeni sayfa uydurulmadı. Dipnot haberi Bihârü\'l-Envâr 43/171\'e bağlar.' }, url: 'https://lib.eshia.ir/15165/1/137', status: 'verified' },
     { book: 'Meclisî, Bihârü\'l-Envâr', ref: 'cilt 43, s. 171 (Delâil dipnotu)', says: { tr: 'Delâilü\'l-İmâme s. 137\'deki kabir sahnesinin derlendiği yer olarak anılır. Birkaç mezar, Ömer\'in emri, Zülfikar, yakaya yapışma ve Ebu\'l-Hasan diye bırakma sözü bu nakildedir. Bihâr cildi ayrıca açılmadı. Yeni sayfa uydurulmadı.' }, grade: { tr: 'Sayfa, Delâil baskısının dipnotundan alındı.' }, status: 'check' },
     { book: 'Ahmed b. Ebî Tâhir, Belâğatü\'n-Nisâ', ref: 'Fedek hutbesi (sayfa bu turda açılmadı)', says: { tr: 'Hz. Fatıma\'nın mescidde Fedek için söylediği hutbe bu eserde aktarılır.' }, status: 'check' },
     { book: 'İbn Şehraşûb, Menâkıb Âl-i Ebî Tâlib', ref: 'cilt 3, s. 137 (VikîŞia atfı)', says: { tr: 'Haksızlık edenlerin cenazede bulunmaması ve gizli defin vasiyeti.' }, grade: { tr: 'Sayfa bu çalışmada okunmadı.' }, status: 'check' },
     { book: 'Şeyh Sadûk, Men lâ yahduruhu\'l-fakîh', ref: 'kabir ihtimalleri (ev, Bakî, kabr ile minber arası)', says: { tr: 'Kabrin yeri hakkında üç görüş. Kesin yer bildirilmez.' }, grade: { tr: 'Sayfa bu turda açılmadı.' }, status: 'check' },
-    { book: 'Süleym b. Kays, Kitâb', ref: 'cilt 1, s. 387', says: { tr: 'Halife Ömer ateş istedi, kapıya verdi ve kapıyı yaktı, sonra kapıyı itti. Hz. Fatıma karşıladı. Kınındaki kılıç böğrüne, kamçı koluna vuruldu. "Olsa da" sözü el-İmâme ve\'s-Siyâse naklindedir. Yeni sayfa uydurulmadı.' }, url: 'https://lib.eshia.ir/70632/1/387', status: 'verified' },
+    { book: 'Süleym b. Kays, Kitâb', ref: 'cilt 1, s. 387', says: { tr: 'Ömer ateş istedi, kapıya verdi ve kapıyı yaktı, sonra kapıyı itti. Hz. Fatıma karşıladı. Kınındaki kılıç böğrüne, kamçı koluna vuruldu. "Olsa da" sözü el-İmâme ve\'s-Siyâse naklindedir. Yeni sayfa uydurulmadı.' }, url: 'https://lib.eshia.ir/70632/1/387', status: 'verified' },
     { book: 'Tabersî, el-İhticâc', ref: 'cilt 1, s. 212 (Ca\'fer Murtazâ aktarımı)', says: { tr: 'Künfuz kamçıladı, Hz. Fatıma kapı sövesine sıkıştırıldı, itildi, kaburgası kırıldı ve ceninini düşürdü.' }, grade: { tr: 'Sayfa bu turda kitabın kendi baskısından açılmadı; cümle bu sayfayla aktarılır.' }, status: 'check' },
     { book: 'Meclisî, Bihârü\'l-Envâr', ref: 'cilt 30, s. 294 (Müessesetü\'l-Vefâ)', says: { tr: 'Kapı tekmelenir. Hz. Fatıma gövdesini kapıya dayamıştır. Sonra duvara yaslanır, karnındakinin öldüğünü söyler. Düşen çocuğa Hz. Ali Muhsin adını verir.' }, url: 'https://lib.eshia.ir/11008/30/294', status: 'verified' },
     { book: 'Mü\'temeru ulemâi Bağdâd (Şiblüddevle Mukâtil b. Atıyye\'ye nispet)', ref: 's. 135', says: { tr: 'Geç bir kitap. Ömer\'in Hz. Fatıma\'yı duvar ile kapı arasında sıktığı, cenini düşürdüğü ve kapı çivisinin göğsüne battığı burada anlatılır.' }, grade: { tr: 'Geç kaynak. Sayfa, Ca\'fer Murtazâ el-Âmilî\'nin Maa\'sâtü\'z-Zehrâ aktarımıyladır.' }, status: 'check' },
@@ -103,5 +103,5 @@ export const fatimaVefat: HistEvent = {
     { tr: 'Kabri bilinmiyor. Aranan ve bulunamayan bir kabir, protestoyu nasıl diri tutar?' },
     { tr: 'Hz. Ali kabri korurken kendi hakkını yere bırakmıştı. Bu sabır, onun faziletini size nasıl anlatır?' },
   ],
-  summary: { tr: 'Fedek reddedildi. Ehl-i Beyt rivayetinde Halife Ömer kapıyı yaktı ve tekmeledi. Hz. Fatıma kapı ile duvar arasında kaldı, kaburgası kırıldı ve Muhsin düştü. Gece defnedildi. Sabah Halife Ömer mezarları kazdırmak istedi. Hz. Ali Zülfikar ile durdurdu. Kabri bugün de gizlidir.' },
+  summary: { tr: 'Fedek reddedildi. Ehl-i Beyt rivayetinde Ömer kapıyı yaktı ve tekmeledi. Hz. Fatıma kapı ile duvar arasında kaldı, kaburgası kırıldı ve Muhsin düştü. Gece defnedildi. Sabah Ömer mezarları kazdırmak istedi. Hz. Ali Zülfikar ile durdurdu. Kabri bugün de gizlidir.' },
 };

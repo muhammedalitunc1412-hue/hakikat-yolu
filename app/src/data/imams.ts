@@ -23,6 +23,26 @@ export type Imam = {
   studentsNote?: string;
 };
 
+// Yaşlar, dosyadaki doğum ve vefat yıllarının farkıdır. Kamerî yıl kabaca hicrî farktır.
+// Güneş yılı ve rivayet farkı ayrıca yazılır. Tek bir kesin yaş uydurulmadı.
+export function imamAgeNote(id: string): string {
+  const notes: Record<string, string> = {
+    ali: 'Doğum yaklaşık 600, vefat 661. Güneş yılıyla altmış civarıdır. Hicrî yaş rivayetlerde değişir. Tek yaş kilitlenmedi.',
+    hasan: 'Doğum 3 H. Vefat rivayetleri 49–51 H. Fark yaklaşık 46–48 kamerî yıldır. Kesin yaş kilitlenmedi.',
+    huseyin: 'Doğum 4 H, şehadet 61 H. Fark yaklaşık 57 kamerî yıldır. Küçük tarih farkları vardır.',
+    zeynelabidin: 'Doğum 36 veya 38 H diye anılır. Vefat 94 veya 95 H. Fark yaklaşık 56–59 kamerî yıldır.',
+    bakir: 'Doğum 57 H. Vefat 114 H, bazı kayıtlarda 117 H. Fark yaklaşık 57 veya 60 kamerî yıldır.',
+    sadik: 'Doğum 80 veya 83 H. Vefat 148 H. Fark yaklaşık 65–68 kamerî yıldır.',
+    kazim: 'Doğum 128 H, vefat 183 H. Fark yaklaşık 55 kamerî yıldır.',
+    riza: 'Doğum 148 H, vefat 203 H. Fark yaklaşık 55 kamerî yıldır.',
+    cevad: 'Doğum 195 H, vefat 220 H. Fark 25 kamerî yıldır. Dosyada da yaklaşık 25 yaş yazar.',
+    hadi: 'Doğum 212 H, vefat 254 H. Fark yaklaşık 42 kamerî yıldır.',
+    askeri: 'Doğum 232 H, vefat 260 H. Fark yaklaşık 28 kamerî yıldır.',
+    mehdi: 'Vefat yaşı yoktur. Gaybettedir. Doğum 255 H diye anılır; bu da rivayettir. Yaş uydurulmadı.',
+  };
+  return notes[id] ?? 'Yaş bu turda kilitlenmedi.';
+}
+
 export const IMAMS: Imam[] = [
   {
     id: 'ali', no: 1, name: 'Hz. Ali', kunya: "Ebü'l-Hasan, Ebû Türâb",
