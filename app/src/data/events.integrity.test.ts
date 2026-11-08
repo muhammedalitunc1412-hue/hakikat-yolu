@@ -25,8 +25,10 @@ test('Sakîfe resimleri kaymaz, kuyu ayrı anahtardadır', () => {
   const kuyu = imgs.indexOf('ali-kuyu-1');
   const yalniz = imgs.indexOf('sakife-yalnizlik-1');
   assert.ok(imgs.indexOf('sakife-7') < yalniz && yalniz < kuyu && kuyu < imgs.indexOf('sakife-8'));
-  assert.match(src, /sayfa görülmeden yazılmadı/);
-  assert.doesNotMatch(src, /selamını almazlardı/);
+  assert.match(src, /insanların Hz\. Ali\\'ye karşı tavrı değişti/);
+  assert.match(src, /Buhari 4240/);
+  assert.match(src, /biat ettiğini de yazar/);
+  assert.doesNotMatch(src, /selam/);
   assert.match(read('./sceneImages.ts'), /'ali-kuyu-1':/);
   assert.match(read('./sceneImages.ts'), /'sakife-8':/);
 });

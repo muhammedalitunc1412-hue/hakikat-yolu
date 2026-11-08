@@ -83,7 +83,7 @@ export const NOTES: Record<string, string[]> = {
     "Ebu Bekir, Ömer ve Ebu Ubeyde de oraya gitti.",
     "Halife Ebu Bekir'e biat edildi; Halife Ömer bunu sonradan «felte» diye nitelendirdi (Buhari).",
     "Hz. Ali ve Haşimoğulları Peygamber'in yıkama ve defin hazırlığındaydı.",
-    "Hz. Ali biat etmedi. Kan dökülmesin diye sessiz kaldı. Buhari'deki sonraki biat cümlesi sahnede hüküm diye yazılmadı.",
+    "Hz. Ali biat etmedi. Kan dökülmesin diye sessiz kaldı. Buhari 4240, Hz. Fâtıma'nın vefatından sonra insanların tavrının değiştiğini anlatır ve aynı hadiste sonraki biatı da yazar. O devam, biat etmeme hükmünün delili değildir.",
     "Gece kuyu ağıtı gelenekte anılır. Sayfa kilitlenmedi. Resim anahtarı ali-kuyu-1.",
   ],
   istihlaf: [

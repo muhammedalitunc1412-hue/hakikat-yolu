@@ -50,10 +50,11 @@ export const sakife: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Fâtıma\'nın vefatından sonra Hz. Ali Medine\'de yalnız kaldı. Biat etmemişti. Kan dökülmesin diye sesini kısmıştı. Bu suskunluk, Gadir\'deki hakkını unutmak değildi. Sokakta selam verip herkesin selamını almadığı iddiası, sayfa görülmeden yazılmadı.' },
+      text: { tr: 'Hz. Fâtıma\'nın vefatından sonra insanların Hz. Ali\'ye karşı tavrı değişti. Buhari 4240, Hz. Ali\'nin insanların yüzlerini yabancı bulduğunu anlatır. Bu hadis yalnız bu soğukluk için anıldı. Aynı hadis, ardından Hz. Ali\'nin Ebu Bekir\'e biat ettiğini de yazar. Uygulamadaki Şii okuyuş o devamı kabul saymaz.' },
       image: 'sakife-yalnizlik-1',
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'ali', x: 38, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 72, scale: 4 }] },
-      by: 'shia',
+      by: 'both',
+      cites: [{ side: 'sunni', i: 1 }],
     },
     {
       text: { tr: 'Ehl-i Beyt anlatı geleneğinde, Hz. Ali\'nin gece kuyu başına çıkıp derdini anlattığı söylenir. Anlatıda ayaktadır. Hafifçe eğilir. İki eli kuyu kenarındadır. Kuyuya kapanmış değildir. Bu, doğrulanmış bir tarih olayı diye kilitlenmedi. Klasik bir sayfa bu turda açılmadı. Ayrı bir metin vardır. Nehcü\'l-Belâğa\'nın 3. hutbesinde, hakkı dururken gözünde diken, boğazında kemik varken sabrettiği yazar. Bu, derlenmiş bir hutbedir. Bazı Sünnî âlimler nisbeti sorar. Bazıları kabul eder. Şii âlimler hutbeyi ona bağlar.' },
@@ -71,7 +72,7 @@ export const sakife: HistEvent = {
   ],
   sunni: [
     { book: 'Buhari, Sahih', ref: 'No. 6830 (Hudud, Recm)', says: { tr: 'Halife Ömer\'in uzun hutbesi: Halife Ebu Bekir\'in biatının "felte" olduğu, Allah\'ın şerrini savdığı, bunun tekrarlanmaması gerektiği; Sakife\'deki tartışma ve gerilim.' }, grade: { tr: 'Sahih' }, url: 'https://sunnah.com/bukhari:6830', status: 'check' },
-    { book: 'Buhari, Sahih', ref: 'No. 4240-4241 (Meğâzî)', says: { tr: 'Hz. Fatıma, Halife Ebu Bekir\'den mirasını ister; reddedilir, Hz. Fatıma küser ve altı ay sonra vefat eder; Hz. Ali geceleyin defneder; Hz. Ali sonradan biat eder. "Altı ay" ifadesi Zührî\'ye bağlı bir cümle olarak gösterilir.' }, grade: { tr: 'Sahih; "altı ay" ibaresi şerhlerde tartışılır' }, url: 'https://sunnah.com/bukhari:4240', status: 'verified' },
+    { book: 'Buhari, Sahih', ref: 'No. 4240-4241 (Meğâzî)', says: { tr: 'Hz. Fatıma, Halife Ebu Bekir\'den mirasını ister; reddedilir, Hz. Fatıma küser ve altı ay sonra vefat eder; Hz. Ali geceleyin defneder. Hz. Fâtıma hayattayken insanların Hz. Ali\'ye itibar ettiği, vefatından sonra Hz. Ali\'nin insanların yüzlerini yabancı bulduğu da bu hadistedir. Ardından Hz. Ali\'nin Ebu Bekir\'e biat ettiği yazılır. Bu kart, biat etmeme hükmünün delili değildir. "Altı ay" ifadesi Zührî\'ye bağlı bir cümle olarak gösterilir.' }, grade: { tr: 'Sahih; "altı ay" ibaresi şerhlerde tartışılır' }, url: 'https://sunnah.com/bukhari:4240', status: 'verified' },
     { book: 'Müslim, Sahih', ref: 'No. 1759 (Cihad ve Siyer)', says: { tr: 'Aynı olay: Hz. Fatıma\'nın miras talebi, Halife Ebu Bekir\'in cevabı ve Hz. Ali\'nin biatı.' }, grade: { tr: 'Sahih' }, url: 'https://sunnah.com/muslim:1759', status: 'check' },
     { book: 'Taberî, Târîh', ref: 'c.3, 11 H olayları (sayfa kontrol edilecek)', says: { tr: 'Sakife tartışması, Ebu Bekir\'in hutbesi, Hubab b. Münzir ve Beşir b. Sa\'d. Haşimoğulları\'nın geri durması ve Sa\'d\'ın biat etmemesi de anılır. Ebu Mihnef gibi tartışmalı râvilerden rivayet içerir.' }, status: 'check' },
     { book: 'İbn Sa\'d, Tabakât', ref: 'Sa\'d b. Ubade maddesi (sayfa kontrol edilecek)', says: { tr: 'Sa\'d b. Ubade\'nin biat etmediği ve sonra Şam bölgesinde öldüğü. Vâkıdî rivayetleri zayıf sayılır.' }, status: 'check' },
