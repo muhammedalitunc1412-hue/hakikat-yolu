@@ -62,3 +62,38 @@ test('yeni resimler kayıtlı, sakife-8 ayrı', () => {
   assert.match(read('./nehrevan.ts'), /image: 'nehrevan-2'/);
   assert.match(read('./kerbela.ts'), /image: 'kerbela-zeynep-1'/);
 });
+
+test('genişleme sahnelerinin görseli kayıtlı, yer tutucu kalmaz', () => {
+  const img = read('./sceneImages.ts');
+  const fresh = [
+    'sakife-yalnizlik-1',
+    'kerbela-muslim-su',
+    'kerbela-susuzluk',
+    'kerbela-seccad-1',
+    'kerbela-cadir-sabah',
+    'kerbela-sukut',
+    'kerbela-esir-yol',
+    'kerbela-kufe-pencere',
+    'kerbela-erbain',
+  ];
+  for (const id of fresh) {
+    assert.match(img, new RegExp("'" + id + "': require\\('../../assets/scenes/" + id + "\\.jpg'\\)"));
+  }
+  const bound = (file: string, expected: number) => {
+    const src = read(file);
+    const block = src.slice(src.indexOf('scenes: ['), src.indexOf('\n  sunni:'));
+    const texts = [...block.matchAll(/text: \{ tr:/g)];
+    const keys = [...block.matchAll(/image: '([^']+)'/g)].map(m => m[1]);
+    assert.equal(texts.length, expected);
+    assert.equal(keys.length, texts.length);
+    assert.equal(new Set(keys).size, keys.length);
+    for (const id of keys) {
+      assert.match(img, new RegExp("'" + id + "': require\\('../../assets/scenes/" + id + "\\.jpg'\\)"));
+    }
+  };
+  bound('./kerbela.ts', 36);
+  bound('./sakife.ts', 10);
+  const events = read('./events.ts');
+  assert.match(events, /export function nextStory/);
+  assert.match(events, /TEACHING_IDS = new Set\(\['mezhepler', 'sadik', 'muta', 'abdest', 'ibadet-farklari'\]\)/);
+});
