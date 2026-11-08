@@ -40,7 +40,7 @@ export const cemel: HistEvent = {
       cites: [{ side: 'sunni', i: 5 }, { side: 'sunni', i: 0 }, { side: 'shia', i: 1 }],
     },
     {
-      text: { tr: 'Barış yetmeyince iki ordu karşılaştı. Karşı taraf **Hz. Ali**\'ye savaş açmıştı. Aişe\'nin bindiği deve, karşı tarafın toplandığı yerdi. Savaş o devenin çevresinde sürdü. Deve çökünce toplanacak yer kalmadı. Ordu dağıldı. Savaş bu yüzden bitti. Kendiliğinden bir büyü olmadı. Talha savaşta öldürüldü. Zübeyr ise alandan ayrıldıktan sonra öldürülmüştü. **Hz. Ali** kan dökülmesini istememişti. Yine de kan döküldü.' },
+      text: { tr: 'Barış yetmeyince iki ordu karşılaştı. Karşı taraf **Hz. Ali**\'ye savaş açmıştı. Aişe\'nin bindiği deve, karşı tarafın toplandığı yerdi. Savaş o devenin çevresinde sürdü. Deve çökünce toplanacak yer kalmadı. TDV\'nin Cemel maddesi, devenin Hz. Ali\'nin emriyle kesildiğini ve hevdecin çevresinde yaklaşık yetmiş kişinin öldüğünü yazar. Ordu dağıldı. Savaş bu yüzden bitti. Kendiliğinden bir büyü olmadı. Talha savaşta öldürüldü. Zübeyr ise alandan ayrıldıktan sonra öldürülmüştü. **Hz. Ali** kan dökülmesini istememişti. Yine de kan döküldü.' },
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'crowd', x: 24, scale: 7 }, { kind: 'woman', x: 56, label: { tr: 'Aişe' } }, { kind: 'ali', x: 84, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },

@@ -50,7 +50,13 @@ export const sakife: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Ehl-i Beyt anlatı geleneğinde, Hz. Ali\'nin gece kuyu başına çıkıp derdini anlattığı söylenir. Bu, doğrulanmış bir tarih olayı diye kilitlenmedi. Klasik bir sayfa bu turda açılmadı. Ayrı bir metin vardır. Nehcü\'l-Belâğa\'nın 3. hutbesinde, hakkı dururken gözünde diken, boğazında kemik varken sabrettiği yazar. Bu, derlenmiş bir hutbedir. Bazı Sünnî âlimler nisbeti sorar. Bazıları kabul eder. Şii âlimler hutbeyi ona bağlar.' },
+      text: { tr: 'Hz. Fâtıma\'nın vefatından sonra Hz. Ali Medine\'de yalnız kaldı. Biat etmemişti. Kan dökülmesin diye sesini kısmıştı. Bu suskunluk, Gadir\'deki hakkını unutmak değildi. Sokakta selam verip herkesin selamını almadığı iddiası, sayfa görülmeden yazılmadı.' },
+      image: 'sakife-yalnizlik-1',
+      art: { bg: 'city', props: ['palms'], actors: [{ kind: 'ali', x: 38, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 72, scale: 4 }] },
+      by: 'shia',
+    },
+    {
+      text: { tr: 'Ehl-i Beyt anlatı geleneğinde, Hz. Ali\'nin gece kuyu başına çıkıp derdini anlattığı söylenir. Anlatıda ayaktadır. Hafifçe eğilir. İki eli kuyu kenarındadır. Kuyuya kapanmış değildir. Bu, doğrulanmış bir tarih olayı diye kilitlenmedi. Klasik bir sayfa bu turda açılmadı. Ayrı bir metin vardır. Nehcü\'l-Belâğa\'nın 3. hutbesinde, hakkı dururken gözünde diken, boğazında kemik varken sabrettiği yazar. Bu, derlenmiş bir hutbedir. Bazı Sünnî âlimler nisbeti sorar. Bazıları kabul eder. Şii âlimler hutbeyi ona bağlar.' },
       image: 'ali-kuyu-1',
       art: { bg: 'night', props: ['moon', 'well'], actors: [{ kind: 'ali', x: 48, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',

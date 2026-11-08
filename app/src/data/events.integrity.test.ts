@@ -21,8 +21,12 @@ test('Sakîfe resimleri kaymaz, kuyu ayrı anahtardadır', () => {
   const imgs = [...src.matchAll(/image: '([^']+)'/g)].map(m => m[1]);
   for (let i = 1; i <= 8; i++) assert.ok(imgs.includes('sakife-' + i));
   assert.equal(imgs.filter(x => x === 'ali-kuyu-1').length, 1);
+  assert.equal(imgs.filter(x => x === 'sakife-yalnizlik-1').length, 1);
   const kuyu = imgs.indexOf('ali-kuyu-1');
-  assert.ok(imgs.indexOf('sakife-7') < kuyu && kuyu < imgs.indexOf('sakife-8'));
+  const yalniz = imgs.indexOf('sakife-yalnizlik-1');
+  assert.ok(imgs.indexOf('sakife-7') < yalniz && yalniz < kuyu && kuyu < imgs.indexOf('sakife-8'));
+  assert.match(src, /sayfa görülmeden yazılmadı/);
+  assert.doesNotMatch(src, /selamını almazlardı/);
   assert.match(read('./sceneImages.ts'), /'ali-kuyu-1':/);
   assert.match(read('./sceneImages.ts'), /'sakife-8':/);
 });
@@ -39,8 +43,9 @@ test('Kasım cesedi baş diye değiştirilmedi', () => {
   const src = read('./kerbela.ts');
   const i = src.indexOf("image: 'kerbela-23'");
   const chunk = src.slice(i - 900, i);
-  assert.match(chunk, /cesedini/);
-  assert.doesNotMatch(chunk, /mübarek başı/);
+  assert.match(chunk, /mübarek başı yarıldı/);
+  assert.match(chunk, /Naaşını/);
+  assert.doesNotMatch(chunk, /başını taşı/);
 });
 
 test('yeni resimler kayıtlı, sakife-8 ayrı', () => {
