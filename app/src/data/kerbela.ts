@@ -107,7 +107,7 @@ export const kerbela: HistEvent = {
       cites: [{ side: 'shia', i: 19 }, { side: 'shia', i: 20 }],
     },
     {
-      text: { tr: 'Aşûrâ sabahı güneş kırmızı doğdu. 10 Muharrem\'di. **Hz. Hüseyin** ata bindi. Ordunun önüne geldi. Sesi ovada yükseldi. "Beni tanımıyor musunuz? Ben Resûlullah\'ın torunuyum. Babam Hz. Ali\'dir. Anam Fatıma\'dır." Karşı safta bazıları başını eğdi. Hutbe bitince ok yağmuru hazırlandı. O sabah İslam\'ın yolu ikiye ayrıldı. Bir yanda saltanat vardı. Öbür yanda susuz bir çadır vardı. İki ordu, sabaha bu susuzlukla girdi.' },
+      text: { tr: '10 Muharrem sabahı ovaya kırmızı bir gün doğdu. **Hz. Hüseyin** ata bindi ve ordunun önüne geldi. Sesi tozun üstünde yükseldi. "Beni tanımıyor musunuz? Ben Resûlullah\'ın torunuyum. Babam Hz. Ali\'dir. Anam Fatıma\'dır." Karşı safta bazı başlar eğildi. Hutbe bitince oklar hazırlandı. O sabah yol ikiye ayrıldı. Bir yanda saltanat vardı. Öbür yanda susuz bir çadır vardı. İki ordu, bu susuzlukla birbirine baktı.' },
       image: 'kerbela-21',
       art: { bg: 'dawn', props: ['sun', 'flags'], actors: [{ kind: 'husayn', x: 55, label: { tr: 'Hz. Hüseyin' }, pose: 'raise' }, { kind: 'crowd', x: 24, scale: 7 }] },
       by: 'shia',
@@ -149,7 +149,7 @@ export const kerbela: HistEvent = {
       cites: [{ side: 'shia', i: 5 }, { side: 'shia', i: 19 }],
     },
     {
-      text: { tr: 'Sıra **Hz. Kasım**\'a geldi. **Hz. Hasan**\'ın oğluydu. Yaşı küçüktü. Amcasından meydana çıkmak için izin istedi. **Hz. Hüseyin** duraksadı. Sonra Hz. Kasım\'a savaşa çıkması için izin verdi. Ehl-i Beyt rivayetinde Hz. Kasım\'a ölüm sorulmuştu. O, "Baldan tatlı" demişti. Meydana çıktı. Küçük kılıcı elinde büyük duruyordu. Karşı ordu bir çocuğa saldırdı. İbn Fudayl el-Ezdî\'nin darbesiyle mübarek başı yarıldı. Amcasına seslendiği nakledilir. Hz. Hüseyin yetişti. Onu bağrına bastı. Naaşını Hâşimoğullarının şehitlerinin yanına koydu. Çadırın eşiğinde bir yeğen daha eksildi. Hz. Hasan\'ın sulhu, oğlunun kanıyla bu ovada anıldı. Hz. Kasım, dayısının izniyle meydana çıkmıştı.' },
+      text: { tr: 'Sıra **Hz. Kasım**\'a geldi. **Hz. Hasan**\'ın oğluydu. Yaşı küçüktü. Amcasından meydana çıkmak için izin istedi. **Hz. Hüseyin** bir an durdu. Sonra izin verdi. Ehl-i Beyt rivayetinde ona ölüm sorulmuştu. "Baldan tatlı" demişti. Meydana çıktı. Küçük kılıcı elinde büyük duruyordu. Karşı ordu bir çocuğa saldırdı. İbn Fudayl el-Ezdî\'nin darbesiyle mübarek başı yarıldı. Amcasına seslendiği nakledilir. Hz. Hüseyin yetişti. Onu bağrına bastı. Naaşını Hâşimoğullarının şehitlerinin yanına koydu. Çadırın eşiğinde bir yeğen daha eksildi. Hz. Hasan\'ın sulhu, oğlunun kanıyla bu ovada anıldı.' },
       image: 'kerbela-23',
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'husayn', x: 40, label: { tr: 'Hz. Hüseyin' } }, { kind: 'man', x: 66, label: { tr: 'Hz. Kasım' }, scale: 0.75 }] },
       by: 'shia',
@@ -184,7 +184,7 @@ export const kerbela: HistEvent = {
     },
 
     {
-      text: { tr: '**Ömer b. Sa\'d** bağırdı. "Hz. Hüseyin\'in göğsünü atına çiğnetecek kim var?" On kişi çıktı. Atlar göğsü ve sırtı ezdi. Ölümden sonra cesede yapılan bu iş, ordunun utancıydı. Toz kalktı. Kan toprağa karıştı. **Yezid**\'in zaferi, bir secde yerini çiğnemek oldu. Uzaktan çadırlar bunu gördü. Toz, secde yerinin üzerine kapandı.' },
+      text: { tr: '**Ömer b. Sa\'d** seslendi. Hz. Hüseyin\'in göğsünü atına çiğnetecek kim var, diye sordu. On kişi çıktı. Atlar göğsü ve sırtı ezdi. Ölümden sonra cesede yapılan bu iş, ordunun utancıydı. Toz kalktı. Kan toprağa karıştı. **Yezid**\'in zaferi, bir secde yerini çiğnemek oldu. Çadırlar bunu uzaktan gördü. Secde yeri, tozun altında kaldı.' },
       image: 'kerbela-12',
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'crowd', x: 30, scale: 6 }, { kind: 'man', x: 70, label: { tr: 'Ömer b. Sa\'d' } }] },
       by: 'both',
@@ -198,7 +198,7 @@ export const kerbela: HistEvent = {
       cites: [{ side: 'shia', i: 10 }, { side: 'shia', i: 5 }, { side: 'shia', i: 8 }],
     },
     {
-      text: { tr: 'Aşûrâ\'nın aynı günü **Ömer b. Sa\'d**, **Hz. Hüseyin**\'in başını Havlî ve Humeyd ile Kûfe\'ye, **İbn Ziyâd**\'a gönderdi. Diğer şehitlerin başları da yola çıktı. Sayı yetmiş ikiydi. Ehl-i Beyt rivayetinde başlar mızraklara takıldı. Kûfe sokaklarında gezdirildi. Halk pencereden baktı. Dün mektup yazan şehir, bugün başları seyretti. Yol burada bitmedi. Şam, **Yezid**\'i bekliyordu. Yol, Kûfe üzerinden Şam\'a gidiyordu.' },
+      text: { tr: 'Aşûrâ\'nın aynı günü **Ömer b. Sa\'d**, **Hz. Hüseyin**\'in başını Havlî ve Humeyd ile Kûfe\'ye, **İbn Ziyâd**\'a gönderdi. Diğer şehitlerin başları da yola çıktı. Sayı yetmiş ikiydi. Ehl-i Beyt rivayetinde başlar mızraklara takıldı ve Kûfe sokaklarında gezdirildi. Halk pencereden baktı. Dün mektup yazan şehir, bugün başlara baktı. Yol burada bitmedi. Şam, **Yezid**\'i bekliyordu. Kafile, Kûfe\'den Şam\'a gidecekti.' },
       image: 'kerbela-14',
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'crowd', x: 28, scale: 7 }, { kind: 'man', x: 70, label: { tr: 'İbn Ziyâd' } }] },
       by: 'both',
@@ -211,13 +211,13 @@ export const kerbela: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Kûfe\'nin pencereleri açıktı. Dün mektup yazanlar bugün baktı. Başlar sokakta gezdirildiği, Ehl-i Beyt rivayetinde anlatılır. **Hz. Zeynep** esirlerin yanındaydı. Hasta değildi. **Hz. Zeynelâbidîn** hastaydı. Şehir susmuştu. Utanç, pencereden bakanın yüzündeydi. Yol burada bitmedi. Şam duruyordu. Kûfe, pencereden baktı ve sustu.' },
+      text: { tr: 'Kûfe\'nin pencereleri açıktı. Dün mektup yazanlar bugün baktı. Başların sokakta gezdirildiği, Ehl-i Beyt rivayetinde anlatılır. **Hz. Zeynep** esirlerin yanındaydı. Hasta değildi. **Hz. Zeynelâbidîn** hastaydı. Şehir susmuştu. Utanç, bakanın yüzündeydi. Yol bitmemişti. Şam hâlâ duruyordu. Kûfe, o pencerede sustu.' },
       image: 'kerbela-kufe-pencere',
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'crowd', x: 30, scale: 6 }, { kind: 'woman', x: 72, label: { tr: 'Hz. Zeynep' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Kûfe\'den sonra yol Şam\'a döndü. Rivayetlere göre **Hz. Zeynep**, hasta **Hz. Zeynelâbidîn**, kadınlar ve çocuklar eğersiz develere bindirildi. Eğer yoktu. Bu, rahat bir yolculuk değildi. Aşağılama idi. **Yezid**\'in saltanatı, Peygamber\'in evini böyle sürdü. Hz. Zeynep onların yanındaydı. Hasta yeğenini gözetti. Çocuklar da yanlarındaydı. Şam kapısı bu utançla açılacaktı. Utanç, kapıdan önce yolda başladı.' },
+      text: { tr: 'Kûfe\'den sonra yol Şam\'a döndü. Rivayetlere göre **Hz. Zeynep**, hasta **Hz. Zeynelâbidîn**, kadınlar ve çocuklar eğersiz develere bindirildi. Eğer yoktu. Yol, bir aşağılama için kurulmuştu. **Yezid**\'in saltanatı, Peygamber\'in evini böyle sürdü. Hz. Zeynep yanlarındaydı. Hasta yeğenini gözetti. Çocuklar da yanlarındaydı. Şam kapısı bu utançla açılacaktı. Utanç, kapıdan önce, yolun tozunda başladı.' },
       image: 'kerbela-egersiz',
       art: { bg: 'dune-day', props: ['camels', 'sun'], actors: [{ kind: 'woman', x: 42, label: { tr: 'Hz. Zeynep' } }, { kind: 'man', x: 64, label: { tr: 'Hz. Zeynelâbidîn' }, pose: 'sit' }, { kind: 'crowd', x: 22, scale: 4 }] },
       by: 'shia',
@@ -230,7 +230,7 @@ export const kerbela: HistEvent = {
       cites: [{ side: 'shia', i: 24 }],
     },
     {
-      text: { tr: 'Esir kafilesi Şam\'a vardı. Rivayetlere göre **Hz. Zeynep**, hasta **Hz. Zeynelâbidîn**, kadınlar ve çocuklar bu kapıya eğersiz develerle gelmişti. Bu, bir aşağılama idi. **Yezid**\'in sarayı ışıklıydı. Baş, meclisin önüne kondu. Yezid bir çubukla **Hz. Hüseyin**\'in dudağına vurdu. **Hz. Zeynep** ayağa kalktı. Zinciri vardı. Sesi meclisi titretti. Yezid\'i, soyunu ve bu zafer sandığı şeyi yüzüne vurdu. "Senin elindeki bu baş, Peygamber\'in torununun başıdır." Ebu Berze itiraz etti. "Resulullah bu dudağı öperken gördüm." Saltanat eğleniyordu. Zeynep onu rezil etti. Söz, kılıçtan uzun yaşadı. Zeynep\'in sözü, sarayda da susmadı.' },
+      text: { tr: 'Esir kafilesi Şam kapısına vardı. Rivayetlere göre **Hz. Zeynep**, hasta **Hz. Zeynelâbidîn**, kadınlar ve çocuklar bu kapıya eğersiz develerle gelmişti. Geliş, bir aşağılama idi. **Yezid**\'in sarayı ışıklıydı. Baş, meclisin önüne kondu. Yezid bir çubukla **Hz. Hüseyin**\'in dudağına vurdu. **Hz. Zeynep** ayağa kalktı. Zinciri vardı. Sesi meclisi tuttu. "Senin elindeki bu baş, Peygamber\'in torununun başıdır." Ebu Berze itiraz etti. "Resulullah bu dudağı öperken gördüm." Saltanat eğleniyordu. Söz, kılıçtan uzun yaşadı. Zeynep\'in sözü, sarayda da susmadı.' },
       image: 'kerbela-15',
       art: { bg: 'interior', props: ['flags'], actors: [{ kind: 'woman', x: 40, label: { tr: 'Zeynep' }, pose: 'raise' }, { kind: 'man', x: 72, label: { tr: 'Yezid' } }, { kind: 'crowd', x: 22, scale: 4 }] },
       by: 'shia',

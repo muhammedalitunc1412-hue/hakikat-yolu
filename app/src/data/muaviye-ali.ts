@@ -12,37 +12,37 @@ export const muaviyeAli: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Şam\'da **Muaviye**, yirmi yıldır bir ordu besliyordu. **Ömer** onu Şam\'a vali bıraktı. **Osman** vilayeti büyüttü. İlk tayin Osman\'ın değildir. **Hz. Ali** halife olunca valileri adalet için değiştirdi. Muaviye\'yi de Şam\'dan azletmek istedi. Bu, içindeki imanı bir gerçek diye yazmak değildi. Yönetim ve adalet içindi. Muaviye azli de biatı da reddetti. Biat, bağlılık sözüdür. O, Peygamber\'in vasisi Hz. Ali\'nin önünde iktidarını bırakmadı. Şam, Medine\'nin biatını tanımadı.' },
+      text: { tr: 'Şam\'da **Muaviye**, yirmi yıldır bir ordu besliyordu. **Ömer** onu Şam\'a vali bıraktı. **Osman** vilayeti büyüttü. İlk tayin Osman\'ın değildir. **Hz. Ali** halife olunca valileri adalet için değiştirdi. Muaviye\'yi de Şam\'dan azletmek istedi. Bu, bir gönül yoklaması değildi. Yönetim ve adalet içindi. Muaviye azli de biatı da reddetti. Biat, bağlılık sözüdür. Peygamber\'in vasisi Hz. Ali\'nin önünde iktidarını bırakmadı. Şam, Medine\'nin biatını tanımadı.' },
       art,
       cites: [{ side: 'shia', i: 1 }],
     },
     {
       by: 'both',
-      text: { tr: 'Şam camisinde **Muaviye**, **Hz. Osman**\'ın kanlı gömleğini halka gösterdi. Onun kanını gerekçe yaptı. Gerekçe adalet değil, biatı geciktirmekti. Hesap istiyorum dediği yerde, asıl istediği Şam\'ın tahtıydı. **Hz. Ali**\'nin hakkı ortadayken o, gömleği öne sürerek biatı vermedi. Osman\'ın gömleği, biatın önüne sürüldü.' },
+      text: { tr: 'Şam camisinde **Muaviye**, **Hz. Osman**\'ın kanlı gömleğini halka gösterdi. Kanı gerekçe yaptı. Gerekçe adalet değil, biatı geciktirmekti. Hesap istiyorum dediği yerde, asıl istediği Şam\'ın tahtıydı. **Hz. Ali**\'nin hakkı ortadayken o, gömleği öne sürerek biatı vermedi. Gömlek, bir matem değil, bir kalkan oldu.' },
       art,
       cites: [{ side: 'sunni', i: 3 }],
     },
     {
       by: 'both',
-      text: { tr: '**Hz. Ali**, Şam\'daki **Muaviye**\'ye mektup yazdı ve elçi gönderdi. Önce biat, sonra mahkeme, dedi. Kanın hesabı, ümmet parçalanmadan sorulsun, istedi. Muaviye bunu kabul etmedi. İki ordu 37 H\'de Fırat kıyısında, **Sıffin**\'de karşı karşıya geldi. İstenen, önce biatti. Karşı taraf savaşı seçti. Hz. Ali, önce mektup ve öğütle durdu.' },
+      text: { tr: '**Hz. Ali**, Şam\'daki **Muaviye**\'ye mektup yazdı ve elçi gönderdi. Önce biat, sonra mahkeme, dedi. Kanın hesabı, ümmet parçalanmadan sorulsun, istedi. Muaviye bunu kabul etmedi. İki ordu 37 yılında Fırat kıyısında, **Sıffin**\'de karşı karşıya geldi. İstenen, önce biatti. Karşı taraf savaşı seçti. Hz. Ali, kılıçtan önce mektupla durdu.' },
       art,
       cites: [{ side: 'shia', i: 1 }, { side: 'sunni', i: 3 }],
     },
     {
       by: 'both',
-      text: { tr: '**Sıffin**\'de **Muaviye**\'nin adamları Fırat\'ın suyunu kesti. **Hz. Ali** suyu alınca Şamlıları susuz bırakmadı. Düşmanına su verdi. Sonra Kerbela\'da da aynı zulüm işlendi. Peygamber\'in evladının suyu kesildi. Sıffin\'de suyu kesenler, bu zulmün öncüsüydü. Fırat, Sıffin\'de bu zulmün ilk sınavı oldu.' },
+      text: { tr: '**Sıffin**\'de **Muaviye**\'nin adamları Fırat\'ın suyunu kesti. **Hz. Ali** suyu alınca Şamlıları susuz bırakmadı. Düşmanına su verdi. Sonra Kerbelâ\'da da aynı zulüm işlendi. Peygamber\'in evladının suyu kesildi. Sıffin\'de suyu kesenler, bu zulmün öncüsüydü. Fırat, o gün bir imtihandı. Torun, tutana su verdi. Saltanat, sonra suyu kesti.' },
       art,
       cites: [{ side: 'shia', i: 0 }],
     },
     {
       by: 'both',
-      text: { tr: 'Sıffin\'de yaşlı **Ammar b. Yasir**, **Hz. Ali**\'nin safında şehit oldu. Peygamber, onu ==bâği bir grubun== öldüreceğini haber vermişti. Baği, meşru imama karşı savaşandır. O grup, **Muaviye**\'nin ordusuydu. **Amr b. el-As** hadisi hatırlatınca Muaviye, "Onu getirenler öldürdü" diye sözü büktü. Peygamber\'in haberi açıktı. Karşı taraf, haberi inkâr etmek için bu sözü çevirdi. Ammâr\'ın sözü, bâği tarafı gösterdi.' },
+      text: { tr: 'Sıffin\'de yaşlı **Ammâr b. Yâsir**, **Hz. Ali**\'nin safında şehit oldu. Peygamber, onu ==bâği bir grubun== öldüreceğini haber vermişti. Bâği, meşru imama karşı savaşandır. O grup, **Muaviye**\'nin ordusuydu. **Amr b. el-As** hadisi hatırlatınca Muaviye, "Onu getirenler öldürdü" diye sözü büktü. Peygamber\'in haberi açıktı. Bükülen cümle, düşen adamın safını gizleyemedi.' },
       art,
       cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 1 }, { side: 'sunni', i: 2 }],
     },
     {
       by: 'both',
-      text: { tr: 'Sıffin\'de savaş **Hz. Ali**\'nin lehine dönerken **Amr b. el-As**\'ın önerisiyle Kur\'an sayfaları mızraklara takıldı. "Allah\'ın kitabı aramızda hakem olsun" dediler. Bu, ibadet değil, ==bir hileydi.== **Hz. Ali** hileyi o anda söyledi. Ordusundaki bir grup, mushafları bahane edip onu durdurdu. Hak, Kur\'an mızrağa asılınca yarıda kaldı. Mızraktaki Kur\'an, savaşı yarıda kesti.' },
+      text: { tr: 'Sıffin\'de savaş **Hz. Ali**\'nin lehine dönerken **Amr b. el-As**\'ın önerisiyle Kur\'an sayfaları mızraklara takıldı. "Allah\'ın kitabı aramızda hakem olsun" dediler. Bu, ibadet değil, ==bir hileydi.== Hz. Ali hileyi o anda söyledi. Ordusundaki bir grup, mushafları bahane edip onu durdurdu. Hak, Kur\'an mızrağa asılınca yarıda kaldı. Yenilmek üzere olan taraf, kitabı kalkan yaptı.' },
       art,
       cites: [{ side: 'sunni', i: 3 }, { side: 'shia', i: 0 }],
     },

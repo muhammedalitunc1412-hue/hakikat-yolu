@@ -36,7 +36,7 @@ export const sebb: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Kûfe\'de **Hucr b. Adî**, Cemel ve Sıffin\'in yiğit komutanıydı. Muğîre\'nin hutbesine karşı çıktı. **Hz. Ali**\'nin faziletinin daha üstün olduğunu söyledi. **Ziyâd** onu tutukladı. On iki kadar arkadaşıyla Şam\'a gönderildi. Laneti reddettiği için bu yolculuk başladı. Hucr, minberdeki sövgüye boyun eğmedi.' },
+      text: { tr: 'Kûfe\'de **Hucr b. Adî**, Cemel ve Sıffin\'in yiğit komutanıydı. Muğîre hutbede **Hz. Ali**\'yi kötülerken Hucr ayağa kalktı. Faziletin daha üstün olduğunu söyledi. **Ziyâd** onu tutukladı. On iki kadar arkadaşıyla Şam yoluna çıkarıldı. Bu yolculuk, laneti reddettiği için başladı. Hucr, minberin istediği sövgüyü söylemedi.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'man', x: 30, pose: 'raise', label: { tr: 'Hucr b. Adî' } }, { kind: 'crowd', x: 66, scale: 6 }] },
       by: 'both',
     },

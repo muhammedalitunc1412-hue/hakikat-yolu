@@ -13,18 +13,18 @@ export const siffin: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Yıllar önce mescit yapılırken Peygamber, **Ammar**\'ın yanındaydı. Ona bakıp "Yazık Ammar\'a, onu azgın bir grup öldürecek" demişti. Sahabe bu sözü duydu. Bâği, meşru imama karşı savaşan demektir. Bu söz, Sıffin\'de kimin bâği olduğunu gösterecekti. Bâği, hak imama karşı savaşan taraftır.' },
+      text: { tr: 'Yıllar önce mescit yapılırken Peygamber, **Ammâr**\'ın yanındaydı. Ona bakıp "Yazık Ammâr\'a, onu azgın bir grup öldürecek" dedi. Sahabe bu sözü duydu. Bâği, hak imama karşı savaşan taraftır. Söz, Sıffin\'de kimin bâği olduğunu gösterecekti. Henüz Fırat kıyısında ordu yoktu. Haber, ilerideki safın üstüne konmuştu.' },
       art: { bg: 'city', props: ['palms', 'sun'], actors: [{ kind: 'prophet', x: 64, label: { tr: 'Hz. Peygamber' } }, { kind: 'man', x: 30, pose: 'raise', label: { tr: 'Ammar b. Yasir' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Sıffin**\'de yaşlı **Ammar**, **Hz. Ali**\'nin safında şehit oldu. Peygamber, onu ==bâği bir grubun== öldüreceğini söylemişti. O grup **Muaviye**\'nin ordusuydu. Sevenler o gün, Peygamber\'in haberinin **Muaviye** tarafında gerçekleştiğini gördü. Ammâr, rivayete göre o haberi tuttu.' },
+      text: { tr: '**Sıffin**\'de yaşlı **Ammâr**, **Hz. Ali**\'nin safında şehit oldu. Peygamber, onu azgın bir grubun öldüreceğini söylemişti. O grup **Muaviye**\'nin ordusuydu. Ammâr, rivayete göre o haberi tuttu. Tozun içinde yaşlı bir beden düştü. Düşen yer, haberin yeridir. Sevenler o gün, Peygamber\'in sözünün Muaviye tarafında gerçekleştiğini gördü.' },
       cites: [{ side: 'sunni', i: 1 }, { side: 'shia', i: 0 }],
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'man', x: 26, label: { tr: 'Ammar b. Yasir' } }, { kind: 'ali', x: 70, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Sıffin**\'de **Amr b. el-As**, "Ammar\'ı öldürdük" diye hadisi **Muaviye**\'ye hatırlattı. **Muaviye**, "Onu biz mi öldürdük? Onu getirenler öldürdü" dedi. Suçu, Ammar\'ı oraya getirenlere attı. Peygamber\'in haberi açıktı. ==Bâği grup==, bu haberi inkâr etmek için sözü çarpıttı. Karşı taraf, haberi inkâr için sözü çarpıttı.' },
+      text: { tr: '**Amr b. el-As**, "Ammâr\'ı öldürdük" diye hadisi **Muaviye**\'ye hatırlattı. Muaviye, "Onu biz mi öldürdük? Onu getirenler öldürdü" dedi. Suçu, Ammâr\'ı oraya getirenlere attı. Peygamber\'in haberi açıktı. ==Bâği grup==, bu haberi inkâr etmek için sözü çarpıttı. Düşen adam Hz. Ali\'nin safındaydı. Cümle, o safı gizleyemedi.' },
       cites: [{ side: 'sunni', i: 3 }],
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 30, label: { tr: 'Amr b. el-As' } }, { kind: 'man', x: 66, label: { tr: 'Muaviye' } }] },
       by: 'both',
@@ -36,22 +36,22 @@ export const siffin: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: '**Sıffin**\'de anlaşma yazıldı. Hakem, tarafların seçtiği yargıç demektir. **Hz. Ali** başka isimler istemişti. Yine de Ebu Musa ile **Amr b. el-As** oturdu. Metinden "Emirü\'l-müminin" unvanı çıkarıldı. Bu hakemlik, Gadir\'de ilan edilen yetkiyi zayıflattı. **Hz. Ali**\'nin hakkına zarar verdi. Hakem, Hz. Ali\'nin hakkını yazmadı.' },
+      text: { tr: '**Sıffin**\'de anlaşma yazıldı. Hakem, tarafların seçtiği yargıç demektir. **Hz. Ali** başka isimler istemişti. Yine de Ebu Musa ile **Amr b. el-As** oturdu. Metinden "Emirü\'l-müminin" unvanı çıkarıldı. Bu hakemlik, Gadir\'de ilan edilen yetkiyi zayıflattı. Hz. Ali\'nin hakkına zarar verdi. Hakem, Hz. Ali\'nin hakkını yazmadı. Kâğıt, çöldeki eli taşımadı.' },
       art: { bg: 'dune-day', props: ['tents', 'scroll'], actors: [{ kind: 'man', x: 24, label: { tr: 'Ebu Musa el-Eşari' } }, { kind: 'ali', x: 52, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 80, label: { tr: 'Amr b. el-As' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Ali**\'nin ordusundan bir grup hakemi reddetti. "Hüküm yalnız Allah\'ındır" diyerek yanından ayrıldılar. Bunlara Haricîler denir. Hz. Ali, "Söz haktır, ama onunla batıl kastediliyor" dedi. Önce onlarla konuşuldu. Sonra Nehrevan\'da çatışıldı. Mızraktaki mushaf hilesi, **Hz. Ali**\'nin kendi safını da bölmüştü. Hile, kendi safını da böldü.' },
+      text: { tr: '**Hz. Ali**\'nin ordusundan bir grup hakemi reddetti. "Hüküm yalnız Allah\'ındır" diyerek yanından ayrıldı. Bunlara Haricîler denir. Hz. Ali, "Söz haktır, ama onunla batıl kastediliyor" dedi. Önce onlarla konuşuldu. Sonra Nehrevan\'da çatışıldı. Mızraktaki mushaf hilesi, kendi safını da bölmüştü. Hile, hakkı savunan orduyu ikiye ayırdı.' },
       art: { bg: 'river', props: ['flags'], actors: [{ kind: 'crowd', x: 28, scale: 7 }, { kind: 'ali', x: 74, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Ali**, Haricîler hakkında Peygamber\'den bir haber aktarır. Onları öldürenlere Allah katında sevap vardır. Hakka daha yakın taraf onlarla savaşacaktır. O taraf, Hz. Ali\'nin safıdır. Nehrevan, bu bölünmenin sonraki adımıdır.' },
+      text: { tr: '**Hz. Ali**, Haricîler hakkında Peygamber\'den bir haber aktarır. Onları öldürenlere Allah katında sevap vardır. Hakka daha yakın taraf onlarla savaşacaktır. O taraf, Hz. Ali\'nin safıdır. Nehrevan, bu bölünmenin sonraki adımıdır. Söz Sıffin\'de doğdu. Kan, Nehrevan\'da dökülecekti.' },
       art: { bg: 'dawn', props: ['scroll'], actors: [{ kind: 'ali', x: 44, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 78, scale: 5 }] },
       by: 'sunni',
     },
     {
-      text: { tr: 'Emevi döneminde minberlerde **Hz. Ali**\'ye ==lanet== okundu. **Muaviye**, Sa\'d\'a neden sövmediğini sordu. Sa\'d, Menzile\'yi, Hayber sancağını ve Mübahele\'yi sayarak cevap verdi. Ömer b. Abdülaziz bu zulmü yıllar sonra kaldırdı. O güne kadar bu zulüm ==Ehl-i Beyt==\'e karşı sürdü.' },
+      text: { tr: 'Emevi döneminde minberlerde **Hz. Ali**\'ye ==lanet== okundu. **Muaviye**, Sa\'d\'a neden sövmediğini sordu. Sa\'d, Menzile\'yi, Hayber sancağını ve Mübahele\'yi sayarak cevap verdi. Üç hatıra, bir laneti durdurdu. Ömer b. Abdülaziz bu zulmü yıllar sonra kaldırdı. O güne kadar bu zulüm ==Ehl-i Beyt==\'e karşı sürdü. Cuma, bir yara günü oldu.' },
       art: { bg: 'interior', props: ['minbar', 'scroll'], actors: [{ kind: 'man', x: 28, label: { tr: 'Sa\'d b. Ebi Vakkas' } }, { kind: 'man', x: 62, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },
