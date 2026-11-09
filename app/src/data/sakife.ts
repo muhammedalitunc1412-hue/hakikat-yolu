@@ -63,7 +63,7 @@ export const sakife: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Sonra Halife Ömer, işi altı kişilik şuraya bıraktı. Şura, danışma kuruludur. Biat Osman\'a yapıldı. Şıkşıkıyye hutbesinde **Hz. Ali** bu günleri sabırla anar. Sakife\'de başlayan hakkın bir kenara konması, şurada da sürdü. Onun sabrı, hakkın unutulması değildi.' },
+      text: { tr: 'Sonra Halife Ömer, işi altı kişilik şuraya bıraktı. Şûra, karar almak üzere bir araya gelen danışma kuruluydu. Ardından Osman\'a bağlılık sözü verildi. Şıkşıkıyye hutbesinde **Hz. Ali** bu günleri sabırla anar. Sakife\'de başlayan hakkın bir kenara konması, şurada da sürdü. Onun sabrı, hakkın unutulması değildi.' },
       image: 'sakife-8',
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'ali', x: 30, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 56, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'man', x: 78, label: { tr: 'Osman' } }] },
       by: 'shia',

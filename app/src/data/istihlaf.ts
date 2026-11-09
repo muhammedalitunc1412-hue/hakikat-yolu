@@ -39,12 +39,12 @@ export const istihlaf: HistEvent = {
     },
     {
       by: 'sunni',
-      text: { tr: 'Abdurrahman, **Hz. Ali**\'den Allah\'ın kitabı, Peygamber\'in sünneti ve iki halifenin yolu üzerine biat etmesini istedi. Biat, bağlılık sözüdür. Hz. Ali, "Allah\'ın kitabı, Peygamber\'in sünneti ve kendi içtihadım" dedi. Aynı şart Osman\'a sunulunca Osman kabul etti. Biat ona yapıldı. **Hz. Ali**, Gadir\'deki hakkını iki halifenin yoluna değişmedi.' },
+      text: { tr: 'Abdurrahman, **Hz. Ali**\'den Allah\'ın kitabı, Peygamber\'in sünneti ve iki halifenin yolu üzerine biat etmesini istedi. Biat etmek, yönetime bağlılık sözü vermek demekti. Hz. Ali, "Allah\'ın kitabı, Peygamber\'in sünneti ve kendi içtihadım" dedi. Aynı şart Osman\'a sunulunca Osman kabul etti. Biat ona yapıldı. **Hz. Ali**, Gadir\'deki hakkını iki halifenin yoluna değişmedi.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 30, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 56, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'man', x: 78, label: { tr: 'Osman' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Biat Osman\'a yapıldı. Şura, danışma kuruludur. Şıkşıkıyye hutbesinde **Hz. Ali**, kendisini o altıdan biri saymalarını anlatır. Şuranın düzeninin sonucu daha baştan etkilediğini de söyler. Sakife\'den şuraya kadar onun hakkı yine bir kenara kondu. O, sabrı seçti.' },
+      text: { tr: 'Ardından Osman\'a bağlılık sözü verildi. Şûra, karar almak üzere bir araya gelen danışma kuruluydu. Şıkşıkıyye hutbesinde **Hz. Ali**, kendisini o altıdan biri saymalarını anlatır. Şuranın düzeninin sonucu daha baştan etkilediğini de söyler. Sakife\'den şuraya kadar onun hakkı yine bir kenara kondu. O, sabrı seçti.' },
       art: { bg: 'mountain', props: ['stars'], actors: [{ kind: 'ali', x: 50, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
     },
   ],

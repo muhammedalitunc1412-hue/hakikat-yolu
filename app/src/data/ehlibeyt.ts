@@ -30,12 +30,12 @@ export const ehlibeyt: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Câbir b. Semüre anlatır. Peygamber, "Bu iş, içlerinden on iki halife gelinceye kadar sürecek" dedi. Sonra bir şey daha söyledi. Câbir onu duyamadı. Babası, Peygamber\'in "Hepsi Kureyş\'tendir" dediğini bildirdi. Bu sayı rastgele değildir. İmamet, yani imamların önderliği, on iki kişilik bir sıradır.' },
+      text: { tr: 'Câbir b. Semüre anlatır. Peygamber, "Bu iş, içlerinden on iki halife gelinceye kadar sürecek" dedi. Sonra bir şey daha söyledi. Câbir onu duyamadı. Babası, Peygamber\'in "Hepsi Kureyş\'tendir" dediğini bildirdi. On İki İmam anlayışında bu sayı, Hz. Ali ile başlayıp Hz. Mehdî ile tamamlanan önderlik silsilesiyle ilişkilendirilir.' },
       art: { bg: 'city', props: ['sun', 'minbar'], actors: [{ kind: 'prophet', x: 60, label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 28, scale: 6 }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Bu on iki, Allah\'ın belirlediği On İki İmam\'dır. Rivayete göre Câbir, **Hz. Fatıma**\'nın elinde bir levha gördü. İmamların adları orada yazılıydı. Sayı, bu levhada isim isim duruyordu.' },
+      text: { tr: 'On İki İmam geleneği, rivayetteki sayıyı Ehl-i Beyt\'in imamlarıyla ilişkilendirir. Rivayete göre Câbir, **Hz. Fatıma**\'nın elinde bir levha gördü. İmamların adları orada yazılıydı. Sayı, bu levhada isim isim duruyordu.' },
       art: { bg: 'night', props: ['stars', 'scroll'], actors: [{ kind: 'fatima', x: 50, label: { tr: 'Hz. Fatıma' } }] },
     },
     {

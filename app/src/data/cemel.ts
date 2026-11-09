@@ -40,12 +40,12 @@ export const cemel: HistEvent = {
       cites: [{ side: 'sunni', i: 5 }, { side: 'sunni', i: 0 }, { side: 'shia', i: 1 }],
     },
     {
-      text: { tr: 'Barış yetmeyince iki ordu karşılaştı. Karşı taraf **Hz. Ali**\'ye savaş açmıştı. Aişe\'nin bindiği deve, karşı tarafın toplandığı yerdi. Savaş o devenin çevresinde sürdü. Deve çökünce toplanacak yer kalmadı. TDV\'nin Cemel maddesi, devenin Hz. Ali\'nin emriyle kesildiğini ve hevdecin çevresinde yaklaşık yetmiş kişinin öldüğünü yazar. Ordu dağıldı. Savaş bu yüzden bitti. Kendiliğinden bir büyü olmadı. Talha savaşta öldürüldü. Zübeyr ise alandan ayrıldıktan sonra öldürülmüştü. **Hz. Ali** kan dökülmesini istememişti. Yine de kan döküldü.' },
+      text: { tr: 'Barış yetmeyince iki ordu karşılaştı. Karşı taraf **Hz. Ali**\'ye savaş açmıştı. Aişe\'nin bindiği deve, karşı tarafın toplandığı yerdi. Savaş o devenin çevresinde sürdü. Deve çökünce toplanacak yer kalmadı. TDV\'nin Cemel maddesi, devenin Hz. Ali\'nin emriyle kesildiğini ve hevdecin çevresinde yaklaşık yetmiş kişinin öldüğünü yazar. Ordu dağıldı. Savaş bu yüzden bitti. Talha savaşta öldürüldü. Zübeyr ise alandan ayrıldıktan sonra öldürülmüştü. **Hz. Ali** kan dökülmesini istememişti. Yine de kan döküldü.' },
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'crowd', x: 24, scale: 7 }, { kind: 'woman', x: 56, label: { tr: 'Aişe' } }, { kind: 'ali', x: 84, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Ali** savaştan sonra esirleri serbest bıraktı. Mal, kadın ve çocuk üzerinde ganimet hükmü uygulamadı. Aişe\'yi saygıyla ağırladı. Onu kardeşi Muhammed b. Ebi Bekir ile Medine\'ye uğurladı. Galip geldiği halde intikam almadı. Haklı taraf, böyle davranır.' },
+      text: { tr: '**Hz. Ali** savaştan sonra esirleri serbest bıraktı. Mal, kadın ve çocuk üzerinde ganimet hükmü uygulamadı. Aişe\'yi saygıyla ağırladı. Onu kardeşi Muhammed b. Ebi Bekir ile Medine\'ye uğurladı. Galip geldiği halde intikam almadı.' },
       art: { bg: 'dawn', props: ['camels'], actors: [{ kind: 'ali', x: 26, label: { tr: 'Hz. Ali' } }, { kind: 'woman', x: 54, label: { tr: 'Aişe' } }, { kind: 'man', x: 80, label: { tr: 'Muhammed b. Ebi Bekir' } }] },
       by: 'both',
     },

@@ -54,7 +54,7 @@ export const muaviyeAli: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Hakemden sonra **Hz. Ali**\'nin safı bölündü. **Mâlik el-Eşter**, Hz. Ali\'nin sadık komutanıydı. Savaşta öncü, yönetimde güvenilen biri diye anılır. Hz. Ali onu Mısır valiliğine gönderdi. Yolda zehirlendiği aktarılır. Vikipedi, bunun Kulzüm\'de, bir görevliye rüşvetle ve çoğu anlatıda bala karıştırılarak olduğunu yazar. Bu, bir mektel sayfası değildir. Zehrin tarifi verilmez. Aynı sayfa, Şam\'da sevinenleri ve Muaviye\'nin şu sözünü de anlatır: Hz. Ali\'nin iki kolundan biri Sıffin\'de Ammâr\'la, öbürü şimdi kesildi. **Muaviye** Mısır\'a uzandı. Vali Muhammed b. Ebi Bekir öldürüldü. Busr b. Ertât Hicaz\'da ve Yemen\'de kan döktü. Hakemdeki hile, bu saldırılarla sürdü. **Hz. Ali** 40 H\'de, bir sabah namazında şehit edildi.' },
+      text: { tr: 'Hakemden sonra **Hz. Ali**\'nin safı bölündü. **Mâlik el-Eşter**, Hz. Ali\'nin sadık komutanıydı. Savaşta öncü, yönetimde güvenilen biri diye anılır. Hz. Ali onu Mısır valiliğine gönderdi. Yolda zehirlendiği aktarılır. Bazı anlatılarda bunun Kulzüm\'de gerçekleştiği ve zehrin bala karıştırıldığı aktarılır. Bir rivayette Muaviye\'nin bu haberi Şam\'da şu benzetmeyle karşıladığı aktarılır: Hz. Ali\'nin iki kolundan biri Sıffin\'de Ammâr\'la, öbürü şimdi kesildi. **Muaviye** Mısır\'a uzandı. Vali Muhammed b. Ebi Bekir öldürüldü. Busr b. Ertât Hicaz\'da ve Yemen\'de kan döktü. Hakemdeki hile, bu saldırılarla sürdü. **Hz. Ali** 40 H\'de, bir sabah namazında şehit edildi.' },
       art,
       cites: [{ side: 'sunni', i: 3 }, { side: 'shia', i: 0 }],
     },

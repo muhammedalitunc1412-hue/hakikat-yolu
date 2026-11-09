@@ -43,7 +43,7 @@ export const raziyye: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Vefat haberi Medine\'de duyulunca şehir karıştı. Ömer önce ölümü kabul etmedi. Ebu Bekir durumu halka duyurdu. **Hz. Ali** ve Haşimoğulları cenaze hazırlığına başladı. Bir yanda ağlayanlar vardı. Bir yanda Sakife\'ye gidenler vardı.' },
+      text: { tr: 'Vefat haberi Medine\'de duyulunca şehir karıştı. Ömer önce ölümü kabul etmedi. Ebu Bekir durumu halka duyurdu. **Hz. Ali** ve Haşimoğulları cenaze hazırlığına başladı. Peygamber\'in yakınları cenazeye hazırlanırken şehirde bir başka grup, yönetimi konuşmak üzere Sakife\'de toplanıyordu.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'crowd', x: 24, scale: 6 }, { kind: 'man', x: 48, label: { tr: 'Ömer' } }, { kind: 'man', x: 66, label: { tr: 'Ebu Bekir' } }, { kind: 'ali', x: 84, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },

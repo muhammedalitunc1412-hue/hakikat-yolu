@@ -39,7 +39,7 @@ export const mezhepler: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Emevi iktidarı zayıflarken ve Abbasi iktidarı henüz oturmamışken Hz. Muhammed Bâkır ile Hz. Ca\'fer-i Sâdık Medine\'de geniş bir ilim halkası kurdu. Şeyh Tûsî\'nin Ricâl\'inde yaklaşık 3200, Müfid\'e göre yaklaşık 4000 ravi ondan nakleder. Câferî fıkhı büyük ölçüde onun rivayetlerinden oluşur. Dört Yüz Usûl denen derlemeler öğrencilerine bağlanır. Mâlik\'in ondan hadis aldığı ve Ebû Hanîfe\'nin onu çağının en bilgin kişisi saydığı Rivayetlerde geçer. Sünni anlatımda bu ilişki, hadis alışverişi ve ilmî saygı olarak anılır.' },
+      text: { tr: 'Emevi iktidarı zayıflarken ve Abbasi iktidarı henüz oturmamışken Hz. Muhammed Bâkır ile Hz. Ca\'fer-i Sâdık Medine\'de geniş bir ilim halkası kurdu. Şeyh Tûsî\'nin Ricâl\'inde yaklaşık 3200, Müfid\'e göre yaklaşık 4000 ravi ondan nakleder. Câferî fıkhı büyük ölçüde onun rivayetlerinden oluşur. Dört Yüz Usûl denen derlemeler öğrencilerine bağlanır. Mâlik\'in ondan hadis aldığı ve Ebû Hanîfe\'nin onu çağının en bilgin kişisi saydığı rivayetlerde geçer. Sünni anlatımda bu ilişki, hadis alışverişi ve ilmî saygı olarak anılır.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 36, pose: 'sit', label: { tr: 'Hz. Ca\'fer-i Sâdık' } }, { kind: 'crowd', x: 70, scale: 5 }] },
       by: 'shia',
     },

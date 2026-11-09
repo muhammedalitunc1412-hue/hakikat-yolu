@@ -18,7 +18,7 @@ export const hasan: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Ramazan 40\'ta Hz. Ali şehit edildi. Kûfe halkı oğlu Hz. Hasan\'a biat etti. Biat, bağlılık sözüdür. Hz. Hasan müminlerin yeni önderi oldu. Babasının bıraktığı görev artık ondaydı.' },
+      text: { tr: 'Ramazan 40\'ta Hz. Ali şehit edildi. Kûfe halkı oğlu Hz. Hasan\'a biat etti. Biat etmek, yönetime bağlılık sözü vermek demekti. Hz. Hasan müminlerin yeni önderi oldu. Babasının bıraktığı görev artık ondaydı.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'hasan', x: 66, label: { tr: 'Hz. Hasan' } }] },
       by: 'both',
     },

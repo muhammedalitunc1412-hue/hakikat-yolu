@@ -20,7 +20,7 @@ export const abdest: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: 'Ehl-i Beyt imamlarından gelen rivayetlerde mesh, ayağın üstüne, parmak uçlarından topuğa kadar yapılır; ayak yıkanmaz. Tûsî\'nin Tehzîb\'i ve Kuleynî\'nin el-Kâfî\'si bu görüşün kaynakları arasında anılır. Metinler bu çalışmada açılamadı. Câferî mektep, Mâide 6\'yı bu rivayetlerle ayak meshi olarak uygular.' },
+      text: { tr: 'Ehl-i Beyt imamlarından gelen rivayetlerde mesh, ayağın üstüne, parmak uçlarından topuğa kadar yapılır; ayak yıkanmaz. Tûsî\'nin Tehzîb\'i ve Kuleynî\'nin el-Kâfî\'si bu görüşün kaynakları arasında anılır. Câferî mektep, Mâide 6\'yı bu rivayetlerle ayak meshi olarak uygular.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 40, pose: 'sit', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 66, pose: 'sit', label: { tr: 'Öğrenci' } }] },
     },
     {
@@ -30,12 +30,12 @@ export const abdest: HistEvent = {
     },
     {
       by: 'sunni',
-      text: { tr: 'İbn Mace\'de Rubeyyi\' bint Muavviz, Peygamber\'in ayaklarını yıkadığını anlatınca İbn Abbas, insanların yıkamakta ısrar ettiğini, kendisinin ise Allah\'ın kitabında yalnızca mesh bulduğunu söyler. Rivayetin senedi zayıf sayılmış, İbn Abbas\'ın sözü Elbânî tarafından münker bulunmuştur. Mesh görüşü Hz. Ali, Enes, Hasan Basrî, İkrime, Şa\'bî ve Ebü\'l-Âliye\'ye de nispet edilir. Taberî için mesh ile yıkama arasında muhayyerlik, Cübbâî için mesh görüşü aktarılır. İslamQA bu nakillerden yalnız Hz. Ali, İbn Abbas ve Enes\'inkini ele alır. Câferî mektep, ayak meshi uygulamasını bu erken okuyuşla sürdürür.' },
+      text: { tr: 'İbn Mace\'de Rubeyyi\' bint Muavviz, Peygamber\'in ayaklarını yıkadığını anlatınca İbn Abbas, insanların yıkamakta ısrar ettiğini, kendisinin ise Allah\'ın kitabında yalnızca mesh bulduğunu söyler. Rivayetin senedi zayıf sayılmış, İbn Abbas\'ın sözü Elbânî tarafından münker bulunmuştur. Mesh görüşü Hz. Ali, Enes, Hasan Basrî, İkrime, Şa\'bî ve Ebü\'l-Âliye\'ye de nispet edilir. Taberî için mesh ile yıkama arasında muhayyerlik, Cübbâî için mesh görüşü aktarılır. İslamQA bu nakillerden yalnız Hz. Ali, İbn Abbas ve Enes\'inkini ele alır.' },
       art: { bg: 'city', actors: [{ kind: 'woman', x: 32, label: { tr: 'Rubeyyi\'' } }, { kind: 'man', x: 66, label: { tr: 'İbn Abbas' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Câferî tefsirde esre okunuşu, ayetin akışına en uygun okunuş sayılır. Tabâtabâî ve Mekârim Şîrâzî de bu okunuşu tercih eder. Yanındaki kelimenin esre vermesi, cerr-i civâr, açıklamasına göre arada "ve" varken komşuluk etkisi dil açısından zayıf görülür. Mesh ile yıkama iki ayrı fiildir. Mesh yıkamayı içine alsaydı baş için de yıkama yeterli olurdu. Câferî mektep bu ayrımı ayak meshi olarak uygular.' },
+      text: { tr: 'Câferî tefsirde esre okunuşu, ayetin akışına en uygun okunuş sayılır. Tabâtabâî ve Mekârim Şîrâzî de bu okunuşu tercih eder. Yanındaki kelimenin esre vermesi, cerr-i civâr, açıklamasına göre arada "ve" varken komşuluk etkisi dil açısından zayıf görülür. Mesh ile yıkama iki ayrı fiildir. Mesh yıkamayı içine alsaydı baş için de yıkama yeterli olurdu.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 30, label: { tr: 'Müfessir' } }, { kind: 'man', x: 70, label: { tr: 'Dilbilgisi âlimi' } }] },
     },
     {

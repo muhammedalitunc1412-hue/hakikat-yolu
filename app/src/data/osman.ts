@@ -43,7 +43,7 @@ export const osman: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Osman\'ın ardından Medine bir süre yönetimsiz kaldı. Halk Mescid-i Nebevî\'de **Hz. Ali**\'nin yanına koştu. O, bu ağır sorumluluğu bilinçle üstlendi. Biat, bağlılık sözüdür. Biat orada alındı. Devraldığı devlet dertliydi. Kendinden önceki halifelerin döneminden kalan hatalar, adaletsizlikler, akraba kayırmacılığı, haksız dağıtılmış mallar ve bozuk valiler duruyordu. İlk işi adaleti kurmak oldu. Haksız dağıtılan malları beytülmale geri almaya, bozuk valileri görevden almaya başladı. Bu adalet kararlılığı, Cemel ve Sıffin\'deki muhalefeti doğuracaktı. Talha ile Zübeyr\'in gönlü bu biatta tam durmayacaktı.' },
+      text: { tr: 'Osman\'ın ardından Medine bir süre yönetimsiz kaldı. Halk Mescid-i Nebevî\'de **Hz. Ali**\'nin yanına koştu. O, bu ağır sorumluluğu bilinçle üstlendi. Halkın bağlılık sözü vermesiyle Hz. Ali yönetimi üstlendi. Önünde çözüm bekleyen pek çok mesele vardı. Kendinden önceki halifelerin döneminden kalan hatalar, adaletsizlikler, akraba kayırmacılığı, haksız dağıtılmış mallar ve görevini kötüye kullanan valiler duruyordu. Önce kamu mallarının dağıtımına ve valilerin tutumuna yöneldi. Haksız dağıtılan malları beytülmale geri almaya, görevini kötüye kullanan valileri görevden almaya başladı. Bu adalet kararlılığı, Cemel ve Sıffin\'deki muhalefeti doğuracaktı. Talha ile Zübeyr\'in gönlü bu biatta tam durmayacaktı.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'crowd', x: 32, scale: 9 }, { kind: 'man', x: 56, label: { tr: 'Talha' } }, { kind: 'ali', x: 78, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },

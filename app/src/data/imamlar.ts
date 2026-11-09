@@ -34,12 +34,12 @@ export const imamlar: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: '**Hz. Musa Kâzım**, Medine\'de ilmi ve sabrıyla tanındı. Hârûnürreşîd onu Bağdat\'a götürttü. Son dört yılı hapis ve gözetimde geçti. 183 H\'de Bağdat\'ta vefat etti. Kabri Kâzımeyn\'dedir. Ölümünün Bermekî emriyle olduğu aktarılır. Önderlik zindanda da bitmedi.' },
+      text: { tr: '**Hz. Musa Kâzım**, Medine\'de ilmi ve sabrıyla tanındı. Hârûnürreşîd onu Bağdat\'a götürttü. Son dört yılı hapis ve gözetimde geçti. 183 H\'de Bağdat\'ta vefat etti. Kabri Kâzımeyn\'dedir. Ölümünün Bermekî emriyle olduğu aktarılır. Onu ananlar için hapiste geçirdiği yıllar, sabrının en ağır sınavlarından biriydi.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 34, label: { tr: 'Hz. Musa Kâzım' } }, { kind: 'man', x: 70, label: { tr: 'Hârûnürreşîd' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Me\'mun, **Hz. Ali Rızâ**\'yı Merv\'e çağırdı. Hilafeti bırakmayı önerdi. İmam kabul etmedi. Veliahtlık dayatıldı. İki ay direndi. Sonra ahidnameyi imzalamak zorunda kaldı. Rivayete göre bu, baskı altında kalan ve yönetimi meşrulaştırmayan bir kâğıttır. 203 H\'de Tûs yakınlarında vefat etti. Kabri Meşhed oldu. Bu veliahtlık, Kerbela\'dan beri süren gözetimin yeni biçimiydi.' },
+      text: { tr: 'Me\'mun, **Hz. Ali Rızâ**\'yı Merv\'e çağırdı. Hilafeti bırakmayı önerdi. İmam kabul etmedi. Veliahtlık dayatıldı. İki ay direndi. Sonra ahidnameyi imzalamak zorunda kaldı. Rivayete göre bu, baskı altında kalan ve yönetimi meşrulaştırmayan bir kâğıttır. 203 H\'de Tûs yakınlarında vefat etti. Kabri, bugün Meşhed adıyla bilinen şehrin merkezindeki ziyaretgâhtır. Bu veliahtlık, Kerbela\'dan beri süren gözetimin yeni biçimiydi.' },
       art: { bg: 'caravan', props: ['camels', 'scroll'], actors: [{ kind: 'man', x: 30, label: { tr: 'Hz. Ali Rızâ' } }, { kind: 'man', x: 66, label: { tr: 'Me\'mun' } }] },
       by: 'both',
     },
@@ -54,7 +54,7 @@ export const imamlar: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Hz. Mehdî, Peygamber soyundandır. O, doğmuş ve gizlenmiştir. Ahir zamanda adaleti getirecektir. Kerbela\'da kesilen su, onun dönüşünde yeryüzüne gelecek adalete bırakılmıştır. Sevenler bu bekleyişi masal saymaz. Onu imametin son halkası bilir.' },
+      text: { tr: 'Hz. Mehdî, Peygamber soyundandır. O, doğmuş ve gizlenmiştir. Ahir zamanda adaleti getirecektir. On İki İmam inancında bu bekleyiş, zulmün kalıcı olmayacağına ve adaletin yeniden hâkim olacağına dair bir umudu ifade eder.' },
       art: { bg: 'dawn', props: ['sun', 'scroll'], actors: [] },
       by: 'sunni',
     },

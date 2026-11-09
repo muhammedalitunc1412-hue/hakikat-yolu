@@ -20,17 +20,17 @@ export const aliKimdir: HistEvent = {
       ],
     },
     {
-      text: { tr: 'Yine Mekke\'de kıtlık vardı. Peygamber, amcası Ebu Talib\'in yükünü hafifletmek için küçük **Hz. Ali**\'yi bağrına aldı. Çocuk, vahyin geldiği evde büyüdü. Bu terbiye, onu ileride ümmetin önüne geçecek kişi olarak yetiştirdi.' },
+      text: { tr: 'Mekke\'de geçimin zorlaştığı bir dönemde **Hz. Peygamber**, amcası **Ebû Tâlib**\'in yükünü hafifletmek için küçük **Ali**\'yi yanına aldı. Böylece Hz. Ali, ileride vahyin geleceği evde büyüdü. Peygamber\'i yalnızca insanlara seslendiği anlarda görmedi. Onunla aynı evde yaşadı ve gündelik hayatına yakından tanık oldu.' },
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 40, pose: 'sit', label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, scale: 0.6, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Vahiy geldiğinde **Hz. Ali** henüz çocuktu. Mekke\'de duraksamadan iman etti. İslam\'ı kabul eden ilk kişi odur. O günden sonra doğru olanın yanında durdu.' },
+      text: { tr: 'İlk vahiy geldiğinde **Hz. Ali** henüz gençti. Hz. Peygamber\'in davetini en erken kabul edenler arasında yer aldı. İslam\'ı ilk kimin kabul ettiğine ilişkin anlatılarda farklı sıralamalar vardır. Hz. Ali\'nin hikâyesinde öne çıkan nokta, Peygamber\'e desteğinin davetin henüz dar bir çevrede duyulduğu günlere uzanmasıdır.' },
       art: { bg: 'night', props: ['stars'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, scale: 0.7, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hicret gecesi Mekke\'de müşrikler Peygamber\'in evini kuşattı. **Hz. Ali** duraksamadan Peygamber\'in yatağına yattı ve yeşil örtüsüne büründü. Canını, sevdiği adamın canına siper etti. Bu geceye Leyletü\'l-Mebît denir. Bu ad, yatakta kalınan gece demektir. Bakara 207, Allah rızası için kendini satan insanı anar. O gece yatağında yatan kişi, ileride velayetin sahibi olacak **Hz. Ali**\'dir.' },
+      text: { tr: 'Hicret gecesi **Hz. Peygamber** Mekke\'den ayrılmaya hazırlanırken evini kuşatanlar onun içeride olduğunu sanıyordu. Rivayete göre **Hz. Ali**, Peygamber\'in yatağına uzanıp örtüsüne büründü. Kapının dışında bekleyenler, içeride yatan kişinin değiştiğini bilmiyordu. Bu gece **Leyletü\'l-Mebît** adıyla anılır. Allah\'ın rızasını kazanmak için canını ortaya koyan kişiden söz eden Bakara sûresinin 207. ayeti de bazı tefsirlerde bu olayla ilişkilendirilir.' },
       art: { bg: 'night', props: ['moon', 'stars', 'swords'], actors: [{ kind: 'crowd', x: 22, scale: 5 }, { kind: 'ali', x: 64, pose: 'sit', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
@@ -40,27 +40,27 @@ export const aliKimdir: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Medine döneminde Bedir\'de, Uhud\'da ve Hendek\'te sancak **Hz. Ali**\'nin elindeydi. En önde o durdu. Hayber uzayınca Peygamber, sancağı Allah\'ı ve Resulünü seven, Allah ve Resulü tarafından sevilen adama vereceğini söyledi. O adam **Hz. Ali**\'ydi. O, savaşta Peygamber\'in davasını korudu.' },
+      text: { tr: '**Hz. Ali**, Medine döneminde Bedir, Uhud ve Hendek\'te Hz. Peygamber\'in yanında savaştı. Hayber\'de kuşatma uzayınca Peygamber, sancağı Allah\'ı ve Resulü\'nü seven, onların da sevdiği birine vereceğini söyledi. Ertesi sabah sancağı Hz. Ali\'ye teslim etti. Hayber anlatısında Ali\'nin savaş alanındaki cesareti, Peygamber\'in ona duyduğu güvenle birlikte hatırlanır.' },
       art: { bg: 'battle', props: ['flags', 'swords'], actors: [{ kind: 'crowd', x: 22, scale: 6 }, { kind: 'ali', x: 62, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Peygamber şöyle buyurdu: "Ben ilmin şehriyim, Hz. Ali de onun kapısıdır." Bu sözde ilim bir şehirdir. O şehre **Hz. Ali**\'nin kapısından girilir. Kapı **Hz. Ali**\'dir. Ondan sonra gelen imamlar, bu kapıdan gelen ilmi taşır.' },
+      text: { tr: 'Hz. Peygamber\'e nispet edilen bir söz, ilmi bir şehre ve **Hz. Ali**\'yi o şehrin kapısına benzetir. Bu benzetme, Ehl-i Beyt geleneğinde Hz. Ali\'nin ilimdeki yerini anlatmak için kullanılır. Şehrin kapısı imgesi, bilgiyi saklayan bir sınırdan çok, ona ulaşmanın yolunu gösteren bir eşik olarak okunur.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 38, pose: 'raise', label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Şûrâ 23, risaletin karşılığı olarak yakınlara sevgi ister. Risalet, peygamberlik görevi demektir. Yakınlar **Hz. Ali**, **Hz. Fatıma**, **Hz. Hasan** ve **Hz. Hüseyin**\'dir. Onları sevmek, onların hakkını tanımaktır.' },
+      text: { tr: 'Şûrâ sûresinin 23. ayetinde yakınlara sevgiden söz edilir. Ehl-i Beyt\'i merkeze alan yorumda bu yakınlık, **Hz. Ali**, **Hz. Fatıma**, **Hz. Hasan** ve **Hz. Hüseyin** üzerinden anlaşılır. Onları sevmek, hayatlarında karşılaştıkları güçlükleri ve hangi değerler uğruna ayakta durduklarını hatırlamakla da ilgilidir.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 24, scale: 0.9, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 42, scale: 0.9, label: { tr: 'Hz. Fatıma' } }, { kind: 'hasan', x: 60, scale: 0.7, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 76, scale: 0.7, label: { tr: 'Hz. Hüseyin' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Medine\'de **Hz. Ali**, Peygamber\'in kızı **Hz. Fatıma** ile evlendi. Mehir, yani nikâh bedeli, satılan bir zırhın parasıydı. Rivayete göre bu nikâh gökte kıyılmıştır. Soy, **Hz. Hasan** ve **Hz. Hüseyin** ile sürdü. Velayet, bu evden sonraki imamlara geçti.' },
+      text: { tr: 'Medine\'de **Hz. Ali**, Hz. Peygamber\'in kızı **Hz. Fatıma** ile evlendi. Rivayete göre nikâh için ayrılan mehir, Hz. Ali\'nin sattığı zırhın parasıyla karşılandı. Bu evlilikten doğan **Hz. Hasan** ve **Hz. Hüseyin**, dedelerinin yanında büyüdü. Ehl-i Beyt\'in sonraki kuşaklarını anlamak için Medine\'de kurulan bu aileyi tanımak gerekir.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'ali', x: 36, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 60, label: { tr: 'Hz. Fatıma' } }, { kind: 'prophet', x: 80, scale: 0.9, label: { tr: 'Hz. Peygamber' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Peygamber vefat edince başı **Hz. Ali**\'nin göğsündeydi. Gözlerini o bağladı. Yıkamayı o üstlendi. Rivayete göre Peygamber, yıkanması için onu vasiyet etmişti. Aynı saatlerde Sakife\'de biat konuşuluyordu. Biat, bağlılık sözüdür. Önderlik hakkı, cenazenin başında duran **Hz. Ali**\'deydi. Sakife\'de toplananlar bu hakkı bir kenara bırakıyordu.' },
+      text: { tr: 'Hz. Peygamber vefat ettiğinde **Hz. Ali** cenazenin başındaydı. Rivayete göre Peygamber, cenazesinin yıkanmasını ona vasiyet etmişti. Hz. Ali ve yakınları defin hazırlığıyla ilgilenirken Medine\'de başka bir grup **Sakife**\'de toplanıyor, Peygamber\'den sonra yönetimi kimin üstleneceğini konuşuyordu. Aynı gün, aynı şehirde yaşanan bu iki olay, sonrasındaki ayrılığı anlamak için birlikte okunur.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 40, pose: 'sit', label: { tr: 'Hz. Ali' } }, { kind: 'prophet', x: 64, pose: 'sit', label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
