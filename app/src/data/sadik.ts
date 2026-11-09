@@ -9,47 +9,47 @@ export const sadik: HistEvent = {
   hook: { tr: 'Medine\'de bir ilim kapısı açıldı: Hz. Ca\'fer-i Sâdık ve halkasına uğrayan âlimler.', en: 'A circle of learning in Medina, open to the founders of two schools.' },
   scenes: [
     {
-      text: { tr: '**Ca\'fer-i Sâdık** Medine\'de doğdu. Doğum yılı için 80 (699) ve 83 (702) tarihleri verilir. Babası **Muhammed Bâkır**, annesi ise **Ümmü Ferve** idi. Baba tarafından Hz. Ali ile Hz. Fatıma\'nın, anne tarafından Hz. Ebû Bekir\'in soyundandı. Doğru sözlülüğünü ifade eden **Sâdık** lakabıyla tanınan Ca\'fer, Ehl-i Beyt\'in altıncı imamı ve Medine\'nin önde gelen âlimlerinden biri olarak anılır.' },
+      text: { tr: 'Hz. Ca\'fer-i Sâdık 80 (699) veya 83 (702) yılında Medine\'de doğdu; çoğu kaynak 83\'ü esas alır. Babası Hz. Muhammed Bâkır\'dır, soyu Hz. Ali ve Hz. Fatıma\'ya uzanır. Annesi Ümmü Ferve, Kâsım b. Muhammed\'in kızıdır; Kâsım, Hz. Ebû Bekir\'in torunudur. Şii kaynaklarında Altıncı İmam, Sünni kaynaklarında da büyük bir âlim ve Ehl-i Beyt mensubu olarak anılır. "es-Sâdık", doğru sözlü lakabıyla tanınır. Medine, bu lakabı onun meclisine bağlar.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'man', x: 50, label: { tr: 'Hz. Ca\'fer-i Sâdık' } }, { kind: 'crowd', x: 22, scale: 4 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Gençliği Emevi hanedanının çözüldüğü yıllara denk geldi. Sonra iktidar Abbasilere geçti. Hz. Ca\'fer-i Sâdık isyanlara katılmadı; Medine\'de ilme ve öğretmeye yöneldi. Rivayetlerde Halife Mansûr onu zehirletti. TDV bu haberi Şii rivayeti olarak aktarır.' },
+      text: { tr: 'Gençliği Emevi hanedanının çözüldüğü yıllara denk geldi. Sonra iktidar Abbasilere geçti. Hz. Ca\'fer-i Sâdık isyanlara katılmadı; Medine\'de ilme ve öğretmeye yöneldi. Şii kaynaklarına göre Halife Mansûr onu zehirletti. TDV bu haberi Şii rivayeti olarak aktarır. Doğum haberi, Şii rivayet olarak aktarılır.' },
       art: { bg: 'night', props: ['moon', 'stars'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'Hz. Ca\'fer-i Sâdık' } }, { kind: 'man', x: 76, label: { tr: 'Halife Mansûr' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Medine\'de Mescid-i Nebevi çevresinde ders halkaları kuruldu. Ondan hadis dinleyenlerin sayısı dört bine kadar çıkarılır. Şeyh Müfîd el-İrşâd\'da, İbn Uknde ise öğrencilerini sayan eserinde dört bin kişi anmıştır. Şeyh Tûsî\'nin Ricâl\'inde yaklaşık 3.200 isim geçer. Rakam kaynaktan kaynağa değişir. TDV de sayıyı "Şia kaynaklarına göre" diye verir.' },
+      text: { tr: 'Medine\'de Mescid-i Nebevi çevresinde ders halkaları kuruldu. Ondan hadis dinleyenlerin sayısı dört bine kadar çıkarılır. Bu sayı Şii kaynaklarına dayanır. Şeyh Müfîd el-İrşâd\'da, İbn Uknde ise öğrencilerini sayan eserinde dört bin kişi anmıştır. Şeyh Tûsî\'nin Ricâl\'inde yaklaşık 3.200 isim geçer. Rakam kaynaktan kaynağa değişir. TDV de sayıyı "Şia kaynaklarına göre" diye verir. Dört bin talebe sayısı, Şii kaynakların verdiği sayıdır.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 52, pose: 'sit', label: { tr: 'Hz. Ca\'fer-i Sâdık' } }, { kind: 'crowd', x: 24, scale: 7 }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Hz. Ca\'fer-i Sâdık\'ın ilmi hadis, fıkıh ve kelamla anılır. Şii fıkhı onun ve babasının rivayetlerine dayandığı için Câferî mezhebi adını taşır. Rivayetlerde imamların ilmi, Peygamber\'den gelen bir emanet olarak anlatılır. TDV onu, masum saymadan, saygın bir müctehid olarak anar. Kimya ve tıp nispeti sağlam değildir. Câbir b. Hayyân\'a bilgi aktardığı rivayeti TDV çok şüpheli sayar; Ruska ve Kraus gibi araştırmacılar asılsız bulur. Tıpla ilgili İhtilâcü\'l-a\'zâ ona nispet edilir. Kimya ve cefr eserlerinin çoğu, sonraki Şii-Bâtınî çevrelerin ürünü olabilir.' },
+      text: { tr: 'Hz. Ca\'fer-i Sâdık\'ın ilmi hadis, fıkıh ve kelamla anılır. Şii fıkhı onun ve babasının rivayetlerine dayandığı için Câferî mezhebi adını taşır. Şii kaynaklarında imamların ilmi, Peygamber\'den gelen bir emanet olarak anlatılır. TDV onu, masum saymadan, saygın bir müctehid olarak anar. Kimya ve tıp nispeti sağlam değildir. Câbir b. Hayyân\'a bilgi aktardığı rivayeti TDV çok şüpheli sayar; Ruska ve Kraus gibi araştırmacılar asılsız bulur. Tıpla ilgili İhtilâcü\'l-a\'zâ ona nispet edilir. Kimya ve cefr eserlerinin çoğu, sonraki Şii-Bâtınî çevrelerin ürünü olabilir. Sonraki kimya kitapları, ona kesin bağlanmaz.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'Hz. Ca\'fer-i Sâdık' } }, { kind: 'crowd', x: 72, scale: 4 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Ebû Hanîfe ile ilişkisi ilmî bir karşılaşmadır. TDV, Hz. Ca\'fer-i Sâdık\'ın onunla Medine\'de ve Irak\'ta konuşmalar yaptığını yazar. Ebû Hanîfe maddesi, onun Hz. Ca\'fer-i Sâdık\'ı da içeren Ehl-i Beyt âlimleriyle görüşüp özellikle akaidde yararlandığını söyler; Hz. Ca\'fer-i Sâdık\'ı açıkça hocası saymaz. Asıl silsile Hammâd b. Ebû Süleyman, İbrahim en-Nehaî ve Şa\'bî üzerinden gider. Rivayetlerde Ebû Hanîfe, Hz. Ca\'fer-i Sâdık\'ın öğrencisi olarak anılır.' },
+      text: { tr: 'Ebû Hanîfe ile ilişkisi ilmî bir karşılaşmadır. TDV, Hz. Ca\'fer-i Sâdık\'ın onunla Medine\'de ve Irak\'ta konuşmalar yaptığını yazar. Ebû Hanîfe maddesi, onun Hz. Ca\'fer-i Sâdık\'ı da içeren Ehl-i Beyt âlimleriyle görüşüp özellikle akaidde yararlandığını söyler; Hz. Ca\'fer-i Sâdık\'ı açıkça hocası saymaz. Asıl silsile Hammâd b. Ebû Süleyman, İbrahim en-Nehaî ve Şa\'bî üzerinden gider. Şii kaynaklarında ise Ebû Hanîfe, Hz. Ca\'fer-i Sâdık\'ın öğrencisi olarak anılır. Ebu Hanife, bu halkanın öğrencisi diye anılır.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 30, label: { tr: 'Ebû Hanîfe' } }, { kind: 'man', x: 62, pose: 'sit', label: { tr: 'Hz. Ca\'fer-i Sâdık' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Ebû Hanîfe’ye, “O iki yıl olmasaydı Nu’mân helak olurdu” sözü atfedilir. Bu söz, Hz. Ca’fer-i Sâdık’la ilişkisinin nasıl hatırlandığını gösterir. Öğrenciliğin süresi ise kesin olarak bilinmez.' },
+      text: { tr: 'Şii kaynaklarına göre Ebû Hanîfe imamdan iki yıl ders aldı ve "O iki yıl olmasaydı Nu\'mân helak olurdu" dedi. Bu sözün erken bir kaynağı bulunamadı. WikiShia, sözün erken kaynaklarda yer almadığını belirtir. Kâşân Üniversitesi\'ndeki bir inceleme, sözün ilk kez 13. yüzyıl H. tarihli Tuhfe-i İsnâ Aşeriyye\'de göründüğünü ve "iki yıl"ın Zeyd b. Ali\'ye işaret edebileceğini ileri sürer. TDV ise sözü tasavvufla ilgili bir iddia olarak anıp reddeder. Sözün Hz. Ca\'fer-i Sâdık\'a ait olup olmadığı tartışmalıdır. Fıkıh metinlerinin aidiyeti tartışmalıdır.' },
       art: { bg: 'dawn', props: ['scroll'], actors: [{ kind: 'man', x: 40, label: { tr: 'Ebû Hanîfe' } }, { kind: 'man', x: 66, pose: 'sit', label: { tr: 'Hz. Ca\'fer-i Sâdık' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Mâlik b. Enes, Medine’de Hz. Ca’fer-i Sâdık’tan hadis dinleyenler arasında anılır. Aynı şehirde kurulan ilim halkaları, farklı fıkıh mekteplerinde iz bıraktı.' },
+      text: { tr: 'Medine\'nin imamı Mâlik b. Enes (ö. 179/795), Hz. Ca\'fer-i Sâdık\'tan hadis dinleyenler arasında anılır. Şii kaynaklarında Şeyh Saduk\'un el-Hısâl\'inde Mâlik\'in imama giderek hadis dinlediği aktarılır. Muvatta\'daki yeri ve Mâlik\'in övgü sözleri birincil metinden doğrulanamadı. TDV\'nin Mâlik maddesinde Hz. Ca\'fer-i Sâdık\'ın adı geçmez. Bazı Sünni tabakalarda onun adı geçmez.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'man', x: 34, label: { tr: 'Mâlik b. Enes' } }, { kind: 'man', x: 66, pose: 'sit', label: { tr: 'Hz. Ca\'fer-i Sâdık' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Ca’fer-i Sâdık’ın ilmi, Medine’deki ders halkasının ötesine ulaştı. Sonraki kuşaklar onu hadis ve fıkıh alanındaki birikimiyle andı.' },
+      text: { tr: 'Birçok Sünni âlim Hz. Ca\'fer-i Sâdık\'ı övdü. Zehebî onu büyük âlimler arasında anar. Şii kaynakları, Tezkiretü\'l-huffâz\'da onu en bilgin kişilerden saydığını aktarır. Bu metin burada okunmadı. Câhiz\'e atfedilen söz, ilmi ve fıkhıyla dünyayı doldurduğu yönündedir. Rivayetleri Kütüb-i Sitte\'de bulunur. TDV\'ye göre Buhârî Sahîh\'inde ondan rivayet almamıştır. Sebep, Hz. Ca\'fer-i Sâdık\'ın zayıf görülmesi değil, meclisine girenlerin ona uydurma hadis isnat etmesidir. Asıl şikâyet, ona isnat edilen uydurma sözlerdir.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 50, pose: 'sit', label: { tr: 'Hz. Ca\'fer-i Sâdık' } }, { kind: 'crowd', x: 22, scale: 5 }] },
       by: 'sunni',
     },
     {
-      text: { tr: 'Hz. Ca\'fer-i Sâdık 148 H. (765) yılında Medine\'de vefat etti ve Cennetü\'l-Bakî\'ye defnedildi. O, Ehl-i Beyt mektebinin ve Câferî mezhebinin kurucusudur; ilim halkası bu mektebin dayanağı sayılır. Rivayetlerde Medine ilminin saygın bir halkası olarak anılır. Bu halka, iki geleneğin ortak andığı bir kapıdır.' },
+      text: { tr: 'Hz. Ca\'fer-i Sâdık 148 H. (765) yılında Medine\'de vefat etti ve Cennetü\'l-Bakî\'ye defnedildi. Şii kaynaklarında o, Ehl-i Beyt mektebinin ve Câferî mezhebinin kurucusudur; ilim halkası bu mektebin dayanağı sayılır. Sünni kaynaklarında da Medine ilminin saygın bir halkası olarak anılır. Bu halka, iki geleneğin ortak andığı bir kapıdır. İki gelenek, bu kapıda bir kez karşılaşır.' },
       art: { bg: 'dune-dusk', props: ['palms'], actors: [{ kind: 'crowd', x: 40, scale: 6 }, { kind: 'man', x: 74, label: { tr: 'Hz. Ca\'fer-i Sâdık' } }] },
       by: 'both',
     },

@@ -20,7 +20,7 @@ export const aliKimdir: HistEvent = {
       ],
     },
     {
-      text: { tr: 'Mekke\'de geçimin zorlaştığı bir dönemde **Hz. Peygamber**, amcası **Ebû Tâlib**\'in yükünü hafifletmek için küçük **Ali**\'yi yanına aldı. Böylece Hz. Ali, ileride vahyin geleceği evde büyüdü. Peygamber\'i yalnızca insanlara seslendiği anlarda görmedi. Onunla aynı evde yaşadı ve gündelik hayatına yakından tanık oldu.' },
+      text: { tr: 'Mekke\'de geçimin zorlaştığı bir dönemde **Hz. Peygamber**, amcası **Ebû Tâlib**\'in yükünü hafifletmek için küçük **Hz. Ali**\'yi yanına aldı. Böylece Hz. Ali, ileride vahyin geleceği evde büyüdü. Peygamber\'i yalnızca insanlara seslendiği anlarda görmedi. Onunla aynı evde yaşadı ve gündelik hayatına yakından tanık oldu.' },
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 40, pose: 'sit', label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, scale: 0.6, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
@@ -40,7 +40,7 @@ export const aliKimdir: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Ali**, Medine döneminde Bedir, Uhud ve Hendek\'te Hz. Peygamber\'in yanında savaştı. Hayber\'de kuşatma uzayınca Peygamber, sancağı Allah\'ı ve Resulü\'nü seven, onların da sevdiği birine vereceğini söyledi. Ertesi sabah sancağı Hz. Ali\'ye teslim etti. Hayber anlatısında Ali\'nin savaş alanındaki cesareti, Peygamber\'in ona duyduğu güvenle birlikte hatırlanır.' },
+      text: { tr: '**Hz. Ali**, Medine döneminde Bedir, Uhud ve Hendek\'te Hz. Peygamber\'in yanında savaştı. Hayber\'de kuşatma uzayınca Peygamber, sancağı Allah\'ı ve Resulü\'nü seven, onların da sevdiği birine vereceğini söyledi. Ertesi sabah sancağı Hz. Ali\'ye teslim etti. Hayber anlatısında Hz. Ali\'nin savaş alanındaki cesareti, Peygamber\'in ona duyduğu güvenle birlikte hatırlanır.' },
       art: { bg: 'battle', props: ['flags', 'swords'], actors: [{ kind: 'crowd', x: 22, scale: 6 }, { kind: 'ali', x: 62, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },

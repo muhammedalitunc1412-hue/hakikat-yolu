@@ -8,45 +8,45 @@ export const siffin: HistEvent = {
   hook: { tr: 'Sıffin\'de mushaflar mızraklara asıldı; Hz. Ali sabırla hakkı söyledi, hilafeti bir sabah namazında şehadetle bitti.', en: 'Qurans raised on spears, and a caliphate that ended at dawn prayer.' },
   scenes: [
     {
-      text: { tr: 'Cemel\'den sonra **Hz. Ali**, yönetim merkezini Kûfe\'ye taşıdı. Şam valisi **Muaviye** onun halifeliğini tanımayınca iki ordu Fırat kıyısındaki **Sıffin**\'de karşılaştı. Hz. Ali çatışmayı başlatmaktan kaçındı. Karşılaşma, Şam valisinin halifeye bağlılık göstermemesiyle başlayan anlaşmazlığı açık bir savaşa dönüştürdü.' },
+      text: { tr: 'Cemel bitince **Hz. Ali** Kûfe\'yi merkez edindi. Oradan Şam\'a yürüdü. Fırat kıyısında, **Sıffin**\'de **Muaviye**\'nin ordusu onun karşısına çıktı. **Hz. Ali** çatışmayı kendisi başlatmaktan kaçındı. Haklı olan **Hz. Ali**\'ydi. Kılıcı önce çeken taraf o değildi. Hz. Ali, kılıcı karşı taraf çekince açtı.' },
       art: { bg: 'river', props: ['tents', 'flags'], actors: [{ kind: 'crowd', x: 22, scale: 7 }, { kind: 'ali', x: 52, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 82, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Yıllar önce mescit yapılırken Peygamber, **Ammar**\'ın yanındaydı. Ona bakıp "Yazık Ammar\'a, onu azgın bir grup öldürecek" demişti. Sahabe bu sözü duydu. Bâği, meşru imama karşı savaşan demektir. Bu söz, Sıffin\'de kimin bâği olduğunu gösterecekti.' },
+      text: { tr: 'Yıllar önce mescit yapılırken Peygamber, **Ammar**\'ın yanındaydı. Ona bakıp "Yazık Ammar\'a, onu azgın bir grup öldürecek" demişti. Sahabe bu sözü duydu. Bâği, meşru imama karşı savaşan demektir. Bu söz, Sıffin\'de kimin bâği olduğunu gösterecekti. Bâği, hak imama karşı savaşan taraftır.' },
       art: { bg: 'city', props: ['palms', 'sun'], actors: [{ kind: 'prophet', x: 64, label: { tr: 'Hz. Peygamber' } }, { kind: 'man', x: 30, pose: 'raise', label: { tr: 'Ammar b. Yasir' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Sıffin**\'de yaşlı **Ammar**, **Hz. Ali**\'nin safında şehit oldu. Peygamber, onu ==bâği bir grubun== öldüreceğini söylemişti. O grup **Muaviye**\'nin ordusuydu. Sevenler o gün, Peygamber\'in haberinin **Muaviye** tarafında gerçekleştiğini gördü.' },
+      text: { tr: '**Sıffin**\'de yaşlı **Ammar**, **Hz. Ali**\'nin safında şehit oldu. Peygamber, onu ==bâği bir grubun== öldüreceğini söylemişti. O grup **Muaviye**\'nin ordusuydu. Sevenler o gün, Peygamber\'in haberinin **Muaviye** tarafında gerçekleştiğini gördü. Ammâr, rivayete göre o haberi tuttu.' },
       cites: [{ side: 'sunni', i: 1 }, { side: 'shia', i: 0 }],
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'man', x: 26, label: { tr: 'Ammar b. Yasir' } }, { kind: 'ali', x: 70, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Sıffin**\'de **Amr b. el-As**, "Ammar\'ı öldürdük" diye hadisi **Muaviye**\'ye hatırlattı. **Muaviye**, "Onu biz mi öldürdük? Onu getirenler öldürdü" dedi. Suçu, Ammar\'ı oraya getirenlere attı. Peygamber\'in haberi açıktı. ==Bâği grup==, bu haberi inkâr etmek için sözü çarpıttı.' },
+      text: { tr: '**Sıffin**\'de **Amr b. el-As**, "Ammar\'ı öldürdük" diye hadisi **Muaviye**\'ye hatırlattı. **Muaviye**, "Onu biz mi öldürdük? Onu getirenler öldürdü" dedi. Suçu, Ammar\'ı oraya getirenlere attı. Peygamber\'in haberi açıktı. ==Bâği grup==, bu haberi inkâr etmek için sözü çarpıttı. Karşı taraf, haberi inkâr için sözü çarpıttı.' },
       cites: [{ side: 'sunni', i: 3 }],
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 30, label: { tr: 'Amr b. el-As' } }, { kind: 'man', x: 66, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Sıffin**\'de savaş **Hz. Ali**\'nin lehine dönerken Şamlılar mushafı mızrağa taktı. "Allah\'ın kitabı aramızda hakem olsun" dediler. Bu ibadet değil, ==bir hileydi.== **Hz. Ali** bunun hile olduğunu o anda söyledi. Ordusunun bir kısmı, Kur\'an mızrakta diye onu durdurdu. Haklı taraf üstünken savaş yarıda kesildi.' },
+      text: { tr: '**Sıffin**\'de savaş **Hz. Ali**\'nin lehine dönerken Şamlılar mushafı mızrağa taktı. "Allah\'ın kitabı aramızda hakem olsun" dediler. Bu ibadet değil, ==bir hileydi.== **Hz. Ali** bunun hile olduğunu o anda söyledi. Ordusunun bir kısmı, Kur\'an mızrakta diye onu durdurdu. Haklı taraf üstünken savaş yarıda kesildi. Mızraktaki Kur\'an, üstünlüğü durdurdu.' },
       cites: [{ side: 'sunni', i: 8 }, { side: 'shia', i: 0 }],
       art: { bg: 'battle', props: ['flags', 'scroll', 'sun'], actors: [{ kind: 'crowd', x: 26, scale: 8 }, { kind: 'ali', x: 72, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Sıffin**\'de anlaşma yazıldı. Hakem, tarafların seçtiği yargıç demektir. **Hz. Ali** başka isimler istemişti. Yine de Ebu Musa ile **Amr b. el-As** oturdu. Metinden "Emirü\'l-müminin" unvanı çıkarıldı. Bu hakemlik, Gadir\'de ilan edilen yetkiyi zayıflattı. **Hz. Ali**\'nin hakkına zarar verdi.' },
+      text: { tr: '**Sıffin**\'de anlaşma yazıldı. Hakem, tarafların seçtiği yargıç demektir. **Hz. Ali** başka isimler istemişti. Yine de Ebu Musa ile **Amr b. el-As** oturdu. Metinden "Emirü\'l-müminin" unvanı çıkarıldı. Bu hakemlik, Gadir\'de ilan edilen yetkiyi zayıflattı. **Hz. Ali**\'nin hakkına zarar verdi. Hakem, Hz. Ali\'nin hakkını yazmadı.' },
       art: { bg: 'dune-day', props: ['tents', 'scroll'], actors: [{ kind: 'man', x: 24, label: { tr: 'Ebu Musa el-Eşari' } }, { kind: 'ali', x: 52, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 80, label: { tr: 'Amr b. el-As' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Ali**\'nin ordusundan bir grup hakemi reddetti. "Hüküm yalnız Allah\'ındır" diyerek yanından ayrıldılar. Bunlara Haricîler denir. Hz. Ali, "Söz haktır, ama onunla batıl kastediliyor" dedi. Önce onlarla konuşuldu. Sonra Nehrevan\'da çatışıldı. Mızraktaki mushaf hilesi, **Hz. Ali**\'nin kendi safını da bölmüştü.' },
+      text: { tr: '**Hz. Ali**\'nin ordusundan bir grup hakemi reddetti. "Hüküm yalnız Allah\'ındır" diyerek yanından ayrıldılar. Bunlara Haricîler denir. Hz. Ali, "Söz haktır, ama onunla batıl kastediliyor" dedi. Önce onlarla konuşuldu. Sonra Nehrevan\'da çatışıldı. Mızraktaki mushaf hilesi, **Hz. Ali**\'nin kendi safını da bölmüştü. Hile, kendi safını da böldü.' },
       art: { bg: 'river', props: ['flags'], actors: [{ kind: 'crowd', x: 28, scale: 7 }, { kind: 'ali', x: 74, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Ali**, Haricîler hakkında Peygamber\'den bir haber aktarır. Onları öldürenlere Allah katında sevap vardır. Hakka daha yakın taraf onlarla savaşacaktır. O taraf, Hz. Ali\'nin safıdır.' },
+      text: { tr: '**Hz. Ali**, Haricîler hakkında Peygamber\'den bir haber aktarır. Onları öldürenlere Allah katında sevap vardır. Hakka daha yakın taraf onlarla savaşacaktır. O taraf, Hz. Ali\'nin safıdır. Nehrevan, bu bölünmenin sonraki adımıdır.' },
       art: { bg: 'dawn', props: ['scroll'], actors: [{ kind: 'ali', x: 44, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 78, scale: 5 }] },
       by: 'sunni',
     },
@@ -56,7 +56,7 @@ export const siffin: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Ramazan 40\'ta Kûfe Ulu Camii\'nde sabah namazı kılınırken İbn Mülcem, **Hz. Ali**\'nin alnına vurdu. Secde halinde olduğu ayrıca yazılmaz. Hz. Ali\'nin, Kâbe\'nin Rabbine andolsun kurtulduğunu söylediği nakledilir. Bu söz Şii kitaplarda Radî ve İbn Şehrâşûb, Sünnî kitaplarda İbnü\'l-Esîr ve Belâzurî üzerinden anılır. Bu sözün tam Türkçe lafızları rivayete göre değişir. Katiline yemek ve su verilmesini, esirliğinde iyi tutulmasını istedi. Ölürse bir darbeye bir darbe olsun, uzuv kesilmesin, dedi. "Yediğinizden yedirin" diye uzatılan cümle Sünnî kitaplarda bulunamadı. 18 Zilhicce 35\'ten Ramazan 40\'a kadar yaklaşık dört yıl dokuz ay halife kalmıştı. Oğlu **Hz. Hasan**\'a vasiyetini bıraktı. Yönetimi **Muaviye**\'ye devret demedi.' },
+      text: { tr: 'Ramazan 40\'ta Kûfe Ulu Camii\'nde sabah namazı kılınırken İbn Mülcem, **Hz. Ali**\'nin alnına vurdu. Secde halinde olduğu ayrıca yazılmaz. Hz. Ali\'nin, Kâbe\'nin Rabbine andolsun kurtulduğunu söylediği nakledilir. Bu söz Şii kitaplarda Radî ve İbn Şehrâşûb, Sünnî kitaplarda İbnü\'l-Esîr ve Belâzurî üzerinden anılır. Bu sözün tam Türkçe lafızları rivayete göre değişir. Katiline yemek ve su verilmesini, esirliğinde iyi tutulmasını istedi. Ölürse bir darbeye bir darbe olsun, uzuv kesilmesin, dedi. "Yediğinizden yedirin" diye uzatılan cümle Sünnî kitaplarda bulunamadı. 18 Zilhicce 35\'ten Ramazan 40\'a kadar yaklaşık dört yıl dokuz ay halife kalmıştı. Oğlu **Hz. Hasan**\'a vasiyetini bıraktı. Yönetimi **Muaviye**\'ye devret demedi. Vasiyet, hilafeti oğluna bıraktı.' },
       art: { bg: 'dawn', props: ['moon'], actors: [{ kind: 'ali', x: 42, pose: 'sit', label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 66, label: { tr: 'Hz. Hasan' } }, { kind: 'crowd', x: 86, scale: 4 }] },
       by: 'both',
     },

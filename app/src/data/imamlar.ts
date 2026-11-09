@@ -9,52 +9,52 @@ export const imamlar: HistEvent = {
   hook: { tr: 'Kerbela\'dan sağ çıkan genç bir imam, ilim ve sabırla yürüyen bir rehberlik zincirini nasıl başlattı?', en: 'How did a sick young survivor of Karbala begin a line of learning and patience?' },
   scenes: [
     {
-      text: { tr: '**Hz. Hüseyin**\'in oğlu Ali, **Hz. Zeynelâbidîn** adıyla tanınır. Kerbelâ\'da hastalığı sebebiyle savaşamadı ve hayatta kalan aile fertleriyle birlikte esir alındı. Esaretten sonra Medine\'ye döndü. İmamet onunla devam etti. Kerbelâ\'dan sonraki dönemde Ehl-i Beyt\'in önderliği, onun hayatı ve öğretileri çevresinde sürdü.' },
+      text: { tr: 'Kerbela\'da **Hz. Hüseyin** şehit oldu. İmamet, hasta oğlu **Hz. Zeynelâbidîn**\'e geçti. Adı Ali\'ydi. Meydanda savaşamamıştı. Çadırda sağ kalmıştı. Esirlik yolundan Medine\'ye döndü. Önderlik kılıçla bitmedi. Hasta gencin üzerinde sürdü. Medine\'ye dönünce önderlik onda sürdü.' },
       art: { bg: 'dune-dusk', props: ['tents'], actors: [] },
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Seccâd**, Medine\'de ibadet ve duayla yaşadı. Duaları Sahife-i Seccâdiyye\'de toplandı. Ehl-i Beyt bu sahifeye "Âl-i Muhammed\'in Zeburu" der. Risâletü\'l-Hukûk da ona nispet edilir. 94 H. civarında Bakî\'de, amcası **Hz. Hasan**\'ın yanına defnedildi. Rivayete göre zehirlendi. Kerbela\'nın bu yetimi, duasını ümmete miras bıraktı.' },
+      text: { tr: '**Hz. Seccâd**, Medine\'de ibadet ve duayla yaşadı. Duaları Sahife-i Seccâdiyye\'de toplandı. Ehl-i Beyt bu sahifeye "Âl-i Muhammed\'in Zeburu" der. Risâletü\'l-Hukûk da ona nispet edilir. 94 H. civarında Bakî\'de, amcası **Hz. Hasan**\'ın yanına defnedildi. Ehl-i Beyt rivayetinde zehirlendi. Kerbela\'nın bu yetimi, duasını ümmete miras bıraktı. Sahife, Kerbelâ\'dan sonra kalan en uzun mirastır.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 50, pose: 'sit', label: { tr: 'Hz. Zeynelâbidîn' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Oğlu **Hz. Muhammed Bâkır** diye anılır. Bu ad, ilmi yarıp derinliğine inen demektir. Medine\'de bir ders halkası kurdu. Yanında oğlu **Hz. Ca\'fer**, Katâde, Zührî ve Evzâî de bulundu. 114 H. civarında Bakî\'de defnedildi. Gadir\'den gelen ilim bu halkada sürdü.' },
+      text: { tr: 'Oğlu **Hz. Muhammed Bâkır** diye anılır. Bu ad, ilmi yarıp derinliğine inen demektir. Medine\'de bir ders halkası kurdu. Yanında oğlu **Hz. Ca\'fer**, Katâde, Zührî ve Evzâî de bulundu. 114 H. civarında Bakî\'de defnedildi. Gadir\'den gelen ilim bu halkada sürdü. Halka, Medine\'de, Ehl-i Beyt\'in evinde kuruldu.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 36, pose: 'sit', label: { tr: 'Hz. Muhammed Bâkır' } }, { kind: 'crowd', x: 68, scale: 4 }] },
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Ca\'fer-i Sâdık**, isyanlara karışmadan ilme yöneldi. Câferî fıkıh onun adını taşır. 148 H\'de Medine\'de vefat etti. Önderlik burada kılıçsız bir ilim halkasıydı. Bu ilim ümmeti doğru abdestten doğru imama kadar tuttu.' },
+      text: { tr: '**Hz. Ca\'fer-i Sâdık**, isyanlara karışmadan ilme yöneldi. Câferî fıkıh onun adını taşır. 148 H\'de Medine\'de vefat etti. Önderlik burada kılıçsız bir ilim halkasıydı. Bu ilim ümmeti doğru abdestten doğru imama kadar tuttu. Talebe, abdestten imamete kadar bu kapıdan geçti.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'Hz. Ca\'fer-i Sâdık' } }, { kind: 'crowd', x: 70, scale: 5 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Ebû Hanîfe ve Mâlik, **Hz. Ca\'fer-i Sâdık**\'ın halkasından yararlananlar arasında anılır. "O iki yıl olmasaydı Nu\'mân helak olurdu" sözü Ebû Hanîfe\'ye atfedilir. Mâlik\'in ondan hadis dinlediği de aktarılır. Bu ilim halkası Medine\'de açık kaldı.' },
+      text: { tr: 'Ebû Hanîfe ve Mâlik, **Hz. Ca\'fer-i Sâdık**\'ın halkasından yararlananlar arasında anılır. "O iki yıl olmasaydı Nu\'mân helak olurdu" sözü Ebû Hanîfe\'ye atfedilir. Mâlik\'in ondan hadis dinlediği de aktarılır. Bu ilim halkası Medine\'de açık kaldı. Hz. Musa el-Kâzım, bu halkanın içinde büyüdü.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 30, label: { tr: 'Ebû Hanîfe' } }, { kind: 'man', x: 52, pose: 'sit', label: { tr: 'Hz. Ca\'fer-i Sâdık' } }, { kind: 'man', x: 76, label: { tr: 'Mâlik b. Enes' } }] },
       by: 'shia',
     },
     {
-      text: { tr: '**Hz. Musa Kâzım**, Medine\'de ilmi ve sabrıyla tanındı. Hârûnürreşîd onu Bağdat\'a götürttü. Son dört yılı hapis ve gözetimde geçti. 183 H\'de Bağdat\'ta vefat etti. Kabri Kâzımeyn\'dedir. Ölümünün Bermekî emriyle olduğu aktarılır. Onu ananlar için hapiste geçirdiği yıllar, sabrının en ağır sınavlarından biriydi.' },
+      text: { tr: '**Hz. Musa Kâzım**, Medine\'de ilmi ve sabrıyla tanındı. Hârûnürreşîd onu Bağdat\'a götürttü. Son dört yılı hapis ve gözetimde geçti. 183 H\'de Bağdat\'ta vefat etti. Kabri Kâzımeyn\'dedir. Ölümünün Bermekî emriyle olduğu aktarılır. Önderlik zindanda da bitmedi. Zindan, Bağdat\'ta önderliği susturamadı.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 34, label: { tr: 'Hz. Musa Kâzım' } }, { kind: 'man', x: 70, label: { tr: 'Hârûnürreşîd' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Me\'mun, **Hz. Ali Rızâ**\'yı Merv\'e çağırdı. Hilafeti bırakmayı önerdi. İmam kabul etmedi. Veliahtlık dayatıldı. İki ay direndi. Sonra ahidnameyi imzalamak zorunda kaldı. Rivayete göre bu, baskı altında kalan ve yönetimi meşrulaştırmayan bir kâğıttır. 203 H\'de Tûs yakınlarında vefat etti. Kabri, bugün Meşhed adıyla bilinen şehrin merkezindeki ziyaretgâhtır. Bu veliahtlık, Kerbela\'dan beri süren gözetimin yeni biçimiydi.' },
+      text: { tr: 'Me\'mun, **Hz. Ali Rızâ**\'yı Merv\'e çağırdı. Hilafeti bırakmayı önerdi. İmam kabul etmedi. Veliahtlık dayatıldı. İki ay direndi. Sonra ahidnameyi imzalamak zorunda kaldı. Ehl-i Beyt rivayetinde bu, baskı altında kalan ve yönetimi meşrulaştırmayan bir kâğıttır. 203 H\'de Tûs yakınlarında vefat etti. Kabri Meşhed oldu. Bu veliahtlık, Kerbela\'dan beri süren gözetimin yeni biçimiydi. Veliahtlık, gözetimin yeni adı oldu.' },
       art: { bg: 'caravan', props: ['camels', 'scroll'], actors: [{ kind: 'man', x: 30, label: { tr: 'Hz. Ali Rızâ' } }, { kind: 'man', x: 66, label: { tr: 'Me\'mun' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Muhammed Takî** babasını yedi yaşında kaybetti. Bağdat\'a götürüldü. 220 H\'de orada vefat etti. Oğlu **Hz. Ali Nakî**, Mütevekkil tarafından Samarra\'ya kapatıldı. Oğlu **Hz. Hasan Askerî** de şehirden çıkamadı. Askerî, ordugâhta tutulan demektir. Bu yüzden böyle anıldı. 260\'ta vefat etti. Rivayete göre ikisi de zehirlendi. Gözetim, imametin üzerine kapanmıştı.' },
+      text: { tr: '**Hz. Muhammed Takî** babasını yedi yaşında kaybetti. Bağdat\'a götürüldü. 220 H\'de orada vefat etti. Oğlu **Hz. Ali Nakî**, Mütevekkil tarafından Samarra\'ya kapatıldı. Oğlu **Hz. Hasan Askerî** de şehirden çıkamadı. Askerî, ordugâhta tutulan demektir. Bu yüzden böyle anıldı. 260\'ta vefat etti. Ehl-i Beyt rivayetinde ikisi de zehirlendi. Gözetim, imametin üzerine kapanmıştı. Üç imam, Bağdat ve Samarra\'da gözetim altında vefat etti.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 26, label: { tr: 'Hz. Ali Nakî' } }, { kind: 'man', x: 56, label: { tr: 'Hz. Hasan Askerî' } }, { kind: 'crowd', x: 82, scale: 3 }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Hz. Hasan Askerî\'nin vefatından kısa süre önce Samarra\'da bir oğlu doğdu. Bu çocuk On İkinci İmam **Hz. Mehdî**\'ydi. Doğumu Abbasi baskısı yüzünden gizlendi. Küçük gaybette dört nâib aracılık etti. Sonra büyük gaybet başladı. O, adaleti yeryüzüne hâkim kılmak için dönecektir. Gadir\'de başlayan çizgi gaybette de kopmadı.' },
+      text: { tr: 'Hz. Hasan Askerî\'nin vefatından kısa süre önce Samarra\'da bir oğlu doğdu. Bu çocuk On İkinci İmam **Hz. Mehdî**\'ydi. Doğumu Abbasi baskısı yüzünden gizlendi. Küçük gaybette dört nâib aracılık etti. Sonra büyük gaybet başladı. O, adaleti yeryüzüne hâkim kılmak için dönecektir. Gadir\'de başlayan çizgi gaybette de kopmadı. Gaybet, ölüm değildir. Son imam gizlenmiştir.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'crowd', x: 50, scale: 5 }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Hz. Mehdî, Peygamber soyundandır. O, doğmuş ve gizlenmiştir. Ahir zamanda adaleti getirecektir. On İki İmam inancında bu bekleyiş, zulmün kalıcı olmayacağına ve adaletin yeniden hâkim olacağına dair bir umudu ifade eder.' },
+      text: { tr: 'Hz. Mehdî, Peygamber soyundandır. O, doğmuş ve gizlenmiştir. Ahir zamanda adaleti getirecektir. Kerbela\'da kesilen su, onun dönüşünde yeryüzüne gelecek adalete bırakılmıştır. Sevenler bu bekleyişi masal saymaz. Onu imametin son halkası bilir. On iki halka, burada tamamlanır.' },
       art: { bg: 'dawn', props: ['sun', 'scroll'], actors: [] },
       by: 'sunni',
     },

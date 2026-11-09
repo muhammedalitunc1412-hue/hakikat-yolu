@@ -77,6 +77,7 @@ const UI: Record<string, L> = {
   noResult: { tr: 'Bu aramayla eşleşen olay yok.', en: 'No event matches this search.' },
   scene: { tr: 'Sahne', en: 'Scene' },
   prev: { tr: 'Önceki', en: 'Previous' },
+  prevScene: { tr: 'Önceki sahne', en: 'Previous scene' },
   nextScene: { tr: 'Sonraki', en: 'Next' },
   kicker: { tr: 'EHL-İ BEYT', en: 'AHL AL-BAYT' },
   arabic: { tr: 'Arapça', en: 'Arabic' },

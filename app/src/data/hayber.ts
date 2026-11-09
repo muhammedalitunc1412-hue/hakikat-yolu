@@ -10,44 +10,44 @@ export const hayber: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Hicretin yedinci yılında **Hz. Peygamber**, ordusuyla Medine\'nin kuzeyindeki **Hayber**\'e yürüdü. Hayber birden fazla kaleden oluşuyordu. Ordu kaleleri sırayla kuşattı, ancak kalelerden birinin direnişi günlerce sürdü. Bir sonraki hücumu kimin yöneteceği, bu kuşatmanın gidişini belirleyecekti.' },
+      text: { tr: 'Hicretin 7. yılında Peygamber, Medine\'nin kuzeyindeki **Hayber**\'e yürüdü. Kaleler yan yanaydı. Ordu onları birer birer kuşattı. Bu sefer şunu gösterecekti: **Hz. Ali**, Peygamber\'in davasını koruyordu. Sancak, o kalelerin önünde ona verilecekti.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'crowd', x: 34, scale: 8 }, { kind: 'prophet', x: 68, label: { tr: 'Hz. Peygamber' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Hayber\'deki kalelerden biri, günler süren kuşatmaya rağmen alınamadı. Bazı rivayetlere göre sancağı önce **Ebû Bekir**, ardından **Ömer** taşıdı. İkisi de kaleyi ele geçiremeden döndü. Ordu yeniden toplandığında kuşatma sürüyordu. Askerler bir sonraki hücumu kimin yöneteceğini henüz bilmiyordu.' },
+      text: { tr: 'Hayber\'de kalelerden biri günlerce alınamadı. Anlatılan o ki önce Ebu Bekir, sonra Ömer sancakla gitti. İkisi de fethi tamamlamadan döndü. Kale hâlâ duruyordu. Sancak, kaleyi alacak kişiye henüz verilmemişti. Sabah, o kişiyi bekliyordu.' },
       art: { bg: 'dune-dusk', actors: [{ kind: 'crowd', x: 50, scale: 6 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Günün sonunda **Hz. Peygamber**, sancağı ertesi gün Allah\'ı ve Resulü\'nü seven, onların da sevdiği birine vereceğini söyledi. Kalenin onun eliyle alınacağını bildirdi. Bu söz ordugâhta hızla yayıldı. Rivayete göre askerler gece boyunca sancağın kime verileceğini konuştu.' },
+      text: { tr: 'Bunun üzerine Peygamber buyurdu: "Yarın sancağı, Allah\'ı ve Resulü\'nü seven, Allah\'ın ve Resulü\'nün de sevdiği bir kişiye vereceğim. Allah onun eliyle fethettirecek." O gece çadırlardaki askerler, sancağın kime verileceğini konuşa konuşa sabahladı.' },
       art: { bg: 'night', props: ['stars'], actors: [{ kind: 'prophet', x: 46, label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 74, scale: 5 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Sabah askerler sancağın kime verileceğini beklerken **Hz. Peygamber**, **Hz. Ali**\'yi sordu. Ali gözlerindeki rahatsızlık yüzünden orada değildi. Yanına getirildiğinde Peygamber gözlerine dokunup ona dua etti. Rivayete göre rahatsızlığı geçti. Peygamber sancağı ona verdi. Hz. Ali nasıl ilerleyeceğini sorunca Peygamber acele etmemesini, önce karşısındakileri İslam\'a davet etmesini söyledi. Bir kişinin onun eliyle doğru yolu bulmasının, o dönemde büyük servet sayılan kızıl develerden daha değerli olduğunu hatırlattı.' },
+      text: { tr: 'Sabah Hayber önünde herkes sancağı umuyordu. Peygamber "Hz. Ali nerede?" diye sordu. **Hz. Ali**\'nin gözleri ağrıyordu. Onu getirdiler. Peygamber tükürüğünü gözlerine sürdü. Gözler açıldı. Sancağı **Hz. Ali**\'ye verdi. Hz. Ali sordu: "Ya Resulallah, onlar bizim gibi Müslüman olana kadar mı savaşayım?" Peygamber ona buyurdu: "Yavaşça git. Onların yurduna varınca önce onları İslam\'a davet et. Üzerlerine düşen Allah\'ın haklarını bildir. Allah\'a yemin ederim ki, **Allah\'ın senin vasıtanla tek bir kişiyi hidayete erdirmesi, senin için kızıl develere sahip olmaktan daha hayırlıdır**."' },
       cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 1 }, { side: 'sunni', i: 2 }],
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'prophet', x: 42, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Hayber\'in savunucularından **Merhab**, kalenin önünde dövüşmek için meydana çıktı. Kendisini tanıtan bir **recez**, yani savaş sırasında söylenen ölçülü bir şiir okudu. **Hz. Ali** de ona aynı biçimde karşılık verdi ve annesinin kendisine verdiği, aslan anlamındaki **Haydar** adını andı. Sözlerin ardından iki savaşçı karşı karşıya geldi. Rivayette Hz. Ali\'nin Merhab\'ı başına indirdiği darbeyle öldürdüğü anlatılır. Bu çarpışma, kalenin ele geçirilmesiyle sonuçlanan hücumun en çok anılan anlarından biri oldu.' },
+      text: { tr: 'Hayber\'in kapısı önünde Yahudi savaşçısı **Merhab** meydana çıktı. Miğferi başındaydı, zırhı üzerindeydi. Kılıcını sallayarak recez okudu: "Hayber bilir ki ben Merhab\'ım. Silahım tam, savaşta pişmiş bir yiğidim. Savaş alevlenince ben oradayım." **Hz. Ali** karşısına geçti ve recezle cevap verdi: "Ben, annemin Haydar adını verdiği kişiyim. Haydar, aslan demektir. Orman aslanı gibi korkunç bakışlıyım." Ehl-i Beyt rivayetinde Hz. Ali tek bir yara almadan Zülfikar\'ı indirdi. Zülfikar, tek ve hafif eğri bir kılıçtır. Boyu yaklaşık yüz yirmi santimdir. Rivayete göre tek darbe Merhab\'ı yere yıktı. Kale bu darbeden sonra fethedildi.' },
       cites: [{ side: 'sunni', i: 4 }, { side: 'shia', i: 1 }, { side: 'shia', i: 2 }],
       art: { bg: 'dune-day', actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 74, scale: 3 }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Hayber kuşatmasına ilişkin bir rivayette **Hz. Ali**\'nin kale kapısını yerinden çıkarıp kendisine siper ettiği anlatılır. Ordunun günlerce önünde durduğu kale, bu anlatıda bir kapı üzerinden hatırlanır. Bir zamanlar ilerlemeyi engelleyen kapı, hücum sırasında Hz. Ali\'yi koruyan bir sipere dönüşür.' },
+      text: { tr: 'Ehl-i Beyt rivayetinde **Hz. Ali**, Hayber kapısını yerinden söküp kalkan gibi kullandı. Kapıyı savaşırken önünde tuttu. Kapı, o gün bir siper oldu. Rivayet, bu gücü Hayber\'in fethine bağlar.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Hayber\'de sancak, **Hz. Ali**\'nin elinde bir hücumun işaretiydi. Onu taşıyacak kişinin nasıl seçildiğini ise Peygamber\'in bir önceki akşam söylediği söz anlatır. Hz. Ali\'yi, Allah\'ı ve Resulü\'nü seven ve onlar tarafından sevilen kişi olarak tanıtmıştı. Hayber hatırasında sancağın askerî anlamına, bu sevgi ve güven de eşlik eder.' },
+      text: { tr: 'Sancak, Allah\'ı ve Resulünü seven, Allah ve Resulü tarafından sevilen kişiye verilmişti. O kişi **Hz. Ali**\'ydi. Peygamber\'in "kaçıcı değil, saldırgandır" dediği de anlatılır. Bir gün önce fethi tamamlamadan dönenlerin yanında bu söz, **Hz. Ali**\'nin yerini açıkça gösterdi.' },
       art: { bg: 'night', props: ['stars', 'scroll'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Hayber\'in alınmasından sonra bölge halkı, ürünün bir kısmını vermek üzere topraklarında kalmayı kabul etti. Yakındaki **Fedek** halkı ise savaşmadan anlaşmaya vardı. Daha sonra **Hz. Fatıma**, babasının Fedek\'i sağlığında kendisine bağışladığını bildirecekti. Peygamber\'in vefatından sonra bu bağışın tanınıp tanınmaması, Fedek anlaşmazlığının merkezine yerleşti.' },
+      text: { tr: 'Hayber fethedilince halk, ürünün yarısını vermek üzere yerinde kaldı. **Fedek** halkı savaşmadan anlaştı. Toprak Peygamber\'in eline geçti. O, bu toprağı kızı **Hz. Fatıma**\'ya hibe etti. Hibe, bağış demektir. Ancak bu hibe, Resulullah\'ın vefatından sonra **Hz. Fatıma**\'nın elinden alınacak, Fedek **gasp edilecekti**.' },
       art: { bg: 'river', props: ['palms'], actors: [{ kind: 'crowd', x: 50, scale: 5 }] },
     },
   ],

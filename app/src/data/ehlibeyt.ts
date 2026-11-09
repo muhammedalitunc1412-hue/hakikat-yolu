@@ -10,42 +10,42 @@ export const ehlibeyt: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Necran\'dan gelen Hristiyan bir heyet Medine\'de **Hz. Peygamber** ile görüştü. Görüşmenin merkezinde **Hz. İsa**\'nın Allah\'la ilişkisi vardı. Heyet ve Peygamber bu konuda farklı görüşler dile getirdi. Tartışmanın ardından Âl-i İmrân sûresinin 61. ayetinde iki tarafın yakınlarıyla bir araya gelmesi ve yalancı olanlara Allah\'ın lanetini dilemesi bildirildi. Bu karşılıklı yakarışa **mübahele** denir. Şimdi Peygamber\'in yanında kimleri getireceği önem kazanmıştı.' },
+      text: { tr: 'Medine\'ye Necran\'dan bir heyet geldi. Hristiyandılar. Konu Hz. İsa\'da toplandı. Onlar İsa\'yı Allah\'ın oğlu ve ilah diye anıyordu. Peygamber, İsa\'nın kul olduğunu söyledi. Konuşma uzadı. İki taraf da kendi sözünde durdu. O zaman mübahele ayeti indi. Mübahele, iki tarafın Allah\'a yönelmesi ve yalan söyleyen tarafa lanet dilemesidir. Âl-i İmrân 61 şöyle der: oğullarımızı ve oğullarınızı, kadınlarımızı ve kadınlarınızı, kendimizi ve kendinizi çağıralım, sonra yalancıların üzerine Allah\'ın lanetini dileyelim. Sabah Peygamber, Necran heyetinin karşısına varmak için evinden çıktı. Yanında kendi nefsi gibi, yani kendisi yerine koyduğu **Hz. Ali** vardı. Kızı **Hz. Fatıma** vardı. Torunları **Hz. Hasan** ve **Hz. Hüseyin** vardı. Başkasını çağırmadı. "Allah\'ım, bunlar ehlimdir" dedi. Necranlılar bu yürüyüşü görünce durdular. Karşılarına bir ordu çıkmamıştı. Peygamber\'in en sevdiği kişiler çıkmıştı. Lanetleşmeye cesaret edemediler. Anlaşmayı kabul ettiler. O gün meydanda Ehl-i Beyt duruyordu. Necran heyeti, Medine\'de bu aileyi karşısında buldu.' },
       art: { bg: 'dune-day', props: ['sun', 'tents'], actors: [{ kind: 'prophet', x: 44, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 58, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 70, label: { tr: 'Hz. Fatıma' } }, { kind: 'hasan', x: 80, scale: 0.7, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 88, scale: 0.65, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Mübahele ayetindeki "kendimizi" sözü **Hz. Ali**\'yi de kapsar. Peygamber onu mübaheleye kendi nefsi olarak getirdi. Bu yakınlık yalnız akrabalık değildi. Peygamber, **Hz. Ali**\'yi kendi durduğu yere koymuştu. Velayet, yani önderlik, bu yerin adıdır.' },
+      text: { tr: 'Mübahele ayetindeki "kendimizi" sözü **Hz. Ali**\'yi de kapsar. Peygamber onu mübaheleye kendi nefsi olarak getirdi. Bu yakınlık yalnız akrabalık değildi. Peygamber, **Hz. Ali**\'yi kendi durduğu yere koymuştu. Velayet, yani önderlik, bu yerin adıdır. Menzile hadisi, bu yerin bir başka adıdır.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'prophet', x: 44, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 58, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Veda Haccı dönüşünde kafile Hum suyu başına geldi. Peygamber orada iki ağır emanet bıraktı: Allah\'ın Kitabı ve itreti, yani ==Ehl-i Beyt==. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi. Bu ikisi Havz\'a varıncaya dek ayrılmaz. Havz, Kıyamet\'teki havuzdur. Zeyd\'e sorulunca hanımları yakın halkanın dışında tuttu. Hz. Ali, Akîl, Cafer ve Abbas ailelerini andı. Peygamber Kitap ile itreti birbirine bağladı ki Kur\'an, Ehl-i Beyt olmadan kalmasın.' },
+      text: { tr: 'Veda Haccı dönüşünde kafile Hum suyu başına geldi. Peygamber orada iki ağır emanet bıraktı: Allah\'ın Kitabı ve itreti, yani ==Ehl-i Beyt==. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi. Bu ikisi Havz\'a varıncaya dek ayrılmaz. Havz, Kıyamet\'teki havuzdur. Zeyd\'e sorulunca hanımları yakın halkanın dışında tuttu. Hz. Ali, Akîl, Cafer ve Abbas ailelerini andı. Peygamber Kitap ile itreti birbirine bağladı ki Kur\'an, Ehl-i Beyt olmadan kalmasın. Sakife, bu bağı sonra çözecekti.' },
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 82, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Peygamber Ehl-i Beyt için şunu da söyledi: "Ehl-i Beytimin örneği Nuh\'un gemisi gibidir. Ona binen kurtulur, geri kalan boğulur." Bu söze Safine denir. Safine, gemi demektir. Gadir\'de gösterilen gemi Ehl-i Beyt\'ti. Sakife\'de insanlar onları bırakınca ümmet ağır bir sıkıntıya düştü.' },
+      text: { tr: 'Peygamber Ehl-i Beyt için şunu da söyledi: "Ehl-i Beytimin örneği Nuh\'un gemisi gibidir. Ona binen kurtulur, geri kalan boğulur." Bu söze Safine denir. Safine, gemi demektir. Gadir\'de gösterilen gemi Ehl-i Beyt\'ti. Sakife\'de insanlar onları bırakınca ümmet ağır bir sıkıntıya düştü. Gadir\'deki el, o gölgelikte hatırlanmadı.' },
       art: { bg: 'river', props: ['palms'], actors: [{ kind: 'crowd', x: 40, scale: 5 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Câbir b. Semüre anlatır. Peygamber, "Bu iş, içlerinden on iki halife gelinceye kadar sürecek" dedi. Sonra bir şey daha söyledi. Câbir onu duyamadı. Babası, Peygamber\'in "Hepsi Kureyş\'tendir" dediğini bildirdi. On İki İmam anlayışında bu sayı, Hz. Ali ile başlayıp Hz. Mehdî ile tamamlanan önderlik silsilesiyle ilişkilendirilir.' },
+      text: { tr: 'Câbir b. Semüre anlatır. Peygamber, "Bu iş, içlerinden on iki halife gelinceye kadar sürecek" dedi. Sonra bir şey daha söyledi. Câbir onu duyamadı. Babası, Peygamber\'in "Hepsi Kureyş\'tendir" dediğini bildirdi. Bu sayı rastgele değildir. İmamet, yani imamların önderliği, on iki kişilik bir sıradır. On iki isim, bu sıranın tamamıdır.' },
       art: { bg: 'city', props: ['sun', 'minbar'], actors: [{ kind: 'prophet', x: 60, label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 28, scale: 6 }] },
     },
     {
       by: 'shia',
-      text: { tr: 'On İki İmam geleneği, rivayetteki sayıyı Ehl-i Beyt\'in imamlarıyla ilişkilendirir. Rivayete göre Câbir, **Hz. Fatıma**\'nın elinde bir levha gördü. İmamların adları orada yazılıydı. Sayı, bu levhada isim isim duruyordu.' },
+      text: { tr: 'Bu on iki, Allah\'ın belirlediği On İki İmam\'dır. Ehl-i Beyt rivayetinde Câbir, **Hz. Fatıma**\'nın elinde bir levha gördü. İmamların adları orada yazılıydı. Sayı, bu levhada isim isim duruyordu. İsimler, sonrakilere de aynı çizgiyi gösterdi.' },
       art: { bg: 'night', props: ['stars', 'scroll'], actors: [{ kind: 'fatima', x: 50, label: { tr: 'Hz. Fatıma' } }] },
     },
     {
       by: 'shia',
-      text: { tr: '==İmamet==, Allah\'ın nass ile belirlediği önderliktir. Nass, açık bir bildirim demektir. İmam günahtan korunmuştur ve ilimde üstündür. Yeryüzünden hüccet eksik olmaz. Hüccet, Allah\'ın delil kıldığı imamdır. Her imam kendinden sonrakini bildirir. Gadir, bu sıranın ilk kişisini herkese göstermişti.' },
+      text: { tr: '==İmamet==, Allah\'ın nass ile belirlediği önderliktir. Nass, açık bir bildirim demektir. İmam günahtan korunmuştur ve ilimde üstündür. Yeryüzünden hüccet eksik olmaz. Hüccet, Allah\'ın delil kıldığı imamdır. Her imam kendinden sonrakini bildirir. Gadir, bu sıranın ilk kişisini herkese göstermişti. Sakife, o gösterilen eli bekletti.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'ali', x: 42, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 62, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 74, scale: 0.75, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'On İki İmam şunlardır: **Hz. Ali**, **Hz. Hasan**, **Hz. Hüseyin**, Hz. Zeynelâbidîn, Hz. Muhammed Bâkır, Hz. Ca\'fer-i Sâdık, Hz. Musa Kâzım, Hz. Ali Rızâ, Hz. Muhammed Takî, Hz. Ali Nakî, Hz. Hasan Askerî ve **Hz. Mehdî**. On ikinci imam gizlenmiştir. Buna gaybet denir. Zamanı gelince adaletle çıkacaktır. Kerbela\'da **Hz. Hüseyin** şehit edildi. On İki İmam\'ın bu sırası **Hz. Mehdî** ile tamamlanır.' },
+      text: { tr: 'On İki İmam şunlardır: **Hz. Ali**, **Hz. Hasan**, **Hz. Hüseyin**, Hz. Zeynelâbidîn, Hz. Muhammed Bâkır, Hz. Ca\'fer-i Sâdık, Hz. Musa Kâzım, Hz. Ali Rızâ, Hz. Muhammed Takî, Hz. Ali Nakî, Hz. Hasan Askerî ve **Hz. Mehdî**. On ikinci imam gizlenmiştir. Buna gaybet denir. Zamanı gelince adaletle çıkacaktır. Kerbela\'da **Hz. Hüseyin** şehit edildi. On İki İmam\'ın bu sırası **Hz. Mehdî** ile tamamlanır. Gaybet, bu son halkanın gizlenmesidir.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 30, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 46, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 60, scale: 0.8, label: { tr: 'Hz. Hüseyin' } }] },
     },
   ],
