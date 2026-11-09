@@ -304,6 +304,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   const [open, setOpen] = useState<Panel[]>([]);
   const [srcOpen, setSrcOpen] = useState({ shia: false, sunni: false });
   const listRef = useRef<FlatList<StoryPage>>(null);
+  const swipe = useRef({ x: 0, y: 0 });
   const toggle = (p: Panel) => setOpen(o => (o.includes(p) ? o.filter(x => x !== p) : [...o, p]));
   const has = (p: Panel) => open.includes(p);
   const nDis = ev.disputes?.length ?? 0;
@@ -327,6 +328,15 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   };
   const listHeight = pageHeights[idx];
   const maps = mapsForEvent(ev.id);
+  const onSources = pages[idx]?.kind === 'sources';
+  const beginSwipe = (x: number, y: number) => { swipe.current = { x, y }; };
+  const endSwipe = (x: number, y: number) => {
+    if (!onSources) return;
+    const dx = x - swipe.current.x;
+    const dy = y - swipe.current.y;
+    if (Math.abs(dx) < 56 || Math.abs(dx) < Math.abs(dy)) return;
+    go(dx > 0 ? idx - 1 : idx + 1);
+  };
 
   const go = (i: number) => {
     const next = Math.max(0, Math.min(total - 1, i));
@@ -348,7 +358,16 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
 
   return (
     <View style={{ flex: 1, backgroundColor: C.bg }}>
-      <ScrollView {...sc} style={{ flex: 1 }} contentContainerStyle={{ paddingBottom: 64, flexGrow: 0 }} keyboardShouldPersistTaps="handled">
+      <ScrollView
+        {...sc}
+        style={{ flex: 1 }}
+        contentContainerStyle={{ paddingBottom: 64, flexGrow: 0 }}
+        keyboardShouldPersistTaps="handled"
+        nestedScrollEnabled
+        directionalLockEnabled
+        onTouchStart={e => beginSwipe(e.nativeEvent.pageX, e.nativeEvent.pageY)}
+        onTouchEnd={e => endSwipe(e.nativeEvent.pageX, e.nativeEvent.pageY)}
+      >
         <View style={s.evHead}>
           <Back onPress={onBack} />
           <Text style={[s.evTitle, align()]}>{tx(ev.title)}</Text>
@@ -375,6 +394,8 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
           horizontal
           pagingEnabled
           nestedScrollEnabled
+          directionalLockEnabled
+          scrollEnabled={!onSources}
           showsHorizontalScrollIndicator={false}
           style={[s.sceneList, listHeight ? { height: listHeight } : null]}
           keyExtractor={(_, i) => String(i)}
@@ -492,7 +513,12 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
           </>
         )}
       </ScrollView>
-      {pages[idx]?.kind === 'sources' && nxt && onNext && (
+      {onSources && idx > 0 && (
+        <Pressable onPress={() => go(idx - 1)} accessibilityRole="button" accessibilityLabel={ui('prevScene')} style={({ pressed }) => [s.prevBar, pressed && s.pressed, webHit]}>
+          <Text style={s.prevBarText}>‹  {ui('prevScene')}</Text>
+        </Pressable>
+      )}
+      {onSources && nxt && onNext && (
         <Pressable onPress={() => onNext(nxt.id)} accessibilityRole="button" accessibilityLabel={ui('nextEvent')} style={({ pressed }) => [s.nextBar, pressed && s.pressed, webHit]}>
           <View style={{ flex: 1 }}>
             <Text style={s.nextKicker}>{ui('nextEvent').toLocaleUpperCase('tr')}</Text>
@@ -625,6 +651,8 @@ const s = themedStyles(() => StyleSheet.create({
   citeBtnText: { color: C.gold, fontFamily: font.sans, fontSize: 13, fontWeight: '800' },
   srcFold: { marginTop: 12, borderWidth: 1.5, borderRadius: 16, paddingVertical: 14, paddingHorizontal: 14, minHeight: 52, justifyContent: 'center' },
   srcFoldText: { fontFamily: font.sans, fontWeight: '800', fontSize: 15, lineHeight: 20 },
+  prevBar: { minHeight: 52, marginHorizontal: 16, marginBottom: 8, borderRadius: 14, borderWidth: 1.5, borderColor: C.gold, backgroundColor: C.card, alignItems: 'center', justifyContent: 'center' },
+  prevBarText: { color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '800' },
   nextBar: { flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: C.gold, paddingHorizontal: 16, paddingVertical: 12, minHeight: 72 },
   nextKicker: { color: C.ink, fontFamily: font.sans, fontSize: 11, fontWeight: '800', letterSpacing: 1 },
   nextTitle: { color: C.ink, fontFamily: font.serif, fontSize: 18, fontWeight: '700', marginTop: 2 },
