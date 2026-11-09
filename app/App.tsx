@@ -66,9 +66,11 @@ export default function App() {
         {route.name === 'maps' && <MapList onOpen={id => push({ name: 'map', id })} onBack={back} />}
         {route.name === 'map' && <MapDetail key={route.id} id={route.id} onBack={back} onOpenEvent={id => push({ name: 'event', id })} />}
         </View>
-        <Pressable onPress={home} accessibilityRole="button" accessibilityLabel={ui('homeBtn')} style={({ pressed }) => [{ minHeight: 52, alignItems: 'center', justifyContent: 'center', backgroundColor: C.card, borderTopWidth: 1, borderTopColor: C.lineStrong, paddingBottom: 6, opacity: pressed ? 0.86 : 1 }]}>
-          <Text style={{ color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '800' }}>{ui('homeBtn')}</Text>
-        </Pressable>
+        {route.name !== 'home' && (
+          <Pressable onPress={home} accessibilityRole="button" accessibilityLabel={ui('homeBtn')} style={({ pressed }) => [{ minHeight: 52, alignItems: 'center', justifyContent: 'center', backgroundColor: C.card, borderTopWidth: 1, borderTopColor: C.lineStrong, paddingBottom: 6, opacity: pressed ? 0.86 : 1 }]}>
+            <Text style={{ color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '800' }}>{ui('homeBtn')}</Text>
+          </Pressable>
+        )}
       </View>
     </View>
   );

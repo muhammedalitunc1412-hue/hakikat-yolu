@@ -301,8 +301,8 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   const sc = useScrollMemory('event:' + ev.id);
   const width = usePageWidth();
   const [idx, setIdx] = useState(() => rememberedScene('event:' + ev.id));
-  const [open, setOpen] = useState<Panel[]>(() => (isStory(ev.id) ? [] : ['shia']));
-  const [srcOpen, setSrcOpen] = useState({ shia: true, sunni: false });
+  const [open, setOpen] = useState<Panel[]>([]);
+  const [srcOpen, setSrcOpen] = useState({ shia: false, sunni: false });
   const listRef = useRef<FlatList<StoryPage>>(null);
   const toggle = (p: Panel) => setOpen(o => (o.includes(p) ? o.filter(x => x !== p) : [...o, p]));
   const has = (p: Panel) => open.includes(p);
@@ -395,7 +395,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
             <View style={{ width }}>
             <View collapsable={false} onLayout={e => setPageHeight(index, e.nativeEvent.layout.height)} style={{ paddingHorizontal: 16, paddingTop: 8 }}>
               <Text style={[s.catTitle, align()]}>Bu olay için bütün kaynaklar</Text>
-              <Text style={[s.catSub, align()]}>Şii kaynaklar açık durur. Sünni kaynaklar kapalıdır; başlığa dokununca açılır.</Text>
+              <Text style={[s.catSub, align()]}>Kaynak grupları kapalıdır; başlığa dokununca açılır.</Text>
               <Pressable onPress={() => setSrcOpen(v => ({ ...v, shia: !v.shia }))} accessibilityRole="button" accessibilityState={{ expanded: srcOpen.shia }} style={[s.srcFold, { borderColor: C.shia }, srcOpen.shia && { backgroundColor: C.shia }, webHit]}>
                 <Text style={[s.srcFoldText, { color: srcOpen.shia ? C.ink : C.shia }]}>{ui('shiaSources')} ({ev.shia.length}) {srcOpen.shia ? '▲' : '▼'}</Text>
               </Pressable>
@@ -573,7 +573,7 @@ export function Method({ onBack }: { onBack: () => void }) {
   const sc = useScrollMemory('method');
   const paragraphs = [
     'Bu uygulama Şii bakışını esas alır. Tarihî olaylar sahne sahne hikâye gibi anlatılır. Her sahnenin altında, o sahnenin dayandığı kaynak küçük bir düğmeyle açılır.',
-    'Hikâyenin son sayfası "Bu olay için bütün kaynaklar"dır. Şii kaynaklar açık, Sünni kaynaklar kapalı durur. Sonraki olay düğmesi o sayfanın altında, kaydırmadan durur. Mezhep ve ibadet farkları gibi öğretici sayfalar sahne romanı değildir; kaynakları sayfanın altındaki düğmelerde durur.',
+    'Hikâyenin son sayfası "Bu olay için bütün kaynaklar"dır. Kaynak grupları kapalıdır; başlığa dokununca açılır. Sonraki olay düğmesi o sayfanın altında, kaydırmadan durur. Mezhep ve ibadet farkları gibi öğretici sayfalar sahne romanı değildir; kaynakları sayfanın altındaki düğmelerde durur.',
     '✓ Doğrulandı: Metin ve numara kaynağından okunmuştur. ⚠ Kontrol edilmeli: Numara ya da sayfa, yayın öncesinde birincil kaynaktan teyit edilecektir.',
     '"Ayrılıklar" düğmesi, iki geleneğin aynı olayı nasıl yorumladığını ya da bir rivayeti hangi kaynakların kabul edip etmediğini gösterir.',
     '"Düşünelim" bölümündeki sorular, kaynaklarda yazılanlardan hareketle okuyucuyu kendi sonucunu kurmaya davet eder.',
