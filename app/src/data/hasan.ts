@@ -8,7 +8,7 @@ export const hasan: HistEvent = {
   hook: { tr: 'Peygamber\'in seyyid dediği Hz. Hasan, ümmetin kanı dökülmesin diye hakkını bıraktı ve zehirlendi.', en: 'Why did the grandson the Prophet called "my son is a master" have to hand over the leadership?' },
   scenes: [
     {
-      text: { tr: 'Bir gün minberde Peygamber konuşuyordu. Yanında küçük torunu Hz. Hasan vardı. Peygamber onu çok severdi. Bir cemaate, bir de ona bakıyordu.' },
+      text: { tr: '**Hz. Peygamber** bir gün minberde cemaate seslenirken yanında torunu **Hz. Hasan** da vardı. Peygamber konuşurken bir cemaate, bir de torununa baktı. Henüz çocuk olan Hasan\'ı, yıllar sonra iki Müslüman topluluğun arasını bulacağını haber veren sözlerle andı.' },
       art: { bg: 'city', props: ['sun', 'minbar'], actors: [{ kind: 'crowd', x: 26, scale: 7 }, { kind: 'prophet', x: 62, label: { tr: 'Hz. Peygamber' } }, { kind: 'hasan', x: 80, scale: 0.7, label: { tr: 'Hz. Hasan' } }] },
       by: 'both',
     },

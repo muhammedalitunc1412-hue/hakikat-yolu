@@ -9,7 +9,7 @@ export const istihlaf: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Halife Ebu Bekir, Medine\'de ölümün yaklaştığını anlayınca yerine Halife Ömer\'i bıraktı. Sakife\'de aceleyle kurulan yönetim, Ebu Bekir\'den Ömer\'e geçti. **Hz. Ali** bu tayine çağrılmadı. Gadir\'de ilan edilen hakkı yine yok sayıldı.' },
+      text: { tr: '**Ebû Bekir**, hastalığı ağırlaşınca kendisinden sonra **Ömer**\'in halife olmasını istedi. Sakife\'deki toplantıyla başlayan yönetim böylece bu kez bir atamayla el değiştirdi. **Hz. Ali** bu kararın alınmasında yer almadı. Gadir Hum\'u Hz. Ali\'nin önderliğinin ilanı olarak görenler açısından onun yönetimin dışında kalması devam ediyordu.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'Ebu Bekir' } }, { kind: 'man', x: 66, label: { tr: 'Ömer' } }] },
     },
     {

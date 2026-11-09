@@ -10,7 +10,7 @@ export const menzile: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Hicretin 9. yılında Bizans sınırda asker topluyordu. Yaz sıcaktı, kıtlık vardı, yol uzundu. Peygamber yine de **Tebük**\'e çıktı. Ordu "Zorluk Ordusu" diye anıldı. Bu seferde Peygamber, **Hz. Ali**\'nin yerini bir cümleyle söyleyecekti.' },
+      text: { tr: 'Hicretin dokuzuncu yılında **Hz. Peygamber**, kuzeye doğru **Tebük** seferine hazırlandı. Sıcak, kıtlık ve yolun uzunluğu yüzünden hazırlıklar güçlükle yürüdü. Bu nedenle sefere katılan birlik Zorluk Ordusu adıyla anıldı. Ordu yola çıkarken Peygamber, **Hz. Ali**\'ye Medine\'de kalma görevi verdi.' },
       art: { bg: 'dune-day', props: ['sun', 'tents'], actors: [{ kind: 'crowd', x: 30, scale: 8 }, { kind: 'prophet', x: 68, label: { tr: 'Hz. Peygamber' } }] },
     },
     {

@@ -9,7 +9,7 @@ export const muta: HistEvent = {
   hook: { tr: 'Bir ayet kelimesi ve Peygamber dönemindeki bir uygulama, iki fıkıh okuyuşuna nasıl açıldı?', en: 'One word in a verse, a caliph\'s ban, and two legal traditions that still differ today.' },
   scenes: [
     {
-      text: { tr: 'Nisâ 4:24, evlenilmesi helal olan kadınlardan söz ederken faydalanılan kadınlara mehirlerinin farz olarak verilmesini söyler. Ayetin "istemte\'tum" kelimesi, Câferî okuyuşta süresi belli nikâhı, mut\'ayı anlatır. Aynı kelime olağan nikâh ve mehir diye de okunmuştur.' },
+      text: { tr: '**Nisâ sûresinin 24. ayeti**, evlilik bağlamında kadınlara mehirlerinin verilmesini emreder. Ayette geçen **istemte’tum** kelimesi, Câferî yorumunda süresi önceden belirlenen mut’a nikâhıyla ilişkilendirilir. Diğer yorumlarda ise ifade, olağan nikâh ve bu nikâhta doğan mehir yükümlülüğüyle açıklanır. Tartışma, ayetin hangi nikâh türünden söz ettiği üzerinde yoğunlaşır.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 40 }, { kind: 'crowd', x: 66, scale: 5 }] },
       by: 'both',
     },

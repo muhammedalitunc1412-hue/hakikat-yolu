@@ -9,7 +9,7 @@ export const imamlar: HistEvent = {
   hook: { tr: 'Kerbela\'dan sağ çıkan genç bir imam, ilim ve sabırla yürüyen bir rehberlik zincirini nasıl başlattı?', en: 'How did a sick young survivor of Karbala begin a line of learning and patience?' },
   scenes: [
     {
-      text: { tr: 'Kerbela\'da **Hz. Hüseyin** şehit oldu. İmamet, hasta oğlu **Hz. Zeynelâbidîn**\'e geçti. Adı Ali\'ydi. Meydanda savaşamamıştı. Çadırda sağ kalmıştı. Esirlik yolundan Medine\'ye döndü. Önderlik kılıçla bitmedi. Hasta gencin üzerinde sürdü.' },
+      text: { tr: '**Hz. Hüseyin**\'in oğlu Ali, **Hz. Zeynelâbidîn** adıyla tanınır. Kerbelâ\'da hastalığı sebebiyle savaşamadı ve hayatta kalan aile fertleriyle birlikte esir alındı. Esaretten sonra Medine\'ye döndü. İmamet onunla devam etti. Kerbelâ\'dan sonraki dönemde Ehl-i Beyt\'in önderliği, onun hayatı ve öğretileri çevresinde sürdü.' },
       art: { bg: 'dune-dusk', props: ['tents'], actors: [] },
       by: 'both',
     },

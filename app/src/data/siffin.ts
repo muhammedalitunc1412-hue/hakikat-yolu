@@ -8,7 +8,7 @@ export const siffin: HistEvent = {
   hook: { tr: 'Sıffin\'de mushaflar mızraklara asıldı; Hz. Ali sabırla hakkı söyledi, hilafeti bir sabah namazında şehadetle bitti.', en: 'Qurans raised on spears, and a caliphate that ended at dawn prayer.' },
   scenes: [
     {
-      text: { tr: 'Cemel bitince **Hz. Ali** Kûfe\'yi merkez edindi. Oradan Şam\'a yürüdü. Fırat kıyısında, **Sıffin**\'de **Muaviye**\'nin ordusu onun karşısına çıktı. **Hz. Ali** çatışmayı kendisi başlatmaktan kaçındı. Haklı olan **Hz. Ali**\'ydi. Kılıcı önce çeken taraf o değildi.' },
+      text: { tr: 'Cemel\'den sonra **Hz. Ali**, yönetim merkezini Kûfe\'ye taşıdı. Şam valisi **Muaviye** onun halifeliğini tanımayınca iki ordu Fırat kıyısındaki **Sıffin**\'de karşılaştı. Hz. Ali çatışmayı başlatmaktan kaçındı. Karşılaşma, Şam valisinin halifeye bağlılık göstermemesiyle başlayan anlaşmazlığı açık bir savaşa dönüştürdü.' },
       art: { bg: 'river', props: ['tents', 'flags'], actors: [{ kind: 'crowd', x: 22, scale: 7 }, { kind: 'ali', x: 52, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 82, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },

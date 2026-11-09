@@ -11,7 +11,7 @@ export const muaviyeIktidar: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Peygamber, hilafetin otuz yıl süreceğini, sonra ısırıcı bir krallığa döneceğini haber vermişti. **Muaviye**\'nin "ben kralların ilkiyim" dediği anlatılır. Hilafet bir emanet iken o, bunu kendi mülkü yaptı. Bu saltanat altında ==Ehl-i Beyt==\'in hakkı tanınmadı.' },
+      text: { tr: 'Rivayete göre **Hz. Peygamber**, hilafetin otuz yıl süreceğini ve ardından yönetimin krallığa dönüşeceğini haber verdi. **Muaviye**\'ye ise kendisini ilk kral olarak niteleyen bir söz nispet edilir. Muaviye döneminde yönetimin niteliğine ilişkin tartışma, daha sonra oğlu Yezid için bağlılık sözü alınmaya başlanınca yeni bir aşamaya girdi.' },
       art,
       cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 1 }],
     },

@@ -10,7 +10,7 @@ export const ibadetFarklari: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Ezan, Peygamber döneminde Bilal\'in okuduğu çağrıdır. "Hayye alâ hayri\'l-amel" ifadesini İbn Halife Ömer\'in ve Ebû Mahzûre\'nin zaman zaman kullandığına dair rivayetler vardır. Sıhhati tartışmalıdır; uygulama sonradan terk edilmiş olarak aktarılır. Câferî mektep, bu ifadeyi ezanın asli bir parçası olarak sürdürür. Halife Ömer\'in kaldırdığı da rivayet edilir.' },
+      text: { tr: '**Ezan**, Hz. Peygamber döneminden beri namaz vaktini duyurmak için okunur. Ezanın bazı ifadeleriyle ilgili farklı uygulamalar oluşmuştur. Bunlardan biri, hayırlı amele çağıran **hayye alâ hayri’l-amel** ifadesidir. Bazı rivayetler bu sözün sahabe döneminde de ezanda okunduğunu aktarır. Rivayetlerin sıhhati ve uygulamanın nasıl değiştiği tartışmalıdır. Câferî uygulamasında ise bu ifade ezanda okunmaya devam eder.' },
       art: { bg: 'dawn', props: ['moon'], actors: [{ kind: 'man', x: 50, pose: 'raise', label: { tr: 'Bilal' } }] },
     },
     {

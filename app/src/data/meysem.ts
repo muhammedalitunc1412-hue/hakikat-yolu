@@ -9,7 +9,7 @@ export const meysem: HistEvent = {
   hook: { tr: 'Hz. Ali, hurma satan dostuna asılacağı ağacı önceden gösterdi. O ağaç, hicri 60\'ta dar ağacı oldu.', en: 'Hz. Ali showed his friend the palm on which he would be hanged. In 60 AH that tree became the gallows.' },
   scenes: [
     {
-      text: { tr: 'Kûfe\'de bir hurma satıcısı vardı. Adı **Meysem et-Temmâr**\'dı. Azatlı bir köleydi. **Hz. Ali**\'nin en yakın dostlarındandı. İlmini ondan almıştı. Çarşıda hurma dizer, Hz. Ali\'nin adını sevgiyle anardı. Ehl-i Beyt\'in kapısı, bu tezgâhın önünde de açıktı.' },
+      text: { tr: '**Meysem et-Temmâr**, Kûfe çarşısında hurma satarak geçimini sağlayan azatlı bir köleydi. **Hz. Ali**\'ye yakınlığıyla tanınır, ondan öğrendiklerini çevresindekilere aktarırdı. Yıllar sonra İbn Ziyâd Kûfe\'ye vali olduğunda, Meysem\'in bu bağlılığı başına geleceklerin sebebi olacaktı.' },
       art: { bg: 'city', props: ['palms', 'sun'], actors: [{ kind: 'man', x: 42, label: { tr: 'Meysem' } }, { kind: 'ali', x: 70, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }],

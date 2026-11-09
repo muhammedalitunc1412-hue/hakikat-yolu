@@ -10,7 +10,7 @@ export const fatimaVefat: HistEvent = {
   hook: { tr: 'Fedek elinden alındı. Kapının önünde ateş yemini edildi. O, suskun öldü ve kabri gizlendi.', en: 'Fadak was taken. A fire was sworn at her door. She died without speaking, and her grave was hidden.' },
   scenes: [
     {
-      text: { tr: 'Medine\'de, Sakife\'nin ardından **Fedek** acısı geldi. İki söz vardı. Hibe, bağış demektir. **Hz. Fatıma**, Peygamber\'in bahçeyi kendisine hibe ettiğini söyledi. Karşı söz mirastı. Miras, ölenin malından varise düşen paydır. Karşılık kısaydı: "Biz peygamberler miras bırakmayız." Bahçe ona verilmedi. Hak yine onundu. Bu acı mescitte bitmedi. Ardından evinin kapısında sürdü.' },
+      text: { tr: 'Sakife\'den sonra **Hz. Fatıma** ile yeni yönetim arasında **Fedek** konusunda anlaşmazlık yaşandı. Hz. Fatıma, bahçelerin babası tarafından kendisine sağlığında bağışlandığını söyledi. Yönetim ise Peygamber\'in miras bırakmadığına dair rivayeti gerekçe göstererek Fedek\'i ona vermedi. Hz. Fatıma\'nın bağış iddiasıyla yönetimin miras gerekçesi iki ayrı meseleye dayanıyordu. Bu anlaşmazlık, ailenin Hz. Peygamber\'in vefatından sonra yaşadığı ilk gerilimlerden biriydi.' },
       art: { bg: 'city', props: ['sun'], actors: [{ kind: 'fatima', x: 36, label: { tr: 'Hz. Fatıma' } }, { kind: 'crowd', x: 68, scale: 4 }] },
       by: 'both',
       cites: [{ side: 'sunni', i: 0 }, { side: 'shia', i: 3 }],

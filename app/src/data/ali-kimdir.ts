@@ -8,7 +8,7 @@ export const aliKimdir: HistEvent = {
   hook: { tr: 'Kâbe\'nin içinde doğdu. Peygamber\'in yatağına yattı. İlim şehrinin kapısı odur.', en: 'Who is the man said to be born in the Kaaba, who lay in the Prophet\'s bed and is called the "gate of knowledge"?' },
   scenes: [
     {
-      text: { tr: 'Mekke\'de **Hz. Ali**\'nin annesi **Fâtıma bint Esed**\'di. Sancısı Kâbe\'nin eşiğinde tuttu. Allah\'ın evine sığındı. Duvar açıldı, annesi içeri girdi. **Hz. Ali** Beytullah\'ın içinde dünyaya geldi. Beytullah, Kâbe demektir. Ondan önce de sonra da Kâbe\'de doğan bir çocuk bilinmez. Bu, Allah\'ın ona ikramıydı. Velayet, yani önderlik, daha ilk nefesinden ona konmuştu.' },
+      text: { tr: 'Rivayete göre **Fatıma bint Esed**, doğum sancısı başlayınca **Kâbe**\'ye sığındı. Kâbe\'nin duvarının açıldığı ve Fatıma\'nın içeri girdiği anlatılır. **Hz. Ali** burada dünyaya geldi. Onu sevenler için Kâbe\'de doğum anlatısı, hayatının başlangıcına eşlik eden özel bir ikramı ifade eder.' },
       art: { bg: 'dune-dusk', props: ['sun'], actors: [{ kind: 'woman', x: 30, label: { tr: 'Fatıma bint Esed' } }, { kind: 'ali', x: 66, scale: 0.6, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
       cites: [

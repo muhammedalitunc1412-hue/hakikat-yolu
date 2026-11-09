@@ -12,7 +12,7 @@ export const muaviyeHasan: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Kûfe\'de **Hz. Ali** şehit olunca halk **Hz. Hasan**\'a biat etti. Biat, bağlılık sözüdür. Peygamber\'in seyyid dediği Hz. Hasan yönetimi üstlendi. Babası vasiyetinde yönetimi **Muaviye**\'ye devret dememişti. **Muaviye** Şam\'daki ticaret yollarını elinde tutuyordu. Çok zengindi. Büyük bir orduyla yürüdü. Hile, alış ve rüşvetle komutanları satın aldı. **Ubeydullah b. Abbas** gece **Muaviye**\'nin yanına geçti. Ordu içten çürüdü. **Hz. Hasan** güçsüz kaldı.' },
+      text: { tr: '**Hz. Ali**\'nin şehadetinden sonra Kûfe\'de **Hz. Hasan**\'a biat edildi. **Muaviye** ise Şam\'dan ordusuyla harekete geçti. Hz. Hasan\'ın birlikleri savaşa hazırlanırken ordusundaki bazı komutanların bağlılığı sarsıldı. Rivayetlerde, öncü kuvvetlerin komutanı **Ubeydullah b. Abbas**\'ın gece karşı tarafa geçtiği anlatılır. Bu ayrılıklar, Hz. Hasan\'ın barış görüşmeleri öncesindeki konumunu zayıflattı.' },
       art,
       cites: [{ side: 'shia', i: 1 }, { side: 'shia', i: 3 }],
     },

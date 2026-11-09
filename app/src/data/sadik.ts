@@ -9,7 +9,7 @@ export const sadik: HistEvent = {
   hook: { tr: 'Medine\'de bir ilim kapısı açıldı: Hz. Ca\'fer-i Sâdık ve halkasına uğrayan âlimler.', en: 'A circle of learning in Medina, open to the founders of two schools.' },
   scenes: [
     {
-      text: { tr: 'Hz. Ca\'fer-i Sâdık 80 (699) veya 83 (702) yılında Medine\'de doğdu; çoğu kaynak 83\'ü esas alır. Babası Hz. Muhammed Bâkır\'dır, soyu Hz. Ali ve Hz. Fatıma\'ya uzanır. Annesi Ümmü Ferve, Kâsım b. Muhammed\'in kızıdır; Kâsım, Hz. Ebû Bekir\'in torunudur. Rivayetlerde Altıncı İmam, Rivayetlerde büyük bir âlim ve Ehl-i Beyt mensubu olarak anılır. "es-Sâdık", doğru sözlü lakabıyla tanınır.' },
+      text: { tr: '**Ca\'fer-i Sâdık** Medine\'de doğdu. Doğum yılı için 80 (699) ve 83 (702) tarihleri verilir. Babası **Muhammed Bâkır**, annesi ise **Ümmü Ferve** idi. Baba tarafından Hz. Ali ile Hz. Fatıma\'nın, anne tarafından Hz. Ebû Bekir\'in soyundandı. Doğru sözlülüğünü ifade eden **Sâdık** lakabıyla tanınan Ca\'fer, Ehl-i Beyt\'in altıncı imamı ve Medine\'nin önde gelen âlimlerinden biri olarak anılır.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'man', x: 50, label: { tr: 'Hz. Ca\'fer-i Sâdık' } }, { kind: 'crowd', x: 22, scale: 4 }] },
       by: 'both',
     },

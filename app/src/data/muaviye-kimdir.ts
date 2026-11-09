@@ -12,7 +12,7 @@ export const muaviyeKimdir: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Mekke\'de, Kureyş\'in Emevî kolunda **Muaviye** doğdu. Babası **Ebu Süfyan**, annesi **Hind bint Utbe**\'dir. Bu aile, Peygamber\'in davetine en sert karşı çıkan evlerdendi. Sonraki yıllarda ==Ehl-i Beyt==\'in karşısına çıkan hanedan, bu evden geldi.' },
+      text: { tr: '**Muaviye**, Mekke\'de Kureyş\'in Ümeyyeoğulları koluna mensup bir ailede doğdu. Babası **Ebû Süfyân**, annesi **Hind bint Utbe** idi. Ailesi, Hz. Peygamber\'in Mekke\'deki davetine karşı çıkanlar arasındaydı. Yıllar sonra Muaviye\'nin kurduğu hanedanın Ehl-i Beyt ile ilişkisi, İslam tarihindeki yönetim mücadelelerinin merkezine yerleşecekti.' },
       art,
       cites: [{ side: 'shia', i: 0 }],
     },

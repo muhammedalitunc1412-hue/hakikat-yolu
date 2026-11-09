@@ -9,7 +9,7 @@ export const mezhepler: HistEvent = {
   hook: { tr: 'Tek ümmet, siyasi ayrılıklardan ilim halkalarına ve fıkıh ekollerine nasıl yürüdü?', en: 'How did one community branch into different schools, from political disputes to law and theology?' },
   scenes: [
     {
-      text: { tr: 'Rivayetlerde "Şîatü Alî", Hz. Ali\'nin taraftarları, daha Peygamber döneminde vardı. Bu bağlılık Peygamber\'in yönlendirmesiyle oluştu. Bu görüşü benimseyenler bunu Gadir-i Hum ve benzeri olaylarla ilişkilendirir. TDV, "Şîa" sözcüğünün "taraftar" demek olduğunu yazar. Terim olarak ise Peygamber\'den sonra başkanlığın Hz. Ali ve soyuna ait olduğunu savunan grupları anlatır.' },
+      text: { tr: '**Şîatü Alî** ifadesi, Hz. Ali\'nin yanında yer alanları anlatır. Hz. Ali\'ye bağlılığı Peygamber dönemine kadar götürenler, bu bağlılığı özellikle **Gadir Hum** ve benzeri olaylarla ilişkilendirir. Zamanla **Şîa** adı, Hz. Peygamber\'den sonra önderliğin Hz. Ali\'ye ve onun soyuna ait olduğunu savunan topluluklar için kullanıldı.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'prophet', x: 38, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
     },

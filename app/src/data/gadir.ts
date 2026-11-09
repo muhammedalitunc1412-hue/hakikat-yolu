@@ -8,7 +8,7 @@ export const gadir: HistEvent = {
   hook: { tr: 'Çölün ortasında kafile durdu. Bir el havaya kalktı. O gün Hz. Ali\'nin velayeti ilan edildi.', en: 'A caravan halted in the desert, and a raised hand.' },
   scenes: [
     {
-      text: { tr: 'Veda Haccı bitmişti. Peygamber binlerce insanla Mekke\'den Medine\'ye dönüyordu. **Hz. Ali** Yemen\'den gelmiş, hacda ona katılmıştı. Hayber\'de sancak ona verilmiş, Tebük\'te Harun benzetmesi söylenmişti. Sıra, bu yerin herkesin önünde ilanına gelmişti.' },
+      text: { tr: 'Veda Haccı\'nın ardından **Hz. Peygamber**, hacılarla birlikte Mekke\'den Medine\'ye dönüyordu. Yemen\'den gelerek hacda ona katılan **Hz. Ali** de kafiledeydi. Hayber\'de sancağı ona veren, Tebük\'te ise onu Hz. Hârûn\'a benzeten Peygamber, dönüş yolunda **Gadir Hum**\'da hacılara seslenmek için durdu.' },
       art: { bg: 'dune-day', props: ['sun', 'camels'], actors: [{ kind: 'crowd', x: 40, scale: 8 }, { kind: 'prophet', x: 74, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 88, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },

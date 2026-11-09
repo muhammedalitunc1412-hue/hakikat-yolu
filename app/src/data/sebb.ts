@@ -8,7 +8,7 @@ export const sebb: HistEvent = {
   hook: { tr: 'Minberlerde Hz. Ali\'ye sövüldü; sövmeyi reddeden Hucr b. Adî öldürüldü.', en: 'The Prophet had said that loving Hz. Ali is loving him; why was Hz. Ali cursed from Friday pulpits for years, and why were objectors killed?' },
   scenes: [
     {
-      text: { tr: '**Hz. Hasan**\'ın sulhünden sonra minberlerde **Hz. Ali**\'ye ==lanet== okunmaya başlandı. Cuma hutbesi, Peygamber\'in kardeşine sövmekle açıldı. Bu, ==Ehl-i Beyt== sevgisini suç sayan bir zulümdü. Sevenler her Cuma bu sözü duymak zorunda kaldı.' },
+      text: { tr: '**Hz. Hasan** ile yapılan sulhun ardından, bazı beldelerde **Hz. Ali**\'ye yönelik ağır sözlerin cuma hutbelerinde okunması bir uygulamaya dönüştü. Cuma namazı için bir araya gelen insanlar, Hz. Peygamber\'in en yakınlarından birine karşı bu sözleri duyuyordu. Minberi siyasî bir hesaplaşmanın aracı hâline getiren uygulama, Ehl-i Beyt\'e bağlı olanların itirazıyla karşılaştı.' },
       cites: [{ side: 'shia', i: 1 }, { side: 'sunni', i: 1 }],
       art: { bg: 'city', props: ['minbar', 'flags'], actors: [{ kind: 'crowd', x: 28, scale: 7 }, { kind: 'man', x: 70, label: { tr: 'Muaviye' } }] },
       by: 'both',

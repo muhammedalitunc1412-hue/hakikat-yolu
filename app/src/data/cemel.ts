@@ -8,7 +8,7 @@ export const cemel: HistEvent = {
   hook: { tr: 'Halk Hz. Ali\'ye koşunca o, ağır hilafeti bilinçle üstlendi. Adalet kararlılığı Cemel\'i doğurdu.', en: 'When the people came to him, Hz. Ali took up the caliphate knowingly. His justice led to the Camel.' },
   scenes: [
     {
-      text: { tr: 'Halife Osman 35 H Zilhicce\'de Medine\'de öldürülünce şehir karıştı. Ensar ve Muhacirler Mescid-i Nebevî\'de **Hz. Ali**\'nin yanına koştu. O, bu ağır görevi bilinçle üstlendi. Biat, bağlılık sözüdür. Biat orada alındı. Devraldığı devlet dertliydi. Kendinden önceki halifelerin döneminden kalan hatalar, adaletsizlikler, akraba kayırmacılığı, haksız dağıtılmış mallar ve bozuk valiler duruyordu. İlk işi adaleti kurmak oldu. Haksız dağıtılan malları beytülmale, yani ortak hazineye geri almaya başladı. Bozuk valileri görevden aldı. Bu adalet kararlılığı, Cemel ve Sıffin\'deki muhalefeti doğurdu.' },
+      text: { tr: '**Osman**\'ın Medine\'de öldürülmesinin ardından şehirde kimin yönetimi üstleneceği belirsizdi. Muhacir ve ensardan kişiler **Hz. Ali**\'ye bağlılık sözü verince Hz. Ali halife oldu. Önünde, valilerin tutumu ve kamu mallarının dağıtımı üzerine birikmiş şikâyetler vardı. Hz. Ali bazı valileri değiştirdi ve haksız dağıtıldığını düşündüğü malları ortak hazineye geri almayı amaçladı. Bu kararlar, eski düzenden yararlananlarla arasındaki gerilimi artırdı.' },
       art: { bg: 'city', props: ['minbar', 'palms'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'ali', x: 66, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },

@@ -10,37 +10,37 @@ export const penceAba: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Medine\'de bir sabah Peygamber siyah yünlü bir örtüyle çıktı. Önce **Hz. Hasan** geldi. Peygamber onu örtünün altına aldı. Sonra **Hz. Hüseyin**, **Hz. Fatıma** ve **Hz. Ali** geldi. Beşini aynı örtünün altında topladı. "Ey Ehl-i Beyt, Allah sizden kiri gidermek ve sizi tertemiz yapmak ister." Bu söz, Ahzâb 33:33\'tür. Ayet, örtünün üstüne, bu beş kişi için indi.' },
+      text: { tr: 'Bir sabah **Hz. Peygamber**, üzerinde siyah bir örtüyle dışarı çıktı. Yanına önce **Hz. Hasan** geldi. Peygamber onu örtüsünün altına aldı. Ardından **Hz. Hüseyin**, **Hz. Fatıma** ve **Hz. Ali** de geldi. Peygamber onları da yanına alınca örtünün altında beş kişi toplandı. Hz. Âişe\'nin aktardığına göre Peygamber o sırada Ahzâb sûresinin Ehl-i Beyt\'in arındırılmasına ilişkin bölümünü okudu.' },
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 38, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 52, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 62, label: { tr: 'Hz. Fatıma' } }, { kind: 'hasan', x: 72, scale: 0.7, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 80, scale: 0.65, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Aynı sabah, örtünün yanında Peygamber dua etti: "Allah\'ım, bunlar Ehl-i Beytimdir. Onlardan kiri uzaklaştır, onları tertemiz yap." Ümmü Seleme, "Ben de onlarla birlikte miyim?" diye sordu. Peygamber, "Sen hayır üzerindesin" dedi. Onu örtünün altına almadı. Örtünün altında yalnız o beş kişi kaldı.' },
+      text: { tr: '**Ümmü Seleme**\'nin aktardığı rivayette Hz. Peygamber, örtünün altında topladığı yakınları için Allah\'a dua etti. Onların kendi Ehl-i Beyt\'i olduğunu söyledi ve Allah\'tan onları arındırmasını diledi. Ümmü Seleme, kendisinin de onlarla birlikte olup olmadığını sordu. Peygamber ona hayır üzere olduğunu söyledi. Örtünün altında Hz. Peygamber, Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin vardı.' },
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 38, label: { tr: 'Hz. Peygamber' } }, { kind: 'woman', x: 70 }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Ayet-i Tathir, örtünün altına alınan beş kişiyi anlatır. Tathir, temizlik demektir. Ayetteki ehl, ev halkı demektir. Peygamber ayeti onların üzerine okudu. Arındırma, onların günahtan korunmuş olmasıdır. Buna ==ismet== denir. İmamet, yani imamların önderliği, bu temizliğe dayanır.' },
+      text: { tr: 'Ahzâb sûresindeki bu bölüm, Allah\'ın Ehl-i Beyt\'i arındırmayı dilemesinden söz ettiği için **Tathîr Ayeti** olarak anılır. Hz. Peygamber\'in ayeti örtünün altında topladığı aile fertlerine okuması, onların ayetteki hitapla ilişkisini gösterir. İmamet anlayışında bu arındırma, Ehl-i Beyt\'in günahtan korunması anlamındaki ==ismet== kavramıyla birlikte ele alınır.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'woman', x: 66 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Zeyd b. Erkam\'a Ehl-i Beyt\'in kim olduğu soruldu. O, hanımları bu yakın halkanın dışında tuttu. Hz. Ali, Akîl, Cafer ve Abbas ailelerini andı. Örtünün altındaki beş kişi, bu akraba halkasının ortasındadır.' },
+      text: { tr: '**Zeyd b. Erkam**\'a Ehl-i Beyt\'in kimleri kapsadığı sorulduğunda Hz. Ali, Akîl, Cafer ve Abbas\'ın ailelerini andı. Zeyd\'in cevabı Hz. Peygamber\'in akrabalarından daha geniş bir topluluğu tarif eder. Örtü hadisi ise Hz. Peygamber\'in o gün yanında topladığı aile fertlerini isimleriyle anlatır.' },
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Bu beş kişiye **Pence-i Âl-i Aba** denir. Pence, beş demektir. Âl-i Aba, örtü ailesi demektir. Onlar Peygamber, **Hz. Ali**, **Hz. Fatıma**, **Hz. Hasan** ve **Hz. Hüseyin**\'dir. Bayraklardaki açık el, sevenlerin bu beş kişiyi göğsünde taşımasıdır.' },
+      text: { tr: '**Pence-i Âl-i Aba**, örtü altında buluşan beş kişiye verilen addır. Hz. Peygamber, **Hz. Ali**, **Hz. Fatıma**, **Hz. Hasan** ve **Hz. Hüseyin** bu adla birlikte anılır. Açık el motifi de zamanla beş parmağıyla bu beş kişiyi hatırlatan bir sembol olmuştur.' },
       art: { bg: 'night', props: ['stars'], actors: [{ kind: 'prophet', x: 20, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 36, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 50, label: { tr: 'Hz. Fatıma' } }, { kind: 'hasan', x: 64, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 76, scale: 0.8, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Rivayete göre **Hz. Fatıma**\'dan gelen daha uzun bir anlatı vardır. Adı Hadis-i Kisa\'dır. Kisa, örtü demektir. Bu anlatıda örtünün altında Cebrail\'in ve Allah\'ın hitabı da duyulur. Bu beş kişi yalnız bir evin halkı değildir. O hitap, onları Ehl-i Beyt diye anar.' },
+      text: { tr: '**Hz. Fatıma**\'ya nispet edilen daha uzun bir anlatı da **Hadis-i Kisâ** adıyla okunur. Kisâ, örtü anlamına gelir. Bu anlatıda Cebrâil, örtü altındaki aileye ilişkin ilahî hitabı bildirir. Ailenin bir araya geldiği an, böylece Ehl-i Beyt\'in kimliğini hatırlatan bir sahne olarak aktarılır.' },
       art: { bg: 'interior', props: ['scroll', 'stars'], actors: [{ kind: 'fatima', x: 50, label: { tr: 'Hz. Fatıma' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Hadis-i Kisa, ==Ehl-i Beyt==\'in çekirdeğini Allah\'ın belirlediğini gösterir. Çekirdek, örtünün altındaki beş kişidir. Sonraki imamlar bu beşin soyundan gelir. İmamet bu beş kişiye dayanır. Gadir\'de Peygamber, bu beşin içinden **Hz. Ali**\'nin elini herkesin önünde kaldıracaktır.' },
+      text: { tr: 'Örtü hadisi, **Hz. Ali** ve **Hz. Fatıma** ile iki oğullarının Hz. Peygamber\'in yanında nasıl bir yer tuttuğunu gösterir. Sonraki imamlar, Hz. Fatıma ve Hz. Ali\'nin soyundan gelir. Gadir Hum\'da ise Hz. Peygamber, bu kez toplanan kalabalığa seslenerek Hz. Ali\'nin elini kaldıracaktır.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 56, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 68, scale: 0.8, label: { tr: 'Hz. Hüseyin' } }] },
     },
   ],

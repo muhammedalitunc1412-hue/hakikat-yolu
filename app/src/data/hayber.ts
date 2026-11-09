@@ -10,7 +10,7 @@ export const hayber: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Hicretin 7. yılında Peygamber, Medine\'nin kuzeyindeki **Hayber**\'e yürüdü. Kaleler yan yanaydı. Ordu onları birer birer kuşattı. Bu sefer şunu gösterecekti: **Hz. Ali**, Peygamber\'in davasını koruyordu.' },
+      text: { tr: 'Hicretin yedinci yılında **Hz. Peygamber**, ordusuyla Medine\'nin kuzeyindeki **Hayber**\'e yürüdü. Hayber birden fazla kaleden oluşuyordu. Ordu kaleleri sırayla kuşattı, ancak kalelerden birinin direnişi günlerce sürdü. Bir sonraki hücumu kimin yöneteceği, bu kuşatmanın gidişini belirleyecekti.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'crowd', x: 34, scale: 8 }, { kind: 'prophet', x: 68, label: { tr: 'Hz. Peygamber' } }] },
     },
     {

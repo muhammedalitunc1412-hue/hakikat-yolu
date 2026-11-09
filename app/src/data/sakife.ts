@@ -8,7 +8,7 @@ export const sakife: HistEvent = {
   hook: { tr: 'Peygamber\'in bedeni daha yıkanırken Sakife\'de biat alındı. Ehl-i Beyt cenazenin başında yalnız kaldı.', en: 'A caliph was chosen while the Prophet\'s body was still being prepared. Hz. Ali did not pledge for six months.' },
   scenes: [
     {
-      text: { tr: 'Medine\'de Peygamber yeni vefat etmişti. Gadir\'de eli kaldırılan **Hz. Ali**, onun başucundaydı. Vefat haberi şehri karıştırdı. Hz. Ali, Abbas ve Haşimoğullarıyla yıkama ve defin hazırlığına koyuldu. O, cenazenin yanından ayrılmadı.' },
+      text: { tr: '**Hz. Peygamber** Medine\'de vefat ettiğinde **Hz. Ali**, **Abbas** ve Hâşimoğulları cenazenin yıkanması ve defnedilmesi için hazırlığa başladı. Hz. Ali cenazenin başında kalırken Medine\'de başka bir toplantı için hazırlık yapılıyordu. Bu toplantıda Peygamber\'den sonra yönetimi kimin üstleneceği konuşulacaktı.' },
       image: 'sakife-1',
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 34, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 68, scale: 4, label: { tr: 'Haşimoğulları' } }] },
       by: 'both',

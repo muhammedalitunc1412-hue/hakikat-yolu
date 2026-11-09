@@ -8,7 +8,7 @@ export const raziyye: HistEvent = {
   hook: { tr: 'Peygamber "size bir yazı yazayım ki sapmayasınız" dedi. Kalem, Ehl-i Beyt\'in hakkı yazılmadan durdu.', en: 'The Prophet said, "Let me write for you so that you do not go astray." Why was it never written?' },
   scenes: [
     {
-      text: { tr: 'Peygamber, veda günlerinde genç Usame b. Zeyd\'i Şam yönündeki Belka\'ya gidecek ordunun başına getirdi. Ordu Cürf\'te toplandı. Bazı kişiler, komutanın bu kadar genç olmasına itiraz etti. Veda günlerinin ilk anlaşmazlığı burada çıktı.' },
+      text: { tr: 'Hayatının son günlerinde **Hz. Peygamber**, Belkā yönüne gönderilecek birliğin başına **Üsâme b. Zeyd**\'i getirdi. Birlik Medine yakınlarındaki Cürf\'te toplandı. Bazı kişiler, Üsâme\'nin genç yaşta komutan olmasına itiraz etti. Bu itiraz, ordunun hareket hazırlıkları sürerken Peygamber\'in önüne geldi.' },
       art: { bg: 'dune-day', props: ['sun', 'tents', 'flags'], actors: [{ kind: 'crowd', x: 30, scale: 8 }, { kind: 'man', x: 62, label: { tr: 'Usame b. Zeyd' } }, { kind: 'prophet', x: 82, label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },

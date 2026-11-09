@@ -10,7 +10,7 @@ export const abdest: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Mâide 6, abdestin uzuvlarını sayar: yüz, dirseklere kadar eller, baştan bir kısma mesh ve topuklara kadar ayaklar. "Ayaklarınız" kelimesi iki farklı harekeyle okunmuştur. İki okunuş da kıraat geleneğinde bilinir. Câferî mektep, bu ayeti ayaklara mesh olarak okur.' },
+      text: { tr: '**Mâide sûresinin 6. ayeti**, namaz öncesi abdest alırken yüzün ve kolların yıkanmasını, başa mesh edilmesini ve ayaklarla ilgili hükmü bildirir. Ayetteki ayaklarınız kelimesi kıraat geleneğinde iki farklı harekeyle okunmuştur. Bu kelimenin cümlede hangi fiile bağlandığı, ayakların yıkanması ve mesh edilmesi arasındaki yorum farkında önem taşır. Câferî uygulamasında ayakların üstü mesh edilir.' },
       art: { bg: 'dawn', props: ['scroll'], actors: [{ kind: 'prophet', x: 50, label: { tr: 'Hz. Peygamber' } }] },
     },
     {

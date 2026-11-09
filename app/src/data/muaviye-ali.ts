@@ -12,7 +12,7 @@ export const muaviyeAli: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Şam\'da **Muaviye**, yirmi yıldır bir ordu besliyordu. **Ömer** onu Şam\'a vali bıraktı. **Osman** vilayeti büyüttü. İlk tayin Osman\'ın değildir. **Hz. Ali** halife olunca valileri adalet için değiştirdi. Muaviye\'yi de Şam\'dan azletmek istedi. Bu, içindeki imanı bir gerçek diye yazmak değildi. Yönetim ve adalet içindi. Muaviye azli de biatı da reddetti. Biat, bağlılık sözüdür. O, Peygamber\'in vasisi Hz. Ali\'nin önünde iktidarını bırakmadı.' },
+      text: { tr: '**Ömer** döneminde Şam valiliğine getirilen **Muaviye**\'nin yetkileri, **Osman** döneminde genişledi. Muaviye böylece bölgede güçlü bir askerî ve idarî yapı kurdu. **Hz. Ali** halife olduğunda bazı valileri değiştirdi ve Muaviye\'yi de görevden almak istedi. Muaviye görevini bırakmadığı gibi Hz. Ali\'ye bağlılık sözü vermeyi de reddetti. Şam ile halifelik yönetimi arasındaki çatışma bu anlaşmazlıkla büyüdü.' },
       art,
       cites: [{ side: 'shia', i: 1 }],
     },

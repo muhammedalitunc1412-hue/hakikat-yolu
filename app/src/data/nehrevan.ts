@@ -8,7 +8,7 @@ export const nehrevan: HistEvent = {
   hook: { tr: 'Hakemden sonra bir grup Hz. Ali\'nin yanından ayrıldı. Çatışma Nehrevan\'da oldu.', en: 'After the arbitration a group left Ali. The fight was at Nahrawan.' },
   scenes: [
     {
-      text: { tr: 'Sıffin\'de mushaflar mızrağa asılınca hakem konuşuldu. **Hz. Ali**\'nin ordusundan bir grup bunu reddetti. "Hüküm yalnız Allah\'ındır" dediler. Bunlara Haricîler denir. Hz. Ali, "Söz haktır, ama onunla batıl kastediliyor" dedi. Bu cümle, Sıffin anlatısında da durur.' },
+      text: { tr: '**Sıffin**\'de mushafların mızraklara kaldırılmasının ardından iki taraf hakem görüşmesini kabul etti. Ancak **Hz. Ali**\'nin ordusundan bir grup, bu karara karşı çıkarak hükmün yalnız Allah\'a ait olduğunu söyledi. Hz. Ali, sözün kendisini doğru bulduğunu, fakat bu anlaşmazlıkta yanlış bir amaçla kullanıldığını belirtti. Ordudan ayrılan bu grup daha sonra **Haricîler** adıyla anıldı.' },
       image: 'nehrevan-1',
       art: { bg: 'dune-day', props: ['flags'], actors: [{ kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 30, scale: 6 }] },
       by: 'both',
