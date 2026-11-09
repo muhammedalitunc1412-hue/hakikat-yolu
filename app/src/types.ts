@@ -1,5 +1,5 @@
 // Çok dilli metin: tr zorunlu, diğerleri sonradan eklenir (yoksa en → tr).
-export type Lang = 'tr' | 'en' | 'ar' | 'fa' | 'ur';
+export type Lang = 'tr' | 'en' | 'ar' | 'fa' | 'ur' | 'az' | 'es' | 'fr' | 'de';
 export type L = { tr: string } & Partial<Record<Exclude<Lang, 'tr'>, string>>;
 
 // 'verified' = metin/numara kaynağından okunup doğrulandı; 'check' = yayın öncesi birincil kaynaktan kontrol edilmeli.

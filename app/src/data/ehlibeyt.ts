@@ -35,7 +35,7 @@ export const ehlibeyt: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: 'Bu on iki, Allah\'ın belirlediği On İki İmam\'dır. Ehl-i Beyt rivayetinde Câbir, **Hz. Fatıma**\'nın elinde bir levha gördü. İmamların adları orada yazılıydı. Sayı, bu levhada isim isim duruyordu.' },
+      text: { tr: 'Bu on iki, Allah\'ın belirlediği On İki İmam\'dır. Rivayete göre Câbir, **Hz. Fatıma**\'nın elinde bir levha gördü. İmamların adları orada yazılıydı. Sayı, bu levhada isim isim duruyordu.' },
       art: { bg: 'night', props: ['stars', 'scroll'], actors: [{ kind: 'fatima', x: 50, label: { tr: 'Hz. Fatıma' } }] },
     },
     {

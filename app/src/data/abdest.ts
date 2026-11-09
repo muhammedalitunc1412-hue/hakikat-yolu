@@ -40,7 +40,7 @@ export const abdest: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Sünni kaynaklarda mest üzerine mesh, olağan durumda da caiz görülür. Câferî fıkıhta mesh çıplak ayağa yapılır; mest üzerine mesh yalnızca takiyye veya zorunlu durumda caizdir. Tabâtabâî, bazı rivayetlere dayanarak Peygamber\'in önceki mest üstü meshini Mâide 6\'nın neshettiğini yazar.' },
+      text: { tr: 'Bazı fıkıh ekollerinde mest üzerine mesh, olağan durumda da caiz görülür. Câferî fıkıhta mesh çıplak ayağa yapılır; mest üzerine mesh yalnızca takiyye veya zorunlu durumda caizdir. Tabâtabâî, bazı rivayetlere dayanarak Peygamber\'in önceki mest üstü meshini Mâide 6\'nın neshettiğini yazar.' },
       art: { bg: 'caravan', props: ['camels'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'Yolcu' } }, { kind: 'man', x: 68, label: { tr: 'Fakih' } }] },
     },
     {

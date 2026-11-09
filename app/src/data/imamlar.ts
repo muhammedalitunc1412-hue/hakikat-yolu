@@ -14,7 +14,7 @@ export const imamlar: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Seccâd**, Medine\'de ibadet ve duayla yaşadı. Duaları Sahife-i Seccâdiyye\'de toplandı. Ehl-i Beyt bu sahifeye "Âl-i Muhammed\'in Zeburu" der. Risâletü\'l-Hukûk da ona nispet edilir. 94 H. civarında Bakî\'de, amcası **Hz. Hasan**\'ın yanına defnedildi. Ehl-i Beyt rivayetinde zehirlendi. Kerbela\'nın bu yetimi, duasını ümmete miras bıraktı.' },
+      text: { tr: '**Hz. Seccâd**, Medine\'de ibadet ve duayla yaşadı. Duaları Sahife-i Seccâdiyye\'de toplandı. Ehl-i Beyt bu sahifeye "Âl-i Muhammed\'in Zeburu" der. Risâletü\'l-Hukûk da ona nispet edilir. 94 H. civarında Bakî\'de, amcası **Hz. Hasan**\'ın yanına defnedildi. Rivayete göre zehirlendi. Kerbela\'nın bu yetimi, duasını ümmete miras bıraktı.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 50, pose: 'sit', label: { tr: 'Hz. Zeynelâbidîn' } }] },
       by: 'shia',
     },
@@ -39,12 +39,12 @@ export const imamlar: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Me\'mun, **Hz. Ali Rızâ**\'yı Merv\'e çağırdı. Hilafeti bırakmayı önerdi. İmam kabul etmedi. Veliahtlık dayatıldı. İki ay direndi. Sonra ahidnameyi imzalamak zorunda kaldı. Ehl-i Beyt rivayetinde bu, baskı altında kalan ve yönetimi meşrulaştırmayan bir kâğıttır. 203 H\'de Tûs yakınlarında vefat etti. Kabri Meşhed oldu. Bu veliahtlık, Kerbela\'dan beri süren gözetimin yeni biçimiydi.' },
+      text: { tr: 'Me\'mun, **Hz. Ali Rızâ**\'yı Merv\'e çağırdı. Hilafeti bırakmayı önerdi. İmam kabul etmedi. Veliahtlık dayatıldı. İki ay direndi. Sonra ahidnameyi imzalamak zorunda kaldı. Rivayete göre bu, baskı altında kalan ve yönetimi meşrulaştırmayan bir kâğıttır. 203 H\'de Tûs yakınlarında vefat etti. Kabri Meşhed oldu. Bu veliahtlık, Kerbela\'dan beri süren gözetimin yeni biçimiydi.' },
       art: { bg: 'caravan', props: ['camels', 'scroll'], actors: [{ kind: 'man', x: 30, label: { tr: 'Hz. Ali Rızâ' } }, { kind: 'man', x: 66, label: { tr: 'Me\'mun' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Muhammed Takî** babasını yedi yaşında kaybetti. Bağdat\'a götürüldü. 220 H\'de orada vefat etti. Oğlu **Hz. Ali Nakî**, Mütevekkil tarafından Samarra\'ya kapatıldı. Oğlu **Hz. Hasan Askerî** de şehirden çıkamadı. Askerî, ordugâhta tutulan demektir. Bu yüzden böyle anıldı. 260\'ta vefat etti. Ehl-i Beyt rivayetinde ikisi de zehirlendi. Gözetim, imametin üzerine kapanmıştı.' },
+      text: { tr: '**Hz. Muhammed Takî** babasını yedi yaşında kaybetti. Bağdat\'a götürüldü. 220 H\'de orada vefat etti. Oğlu **Hz. Ali Nakî**, Mütevekkil tarafından Samarra\'ya kapatıldı. Oğlu **Hz. Hasan Askerî** de şehirden çıkamadı. Askerî, ordugâhta tutulan demektir. Bu yüzden böyle anıldı. 260\'ta vefat etti. Rivayete göre ikisi de zehirlendi. Gözetim, imametin üzerine kapanmıştı.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 26, label: { tr: 'Hz. Ali Nakî' } }, { kind: 'man', x: 56, label: { tr: 'Hz. Hasan Askerî' } }, { kind: 'crowd', x: 82, scale: 3 }] },
       by: 'shia',
     },

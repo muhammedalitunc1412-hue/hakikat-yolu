@@ -55,12 +55,12 @@ export const aliKimdir: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Medine\'de **Hz. Ali**, Peygamber\'in kızı **Hz. Fatıma** ile evlendi. Mehir, yani nikâh bedeli, satılan bir zırhın parasıydı. Ehl-i Beyt rivayetinde bu nikâh gökte kıyılmıştır. Soy, **Hz. Hasan** ve **Hz. Hüseyin** ile sürdü. Velayet, bu evden sonraki imamlara geçti.' },
+      text: { tr: 'Medine\'de **Hz. Ali**, Peygamber\'in kızı **Hz. Fatıma** ile evlendi. Mehir, yani nikâh bedeli, satılan bir zırhın parasıydı. Rivayete göre bu nikâh gökte kıyılmıştır. Soy, **Hz. Hasan** ve **Hz. Hüseyin** ile sürdü. Velayet, bu evden sonraki imamlara geçti.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'ali', x: 36, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 60, label: { tr: 'Hz. Fatıma' } }, { kind: 'prophet', x: 80, scale: 0.9, label: { tr: 'Hz. Peygamber' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Peygamber vefat edince başı **Hz. Ali**\'nin göğsündeydi. Gözlerini o bağladı. Yıkamayı o üstlendi. Ehl-i Beyt rivayetinde Peygamber, yıkanması için onu vasiyet etmişti. Aynı saatlerde Sakife\'de biat konuşuluyordu. Biat, bağlılık sözüdür. Önderlik hakkı, cenazenin başında duran **Hz. Ali**\'deydi. Sakife\'de toplananlar bu hakkı bir kenara bırakıyordu.' },
+      text: { tr: 'Peygamber vefat edince başı **Hz. Ali**\'nin göğsündeydi. Gözlerini o bağladı. Yıkamayı o üstlendi. Rivayete göre Peygamber, yıkanması için onu vasiyet etmişti. Aynı saatlerde Sakife\'de biat konuşuluyordu. Biat, bağlılık sözüdür. Önderlik hakkı, cenazenin başında duran **Hz. Ali**\'deydi. Sakife\'de toplananlar bu hakkı bir kenara bırakıyordu.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 40, pose: 'sit', label: { tr: 'Hz. Ali' } }, { kind: 'prophet', x: 64, pose: 'sit', label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },

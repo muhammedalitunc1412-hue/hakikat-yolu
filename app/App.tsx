@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { BackHandler, Pressable, Text, View } from 'react-native';
+import { BackHandler, Pressable, ScrollView, Text, View } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StatusBar } from 'expo-status-bar';
 import { DuaList, DuaScreen, EventScreen, Home, Method } from './src/ui/Screens';
 import { MapDetail, MapList } from './src/ui/MapScreens';
@@ -7,7 +8,8 @@ import { QiblaScreen } from './src/ui/Qibla';
 import { ImamDetail, ImamList } from './src/ui/ImamScreens';
 import { EVENTS } from './src/data/events';
 import { DUAS } from './src/data/duas';
-import { ui } from './src/i18n';
+import { LANGUAGES, languageOption, setLang, ui } from './src/i18n';
+import type { Lang } from './src/types';
 import { C, PAGE_MAX, TOP, font, setTheme } from './src/ui/theme';
 
 type Route =
@@ -22,7 +24,31 @@ type Route =
   | { name: 'imam'; id: string }
   | { name: 'map'; id: string };
 
+const LANGUAGE_KEY = 'hakikat-yolu:language';
+
 export default function App() {
+  const [lang, setLanguage] = useState<Lang>('tr');
+  const [ready, setReady] = useState(false);
+  const [choosing, setChoosing] = useState(true);
+  useEffect(() => {
+    let active = true;
+    AsyncStorage.getItem(LANGUAGE_KEY).then(saved => {
+      if (!active) return;
+      const option = languageOption(saved);
+      setLanguage(option.id);
+      setChoosing(saved !== option.id);
+    }).catch(() => {}).finally(() => {
+      if (active) setReady(true);
+    });
+    return () => { active = false; };
+  }, []);
+
+  function confirmLanguage() {
+    setChoosing(false);
+    void AsyncStorage.setItem(LANGUAGE_KEY, lang).catch(() => {});
+  }
+
+  setLang(lang);
   const [stack, setStack] = useState<Route[]>([{ name: 'home' }]);
   const stackRef = useRef(stack);
   stackRef.current = stack;
@@ -50,7 +76,25 @@ export default function App() {
     <View style={{ flex: 1, backgroundColor: C.bgDeep, alignItems: 'center' }}>
       <StatusBar style="light" />
       <View style={{ flex: 1, width: '100%', maxWidth: PAGE_MAX, backgroundColor: C.bg }}>
+        {!ready ? null : choosing ? (
+          <ScrollView contentContainerStyle={{ padding: 24, paddingTop: TOP, gap: 10 }}>
+            <Text style={{ color: C.gold, fontSize: 24, fontWeight: '700' }}>{languageOption(lang).title}</Text>
+            {LANGUAGES.map(option => (
+              <Pressable key={option.id} onPress={() => setLanguage(option.id)} accessibilityRole="radio" accessibilityState={{ checked: option.id === lang }} style={{ padding: 12, backgroundColor: C.card, borderWidth: 1, borderColor: option.id === lang ? C.gold : C.lineStrong }}>
+                <Text style={{ color: C.cream, fontSize: 17 }}>{option.id === lang ? '✓ ' : ''}{option.name}</Text>
+              </Pressable>
+            ))}
+            <Pressable onPress={confirmLanguage} accessibilityRole="button" style={{ padding: 14, alignItems: 'center', backgroundColor: C.card }}>
+              <Text style={{ color: C.gold, fontSize: 17, fontWeight: '700' }}>{languageOption(lang).confirm}</Text>
+            </Pressable>
+          </ScrollView>
+        ) : <>
         <View style={{ flex: 1 }}>
+        {route.name === 'home' && (
+          <Pressable onPress={() => setChoosing(true)} accessibilityRole="button" accessibilityLabel={languageOption(lang).title} style={{ alignSelf: 'flex-end', padding: 10, marginTop: TOP }}>
+            <Text style={{ color: C.gold }}>{languageOption(lang).name} ▾</Text>
+          </Pressable>
+        )}
         {route.name === 'home' && (
           <Home events={EVENTS} onOpen={id => push({ name: 'event', id })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onMaps={() => push({ name: 'maps' })} onQibla={() => push({ name: 'qibla' })} onImams={() => push({ name: 'imams' })} />
         )}
@@ -71,6 +115,7 @@ export default function App() {
             <Text style={{ color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '800' }}>{ui('homeBtn')}</Text>
           </Pressable>
         )}
+        </>}
       </View>
     </View>
   );

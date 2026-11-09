@@ -35,7 +35,7 @@ export const penceAba: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: 'Ehl-i Beyt rivayetinde **Hz. Fatıma**\'dan gelen daha uzun bir anlatı vardır. Adı Hadis-i Kisa\'dır. Kisa, örtü demektir. Bu anlatıda örtünün altında Cebrail\'in ve Allah\'ın hitabı da duyulur. Bu beş kişi yalnız bir evin halkı değildir. O hitap, onları Ehl-i Beyt diye anar.' },
+      text: { tr: 'Rivayete göre **Hz. Fatıma**\'dan gelen daha uzun bir anlatı vardır. Adı Hadis-i Kisa\'dır. Kisa, örtü demektir. Bu anlatıda örtünün altında Cebrail\'in ve Allah\'ın hitabı da duyulur. Bu beş kişi yalnız bir evin halkı değildir. O hitap, onları Ehl-i Beyt diye anar.' },
       art: { bg: 'interior', props: ['scroll', 'stars'], actors: [{ kind: 'fatima', x: 50, label: { tr: 'Hz. Fatıma' } }] },
     },
     {

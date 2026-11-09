@@ -87,4 +87,31 @@ const UI: Record<string, L> = {
   acceptSunni: { tr: 'Kabul eden: Sünni', en: 'Accepted by: Sunni' },
   none: { tr: 'Bu olay için bu kaynak grubunda kayıt yok.', en: 'No entry in this group of sources.' },
 };
-export const ui = (k: keyof typeof UI) => tx(UI[k]);
+export const LANGUAGES: readonly { id: Lang; name: string; title: string; confirm: string }[] = [
+  { id: 'tr', name: 'Türkçe', title: 'Dil seç', confirm: 'Devam et' },
+  { id: 'en', name: 'English', title: 'Choose a language', confirm: 'Continue' },
+  { id: 'ar', name: 'العربية', title: 'اختر اللغة', confirm: 'متابعة' },
+  { id: 'az', name: 'Azərbaycanca', title: 'Dil seçin', confirm: 'Davam et' },
+  { id: 'fa', name: 'فارسی', title: 'انتخاب زبان', confirm: 'ادامه' },
+  { id: 'es', name: 'Español', title: 'Elige un idioma', confirm: 'Continuar' },
+  { id: 'fr', name: 'Français', title: 'Choisir une langue', confirm: 'Continuer' },
+  { id: 'de', name: 'Deutsch', title: 'Sprache wählen', confirm: 'Weiter' },
+];
+
+export const languageOption = (id: string | null) =>
+  LANGUAGES.find(option => option.id === id) ?? LANGUAGES[0];
+
+const navigation: Record<string, L> = {
+  back: { tr: 'Geri', en: 'Back', ar: 'رجوع', az: 'Geri', fa: 'بازگشت', es: 'Atrás', fr: 'Retour', de: 'Zurück' },
+  homeBtn: { tr: 'Ana sayfa', en: 'Home', ar: 'الرئيسية', az: 'Ana səhifə', fa: 'خانه', es: 'Inicio', fr: 'Accueil', de: 'Startseite' },
+  events: { tr: 'Olaylar', en: 'Events', ar: 'الأحداث', az: 'Hadisələr', fa: 'رویدادها', es: 'Eventos', fr: 'Événements', de: 'Ereignisse' },
+  nextScene: { tr: 'Sonraki', en: 'Next', ar: 'التالي', az: 'Növbəti', fa: 'بعدی', es: 'Siguiente', fr: 'Suivant', de: 'Weiter' },
+  prev: { tr: 'Önceki', en: 'Previous', ar: 'السابق', az: 'Əvvəlki', fa: 'قبلی', es: 'Anterior', fr: 'Précédent', de: 'Zurück' },
+  maps: { tr: 'Haritalar', en: 'Maps', ar: 'الخرائط', az: 'Xəritələr', fa: 'نقشه‌ها', es: 'Mapas', fr: 'Cartes', de: 'Karten' },
+  method: { tr: 'Kaynaklar ve yöntem', en: 'Sources & method', ar: 'المصادر والمنهج', az: 'Mənbələr və metod', fa: 'منابع و روش', es: 'Fuentes y método', fr: 'Sources et méthode', de: 'Quellen und Methode' },
+  imams: { tr: 'On İki İmam', en: 'The Twelve Imams', ar: 'الأئمة الاثنا عشر', az: 'On iki imam', fa: 'دوازده امام', es: 'Los doce imanes', fr: 'Les douze imams', de: 'Die zwölf Imame' },
+  duas: { tr: 'Dualar ve Ziyaretler', en: 'Prayers & Ziyarat', ar: 'الأدعية والزيارات', az: 'Dualar və ziyarətlər', fa: 'دعاها و زیارت‌ها', es: 'Oraciones y ziyarat', fr: 'Prières et ziyarat', de: 'Gebete und Ziyarat' },
+  qibla: { tr: 'Kıble Pusulası', en: 'Qibla Compass', ar: 'بوصلة القبلة', az: 'Qiblə kompası', fa: 'قبله‌نما', es: 'Brújula de la alquibla', fr: 'Boussole de la qibla', de: 'Qibla-Kompass' },
+};
+
+export const ui = (k: keyof typeof UI) => tx(navigation[k] ?? UI[k]);

@@ -15,7 +15,7 @@ export const ibadetFarklari: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: 'Câferî fıkıhta "Hayye alâ hayri\'l-amel" ezanın bir cüzüdür. Halife Ömer\'in bunu, savaş ruhunu zayıflatır diye kaldırdığı rivayet edilir. "Eşhedü enne Hz. Aliyyen veliyyullah" bugünkü Şii ulema görüşüne göre ezanın şartı değildir; müstehap bir şiar olarak okunur. "Es-salâtü hayrun mine\'n-nevm" Câferî ezanında okunmaz. Sünni kaynaklarda bu son ifade sabah ezanında sabit bir sünnet olarak anılır.' },
+      text: { tr: 'Câferî fıkıhta "Hayye alâ hayri\'l-amel" ezanın bir cüzüdür. Halife Ömer\'in bunu, savaş ruhunu zayıflatır diye kaldırdığı rivayet edilir. "Eşhedü enne Hz. Aliyyen veliyyullah" bugünkü Şii ulema görüşüne göre ezanın şartı değildir; müstehap bir şiar olarak okunur. "Es-salâtü hayrun mine\'n-nevm" Câferî ezanında okunmaz. Bu son ifade bazı fıkıh ekollerinde sabah ezanında sabit bir sünnet olarak anılır.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'man', x: 40, pose: 'raise', label: { tr: 'Müezzin' } }, { kind: 'crowd', x: 72, scale: 0.7 }] },
     },
     {
@@ -50,17 +50,17 @@ export const ibadetFarklari: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Âl-i İmrân 3:28 ("Onlardan sakınmanız hariç") ve Nahl 16:106 ("kalbi imanla dolu olduğu halde zorlanan hariç") bu ruhsatın ayetleridir. Ammar b. Yasir\'in işkence altında dil ile inkâr sözü söylediği ve Peygamber\'in ona "tekrar edersen yine söyle" dediği rivayet bilinir. Câferî fıkıhta takiyye, can, mal ve ırz tehlikesinde ve mezhebin korunması gerektiğinde caizdir, bazen de gereklidir. Tarihte Şiiler baskı altında yaşadığı için bu hüküm fıkıhta yer bulmuştur. Sünni kaynaklarda da aynı ayetler dayanak gösterilir; takiyye, can tehlikesi gibi zorda bir ruhsat olarak anılır.' },
+      text: { tr: 'Âl-i İmrân 3:28 ("Onlardan sakınmanız hariç") ve Nahl 16:106 ("kalbi imanla dolu olduğu halde zorlanan hariç") bu ruhsatın ayetleridir. Ammar b. Yasir\'in işkence altında dil ile inkâr sözü söylediği ve Peygamber\'in ona "tekrar edersen yine söyle" dediği rivayet bilinir. Câferî fıkıhta takiyye, can, mal ve ırz tehlikesinde ve mezhebin korunması gerektiğinde caizdir, bazen de gereklidir. Tarihte Şiiler baskı altında yaşadığı için bu hüküm fıkıhta yer bulmuştur. Aynı ayetler dayanak gösterilir; takiyye, can tehlikesi gibi zorda bir ruhsat olarak anılır.' },
       art: { bg: 'mountain', actors: [{ kind: 'man', x: 50, label: { tr: 'Ammar b. Yasir' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Gadir hadisi, "Ben kimin mevlası isem Hz. Ali de onun mevlasıdır", Sünni kitaplarda da yer alır. "Mevla" kelimesinin yönetim mi dostluk mu olduğu ayrıca konuşulur. Âşûrâ, Sünni kaynaklarda Buhari\'de geçen bir oruç günüdür; Hz. Musa\'nın kurtuluşu anılır, Hz. Hüseyin\'in şehadeti de hatırlanır. Câferî gelenekte Muharrem\'in ilk on günü ve Âşûrâ, Kerbela matemidir. 18 Zilhicce ise Gadir bayramı sayılır.' },
+      text: { tr: 'Gadir hadisi, "Ben kimin mevlası isem Hz. Ali de onun mevlasıdır", Sünni kitaplarda da yer alır. "Mevla" kelimesinin yönetim mi dostluk mu olduğu ayrıca konuşulur. Âşûrâ, Buhari\'de geçen bir oruç günüdür; Hz. Musa\'nın kurtuluşu anılır, Hz. Hüseyin\'in şehadeti de hatırlanır. Câferî gelenekte Muharrem\'in ilk on günü ve Âşûrâ, Kerbela matemidir. 18 Zilhicce ise Gadir bayramı sayılır.' },
       art: { bg: 'dune-dusk', props: ['flags'], actors: [{ kind: 'husayn', x: 34, label: { tr: 'Hz. Hüseyin' } }, { kind: 'ali', x: 66, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Ahzâb 33:33, "Allah sizden kirleri gidermek ve sizi tertemiz yapmak ister, ey Ehl-i Beyt" der. Müslim\'deki Kisâ hadisinde Peygamber, Hz. Ali, Fatıma, Hz. Hasan ve Hz. Hüseyin\'i abasının altına alır ve bu ayeti okur. Buhari 6585\'te Peygamber, havz başında bazı arkadaşlarının uzaklaştırılacağını söyler. Câferî okuyuş, Tahir ayetini Ehl-i Beyt\'in ismetine delil sayar; sahabe adaletini ise kişinin davranışı ve ilmiyle ölçer. Sünni kaynaklarda Ehl-i Beyt sevilir, ismet peygamberlere özgü sayılır. Havz hadisi irtidat edenlere veya münafıklara bağlanır.' },
+      text: { tr: 'Ahzâb 33:33, "Allah sizden kirleri gidermek ve sizi tertemiz yapmak ister, ey Ehl-i Beyt" der. Müslim\'deki Kisâ hadisinde Peygamber, Hz. Ali, Fatıma, Hz. Hasan ve Hz. Hüseyin\'i abasının altına alır ve bu ayeti okur. Buhari 6585\'te Peygamber, havz başında bazı arkadaşlarının uzaklaştırılacağını söyler. Câferî okuyuş, Tahir ayetini Ehl-i Beyt\'in ismetine delil sayar; sahabe adaletini ise kişinin davranışı ve ilmiyle ölçer. Sünni gelenekte Ehl-i Beyt sevgisi önemlidir, ismet peygamberlere özgü sayılır. Havz hadisi irtidat edenlere veya münafıklara bağlanır.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 36, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 60, label: { tr: 'Hz. Ali' } }] },
     },
   ],

@@ -15,7 +15,7 @@ export const meysem: HistEvent = {
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }],
     },
     {
-      text: { tr: 'Bir gün **Hz. Ali**, **Meysem**\'i çağırdı. Ehl-i Beyt rivayetinde ona sonrasını haber verdi. "Benden sonra Ehl-i Beyt sevgisi yüzünden asılacaksın. Dilin kesilecek." Asılacağı hurma ağacını da gösterdi. Meysem o ağacın yanına gider, namaz kılar, köküne su verirdi. Ağaç, henüz gölgeydi. O, gölgesinde bekleyen ölümü biliyordu.' },
+      text: { tr: 'Bir gün **Hz. Ali**, **Meysem**\'i çağırdı. Rivayete göre ona sonrasını haber verdi. "Benden sonra Ehl-i Beyt sevgisi yüzünden asılacaksın. Dilin kesilecek." Asılacağı hurma ağacını da gösterdi. Meysem o ağacın yanına gider, namaz kılar, köküne su verirdi. Ağaç, henüz gölgeydi. O, gölgesinde bekleyen ölümü biliyordu.' },
       art: { bg: 'oasis', props: ['palms', 'sun'], actors: [{ kind: 'ali', x: 36, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 64, pose: 'sit', label: { tr: 'Meysem' } }] },
       by: 'shia',
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 2 }],

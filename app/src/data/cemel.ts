@@ -28,7 +28,7 @@ export const cemel: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Mekke\'den Basra\'ya giden ordu gece Hav\'eb suyuna vardı. Hav\'eb, Basra yolundaki bir suyun adıdır. Köpekler havladı. Aişe "Bu hangi su?" diye sordu. "Hav\'eb" dediler. Peygamber\'in eşlerine söylediği uyarıyı hatırladı: "Biriniz için Hav\'eb köpekleri ona havladığında haliniz nasıl olacak?" Geri dönmek istedi. Talha ve Zübeyr\'in yanındakiler onu yola devam ettirdi. Ehl-i Beyt rivayetinde yalancı şahitler getirildi ve "Burası Hav\'eb değil" dedirildi. Aişe yine de yürütüldü. Basra\'da vali Osman b. Huneyf ile çatışma çıktı.' },
+      text: { tr: 'Mekke\'den Basra\'ya giden ordu gece Hav\'eb suyuna vardı. Hav\'eb, Basra yolundaki bir suyun adıdır. Köpekler havladı. Aişe "Bu hangi su?" diye sordu. "Hav\'eb" dediler. Peygamber\'in eşlerine söylediği uyarıyı hatırladı: "Biriniz için Hav\'eb köpekleri ona havladığında haliniz nasıl olacak?" Geri dönmek istedi. Talha ve Zübeyr\'in yanındakiler onu yola devam ettirdi. Rivayete göre yalancı şahitler getirildi ve "Burası Hav\'eb değil" dedirildi. Aişe yine de yürütüldü. Basra\'da vali Osman b. Huneyf ile çatışma çıktı.' },
       art: { bg: 'night', props: ['moon', 'stars', 'well'], actors: [{ kind: 'woman', x: 40, label: { tr: 'Aişe' } }, { kind: 'crowd', x: 72, scale: 6 }] },
       by: 'both',
       cites: [{ side: 'sunni', i: 4 }, { side: 'shia', i: 1 }],

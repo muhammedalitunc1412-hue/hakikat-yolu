@@ -31,7 +31,7 @@ export const sebb: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Ehl-i Beyt rivayetinde Ümmü Seleme, **Muaviye**\'ye ve valilerine mektup yazdı. **Hz. Ali**\'ye sövenin Peygamber\'e sövmüş olacağını hatırlattı. Muaviye bu uyarıya aldırmadı. Mektup, minberdeki lanetin Peygamber\'e de dokunduğunu söylüyordu.' },
+      text: { tr: 'Rivayete göre Ümmü Seleme, **Muaviye**\'ye ve valilerine mektup yazdı. **Hz. Ali**\'ye sövenin Peygamber\'e sövmüş olacağını hatırlattı. Muaviye bu uyarıya aldırmadı. Mektup, minberdeki lanetin Peygamber\'e de dokunduğunu söylüyordu.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'woman', x: 36, pose: 'sit', label: { tr: 'Ümmü Seleme' } }, { kind: 'man', x: 68, label: { tr: 'Muaviye' } }] },
       by: 'shia',
     },
@@ -47,7 +47,7 @@ export const sebb: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Ehl-i Beyt rivayetinde bu lanet yaklaşık altmış yıl sürer. Bu süre 41 H\'den 99-101 H\'ye kadar uzanır. Kesin bir sayı olarak alınmaz. Ömer b. Abdülaziz kaldırana kadar her Cuma, **Hz. Ali**\'nin adı minberde bir küfür gibi okundu.' },
+      text: { tr: 'Rivayete göre bu lanet yaklaşık altmış yıl sürer. Bu süre 41 H\'den 99-101 H\'ye kadar uzanır. Kesin bir sayı olarak alınmaz. Ömer b. Abdülaziz kaldırana kadar her Cuma, **Hz. Ali**\'nin adı minberde bir küfür gibi okundu.' },
       art: { bg: 'city', props: ['minbar', 'sun'], actors: [{ kind: 'crowd', x: 30, scale: 7 }, { kind: 'man', x: 70, label: { tr: 'Hatip' } }] },
       by: 'shia',
     },

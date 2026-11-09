@@ -31,13 +31,13 @@ export const hayber: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Hayber\'in kapısı önünde Yahudi savaşçısı **Merhab** meydana çıktı. Miğferi başındaydı, zırhı üzerindeydi. Kılıcını sallayarak recez okudu: "Hayber bilir ki ben Merhab\'ım. Silahım tam, savaşta pişmiş bir yiğidim. Savaş alevlenince ben oradayım." **Hz. Ali** karşısına geçti ve recezle cevap verdi: "Ben, annemin Haydar adını verdiği kişiyim. Haydar, aslan demektir. Orman aslanı gibi korkunç bakışlıyım." Ehl-i Beyt rivayetinde Hz. Ali **tek bir yara almadan** Zülfikar\'ı indirdi. Tek darbe Merhab\'ın miğferini ve kafasını tepeden ikiye yardı. **Merhab yere yıkıldı. Hz. Ali onu öldürdü, cehenneme yolladı.** Yahudi savaşçılar dehşete düştü. Kale bu darbeden sonra fethedildi.' },
+      text: { tr: 'Hayber\'in kapısı önünde Yahudi savaşçısı **Merhab** meydana çıktı. Miğferi başındaydı, zırhı üzerindeydi. Kılıcını sallayarak recez okudu: "Hayber bilir ki ben Merhab\'ım. Silahım tam, savaşta pişmiş bir yiğidim. Savaş alevlenince ben oradayım." **Hz. Ali** karşısına geçti ve recezle cevap verdi: "Ben, annemin Haydar adını verdiği kişiyim. Haydar, aslan demektir. Orman aslanı gibi korkunç bakışlıyım." Rivayete göre Hz. Ali **tek bir yara almadan** Zülfikar\'ı indirdi. Tek darbe Merhab\'ın miğferini ve kafasını tepeden ikiye yardı. **Merhab yere yığıldı ve öldü.** Yahudi savaşçılar dehşete düştü. Kale bu darbeden sonra fethedildi.' },
       cites: [{ side: 'sunni', i: 4 }, { side: 'shia', i: 1 }, { side: 'shia', i: 2 }],
       art: { bg: 'dune-day', actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 74, scale: 3 }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Ehl-i Beyt rivayetinde **Hz. Ali**, Hayber kapısını yerinden söküp kalkan gibi kullandı. Kapıyı savaşırken önünde tuttu.' },
+      text: { tr: 'Rivayete göre **Hz. Ali**, Hayber kapısını yerinden söküp kalkan gibi kullandı. Kapıyı savaşırken önünde tuttu.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {

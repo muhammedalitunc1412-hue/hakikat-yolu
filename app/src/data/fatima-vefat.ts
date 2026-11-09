@@ -16,13 +16,13 @@ export const fatimaVefat: HistEvent = {
       cites: [{ side: 'sunni', i: 0 }, { side: 'shia', i: 3 }],
     },
     {
-      text: { tr: 'Medine\'de, biat günü, bir grup **Hz. Ali**\'nin evinde toplanmıştı. Kapıya **Ömer** geldi. Odun ve ateş getirtmişti. "Çıkın, yoksa evi içindekilerle yakarım" dedi. "İçeride Fatıma var" denince **Ömer** "Olsa da!" dedi. Ehl-i Beyt rivayetinde kapıyı yakanlardan biri oydu. Ev, **Hz. Ali**\'nin eviydi. Peygamber Gadir\'de onun elini tutmuştu. Aynı kapı ateşle tehdit edildi.' },
+      text: { tr: 'Medine\'de, biat günü, bir grup **Hz. Ali**\'nin evinde toplanmıştı. Kapıya **Ömer** geldi. Odun ve ateş getirtmişti. "Çıkın, yoksa evi içindekilerle yakarım" dedi. "İçeride Fatıma var" denince **Ömer** "Olsa da!" dedi. Rivayete göre kapıyı yakanlardan biri oydu. Ev, **Hz. Ali**\'nin eviydi. Peygamber Gadir\'de onun elini tutmuştu. Aynı kapı ateşle tehdit edildi.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 28, pose: 'raise', label: { tr: 'Ömer' } }, { kind: 'fatima', x: 68, label: { tr: 'Hz. Fatıma' } }] },
       by: 'shia',
       cites: [{ side: 'sunni', i: 1 }, { side: 'sunni', i: 2 }, { side: 'sunni', i: 4 }, { side: 'shia', i: 6 }],
     },
     {
-      text: { tr: 'Ehl-i Beyt rivayetine göre kapıyı tekmeleyip zorla iterek açan **Ömer**\'di. Kapı yandı. **Hz. Fatıma** kapı ile duvar arasında kaldı. Kaburgası kırıldı. Göğsüne çivi battı. Karnındaki **Muhsin** düştü. "Babacığım" diye seslendi. **Hz. Ali** yetişti. Onu tuttu. Sabretti. Bu, **Hz. Ali**\'nin velayetinin bulunduğu evin kapısında oldu.' },
+      text: { tr: 'Rivayete göre kapıyı tekmeleyip zorla iterek açan **Ömer**\'di. Kapı yandı. **Hz. Fatıma** kapı ile duvar arasında kaldı. Kaburgası kırıldı. Göğsüne çivi battı. Karnındaki **Muhsin** düştü. "Babacığım" diye seslendi. **Hz. Ali** yetişti. Onu tuttu. Sabretti. Bu, **Hz. Ali**\'nin velayetinin bulunduğu evin kapısında oldu.' },
       art: { bg: 'interior', actors: [{ kind: 'fatima', x: 48, pose: 'sit', label: { tr: 'Hz. Fatıma' } }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
       cites: [{ side: 'shia', i: 6 }, { side: 'shia', i: 7 }, { side: 'shia', i: 8 }, { side: 'shia', i: 9 }, { side: 'shia', i: 0 }, { side: 'sunni', i: 2 }],
