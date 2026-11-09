@@ -93,7 +93,7 @@ export const kerbela: HistEvent = {
       cites: [{ side: 'shia', i: 8 }],
     },
     {
-      text: { tr: 'Hasta olan **Hz. Zeynelâbidîn**\'di. Savaşa bu yüzden çıkamadı. Onu öldürmek isteyenler oldu. "Bu hastalık ona yeter" diyen de oldu. **Hz. Zeynep** hasta değildi. Yeğeninin başında durdu. Onu savundu. Esarette Kûfe\'ye ve Şam\'a bu hastalıkla götürüldü.' },
+      text: { tr: 'Hasta olan **Hz. Zeynelâbidîn**\'di. Savaşa bu yüzden çıkamadı. Onu öldürmek isteyenler oldu. "Bu hastalık ona yeter" diyen de oldu. **Hz. Zeynep** hasta değildi. Esarette Kûfe\'ye ve Şam\'a bu hastalıkla götürüldü.' },
       image: 'kerbela-seccad-1',
       art: { bg: 'night', props: ['tents', 'moon'], actors: [{ kind: 'man', x: 46, label: { tr: 'Hz. Zeynelâbidîn' }, pose: 'sit' }, { kind: 'woman', x: 72, label: { tr: 'Hz. Zeynep' } }] },
       by: 'shia',
