@@ -10,17 +10,17 @@ export const menzile: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Hicretin 9. yılında Bizans sınırda asker topluyordu. Yaz sıcaktı, kıtlık vardı, yol uzundu. Peygamber yine de **Tebük**\'e çıktı. Ordu "Zorluk Ordusu" diye anıldı. Bu seferde Peygamber, **Hz. Ali**\'nin yerini bir cümleyle söyleyecekti.' },
+      text: { tr: 'Hicretin 9. yılında Bizans sınırda asker topluyordu. Yaz sıcaktı, kıtlık vardı, yol uzundu. Peygamber yine de **Tebük**\'e çıktı. Ordu "Zorluk Ordusu" diye anıldı. Bu seferde Peygamber, **Hz. Ali**\'nin yerini bir cümleyle söyleyecekti. Seferin adı Tebük\'tür. Sıcak ve kıtlık, orduyu zorluyordu.' },
       art: { bg: 'dune-day', props: ['sun', 'tents'], actors: [{ kind: 'crowd', x: 30, scale: 8 }, { kind: 'prophet', x: 68, label: { tr: 'Hz. Peygamber' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Tebük\'e çıkarken Peygamber, Medine\'yi ve ailesini koruması için **Hz. Ali**\'yi yerine vekil bıraktı. Vekil, onun adına şehre bakan kişidir. Şehri en güvendiği kişiye emanet etti. Bu, **Hz. Ali**\'yi kenara itmek değildi.' },
+      text: { tr: 'Tebük\'e çıkarken Peygamber, Medine\'yi ve ailesini koruması için **Hz. Ali**\'yi yerine vekil bıraktı. Vekil, onun adına şehre bakan kişidir. Şehri en güvendiği kişiye emanet etti. Bu, **Hz. Ali**\'yi kenara itmek değildi. Vekâlet, ona duyulan güvenin adıdır.' },
       art: { bg: 'city', props: ['sun'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Peygamber yola çıkınca Medine\'de münafıklar fısıldadı: "Onu yük gördüğü için bıraktı." Münafık, inanmış görünüp içten karşı duran kişidir. **Hz. Ali** silahını kuşandı ve orduya yetişti. Yüreği incinmişti. Peygamber\'in cevabı, incinen **Hz. Ali**\'ye makamını söyleyecekti.' },
+      text: { tr: 'Peygamber yola çıkınca Medine\'de münafıklar fısıldadı: "Onu yük gördüğü için bıraktı." Münafık, inanmış görünüp içten karşı duran kişidir. **Hz. Ali** silahını kuşandı ve orduya yetişti. Yüreği incinmişti. Peygamber\'in cevabı, incinen **Hz. Ali**\'ye makamını söyleyecekti. Fısıltı, bir vekâleti küçümseme idi.' },
       art: { bg: 'dune-dusk', actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 72, scale: 5 }] },
     },
     {
@@ -40,12 +40,12 @@ export const menzile: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Yıllar sonra **Muaviye**, Sa\'d\'a **Hz. Ali**\'ye neden sövmediğini sordu. Sa\'d üç sözü saydı: **Menzile**, Hayber sancağı ve Mübahele. Mübahele, lanetleşme günüdür. Minberden **Hz. Ali**\'ye lanet istenirken bu üç söz hâlâ ayaktaydı.' },
+      text: { tr: 'Yıllar sonra **Muaviye**, Sa\'d\'a **Hz. Ali**\'ye neden sövmediğini sordu. Sa\'d üç sözü saydı: **Menzile**, Hayber sancağı ve Mübahele. Mübahele, lanetleşme günüdür. Minberden **Hz. Ali**\'ye lanet istenirken bu üç söz hâlâ ayaktaydı. Menzile, o üç sözün ilkiydi.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'crowd', x: 36, scale: 3 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Tebük\'te savaş çıkmadı. Peygamber anlaşmalar yapıp Medine\'ye döndü. **Hz. Ali** yolda ona yetişmiş ve o sözü duymuştu. Şehir, vekili olan **Hz. Ali**\'ye emanet kalmıştı. Velayet, yani önderlik, bu seferde de boş bırakılmamıştı.' },
+      text: { tr: 'Tebük\'te savaş çıkmadı. Peygamber anlaşmalar yapıp Medine\'ye döndü. **Hz. Ali** yolda ona yetişmiş ve o sözü duymuştu. Şehir, vekili olan **Hz. Ali**\'ye emanet kalmıştı. Velayet, yani önderlik, bu seferde de boş bırakılmamıştı. Medine, Peygamber yokken de emanetli kaldı.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'prophet', x: 44, label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 72, scale: 6 }] },
     },
   ],

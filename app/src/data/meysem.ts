@@ -9,7 +9,7 @@ export const meysem: HistEvent = {
   hook: { tr: 'Hz. Ali, hurma satan dostuna asılacağı ağacı önceden gösterdi. O ağaç, hicri 60\'ta dar ağacı oldu.', en: 'Hz. Ali showed his friend the palm on which he would be hanged. In 60 AH that tree became the gallows.' },
   scenes: [
     {
-      text: { tr: 'Kûfe\'de bir hurma satıcısı vardı. Adı **Meysem et-Temmâr**\'dı. Azatlı bir köleydi. **Hz. Ali**\'nin en yakın dostlarındandı. İlmini ondan almıştı. Çarşıda hurma dizer, Hz. Ali\'nin adını sevgiyle anardı. Ehl-i Beyt\'in kapısı, bu tezgâhın önünde de açıktı.' },
+      text: { tr: 'Kûfe\'de bir hurma satıcısı vardı. Adı **Meysem et-Temmâr**\'dı. Azatlı bir köleydi. **Hz. Ali**\'nin en yakın dostlarındandı. İlmini ondan almıştı. Çarşıda hurma dizer, Hz. Ali\'nin adını sevgiyle anardı. Ehl-i Beyt\'in kapısı, bu tezgâhın önünde de açıktı. Hurma tezgâhı, Kûfe\'de bir sevgi yeri oldu.' },
       art: { bg: 'city', props: ['palms', 'sun'], actors: [{ kind: 'man', x: 42, label: { tr: 'Meysem' } }, { kind: 'ali', x: 70, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }],
@@ -39,7 +39,7 @@ export const meysem: HistEvent = {
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }, { side: 'shia', i: 2 }],
     },
     {
-      text: { tr: 'Aynı düzen, bir yıl sonra Kerbela\'da suyu kesecekti. **Hz. Hüseyin**, **Yezid**\'e biat etmedi. **Meysem**\'in asıldığı Kûfe, o orduyu da çıkaran şehirdi. Hurma ağacının altında biten söz, Fırat\'ın kıyısında sürecekti.' },
+      text: { tr: 'Aynı düzen, bir yıl sonra Kerbela\'da suyu kesecekti. **Hz. Hüseyin**, **Yezid**\'e biat etmedi. **Meysem**\'in asıldığı Kûfe, o orduyu da çıkaran şehirdi. Hurma ağacının altında biten söz, Fırat\'ın kıyısında sürecekti. Kûfe, bir yıl sonra Kerbelâ ordusunu da çıkardı.' },
       art: { bg: 'dune-dusk', props: ['palms', 'flags'], actors: [{ kind: 'crowd', x: 30, scale: 5 }, { kind: 'husayn', x: 72, label: { tr: 'Hz. Hüseyin' } }] },
       by: 'shia',
       cites: [{ side: 'shia', i: 1 }],

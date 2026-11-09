@@ -8,42 +8,42 @@ export const raziyye: HistEvent = {
   hook: { tr: 'Peygamber "size bir yazı yazayım ki sapmayasınız" dedi. Kalem, Ehl-i Beyt\'in hakkı yazılmadan durdu.', en: 'The Prophet said, "Let me write for you so that you do not go astray." Why was it never written?' },
   scenes: [
     {
-      text: { tr: 'Peygamber, veda günlerinde genç Usame b. Zeyd\'i Şam yönündeki Belka\'ya gidecek ordunun başına getirdi. Ordu Cürf\'te toplandı. Bazı kişiler, komutanın bu kadar genç olmasına itiraz etti. Veda günlerinin ilk anlaşmazlığı burada çıktı.' },
+      text: { tr: 'Peygamber, veda günlerinde genç Usame b. Zeyd\'i ordunun başına getirdi. Ordu, Medine yakınındaki Cürf\'te toplandı. Yol, Şam yönündeki Belka\'ya gidiyordu. Bazı kişiler, komutanın bu kadar genç olmasına itiraz etti. Veda günlerinin ilk anlaşmazlığı burada çıktı. Emir duruyordu. İtiraz, yürüyüşü geciktirdi.' },
       art: { bg: 'dune-day', props: ['sun', 'tents', 'flags'], actors: [{ kind: 'crowd', x: 30, scale: 8 }, { kind: 'man', x: 62, label: { tr: 'Usame b. Zeyd' } }, { kind: 'prophet', x: 82, label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Cürf\'te itirazlar büyüdü. Ordu gecikti. Hastalığı ağırlaşan Peygamber minbere çıktı ve itiraz edenlere cevap verdi. Onun emri hâlâ geçerliydi. Buna rağmen ordu yola çıkmadı.' },
+      text: { tr: 'Cürf\'te itirazlar büyüdü. Ordu gecikti. Hastalığı ağırlaşan Peygamber Medine\'de minbere çıktı ve itiraz edenlere cevap verdi. Onun emri hâlâ geçerliydi. Buna rağmen ordu yola çıkmadı. Şehir, veda emrini beklerken yerinde kaldı.' },
       art: { bg: 'city', props: ['minbar', 'flags'], actors: [{ kind: 'crowd', x: 30, scale: 7 }, { kind: 'prophet', x: 68, pose: 'raise', label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hastalık iyice ağırlaşınca Peygamber odasındakilere döndü. "Gelin, size bir yazı yazayım ki benden sonra asla sapmayasınız" dedi. Bunu, kendisinden sonra ümmet sapmasın diye istedi. Gadir\'de **Hz. Ali** için ilan edilen yeri de kâğıda yazdırmak istiyordu.' },
+      text: { tr: 'Hastalık iyice ağırlaşınca Peygamber, Medine\'deki odasında bulunanlara döndü. "Gelin, size bir yazı yazayım ki benden sonra asla sapmayasınız" dedi. Bunu, kendisinden sonra ümmet sapmasın diye istedi. Gadir\'de **Hz. Ali** için ilan edilen yeri de kâğıda yazdırmak istiyordu. Kalem, bu veda için istenmişti.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 32, pose: 'sit', label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 68, scale: 4 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Peygamber\'in odasında anlaşmazlık çıktı. Ömer\'e atfedilen söz şuydu: "Peygamber\'e ağrı galip geldi. Allah\'ın Kitabı bize yeter." Kimisi yazının yazılmasını istedi. Kimisi bu sözün tutulmasını istedi. Gürültü, yazının önünü kesti.' },
+      text: { tr: 'Peygamber\'in odasında anlaşmazlık çıktı. Ömer\'e atfedilen söz şuydu: "Peygamber\'e ağrı galip geldi. Allah\'ın Kitabı bize yeter." Kimisi yazının yazılmasını istedi. Kimisi bu sözün tutulmasını istedi. Gürültü, yazının önünü kesti. Kalem, iki tarafın sesi arasında durdu.' },
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 26, pose: 'sit', label: { tr: 'Hz. Peygamber' } }, { kind: 'man', x: 56, pose: 'raise', label: { tr: 'Ömer' } }, { kind: 'crowd', x: 80, scale: 3 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Odadaki gürültü artınca Peygamber "Kalkın" dedi. Yazı yazılmadı. İbn Abbas bu günü anarken ağlar: "Asıl musibet, ihtilaf ve gürültünün Peygamber ile o yazı arasına girmesidir." O gün yazıya engel olundu. Bu engel, sonra Sakife\'de **Hz. Ali**\'nin hakkının bir kenara konmasına yol açtı.' },
+      text: { tr: 'Odadaki gürültü artınca Peygamber "Kalkın" dedi. Yazı yazılmadı. İbn Abbas bu günü anarken ağlar: "Asıl musibet, ihtilaf ve gürültünün Peygamber ile o yazı arasına girmesidir." O gün yazıya engel olundu. Bu engel, sonra Sakife\'de **Hz. Ali**\'nin hakkının bir kenara konmasına yol açtı. Kâğıt boş kaldı. Şehir, o boşluğa yürüdü.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 36, pose: 'sit', label: { tr: 'Hz. Peygamber' } }, { kind: 'man', x: 70, label: { tr: 'İbn Abbas' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Aynı rivayet üç vasiyet aktarır. İlki şudur: müşrikleri Arap Yarımadası\'ndan çıkarın. İkincisi şudur: gelen heyetleri ağırlayın. Râvi üçüncüsünü unuttuğunu söyler. Peygamber\'i sevenler, unutulan bu üçüncü vasiyeti hiç öğrenemediler. Bu eksik, onlarda kaldı.' },
+      text: { tr: 'Aynı rivayet üç vasiyet aktarır. İlki şudur: müşrikleri Arap Yarımadası\'ndan çıkarın. İkincisi şudur: gelen heyetleri ağırlayın. Râvi üçüncüsünü unuttuğunu söyler. Peygamber\'i sevenler, unutulan bu üçüncü vasiyeti hiç öğrenemediler. Bu eksik, onların yüreğinde kaldı.' },
       art: { bg: 'night', props: ['moon', 'stars'], actors: [{ kind: 'prophet', x: 50, pose: 'sit', label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Peygamber, Rebiülevvel 11\'de bir Pazartesi günü vefat etti. Başucunda **Hz. Ali** vardı. Gadir\'de eli kaldırılan Hz. Ali, o saatte Peygamber\'in gözünü kapattı.' },
+      text: { tr: 'Peygamber, Rebiülevvel 11\'de, Medine\'de, bir Pazartesi günü vefat etti. Başucunda **Hz. Ali** vardı. Gadir\'de eli kaldırılan Hz. Ali, o saatte Peygamber\'in gözünü kapattı. Vedayı, ilan edilen önder tuttu.' },
       art: { bg: 'dawn', props: ['palms'], actors: [{ kind: 'prophet', x: 30, label: { tr: 'Hz. Peygamber' } }, { kind: 'woman', x: 66, label: { tr: 'Aişe' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Vefat haberi Medine\'de duyulunca şehir karıştı. Ömer önce ölümü kabul etmedi. Ebu Bekir durumu halka duyurdu. **Hz. Ali** ve Haşimoğulları cenaze hazırlığına başladı. Bir yanda ağlayanlar vardı. Bir yanda Sakife\'ye gidenler vardı.' },
+      text: { tr: 'Vefat haberi Medine\'de duyulunca şehir karıştı. Ömer önce ölümü kabul etmedi. Ebu Bekir durumu halka duyurdu. **Hz. Ali** ve Haşimoğulları cenaze hazırlığına başladı. Bir yanda ağlayanlar vardı. Bir yanda Sakife\'ye gidenler vardı. Cenaze dururken şehir ikiye ayrıldı.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'crowd', x: 24, scale: 6 }, { kind: 'man', x: 48, label: { tr: 'Ömer' } }, { kind: 'man', x: 66, label: { tr: 'Ebu Bekir' } }, { kind: 'ali', x: 84, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },

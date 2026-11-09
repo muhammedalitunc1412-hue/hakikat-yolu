@@ -15,32 +15,32 @@ export const penceAba: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Aynı sabah, örtünün yanında Peygamber dua etti: "Allah\'ım, bunlar Ehl-i Beytimdir. Onlardan kiri uzaklaştır, onları tertemiz yap." Ümmü Seleme, "Ben de onlarla birlikte miyim?" diye sordu. Peygamber, "Sen hayır üzerindesin" dedi. Onu örtünün altına almadı. Örtünün altında yalnız o beş kişi kaldı.' },
+      text: { tr: 'Aynı sabah Peygamber, örtünün altındaki beş kişi için dua etti. "Allah\'ım, bunlar Ehl-i Beytimdir. Onlardan kiri uzaklaştır, onları tertemiz yap." Ümmü Seleme oradaydı. "Ben de onlarla birlikte miyim?" diye sordu. Peygamber, "Sen hayır üzerindesin" dedi. Onu örtünün altına almadı. Örtünün altında yalnız Peygamber, **Hz. Ali**, **Hz. Fatıma**, **Hz. Hasan** ve **Hz. Hüseyin** kaldı. O sabah Ehl-i Beyt adı, bu beş kişiyle görülür oldu.' },
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 38, label: { tr: 'Hz. Peygamber' } }, { kind: 'woman', x: 70 }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Ayet-i Tathir, örtünün altına alınan beş kişiyi anlatır. Tathir, temizlik demektir. Ayetteki ehl, ev halkı demektir. Peygamber ayeti onların üzerine okudu. Arındırma, onların günahtan korunmuş olmasıdır. Buna ==ismet== denir. İmamet, yani imamların önderliği, bu temizliğe dayanır.' },
+      text: { tr: 'Ayet-i Tathir, örtünün altına alınan bu beş kişiyi anlatır. Tathir, kirden arındırma demektir. Ayetteki ehl, ev halkı demektir. Peygamber, Ahzâb 33:33\'ü onların üzerine okudu. Şii okuyuşta bu arındırma, onların günahtan korunmuş olmasıdır. Buna ==ismet== denir. İmamet, yani Allah\'ın bildirdiği önderlik, bu temizliğe dayanır. Seven, bu beş kişiye güvenir. Çünkü Peygamber onları kendi eli ile örtünün altına almıştır.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'woman', x: 66 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Zeyd b. Erkam\'a Ehl-i Beyt\'in kim olduğu soruldu. O, hanımları bu yakın halkanın dışında tuttu. Hz. Ali, Akîl, Cafer ve Abbas ailelerini andı. Örtünün altındaki beş kişi, bu akraba halkasının ortasındadır.' },
+      text: { tr: 'Yıllar sonra Zeyd b. Erkam\'a Ehl-i Beyt\'in kim olduğu soruldu. O, Peygamber\'in hanımlarını bu yakın halkanın dışında tuttu. **Hz. Ali**\'nin, Akîl\'in, Cafer\'in ve Abbas\'ın ailelerini andı. Örtünün altındaki beş kişi, bu akraba halkasının ortasında durur. Soru, bir isim listesi için değildi. Peygamber\'in sevgiyi kime bağladığını göstermek içindi.' },
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Bu beş kişiye **Pence-i Âl-i Aba** denir. Pence, beş demektir. Âl-i Aba, örtü ailesi demektir. Onlar Peygamber, **Hz. Ali**, **Hz. Fatıma**, **Hz. Hasan** ve **Hz. Hüseyin**\'dir. Bayraklardaki açık el, sevenlerin bu beş kişiyi göğsünde taşımasıdır.' },
+      text: { tr: 'Sevenler bu beş kişiye **Pence-i Âl-i Aba** der. Pence, beş demektir. Âl-i Aba, örtü ailesi demektir. Onlar Peygamber, **Hz. Ali**, **Hz. Fatıma**, **Hz. Hasan** ve **Hz. Hüseyin**\'dir. Bayraklardaki açık el, sevenlerin bu beş kişiyi göğsünde taşıdığını gösterir. El, bir süs değildir. O sabah örtünün altında duranları hatırlatır.' },
       art: { bg: 'night', props: ['stars'], actors: [{ kind: 'prophet', x: 20, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 36, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 50, label: { tr: 'Hz. Fatıma' } }, { kind: 'hasan', x: 64, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 76, scale: 0.8, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Ehl-i Beyt rivayetinde **Hz. Fatıma**\'dan gelen daha uzun bir anlatı vardır. Adı Hadis-i Kisa\'dır. Kisa, örtü demektir. Bu anlatıda örtünün altında Cebrail\'in ve Allah\'ın hitabı da duyulur. Bu beş kişi yalnız bir evin halkı değildir. O hitap, onları Ehl-i Beyt diye anar.' },
+      text: { tr: 'Ehl-i Beyt rivayetinde **Hz. Fatıma**\'dan gelen daha uzun bir anlatı vardır. Adı Hadis-i Kisa\'dır. Kisa, örtü demektir. Bu anlatıda örtünün altında Cebrail\'in ve Allah\'ın hitabı da duyulur. Rivayet, bu beş kişiyi yalnız bir evin halkı diye bırakmaz. Hitap, onları Ehl-i Beyt diye anar. Bu yüzden seven, o örtüyü bir aile yorganı değil, bir seçim görür.' },
       art: { bg: 'interior', props: ['scroll', 'stars'], actors: [{ kind: 'fatima', x: 50, label: { tr: 'Hz. Fatıma' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Hadis-i Kisa, ==Ehl-i Beyt==\'in çekirdeğini Allah\'ın belirlediğini gösterir. Çekirdek, örtünün altındaki beş kişidir. Sonraki imamlar bu beşin soyundan gelir. İmamet bu beş kişiye dayanır. Gadir\'de Peygamber, bu beşin içinden **Hz. Ali**\'nin elini herkesin önünde kaldıracaktır.' },
+      text: { tr: 'Hadis-i Kisa, ==Ehl-i Beyt==\'in çekirdeğini gösterir. Çekirdek, örtünün altındaki beş kişidir. Sonraki imamlar bu beşin soyundan gelir. İmamet bu beş kişiye dayanır. Gadir\'de Peygamber, bu beşin içinden **Hz. Ali**\'nin elini herkesin önünde kaldıracaktır. Örtü, o elin ilk işaretidir.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 56, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 68, scale: 0.8, label: { tr: 'Hz. Hüseyin' } }] },
     },
   ],

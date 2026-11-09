@@ -31,7 +31,7 @@ export const hayber: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Hayber\'in kapısı önünde Yahudi savaşçısı **Merhab** meydana çıktı. Miğferi başındaydı, zırhı üzerindeydi. Kılıcını sallayarak recez okudu: "Hayber bilir ki ben Merhab\'ım. Silahım tam, savaşta pişmiş bir yiğidim. Savaş alevlenince ben oradayım." **Hz. Ali** karşısına geçti ve recezle cevap verdi: "Ben, annemin Haydar adını verdiği kişiyim. Haydar, aslan demektir. Orman aslanı gibi korkunç bakışlıyım." Ehl-i Beyt rivayetinde Hz. Ali **tek bir yara almadan** Zülfikar\'ı indirdi. Tek darbe Merhab\'ın miğferini ve kafasını tepeden ikiye yardı. **Merhab yere yıkıldı. Hz. Ali onu öldürdü, cehenneme yolladı.** Yahudi savaşçılar dehşete düştü. Kale bu darbeden sonra fethedildi.' },
+      text: { tr: 'Hayber\'in kapısı önünde Yahudi savaşçısı **Merhab** meydana çıktı. Miğferi başındaydı, zırhı üzerindeydi. Kılıcını sallayarak recez okudu: "Hayber bilir ki ben Merhab\'ım. Silahım tam, savaşta pişmiş bir yiğidim. Savaş alevlenince ben oradayım." **Hz. Ali** karşısına geçti ve recezle cevap verdi: "Ben, annemin Haydar adını verdiği kişiyim. Haydar, aslan demektir. Orman aslanı gibi korkunç bakışlıyım." Ehl-i Beyt rivayetinde Hz. Ali tek bir yara almadan Zülfikar\'ı indirdi. Zülfikar, tek ve hafif eğri bir kılıçtır. Boyu yaklaşık yüz yirmi santimdir. Rivayete göre tek darbe Merhab\'ı yere yıktı. Kale bu darbeden sonra fethedildi.' },
       cites: [{ side: 'sunni', i: 4 }, { side: 'shia', i: 1 }, { side: 'shia', i: 2 }],
       art: { bg: 'dune-day', actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 74, scale: 3 }] },
     },

@@ -8,7 +8,7 @@ export const gadir: HistEvent = {
   hook: { tr: 'Çölün ortasında kafile durdu. Bir el havaya kalktı. O gün Hz. Ali\'nin velayeti ilan edildi.', en: 'A caravan halted in the desert, and a raised hand.' },
   scenes: [
     {
-      text: { tr: 'Veda Haccı bitmişti. Peygamber binlerce insanla Mekke\'den Medine\'ye dönüyordu. **Hz. Ali** Yemen\'den gelmiş, hacda ona katılmıştı. Hayber\'de sancak ona verilmiş, Tebük\'te Harun benzetmesi söylenmişti. Sıra, bu yerin herkesin önünde ilanına gelmişti.' },
+      text: { tr: 'Veda Haccı bitmişti. Peygamber binlerce insanla Mekke\'den Medine\'ye dönüyordu. **Hz. Ali** Yemen\'den gelmiş, hacda ona katılmıştı. Hayber\'de sancak ona verilmiş, Tebük\'te Harun benzetmesi söylenmişti. Sıra, bu yerin herkesin önünde ilanına gelmişti. Kafile, Mekke\'den Medine\'ye dönüyordu.' },
       art: { bg: 'dune-day', props: ['sun', 'camels'], actors: [{ kind: 'crowd', x: 40, scale: 8 }, { kind: 'prophet', x: 74, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 88, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
@@ -28,12 +28,12 @@ export const gadir: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Aynı hutbede Peygamber iki ağır emanet bıraktı: Allah\'ın Kitabı ve ==Ehl-i Beyt==. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi. Bunu üç kez tekrarladı. İtret, yani Ehl-i Beyt, Kitap\'tan ayrılmasın diye Peygamber ikisini birbirine bağladı.' },
+      text: { tr: 'Aynı hutbede Peygamber iki ağır emanet bıraktı: Allah\'ın Kitabı ve ==Ehl-i Beyt==. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi. Bunu üç kez tekrarladı. İtret, yani Ehl-i Beyt, Kitap\'tan ayrılmasın diye Peygamber ikisini birbirine bağladı. İtret, Ehl-i Beyt demektir. Kitap, onlarsız bırakılmasın diye söylendi.' },
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 82, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hutbeden sonra insanlar **Hz. Ali**\'yi tebrik etti. Rivayette Ömer şöyle der: "Tebrikler ey Ebu Talib\'in oğlu. Her mümin erkek ve kadının mevlâsı oldun." O gün tebrik edilen **Hz. Ali**, kısa süre sonra Sakife\'de bekletilecekti. Onun önderliği orada bir kenara konacaktı.' },
+      text: { tr: 'Hutbeden sonra insanlar **Hz. Ali**\'yi tebrik etti. Rivayette Ömer şöyle der: "Tebrikler ey Ebu Talib\'in oğlu. Her mümin erkek ve kadının mevlâsı oldun." O gün tebrik edilen **Hz. Ali**, kısa süre sonra Sakife\'de bekletilecekti. Onun önderliği orada bir kenara konacaktı. Tebrik, Gadir\'de bitti. Sakife, o tebriği bekletti.' },
       art: { bg: 'dune-dusk', props: ['sun', 'tents'], actors: [{ kind: 'crowd', x: 30, scale: 6 }, { kind: 'man', x: 56 }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },

@@ -8,7 +8,7 @@ export const aliKimdir: HistEvent = {
   hook: { tr: 'Kâbe\'nin içinde doğdu. Peygamber\'in yatağına yattı. İlim şehrinin kapısı odur.', en: 'Who is the man said to be born in the Kaaba, who lay in the Prophet\'s bed and is called the "gate of knowledge"?' },
   scenes: [
     {
-      text: { tr: 'Mekke\'de **Hz. Ali**\'nin annesi **Fâtıma bint Esed**\'di. Sancısı Kâbe\'nin eşiğinde tuttu. Allah\'ın evine sığındı. Duvar açıldı, annesi içeri girdi. **Hz. Ali** Beytullah\'ın içinde dünyaya geldi. Beytullah, Kâbe demektir. Ondan önce de sonra da Kâbe\'de doğan bir çocuk bilinmez. Bu, Allah\'ın ona ikramıydı. Velayet, yani önderlik, daha ilk nefesinden ona konmuştu.' },
+      text: { tr: 'Mekke\'de **Hz. Ali**\'nin annesi **Fâtıma bint Esed**\'di. Sancısı Kâbe\'nin eşiğinde tuttu. Annesi Allah\'ın evine sığındı. Rivayetlere göre duvar açıldı ve annesi içeri girdi. **Hz. Ali** Beytullah\'ın içinde dünyaya geldi. Beytullah, Kâbe demektir. Ondan önce de sonra da Kâbe\'de doğan bir çocuk bilinmez. Sevenler bu doğumu, Allah\'ın ona bir ikramı sayar. Velayet, yani önderlik, daha ilk nefesinden onunla anılır.' },
       art: { bg: 'dune-dusk', props: ['sun'], actors: [{ kind: 'woman', x: 30, label: { tr: 'Fatıma bint Esed' } }, { kind: 'ali', x: 66, scale: 0.6, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
       cites: [
@@ -20,12 +20,12 @@ export const aliKimdir: HistEvent = {
       ],
     },
     {
-      text: { tr: 'Yine Mekke\'de kıtlık vardı. Peygamber, amcası Ebu Talib\'in yükünü hafifletmek için küçük **Hz. Ali**\'yi bağrına aldı. Çocuk, vahyin geldiği evde büyüdü. Bu terbiye, onu ileride ümmetin önüne geçecek kişi olarak yetiştirdi.' },
+      text: { tr: 'Yine Mekke\'de kıtlık vardı. Peygamber, amcası Ebu Talib\'in yükünü hafifletmek için küçük **Hz. Ali**\'yi kendi evine aldı. Çocuk, vahyin geldiği evde büyüdü. Peygamber onu kendi sofrasında ve kendi sözünün yanında yetiştirdi. Bu terbiye, onu ileride ümmetin önüne geçecek kişi olarak hazırladı.' },
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 40, pose: 'sit', label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, scale: 0.6, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Vahiy geldiğinde **Hz. Ali** henüz çocuktu. Mekke\'de duraksamadan iman etti. İslam\'ı kabul eden ilk kişi odur. O günden sonra doğru olanın yanında durdu.' },
+      text: { tr: 'Vahiy Mekke\'de geldiğinde **Hz. Ali** henüz çocuktu. O, duraksamadan iman etti. İslam\'ı kabul eden ilk kişi odur. O günden sonra doğru olanın yanında durdu. Çocuk yaşı, onun imanını küçük göstermedi. Peygamber\'in ilk dayağı, kendi evinde büyüyen bu çocuk oldu.' },
       art: { bg: 'night', props: ['stars'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, scale: 0.7, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
