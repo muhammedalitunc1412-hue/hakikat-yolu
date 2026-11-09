@@ -48,13 +48,13 @@ export const muaviyeAli: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Hakem toplantısında **Ebu Musa** ile **Amr b. el-As** oturdu. Yaygın anlatıda Ebu Musa yüzüğü çıkarır gibi Hz. Ali\'yi azleder, Amr yüzüğü takar gibi **Muaviye**\'yi başa kor. Bu anlatının güveni tartışmalıdır. Tam söz rivayete göre değişir. **Hz. Ali** bu sonucu kabul etmedi. Mızraktaki hile, bu mecliste de sürdü. Hakem meclisi, hileyi sürdürdü.' },
+      text: { tr: 'Hakem toplantısında **Ebu Musa** ile **Amr b. el-As** oturdu. Yaygın anlatıda Ebu Musa yüzüğü çıkarır. Çıkarmak, Hz. Ali halife değildir demektir. Amr yüzüğü takar. Takmak, Muaviye halifedir demektir. Bu anlatının güveni tartışmalıdır. Tam cümle, rivayetten rivayete değişir. **Hz. Ali** bu sonucu kabul etmedi. Mızraktaki hile, hakem meclisinde de sürdü. Seven, yüzüğü bir tören diye okumaz. Bir el hareketinin, ilan edilen hakkı nasıl yazıdan sildiğini görür.' },
       art,
       cites: [{ side: 'sunni', i: 3 }, { side: 'shia', i: 2 }],
     },
     {
       by: 'both',
-      text: { tr: 'Hakemden sonra **Hz. Ali**\'nin safı bölündü. **Mâlik el-Eşter**, Hz. Ali\'nin sadık komutanıydı. Savaşta öncü, yönetimde güvenilen biri diye anılır. Hz. Ali onu Mısır valiliğine gönderdi. Yolda zehirlendiği aktarılır. Vikipedi, bunun Kulzüm\'de, bir görevliye rüşvetle ve çoğu anlatıda bala karıştırılarak olduğunu yazar. Bu, bir mektel sayfası değildir. Zehrin tarifi verilmez. Aynı sayfa, Şam\'da sevinenleri ve Muaviye\'nin şu sözünü de anlatır: Hz. Ali\'nin iki kolundan biri Sıffin\'de Ammâr\'la, öbürü şimdi kesildi. **Muaviye** Mısır\'a uzandı. Vali Muhammed b. Ebi Bekir öldürüldü. Busr b. Ertât Hicaz\'da ve Yemen\'de kan döktü. Hakemdeki hile, bu saldırılarla sürdü. **Hz. Ali** 40 H\'de, bir sabah namazında şehit edildi. Şehadet, Kûfe\'de, sabah namazında oldu.' },
+      text: { tr: 'Hakemden sonra **Hz. Ali**\'nin safı bölündü. **Mâlik el-Eşter**, Hz. Ali\'nin sadık komutanıydı. Savaşta öncü, yönetimde güvenilen biri diye anılır. Hz. Ali onu Mısır valiliğine gönderdi. Rivayetlere göre yolda, Kulzüm\'de zehirlendi. Anlatılan o ki bir görevliye rüşvet verildi. Zehir, çoğu rivayette bala karıştırıldı. Şam\'da sevinenler oldu. Muaviye\'nin şu sözü de anlatılır: Hz. Ali\'nin iki kolundan biri Sıffin\'de Ammâr\'la, öbürü şimdi kesildi. **Muaviye** Mısır\'a uzandı. Vali Muhammed b. Ebi Bekir öldürüldü. Busr b. Ertât Hicaz\'da ve Yemen\'de kan döktü. Hakemdeki hile, bu saldırılarla sürdü. **Hz. Ali** 40 H\'de, bir sabah namazında şehit edildi. Şehadet, Kûfe\'de, sabah namazında oldu.' },
       art,
       cites: [{ side: 'sunni', i: 3 }, { side: 'shia', i: 0 }],
     },
