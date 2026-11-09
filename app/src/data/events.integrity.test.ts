@@ -28,7 +28,9 @@ test('Sakîfe resimleri kaymaz, kuyu ayrı anahtardadır', () => {
   assert.match(src, /insanların Hz\. Ali\\'ye karşı tavrı değişti/);
   assert.match(src, /Buhari 4240/);
   assert.match(src, /biat ettiğini de yazar/);
-  assert.doesNotMatch(src, /selam/);
+  assert.match(src, /Rivayetlere göre \*\*Hz\. Ali\*\* sokakta selam verirdi/);
+  assert.match(src, /İnsanlar selamını almazdı/);
+  assert.doesNotMatch(src, /Buhari 4240[^.]*selam/);
   assert.match(read('./sceneImages.ts'), /'ali-kuyu-1':/);
   assert.match(read('./sceneImages.ts'), /'sakife-8':/);
 });
@@ -87,11 +89,18 @@ test('genişleme sahnelerinin görseli kayıtlı, yer tutucu kalmaz', () => {
     assert.equal(texts.length, expected);
     assert.equal(keys.length, texts.length);
     assert.equal(new Set(keys).size, keys.length);
+    const pending = new Set(['kerbela-egersiz']);
     for (const id of keys) {
+      if (pending.has(id)) {
+        assert.doesNotMatch(img, new RegExp("'" + id + "':"));
+        continue;
+      }
       assert.match(img, new RegExp("'" + id + "': require\\('../../assets/scenes/" + id + "\\.jpg'\\)"));
     }
   };
-  bound('./kerbela.ts', 36);
+  bound('./kerbela.ts', 37);
+  assert.match(read('./kerbela.ts'), /image: 'kerbela-egersiz'/);
+  assert.match(read('./kerbela.ts'), /eğersiz develere bindirildi/);
   bound('./sakife.ts', 10);
   const events = read('./events.ts');
   assert.match(events, /export function nextStory/);

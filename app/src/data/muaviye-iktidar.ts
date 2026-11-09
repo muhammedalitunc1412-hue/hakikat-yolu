@@ -47,7 +47,7 @@ export const muaviyeIktidar: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: '**Yezid**, şarap içmekle, av köpekleri ve maymunlarla eğlenmekle, fısk ve ahlaksızlıkla anılır. Medinelilerin bu suçlaması tarihlerde aktarılır. Belirli bir zina vakası bu turda kilitlenmedi. Yazılmadı. **Hz. Hüseyin** bu biatı vermedi. Biat, bağlılık sözüdür. Bu biatı vermek, Peygamber\'in torununu o saltanata boyun eğdirmek demekti. Kerbela, bu veliahtlığın sonucudur.' },
+      text: { tr: '**Yezid**, şarap içmekle, av köpekleri ve maymunlarla eğlenmekle, fısk ve ahlaksızlıkla anılır. Medinelilerin bu suçlaması tarihlerde aktarılır. **Hz. Hüseyin** bu biatı vermedi. Biat, bağlılık sözüdür. Bu biatı vermek, Peygamber\'in torununu o saltanata boyun eğdirmek demekti. Kerbela, bu veliahtlığın sonucudur.' },
       art,
       cites: [{ side: 'shia', i: 1 }],
     },

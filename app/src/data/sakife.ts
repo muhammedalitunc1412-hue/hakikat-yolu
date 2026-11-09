@@ -50,18 +50,17 @@ export const sakife: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Fâtıma\'nın vefatından sonra insanların Hz. Ali\'ye karşı tavrı değişti. Buhari 4240, Hz. Ali\'nin insanların yüzlerini yabancı bulduğunu anlatır. Bu hadis yalnız bu soğukluk için anıldı. Aynı hadis, ardından Hz. Ali\'nin Ebu Bekir\'e biat ettiğini de yazar. Uygulamadaki Şii okuyuş o devamı kabul saymaz.' },
+      text: { tr: 'Hz. Fâtıma\'nın vefatından sonra insanların Hz. Ali\'ye karşı tavrı değişti. Buhari 4240, Hz. Ali\'nin insanların yüzlerini yabancı bulduğunu anlatır. Bu hadis yalnız bu soğukluk için anıldı. Aynı hadis, ardından Hz. Ali\'nin Ebu Bekir\'e biat ettiğini de yazar. Uygulamadaki Şii okuyuş o devamı kabul saymaz. Rivayetlere göre **Hz. Ali** sokakta selam verirdi. İnsanlar selamını almazdı.' },
       image: 'sakife-yalnizlik-1',
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'ali', x: 38, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 72, scale: 4 }] },
       by: 'both',
       cites: [{ side: 'sunni', i: 1 }],
     },
     {
-      text: { tr: 'Ehl-i Beyt anlatı geleneğinde, Hz. Ali\'nin gece kuyu başına çıkıp derdini anlattığı söylenir. Anlatıda ayaktadır. Hafifçe eğilir. İki eli kuyu kenarındadır. Kuyuya kapanmış değildir. Bu, doğrulanmış bir tarih olayı diye kilitlenmedi. Klasik bir sayfa bu turda açılmadı. Ayrı bir metin vardır. Nehcü\'l-Belâğa\'nın 3. hutbesinde, hakkı dururken gözünde diken, boğazında kemik varken sabrettiği yazar. Bu, derlenmiş bir hutbedir. Bazı Sünnî âlimler nisbeti sorar. Bazıları kabul eder. Şii âlimler hutbeyi ona bağlar.' },
+      text: { tr: 'Gece Medine susardı. Rivayetlere göre **Hz. Ali** tek başına kuyunun başına giderdi. Etraf boştu. Ellerini kuyunun kenarına koyardı. Derdi oradaydı. **Hz. Fâtıma** gitmişti. İnsanlar yüz çevirmişti. Yalnızlık ağırdı. Gadir\'deki hakkını unutmamıştı. Kan dökülmesin diye sesini kısmıştı. İçini kuyuya dökerdi. Sabah olunca şehre dönerdi. Yüzü sakindi. Yükü duruyordu.' },
       image: 'ali-kuyu-1',
       art: { bg: 'night', props: ['moon', 'well'], actors: [{ kind: 'ali', x: 48, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
-      cites: [{ side: 'shia', i: 0 }],
     },
     {
       text: { tr: 'Sonra Halife Ömer, işi altı kişilik şuraya bıraktı. Şura, danışma kuruludur. Biat Osman\'a yapıldı. Şıkşıkıyye hutbesinde **Hz. Ali** bu günleri sabırla anar. Sakife\'de başlayan hakkın bir kenara konması, şurada da sürdü. Onun sabrı, hakkın unutulması değildi.' },

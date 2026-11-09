@@ -14,20 +14,20 @@ export const nehrevan: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Haricîler Abdullah b. Habbâb\'ı ve hamile karısını öldürdü. **Hz. Ali** orduyu Muaviye seferinden Nehrevan\'a çevirdi. Önce konuşuldu. Sonra çatışıldı. Ölü sayısı bu turda kilitlenmedi. Mızraktaki hile, Hz. Ali\'nin kendi safını da bölmüştü. Nehrevan, Sıffin\'den sonraki adımdır.' },
+      text: { tr: 'Haricîler Abdullah b. Habbâb\'ı ve hamile karısını öldürdü. **Hz. Ali** orduyu Muaviye seferinden Nehrevan\'a çevirdi. Önce konuşuldu. Sonra çatışıldı. Ölü sayısı rivayetlere göre değişir. Mızraktaki hile, Hz. Ali\'nin kendi safını da bölmüştü. Nehrevan, Sıffin\'den sonraki adımdır.' },
       image: 'nehrevan-2',
       art: { bg: 'battle', props: ['flags', 'swords'], actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 70, scale: 6 }] },
       by: 'both',
     },
   ],
   sunni: [
-    { book: 'Taberî, Târîh', ref: 'Hakem sonrası ve Nehrevan (sayfa bu turda kilitlenmedi)', says: { tr: 'Haricîlerin ayrılışı ve Nehrevan çatışması, Sıffin\'le birlikte anılır. Bu turda yeni sayfa açılmadı.' }, status: 'check' },
+    { book: 'Taberî, Târîh', ref: 'Hakem sonrası ve Nehrevan (sayfa numarası ayrıca verilmedi)', says: { tr: 'Haricîlerin ayrılışı ve Nehrevan çatışması, Sıffin\'le birlikte anılır. Bu turda yeni sayfa açılmadı.' }, status: 'check' },
   ],
   shia: [
-    { book: 'Sıffin metnindeki ortak zemin', ref: 'Nehrevan (sayfa kilitlenmedi)', says: { tr: 'Hz. Ali\'nin "söz haktır, batıl kastediliyor" dediği ve ardından Nehrevan\'da çatışıldığı, uygulamadaki Sıffin sahnesinde de yazılıdır. Ayrı sayfa açılmadı.' }, status: 'check' },
+    { book: 'Sıffin metnindeki ortak zemin', ref: 'Nehrevan (sayfa numarası ayrıca verilmedi)', says: { tr: 'Hz. Ali\'nin "söz haktır, batıl kastediliyor" dediği ve ardından Nehrevan\'da çatışıldığı, uygulamadaki Sıffin sahnesinde de yazılıdır. Ayrı sayfa açılmadı.' }, status: 'check' },
   ],
   questions: [
     { tr: 'Hakem, Hz. Ali\'nin safını nasıl böldü? Nehrevan bu bölünmenin neresinde durur?' },
   ],
-  summary: { tr: 'Hakemden sonra Haricîler ayrıldı. Nehrevan\'da çatışıldı. Ayrıntı sayfası bu turda kilitlenmedi. Olay, Sıffin\'in ardından okunur.' },
+  summary: { tr: 'Hakemden sonra Haricîler ayrıldı. Abdullah b. Habbâb ile hamile karısını öldürdüler. Hz. Ali orduyu Nehrevan\'a çevirdi. Olay, Sıffin\'in ardından okunur.' },
 };

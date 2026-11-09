@@ -38,7 +38,7 @@ export const hasan: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Hz. Hasan, Medine\'de yaklaşık on yıl sessiz yaşadı. Vefat 28 Safer 49 ya da 50 diye anılır. TDV, Ca\'de bint Eş\'as\'ın Yezid\'le evlendirilme vaadiyle kandırılıp onu zehirlediğini İbnü\'l-Esîr ve Süyûtî\'den nakleder. Bu, her Sünnînin kabulü değildir. İbn Abdilberr\'in el-İstiâb\'ında Katâde ve Ebû Bekir b. Hafs, Ca\'de\'yi anar. Bir grup, bunu Muaviye\'nin kışkırtmasına bağlar. İbn Abdilberr bunu nakleder, "Allah bilir" diyerek kendisi hükmetmez. Bu cümle eserin kendi baskısından değil, lib.eshia.ir sayfasındaki nakilden okundu. Aynı nakilde Katâde, Hz. Hasan\'ın zehir içirildiğini ve ciğerinin parçalandığını söylediğini aktarır. Bu, kelimesi kelimesine kilitlenmiş bir Türkçe çeviri değildir.' },
+      text: { tr: 'Hz. Hasan, Medine\'de yaklaşık on yıl sessiz yaşadı. Vefat 28 Safer 49 ya da 50 diye anılır. TDV, Ca\'de bint Eş\'as\'ın Yezid\'le evlendirilme vaadiyle kandırılıp onu zehirlediğini İbnü\'l-Esîr ve Süyûtî\'den nakleder. Bu, her Sünnînin kabulü değildir. İbn Abdilberr\'in el-İstiâb\'ında Katâde ve Ebû Bekir b. Hafs, Ca\'de\'yi anar. Bir grup, bunu Muaviye\'nin kışkırtmasına bağlar. İbn Abdilberr bunu nakleder, "Allah bilir" diyerek kendisi hükmetmez. Bu cümle, el-İstiâb\'ın kendi baskısından değil, bir nakil sayfasından okundu. Aynı nakilde Katâde, Hz. Hasan\'ın zehir içirildiğini ve ciğerinin parçalandığını söylediğini aktarır. Bu, kelimesi kelimesine bir çeviri değildir.' },
       art: { bg: 'night', props: ['moon', 'stars'], actors: [{ kind: 'hasan', x: 40, pose: 'sit', label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 62, scale: 0.9, label: { tr: 'Hz. Hüseyin' } }] },
       by: 'both',
     },
@@ -100,8 +100,8 @@ export const hasan: HistEvent = {
     { book: 'Kuleynî, el-Kâfî', ref: 'cilt 8, sayfa 167 (WikiShia aktarımı)', says: { tr: 'Hz. Ca\'fer-i Sâdık\'tan: Hz. Hasan\'ı zehirleyen Cü\'de\'dir.' }, status: 'check' },
     { book: 'Tabersî, el-İhticâc', ref: 'cilt 2, sayfa 13 (WikiShia aktarımı)', says: { tr: 'Bazı rivayetlere göre zehri Muaviye Cü\'de\'ye verdi.' }, status: 'check' },
     { book: 'İbn Ebi\'l-Hadîd, Şerhu Nehci\'l-Belâğa', ref: 'cilt 16, sayfa 11 (WikiShia aktarımı)', says: { tr: 'Muaviye\'ye atfedilen "Peygamber\'in oğluna zehirle yaptığınızı oğluma yapmanızdan korkarım" sözü. Kimin kime söylediği ve sıhhati doğrulanmadı.' }, status: 'check' },
-    { book: 'Şeyh Müfid, el-İrşâd; Meclisî, Bihârü\'l-Envâr', ref: 'Hz. Hasan\'ın cenazesi (sayfa kilitlenmedi)', says: { tr: 'Hz. Hüseyin\'in kardeşini Resûlullah\'ın yanına götürdüğü, Aişe\'nin katırla gelip tabutun oraya gömülmesini bizzat engellediği ve ok emrini verdiği, Mervan\'ın adamlarının bu emirle tabutu okladığı, İbn Abbas\'ın "bir gün deve, bir gün katır" sözü ve Hz. Hasan\'ın kan dökülmesin vasiyeti üzerine Bakî\'ye defnedildiği nakledilir. Sayfa uydurulmadı.' }, status: 'check' },
-    { book: 'Meclisî, Bihârü\'l-Envâr', ref: 'Hz. Hasan\'ın zehirlenmesi (cilt ve sayfa kilitlenmedi)', says: { tr: 'Muaviye\'nin Cüde bint Eş\'as\'a Yezid\'le evlilik ve yüz bin dirhem vaat ederek Hz. Hasan\'ı zehirlettiği, vaadini tutmadığı nakledilir. Sayfa uydurulmadı.' }, status: 'check' },
+    { book: 'Şeyh Müfid, el-İrşâd; Meclisî, Bihârü\'l-Envâr', ref: 'Hz. Hasan\'ın cenazesi (sayfa numarası ayrıca verilmedi)', says: { tr: 'Hz. Hüseyin\'in kardeşini Resûlullah\'ın yanına götürdüğü, Aişe\'nin katırla gelip tabutun oraya gömülmesini bizzat engellediği ve ok emrini verdiği, Mervan\'ın adamlarının bu emirle tabutu okladığı, İbn Abbas\'ın "bir gün deve, bir gün katır" sözü ve Hz. Hasan\'ın kan dökülmesin vasiyeti üzerine Bakî\'ye defnedildiği nakledilir. Sayfa numarası ayrıca verilmedi.' }, status: 'check' },
+    { book: 'Meclisî, Bihârü\'l-Envâr', ref: 'Hz. Hasan\'ın zehirlenmesi (cilt ve sayfa numarası ayrıca verilmedi)', says: { tr: 'Muaviye\'nin Cüde bint Eş\'as\'a Yezid\'le evlilik ve yüz bin dirhem vaat ederek Hz. Hasan\'ı zehirlettiği, vaadini tutmadığı nakledilir. Sayfa numarası ayrıca verilmedi.' }, status: 'check' },
   ],
   disputes: [
     {
@@ -121,7 +121,7 @@ export const hasan: HistEvent = {
     },
     {
       title: { tr: 'Okları kim attı?' },
-      sunni: { tr: 'Cenazeye ok atıldığı Dîneverî\'de Emevilere bağlanır. Okları Mervan\'ın adamları attı. Aişe\'nin bizzat engel olduğu ve ok emrini verdiği Şii rivayetindedir (el-İrşâd, Bihâr; sayfa kilitlenmedi).' },
+      sunni: { tr: 'Cenazeye ok atıldığı Dîneverî\'de Emevilere bağlanır. Okları Mervan\'ın adamları attı. Aişe\'nin bizzat engel olduğu ve ok emrini verdiği Şii rivayetindedir (el-İrşâd, Bihâr; sayfa numarası ayrıca verilmedi).' },
       shia: { tr: 'Aişe ok emrini verdi. Mervan\'ın adamları tabutu okladı, oklar tabuta saplandı. İbn Şehraşûb yetmiş ok der; bu sayı tek kaynağa dayanır.' },
     },
     {

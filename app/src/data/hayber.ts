@@ -60,8 +60,8 @@ export const hayber: HistEvent = {
   ],
   shia: [
     { book: 'WikiShia, Battle of Khaybar (ikincil)', ref: 'Hayber Savaşı maddesi', says: { tr: 'Hayber\'de sancağın Hz. Ali\'ye verilmesi, kapı rivayeti ve olayın Şii kaynaklardaki anlatımı.' }, url: 'https://en.wikishia.net/view/Battle_of_Khaybar', status: 'check' },
-    { book: 'Şeyh Müfid, el-İrşâd', ref: 'Hayber ve Merhab bölümü (sayfa kilitlenmedi)', says: { tr: 'Hz. Ali\'nin Hayber\'de Merhab\'ı öldürmesi. Tek darbede miğfer ve başın ikiye ayrılması bu turda bir sayfaya kilitlenmedi; sahnede Ehl-i Beyt rivayeti diye ayrıldı. Sayfa uydurulmadı.' }, status: 'check' },
-    { book: 'Meclisî, Bihârü\'l-Envâr', ref: 'Hayber, Merhab (cilt ve sayfa kilitlenmedi)', says: { tr: 'Merhab\'ın recezi, Hz. Ali\'nin Haydar recezi ve Merhab\'ın öldürülmesi. Sayfa uydurulmadı.' }, status: 'check' },
+    { book: 'Şeyh Müfid, el-İrşâd', ref: 'Hayber ve Merhab bölümü (sayfa numarası ayrıca verilmedi)', says: { tr: 'Hz. Ali\'nin Hayber\'de Merhab\'ı öldürmesi. Tek darbede miğfer ve başın ikiye ayrılması ayrı bir sayfaya bağlanmadı. Sahnede Ehl-i Beyt rivayeti diye ayrıldı. Sayfa numarası ayrıca verilmedi.' }, status: 'check' },
+    { book: 'Meclisî, Bihârü\'l-Envâr', ref: 'Hayber, Merhab (cilt ve sayfa numarası ayrıca verilmedi)', says: { tr: 'Merhab\'ın recezi, Hz. Ali\'nin Haydar recezi ve Merhab\'ın öldürülmesi. Sayfa numarası ayrıca verilmedi.' }, status: 'check' },
   ],
   disputes: [
     {

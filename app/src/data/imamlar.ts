@@ -9,7 +9,7 @@ export const imamlar: HistEvent = {
   hook: { tr: 'Kerbela\'dan sağ çıkan genç bir imam, ilim ve sabırla yürüyen bir rehberlik zincirini nasıl başlattı?', en: 'How did a sick young survivor of Karbala begin a line of learning and patience?' },
   scenes: [
     {
-      text: { tr: 'Kerbela\'da **Hz. Hüseyin** şehit oldu. İmamet, hasta oğlu **Hz. Ali**\'ye, Hz. Zeynelâbidîn\'e geçti. Hz. Ali meydanda savaşamamıştı. Çadırda sağ kalmıştı. Esirlik yolundan Medine\'ye döndü. Önderlik kılıçla bitmedi. Hasta gencin üzerinde sürdü.' },
+      text: { tr: 'Kerbela\'da **Hz. Hüseyin** şehit oldu. İmamet, hasta oğlu **Hz. Zeynelâbidîn**\'e geçti. Adı Ali\'ydi. Meydanda savaşamamıştı. Çadırda sağ kalmıştı. Esirlik yolundan Medine\'ye döndü. Önderlik kılıçla bitmedi. Hasta gencin üzerinde sürdü.' },
       art: { bg: 'dune-dusk', props: ['tents'], actors: [] },
       by: 'both',
     },
@@ -19,7 +19,7 @@ export const imamlar: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Oğlu **Hz. Muhammed Bâkır** diye anılır. Bu ad, ilmi yarıp derinliğine inen demektir. Medine\'de bir ders halkası kurdu. Yanında oğlu Câfer, Katâde, Zührî ve Evzâî de bulundu. 114 H. civarında Bakî\'de defnedildi. Gadir\'den gelen ilim bu halkada sürdü.' },
+      text: { tr: 'Oğlu **Hz. Muhammed Bâkır** diye anılır. Bu ad, ilmi yarıp derinliğine inen demektir. Medine\'de bir ders halkası kurdu. Yanında oğlu **Hz. Ca\'fer**, Katâde, Zührî ve Evzâî de bulundu. 114 H. civarında Bakî\'de defnedildi. Gadir\'den gelen ilim bu halkada sürdü.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 36, pose: 'sit', label: { tr: 'Hz. Muhammed Bâkır' } }, { kind: 'crowd', x: 68, scale: 4 }] },
       by: 'both',
     },
@@ -44,7 +44,7 @@ export const imamlar: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Muhammed Takî** babasını yedi yaşında kaybetti. Bağdat\'a götürüldü. 220 H\'de orada vefat etti. Oğlu **Hz. Ali Nakî**, Mütevekkil tarafından Samarra\'ya kapatıldı. Oğlu **Hz. Hasan Askerî** de şehirden çıkamadığı için Hz. Hasan Askerî diye anıldı. 260\'ta vefat etti. Ehl-i Beyt rivayetinde ikisi de zehirlendi. Gözetim, imametin üzerine kapanmıştı.' },
+      text: { tr: '**Hz. Muhammed Takî** babasını yedi yaşında kaybetti. Bağdat\'a götürüldü. 220 H\'de orada vefat etti. Oğlu **Hz. Ali Nakî**, Mütevekkil tarafından Samarra\'ya kapatıldı. Oğlu **Hz. Hasan Askerî** de şehirden çıkamadı. Askerî, ordugâhta tutulan demektir. Bu yüzden böyle anıldı. 260\'ta vefat etti. Ehl-i Beyt rivayetinde ikisi de zehirlendi. Gözetim, imametin üzerine kapanmıştı.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 26, label: { tr: 'Hz. Ali Nakî' } }, { kind: 'man', x: 56, label: { tr: 'Hz. Hasan Askerî' } }, { kind: 'crowd', x: 82, scale: 3 }] },
       by: 'shia',
     },

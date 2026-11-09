@@ -68,7 +68,7 @@ export const cemel: HistEvent = {
   ],
   shia: [
     { book: 'Nehcü\'l-Belâğa (Seyyid Razî)', ref: 'Şıkşıkıyye (Hutbe 3) ve biat hutbesi (numarası kontrol edilecek)', says: { tr: 'Hz. Ali\'nin hilafeti kabul ediş şartları ve biat ısrarı üzerine hutbesi. Hutbelerin nisbeti konusunda tartışma vardır.' }, status: 'check' },
-    { book: 'Şeyh Müfîd, el-Cemel', ref: 'Hav\'eb ve Zübeyr bölümleri (sayfa kilitlenmedi)', says: { tr: 'Aişe\'nin Hav\'eb\'de geri dönmek istemesi, yalancı şahitlerle "Burası Hav\'eb değil" denmesi ve Zübeyr\'e Peygamber\'in sözünün hatırlatılıp onun savaş alanından ayrılması. Sayfa uydurulmadı.' }, status: 'check' },
+    { book: 'Şeyh Müfîd, el-Cemel', ref: 'Hav\'eb ve Zübeyr bölümleri (sayfa numarası ayrıca verilmedi)', says: { tr: 'Aişe\'nin Hav\'eb\'de geri dönmek istemesi, yalancı şahitlerle "Burası Hav\'eb değil" denmesi ve Zübeyr\'e Peygamber\'in sözünün hatırlatılıp onun savaş alanından ayrılması. Sayfa numarası ayrıca verilmedi.' }, status: 'check' },
     { book: 'Nasr b. Müzahim, Vak\'atü Sıffîn', ref: 'Baştaki yazışmalar (sayfa kontrol edilecek)', says: { tr: 'Hz. Ali ile Muaviye arasındaki ilk yazışmalar. Sünni ricâl eleştirisinde Nasr "aşırı Şii" sayılır, ancak malzeme açısından erken bir kaynaktır.' }, status: 'check' },
     { book: 'Mes\'ûdî, Mürûcü\'z-Zeheb', ref: 'Sayfa kontrol edilecek', says: { tr: 'Olayların genel seyri. Şii eğilimli bir tarihçi olarak kabul edilir.' }, status: 'check' },
   ],

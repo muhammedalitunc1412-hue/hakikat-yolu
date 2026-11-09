@@ -48,7 +48,7 @@ export const muaviyeHasan: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Medine\'de **Hz. Hasan**\'ın zehirlendiği nakledilir. "Ciğeri eridi" bir hekim teşhisi değildir. Katâde yoluyla, ciğerinin parçalandığını söylediği aktarılır. Bu, kelimesi kelimesine kilitlenmiş bir çeviri değildir. Sünnîlerin hepsi Muaviye\'yi kabul etmiş değildir. İbn Abdilberr bir grubun bunu ona bağladığını nakleder ve kendisi hükmetmez. Sevenleri onu şehit bildi. Taht, bir oğul için boşaltıldı. ==Ehl-i Beyt==\'in büyüğü, sulh masasında kandırılmış, evinde zehirlenmişti. Bu, Kerbela\'dan önceki ilk büyük matemdir.' },
+      text: { tr: 'Medine\'de **Hz. Hasan**\'ın zehirlendiği nakledilir. "Ciğeri eridi" bir hekim sözü değildir. Acının dilidir. Katâde, ciğerinin parçalandığını söylediğini aktarır. Bu, kelimesi kelimesine bir çeviri değildir. İbn Abdilberr, bir grubun zehri Muaviye\'ye bağladığını nakleder ve kendisi hükmetmez. Sevenleri onu şehit bildi. Taht, bir oğul için boşaltıldı. ==Ehl-i Beyt==\'in büyüğü, sulh masasında kandırılmış, evinde zehirlenmişti. Bu, Kerbela\'dan önceki ilk büyük matemdir.' },
       art,
       cites: [{ side: 'shia', i: 0 }],
     },
@@ -68,8 +68,8 @@ export const muaviyeHasan: HistEvent = {
     { book: 'Şeyh Müfid, el-İrşâd', ref: 'Hz. Hasan bölümü (sayfa kontrol edilecek)', says: { tr: "Zehirlenme, Cü'de ve Muaviye'nin vaadi." }, status: 'check' },
     { book: 'Ebü\'l-Ferec el-İsfahânî, Mekâtilü\'t-Tâlibiyyîn', ref: 'Hz. Hasan bölümü (sayfa kontrol edilecek)', says: { tr: "Sulh şartları, Muaviye'nin Nuhayle konuşması ve zehirlenme." }, status: 'check' },
     { book: 'İbn Ebi\'l-Hadîd, Şerhu Nehci\'l-Belâğa', ref: 'Sulh bölümü (cilt/sayfa kontrol edilecek)', says: { tr: "Muaviye'nin şartlara bakışı ve Hz. Hasan'ın sulhunun gerekçeleri." }, status: 'check' },
-    { book: 'Şeyh Müfid, el-İrşâd; Meclisî, Bihârü\'l-Envâr', ref: 'Hz. Hasan\'ın cenazesi (sayfa kilitlenmedi)', says: { tr: 'Aişe\'nin tabutun Peygamber\'in yanına gömülmesini bizzat engellediği ve ok emrini verdiği, Mervan\'ın adamlarının bu emirle okladığı, İbn Abbas\'ın deve ve katır sözü ve Hz. Hüseyin\'in kılıç çekmeden Bakî\'ye defnettiği nakledilir. Sayfa uydurulmadı.' }, status: 'check' },
-    { book: 'Taberî, Târîh; Şeyh Müfid, el-İrşâd', ref: '41 H, Ubeydullah b. Abbas (sayfa kilitlenmedi)', says: { tr: 'Hz. Hasan\'ın komutanı Ubeydullah b. Abbas\'ın gece Muaviye\'nin yanına geçtiği anlatılır. Sayfa uydurulmadı.' }, status: 'check' },
+    { book: 'Şeyh Müfid, el-İrşâd; Meclisî, Bihârü\'l-Envâr', ref: 'Hz. Hasan\'ın cenazesi (sayfa numarası ayrıca verilmedi)', says: { tr: 'Aişe\'nin tabutun Peygamber\'in yanına gömülmesini bizzat engellediği ve ok emrini verdiği, Mervan\'ın adamlarının bu emirle okladığı, İbn Abbas\'ın deve ve katır sözü ve Hz. Hüseyin\'in kılıç çekmeden Bakî\'ye defnettiği nakledilir. Sayfa numarası ayrıca verilmedi.' }, status: 'check' },
+    { book: 'Taberî, Târîh; Şeyh Müfid, el-İrşâd', ref: '41 H, Ubeydullah b. Abbas (sayfa numarası ayrıca verilmedi)', says: { tr: 'Hz. Hasan\'ın komutanı Ubeydullah b. Abbas\'ın gece Muaviye\'nin yanına geçtiği anlatılır. Sayfa numarası ayrıca verilmedi.' }, status: 'check' },
     { book: 'WikiShia, Peace treaty of Imam al-Hasan (ikincil)', ref: 'Madde', says: { tr: "Sulh şartları ve Muaviye'nin bunlara uymaması." }, url: 'https://en.wikishia.net/view/Peace_Treaty_of_Imam_al-Hasan_(a)', status: 'check' },
   ],
   disputes: [
