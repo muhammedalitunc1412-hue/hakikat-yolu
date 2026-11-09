@@ -34,7 +34,7 @@ export const cemel: HistEvent = {
       cites: [{ side: 'sunni', i: 4 }, { side: 'shia', i: 1 }],
     },
     {
-      text: { tr: '**Hz. Ali** Kûfe\'den yola çıktı. Savaşı önlemek için elçi gönderdi. Savaş başlamadan önce Zübeyr\'i çağırdı. Yıllar önce Peygamber, ikisini birlikte görünce Zübeyr\'e sormuştu: "Onu seviyor musun?" Zübeyr "Evet. Sevmemem için ne sebep var?" demişti. Peygamber de "Ama sen bir gün ona karşı çıkacak ve ona zulmederek savaşacaksın" buyurmuştu. Hz. Ali bu sözü tek tek hatırlattı. Zübeyr "Unutmuştum" dedi. Savaşa girmeyeceğini söyledi. Atını sürdü. Safları yarıp savaş alanından ayrıldı. Ayrıldıktan sonra öldürüldü.' },
+      text: { tr: '**Hz. Ali** Kûfe\'den Basra\'ya doğru yola çıktı. Savaşı önlemek için elçi gönderdi. Savaş başlamadan önce Zübeyr\'i çağırdı. Yıllar önce Peygamber, ikisini birlikte görünce Zübeyr\'e sormuştu: "Onu seviyor musun?" Zübeyr "Evet. Sevmemem için ne sebep var?" demişti. Peygamber de "Ama sen bir gün ona karşı çıkacak ve ona zulmederek savaşacaksın" buyurmuştu. Hz. Ali bu sözü tek tek hatırlattı. Zübeyr "Unutmuştum" dedi. Savaşa girmeyeceğini söyledi. Atını sürdü. Safları yarıp savaş alanından ayrıldı. Ayrıldıktan sonra öldürüldü.' },
       art: { bg: 'dune-dusk', props: ['tents'], actors: [{ kind: 'ali', x: 34, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 68, label: { tr: 'Zübeyr' } }] },
       by: 'both',
       cites: [{ side: 'sunni', i: 5 }, { side: 'sunni', i: 0 }, { side: 'shia', i: 1 }],

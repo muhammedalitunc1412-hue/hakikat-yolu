@@ -53,7 +53,7 @@ export const muaviyeIktidar: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Receb 60\'ta **Muaviye** öldü. Taht **Yezid**\'e kaldı. Medine valisi **Hz. Hüseyin**\'den biat istedi. O bu biatı vermedi. Yola çıktı. Hakkı, bir sarhoş saltanat için satmadı. Kerbela, bu yolun ucundaki şehadettir. Bu düzeni baba kurmuştu. Oğul, orada suyu kesti.' },
+      text: { tr: 'Receb 60\'ta **Muaviye** öldü. Taht **Yezid**\'e kaldı. Medine valisi **Hz. Hüseyin**\'den biat istedi. O bu biatı vermedi. Medine\'den Mekke\'ye yola çıktı. Hakkı, bir sarhoş saltanat için satmadı. Kerbela, bu yolun ucundaki şehadettir. Bu düzeni baba kurmuştu. Oğul, orada suyu kesti.' },
       art,
       cites: [{ side: 'shia', i: 1 }],
     },

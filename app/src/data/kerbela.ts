@@ -128,7 +128,7 @@ export const kerbela: HistEvent = {
       cites: [{ side: 'shia', i: 1 }],
     },
     {
-      text: { tr: 'Sonra ashab tek tek çıktı. **Habîb b. Muzâhir**, **Hz. Ali**\'nin eski dostuydu. Saçı ağarmıştı. Meydanda gençler gibi vuruştu. **Züheyr b. Kayn** hac yolundan dönmüş, kafileye katılmıştı. Kılıcı düşünceye kadar inmedi. Ehl-i Beyt rivayetinde **Vehb** de çıktı. Annesi onu geri gönderdi. "Oğlum, Peygamber\'in torununun önünde dur." Vehb döndü. Şehit oldu. Her biri kendi adıyla gitti. Çadırın önü her dönüşte biraz daha sessizleşti.' },
+      text: { tr: 'Sonra ashab tek tek meydana çıktı. **Habîb b. Muzâhir**, **Hz. Ali**\'nin eski dostuydu. Saçı ağarmıştı. Meydanda gençler gibi vuruştu. **Züheyr b. Kayn** hac yolundan dönmüş, kafileye katılmıştı. Kılıcı düşünceye kadar inmedi. Ehl-i Beyt rivayetinde **Vehb** de çıktı. Annesi onu geri gönderdi. "Oğlum, Peygamber\'in torununun önünde dur." Vehb döndü. Şehit oldu. Her biri kendi adıyla gitti. Çadırın önü her dönüşte biraz daha sessizleşti.' },
       image: 'kerbela-22',
       art: { bg: 'battle', props: ['flags', 'swords'], actors: [{ kind: 'man', x: 28, label: { tr: 'Habîb' } }, { kind: 'man', x: 48, label: { tr: 'Züheyr' } }, { kind: 'husayn', x: 74, label: { tr: 'Hz. Hüseyin' } }] },
       by: 'shia',

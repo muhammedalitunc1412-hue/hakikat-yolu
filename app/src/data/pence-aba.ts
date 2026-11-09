@@ -6,11 +6,11 @@ export const penceAba: HistEvent = {
   id: 'pence-aba',
   date: { tr: 'Medine, Peygamber dönemi', en: 'Medina, the Prophet\'s era' },
   title: { tr: 'Pence-i Âl-i Aba (Kisa Olayı): Ehl-i Beyt kimdir?', en: 'The Five of the Cloak (Hadith al-Kisa): who are the Ahl al-Bayt?' },
-  hook: { tr: 'Bir sabah, bir örtünün altında beş kişi. Peygamber onlara "Ehl-i Beytim" diyor. Bu beş kim?', en: 'Whom did the Prophet gather under the cloak, and whom did he mean by "my Ahl al-Bayt"?' },
+  hook: { tr: 'Rivayetlere göre Medine\'de bir sabah Peygamber evinden çıktı ve beş kişiyi bir örtünün altında topladı. Onlara "Ehl-i Beytim" diyor. Bu beş kim?', en: 'Whom did the Prophet gather under the cloak, and whom did he mean by "my Ahl al-Bayt"?' },
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Medine\'de bir sabah Peygamber siyah yünlü bir örtüyle çıktı. Önce **Hz. Hasan** geldi. Peygamber onu örtünün altına aldı. Sonra **Hz. Hüseyin**, **Hz. Fatıma** ve **Hz. Ali** geldi. Beşini aynı örtünün altında topladı. "Ey Ehl-i Beyt, Allah sizden kiri gidermek ve sizi tertemiz yapmak ister." Bu söz, Ahzâb 33:33\'tür. Ayet, örtünün üstüne, bu beş kişi için indi.' },
+      text: { tr: 'Medine\'de, Peygamber döneminde bir sabah. Rivayetlere göre Peygamber, siyah yünlü bir örtüyle evinden çıktı. Bir rivayet bunu Ümmü Seleme\'nin evi diye anar. Önce **Hz. Hasan** geldi. Peygamber onu örtünün altına aldı. Sonra **Hz. Hüseyin**, **Hz. Fatıma** ve **Hz. Ali** geldi. Beşini aynı örtünün altında topladı. "Ey Ehl-i Beyt, Allah sizden kiri gidermek ve sizi tertemiz yapmak ister." Bu söz, Ahzâb 33:33\'tür. Ayet, örtünün üstüne, bu beş kişi için indi.' },
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 38, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 52, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 62, label: { tr: 'Hz. Fatıma' } }, { kind: 'hasan', x: 72, scale: 0.7, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 80, scale: 0.65, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
