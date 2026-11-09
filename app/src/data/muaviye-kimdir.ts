@@ -54,7 +54,7 @@ export const muaviyeKimdir: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Mekke\'de Peygamber\'e karşı ordu süren bu ev, fetihle birlikte Müslüman göründü. Sonra en güçlü hanedan oldu. **Hz. Ali** minberlerde lanetlendi. **Hz. Hasan**\'ın sulhu çiğnendi. **Hz. Hüseyin**\'in yolu **Yezid**\'e çıktı. Uhud\'da ciğer çiğnendi. Kerbela\'da da aynı ev susuzluk yaşattı.' },
+      text: { tr: 'Mekke\'de Peygamber\'e karşı ordu süren bu ev, fetihle birlikte Müslüman göründü. Sonra en güçlü hanedan oldu. **Hz. Ali** minberlerde lanetlendi. **Hz. Hasan**\'ın sulhu çiğnendi. **Hz. Hüseyin**\'in yolu **Yezid**\'e çıktı. Uhud\'da **Hz. Hamza**\'ya yapılanla anılır. Kerbela\'da da aynı ev susuzluk yaşattı.' },
       art,
       cites: [{ side: 'shia', i: 0 }],
     },

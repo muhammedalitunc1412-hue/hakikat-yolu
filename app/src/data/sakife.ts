@@ -50,7 +50,7 @@ export const sakife: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Fâtıma\'nın vefatından sonra insanların Hz. Ali\'ye karşı tavrı değişti. Buhari 4240, Hz. Ali\'nin insanların yüzlerini yabancı bulduğunu anlatır. Bu hadis yalnız bu soğukluk için anıldı. Aynı hadis, ardından Hz. Ali\'nin Ebu Bekir\'e biat ettiğini de yazar. Uygulamadaki Şii okuyuş o devamı kabul saymaz.' },
+      text: { tr: 'Hz. Fâtıma\'nın vefatından sonra insanların Hz. Ali\'ye karşı tavrı değişti. Buhari 4240, Hz. Ali\'nin insanların yüzlerini yabancı bulduğunu anlatır. Bu hadis yalnız bu soğukluk için anıldı. Aynı hadis, ardından Hz. Ali\'nin Ebu Bekir\'e biat ettiğini de yazar. Uygulamadaki Şii okuyuş o devamı kabul saymaz. Rivayetlere göre **Hz. Ali** sokakta selam verirdi. İnsanlar selamını almazdı.' },
       image: 'sakife-yalnizlik-1',
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'ali', x: 38, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 72, scale: 4 }] },
       by: 'both',

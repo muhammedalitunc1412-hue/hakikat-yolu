@@ -28,7 +28,9 @@ test('Sakîfe resimleri kaymaz, kuyu ayrı anahtardadır', () => {
   assert.match(src, /insanların Hz\. Ali\\'ye karşı tavrı değişti/);
   assert.match(src, /Buhari 4240/);
   assert.match(src, /biat ettiğini de yazar/);
-  assert.doesNotMatch(src, /selam/);
+  assert.match(src, /Rivayetlere göre \*\*Hz\. Ali\*\* sokakta selam verirdi/);
+  assert.match(src, /İnsanlar selamını almazdı/);
+  assert.doesNotMatch(src, /Buhari 4240[^.]*selam/);
   assert.match(read('./sceneImages.ts'), /'ali-kuyu-1':/);
   assert.match(read('./sceneImages.ts'), /'sakife-8':/);
 });

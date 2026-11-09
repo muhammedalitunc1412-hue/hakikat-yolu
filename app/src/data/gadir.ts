@@ -18,7 +18,7 @@ export const gadir: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Hum\'da Peygamber hutbeye başladı. Sesi sıcakta yükseldi. "Ben müminlere kendi canlarından daha yakın değil miyim?" diye sordu. Kalabalık "Evet" dedi. Soru yalnız sevgi sormuyordu. Peygamber, müminler üzerinde kimin daha hak sahibi olduğunu soruyordu. Bu evetten sonra Peygamber, önderliği kime verdiğini söyleyecekti. Buna velayet, yani önderlik denir.' },
+      text: { tr: 'Hum\'da Peygamber hutbeye başladı. Sesi sıcakta yükseldi. "Ben müminlere kendi canlarından daha yakın değil miyim?" diye sordu. Kalabalık "Evet" dedi. Soru yalnız sevgi sormuyordu. Peygamber, müminler üzerinde kimin daha hak sahibi olduğunu soruyordu. Kalabalık evet deyince Peygamber, önderliği kime verdiğini söyleyecekti. Buna velayet, yani önderlik denir.' },
       art: { bg: 'dune-day', props: ['sun', 'minbar'], actors: [{ kind: 'crowd', x: 32, scale: 9 }, { kind: 'prophet', x: 72, label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },

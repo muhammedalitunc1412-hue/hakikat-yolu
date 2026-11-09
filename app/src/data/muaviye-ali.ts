@@ -48,7 +48,7 @@ export const muaviyeAli: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Hakem toplantısında **Ebu Musa** ile **Amr b. el-As** oturdu. Yaygın anlatıda Ebu Musa yüzüğü çıkarır gibi Hz. Ali\'yi azleder, Amr yüzüğü takar gibi **Muaviye**\'yi başa kor. Bu anlatının güveni tartışmalıdır. Tam söz burada kilitlenmez. **Hz. Ali** bu sonucu kabul etmedi. Mızraktaki hile, bu mecliste de sürdü.' },
+      text: { tr: 'Hakem toplantısında **Ebu Musa** ile **Amr b. el-As** oturdu. Yaygın anlatıda Ebu Musa yüzüğü çıkarır gibi Hz. Ali\'yi azleder, Amr yüzüğü takar gibi **Muaviye**\'yi başa kor. Bu anlatının güveni tartışmalıdır. Tam söz rivayete göre değişir. **Hz. Ali** bu sonucu kabul etmedi. Mızraktaki hile, bu mecliste de sürdü.' },
       art,
       cites: [{ side: 'sunni', i: 3 }, { side: 'shia', i: 2 }],
     },

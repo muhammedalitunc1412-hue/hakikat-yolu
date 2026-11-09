@@ -1,6 +1,6 @@
 import type { HistEvent } from '../types';
 
-// Kaynak: research/03-fedek-fatima.md. Yeni sayfa uydurulmadı.
+// Kaynak: research/03-fedek-fatima.md. Yeni sayfa numarası verilmedi.
 // Hibe ve şahitler el-Kâfî 1/543 kaydında 'check' olarak durur. Hutbe Belâğatü'n-Nisâ'dadır, sayfa kilitlenmedi.
 // Küskünlük ve gece defin Buhari 4240 ile ortaktır.
 export const fedek: HistEvent = {
@@ -16,7 +16,7 @@ export const fedek: HistEvent = {
       cites: [{ side: 'shia', i: 0 }],
     },
     {
-      text: { tr: 'Medine\'de Peygamber yeni vefat etmişti. Acı henüz dinmemişti. **Halife Ebu Bekir**, **Hz. Fatıma**\'nın elindeki **Fedek**\'e el koydu. Şii okuyuşta bunun bir sebebi vardır. ==Ehl-i Beyt== bu bahçenin geliriyle ve bu mirasla güçlü kalabilirdi. O zaman **Hz. Ali** hilafetindeki hakkını daha güçlü savunurdu. Bundan korkuldu. **Fedek**, ==Ehl-i Beyt== zayıf kalsın diye alındı. **Hz. Ali** bu geliri hilafet hakkını savunmak için kullanamasın diye alındı. **Hz. Fatıma** babasının bağışını elinde tutamadı.' },
+      text: { tr: 'Medine\'de Peygamber yeni vefat etmişti. Acı henüz dinmemişti. **Halife Ebu Bekir**, **Hz. Fatıma**\'nın elindeki **Fedek**\'e el koydu. Şii okuyuşta bahçe, ==Ehl-i Beyt== geliriyle güçlü kalmasın ve **Hz. Ali** hakkını bununla savunamasın diye alındı. **Hz. Fatıma** babasının bağışını elinde tutamadı.' },
       art: { bg: 'city', props: ['sun'], actors: [{ kind: 'fatima', x: 34, label: { tr: 'Hz. Fatıma' } }, { kind: 'man', x: 66, label: { tr: 'Ebu Bekir' } }] },
       by: 'shia',
       cites: [{ side: 'shia', i: 0 }, { side: 'sunni', i: 0 }],
@@ -60,8 +60,8 @@ export const fedek: HistEvent = {
     { book: 'Belâzurî, Fütûhu\'l-Büldân', ref: 'cilt 1, sayfa 37-41', says: { tr: 'Ömer b. Abdülaziz\'in ve Me\'mun\'un Fedek\'i Hz. Fatıma\'nın soyuna iadesi.' }, status: 'check' },
   ],
   shia: [
-    { book: 'Kuleynî, el-Kâfî', ref: 'cilt 1, sayfa 543', says: { tr: 'Fedek\'in Hz. Fatıma\'ya hibe edilmesi ve şahitler.' }, grade: { tr: 'Sayfa bu turda yeniden açılmadı. El koyuşun hilafet korkusuyla okunması, Şii mektebin bu gaspı yorumudur. Ayrı bir sayfa uydurulmadı.' }, status: 'check' },
-    { book: 'Ahmed b. Ebi Tâhir, Belâğatü\'n-Nisâ', ref: 'Fedek hutbesi (sayfa bu turda kilitlenmedi)', says: { tr: 'Hz. Fatıma\'nın mescitte okuduğu Fedek hutbesi. Neml 16 ve Meryem 6, peygamber çocuklarının mirasına verilen cevap olarak bu hutbenin Şii okunuşundadır.' }, status: 'check' },
+    { book: 'Kuleynî, el-Kâfî', ref: 'cilt 1, sayfa 543', says: { tr: 'Fedek\'in Hz. Fatıma\'ya hibe edilmesi ve şahitler.' }, grade: { tr: 'Sayfa bu turda yeniden açılmadı. El koyuşun hilafet korkusuyla okunması, Şii mektebin bu gaspı yorumudur. Ayrı bir sayfa numarası verilmedi.' }, status: 'check' },
+    { book: 'Ahmed b. Ebi Tâhir, Belâğatü\'n-Nisâ', ref: 'Fedek hutbesi (sayfa numarası ayrıca verilmedi)', says: { tr: 'Hz. Fatıma\'nın mescitte okuduğu Fedek hutbesi. Neml 16 ve Meryem 6, peygamber çocuklarının mirasına verilen cevap olarak bu hutbenin Şii okunuşundadır.' }, status: 'check' },
     { book: 'Şeyh Müfid, el-İhtisâs', ref: 'sayfa 186', says: { tr: 'Biat sürecindeki gerginlikler.' }, status: 'check' },
   ],
   disputes: [
@@ -86,5 +86,5 @@ export const fedek: HistEvent = {
     { tr: 'Hz. Ali ve Ümmü Eymen şahit oldu, sözleri alınmadı. Hakkı elinde olan bir kadına belge sormak size ne hissettirir?' },
     { tr: 'Hz. Fatıma küs vefat etti. Bu suskunluk, bir hakkın mezara kadar taşınması olarak size ne söyler?' },
   ],
-  summary: { tr: 'Peygamber Fedek\'i Hz. Fatıma\'ya hibe etmişti. Halife Ebu Bekir buna el koydu. Hz. Fatıma mescitte Neml 16 ve Meryem 6 ile cevap verdi. Hz. Ali ile Ümmü Eymen\'in şahitliği kabul edilmedi. O, küs vefat etti. Buhari 4240 küskünlüğü ve gece defni yazar. Hibe ve şahitler el-Kâfî 1/543 kaydındadır. Hutbe Belâğatü\'n-Nisâ\'dadır. Sayfa bu turda yeniden kilitlenmedi.' },
+  summary: { tr: 'Peygamber Fedek\'i Hz. Fatıma\'ya hibe etmişti. Halife Ebu Bekir buna el koydu. Hz. Fatıma mescitte Neml 16 ve Meryem 6 ile cevap verdi. Hz. Ali ile Ümmü Eymen\'in şahitliği kabul edilmedi. O, küs vefat etti. Buhari 4240 küskünlüğü ve gece defni yazar. Hibe ve şahitler el-Kâfî 1/543 kaydındadır. Hutbe Belâğatü\'n-Nisâ\'dadır. Sayfa numarası ayrıca verilmedi.' },
 };

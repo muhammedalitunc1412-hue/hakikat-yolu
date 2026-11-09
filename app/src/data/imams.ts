@@ -72,7 +72,7 @@ export const IMAMS: Imam[] = [
       { ad: 'Zekî', anlam: 'temiz' },
       { ad: 'es-Sıbt', anlam: 'Peygamber\'in torunu' },
     ],
-    born: 'Doğum günü tek tarihe kilitlenmedi. 15 Ramazan 3 H diye de anılır — Medine',
+    born: 'Doğum günü tek güne bağlanmadı. 15 Ramazan 3 H diye de anılır — Medine',
     died: '28 Safer 49 (TDV) veya 50 (Vikîşia) — Medine; zehirlenme nakledilir',
     buried: "Bakî' Mezarlığı, Medine",
     parents: 'Babası Hz. Ali, annesi Hz. Fatıma',
