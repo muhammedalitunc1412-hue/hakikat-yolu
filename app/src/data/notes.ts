@@ -84,7 +84,7 @@ export const NOTES: Record<string, string[]> = {
     "Halife Ebu Bekir'e biat edildi; Halife Ömer bunu sonradan «felte» diye nitelendirdi (Buhari).",
     "Hz. Ali ve Haşimoğulları Peygamber'in yıkama ve defin hazırlığındaydı.",
     "Hz. Ali biat etmedi. Kan dökülmesin diye sessiz kaldı. Buhari 4240, Hz. Fâtıma'nın vefatından sonra insanların tavrının değiştiğini anlatır ve aynı hadiste sonraki biatı da yazar. O devam, biat etmeme hükmünün delili değildir.",
-    "Gece kuyu ağıtı gelenekte anılır. Sayfa kilitlenmedi. Resim anahtarı ali-kuyu-1.",
+    "Rivayetlere göre Hz. Ali gece tek başına kuyunun başına gider, derdini ve yalnızlığını anlatırdı. Bu, kilitli bir tarih sayfası değildir.",
   ],
   istihlaf: [
     "Halife Ebu Bekir ölmeden önce Halife Ömer'i halife tayin etti.",
@@ -162,6 +162,7 @@ export const NOTES: Record<string, string[]> = {
     "Su kesildi. Alemdar Abbas ırmağa vardı. Ali Asgar'ı Harmala'nın oku vurdu (el-Lühûf, s. 169).",
     "Hz. Zeynelâbidîn hastaydı. Zeynep başında bekliyordu. Çadırda öldürmek istediler (el-İrşâd 2/93 ve 2/113).",
     "Başlar aynı gün Kûfe'de İbn Ziyâd'a gönderildi (el-İrşâd 2/113). Yol Şam'da Yezid'e varır (Bihâr, cilt 45, s. 134).",
+    "Rivayetlere göre Hz. Zeynep, hasta Hz. Zeynelâbidîn, kadınlar ve çocuklar Kûfe'den Şam'a eğersiz develerle götürüldü. Bu cümle için bu turda ayrı bir sayfa eklenmedi.",
     "Mektlede Hz. Rukayye Şam harabesinde babasının başına sarılır ve orada şehit olur (Nefesü'l-Mehmûm, cilt 1, s. 416).",
     "9 Muharrem gecesi Hz. Hüseyin bey'ati kaldırdı. Karanlıkta gidenler oldu. Kalanlar, bin kere dirilseler de ayrılmayız dedi.",
     "Müslim'in yetimleri Muhammed ve İbrahim, Kûfe zindanından sonra Fırat kıyısında şehit edildi (Şeyh Sadûk, el-Emâlî; Bihâr). Sayfa kilitlenmedi.",

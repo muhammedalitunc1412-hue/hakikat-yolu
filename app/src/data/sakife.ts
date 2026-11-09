@@ -57,11 +57,10 @@ export const sakife: HistEvent = {
       cites: [{ side: 'sunni', i: 1 }],
     },
     {
-      text: { tr: 'Ehl-i Beyt anlatı geleneğinde, Hz. Ali\'nin gece kuyu başına çıkıp derdini anlattığı söylenir. Anlatıda ayaktadır. Hafifçe eğilir. İki eli kuyu kenarındadır. Kuyuya kapanmış değildir. Bu, doğrulanmış bir tarih olayı diye kilitlenmedi. Klasik bir sayfa bu turda açılmadı. Ayrı bir metin vardır. Nehcü\'l-Belâğa\'nın 3. hutbesinde, hakkı dururken gözünde diken, boğazında kemik varken sabrettiği yazar. Bu, derlenmiş bir hutbedir. Bazı Sünnî âlimler nisbeti sorar. Bazıları kabul eder. Şii âlimler hutbeyi ona bağlar.' },
+      text: { tr: 'Gece Medine susardı. Rivayetlere göre **Hz. Ali** tek başına kuyunun başına giderdi. Etraf boştu. Ellerini kuyunun kenarına koyardı. Derdi oradaydı. **Hz. Fâtıma** gitmişti. İnsanlar yüz çevirmişti. Yalnızlık ağırdı. Gadir\'deki hakkını unutmamıştı. Kan dökülmesin diye sesini kısmıştı. İçini kuyuya dökerdi. Sabah olunca şehre dönerdi. Yüzü sakindi. Yükü duruyordu.' },
       image: 'ali-kuyu-1',
       art: { bg: 'night', props: ['moon', 'well'], actors: [{ kind: 'ali', x: 48, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
-      cites: [{ side: 'shia', i: 0 }],
     },
     {
       text: { tr: 'Sonra Halife Ömer, işi altı kişilik şuraya bıraktı. Şura, danışma kuruludur. Biat Osman\'a yapıldı. Şıkşıkıyye hutbesinde **Hz. Ali** bu günleri sabırla anar. Sakife\'de başlayan hakkın bir kenara konması, şurada da sürdü. Onun sabrı, hakkın unutulması değildi.' },

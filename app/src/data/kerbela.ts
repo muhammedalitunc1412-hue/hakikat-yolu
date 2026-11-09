@@ -216,8 +216,12 @@ export const kerbela: HistEvent = {
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'crowd', x: 30, scale: 6 }, { kind: 'woman', x: 72, label: { tr: 'Hz. Zeynep' } }] },
       by: 'shia',
     },
-
-
+    {
+      text: { tr: 'Kûfe\'den sonra yol Şam\'a döndü. Rivayetlere göre **Hz. Zeynep**, hasta **Hz. Zeynelâbidîn**, kadınlar ve çocuklar eğersiz develere bindirildi. Eğer yoktu. Bu, rahat bir yolculuk değildi. Aşağılama idi. **Yezid**\'in saltanatı, Peygamber\'in evini böyle sürdü. Hz. Zeynep onların yanındaydı. Hasta yeğenini gözetti. Çocuklar da yanlarındaydı. Şam kapısı bu utançla açılacaktı.' },
+      image: 'kerbela-egersiz',
+      art: { bg: 'dune-day', props: ['camels', 'sun'], actors: [{ kind: 'woman', x: 42, label: { tr: 'Hz. Zeynep' } }, { kind: 'man', x: 64, label: { tr: 'Hz. Zeynelâbidîn' }, pose: 'sit' }, { kind: 'crowd', x: 22, scale: 4 }] },
+      by: 'shia',
+    },
     {
       text: { tr: 'Esir kafilesi Şam yoluna çıkarılırken Kûfe zindanında iki çocuk kaldı. **Müslim b. Akîl**\'in yetimleriydi. Adları **Muhammed** ve **İbrahim**\'di. Halk onlara Tiflân-ı Müslim, Müslim\'in yetimleri der. Babaları, Hz. Hüseyin\'i çağırmak için Kûfe\'ye gelmiş, sonra yalnız bırakılıp şehit edilmişti. Çocuklar bir yıl zindanda kaldı. Bir zindancı onların hâlini gördü. Yüreği dayanamadı. Gece kapıyı açtı ve onları salıverdi. İki kardeş karanlıkta bir kadının kapısını çaldı. Kadın onları içeri aldı, doyurdu, yatırdı. Kocası **Hâris**, **İbn Ziyâd**\'ın bu çocuklar için ödül koyduğunu biliyordu. Ödül, merhametten ağır bastı. Gece çocukları alıp Fırat kıyısına götürdü. Muhammed ve İbrahim namaz kılmak için izin istedi. Hâris durdu. Kardeşler abdest aldı, namazı kıldı ve birbirlerine sarıldı. Küçük olan, "Kardeşim, sen önce dayan, ben seni göreyim" diye yalvardı. Hâris ikisini de şehit etti. Ayrıntıyı uzatmaya gerek yok. Emevi zulmü Kerbela\'da bitmemişti. Yetim iki çocuğa da kıymıştı. Haber **İbn Ziyâd**\'a gidince o bile durakladı. Hâris\'i cezalandırdı. Ödül için yetim avlayan adam, kendi efendisinin elinden kurtulamadı İki kardeş namaz kıldı. Birbirine sarıldı. Ayrıntı uzatılmadı. Emevi zulmü yetime de kıydı.' },
       image: 'kerbela-25',
@@ -226,7 +230,7 @@ export const kerbela: HistEvent = {
       cites: [{ side: 'shia', i: 24 }],
     },
     {
-      text: { tr: 'Esir kafilesi Şam\'a vardı. **Yezid**\'in sarayı ışıklıydı. Baş, meclisin önüne kondu. Yezid bir çubukla **Hz. Hüseyin**\'in dudağına vurdu. **Hz. Zeynep** ayağa kalktı. Zinciri vardı. Sesi meclisi titretti. Yezid\'i, soyunu ve bu zafer sandığı şeyi yüzüne vurdu. "Senin elindeki bu baş, Peygamber\'in torununun başıdır." Ebu Berze itiraz etti. "Resulullah bu dudağı öperken gördüm." Saltanat eğleniyordu. Zeynep onu rezil etti. Söz, kılıçtan uzun yaşadı.' },
+      text: { tr: 'Esir kafilesi Şam\'a vardı. Rivayetlere göre **Hz. Zeynep**, hasta **Hz. Zeynelâbidîn**, kadınlar ve çocuklar bu kapıya eğersiz develerle gelmişti. Bu, bir aşağılama idi. **Yezid**\'in sarayı ışıklıydı. Baş, meclisin önüne kondu. Yezid bir çubukla **Hz. Hüseyin**\'in dudağına vurdu. **Hz. Zeynep** ayağa kalktı. Zinciri vardı. Sesi meclisi titretti. Yezid\'i, soyunu ve bu zafer sandığı şeyi yüzüne vurdu. "Senin elindeki bu baş, Peygamber\'in torununun başıdır." Ebu Berze itiraz etti. "Resulullah bu dudağı öperken gördüm." Saltanat eğleniyordu. Zeynep onu rezil etti. Söz, kılıçtan uzun yaşadı.' },
       image: 'kerbela-15',
       art: { bg: 'interior', props: ['flags'], actors: [{ kind: 'woman', x: 40, label: { tr: 'Zeynep' }, pose: 'raise' }, { kind: 'man', x: 72, label: { tr: 'Yezid' } }, { kind: 'crowd', x: 22, scale: 4 }] },
       by: 'shia',
