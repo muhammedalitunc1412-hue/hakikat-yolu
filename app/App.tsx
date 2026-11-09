@@ -32,12 +32,15 @@ export default function App() {
   const requiredStore = useRequiredUpdate();
   const [ready, setReady] = useState(false);
   const [choosing, setChoosing] = useState(true);
+  const [editingLanguage, setEditingLanguage] = useState(false);
+  const [draftLanguage, setDraftLanguage] = useState<Lang>('tr');
   useEffect(() => {
     let active = true;
     AsyncStorage.getItem(LANGUAGE_KEY).then(saved => {
       if (!active) return;
       const option = languageOption(saved);
       setLanguage(option.id);
+      setDraftLanguage(option.id);
       setChoosing(saved !== option.id);
     }).catch(() => {}).finally(() => {
       if (active) setReady(true);
@@ -46,8 +49,10 @@ export default function App() {
   }, []);
 
   function confirmLanguage() {
+    setLanguage(draftLanguage);
     setChoosing(false);
-    void AsyncStorage.setItem(LANGUAGE_KEY, lang).catch(() => {});
+    setEditingLanguage(false);
+    void AsyncStorage.setItem(LANGUAGE_KEY, draftLanguage).catch(() => {});
   }
 
   setLang(lang);
@@ -62,12 +67,16 @@ export default function App() {
   useEffect(() => {
     const sub = BackHandler.addEventListener('hardwareBackPress', () => {
       if (requiredStore) return true;
+      if (editingLanguage) {
+        setEditingLanguage(false);
+        return true;
+      }
       if (stackRef.current.length <= 1) return false;
       setStack(s => (s.length > 1 ? s.slice(0, -1) : s));
       return true;
     });
     return () => sub.remove();
-  }, [requiredStore]);
+  }, [requiredStore, editingLanguage]);
 
   // Kerbela ve Hz. Hüseyin alanları kan kırmızısı temayla açılır
   setTheme((route.name === 'event' && (route.id === 'kerbela' || route.id === 'fatima-vefat')) || (route.name === 'imam' && route.id === 'huseyin') ? 'blood' : 'default');
@@ -79,23 +88,34 @@ export default function App() {
     <View style={{ flex: 1, backgroundColor: C.bgDeep, alignItems: 'center' }}>
       <StatusBar style="light" />
       <View style={{ flex: 1, width: '100%', maxWidth: PAGE_MAX, backgroundColor: C.bg }}>
-        {!ready ? null : requiredStore ? <RequiredUpdate lang={lang} storeUrl={requiredStore} /> : choosing ? (
+        {!ready ? null : requiredStore ? <RequiredUpdate lang={lang} storeUrl={requiredStore} /> : (choosing || editingLanguage) ? (
           <ScrollView contentContainerStyle={{ padding: 24, paddingTop: TOP, gap: 10 }}>
-            <Text style={{ color: C.gold, fontSize: 24, fontWeight: '700' }}>{languageOption(lang).title}</Text>
+            {editingLanguage && (
+              <>
+                <Pressable accessibilityRole="button" onPress={() => setEditingLanguage(false)} style={{ paddingVertical: 12 }}>
+                  <Text style={{ color: C.gold }}>{ui('back')}</Text>
+                </Pressable>
+                <Text accessibilityRole="header" style={{ color: C.cream, fontSize: 26, fontWeight: '700' }}>{ui('settings')}</Text>
+              </>
+            )}
+            <Text style={{ color: C.gold, fontSize: 24, fontWeight: '700' }}>{languageOption(editingLanguage ? lang : draftLanguage).title}</Text>
             {LANGUAGES.map(option => (
-              <Pressable key={option.id} onPress={() => setLanguage(option.id)} accessibilityRole="radio" accessibilityState={{ checked: option.id === lang }} style={{ padding: 12, backgroundColor: C.card, borderWidth: 1, borderColor: option.id === lang ? C.gold : C.lineStrong }}>
-                <Text style={{ color: C.cream, fontSize: 17 }}>{option.id === lang ? '✓ ' : ''}{option.name}</Text>
+              <Pressable key={option.id} onPress={() => setDraftLanguage(option.id)} accessibilityRole="radio" accessibilityState={{ checked: option.id === draftLanguage }} style={{ padding: 12, backgroundColor: C.card, borderWidth: 1, borderColor: option.id === draftLanguage ? C.gold : C.lineStrong }}>
+                <Text style={{ color: C.cream, fontSize: 17 }}>{option.id === draftLanguage ? '✓ ' : ''}{option.name}</Text>
               </Pressable>
             ))}
             <Pressable onPress={confirmLanguage} accessibilityRole="button" style={{ padding: 14, alignItems: 'center', backgroundColor: C.card }}>
-              <Text style={{ color: C.gold, fontSize: 17, fontWeight: '700' }}>{languageOption(lang).confirm}</Text>
+              <Text style={{ color: C.gold, fontSize: 17, fontWeight: '700' }}>{editingLanguage ? ui('saveLanguage') : languageOption(draftLanguage).confirm}</Text>
             </Pressable>
           </ScrollView>
         ) : <>
         <View style={{ flex: 1 }}>
         {route.name === 'home' && (
-          <Pressable onPress={() => setChoosing(true)} accessibilityRole="button" accessibilityLabel={languageOption(lang).title} style={{ alignSelf: 'flex-end', padding: 10, marginTop: TOP }}>
-            <Text style={{ color: C.gold }}>{languageOption(lang).name} ▾</Text>
+          <Pressable onPress={() => {
+            setDraftLanguage(lang);
+            setEditingLanguage(true);
+          }} accessibilityRole="button" style={{ alignSelf: 'flex-end', minHeight: 44, justifyContent: 'center', paddingHorizontal: 14, marginTop: TOP, marginEnd: 16, backgroundColor: C.card, borderRadius: 12 }}>
+            <Text style={{ color: C.gold, fontWeight: '700' }}>{ui('settings')} · {languageOption(lang).name}</Text>
           </Pressable>
         )}
         {route.name === 'home' && (

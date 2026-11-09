@@ -102,6 +102,8 @@ export const languageOption = (id: string | null) =>
   LANGUAGES.find(option => option.id === id) ?? LANGUAGES[0];
 
 const navigation: Record<string, L> = {
+  settings: { tr: 'Ayarlar', en: 'Settings', ar: 'الإعدادات', az: 'Parametrlər', fa: 'تنظیمات', ur: 'ترتیبات', es: 'Ajustes', fr: 'Paramètres', de: 'Einstellungen' },
+  saveLanguage: { tr: 'Dili kaydet', en: 'Save language', ar: 'احفظ اللغة', az: 'Dili yadda saxla', fa: 'ذخیره زبان', ur: 'زبان محفوظ کریں', es: 'Guardar idioma', fr: 'Enregistrer la langue', de: 'Sprache speichern' },
   back: { tr: 'Geri', en: 'Back', ar: 'رجوع', az: 'Geri', fa: 'بازگشت', es: 'Atrás', fr: 'Retour', de: 'Zurück' },
   homeBtn: { tr: 'Ana sayfa', en: 'Home', ar: 'الرئيسية', az: 'Ana səhifə', fa: 'خانه', es: 'Inicio', fr: 'Accueil', de: 'Startseite' },
   events: { tr: 'Olaylar', en: 'Events', ar: 'الأحداث', az: 'Hadisələr', fa: 'رویدادها', es: 'Eventos', fr: 'Événements', de: 'Ereignisse' },
