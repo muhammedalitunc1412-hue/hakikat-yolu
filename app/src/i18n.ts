@@ -18,6 +18,8 @@ const UI: Record<string, L> = {
   events: { tr: 'Olaylar', en: 'Events' },
   method: { tr: 'Kaynaklar ve yöntem', en: 'Sources & method' },
   back: { tr: 'Geri', en: 'Back' },
+  homeBtn: { tr: 'Ana sayfa', en: 'Home' },
+  nextEvent: { tr: 'Sonraki olay', en: 'Next event' },
   sunniSources: { tr: 'Sünni kaynaklarında', en: 'In Sunni sources' },
   shiaSources: { tr: 'Şii kaynaklarında', en: 'In Shia sources' },
   disputes: { tr: 'Ayrılıklar', en: 'Points of disagreement' },

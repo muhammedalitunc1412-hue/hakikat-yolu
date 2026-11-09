@@ -7,6 +7,7 @@ import { QiblaScreen } from './src/ui/Qibla';
 import { ImamDetail, ImamList } from './src/ui/ImamScreens';
 import { EVENTS } from './src/data/events';
 import { DUAS } from './src/data/duas';
+import { ui } from './src/i18n';
 import { C, PAGE_MAX, TOP, font, setTheme } from './src/ui/theme';
 
 type Route =
@@ -28,6 +29,7 @@ export default function App() {
   const route = stack[stack.length - 1];
   const push = (r: Route) => setStack(s => [...s, r]);
   const back = () => setStack(s => (s.length > 1 ? s.slice(0, -1) : s));
+  const home = () => setStack([{ name: 'home' }]);
 
   useEffect(() => {
     const sub = BackHandler.addEventListener('hardwareBackPress', () => {
@@ -48,6 +50,7 @@ export default function App() {
     <View style={{ flex: 1, backgroundColor: C.bgDeep, alignItems: 'center' }}>
       <StatusBar style="light" />
       <View style={{ flex: 1, width: '100%', maxWidth: PAGE_MAX, backgroundColor: C.bg }}>
+        <View style={{ flex: 1 }}>
         {route.name === 'home' && (
           <Home events={EVENTS} onOpen={id => push({ name: 'event', id })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onMaps={() => push({ name: 'maps' })} onQibla={() => push({ name: 'qibla' })} onImams={() => push({ name: 'imams' })} />
         )}
@@ -62,6 +65,10 @@ export default function App() {
         {route.name === 'imam' && <ImamDetail key={route.id} id={route.id} onBack={back} onOpenEvent={id => push({ name: 'event', id })} onOpenImam={id => setStack(s => { const n = s.slice(); n[n.length - 1] = { name: 'imam', id }; return n; })} />}
         {route.name === 'maps' && <MapList onOpen={id => push({ name: 'map', id })} onBack={back} />}
         {route.name === 'map' && <MapDetail key={route.id} id={route.id} onBack={back} onOpenEvent={id => push({ name: 'event', id })} />}
+        </View>
+        <Pressable onPress={home} accessibilityRole="button" accessibilityLabel={ui('homeBtn')} style={({ pressed }) => [{ minHeight: 52, alignItems: 'center', justifyContent: 'center', backgroundColor: C.card, borderTopWidth: 1, borderTopColor: C.lineStrong, paddingBottom: 6, opacity: pressed ? 0.86 : 1 }]}>
+          <Text style={{ color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '800' }}>{ui('homeBtn')}</Text>
+        </Pressable>
       </View>
     </View>
   );
