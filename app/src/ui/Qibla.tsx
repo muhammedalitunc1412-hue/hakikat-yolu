@@ -18,7 +18,7 @@ const dirName = (b: number) => DIRS[Math.round(b / 45) % 8];
 type Status = 'asking' | 'locating' | 'ready' | 'denied' | 'error';
 
 // Dönen kadran: halkalar, çentikler, yön harfleri, merkez yıldız deseni ve Kâbe işareti
-function Dial({ size, bearing }: { size: number; bearing: number }) {
+const Dial = React.memo(function Dial({ size, bearing }: { size: number; bearing: number }) {
   const c = size / 2;
   const R = c - 22;
   const pt = (a: number, r: number) => ({ x: c + Math.sin(rad(a)) * r, y: c - Math.cos(rad(a)) * r });
@@ -82,7 +82,7 @@ function Dial({ size, bearing }: { size: number; bearing: number }) {
       </G>
     </Svg>
   );
-}
+});
 
 // Sabit üst katman: telefonun baktığı yönü gösteren işaret, merkez ve hizalanma parıltısı
 function Overlay({ size, aligned }: { size: number; aligned: boolean }) {
@@ -125,7 +125,7 @@ export function QiblaScreen({ onBack }: { onBack: () => void }) {
     if (heading == null) return;
     const target = -heading;
     cum.current += diff(target, norm360(cum.current));
-    Animated.timing(anim, { toValue: cum.current, duration: 140, easing: Easing.out(Easing.quad), useNativeDriver: true }).start();
+    Animated.timing(anim, { toValue: cum.current, duration: 90, easing: Easing.out(Easing.quad), useNativeDriver: true }).start();
   }, [heading, anim]);
 
   useEffect(() => {
@@ -133,17 +133,19 @@ export function QiblaScreen({ onBack }: { onBack: () => void }) {
     let accSub: { remove: () => void } | null = null;
     let magSub: { remove: () => void } | null = null;
     let alive = true;
+    let locationTimeout: ReturnType<typeof setTimeout> | undefined;
     const grav: { current: Vec3 | null } = { current: null };
     const mag: { current: Vec3 | null } = { current: null };
     const decl = { current: 0 };
-    const sensorLive = { current: false };
+    let sensorAt = 0;
     const fieldOff = { current: false };
     const lowAcc = { current: false };
     const refreshCal = () => setNeedsCal(fieldOff.current || lowAcc.current);
 
     const pushTrue = (v: number | null) => {
-      if (v == null) return;
-      const next = smoothAngle(smooth.current, v, 0.28);
+      if (!alive || v == null || !Number.isFinite(v)) return;
+      const movement = smooth.current == null ? 0 : Math.abs(diff(v, smooth.current));
+      const next = smoothAngle(smooth.current, v, movement > 12 ? 0.75 : 0.4);
       smooth.current = next;
       setHeading(next);
     };
@@ -153,62 +155,92 @@ export function QiblaScreen({ onBack }: { onBack: () => void }) {
       const strength = Math.hypot(mag.current.x, mag.current.y, mag.current.z);
       fieldOff.current = fieldLooksOff(strength);
       const raw = headingFromSensors(grav.current, mag.current);
-      if (raw == null) {
+      if (raw == null || !Number.isFinite(raw) || fieldOff.current) {
         refreshCal();
         return;
       }
       // Konum pusulasının accuracy alanı burada kullanılmaz: Android aynı dinleyicide
       // ivmeölçer doğruluğunu (çoğu cihazda 0) manyetometrenin üzerine yazar.
-      sensorLive.current = true;
+      sensorAt = Date.now();
       lowAcc.current = false;
       refreshCal();
       pushTrue(pickTrueHeading(raw, null, decl.current));
     };
 
-    (async () => {
+    let hasFreshPosition = false;
+    let hasPosition = false;
+    let nativeHeading: Location.LocationHeadingObject | undefined;
+    function publishNative() {
+      if (!alive || !nativeHeading || !hasPosition || Date.now() - sensorAt < 350) return;
+      lowAcc.current = headingAccuracyIsPoor(nativeHeading.accuracy);
+      refreshCal();
+      pushTrue(pickTrueHeading(nativeHeading.magHeading, nativeHeading.trueHeading, decl.current));
+    }
+
+    function applyPosition(position: Location.LocationObject) {
+      if (!alive) return;
+      const { latitude: lat, longitude: lon } = position.coords;
+      decl.current = magneticDeclination(lat, lon);
+      hasPosition = true;
+      clearTimeout(locationTimeout);
+      setPos({ lat, lon });
+      setStatus('ready');
+      publishNative();
+    }
+
+    async function startSensors() {
+      const available = await Promise.all([Magnetometer.isAvailableAsync(), Accelerometer.isAvailableAsync()]);
+      if (!alive || !available.every(Boolean)) return;
+      Magnetometer.setUpdateInterval(50);
+      Accelerometer.setUpdateInterval(50);
+      accSub = Accelerometer.addListener(v => { grav.current = deviceGravity(v, Platform.OS); });
+      magSub = Magnetometer.addListener(v => {
+        mag.current = v;
+        if (alive && hasPosition) onSensors();
+      });
+    }
+
+    setStatus('asking');
+    setPos(null);
+    setHeading(null);
+    setNeedsCal(false);
+    smooth.current = null;
+    void (async () => {
       try {
-        setStatus('asking');
-        setNeedsCal(false);
-        const perm = await Location.requestForegroundPermissionsAsync();
+        const permission = await Location.requestForegroundPermissionsAsync();
         if (!alive) return;
-        if (perm.status !== 'granted') { setStatus('denied'); return; }
-        setStatus('locating');
-        const fresh = await Promise.race([
-          Location.getCurrentPositionAsync({ accuracy: Location.Accuracy.Balanced }).catch(() => null),
-          new Promise<null>(res => setTimeout(() => res(null), 8000)),
-        ]);
-        const p = fresh ?? (await Location.getLastKnownPositionAsync());
-        if (!alive) return;
-        if (!p) { setStatus('error'); return; }
-        setPos({ lat: p.coords.latitude, lon: p.coords.longitude });
-        decl.current = magneticDeclination(p.coords.latitude, p.coords.longitude);
-        setStatus('ready');
-
-        const magOk = await Magnetometer.isAvailableAsync().catch(() => false);
-        const accOk = await Accelerometer.isAvailableAsync().catch(() => false);
-        if (alive && magOk && accOk) {
-          Magnetometer.setUpdateInterval(80);
-          Accelerometer.setUpdateInterval(80);
-          accSub = Accelerometer.addListener(v => { grav.current = deviceGravity(v, Platform.OS); onSensors(); });
-          magSub = Magnetometer.addListener(v => { mag.current = v; onSensors(); });
+        if (!permission.granted) {
+          setStatus('denied');
+          return;
         }
+        setStatus('locating');
+        void startSensors().catch(() => {});
+        void Location.watchHeadingAsync(reading => {
+          nativeHeading = reading;
+          publishNative();
+        }).then(sub => {
+          if (alive) headingSub = sub;
+          else sub.remove();
+        }).catch(() => {});
 
-        headingSub = await Location.watchHeadingAsync(h => {
-          if (sensorLive.current) return;
-          lowAcc.current = headingAccuracyIsPoor(h.accuracy);
-          refreshCal();
-          pushTrue(pickTrueHeading(
-            h.magHeading >= 0 ? h.magHeading : null,
-            h.trueHeading >= 0 ? h.trueHeading : null,
-            decl.current,
-          ));
-        });
+        locationTimeout = setTimeout(() => {
+          if (alive && !hasPosition) setStatus('error');
+        }, 10000);
+        void Location.getLastKnownPositionAsync({ maxAge: 300000, requiredAccuracy: 1000 })
+          .then(cached => {
+            if (cached && !hasFreshPosition) applyPosition(cached);
+          }).catch(() => {});
+
+        const fresh = await Location.getCurrentPositionAsync({ accuracy: Location.Accuracy.Balanced });
+        applyPosition(fresh);
+        hasFreshPosition = true;
       } catch {
-        if (alive) setStatus('error');
+        if (alive && !hasPosition) setStatus('error');
       }
     })();
     return () => {
       alive = false;
+      clearTimeout(locationTimeout);
       headingSub?.remove();
       accSub?.remove();
       magSub?.remove();
@@ -217,7 +249,7 @@ export function QiblaScreen({ onBack }: { onBack: () => void }) {
 
   const q = useMemo(() => (pos ? qiblaFrom(pos.lat, pos.lon) : null), [pos]);
   const off = q && heading != null ? diff(q.bearing, heading) : null; // + ise sağa dön
-  const aligned = q != null && heading != null && isFacingQibla(q.bearing, heading);
+  const aligned = !needsCal && q != null && heading != null && isFacingQibla(q.bearing, heading);
 
   // Hizalanınca kısa bir titreşim
   const wasAligned = useRef(false);

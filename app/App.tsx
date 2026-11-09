@@ -10,6 +10,7 @@ import { EVENTS } from './src/data/events';
 import { DUAS } from './src/data/duas';
 import { LANGUAGES, languageOption, setLang, ui } from './src/i18n';
 import type { Lang } from './src/types';
+import { RequiredUpdate, useRequiredUpdate } from './src/update/RequiredUpdate';
 import { C, PAGE_MAX, TOP, font, setTheme } from './src/ui/theme';
 
 type Route =
@@ -28,6 +29,7 @@ const LANGUAGE_KEY = 'hakikat-yolu:language';
 
 export default function App() {
   const [lang, setLanguage] = useState<Lang>('tr');
+  const requiredStore = useRequiredUpdate();
   const [ready, setReady] = useState(false);
   const [choosing, setChoosing] = useState(true);
   useEffect(() => {
@@ -59,12 +61,13 @@ export default function App() {
 
   useEffect(() => {
     const sub = BackHandler.addEventListener('hardwareBackPress', () => {
+      if (requiredStore) return true;
       if (stackRef.current.length <= 1) return false;
       setStack(s => (s.length > 1 ? s.slice(0, -1) : s));
       return true;
     });
     return () => sub.remove();
-  }, []);
+  }, [requiredStore]);
 
   // Kerbela ve Hz. Hüseyin alanları kan kırmızısı temayla açılır
   setTheme((route.name === 'event' && (route.id === 'kerbela' || route.id === 'fatima-vefat')) || (route.name === 'imam' && route.id === 'huseyin') ? 'blood' : 'default');
@@ -76,7 +79,7 @@ export default function App() {
     <View style={{ flex: 1, backgroundColor: C.bgDeep, alignItems: 'center' }}>
       <StatusBar style="light" />
       <View style={{ flex: 1, width: '100%', maxWidth: PAGE_MAX, backgroundColor: C.bg }}>
-        {!ready ? null : choosing ? (
+        {!ready ? null : requiredStore ? <RequiredUpdate lang={lang} storeUrl={requiredStore} /> : choosing ? (
           <ScrollView contentContainerStyle={{ padding: 24, paddingTop: TOP, gap: 10 }}>
             <Text style={{ color: C.gold, fontSize: 24, fontWeight: '700' }}>{languageOption(lang).title}</Text>
             {LANGUAGES.map(option => (

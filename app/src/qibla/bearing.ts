@@ -13,7 +13,7 @@ const deg = (r: number) => (r * 180) / Math.PI;
 export const norm360 = (d: number) => ((d % 360) + 360) % 360;
 
 /** İki açı arasındaki en kısa fark, -180 ile 180 arası. */
-export const angleDiff = (a: number, b: number) => ((a - b + 540) % 360) - 180;
+export const angleDiff = (a: number, b: number) => norm360(a - b + 180) - 180;
 
 export function smoothAngle(prev: number | null, next: number, alpha = 0.22): number {
   if (prev == null || !Number.isFinite(next)) return next;

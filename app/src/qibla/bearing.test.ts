@@ -58,6 +58,8 @@ test('manyetik sapma doğuda pozitif, batıda negatif; gerçek kerterize bir kez
 });
 
 test('yumuşatma 359° ile 0° arasında kısa yoldan geçer', () => {
+  assert.equal(angleDiff(-350, 350), 20);
+  assert.equal(angleDiff(350, -350), -20);
   const up = smoothAngle(359, 1, 0.5);
   assert.ok(up === 0, String(up));
   const down = smoothAngle(1, 359, 0.5);
