@@ -8,7 +8,7 @@ export const osman: HistEvent = {
   hook: { tr: 'Şikâyetler büyürken Hz. Ali Medine\'de arabuluculuk yaptı. Ardından kendisine biat istendi.', en: 'The man who mediated in Medina as grievances grew, and was then asked for allegiance.' },
   scenes: [
     {
-      text: { tr: 'Halife Osman\'ın Medine\'deki ilk yılları sakin geçti. İkinci yarıda valilikler ve mal, şikâyet konusu oldu. Özellikle **Ümeyyeoğulları** önemli görevlere getirildi. Daha önceki şura, yani danışma kurulu, **Hz. Ali**\'nin hakkını bir kenara koymuştu. Şimdi görevler ve mal, bu ailenin elinde toplandı. Kuşatma günü Osman, Peygamber\'in verdiği bir sözü hatırlatacaktı.' },
+      text: { tr: 'Halife Osman\'ın Medine\'deki ilk yılları sakin geçti. İkinci yarıda valilikler ve mal, şikâyet konusu oldu. Özellikle **Ümeyyeoğulları** önemli görevlere getirildi. TDV\'nin Osman maddesi, Kûfe\'ye Velîd b. Ukbe ve sonra Saîd b. Âs\'ı, Mısır\'a Abdullah b. Sa\'d\'ı, Basra\'ya Abdullah b. Âmir\'i, kâtipliğe Mervân\'ı yazar. **Muaviye**\'yi Suriye genel valisi yapıp yetkisini Humus, Kınnesrîn ve Filistin\'le büyüttüğü de orada yazar. İlk Şam tayini ondan önce, Ömer dönemindedir. Kayırma, akrabayı işe koymaktır. Hazine, ümmetin ortak malıdır. Ganimetin çoğunun yakınlara ayrıldığı ve valilere büyük bağışlar verildiği şikâyet edilmiştir. Hz. Ali de bunu eleştirmiştir. Rüşvet diye ayrı bir suç bu turda kilitlenmedi. Daha önceki şura, yani danışma kurulu, **Hz. Ali**\'nin hakkını bir kenara koymuştu. Şimdi görevler ve mal, bu ailenin elinde toplandı. Kuşatma günü Osman, Peygamber\'in verdiği bir sözü hatırlatacaktı.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'crowd', x: 34, scale: 7 }, { kind: 'man', x: 66, label: { tr: 'Osman' } }] },
       by: 'both',
     },
@@ -38,7 +38,7 @@ export const osman: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Halife Osman, 35 H Zilhicce\'de Medine\'de öldürüldü. **Hz. Ali** hutbesinde der: öldürmesi için emir vermiş olsaydı katil sayılırdı. İnsanları ondan alıkoymuş olsaydı yardımcısı olurdu. Hükmü Allah\'a bırakır. Hz. Ali bu öldürmede kılıç kullanmadı. Bu kanın yanında da yer almadı.' },
+      text: { tr: 'Halife Osman, 35 H Zilhicce\'de Medine\'de öldürüldü. 18 Zilhicce 35\'te öldürüldü. Hilafeti yaklaşık on iki yıl sürmüştü. **Hz. Ali** hutbesinde der: öldürmesi için emir vermiş olsaydı katil sayılırdı. İnsanları ondan alıkoymuş olsaydı yardımcısı olurdu. Hükmü Allah\'a bırakır. Hz. Ali bu öldürmede kılıç kullanmadı. Bu kanın yanında da yer almadı.' },
       art: { bg: 'dawn', actors: [{ kind: 'crowd', x: 34, scale: 7 }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
     },

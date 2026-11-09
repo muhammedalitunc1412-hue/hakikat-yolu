@@ -17,7 +17,7 @@ export const muaviyeIktidar: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: 'Şam valisiyken **Muaviye** Hadrâ Sarayı\'nı yaptırdı. **Ebuzer el-Gifârî** ona dedi: "Bunu Allah\'ın malıyla, beytülmalle yaptıysan hıyanettir, haramdır. Kendi malınla yaptıysan israftır." Beytülmal, ümmetin ortak hazinesidir. **Muaviye** bu sözü hazmedemedi. Ebuzer\'i şikâyet etti. Şam\'dan sürdüler. Ebuzer Rebeze\'de yalnız öldü. Hakkı söyleyen dost, çölde tek başına gitti.' },
+      text: { tr: '**Muaviye** Şam\'da Yeşil Saray\'ı, Hadrâ\'yı yaptırdı. **Ebuzer el-Gifârî** ona dedi: "Bu Allah\'ın malındansa hıyanet, kendi malınsa israftır." Belâzurî\'nin Ensâbü\'l-Eşrâf\'ında bu söz okundu. Muaviye sustu. Sonra Ebuzer şikâyet edildi. Şam\'dan sürüldü. Rebeze\'de yalnız öldü. O, dilenci değildi. Hakkı söyleyen bir sahabiydi.' },
       art,
       cites: [{ side: 'shia', i: 2 }],
     },
@@ -47,7 +47,7 @@ export const muaviyeIktidar: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: 'Bu veliahtlıkta **Yezid**\'in ne ilmi ne takvası bu makama yetmezdi. İçkiyle anılan bir oğul, babasının zoruyla ümmetin başına kondu. **Hz. Hüseyin** bu biatı vermedi. Biat, bağlılık sözüdür. Bu biatı vermek, Peygamber\'in torununu o saltanata boyun eğdirmek demekti. Kerbela, bu veliahtlığın sonucudur.' },
+      text: { tr: '**Yezid**, şarap içmekle, av köpekleri ve maymunlarla eğlenmekle, fısk ve ahlaksızlıkla anılır. Medinelilerin bu suçlaması tarihlerde aktarılır. Belirli bir zina vakası bu turda kilitlenmedi. Yazılmadı. **Hz. Hüseyin** bu biatı vermedi. Biat, bağlılık sözüdür. Bu biatı vermek, Peygamber\'in torununu o saltanata boyun eğdirmek demekti. Kerbela, bu veliahtlığın sonucudur.' },
       art,
       cites: [{ side: 'shia', i: 1 }],
     },
@@ -75,7 +75,7 @@ export const muaviyeIktidar: HistEvent = {
   shia: [
     { book: 'İbn Ebi\'l-Hadîd, Şerhu Nehci\'l-Belâğa', ref: 'Muaviye ve sövme genelgeleri (cilt/sayfa kontrol edilecek)', says: { tr: "Muaviye'nin valilerine Hz. Ali'ye sövülmesini emretmesi; Medâinî'den aktarım." }, status: 'check' },
     { book: 'WikiShia, Muawiya b. Abi Sufyan (ikincil)', ref: 'Madde', says: { tr: "Muaviye'nin iktidarı, Hucr b. Adî ve Yezid'in veliahtlığı." }, url: 'https://en.wikishia.net/view/Mu%27awiya_b._Abi_Sufyan', status: 'check' },
-    { book: 'Ya\'kûbî, Târîh; Mes\'ûdî, Mürûcü\'z-Zeheb', ref: 'Hadrâ Sarayı ve Ebuzer (sayfa kilitlenmedi)', says: { tr: 'Ebuzer\'in Hadrâ için "Allah\'ın malıysa hıyanet, kendi malınsa israf" dediği, Muaviye\'nin şikâyetiyle Şam\'dan sürülüp Rebeze\'de yalnız öldüğü anlatılır. Sayfa uydurulmadı.' }, status: 'check' },
+    { book: 'Belâzurî, Ensâbü\'l-Eşrâf', ref: 'cilt 5, s. 542', says: { tr: 'Muaviye Şam\'da Hadrâ\'yı yaptırır. Ebuzer, Allah\'ın malındansa hıyanet, kendi malınsa israf der. Muaviye susar.' }, url: 'https://lib.eshia.ir/40503/5/542', status: 'verified' },
   ],
   disputes: [
     {

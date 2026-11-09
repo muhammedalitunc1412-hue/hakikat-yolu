@@ -36,13 +36,13 @@ export const muaviyeKimdir: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Mekke fethedilince **Ebu Süfyan**\'ın savaşı bitti. Peygamber, "Kim Ebu Süfyan\'ın evine girerse güvendedir" diyerek aman verdi. O da, **Hind** de o gün Müslüman göründü. Şii okuyuşta bu, gönülden bir teslim değil, fethin zorladığı bir görüntüydü. Yıllarca ordu süren adam, canı ve evi tehlikeye düşünce kelimeyi söyledi.' },
+      text: { tr: 'Mekke fethedilince **Ebu Süfyan**\'ın savaşı bitti. Peygamber, "Kim Ebu Süfyan\'ın evine girerse güvendedir" diyerek aman verdi. O da, **Hind** de o gün Müslüman göründü. Şii okuyuşta bu, gönülden bir teslim değil, fethin zorladığı bir görüntüydü. Yıllarca ordu süren adam, canı ve evi tehlikeye düşünce kelimeyi söyledi. Kelime, burada kelime-i şehadettir. Müslümanım demektir.' },
       art,
       cites: [{ side: 'sunni', i: 1 }, { side: 'shia', i: 0 }],
     },
     {
       by: 'both',
-      text: { tr: 'Fetih yılında, 8 H\'de **Muaviye** de Müslüman göründü. Huneyn ganimetinde babasıyla birlikte, gönülleri ısındırılacaklar arasına kondu. Burada iman bir sevgi değil, bir ganimet payıydı. Bu ev o payı aldıktan sonra da ==Ehl-i Beyt==\'e karşı durmayı bırakmadı.' },
+      text: { tr: 'Fetih yılı 8 H\'dir. **Muaviye** de o yıl Müslüman göründü. Huneyn ganimetinde babasıyla birlikte, gönlü ısındırılacaklar arasına kondu. Bu pay sevgi diye değil, yeni katılanlara verilen ganimet diye anılır. Bu ev o payı aldıktan sonra da ==Ehl-i Beyt==\'e karşı durmayı bırakmadı.' },
       art,
       cites: [{ side: 'shia', i: 0 }],
     },

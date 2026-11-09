@@ -38,7 +38,7 @@ export const hasan: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Hz. Hasan, Medine\'de yaklaşık on yıl sessiz yaşadı. 49 ile 51 H arasında zehirlenerek vefat etti. Tarih çoğunlukla 50 H diye verilir. Erken kaynakların çoğu zehirlendiğini aktarır. Rivayetlere göre zehri eşi Cü\'de bint el-Eş\'as verdi.' },
+      text: { tr: 'Hz. Hasan, Medine\'de yaklaşık on yıl sessiz yaşadı. Vefat 28 Safer 49 ya da 50 diye anılır. TDV, Ca\'de bint Eş\'as\'ın Yezid\'le evlendirilme vaadiyle kandırılıp onu zehirlediğini İbnü\'l-Esîr ve Süyûtî\'den nakleder. Bu, her Sünnînin kabulü değildir. İbn Abdilberr\'in el-İstiâb\'ında Katâde ve Ebû Bekir b. Hafs, Ca\'de\'yi anar. Bir grup, bunu Muaviye\'nin kışkırtmasına bağlar. İbn Abdilberr bunu nakleder, "Allah bilir" diyerek kendisi hükmetmez. Bu cümle eserin kendi baskısından değil, lib.eshia.ir sayfasındaki nakilden okundu. Aynı nakilde Katâde, Hz. Hasan\'ın zehir içirildiğini ve ciğerinin parçalandığını söylediğini aktarır. Bu, kelimesi kelimesine kilitlenmiş bir Türkçe çeviri değildir.' },
       art: { bg: 'night', props: ['moon', 'stars'], actors: [{ kind: 'hasan', x: 40, pose: 'sit', label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 62, scale: 0.9, label: { tr: 'Hz. Hüseyin' } }] },
       by: 'both',
     },

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { EVENTS } from '../data/events';
-import { IMAMS, type Imam } from '../data/imams';
+import { IMAMS, imamAgeNote, type Imam } from '../data/imams';
 import { ui } from '../i18n';
 import { Chevron } from './icons';
 import { Rich } from './Rich';
@@ -66,7 +66,7 @@ function SectionTitle({ children }: { children: string }) {
   return <Text style={[s.h, align()]}>{children}</Text>;
 }
 
-export function ImamDetail({ id, onBack, onOpenEvent }: { id: string; onBack: () => void; onOpenEvent: (eventId: string) => void }) {
+export function ImamDetail({ id, onBack, onOpenEvent, onOpenImam }: { id: string; onBack: () => void; onOpenEvent: (eventId: string) => void; onOpenImam: (id: string) => void }) {
   const sc = useScrollMemory('imam:' + id);
   const im: Imam | undefined = IMAMS.find(i => i.id === id);
   if (!im) {
@@ -78,6 +78,9 @@ export function ImamDetail({ id, onBack, onOpenEvent }: { id: string; onBack: ()
     );
   }
   const ev = im.eventId ? EVENTS.find(e => e.id === im.eventId) : undefined;
+  const prev = IMAMS.find(i => i.no === im.no - 1);
+  const next = IMAMS.find(i => i.no === im.no + 1);
+  const occult = im.id === 'mehdi';
   return (
     <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page}>
       <Back onPress={onBack} />
@@ -98,7 +101,8 @@ export function ImamDetail({ id, onBack, onOpenEvent }: { id: string; onBack: ()
       <SectionTitle>KÜNYE VE TARİHLER</SectionTitle>
       <View style={s.panel}>
         <Row label="Doğum" value={im.born} />
-        <Row label="Vefat" value={im.died} />
+        <Row label={occult ? 'Durum' : 'Vefat'} value={im.died} />
+        <Row label="Yaş" value={imamAgeNote(im.id)} />
         <Row label="Defin" value={im.buried} />
         <Row label="Ailesi" value={im.parents} />
         {!!im.period && <Row label="İmamlık" value={im.period} />}
@@ -155,6 +159,21 @@ export function ImamDetail({ id, onBack, onOpenEvent }: { id: string; onBack: ()
         </Pressable>
       )}
 
+      <View style={s.navRow}>
+        {prev ? (
+          <Pressable onPress={() => onOpenImam(prev.id)} accessibilityRole="button" style={({ pressed }) => [s.navBtn, pressed && { opacity: 0.85 }]}>
+            <Text style={s.navKicker}>ÖNCEKİ İMAM</Text>
+            <Text style={s.navName}>{prev.name}</Text>
+          </Pressable>
+        ) : <View style={s.navBtn} />}
+        {next ? (
+          <Pressable onPress={() => onOpenImam(next.id)} accessibilityRole="button" style={({ pressed }) => [s.navBtn, pressed && { opacity: 0.85 }]}>
+            <Text style={s.navKicker}>SONRAKİ İMAM</Text>
+            <Text style={s.navName}>{next.name}</Text>
+          </Pressable>
+        ) : <View style={s.navBtn} />}
+      </View>
+
       <View style={s.check}>
         <Text style={s.checkBadge}>⚠ Kontrol edilmeli</Text>
         <Text style={s.checkText}>{ui('imamsNote')}</Text>
@@ -208,6 +227,10 @@ const s = themedStyles(() => StyleSheet.create({
   eventBtn: { flexDirection: 'row', alignItems: 'center', gap: 10, marginTop: 28, backgroundColor: C.card2, borderRadius: 16, borderWidth: 1, borderColor: C.lineStrong, padding: 14 },
   eventLabel: { color: C.goldDeep, fontFamily: font.sans, fontSize: 11, fontWeight: '800', letterSpacing: 2.5 },
   eventTitle: { color: C.cream, fontFamily: font.serif, fontSize: 16, fontWeight: '700', marginTop: 4 },
+  navRow: { flexDirection: 'row', gap: 10, marginTop: 22 },
+  navBtn: { flex: 1, backgroundColor: C.card, borderRadius: 16, borderWidth: 1, borderColor: C.lineStrong, padding: 12, minHeight: 72 },
+  navKicker: { color: C.goldDeep, fontFamily: font.sans, fontSize: 11, fontWeight: '800', letterSpacing: 1 },
+  navName: { color: C.cream, fontFamily: font.serif, fontSize: 16, fontWeight: '700', marginTop: 4 },
   check: { marginTop: 22, borderRadius: 14, borderWidth: 1, borderColor: C.line, padding: 12 },
   checkBadge: { color: C.warn, fontFamily: font.sans, fontSize: 12, fontWeight: '800' },
   checkText: { color: C.faint, fontFamily: font.sans, fontSize: 12, lineHeight: 17, marginTop: 4 },

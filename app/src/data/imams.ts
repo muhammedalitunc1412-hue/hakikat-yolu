@@ -23,6 +23,26 @@ export type Imam = {
   studentsNote?: string;
 };
 
+// Yaşlar, dosyadaki doğum ve vefat yıllarının farkıdır. Kamerî yıl kabaca hicrî farktır.
+// Güneş yılı ve rivayet farkı ayrıca yazılır. Tek bir kesin yaş uydurulmadı.
+export function imamAgeNote(id: string): string {
+  const notes: Record<string, string> = {
+    ali: 'Kamerî olarak yaklaşık 63, güneş yılıyla yaklaşık 62 diye anılır. Vikîşia zaman çizelgesi güneş yılını about 62 diye yazar. Miladî yıllar çıkarılıp kesin yaş yapılmadı. https://en.wikishia.net/view/Imam_Ali_b._Abi_Talib_(a)',
+    hasan: 'Doğum günü bu turda kilitlenmedi. Vefat 28 Safer 49 (TDV) veya 50 (Vikîşia) diye anılır. Yaklaşık 47 kamerî yıl hesabı, doğum kilitlenmeden kesin diye yazılmaz. https://en.wikishia.net/view/Imam_al-Hasan_al-Mujtaba_(a)',
+    huseyin: 'Doğum 4 H, bazıları 3 der. Şehadet 10 Muharrem 61. Kamerî fark yaklaşık 57 yıldır. Güneş yılı biraz daha kısadır. https://en.wikishia.net/view/Imam_al-Husayn_b._Ali_(a)',
+    zeynelabidin: 'Doğum 38 H. Vefat 25 Muharrem 95, bazı kayıtlarda 94. Kamerî olarak yaklaşık 57, bir rivayette 58. https://en.wikishia.net/view/Imam_al-Sajjad_(a)',
+    bakir: 'Doğum 1 Receb 57, vefat 7 Zilhicce 114. Kamerî fark yaklaşık 57 yıldır. Bu, iki tarihin farkıdır. https://en.wikishia.net/view/Imam_al-Baqir_(a)',
+    sadik: 'Doğum 17 Rebîülevvel 83, vefat 25 Şevval 148. Kamerî fark yaklaşık 65 yıldır. https://en.wikishia.net/view/Imam_al-Sadiq_(a)',
+    kazim: 'Doğum 7 Safer 128, vefat 25 Receb 183. Kamerî fark yaklaşık 55 yıldır. https://en.wikishia.net/view/Imam_al-Kazim_(a)',
+    riza: 'Vefat Safer 203. Küleynî yoluyla kamerî olarak yaklaşık 55 diye anılır. https://en.wikishia.net/view/Imam_Ali_b._Musa_al-Rida_(a)',
+    cevad: 'Vikîşia, 25 yaşında şehit edildiğini yazar. Doğum 10 Receb 195, vefat 30 Zilkade 220. Yaklaşık 25 kamerî yıldır. https://en.wikishia.net/view/Imam_al-Jawad_(a)',
+    hadi: 'Doğum 15 Zilhicce 212, vefat 3 Receb 254. Kamerî fark yaklaşık 41-42 yıldır. Günler yuvarlanır. https://en.wikishia.net/view/Imam_Ali_b._Muhammad_al-Hadi_(a)',
+    askeri: 'Doğum 8 Rebîülâhir 232, vefat 8 Rebîülevvel 260. Yaklaşık 28 kamerî yıl diye okunur. Gün farkı yuvarlanmıştır. https://en.wikishia.net/view/Imam_al-Hasan_al-Askari_(a)',
+    mehdi: 'Vefat yaşı yoktur. Gaybettedir. Doğum yılı da rivayettir. Yaş uydurulmadı. https://en.wikishia.net/view/Imam_al-Mahdi_(a)',
+  };
+  return notes[id] ?? 'Yaş bu turda kilitlenmedi.';
+}
+
 export const IMAMS: Imam[] = [
   {
     id: 'ali', no: 1, name: 'Hz. Ali', kunya: "Ebü'l-Hasan, Ebû Türâb",
@@ -52,8 +72,8 @@ export const IMAMS: Imam[] = [
       { ad: 'Zekî', anlam: 'temiz' },
       { ad: 'es-Sıbt', anlam: 'Peygamber\'in torunu' },
     ],
-    born: '15 Ramazan 3 H (625) — Medine',
-    died: "49–51 H arası (çoğunlukla 50 H / 670) — Medine; zehirlenme rivayeti",
+    born: 'Doğum günü tek tarihe kilitlenmedi. 15 Ramazan 3 H diye de anılır — Medine',
+    died: '28 Safer 49 (TDV) veya 50 (Vikîşia) — Medine; zehirlenme nakledilir',
     buried: "Bakî' Mezarlığı, Medine",
     parents: 'Babası Hz. Ali, annesi Hz. Fatıma',
     period: 'Yaklaşık 40–50 H arası',

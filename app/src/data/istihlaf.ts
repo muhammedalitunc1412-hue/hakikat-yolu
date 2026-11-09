@@ -19,12 +19,12 @@ export const istihlaf: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Ebu Bekir vefat etti. Ömer Medine\'de halife oldu. Fetihler genişledi. **Hz. Ali** Medine\'de yaşadı ve danışılanlardan biri oldu. Ona danışılması, Gadir\'deki hakkının yerine konması değildi. Hz. Ali sabretti ve evinde durdu.' },
+      text: { tr: 'Ebu Bekir öldü. Peygamber\'in vefatından, 22 Cemâziyelâhir 13\'e kadar yaklaşık iki yıl üç ay halife kalmıştı. Ömer Medine\'de halife oldu. Fetihler genişledi. **Hz. Ali** Medine\'de yaşadı ve danışılanlardan biri oldu. Ona danışılması, Gadir\'deki hakkının yerine konması değildi. Hz. Ali sabretti ve evinde durdu.' },
       art: { bg: 'city', props: ['sun', 'minbar'], actors: [{ kind: 'man', x: 60, pose: 'raise', label: { tr: 'Ömer' } }, { kind: 'ali', x: 34, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Medine\'de sabah namazında Halife Ömer hançerlendi. Saldırgan on üç kişiyi yaraladı. Ömer, yerine geçecek kişiyi tek başına seçmedi. İşi altı kişiye bırakacaktı. **Hz. Ali** o altının içinde sayılacak, yine de hilafetin dışında bırakılacaktı.' },
+      text: { tr: 'Medine\'de sabah namazında Halife Ömer hançerlendi. 26 Zilhicce 23\'te öldü. Hilafeti yaklaşık on yıl altı ay sürmüştü. Saldırgan on üç kişiyi yaraladı. Ömer, yerine geçecek kişiyi tek başına seçmedi. İşi altı kişiye bırakacaktı. **Hz. Ali** o altının içinde sayılacak, yine de hilafetin dışında bırakılacaktı.' },
       art: { bg: 'dawn', actors: [{ kind: 'man', x: 50, pose: 'sit', label: { tr: 'Ömer' } }, { kind: 'crowd', x: 78, scale: 0.7 }] },
     },
     {

@@ -83,7 +83,8 @@ export const NOTES: Record<string, string[]> = {
     "Ebu Bekir, Ömer ve Ebu Ubeyde de oraya gitti.",
     "Halife Ebu Bekir'e biat edildi; Halife Ömer bunu sonradan «felte» diye nitelendirdi (Buhari).",
     "Hz. Ali ve Haşimoğulları Peygamber'in yıkama ve defin hazırlığındaydı.",
-    "Buhari'ye göre Hz. Ali'nin biatı yaklaşık altı ay sonra oldu.",
+    "Hz. Ali biat etmedi. Kan dökülmesin diye sessiz kaldı. Buhari 4240, Hz. Fâtıma'nın vefatından sonra insanların tavrının değiştiğini anlatır ve aynı hadiste sonraki biatı da yazar. O devam, biat etmeme hükmünün delili değildir.",
+    "Gece kuyu ağıtı gelenekte anılır. Sayfa kilitlenmedi. Resim anahtarı ali-kuyu-1.",
   ],
   istihlaf: [
     "Halife Ebu Bekir ölmeden önce Halife Ömer'i halife tayin etti.",
@@ -126,6 +127,10 @@ export const NOTES: Record<string, string[]> = {
     "Şamlılar mushafları mızraklara bağlayıp hakemlik istedi.",
     "Hakemi reddeden grup ayrıldı; bunlara Haricîler denir.",
     "İbn Mülcem Ramazan 40'ta Hz. Ali'yi yaraladı; Hz. Ali yaklaşık iki gün sonra vefat etti.",
+  ],
+  nehrevan: [
+    "Hakemden sonra bir grup Hz. Ali'nin yanından ayrıldı.",
+    "Nehrevan'da çatışıldı. Ayrıntı sayfası bu turda kilitlenmedi.",
   ],
   sebb: [
     "Hz. Hasan'ın sulhünden sonra (41 H) yönetim Muaviye'de toplandı.",

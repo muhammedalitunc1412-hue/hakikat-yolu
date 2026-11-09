@@ -39,7 +39,7 @@ export const muta: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'İbn Abbas\'ın mut\'aya izin verdiği bildirilir. Bu fetva, zorunluluk ve kadın azlığı gibi şartlara bağlanır. İbn Abbas\'ın sonradan tamamen vazgeçtiği haberi zayıf zincirlerle gelir (İbn Hacer, Fethu\'l-Bârî). Câferî fıkıh, mut\'ayı belli süre, belli mehir ve bitişte kadının iddeti şartıyla sürdürür.' },
+      text: { tr: 'İbn Abbas\'ın mut\'aya izin verdiği bildirilir. Bu fetva, zorunluluk ve kadın azlığı gibi şartlara bağlanır. İbn Abbas\'ın sonradan tamamen vazgeçtiği haberi zayıf zincirlerle gelir (İbn Hacer, Fethu\'l-Bârî). Mut\'a, süresi ve mehri belli, iki erişkin arasında yapılan geçici nikâhtır. Boşanma yoktur. Süre bitince kadın iddet bekler. Bu, gizli bir aldatmaca diye anlatılmaz. Nisâ 24\'ü Câferî okuyuş süresi belli nikâh diye okur. Sünnî okuyuş aynı kelimeyi olağan nikâh ve mehir diye okur. Müslim 1405d\'de Câbir, uygulamanın Peygamber ve Ebu Bekir döneminde sürdüğünü, Ömer\'in yasakladığını söyler. Müslim 1406a\'da Sebre, izin verilip sonra bırakmalarının söylendiğini anlatır. Buhari 4216\'da Hz. Ali, Hayber günü yasağı İbn Abbas\'a bildirir. Yasağın kimden ve hangi günde geldiği rivayetlere göre değişir. Nevevî icmâ der. Câferî mektep bunu kabul etmez. Evrensel bir ittifak diye kilitlenmedi.' },
       art: { bg: 'dawn', props: ['scroll'], actors: [{ kind: 'man', x: 34 }, { kind: 'woman', x: 52 }, { kind: 'crowd', x: 76, scale: 5 }] },
       by: 'both',
     },
