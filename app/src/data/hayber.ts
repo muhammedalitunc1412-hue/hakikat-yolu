@@ -10,12 +10,12 @@ export const hayber: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Hicretin 7. yılında Peygamber, Medine\'nin kuzeyindeki **Hayber**\'e yürüdü. Kaleler yan yanaydı. Ordu onları birer birer kuşattı. Bu sefer şunu gösterecekti: **Hz. Ali**, Peygamber\'in davasını koruyordu.' },
+      text: { tr: 'Hicretin 7. yılında Peygamber, Medine\'nin kuzeyindeki **Hayber**\'e yürüdü. Kaleler yan yanaydı. Ordu onları birer birer kuşattı. Bu sefer şunu gösterecekti: **Hz. Ali**, Peygamber\'in davasını koruyordu. Sancak, o kalelerin önünde ona verilecekti.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'crowd', x: 34, scale: 8 }, { kind: 'prophet', x: 68, label: { tr: 'Hz. Peygamber' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Hayber\'de kalelerden biri günlerce alınamadı. Anlatılan o ki önce Ebu Bekir, sonra Ömer sancakla gitti. İkisi de fethi tamamlamadan döndü. Kale hâlâ duruyordu. Sancak, kaleyi alacak kişiye henüz verilmemişti.' },
+      text: { tr: 'Hayber\'de kalelerden biri günlerce alınamadı. Anlatılan o ki önce Ebu Bekir, sonra Ömer sancakla gitti. İkisi de fethi tamamlamadan döndü. Kale hâlâ duruyordu. Sancak, kaleyi alacak kişiye henüz verilmemişti. Sabah, o kişiyi bekliyordu.' },
       art: { bg: 'dune-dusk', actors: [{ kind: 'crowd', x: 50, scale: 6 }] },
     },
     {
@@ -37,7 +37,7 @@ export const hayber: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: 'Ehl-i Beyt rivayetinde **Hz. Ali**, Hayber kapısını yerinden söküp kalkan gibi kullandı. Kapıyı savaşırken önünde tuttu.' },
+      text: { tr: 'Ehl-i Beyt rivayetinde **Hz. Ali**, Hayber kapısını yerinden söküp kalkan gibi kullandı. Kapıyı savaşırken önünde tuttu. Kapı, o gün bir siper oldu. Rivayet, bu gücü Hayber\'in fethine bağlar.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {

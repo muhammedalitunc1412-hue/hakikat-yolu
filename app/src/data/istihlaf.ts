@@ -9,42 +9,42 @@ export const istihlaf: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Halife Ebu Bekir, Medine\'de ölümün yaklaştığını anlayınca yerine Halife Ömer\'i bıraktı. Sakife\'de aceleyle kurulan yönetim, Ebu Bekir\'den Ömer\'e geçti. **Hz. Ali** bu tayine çağrılmadı. Gadir\'de ilan edilen hakkı yine yok sayıldı.' },
+      text: { tr: 'Halife Ebu Bekir, Medine\'de ölümün yaklaştığını anlayınca yerine Halife Ömer\'i bıraktı. Sakife\'de aceleyle kurulan yönetim, Ebu Bekir\'den Ömer\'e geçti. **Hz. Ali** bu tayine çağrılmadı. Gadir\'de ilan edilen hakkı yine yok sayıldı. Tayin, Medine\'de, Hz. Ali çağrılmadan yapıldı.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'Ebu Bekir' } }, { kind: 'man', x: 66, label: { tr: 'Ömer' } }] },
     },
     {
       by: 'sunni',
-      text: { tr: 'Ebu Bekir, tayinden önce Abdurrahman\'a ve Osman\'a danıştı. Bir grup, Halife Ömer\'in sertliğinden söz etti. "Rabbine ne cevap vereceksin?" dendi. Talha da itiraz etti. Ebu Bekir, Allah\'a kullarının en hayırlısını seçtiğini söyleyeceğini bildirdi. Danışılanlar arasında **Hz. Ali** yoktu. Onun adı sorulmadı.' },
+      text: { tr: 'Ebu Bekir, tayinden önce Abdurrahman\'a ve Osman\'a danıştı. Bir grup, Halife Ömer\'in sertliğinden söz etti. "Rabbine ne cevap vereceksin?" dendi. Talha da itiraz etti. Ebu Bekir, Allah\'a kullarının en hayırlısını seçtiğini söyleyeceğini bildirdi. Danışılanlar arasında **Hz. Ali** yoktu. Onun adı sorulmadı. Şûra, Gadir\'deki ilanı sormadı.' },
       art: { bg: 'interior', actors: [{ kind: 'man', x: 30, label: { tr: 'Talha' } }, { kind: 'man', x: 68, pose: 'sit', label: { tr: 'Ebu Bekir' } }, { kind: 'crowd', x: 50, scale: 0.6 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Ebu Bekir öldü. Peygamber\'in vefatından, 22 Cemâziyelâhir 13\'e kadar yaklaşık iki yıl üç ay halife kalmıştı. Ömer Medine\'de halife oldu. Fetihler genişledi. **Hz. Ali** Medine\'de yaşadı ve danışılanlardan biri oldu. Ona danışılması, Gadir\'deki hakkının yerine konması değildi. Hz. Ali sabretti ve evinde durdu.' },
+      text: { tr: 'Ebu Bekir öldü. Peygamber\'in vefatından, 22 Cemâziyelâhir 13\'e kadar yaklaşık iki yıl üç ay halife kalmıştı. Ömer Medine\'de halife oldu. Fetihler genişledi. **Hz. Ali** Medine\'de yaşadı ve danışılanlardan biri oldu. Ona danışılması, Gadir\'deki hakkının yerine konması değildi. Hz. Ali sabretti ve evinde durdu. O, hakkı için kılıç çekmedi.' },
       art: { bg: 'city', props: ['sun', 'minbar'], actors: [{ kind: 'man', x: 60, pose: 'raise', label: { tr: 'Ömer' } }, { kind: 'ali', x: 34, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Medine\'de sabah namazında Halife Ömer hançerlendi. 26 Zilhicce 23\'te öldü. Hilafeti yaklaşık on yıl altı ay sürmüştü. Saldırgan on üç kişiyi yaraladı. Ömer, yerine geçecek kişiyi tek başına seçmedi. İşi altı kişiye bırakacaktı. **Hz. Ali** o altının içinde sayılacak, yine de hilafetin dışında bırakılacaktı.' },
+      text: { tr: 'Medine\'de sabah namazında Halife Ömer hançerlendi. 26 Zilhicce 23\'te öldü. Hilafeti yaklaşık on yıl altı ay sürmüştü. Saldırgan on üç kişiyi yaraladı. Ömer, yerine geçecek kişiyi tek başına seçmedi. İşi altı kişiye bırakacaktı. **Hz. Ali** o altının içinde sayılacak, yine de hilafetin dışında bırakılacaktı. Altı kişi, Medine\'de bir odaya alındı.' },
       art: { bg: 'dawn', actors: [{ kind: 'man', x: 50, pose: 'sit', label: { tr: 'Ömer' } }, { kind: 'crowd', x: 78, scale: 0.7 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Yaralı Halife Ömer altı kişiyi saydı: **Hz. Ali**, Osman, Zübeyr, Talha, Sa\'d ve Abdurrahman. Oğlu Abdullah tanık olacaktı. Hilafette payı olmayacaktı. Gadir\'de hakkı ilan edilen **Hz. Ali**, bu kurulun bir üyesi yapıldı.' },
+      text: { tr: 'Yaralı Halife Ömer altı kişiyi saydı: **Hz. Ali**, Osman, Zübeyr, Talha, Sa\'d ve Abdurrahman. Oğlu Abdullah tanık olacaktı. Hilafette payı olmayacaktı. Gadir\'de hakkı ilan edilen **Hz. Ali**, bu kurulun bir üyesi yapıldı. Abdurrahman b. Avf, seçimin ipini elinde tuttu.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 22, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 40, label: { tr: 'Osman' } }, { kind: 'man', x: 58, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'crowd', x: 78, scale: 0.7 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Altı kişilik kurulda Zübeyr ile Talha, haklarını **Hz. Ali** ve Osman lehine bıraktı. Sa\'d, Abdurrahman lehine çekildi. Karar fiilen Abdurrahman\'ın eline geçti. Abdurrahman, **Hz. Ali** ile Osman\'dan adil davranma ve seçilene itaat sözü istedi.' },
+      text: { tr: 'Altı kişilik kurulda Zübeyr ile Talha, haklarını **Hz. Ali** ve Osman lehine bıraktı. Sa\'d, Abdurrahman lehine çekildi. Karar fiilen Abdurrahman\'ın eline geçti. Abdurrahman, **Hz. Ali** ile Osman\'dan adil davranma ve seçilene itaat sözü istedi. Söz, iki halifenin yoluna bağlandı.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 52, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'ali', x: 26, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 76, label: { tr: 'Osman' } }] },
     },
     {
       by: 'sunni',
-      text: { tr: 'Abdurrahman, **Hz. Ali**\'den Allah\'ın kitabı, Peygamber\'in sünneti ve iki halifenin yolu üzerine biat etmesini istedi. Biat, bağlılık sözüdür. Hz. Ali, "Allah\'ın kitabı, Peygamber\'in sünneti ve kendi içtihadım" dedi. Aynı şart Osman\'a sunulunca Osman kabul etti. Biat ona yapıldı. **Hz. Ali**, Gadir\'deki hakkını iki halifenin yoluna değişmedi.' },
+      text: { tr: 'Abdurrahman, **Hz. Ali**\'den Allah\'ın kitabı, Peygamber\'in sünneti ve iki halifenin yolu üzerine biat etmesini istedi. Biat, bağlılık sözüdür. Hz. Ali, "Allah\'ın kitabı, Peygamber\'in sünneti ve kendi içtihadım" dedi. Aynı şart Osman\'a sunulunca Osman kabul etti. Biat ona yapıldı. **Hz. Ali**, Gadir\'deki hakkını iki halifenin yoluna değişmedi. O, Gadir\'deki ilanı o şarta değişmedi.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 30, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 56, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'man', x: 78, label: { tr: 'Osman' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Biat Osman\'a yapıldı. Şura, danışma kuruludur. Şıkşıkıyye hutbesinde **Hz. Ali**, kendisini o altıdan biri saymalarını anlatır. Şuranın düzeninin sonucu daha baştan etkilediğini de söyler. Sakife\'den şuraya kadar onun hakkı yine bir kenara kondu. O, sabrı seçti.' },
+      text: { tr: 'Biat Osman\'a yapıldı. Şura, danışma kuruludur. Şıkşıkıyye hutbesinde **Hz. Ali**, kendisini o altıdan biri saymalarını anlatır. Şuranın düzeninin sonucu daha baştan etkilediğini de söyler. Sakife\'den şuraya kadar onun hakkı yine bir kenara kondu. O, sabrı seçti. Osman seçildi. Hz. Ali evinde kaldı.' },
       art: { bg: 'mountain', props: ['stars'], actors: [{ kind: 'ali', x: 50, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
     },
   ],

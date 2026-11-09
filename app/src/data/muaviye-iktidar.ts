@@ -11,19 +11,19 @@ export const muaviyeIktidar: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Peygamber, hilafetin otuz yıl süreceğini, sonra ısırıcı bir krallığa döneceğini haber vermişti. **Muaviye**\'nin "ben kralların ilkiyim" dediği anlatılır. Hilafet bir emanet iken o, bunu kendi mülkü yaptı. Bu saltanat altında ==Ehl-i Beyt==\'in hakkı tanınmadı.' },
+      text: { tr: 'Peygamber, hilafetin otuz yıl süreceğini, sonra ısırıcı bir krallığa döneceğini haber vermişti. **Muaviye**\'nin "ben kralların ilkiyim" dediği anlatılır. Hilafet bir emanet iken o, bunu kendi mülkü yaptı. Bu saltanat altında ==Ehl-i Beyt==\'in hakkı tanınmadı. Şam, hilafeti saltanata çevirdi.' },
       art,
       cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 1 }],
     },
     {
       by: 'shia',
-      text: { tr: '**Muaviye** Şam\'da Yeşil Saray\'ı, Hadrâ\'yı yaptırdı. **Ebuzer el-Gifârî** ona dedi: "Bu Allah\'ın malındansa hıyanet, kendi malınsa israftır." Belâzurî\'nin Ensâbü\'l-Eşrâf\'ında bu söz okundu. Muaviye sustu. Sonra Ebuzer şikâyet edildi. Şam\'dan sürüldü. Rebeze\'de yalnız öldü. O, dilenci değildi. Hakkı söyleyen bir sahabiydi.' },
+      text: { tr: '**Muaviye** Şam\'da Yeşil Saray\'ı, Hadrâ\'yı yaptırdı. **Ebuzer el-Gifârî** ona dedi: "Bu Allah\'ın malındansa hıyanet, kendi malınsa israftır." Belâzurî\'nin Ensâbü\'l-Eşrâf\'ında bu söz okundu. Muaviye sustu. Sonra Ebuzer şikâyet edildi. Şam\'dan sürüldü. Rebeze\'de yalnız öldü. O, dilenci değildi. Hakkı söyleyen bir sahabiydi. Ebu Zer, bu saltanata karşı konuştu.' },
       art,
       cites: [{ side: 'shia', i: 2 }],
     },
     {
       by: 'both',
-      text: { tr: '**Muaviye**, **Ziyâd**\'ı Ebu Süfyan\'ın oğlu diye kardeş edindi. Buna istilhak denir. Peygamber\'in "çocuk, yatak sahibinindir" sözü çiğnendi. Bu soyu iktidar için uydurdu. **Ziyâd**, Kûfe ve Basra\'da **Hz. Ali**\'yi sevenlerin üzerine salındı. Bu kardeşlik, o zulme alet edildi.' },
+      text: { tr: '**Muaviye**, **Ziyâd**\'ı Ebu Süfyan\'ın oğlu diye kardeş edindi. Buna istilhak denir. Peygamber\'in "çocuk, yatak sahibinindir" sözü çiğnendi. Bu soyu iktidar için uydurdu. **Ziyâd**, Kûfe ve Basra\'da **Hz. Ali**\'yi sevenlerin üzerine salındı. Bu kardeşlik, o zulme alet edildi. Ziyad, bu uydurma kardeşlikle Kûfe\'ye salındı.' },
       art,
       cites: [{ side: 'sunni', i: 5 }],
     },
@@ -35,25 +35,25 @@ export const muaviyeIktidar: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: '**Hucr b. Adî**, **Hz. Ali**\'nin yiğit komutanıydı. Laneti reddetti. **Ziyâd** onu on iki kadar arkadaşıyla Şam\'a gönderdi. 51 H\'de ==Mercü Azra\'da katledildiler.== Hucr iki rekât namaz kıldı, kendini şehit bildi. **Muaviye** bu kanı savundu. Amr b. Hamk\'ın başı şehirler arasında taşındı. Minberdeki lanet, bu öldürmelere vardı.' },
+      text: { tr: '**Hucr b. Adî**, **Hz. Ali**\'nin yiğit komutanıydı. Laneti reddetti. **Ziyâd** onu on iki kadar arkadaşıyla Şam\'a gönderdi. 51 H\'de ==Mercü Azra\'da katledildiler.== Hucr iki rekât namaz kıldı, kendini şehit bildi. **Muaviye** bu kanı savundu. Amr b. Hamk\'ın başı şehirler arasında taşındı. Minberdeki lanet, bu öldürmelere vardı. Hucr ve arkadaşları, bu zulmün kurbanı oldu.' },
       art,
       cites: [{ side: 'sunni', i: 5 }, { side: 'shia', i: 0 }],
     },
     {
       by: 'both',
-      text: { tr: '**Muaviye**, oğlu **Yezid**\'i zorla veliaht yaptı. Veliaht, kendinden sonra hükümdar olacak oğuldur. Hilafet, babadan oğula geçen bir mülk oldu. **Hz. Hasan** ile verilen "kendimden sonra halife dikmem" sözü de çiğnendi. Medine\'de **Hz. Hüseyin** bu zulme boyun eğmedi. Abdullah b. Ömer, İbn Zübeyr ve Abdurrahman b. Ebi Bekir de razı olmadı. Tahtı bir oğul için ümmete zorla yükledi.' },
+      text: { tr: '**Muaviye**, oğlu **Yezid**\'i zorla veliaht yaptı. Veliaht, kendinden sonra hükümdar olacak oğuldur. Hilafet, babadan oğula geçen bir mülk oldu. **Hz. Hasan** ile verilen "kendimden sonra halife dikmem" sözü de çiğnendi. Medine\'de **Hz. Hüseyin** bu zulme boyun eğmedi. Abdullah b. Ömer, İbn Zübeyr ve Abdurrahman b. Ebi Bekir de razı olmadı. Tahtı bir oğul için ümmete zorla yükledi. Veliahtlık, oğul için ümmete zorlandı.' },
       art,
       cites: [{ side: 'sunni', i: 3 }, { side: 'sunni', i: 5 }],
     },
     {
       by: 'shia',
-      text: { tr: '**Yezid**, şarap içmekle, av köpekleri ve maymunlarla eğlenmekle, fısk ve ahlaksızlıkla anılır. Medinelilerin bu suçlaması tarihlerde aktarılır. **Hz. Hüseyin** bu biatı vermedi. Biat, bağlılık sözüdür. Bu biatı vermek, Peygamber\'in torununu o saltanata boyun eğdirmek demekti. Kerbela, bu veliahtlığın sonucudur.' },
+      text: { tr: '**Yezid**, şarap içmekle, av köpekleri ve maymunlarla eğlenmekle, fısk ve ahlaksızlıkla anılır. Medinelilerin bu suçlaması tarihlerde aktarılır. **Hz. Hüseyin** bu biatı vermedi. Biat, bağlılık sözüdür. Bu biatı vermek, Peygamber\'in torununu o saltanata boyun eğdirmek demekti. Kerbela, bu veliahtlığın sonucudur. Hz. Hüseyin, bu veliahtlığa biat etmedi.' },
       art,
       cites: [{ side: 'shia', i: 1 }],
     },
     {
       by: 'both',
-      text: { tr: 'Receb 60\'ta **Muaviye** öldü. Taht **Yezid**\'e kaldı. Medine valisi **Hz. Hüseyin**\'den biat istedi. O bu biatı vermedi. Medine\'den Mekke\'ye yola çıktı. Hakkı, bir sarhoş saltanat için satmadı. Kerbela, bu yolun ucundaki şehadettir. Bu düzeni baba kurmuştu. Oğul, orada suyu kesti.' },
+      text: { tr: 'Receb 60\'ta **Muaviye** öldü. Taht **Yezid**\'e kaldı. Medine valisi **Hz. Hüseyin**\'den biat istedi. O bu biatı vermedi. Medine\'den Mekke\'ye yola çıktı. Hakkı, bir sarhoş saltanat için satmadı. Kerbela, bu yolun ucundaki şehadettir. Bu düzeni baba kurmuştu. Oğul, orada suyu kesti. Yezid, Kerbelâ\'da suyu kesti.' },
       art,
       cites: [{ side: 'shia', i: 1 }],
     },
