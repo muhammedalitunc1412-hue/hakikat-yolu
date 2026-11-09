@@ -44,8 +44,10 @@ function Back({ onPress }: { onPress: () => void }) {
   );
 }
 
-export function Home({ events, onOpen, onMethod, onDuas, onMaps, onQibla, onImams }: {
+export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, onMaps, onQibla, onImams }: {
   events: HistEvent[];
+  langName: string;
+  onSettings: () => void;
   onOpen: (id: string) => void;
   onMethod: () => void;
   onDuas: () => void;
@@ -65,6 +67,9 @@ export function Home({ events, onOpen, onMethod, onDuas, onMaps, onQibla, onImam
   let shown = 0;
   return (
     <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page} keyboardShouldPersistTaps="handled">
+      <Pressable onPress={onSettings} accessibilityRole="button" style={s.settings}>
+        <Text style={s.settingsText}>{ui('settings')} · {langName}</Text>
+      </Pressable>
       <View style={s.hero}>
         <View style={{ flex: 1 }}>
           <Text style={s.kicker}>{ui('kicker')}</Text>
@@ -601,6 +606,8 @@ export function Method({ onBack }: { onBack: () => void }) {
 
 const s = themedStyles(() => StyleSheet.create({
   page: { paddingHorizontal: 18, paddingTop: TOP, paddingBottom: 56 },
+  settings: { alignSelf: 'flex-end', minHeight: 36, justifyContent: 'center', paddingHorizontal: 12, marginBottom: 6, backgroundColor: C.card, borderRadius: 12 },
+  settingsText: { color: C.gold, fontFamily: font.sans, fontSize: 13, fontWeight: '700' },
   hero: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   logo: { width: 84, height: 84, backgroundColor: 'transparent' },
   kicker: { color: C.gold, fontFamily: font.sans, fontSize: 12, fontWeight: '700', letterSpacing: 2.4 },

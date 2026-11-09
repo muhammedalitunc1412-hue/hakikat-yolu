@@ -111,15 +111,7 @@ export default function App() {
         ) : <>
         <View style={{ flex: 1 }}>
         {route.name === 'home' && (
-          <Pressable onPress={() => {
-            setDraftLanguage(lang);
-            setEditingLanguage(true);
-          }} accessibilityRole="button" style={{ alignSelf: 'flex-end', minHeight: 44, justifyContent: 'center', paddingHorizontal: 14, marginTop: TOP, marginEnd: 16, backgroundColor: C.card, borderRadius: 12 }}>
-            <Text style={{ color: C.gold, fontWeight: '700' }}>{ui('settings')} · {languageOption(lang).name}</Text>
-          </Pressable>
-        )}
-        {route.name === 'home' && (
-          <Home events={EVENTS} onOpen={id => push({ name: 'event', id })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onMaps={() => push({ name: 'maps' })} onQibla={() => push({ name: 'qibla' })} onImams={() => push({ name: 'imams' })} />
+          <Home events={EVENTS} langName={languageOption(lang).name} onSettings={() => { setDraftLanguage(lang); setEditingLanguage(true); }} onOpen={id => push({ name: 'event', id })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onMaps={() => push({ name: 'maps' })} onQibla={() => push({ name: 'qibla' })} onImams={() => push({ name: 'imams' })} />
         )}
         {route.name === 'event' && ev && <EventScreen key={ev.id} ev={ev} onBack={back} onOpenMap={id => push({ name: 'map', id })} onNext={id => push({ name: 'event', id })} />}
         {route.name === 'event' && !ev && <Missing onBack={back} />}
