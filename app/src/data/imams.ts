@@ -28,7 +28,7 @@ export type Imam = {
 export function imamAgeNote(id: string): string {
   const notes: Record<string, string> = {
     ali: 'Kamerî olarak yaklaşık 63, güneş yılıyla yaklaşık 62 diye anılır. Vikîşia zaman çizelgesi güneş yılını about 62 diye yazar. Miladî yıllar çıkarılıp kesin yaş yapılmadı. https://en.wikishia.net/view/Imam_Ali_b._Abi_Talib_(a)',
-    hasan: 'Doğum günü bu turda kilitlenmedi. Vefat 28 Safer 49 (TDV) veya 50 (Vikîşia) diye anılır. Yaklaşık 47 kamerî yıl hesabı, doğum kilitlenmeden kesin diye yazılmaz. https://en.wikishia.net/view/Imam_al-Hasan_al-Mujtaba_(a)',
+    hasan: 'Doğum günü tek güne bağlanmadı. Vefat 28 Safer 49 (TDV) veya 50 (Vikîşia) diye anılır. Yaklaşık 47 kamerî yıl, doğum bağlanmadan kesin yaş diye yazılmaz. https://en.wikishia.net/view/Imam_al-Hasan_al-Mujtaba_(a)',
     huseyin: 'Doğum 4 H, bazıları 3 der. Şehadet 10 Muharrem 61. Kamerî fark yaklaşık 57 yıldır. Güneş yılı biraz daha kısadır. https://en.wikishia.net/view/Imam_al-Husayn_b._Ali_(a)',
     zeynelabidin: 'Doğum 38 H. Vefat 25 Muharrem 95, bazı kayıtlarda 94. Kamerî olarak yaklaşık 57, bir rivayette 58. https://en.wikishia.net/view/Imam_al-Sajjad_(a)',
     bakir: 'Doğum 1 Receb 57, vefat 7 Zilhicce 114. Kamerî fark yaklaşık 57 yıldır. Bu, iki tarihin farkıdır. https://en.wikishia.net/view/Imam_al-Baqir_(a)',
@@ -40,7 +40,7 @@ export function imamAgeNote(id: string): string {
     askeri: 'Doğum 8 Rebîülâhir 232, vefat 8 Rebîülevvel 260. Yaklaşık 28 kamerî yıl diye okunur. Gün farkı yuvarlanmıştır. https://en.wikishia.net/view/Imam_al-Hasan_al-Askari_(a)',
     mehdi: 'Vefat yaşı yoktur. Gaybettedir. Doğum yılı da rivayettir. Yaş uydurulmadı. https://en.wikishia.net/view/Imam_al-Mahdi_(a)',
   };
-  return notes[id] ?? 'Yaş bu turda kilitlenmedi.';
+  return notes[id] ?? 'Yaş ayrıca yazılmadı.';
 }
 
 export const IMAMS: Imam[] = [

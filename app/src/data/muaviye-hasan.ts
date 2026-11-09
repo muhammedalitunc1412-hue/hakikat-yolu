@@ -48,7 +48,7 @@ export const muaviyeHasan: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Medine\'de **Hz. Hasan**\'ın zehirlendiği nakledilir. "Ciğeri eridi" bir hekim teşhisi değildir. Katâde yoluyla, ciğerinin parçalandığını söylediği aktarılır. Bu, kelimesi kelimesine kilitlenmiş bir çeviri değildir. Sünnîlerin hepsi Muaviye\'yi kabul etmiş değildir. İbn Abdilberr bir grubun bunu ona bağladığını nakleder ve kendisi hükmetmez. Sevenleri onu şehit bildi. Taht, bir oğul için boşaltıldı. ==Ehl-i Beyt==\'in büyüğü, sulh masasında kandırılmış, evinde zehirlenmişti. Bu, Kerbela\'dan önceki ilk büyük matemdir.' },
+      text: { tr: 'Medine\'de **Hz. Hasan**\'ın zehirlendiği nakledilir. "Ciğeri eridi" bir hekim sözü değildir. Acının dilidir. Katâde, ciğerinin parçalandığını söylediğini aktarır. Bu, kelimesi kelimesine bir çeviri değildir. İbn Abdilberr, bir grubun zehri Muaviye\'ye bağladığını nakleder ve kendisi hükmetmez. Sevenleri onu şehit bildi. Taht, bir oğul için boşaltıldı. ==Ehl-i Beyt==\'in büyüğü, sulh masasında kandırılmış, evinde zehirlenmişti. Bu, Kerbela\'dan önceki ilk büyük matemdir.' },
       art,
       cites: [{ side: 'shia', i: 0 }],
     },

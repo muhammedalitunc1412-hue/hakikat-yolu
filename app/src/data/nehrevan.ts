@@ -14,7 +14,7 @@ export const nehrevan: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Haricîler Abdullah b. Habbâb\'ı ve hamile karısını öldürdü. **Hz. Ali** orduyu Muaviye seferinden Nehrevan\'a çevirdi. Önce konuşuldu. Sonra çatışıldı. Ölü sayısı bu turda kilitlenmedi. Mızraktaki hile, Hz. Ali\'nin kendi safını da bölmüştü. Nehrevan, Sıffin\'den sonraki adımdır.' },
+      text: { tr: 'Haricîler Abdullah b. Habbâb\'ı ve hamile karısını öldürdü. **Hz. Ali** orduyu Muaviye seferinden Nehrevan\'a çevirdi. Önce konuşuldu. Sonra çatışıldı. Ölü sayısı rivayetlere göre değişir. Mızraktaki hile, Hz. Ali\'nin kendi safını da bölmüştü. Nehrevan, Sıffin\'den sonraki adımdır.' },
       image: 'nehrevan-2',
       art: { bg: 'battle', props: ['flags', 'swords'], actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 70, scale: 6 }] },
       by: 'both',
