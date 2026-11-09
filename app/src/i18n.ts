@@ -1,7 +1,8 @@
 import type { L, Lang } from './types';
+import { applyLocale } from './locales/apply';
 
 let cur: Lang = 'tr';
-export const setLang = (l: Lang) => { cur = l; };
+export const setLang = (l: Lang) => { cur = l; applyLocale(l); };
 export const getLang = (): Lang => cur;
 export const isRtl = (l: Lang = cur) => l === 'ar' || l === 'fa' || l === 'ur';
 
