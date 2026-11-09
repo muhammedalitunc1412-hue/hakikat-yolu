@@ -8,42 +8,42 @@ export const osman: HistEvent = {
   hook: { tr: 'Şikâyetler büyürken Hz. Ali Medine\'de arabuluculuk yaptı. Ardından kendisine biat istendi.', en: 'The man who mediated in Medina as grievances grew, and was then asked for allegiance.' },
   scenes: [
     {
-      text: { tr: 'Halife Osman\'ın Medine\'deki ilk yılları sakin geçti. İkinci yarıda valilikler ve mal, şikâyet konusu oldu. Özellikle **Ümeyyeoğulları** önemli görevlere getirildi. TDV\'nin Osman maddesi, Kûfe\'ye Velîd b. Ukbe ve sonra Saîd b. Âs\'ı, Mısır\'a Abdullah b. Sa\'d\'ı, Basra\'ya Abdullah b. Âmir\'i, kâtipliğe Mervân\'ı yazar. **Muaviye**\'yi Suriye genel valisi yapıp yetkisini Humus, Kınnesrîn ve Filistin\'le büyüttüğü de orada yazar. İlk Şam tayini ondan önce, Ömer dönemindedir. Kayırma, akrabayı işe koymaktır. Hazine, ümmetin ortak malıdır. Ganimetin çoğunun yakınlara ayrıldığı ve valilere büyük bağışlar verildiği şikâyet edilmiştir. Hz. Ali de bunu eleştirmiştir. Daha önceki şura, yani danışma kurulu, **Hz. Ali**\'nin hakkını bir kenara koymuştu. Şimdi görevler ve mal, bu ailenin elinde toplandı. Kuşatma günü Osman, Peygamber\'in verdiği bir sözü hatırlatacaktı. Halk, akrabalık atamalarını konuşuyordu.' },
+      text: { tr: 'Halife Osman\'ın Medine\'deki ilk yılları sakin geçti. İkinci yarıda valilikler ve mal, şikâyet konusu oldu. Özellikle **Ümeyyeoğulları** önemli görevlere getirildi. Kûfe\'ye Velîd b. Ukbe, sonra Saîd b. Âs geldi. Mısır\'a Abdullah b. Sa\'d geldi. Basra\'ya Abdullah b. Âmir geldi. Kâtipliğe Mervân oturdu. **Muaviye**, Suriye genel valisi oldu. Yetkisi Humus, Kınnesrîn ve Filistin\'le büyüdü. İlk Şam tayini ondan önce, Ömer dönemindedir. Kayırma, akrabayı işe koymaktır. Hazine, ümmetin ortak malıdır. Ganimetin çoğunun yakınlara ayrıldığı ve valilere büyük bağışlar verildiği şikâyet edildi. Rüşvet diye kesin bir hüküm yazılmaz. Hz. Ali bu gidişi eleştirdi. Daha önceki şura, onun hakkını bir kenara koymuştu. Şimdi görevler ve mal, bir ailenin elinde toplandı. Halk, akrabalık atamalarını konuşuyordu.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'crowd', x: 34, scale: 7 }, { kind: 'man', x: 66, label: { tr: 'Osman' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Mısır, Kûfe ve Basra\'dan heyetler Medine\'ye geldi. Şikâyet, Emevî atamalarına ve beytülmal denilen ortak hazinenin kullanımına dayanıyordu. Medine halkı bu itirazları yakından duydu. **Hz. Ali** henüz araya girmemişti. Osman\'ı uyarmak ona düşecekti. Hz. Ali, uyarıyı kılıca çevirmedi.' },
+      text: { tr: 'Mısır\'dan, Kûfe\'den ve Basra\'dan heyetler Medine\'ye geldi. Şikâyet, Emevî atamalarına ve beytülmal denilen ortak hazinenin kullanımına dayanıyordu. Medine halkı bu itirazları sokakta duydu. **Hz. Ali** henüz araya girmemişti. Osman\'ı uyarmak ona düşecekti. Uyarıyı kılıca çevirmedi. Seven, heyetleri bir isyanın başı diye okumaz. Önce sözün, sonra kılıcın geldiği bir sıkışmayı görür.' },
       art: { bg: 'caravan', props: ['camels'], actors: [{ kind: 'crowd', x: 40, scale: 9 }, { kind: 'man', x: 76 }] },
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Ali**, Medine\'de Halife Osman\'ı uyardı. Halkın şikâyetini iletti ve tutumunun değişmesini istedi. Mısırlı heyet yaklaşınca, Osman\'ın isteğiyle Hz. Ali ve Muhammed b. Mesleme onlarla konuştu. Şikâyetlerin giderileceği sözüyle heyet döndü. Hz. Ali, kan dökülmesin diye iki tarafın arasında durdu. O, iki tarafın arasına girdi.' },
+      text: { tr: '**Hz. Ali**, Medine\'de Halife Osman\'ı uyardı. Halkın şikâyetini iletti. Tutumunun değişmesini istedi. Mısırlı heyet yaklaşınca, Osman\'ın isteğiyle Hz. Ali ve Muhammed b. Mesleme onlarla konuştu. Şikâyetlerin giderileceği sözü verildi. Heyet döndü. Hz. Ali, kan dökülmesin diye iki tarafın arasında durdu. O, iki tarafın arasına girdi. Seven, aracılığı bir taraf tutma diye okumaz. Kan durulsun diye söylenen sözü görür.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 38, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 70, label: { tr: 'Osman' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Anlaşma bozuldu. **Hz. Ali**, Mervan\'ın Osman\'ı zora sokacağını söyledi ve ondan uzak durmasını öğütledi. Bir mektup da anılır. Mektubu kimin yazdığı konuşulur. Öğüt tutulmadı. İş, Medine\'de kuşatmaya vardı. Ev, Medine\'de günlerce kuşatıldı.' },
+      text: { tr: 'Anlaşma bozuldu. **Hz. Ali**, Mervan\'ın Osman\'ı zora sokacağını söyledi. Ondan uzak durmasını öğütledi. Bir mektup da anılır. Mektubu kimin yazdığı konuşulur. Kesin bir kalem bağlanmaz. Öğüt tutulmadı. İş, Medine\'de kuşatmaya vardı. Ev, günlerce kuşatıldı. Seven, mektubu bir hüküm diye kilitlemez. Tutulmayan öğüdün, evi nasıl sardığını görür.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'ali', x: 36, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 64, label: { tr: 'Osman' } }, { kind: 'man', x: 84, label: { tr: 'Mervan' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Medine\'de kuşatma başladı. Halife Osman evine çekildi. Su ve yiyecek zorlaştı. Osman, "Peygamber benden bir söz aldı, ona sabrediyorum" dedi. **Hz. Ali** ise hâlâ kanın durmasını istiyordu. Hz. Ali, kan dursun diye aracı kaldı.' },
+      text: { tr: 'Medine\'de kuşatma başladı. Halife Osman evine çekildi. Su ve yiyecek zorlaştı. Osman, "Peygamber benden bir söz aldı, ona sabrediyorum" dedi. **Hz. Ali** ise hâlâ kanın durmasını istiyordu. Aracı kaldı. Kapı kapalıydı. Söz açıktı. Seven, kuşatmayı bir intikam diye okumaz. Hz. Ali\'nin, kan dursun diye neden hâlâ arada durduğunu görür.' },
       art: { bg: 'night', props: ['stars', 'moon'], actors: [{ kind: 'crowd', x: 30, scale: 8 }, { kind: 'man', x: 74, label: { tr: 'Osman' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Kuşatma sürerken, rivayete göre **Hz. Ali**, **Hz. Hasan** ile **Hz. Hüseyin**\'i Osman\'ın evini korumaları için gönderdi. Suyu da ulaştırmaya çalıştığı anlatılır. Hz. Hasan\'ın yaralandığı da söylenir. Gadir\'de hakkı ilan edilen Hz. Ali, yine de Osman\'ın kanını istemiyordu. O, isyancıların kılıcını onaylamadı.' },
+      text: { tr: 'Kuşatma sürerken, rivayete göre **Hz. Ali**, **Hz. Hasan** ile **Hz. Hüseyin**\'i Osman\'ın evini korumaları için gönderdi. Suyu da ulaştırmaya çalıştığı anlatılır. Hz. Hasan\'ın yaralandığı da söylenir. Gadir\'de hakkı ilan edilen Hz. Ali, yine de Osman\'ın kanını istemiyordu. İsyancıların kılıcını onaylamadı. Seven, bu gönderişi bir taraf değiştirme diye okumaz. Hakkı başkasına verilmiş birinin, yine de kan istemediğini görür.' },
       art: { bg: 'city', actors: [{ kind: 'hasan', x: 32, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 48, label: { tr: 'Hz. Hüseyin' } }, { kind: 'ali', x: 68, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 86, label: { tr: 'Osman' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Halife Osman, 35 H Zilhicce\'de Medine\'de öldürüldü. 18 Zilhicce 35\'te öldürüldü. Hilafeti yaklaşık on iki yıl sürmüştü. **Hz. Ali** hutbesinde der: öldürmesi için emir vermiş olsaydı katil sayılırdı. İnsanları ondan alıkoymuş olsaydı yardımcısı olurdu. Hükmü Allah\'a bırakır. Hz. Ali bu öldürmede kılıç kullanmadı. Bu kanın yanında da yer almadı. Cenaze, Bakî\'ye bu ayrılıkla gitti.' },
+      text: { tr: 'Halife Osman, 18 Zilhicce 35\'te Medine\'de öldürüldü. Hilafeti yaklaşık on iki yıl sürmüştü. **Hz. Ali** hutbesinde der: öldürmesi için emir vermiş olsaydı katil sayılırdı. İnsanları ondan alıkoymuş olsaydı yardımcısı olurdu. Hükmü Allah\'a bırakır. Hz. Ali bu öldürmede kılıç kullanmadı. Bu kanın yanında da yer almadı. Cenaze, Bakî\'ye bu ayrılıkla gitti. Seven, cümleyi bir savunma diye okumaz. Ne kılıç çeken, ne de kanı isteyen bir duruş görür.' },
       art: { bg: 'dawn', actors: [{ kind: 'crowd', x: 34, scale: 7 }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Osman\'ın ardından Medine bir süre yönetimsiz kaldı. Halk Mescid-i Nebevî\'de **Hz. Ali**\'nin yanına koştu. O, bu ağır sorumluluğu bilinçle üstlendi. Biat, bağlılık sözüdür. Biat orada alındı. Devraldığı devlet dertliydi. Kendinden önceki halifelerin döneminden kalan hatalar, adaletsizlikler, akraba kayırmacılığı, haksız dağıtılmış mallar ve bozuk valiler duruyordu. İlk işi adaleti kurmak oldu. Haksız dağıtılan malları beytülmale geri almaya, bozuk valileri görevden almaya başladı. Bu adalet kararlılığı, Cemel ve Sıffin\'deki muhalefeti doğuracaktı. Talha ile Zübeyr\'in gönlü bu biatta tam durmayacaktı. Talha ile Zübeyr, biatı tam tutmadı.' },
+      text: { tr: 'Osman\'ın ardından Medine bir süre yönetimsiz kaldı. Halk, Mescid-i Nebevî\'de **Hz. Ali**\'nin yanına koştu. O, bu ağır sorumluluğu bilinçle üstlendi. Biat, bağlılık sözüdür. Biat orada alındı. Devraldığı devlet dertliydi. Akraba kayırmacılığı, haksız dağıtılmış mallar ve bozuk valiler duruyordu. İlk işi adaleti kurmak oldu. Haksız malları beytülmale geri almaya başladı. Bozuk valileri görevden aldı. Bu kararlılık, Cemel ve Sıffin\'deki muhalefeti doğuracaktı. Talha ile Zübeyr, biatı tam tutmadı. Seven, biatı bir taht diye okumaz. Gadir\'deki hakkın, yıllar sonra şehrin kendi ayağıyla geldiği günü görür.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'crowd', x: 32, scale: 9 }, { kind: 'man', x: 56, label: { tr: 'Talha' } }, { kind: 'ali', x: 78, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },

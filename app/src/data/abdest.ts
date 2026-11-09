@@ -10,42 +10,42 @@ export const abdest: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Mâide 6, abdestin uzuvlarını sayar: yüz, dirseklere kadar eller, baştan bir kısma mesh ve topuklara kadar ayaklar. "Ayaklarınız" kelimesi iki farklı harekeyle okunmuştur. İki okunuş da kıraat geleneğinde bilinir. Câferî mektep, bu ayeti ayaklara mesh olarak okur. Mâide 6, ayak için mesh okunuşunu taşır.' },
+      text: { tr: 'Mâide 6, abdestin uzuvlarını sayar. Yüz vardır. Dirseklere kadar eller vardır. Baştan bir kısma mesh vardır. Topuklara kadar ayaklar vardır. "Ayaklarınız" kelimesi iki farklı harekeyle okunmuştur. İki okunuş da kıraat geleneğinde bilinir. Câferî mektep, bu ayeti ayaklara mesh olarak okur. Okuyuş, ayağın yıkanmasını değil, meshini duyurur.' },
       art: { bg: 'dawn', props: ['scroll'], actors: [{ kind: 'prophet', x: 50, label: { tr: 'Hz. Peygamber' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Üstün okunuşta kelime yıkanan uzuvlara, esre okunuşunda yanındaki "başlarınız" kelimesine bağlanır gibi durur. Birinci okunuş yıkamaya, ikincisi meshe daha yakındır. İki okunuşun da yedi kıraat içinde olduğu aktarılır. Câferî mektep, esre okunuşu ayaklara mesh emri olarak sürdürür. Esre, ayaklara mesh diye okunur.' },
+      text: { tr: 'Üstün okunuşta kelime, yıkanan uzuvlara bağlanır gibi durur. Esre okunuşunda yanındaki "başlarınız" kelimesine yaklaşır. Birinci okunuş yıkamaya, ikincisi meshe daha yakındır. İki okunuşun da yedi kıraat içinde olduğu aktarılır. Câferî mektep, esre okunuşu ayaklara mesh emri olarak sürdürür. Esre, ayağı başın yanına koyar. Mesh, o yakınlıktan okunur.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 35, label: { tr: 'Okuyucu' } }, { kind: 'man', x: 65, label: { tr: 'Dilbilgisi âlimi' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Ehl-i Beyt imamlarından gelen rivayetlerde mesh, ayağın üstüne, parmak uçlarından topuğa kadar yapılır; ayak yıkanmaz. Tûsî\'nin Tehzîb\'i ve Kuleynî\'nin el-Kâfî\'si bu görüşün kaynakları arasında anılır. Metinler bu çalışmada açılamadı. Câferî mektep, Mâide 6\'yı bu rivayetlerle ayak meshi olarak uygular. Erken rivayetler, mesh uygulamasını anlatır.' },
+      text: { tr: 'Ehl-i Beyt imamlarından gelen rivayetlerde mesh, ayağın üstüne, parmak uçlarından topuğa kadar yapılır. Ayak yıkanmaz. Tûsî\'nin Tehzîb\'i ve Kuleynî\'nin el-Kâfî\'si bu görüşün kaynakları arasında anılır. Câferî mektep, Mâide 6\'yı bu rivayetlerle ayak meshi olarak uygular. Erken rivayetler, mesh uygulamasını anlatır. Uygulama, bir tercih değil, bir okuyuştur.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 40, pose: 'sit', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 66, pose: 'sit', label: { tr: 'Öğrenci' } }] },
     },
     {
       by: 'sunni',
-      text: { tr: 'Ebu Hureyre, Peygamber\'in "Topuklara ateşten vay" dediğini aktarır (Buhari, Sahih, No. 165). Aynı uyarı Abdullah b. Amr üzerinden de gelir (Müslim, Sahih). Halife Osman\'ın abdest tarifinde ayakların yıkandığı da geçer (Buhari, Sahih; Müslim, Sahih). Câferî mektep bu sözleri, ayağın iyice temizlenmesi uyarısı olarak okur ve **Mâide 6**\'yı ayak meshi olarak uygulamayı sürdürür. Sünni okuyuş, ayağın yıkanmasını öne alır.' },
+      text: { tr: 'Ebu Hureyre, Peygamber\'in "Topuklara ateşten vay" dediğini aktarır. Buhari, Sahih, No. 165. Aynı uyarı Abdullah b. Amr üzerinden de gelir. Müslim, Sahih. Halife Osman\'ın abdest tarifinde ayakların yıkandığı da geçer. Buhari ve Müslim. Câferî mektep bu sözleri, ayağın iyice temizlenmesi uyarısı olarak okur ve **Mâide 6**\'yı ayak meshi olarak uygulamayı sürdürür. Sünni okuyuş, ayağın yıkanmasını öne alır. Aynı uyarı, iki kapıdan iki uygulamaya gider.' },
       art: { bg: 'oasis', props: ['well', 'palms'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'Abdest alan' } }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }] },
     },
     {
       by: 'sunni',
-      text: { tr: 'İbn Mace\'de Rubeyyi\' bint Muavviz, Peygamber\'in ayaklarını yıkadığını anlatınca İbn Abbas, insanların yıkamakta ısrar ettiğini, kendisinin ise Allah\'ın kitabında yalnızca mesh bulduğunu söyler. Rivayetin senedi zayıf sayılmış, İbn Abbas\'ın sözü Elbânî tarafından münker bulunmuştur. Mesh görüşü Hz. Ali, Enes, Hasan Basrî, İkrime, Şa\'bî ve Ebü\'l-Âliye\'ye de nispet edilir. Taberî için mesh ile yıkama arasında muhayyerlik, Cübbâî için mesh görüşü aktarılır. İslamQA bu nakillerden yalnız Hz. Ali, İbn Abbas ve Enes\'inkini ele alır. Câferî mektep, ayak meshi uygulamasını bu erken okuyuşla sürdürür. Câferî uygulama, meshte kararlıdır.' },
+      text: { tr: 'İbn Mace\'de Rubeyyi\' bint Muavviz, Peygamber\'in ayaklarını yıkadığını anlatınca İbn Abbas, insanların yıkamakta ısrar ettiğini, kendisinin ise Allah\'ın kitabında yalnızca mesh bulduğunu söyler. Rivayetin senedi zayıf sayılmış, İbn Abbas\'ın sözü Elbânî tarafından münker bulunmuştur. Mesh görüşü Hz. Ali, Enes, Hasan Basrî, İkrime, Şa\'bî ve Ebü\'l-Âliye\'ye de nispet edilir. Taberî için mesh ile yıkama arasında muhayyerlik, Cübbâî için mesh görüşü aktarılır. Câferî mektep, ayak meshi uygulamasını bu erken okuyuşla sürdürür. Kitapta mesh bulanlar, meshte kararlıdır.' },
       art: { bg: 'city', actors: [{ kind: 'woman', x: 32, label: { tr: 'Rubeyyi\'' } }, { kind: 'man', x: 66, label: { tr: 'İbn Abbas' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Câferî tefsirde esre okunuşu, ayetin akışına en uygun okunuş sayılır. Tabâtabâî ve Mekârim Şîrâzî de bu okunuşu tercih eder. Yanındaki kelimenin esre vermesi, cerr-i civâr, açıklamasına göre arada "ve" varken komşuluk etkisi dil açısından zayıf görülür. Mesh ile yıkama iki ayrı fiildir. Mesh yıkamayı içine alsaydı baş için de yıkama yeterli olurdu. Câferî mektep bu ayrımı ayak meshi olarak uygular. Fark, bir kelimenin okunuşundan doğar.' },
+      text: { tr: 'Câferî tefsirde esre okunuşu, ayetin akışına en uygun okunuş sayılır. Tabâtabâî ve Mekârim Şîrâzî de bu okunuşu tercih eder. Yanındaki kelimenin esre vermesi, cerr-i civâr açıklamasına göre, arada "ve" varken komşuluk etkisi dil açısından zayıf görülür. Mesh ile yıkama iki ayrı fiildir. Mesh yıkamayı içine alsaydı baş için de yıkama yeterli olurdu. Câferî mektep bu ayrımı ayak meshi olarak uygular. Fark, bir kelimenin harekesinden doğar.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 30, label: { tr: 'Müfessir' } }, { kind: 'man', x: 70, label: { tr: 'Dilbilgisi âlimi' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Sünni kaynaklarda mest üzerine mesh, olağan durumda da caiz görülür. Câferî fıkıhta mesh çıplak ayağa yapılır; mest üzerine mesh yalnızca takiyye veya zorunlu durumda caizdir. Tabâtabâî, bazı rivayetlere dayanarak Peygamber\'in önceki mest üstü meshini Mâide 6\'nın neshettiğini yazar. Mesh üstü mesh, ayrı bir tartışmadır.' },
+      text: { tr: 'Sünni kaynaklarda mest üzerine mesh, olağan durumda da caiz görülür. Câferî fıkıhta mesh çıplak ayağa yapılır. Mest üzerine mesh, yalnızca takiyye veya zorunlu durumda caizdir. Tabâtabâî, bazı rivayetlere dayanarak Peygamber\'in önceki mest üstü meshini Mâide 6\'nın neshettiğini yazar. Mesh üstü mesh, ayrı bir kapıdır. Çıplak ayağın meshi, Câferî uygulamanın aslıdır.' },
       art: { bg: 'caravan', props: ['camels'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'Yolcu' } }, { kind: 'man', x: 68, label: { tr: 'Fakih' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Abdestte ayak, iki okunuşa göre iki uygulamaya açılır. Câferî fıkıh ayağın üstüne mesh yapar ve bunu ayetin ve Ehl-i Beyt rivayetlerinin okunuşu sayar. Sünni mezheplerin çoğunluğu ayakları yıkar. İkisi de ayet ve rivayetlerden delil getirir. Fark, okunuş, rivayet değerlendirmesi ve dil tercihindedir. İki mektep, aynı ayeti farklı uygular.' },
+      text: { tr: 'Abdestte ayak, iki okunuşa göre iki uygulamaya açılır. Câferî fıkıh ayağın üstüne mesh yapar ve bunu ayetin ve Ehl-i Beyt rivayetlerinin okunuşu sayar. Sünni mezheplerin çoğunluğu ayakları yıkar. İkisi de ayet ve rivayetlerden delil getirir. Fark, okunuşta, rivayet değerlendirmesinde ve dil tercihindedir. Aynı ayet, iki mektepte iki abdest olur.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'crowd', x: 36, scale: 0.7 }, { kind: 'crowd', x: 66, scale: 0.7 }] },
     },
   ],
