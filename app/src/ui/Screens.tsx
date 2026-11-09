@@ -301,7 +301,8 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   const sc = useScrollMemory('event:' + ev.id);
   const width = usePageWidth();
   const [idx, setIdx] = useState(() => rememberedScene('event:' + ev.id));
-  const [open, setOpen] = useState<Panel[]>([]);
+  const [open, setOpen] = useState<Panel[]>(() => (isStory(ev.id) ? [] : ['shia']));
+  const [srcOpen, setSrcOpen] = useState({ shia: true, sunni: false });
   const listRef = useRef<FlatList<StoryPage>>(null);
   const toggle = (p: Panel) => setOpen(o => (o.includes(p) ? o.filter(x => x !== p) : [...o, p]));
   const has = (p: Panel) => open.includes(p);
@@ -394,20 +395,15 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
             <View style={{ width }}>
             <View collapsable={false} onLayout={e => setPageHeight(index, e.nativeEvent.layout.height)} style={{ paddingHorizontal: 16, paddingTop: 8 }}>
               <Text style={[s.catTitle, align()]}>Bu olay için bütün kaynaklar</Text>
-              <Text style={[s.catSub, align()]}>Bu hikâyedeki her sahnenin dayandığı kitaplar bir arada.</Text>
-              <Text style={[s.vLabel, { color: C.shia }]}>{ui('shiaSources')}</Text>
-              {ev.shia.length ? ev.shia.map((x, i) => <SourceCard key={'h' + i} src={x} tone={C.shia} />) : <Text style={s.dim}>{ui('none')}</Text>}
-              <Text style={[s.vLabel, { color: C.sunni }]}>{ui('sunniSources')}</Text>
-              {ev.sunni.length ? ev.sunni.map((x, i) => <SourceCard key={'s' + i} src={x} tone={C.sunni} />) : <Text style={s.dim}>{ui('none')}</Text>}
-              {nxt && onNext && (
-                <Pressable onPress={() => onNext(nxt.id)} accessibilityRole="button" style={({ pressed }) => [s.nextStory, pressed && s.pressed, webHit]}>
-                  <View style={{ flex: 1 }}>
-                    <Text style={s.nextKicker}>SONRAKİ HİKÂYE</Text>
-                    <Text style={s.nextTitle}>{tx(nxt.title)}</Text>
-                  </View>
-                  <Chevron color={C.ink} />
-                </Pressable>
-              )}
+              <Text style={[s.catSub, align()]}>Şii kaynaklar açık durur. Sünni kaynaklar kapalıdır; başlığa dokununca açılır.</Text>
+              <Pressable onPress={() => setSrcOpen(v => ({ ...v, shia: !v.shia }))} accessibilityRole="button" accessibilityState={{ expanded: srcOpen.shia }} style={[s.srcFold, { borderColor: C.shia }, srcOpen.shia && { backgroundColor: C.shia }, webHit]}>
+                <Text style={[s.srcFoldText, { color: srcOpen.shia ? C.ink : C.shia }]}>{ui('shiaSources')} ({ev.shia.length}) {srcOpen.shia ? '▲' : '▼'}</Text>
+              </Pressable>
+              {srcOpen.shia && (ev.shia.length ? ev.shia.map((x, i) => <SourceCard key={'h' + i} src={x} tone={C.shia} />) : <Text style={s.dim}>{ui('none')}</Text>)}
+              <Pressable onPress={() => setSrcOpen(v => ({ ...v, sunni: !v.sunni }))} accessibilityRole="button" accessibilityState={{ expanded: srcOpen.sunni }} style={[s.srcFold, { borderColor: C.sunni }, srcOpen.sunni && { backgroundColor: C.sunni }, webHit]}>
+                <Text style={[s.srcFoldText, { color: srcOpen.sunni ? C.ink : C.sunni }]}>{ui('sunniSources')} ({ev.sunni.length}) {srcOpen.sunni ? '▲' : '▼'}</Text>
+              </Pressable>
+              {srcOpen.sunni && (ev.sunni.length ? ev.sunni.map((x, i) => <SourceCard key={'s' + i} src={x} tone={C.sunni} />) : <Text style={s.dim}>{ui('none')}</Text>)}
             </View>
             </View>
           ) : (
@@ -496,6 +492,15 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
           </>
         )}
       </ScrollView>
+      {pages[idx]?.kind === 'sources' && nxt && onNext && (
+        <Pressable onPress={() => onNext(nxt.id)} accessibilityRole="button" accessibilityLabel={ui('nextEvent')} style={({ pressed }) => [s.nextBar, pressed && s.pressed, webHit]}>
+          <View style={{ flex: 1 }}>
+            <Text style={s.nextKicker}>{ui('nextEvent').toLocaleUpperCase('tr')}</Text>
+            <Text style={s.nextTitle} numberOfLines={2}>{tx(nxt.title)}</Text>
+          </View>
+          <Chevron color={C.ink} />
+        </Pressable>
+      )}
     </View>
   );
 }
@@ -568,7 +573,7 @@ export function Method({ onBack }: { onBack: () => void }) {
   const sc = useScrollMemory('method');
   const paragraphs = [
     'Bu uygulama Şii bakışını esas alır. Tarihî olaylar sahne sahne hikâye gibi anlatılır. Her sahnenin altında, o sahnenin dayandığı kaynak küçük bir düğmeyle açılır.',
-    'Hikâyenin son sayfası "Bu olay için bütün kaynaklar"dır. Oradan bir sonraki hikâyeye geçilir. Mezhep ve ibadet farkları gibi öğretici sayfalar sahne romanı değildir; kaynakları sayfanın altındaki düğmelerde durur.',
+    'Hikâyenin son sayfası "Bu olay için bütün kaynaklar"dır. Şii kaynaklar açık, Sünni kaynaklar kapalı durur. Sonraki olay düğmesi o sayfanın altında, kaydırmadan durur. Mezhep ve ibadet farkları gibi öğretici sayfalar sahne romanı değildir; kaynakları sayfanın altındaki düğmelerde durur.',
     '✓ Doğrulandı: Metin ve numara kaynağından okunmuştur. ⚠ Kontrol edilmeli: Numara ya da sayfa, yayın öncesinde birincil kaynaktan teyit edilecektir.',
     '"Ayrılıklar" düğmesi, iki geleneğin aynı olayı nasıl yorumladığını ya da bir rivayeti hangi kaynakların kabul edip etmediğini gösterir.',
     '"Düşünelim" bölümündeki sorular, kaynaklarda yazılanlardan hareketle okuyucuyu kendi sonucunu kurmaya davet eder.',
@@ -618,7 +623,9 @@ const s = themedStyles(() => StyleSheet.create({
   catDots: { flexDirection: 'row', justifyContent: 'center', gap: 5, marginTop: 10 },
   citeBtn: { alignSelf: 'flex-start', borderWidth: 1, borderColor: C.lineStrong, borderRadius: 12, paddingHorizontal: 12, paddingVertical: 8 },
   citeBtnText: { color: C.gold, fontFamily: font.sans, fontSize: 13, fontWeight: '800' },
-  nextStory: { flexDirection: 'row', alignItems: 'center', gap: 12, marginTop: 16, backgroundColor: C.gold, borderRadius: 16, padding: 14, minHeight: 72 },
+  srcFold: { marginTop: 12, borderWidth: 1.5, borderRadius: 16, paddingVertical: 14, paddingHorizontal: 14, minHeight: 52, justifyContent: 'center' },
+  srcFoldText: { fontFamily: font.sans, fontWeight: '800', fontSize: 15, lineHeight: 20 },
+  nextBar: { flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: C.gold, paddingHorizontal: 16, paddingVertical: 12, minHeight: 72 },
   nextKicker: { color: C.ink, fontFamily: font.sans, fontSize: 11, fontWeight: '800', letterSpacing: 1 },
   nextTitle: { color: C.ink, fontFamily: font.serif, fontSize: 18, fontWeight: '700', marginTop: 2 },
   card: { flexDirection: 'row', gap: 12, alignItems: 'flex-start', backgroundColor: C.card, borderRadius: 18, padding: 14, marginBottom: 10, borderWidth: 1, borderColor: C.line },
