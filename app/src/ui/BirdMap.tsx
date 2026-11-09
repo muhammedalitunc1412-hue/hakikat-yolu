@@ -1,5 +1,5 @@
 import React, { useEffect, useId, useMemo, useRef, useState } from 'react';
-import { AccessibilityInfo, Image, Platform, StyleSheet, Text, View, type ImageSourcePropType } from 'react-native';
+import { AccessibilityInfo, Image, Platform, Pressable, StyleSheet, Text, View, type ImageSourcePropType } from 'react-native';
 import Svg, {
   Circle, Defs, G, Line, Path, Polyline, RadialGradient, Rect, Stop, Text as SvgText,
 } from 'react-native-svg';
@@ -560,7 +560,16 @@ export function MapZoom({
     return () => el.removeEventListener('wheel', onWheel);
   }, [resetKey]);
 
-  return (
+  // +/− düğmeleri: kadrajın merkezine göre yakınlaştırır (fare/dokunmatik çimdik yoksa da çalışır)
+  const zoomBy = (f: number) => {
+    flyGen.current += 1;
+    const sCur = g.current.s || 1;
+    const next = Math.max(1, Math.min(maxRef.current, sCur * f));
+    const k = next / sCur;
+    applyRef.current(next, g.current.x * k, g.current.y * k);
+  };
+
+  const mapView = (
     <View
       ref={host}
       style={{ width, height, overflow: 'hidden' }}
@@ -627,7 +636,29 @@ export function MapZoom({
       </View>
     </View>
   );
+  const canIn = view.s < maxScale - 0.01;
+  const canOut = view.s > 1.01;
+  return (
+    <View style={{ width, height }}>
+      {mapView}
+      <View style={zs.box} pointerEvents="box-none">
+        <Pressable onPress={() => zoomBy(1.6)} disabled={!canIn} accessibilityRole="button" accessibilityLabel="Yakınlaştır" style={[zs.btn, !canIn && zs.off]}>
+          <Text style={zs.t}>+</Text>
+        </Pressable>
+        <Pressable onPress={() => zoomBy(1 / 1.6)} disabled={!canOut} accessibilityRole="button" accessibilityLabel="Uzaklaştır" style={[zs.btn, !canOut && zs.off]}>
+          <Text style={zs.t}>−</Text>
+        </Pressable>
+      </View>
+    </View>
+  );
 }
+
+const zs = StyleSheet.create({
+  box: { position: 'absolute', right: 12, bottom: 44, gap: 8 },
+  btn: { width: 44, height: 44, borderRadius: 22, backgroundColor: 'rgba(8,18,15,0.82)', borderWidth: 1, borderColor: 'rgba(228,197,106,0.55)', alignItems: 'center', justifyContent: 'center' },
+  off: { opacity: 0.35 },
+  t: { color: '#f6f1e6', fontSize: 24, lineHeight: 26, fontWeight: '700', marginTop: -2 },
+});
 
 export function BirdMap({
   width,

@@ -9,37 +9,37 @@ export const meysem: HistEvent = {
   hook: { tr: 'Hz. Ali, hurma satan dostuna asılacağı ağacı önceden gösterdi. O ağaç, hicri 60\'ta dar ağacı oldu.', en: 'Hz. Ali showed his friend the palm on which he would be hanged. In 60 AH that tree became the gallows.' },
   scenes: [
     {
-      text: { tr: 'Kûfe\'de bir hurma satıcısı vardı. Adı **Meysem et-Temmâr**\'dı. Azatlı bir köleydi. **Hz. Ali**\'nin en yakın dostlarındandı. İlmini ondan almıştı. Çarşıda hurma dizer, Hz. Ali\'nin adını sevgiyle anardı. Ehl-i Beyt\'in kapısı, bu tezgâhın önünde de açıktı. Hurma tezgâhı, Kûfe\'de bir sevgi yeri oldu.' },
+      text: { tr: '**Meysem et-Temmâr**, Kûfe çarşısında hurma satarak geçimini sağlayan azatlı bir köleydi. **Hz. Ali**\'ye yakınlığıyla tanınır, ondan öğrendiklerini çevresindekilere aktarırdı. Yıllar sonra İbn Ziyâd Kûfe\'ye vali olduğunda, Meysem\'in bu bağlılığı başına geleceklerin sebebi olacaktı.' },
       art: { bg: 'city', props: ['palms', 'sun'], actors: [{ kind: 'man', x: 42, label: { tr: 'Meysem' } }, { kind: 'ali', x: 70, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }],
     },
     {
-      text: { tr: 'Bir gün **Hz. Ali**, **Meysem**\'i çağırdı. Ehl-i Beyt rivayetinde ona sonrasını haber verdi. "Benden sonra Ehl-i Beyt sevgisi yüzünden asılacaksın. Dilin kesilecek." Asılacağı hurma ağacını da gösterdi. Meysem o ağacın yanına gider, namaz kılar, köküne su verirdi. Ağaç, henüz gölgeydi. O, gölgesinde bekleyen ölümü biliyordu.' },
+      text: { tr: 'Rivayete göre **Hz. Ali**, bir gün **Meysem**\'e Ehl-i Beyt\'e bağlılığı yüzünden öldürüleceğini söyledi ve asılacağı hurma ağacını gösterdi. Meysem sonradan o ağacın yanına uğrar, orada namaz kılar ve kökünü sulardı. Kûfe\'de her gün yanından geçilen bir hurma ağacı, onun için artık nasıl bir sınavla karşılaşacağını hatırlatan bir yerdi.' },
       art: { bg: 'oasis', props: ['palms', 'sun'], actors: [{ kind: 'ali', x: 36, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 64, pose: 'sit', label: { tr: 'Meysem' } }] },
       by: 'shia',
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 2 }],
     },
     {
-      text: { tr: '**Hz. Ali** şehit olunca **Muaviye** minberlerden ona lanet ettirdi. Cuma hutbesi sövgüyle açıldı. Bu zulme dayanamayan **Hucr b. Adî** ve arkadaşları öldürüldü. Hz. Ali dostları Kûfe\'de susmaya zorlandı. **Meysem** susmadı. **Hz. Ali**\'nin hakkını savunmaktan vazgeçmedi. ==Ehl-i Beyt==\'in faziletini anlatmayı bırakmadı.' },
+      text: { tr: '**Hz. Ali**\'nin şehadetinden sonra bazı beldelerde hutbelerde ona sövülmeye başlandı. Bu uygulamaya karşı çıkan **Hucr b. Adî** ile arkadaşları öldürüldü. Kûfe\'de Hz. Ali\'yi açıkça savunmanın bedeli ağırlaşırken **Meysem**, çarşıda ve çevresinde Ehl-i Beyt\'i anlatmayı sürdürdü.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'man', x: 30, pose: 'raise', label: { tr: 'Meysem' } }, { kind: 'crowd', x: 68, scale: 6 }] },
       by: 'shia',
       cites: [{ side: 'shia', i: 1 }],
     },
     {
-      text: { tr: 'Hicri 60\'tı. **Muaviye** ölmüş, kurduğu zulüm düzeni ayaktaydı. **Yezid**\'in Kûfe valisi **Ubeydullah b. Ziyâd**, **Meysem**\'i yakalattı. Ondan teberri istedi. Teberri, **Hz. Ali**\'den beri olduğunu söylemektir. Meysem reddetti. Hz. Ali\'nin adını inkâr etmedi. Zindan, bir hurma tezgâhının sahibine dar geldi.' },
+      text: { tr: 'Hicrî 60 yılında **Yezid**\'in Kûfe valisi **Ubeydullah b. Ziyâd**, **Meysem**\'i yakalattı. Meysem\'den **Hz. Ali** ile bağını reddettiğini söylemesi istendi. Bu sözle canını kurtarabilirdi, fakat kendisinden isteneni söylemedi. Çarşıda yıllarca açıkça anlattığı bağlılığı, bu kez valinin huzurunda savunmak zorunda kaldı.' },
       art: { bg: 'interior', actors: [{ kind: 'man', x: 36, label: { tr: 'Meysem' } }, { kind: 'man', x: 70, label: { tr: 'İbn Ziyâd' } }] },
       by: 'shia',
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }],
     },
     {
-      text: { tr: '**Meysem**, **Hz. Ali**\'nin yıllar önce gösterdiği hurma ağacına asıldı. Dar ağacında bile halka ==Ehl-i Beyt==\'in faziletini anlattı. Emevilerin zulmünü saydı. **İbn Ziyâd** bunu duyunca ağzına gem vurdurdu. Dilini kestirdi. Meysem orada şehit edildi. Hz. Ali\'nin haber verdiği gibi oldu. Asılma, dil ve ağaç, söylediği yerdeydi.' },
+      text: { tr: 'Rivayete göre **Meysem**, **Hz. Ali**\'nin yıllar önce gösterdiği hurma ağacına asıldı. Oradan kendisini görmeye gelenlere seslenerek **Ehl-i Beyt**\'in faziletlerinden söz etti. Meysem\'in konuşmayı sürdürdüğünü öğrenen **İbn Ziyâd**, onu susturmak için dilinin kesilmesini emretti. Meysem orada öldürüldü. Yıllarca kökünü suladığı ağaç, onun son sözlerinin duyulduğu yer olarak hatırlandı.' },
       art: { bg: 'dawn', props: ['palms'], actors: [{ kind: 'man', x: 48, label: { tr: 'Meysem' } }, { kind: 'crowd', x: 74, scale: 5 }] },
       by: 'shia',
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }, { side: 'shia', i: 2 }],
     },
     {
-      text: { tr: 'Aynı düzen, bir yıl sonra Kerbela\'da suyu kesecekti. **Hz. Hüseyin**, **Yezid**\'e biat etmedi. **Meysem**\'in asıldığı Kûfe, o orduyu da çıkaran şehirdi. Hurma ağacının altında biten söz, Fırat\'ın kıyısında sürecekti. Kûfe, bir yıl sonra Kerbelâ ordusunu da çıkardı.' },
+      text: { tr: '**Meysem**\'in öldürüldüğü Kûfe, kısa süre sonra **Hz. Hüseyin**\'i mektuplarla davet eden şehirdi. Ancak vali **İbn Ziyâd**, davetin arkasındaki desteği dağıtmak için harekete geçti. Kûfe çarşısında bir hurma satıcısının karşılaştığı baskı, Hz. Hüseyin\'in elçisi **Müslim b. Akîl** şehre geldiğinde daha geniş bir çevreyi kuşatacaktı.' },
       art: { bg: 'dune-dusk', props: ['palms', 'flags'], actors: [{ kind: 'crowd', x: 30, scale: 5 }, { kind: 'husayn', x: 72, label: { tr: 'Hz. Hüseyin' } }] },
       by: 'shia',
       cites: [{ side: 'shia', i: 1 }],

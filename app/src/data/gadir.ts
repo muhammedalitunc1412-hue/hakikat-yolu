@@ -8,37 +8,37 @@ export const gadir: HistEvent = {
   hook: { tr: 'Çölün ortasında kafile durdu. Bir el havaya kalktı. O gün Hz. Ali\'nin velayeti ilan edildi.', en: 'A caravan halted in the desert, and a raised hand.' },
   scenes: [
     {
-      text: { tr: 'Veda Haccı bitmişti. Peygamber binlerce insanla Mekke\'den Medine\'ye dönüyordu. **Hz. Ali** Yemen\'den gelmiş, hacda ona katılmıştı. Hayber\'de sancak ona verilmiş, Tebük\'te Harun benzetmesi söylenmişti. Sıra, bu yerin herkesin önünde ilanına gelmişti. Kafile, Mekke\'den Medine\'ye dönüyordu.' },
+      text: { tr: 'Veda Haccı\'nın ardından **Hz. Peygamber**, hacılarla birlikte Mekke\'den Medine\'ye dönüyordu. Yemen\'den gelerek hacda ona katılan **Hz. Ali** de kafiledeydi. Hayber\'de sancağı ona veren, Tebük\'te ise onu Hz. Hârûn\'a benzeten Peygamber, dönüş yolunda **Gadir Hum**\'da hacılara seslenmek için durdu.' },
       art: { bg: 'dune-day', props: ['sun', 'camels'], actors: [{ kind: 'crowd', x: 40, scale: 8 }, { kind: 'prophet', x: 74, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 88, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Yollar Hum suyu başında ayrılıyordu. Peygamber kafileyi durdurdu. İleri gidenler geri çağrıldı. Geride kalanlar beklendi. Güneş tepedeydi. Topluluk yüz bini aşıyordu. Bazı rivayetler 114 bin kişi, bazıları 124 bin kişi der. Peygamber bu kalabalığı çölde durdurdu, çünkü Hz. Ali\'nin önderliğini herkesin önünde söyleyecekti.' },
+      text: { tr: 'Mekke\'den dönen hacıların yolları **Hum** yakınlarında ayrılacaktı. **Hz. Peygamber** burada durdu ve kafileyi bir araya topladı. Rivayetlerde dinleyenlerin sayısı farklı verilir. Anlatının merkezinde ise uzun yolun ortasında verilen bu mola vardır. İnsanlar ayrı yönlere dağılmadan önce Peygamber\'in kendilerine söyleyeceklerini dinlemek için toplandılar.' },
       art: { bg: 'oasis', props: ['sun', 'palms', 'well'], actors: [{ kind: 'crowd', x: 36, scale: 9 }, { kind: 'prophet', x: 70, label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hum\'da Peygamber hutbeye başladı. Sesi sıcakta yükseldi. "Ben müminlere kendi canlarından daha yakın değil miyim?" diye sordu. Kalabalık "Evet" dedi. Soru yalnız sevgi sormuyordu. Peygamber, müminler üzerinde kimin daha hak sahibi olduğunu soruyordu. Kalabalık evet deyince Peygamber, önderliği kime verdiğini söyleyecekti. Buna velayet, yani önderlik denir.' },
+      text: { tr: '**Hz. Peygamber**, topluluğa seslenirken önce kendisinin müminlere, onların kendi canlarından daha yakın olup olmadığını sordu. Dinleyenler bunu kabul ettiklerini söylediler. Ardından gelen söz, **Hz. Ali**\'yle ilgiliydi. Gadir\'i önderliğin ilanı olarak okuyanlar için bu ilk soru önemlidir. Peygamber, Hz. Ali\'nin adını anmadan hemen önce kendisiyle müminler arasındaki bağı hatırlatmıştı.' },
       art: { bg: 'dune-day', props: ['sun', 'minbar'], actors: [{ kind: 'crowd', x: 32, scale: 9 }, { kind: 'prophet', x: 72, label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Sonra Peygamber **Hz. Ali**\'nin elini tuttu ve yukarı kaldırdı. "Ben kimin mevlâsıysam, **Hz. Ali** de onun mevlâsıdır. Allah\'ım, onu dost edineni dost edin, ona düşman olana düşman ol." Mevlâ, az önceki evlâ sorusunun cevabıdır. Evlâ, kişinin kendisinden daha hak sahibi olması demektir. Mevlâ, önder demektir. Peygamber\'in yukarı kaldırdığı el, herkese **Hz. Ali**\'yi önder olarak gösterdi.' },
+      text: { tr: 'Ardından **Hz. Peygamber**, **Hz. Ali**\'nin elini kaldırdı ve kendisi kimin mevlâsıysa Ali\'nin de onun mevlâsı olduğunu söyledi. Bazı rivayetlerde bu sözün ardından Ali\'ye dost olanlara Allah\'ın dost olması için dua ettiği aktarılır. **Mevlâ** kelimesi farklı biçimlerde yorumlanmıştır. Gadir\'i velayetin ilanı olarak anlayanlar, kelimeyi bir önceki soruyla birlikte okur ve burada Hz. Ali\'nin önderliğine işaret edildiğini görür.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 62, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 78, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Aynı hutbede Peygamber iki ağır emanet bıraktı: Allah\'ın Kitabı ve ==Ehl-i Beyt==. "Ehl-i Beytim hakkında Allah\'ı hatırlatırım" dedi. Bunu üç kez tekrarladı. İtret, yani Ehl-i Beyt, Kitap\'tan ayrılmasın diye Peygamber ikisini birbirine bağladı. İtret, Ehl-i Beyt demektir. Kitap, onlarsız bırakılmasın diye söylendi.' },
+      text: { tr: 'Hum\'daki konuşmaya ilişkin bir başka rivayette **Hz. Peygamber**, geride bıraktığı iki emaneti hatırlattı. Bunlar **Allah\'ın Kitabı** ve **Ehl-i Beyt** idi. Dinleyenlere ailesine karşı sorumluluklarını unutmamalarını söyledi ve bu uyarıyı tekrarladı. Hacılar daha sonra kendi yollarına giderken bu söz de onların beraberinde taşıdığı bir emanet oldu.' },
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 82, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hutbeden sonra insanlar **Hz. Ali**\'yi tebrik etti. Rivayette Ömer şöyle der: "Tebrikler ey Ebu Talib\'in oğlu. Her mümin erkek ve kadının mevlâsı oldun." O gün tebrik edilen **Hz. Ali**, kısa süre sonra Sakife\'de bekletilecekti. Onun önderliği orada bir kenara konacaktı. Tebrik, Gadir\'de bitti. Sakife, o tebriği bekletti.' },
+      text: { tr: 'Bazı rivayetlere göre konuşmanın ardından **Hz. Ali**\'yi tebrik edenler oldu. Bu anlatılardan birinde **Ömer**, Hz. Ali\'yi mümin erkek ve kadınların mevlâsı olarak kutladı. Çok geçmeden Hz. Peygamber vefat etti. Hum\'da söylenen sözlerin yönetim ve önderlik açısından ne anlama geldiği, Sakife\'de başlayan gelişmelerle yeniden önem kazandı.' },
       art: { bg: 'dune-dusk', props: ['sun', 'tents'], actors: [{ kind: 'crowd', x: 30, scale: 6 }, { kind: 'man', x: 56 }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Bu ilan, çölde söylenip kalacak boş bir söz değildi. Tebük\'te Peygamber, "Harun Musa\'ya nasılsa sen de bana öylesin" demişti. Hayber\'de sancağı, Allah\'ı ve Resulünü seven adama vermişti. **Gadir**, o yerin herkesin gözü önünde ilanıdır. Sakife\'de bu ilanı bozmaya çalışacaklardı.' },
+      text: { tr: '**Hayber**\'de Hz. Peygamber sancağı **Hz. Ali**\'ye vermişti. **Tebük** yolunda onun kendisine yakınlığını Hz. Hârûn üzerinden anlatmıştı. **Gadir Hum**\'da ise Hz. Ali\'nin elini, hacdan dönen topluluğun önünde kaldırdı. Bu üç hatıra birlikte okunduğunda güven, yakınlık ve önderlik arasında kurulan bağ daha belirgin hâle gelir. Hz. Peygamber\'in vefatından sonra yaşanacakları anlamak için Gadir\'de söylenen sözleri de akılda tutmak gerekir.' },
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'ali', x: 50, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 22, scale: 5 }] },
       by: 'both',
     },

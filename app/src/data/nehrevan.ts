@@ -8,13 +8,13 @@ export const nehrevan: HistEvent = {
   hook: { tr: 'Hakemden sonra bir grup Hz. Ali\'nin yanından ayrıldı. Çatışma Nehrevan\'da oldu.', en: 'After the arbitration a group left Ali. The fight was at Nahrawan.' },
   scenes: [
     {
-      text: { tr: 'Sıffin\'de mushaflar mızrağa asılınca hakem konuşuldu. **Hz. Ali**\'nin ordusundan bir grup bunu reddetti. "Hüküm yalnız Allah\'ındır" dediler. Bunlara Haricîler denir. Hz. Ali, "Söz haktır, ama onunla batıl kastediliyor" dedi. Bu cümle, Sıffin anlatısında da durur.' },
+      text: { tr: '**Sıffin**\'de mushafların mızraklara kaldırılmasının ardından iki taraf hakem görüşmesini kabul etti. Ancak **Hz. Ali**\'nin ordusundan bir grup, bu karara karşı çıkarak hükmün yalnız Allah\'a ait olduğunu söyledi. Hz. Ali, sözün kendisini doğru bulduğunu, fakat bu anlaşmazlıkta yanlış bir amaçla kullanıldığını belirtti. Ordudan ayrılan bu grup daha sonra **Haricîler** adıyla anıldı.' },
       image: 'nehrevan-1',
       art: { bg: 'dune-day', props: ['flags'], actors: [{ kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 30, scale: 6 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Haricîler Abdullah b. Habbâb\'ı ve hamile karısını öldürdü. **Hz. Ali** orduyu Muaviye seferinden Nehrevan\'a çevirdi. Önce konuşuldu. Sonra çatışıldı. Ölü sayısı rivayetlere göre değişir. Mızraktaki hile, Hz. Ali\'nin kendi safını da bölmüştü. Nehrevan, Sıffin\'den sonraki adımdır. Hakem, orduyu bölmüştü. **Hz. Ali** önce bu bölünmeye döndü.' },
+      text: { tr: 'Haricîler, **Abdullah b. Habbâb** ile hamile eşini öldürünce **Hz. Ali**, Şam\'a karşı hazırladığı orduyu **Nehrevan**\'a yöneltti. Çatışmadan önce karşı grupla görüşüldü, ancak bir uzlaşmaya varılamadı. Ardından iki taraf savaştı. Kaynaklar ölü sayısını farklı verir. Nehrevan\'a giden yolun başlangıcında ise Sıffin\'de hakeme başvurma kararı ve bu kararın Hz. Ali\'nin ordusunda yol açtığı ayrılık vardı.' },
       image: 'nehrevan-2',
       art: { bg: 'battle', props: ['flags', 'swords'], actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 70, scale: 6 }] },
       by: 'both',

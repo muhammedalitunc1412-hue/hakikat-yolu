@@ -7,20 +7,40 @@ import { C, font, themedStyles } from './theme';
 
 // Metindeki ayet göndermelerini (örn. "Ahzâb 33:33", "Mâide suresi 6. ayet") dokunulabilir yapar;
 // dokununca Arapça metin ve Türkçe meal açılır penceresi görünür.
-const SURAH: Record<string, number> = { 'Bakara': 2, 'Âl-i İmrân': 3, 'Nisâ': 4, 'Mâide': 5, 'Enfâl': 8, 'Nahl': 16, 'Ahzâb': 33, 'Şûrâ': 42, 'Beyyine': 98, "A'râf": 7, 'Tâhâ': 20 };
-const RE = /(Bakara|Âl-i İmrân|Nisâ|Mâide|Enfâl|Nahl|Ahzâb|Şûrâ|Beyyine|A'râf|Tâhâ)(?: suresi)?\s+(?:(\d{1,3}):)?(\d{1,3})(?![\d:])/g;
+// Çevirilerde sure adı kendi dilinin yazımıyla geçer (Baqara, Bəqərə, البقرة...); hepsi aynı ayete gider.
+const SURAH_NAMES: [number, string[]][] = [
+  [2, ['Bakara', 'Baqara', 'Baqarah', 'Bəqərə', 'Al-Baqara', 'Al-Baqarah', 'البقرة', 'بقره']],
+  [3, ['Âl-i İmrân', 'Âl-i ʿImrân', "Âl-i 'Imrân", 'Âl-i Imrân', 'Al Imran', 'Al-i Imran', 'Ali Imran', 'Âl ʿImrân', 'Əli İmran', 'آل عمران', 'آل‌عمران', 'عمران']],
+  [4, ['Nisâ', 'Nisa', "Nisâ'", 'Nisâʾ', 'An-Nisa', 'Nisaa', 'النساء', 'نساء']],
+  [5, ['Mâide', 'Maide', 'Maida', "Mâ'ida", 'Mâʾida', "Ma'ida", 'Maidə', "Al-Ma'ida", 'المائدة', 'مائده']],
+  [7, ["A'râf", 'Araf', "A'raf", 'Aʿrâf', "Al-A'raf", 'Əraf', 'Əl-Əraf', 'الأعراف', 'اعراف']],
+  [8, ['Enfâl', 'Anfal', 'Anfâl', 'Ənfal', 'Al-Anfal', 'الأنفال', 'انفال']],
+  [16, ['Nahl', 'Nəhl', 'An-Nahl', 'النحل', 'نحل']],
+  [20, ['Tâhâ', 'Taha', 'Ta-Ha', 'Tâ-Hâ', 'Tahâ', 'طه']],
+  [33, ['Ahzâb', 'Ahzab', 'Ahzāb', 'Əhzab', 'Al-Ahzab', 'الأحزاب', 'احزاب']],
+  [42, ['Şûrâ', 'Şura', 'Schura', 'Shura', 'Shûrâ', 'Chourâ', 'Choura', 'Şurə', 'الشورى', 'شورى', 'شوری']],
+  [98, ['Beyyine', 'Bayyina', 'Bayyinah', 'Baiyina', 'Bayyine', 'Bəyyinə', 'Beyyinə', 'البينة', 'بينه', 'بینه']],
+];
+const SURAH: Record<string, number> = {};
+for (const [n, names] of SURAH_NAMES) for (const name of names) SURAH[name] = n;
+const NAME_ALT = Object.keys(SURAH).sort((a, b) => b.length - a.length).map(s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+const DIG = '[0-9\\u0660-\\u0669\\u06F0-\\u06F9]';
+const BEFORE = "A-Za-z\\u00C0-\\u024F\\u0259\\u018F\\u0600-\\u06FF'’ʿʾ";
+const RE = new RegExp(`(^|[^${BEFORE}])(${NAME_ALT})(?: suresi| sûresi)?\\s+(?:(${DIG}{1,3})\\s*:\\s*)?(${DIG}{1,3})(?!${DIG}|:)`, 'g');
+const latinDigits = (s: string) => s.replace(/[٠-٩]/g, c => String(c.charCodeAt(0) - 0x660)).replace(/[۰-۹]/g, c => String(c.charCodeAt(0) - 0x6F0));
 
 type Part = { t: string; key?: string };
 function split(text: string): Part[] {
   const out: Part[] = [];
   let last = 0;
   for (const m of text.matchAll(RE)) {
-    const s = SURAH[m[1]];
-    if (m[2] && Number(m[2]) !== s) continue;
-    const key = s + ':' + Number(m[3]);
+    const s = SURAH[m[2]];
+    if (m[3] && Number(latinDigits(m[3])) !== s) continue;
+    const key = s + ':' + Number(latinDigits(m[4]));
     if (!VERSES[key]) continue;
-    if (m.index! > last) out.push({ t: text.slice(last, m.index) });
-    out.push({ t: m[0], key });
+    const start = m.index! + m[1].length;
+    if (start > last) out.push({ t: text.slice(last, start) });
+    out.push({ t: m[0].slice(m[1].length), key });
     last = m.index! + m[0].length;
   }
   if (last < text.length) out.push({ t: text.slice(last) });
