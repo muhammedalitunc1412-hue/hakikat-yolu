@@ -8,7 +8,7 @@ export const siffin: HistEvent = {
   hook: { tr: 'Sıffin\'de mushaflar mızraklara asıldı; Hz. Ali sabırla hakkı söyledi, hilafeti bir sabah namazında şehadetle bitti.', en: 'Qurans raised on spears, and a caliphate that ended at dawn prayer.' },
   scenes: [
     {
-      text: { tr: 'Cemel bitince **Hz. Ali** Kûfe\'yi merkez edindi. Oradan Şam\'a yürüdü. Fırat kıyısında, **Sıffin**\'de **Muaviye**\'nin ordusu onun karşısına çıktı. **Hz. Ali** çatışmayı kendisi başlatmaktan kaçındı. Haklı olan **Hz. Ali**\'ydi. Kılıcı önce çeken taraf o değildi. Hz. Ali, kılıcı karşı taraf çekince açtı.' },
+      text: { tr: 'Cemel bitince **Hz. Ali** Kûfe\'yi merkez edindi. Şam hâlâ biat etmiyordu. Oradan Fırat\'a yürüdü. **Sıffin**\'de **Muaviye**\'nin ordusu kıyıda bekliyordu. Su, karşı tarafın elindeydi. Hz. Ali çatışmayı kendisi başlatmadı. Önce mektup ve öğüt vardı. Kılıcı önce çeken taraf o değildi. Haklı olan Hz. Ali\'ydi. Kılıcı, karşı taraf çekince açtı. Toz, ırmağın üstüne kalktı.' },
       art: { bg: 'river', props: ['tents', 'flags'], actors: [{ kind: 'crowd', x: 22, scale: 7 }, { kind: 'ali', x: 52, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 82, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },
@@ -30,7 +30,7 @@ export const siffin: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: '**Sıffin**\'de savaş **Hz. Ali**\'nin lehine dönerken Şamlılar mushafı mızrağa taktı. "Allah\'ın kitabı aramızda hakem olsun" dediler. Bu ibadet değil, ==bir hileydi.== **Hz. Ali** bunun hile olduğunu o anda söyledi. Ordusunun bir kısmı, Kur\'an mızrakta diye onu durdurdu. Haklı taraf üstünken savaş yarıda kesildi. Mızraktaki Kur\'an, üstünlüğü durdurdu.' },
+      text: { tr: 'Savaş **Hz. Ali**\'nin lehine dönmüştü. Şam safları geriliyordu. O anda mushaflar mızrağa takıldı. "Allah\'ın kitabı aramızda hakem olsun" dediler. Bu ibadet değildi. ==Bir hileydi.== Hz. Ali, hileyi o anda söyledi. Ordusunun bir kısmı, Kur\'an mızrakta diye kılıcı durdurdu. Haklı taraf üstünken savaş yarıda kesildi. Mızraktaki Kur\'an, üstünlüğü durdurdu. Yenilmek üzere olan taraf, kitabı kalkan yaptı.' },
       cites: [{ side: 'sunni', i: 8 }, { side: 'shia', i: 0 }],
       art: { bg: 'battle', props: ['flags', 'scroll', 'sun'], actors: [{ kind: 'crowd', x: 26, scale: 8 }, { kind: 'ali', x: 72, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
@@ -56,7 +56,7 @@ export const siffin: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Ramazan 40\'ta Kûfe Ulu Camii\'nde sabah namazı kılınırken İbn Mülcem, **Hz. Ali**\'nin alnına vurdu. Secde halinde olduğu ayrıca yazılmaz. Hz. Ali\'nin, Kâbe\'nin Rabbine andolsun kurtulduğunu söylediği nakledilir. Bu söz Şii kitaplarda Radî ve İbn Şehrâşûb, Sünnî kitaplarda İbnü\'l-Esîr ve Belâzurî üzerinden anılır. Bu sözün tam Türkçe lafızları rivayete göre değişir. Katiline yemek ve su verilmesini, esirliğinde iyi tutulmasını istedi. Ölürse bir darbeye bir darbe olsun, uzuv kesilmesin, dedi. "Yediğinizden yedirin" diye uzatılan cümle Sünnî kitaplarda bulunamadı. 18 Zilhicce 35\'ten Ramazan 40\'a kadar yaklaşık dört yıl dokuz ay halife kalmıştı. Oğlu **Hz. Hasan**\'a vasiyetini bıraktı. Yönetimi **Muaviye**\'ye devret demedi. Vasiyet, hilafeti oğluna bıraktı.' },
+      text: { tr: 'Kûfe\'nin sabahı namazla açıldı. Ramazan 40\'tı. Ulu Cami doluydu. Sabah namazı kılınırken İbn Mülcem, **Hz. Ali**\'nin alnına vurdu. Hz. Ali düştü. Rivayetler, Kâbe\'nin Rabbine and içerek kurtulduğunu söylediğini farklı cümlelerle aktarır. Kin tutmadı. Katiline yemek ve su verilmesini istedi. Esirliğinde iyi tutulmasını söyledi. Ölürse bir darbeye bir darbe olsun, uzuv kesilmesin, dedi. 18 Zilhicce 35\'ten Ramazan 40\'a kadar yaklaşık dört yıl dokuz ay halife kalmıştı. Oğlu **Hz. Hasan**\'a vasiyetini bıraktı. Yönetimi **Muaviye**\'ye devret demedi. Vasiyet, hilafeti oğluna bıraktı.' },
       art: { bg: 'dawn', props: ['moon'], actors: [{ kind: 'ali', x: 42, pose: 'sit', label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 66, label: { tr: 'Hz. Hasan' } }, { kind: 'crowd', x: 86, scale: 4 }] },
       by: 'both',
     },
