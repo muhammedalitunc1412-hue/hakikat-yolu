@@ -16,7 +16,7 @@ export const kerbela: HistEvent = {
   hook: { tr: 'Yezid\'e biat yoktu. Su kesildi. On Muharrem\'de Ehl-i Beyt şehit edildi.', en: 'No bay\'ah to Yazid. The water was cut. The Ahl al-Bayt were killed on the tenth of Muharram.' },
   scenes: [
     {
-      text: { tr: 'Muaviye ölünce yönetim **Yezid**’e geçti. Medine Valisi Velid, **Hz. Hüseyin**’i çağırdı ve ondan yeni yönetime biat etmesini istedi. Biat, bağlılık sözü vermekti. Hz. Hüseyin bu sözü vermedi. Medine’de verdiği karar, ailesiyle birlikte çıkacağı yolun ilk adımı oldu.' },
+      text: { tr: 'Muaviye\'nin ölümünden sonra yönetimi devralan **Yezid**, Medine valisi **Velid** aracılığıyla **Hz. Hüseyin**\'den biat istedi. Biat etmek, yeni yönetime bağlılığını açıkça bildirmek anlamına geliyordu. Hz. Hüseyin bu sözü vermedi. Valinin huzurunda başlayan görüşme, kısa süre sonra ailesinin Medine\'den ayrılmasına yol açacak bir anlaşmazlığın ilk adımıydı.' },
       image: 'kerbela-1',
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'husayn', x: 70, label: { tr: 'Hz. Hüseyin' } }, { kind: 'man', x: 28, label: { tr: 'Yezid' } }, { kind: 'man', x: 48, label: { tr: 'Velid' } }] },
       by: 'shia',
@@ -107,7 +107,7 @@ export const kerbela: HistEvent = {
       cites: [{ side: 'shia', i: 19 }, { side: 'shia', i: 20 }],
     },
     {
-      text: { tr: 'On Muharrem sabahı güneş kızıl doğdu. **Hz. Hüseyin** atına binip karşı ordunun önüne çıktı. “Beni tanımıyor musunuz? Ben Resûlullah’ın torunuyum. Babam Hz. Ali, annem Hz. Fâtıma’dır.” Karşı safta bazıları başını eğdi. Konuşması bittiğinde okçular hazırlanmaya başladı.' },
+      text: { tr: 'Aşûrâ sabahı **Hz. Hüseyin** atıyla karşı ordunun önüne geldi ve savaş başlamadan önce askerlere seslendi. Onlara dedesinin **Hz. Peygamber**, babasının **Hz. Ali**, annesinin ise **Hz. Fatıma** olduğunu hatırlattı. Böylece karşılarına çıkarılan kişinin kim olduğunu düşünmelerini istedi. Sözlerini bitirdiğinde iki taraf hâlâ birbirinin karşısındaydı. Kısa süre sonra meydanda konuşmaların yerini oklar aldı.' },
       image: 'kerbela-21',
       art: { bg: 'dawn', props: ['sun', 'flags'], actors: [{ kind: 'husayn', x: 55, label: { tr: 'Hz. Hüseyin' }, pose: 'raise' }, { kind: 'crowd', x: 24, scale: 7 }] },
       by: 'shia',
@@ -156,7 +156,7 @@ export const kerbela: HistEvent = {
       cites: [{ side: 'shia', i: 20 }, { side: 'shia', i: 5 }],
     },
     {
-      text: { tr: 'Çadırlarda kız çocukları susuzluktan ağlıyordu. Başta **Hz. Sekine** vardı. "Su! Amca, su!" diye bağırıyorlardı. **Hz. Abbas** bu çığlığa dayanamadı. Kırbayı aldı. Düşman saflarını yardı. Vuruşa vuruşa Fırat\'a ulaştı. Kendisi de susuzdu. Suyu avucuna aldı. **Hz. Hüseyin** susuzken içmedi. Avucundaki suyu geri döktü. Kırbayı doldurup çadırlara dönmek istedi. O kadar yakışıklı ve heybetliydi ki ona Kamer-i Benî Hâşim denirdi. Anlamı, Hâşimoğullarının Ayı\'dır. Yüzü nurlu, boyu uzundu. Ata bindiğinde ayağı yere değerdi. Gücü Benî Hâşim\'in en sağlam kolu diye anılırdı. Sancağı da o tutardı. Dönüşte şehit düştü. Su çadırlara ulaşmadı. **Hz. Hüseyin** kardeşinin yanına vardı. "Şimdi belim kırıldı." Su yine **Yezid**\'in ordusunun elinde kaldı.' },
+      text: { tr: 'Çadırlarda su tükenirken **Hz. Abbas**, çocuklara su getirmek için kırbasını alıp Fırat\'a yöneldi. Suya varmak için kıyıyı tutan askerlerin arasından geçmesi gerekiyordu. Rivayete göre nehre ulaştığında o da susuzdu. Avucuna aldığı suyu içmeden nehre döktü. Hz. Hüseyin ve çadırlardakiler susuzken önce onlara su götürmek istiyordu.\n\nHâşimoğullarının Ayı diye anılan Abbas, Hz. Hüseyin\'in sancağını taşıyordu. Fırat\'tan dönüşünde ise bütün çabası, doldurduğu kırbayı çadırlara ulaştırmaktı. Yolda saldırıya uğradı ve şehit oldu. Su bekleyenler ne kırbanın sesini duydu ne de Abbas\'ın dönüşünü gördü. Hz. Hüseyin\'in kardeşinin yanına vardığında kaybını belinin kırılmasıyla anlattığı nakledilir.' },
       image: 'kerbela-8',
       art: { bg: 'river', props: ['flags'], actors: [{ kind: 'man', x: 34, label: { tr: 'Abbas' }, pose: 'raise' }, { kind: 'husayn', x: 66, label: { tr: 'Hz. Hüseyin' } }] },
       by: 'shia',
@@ -170,7 +170,7 @@ export const kerbela: HistEvent = {
       cites: [{ side: 'shia', i: 3 }],
     },
     {
-      text: { tr: 'Öğleden sonra meydan **Hz. Hüseyin**\'e kaldı. Yalnızdı. Sağına baktı. Soluna baktı. "Bize yardım edecek yok mu?" diye seslendi. Ses çadırlara çarptı. Hasta oğlu yataktaydı. Kadınlar tuttu. Hz. Hüseyin kılıcını çekti. Kahramanca vuruştu. Bir orduya karşı tek beden olarak vuruştu. Yaralandı. Düştü. Rivayete göre son hali secdedir. Alnı toprakta, Allah\'a teslim. **Sinân** mızrağı sapladı. **Havlî** başı kesmek için indi ve titredi. **Şimr** indi. Onu boğazladı. Başını kestiler. Ova bir an sustu. Saltanat, secde halindeki bir imamı yenmiş sandı.' },
+      text: { tr: 'Öğleden sonra yakınlarının ve arkadaşlarının çoğunu kaybeden **Hz. Hüseyin**, karşı ordunun önünde giderek yalnız kaldı. Yardım çağrısında bulunduğu ve ağır yaralar alana kadar savaştığı aktarılır. Son anının secde hâlinde geçtiği, Kerbelâ\'yı anlatan bazı mektellerde yer alır. Rivayetler son darbeyi kimin indirdiği konusunda farklılaşır. Sinân, Havlî ve Şimr\'in adları bu anlatılarda geçer. Hz. Hüseyin öldürüldüğünde meydandaki savaş sona erdi. Çadırlarda kalan ailesi içinse esaret başlamak üzereydi.' },
       image: 'kerbela-11',
       art: { bg: 'battle', props: ['flags', 'swords'], actors: [{ kind: 'husayn', x: 50, label: { tr: 'Hz. Hüseyin' }, pose: 'sit' }, { kind: 'man', x: 28, label: { tr: 'Şimr' } }, { kind: 'crowd', x: 78, scale: 6 }] },
       by: 'shia',
@@ -184,7 +184,7 @@ export const kerbela: HistEvent = {
     },
 
     {
-      text: { tr: '**Ömer b. Sa\'d** bağırdı. "Hz. Hüseyin\'in göğsünü atına çiğnetecek kim var?" On kişi çıktı. Atlar göğsü ve sırtı ezdi. Ölümden sonra cesede yapılan bu iş, ordunun utancıydı. Toz kalktı. Kan toprağa karıştı. **Yezid**\'in zaferi, bir secde yerini çiğnemek oldu. Uzaktan çadırlar bunu gördü.' },
+      text: { tr: '**Hz. Hüseyin** öldürüldükten sonra **Ömer b. Sa\'d**, naaşını atlara çiğnetmek üzere asker çağırdı. Rivayete göre on kişi bu emri yerine getirdi. Atlar Hz. Hüseyin\'in göğsünü ve sırtını ezdi. Çatışma bitmiş, meydanda karşı koyacak kimse kalmamıştı. Yine de verilen emir, şiddeti ölünün bedenine kadar taşıdı.' },
       image: 'kerbela-12',
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'crowd', x: 30, scale: 6 }, { kind: 'man', x: 70, label: { tr: 'Ömer b. Sa\'d' } }] },
       by: 'both',
@@ -223,7 +223,7 @@ export const kerbela: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Esir kafilesi Şam yoluna çıkarılırken Kûfe zindanında iki çocuk kaldı. **Müslim b. Akîl**\'in yetimleriydi. Adları **Muhammed** ve **İbrahim**\'di. Halk onlara Tiflân-ı Müslim, Müslim\'in yetimleri der. Babaları, Hz. Hüseyin\'i çağırmak için Kûfe\'ye gelmiş, sonra yalnız bırakılıp şehit edilmişti. Çocuklar bir yıl zindanda kaldı. Bir zindancı onların hâlini gördü. Yüreği dayanamadı. Gece kapıyı açtı ve onları salıverdi. İki kardeş karanlıkta bir kadının kapısını çaldı. Kadın onları içeri aldı, doyurdu, yatırdı. Kocası **Hâris**, **İbn Ziyâd**\'ın bu çocuklar için ödül koyduğunu biliyordu. Ödül, merhametten ağır bastı. Gece çocukları alıp Fırat kıyısına götürdü. Muhammed ve İbrahim namaz kılmak için izin istedi. Hâris durdu. Kardeşler abdest aldı, namazı kıldı ve birbirlerine sarıldı. Küçük olan, "Kardeşim, sen önce dayan, ben seni göreyim" diye yalvardı. Hâris ikisini de şehit etti. Ayrıntıyı uzatmaya gerek yok. Emevi zulmü Kerbela\'da bitmemişti. Yetim iki çocuğa da kıymıştı. Haber **İbn Ziyâd**\'a gidince o bile durakladı. Hâris\'i cezalandırdı. Ödül için yetim avlayan adam, kendi efendisinin elinden kurtulamadı.' },
+      text: { tr: 'Daha sonraki anlatılarda **Müslim b. Akîl**\'in iki oğlu **Muhammed** ile **İbrahim**\'in de Kûfe\'de hapsedildiği aktarılır. Babaları, Hz. Hüseyin\'in elçisi olarak geldiği şehirde öldürülmüştü. Rivayete göre bir zindancı çocuklara acıyarak gece kapıyı açtı. İki kardeş bir kadının evine sığındı. Kadın onları doyurup dinlenmeleri için yer gösterdi.\n\nKadının kocası **Hâris**, çocukların başına ödül konduğunu öğrenince onları Fırat kıyısına götürdü. Çocuklar öldürülmeden önce namaz kılmak için izin istedi. Anlatıda birbirine sarılan iki kardeşin son isteği, babalarının ardından sığındıkları evde bulamadıkları güveni birbirlerinde aradıklarını düşündürür.' },
       image: 'kerbela-25',
       art: { bg: 'night', props: ['moon'], actors: [{ kind: 'man', x: 34, label: { tr: 'Muhammed' }, scale: 0.78 }, { kind: 'man', x: 52, label: { tr: 'İbrahim' }, scale: 0.7 }, { kind: 'man', x: 80, label: { tr: 'Hâris' } }] },
       by: 'shia',
@@ -244,14 +244,14 @@ export const kerbela: HistEvent = {
       cites: [{ side: 'shia', i: 11 }, { side: 'shia', i: 12 }, { side: 'shia', i: 13 }],
     },
     {
-      text: { tr: 'Kerbela\'dan iki yıl sonra, 63 H\'de, Medine ayaklandı. **Yezid**, **Müslim b. Ukbe** komutasındaki orduya şehri üç gün yağmalamayı serbest bıraktı. Bu olaya Harre denir. Sahabeler öldürüldü. Mescid-i Nebevî\'ye at bağlandı. Kadınlara tecavüz edildi. Medine halkı, Yezid\'in kölesi olarak biat etmeye zorlandı. Peygamber\'in şehri, üç gün Emevi zulmünün eline kaldı.' },
+      text: { tr: 'Kerbelâ\'dan iki yıl sonra, hicrî 63\'te Medine halkı **Yezid**\'e karşı ayaklandı. Yezid, şehre **Müslim b. Ukbe** komutasında bir ordu gönderdi. Medine yakınındaki Harre\'de yapılan çatışmayı yönetimin ordusu kazandı. Ardından şehirde öldürmeler ve yağma yaşandı. Hayatta kalanlara Yezid\'e ağır şartlarla biat ettirildiği aktarılır. Bu olay, İslam tarihinde **Harre Vakası** adıyla anılır.' },
       image: 'kerbela-26',
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'crowd', x: 28, scale: 7 }, { kind: 'man', x: 74, label: { tr: 'Müslim b. Ukbe' } }] },
       by: 'both',
       cites: [{ side: 'shia', i: 25 }, { side: 'sunni', i: 3 }],
     },
     {
-      text: { tr: 'Ardından ordu Mekke\'ye yürüdü. 64 H\'deydi. Kâbe mancınıklarla taşlandı. Kâbe\'nin örtüsü ve duvarları yandı. **Yezid** bu kuşatma sırasında öldü. Saltanat, Kerbela\'dan sonra Medine\'yi ve Kâbe\'yi de vurmuştu. Zulüm, onun ölümüyle bitmiş sayılmadı.' },
+      text: { tr: 'Medine\'nin ardından Emevî ordusu, **Abdullah b. Zübeyr**\'in bulunduğu Mekke\'ye yürüdü. Hicrî 64\'te şehir kuşatıldı ve mancınıklar kullanıldı. Kuşatma sırasında çıkan yangın Kâbe\'ye de zarar verdi. **Yezid**\'in ölüm haberi ulaştığında kuşatma sona erdi. Kerbelâ\'dan sonra Medine\'yi ve Mekke\'yi de içine alan bu çatışmalar, yönetim üzerindeki anlaşmazlığı sona erdirmedi.' },
       image: 'kerbela-27',
       art: { bg: 'dawn', props: ['flags', 'sun'], actors: [{ kind: 'crowd', x: 34, scale: 6 }, { kind: 'man', x: 76, label: { tr: 'Yezid' } }] },
       by: 'both',
