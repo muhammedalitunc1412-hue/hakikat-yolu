@@ -20,7 +20,7 @@ export const sakife: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Toplantının haberini alan **Ebu Bekir**, **Ömer** ve **Ebu Ubeyde** hızla Sakife\'ye gitti. Cenazenin başındaki aileye haber vermeden, doğrudan toplantıya katıldılar. Ebu Bekir söze Ensar\'ı övmekle başladı. Onların İslam\'a yardımını ve fedakârlıklarını uzun uzun anlattı. Ardından Arapların yönetimi Kureyş\'ten başka bir kabileye bırakmayacağını söyledi. Bu söz, tartışmayı Ensar ile Kureyş arasındaki bir yarışa çevirdi. Oysa Kureyş\'in içinde Peygamber\'e en yakın olan, onun amcasının oğlu ve damadı Hz. Ali\'ydi. Gadir\'de eli kaldırılan da oydu. Ama o sırada Hz. Ali, Peygamber\'in bedenini yıkıyordu ve Sakife\'de onun adını anan çıkmadı.' },
+      text: { tr: 'Toplantının haberini alan **Ebu Bekir**, **Ömer** ve **Ebu Ubeyde** hızla Sakife\'ye gitti. Cenazenin başındaki **Hz. Ali**\'ye haber vermeden, doğrudan toplantıya katıldılar. Ebu Bekir söze Ensar\'ı övmekle başladı. Onların İslam\'a yardımını ve fedakârlıklarını uzun uzun anlattı. Ardından Arapların yönetimi Kureyş\'ten başka bir kabileye bırakmayacağını söyledi. Bu söz, tartışmayı Ensar ile Kureyş arasındaki bir yarışa çevirdi. Oysa Kureyş\'in içinde Peygamber\'e en yakın olan, onun amcasının oğlu ve damadı Hz. Ali\'ydi. Gadir\'de eli kaldırılan da oydu. Ama o sırada Hz. Ali, Peygamber\'in bedenini yıkıyordu ve Sakife\'de onun adını anan çıkmadı.' },
       image: 'sakife-3',
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'crowd', x: 24, scale: 5, label: { tr: 'Ensar' } }, { kind: 'man', x: 48, label: { tr: 'Ebu Bekir' } }, { kind: 'man', x: 64, label: { tr: 'Ömer' } }, { kind: 'man', x: 80, label: { tr: 'Ebu Ubeyde' } }] },
       by: 'both',
