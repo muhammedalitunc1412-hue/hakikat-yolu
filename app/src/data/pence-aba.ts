@@ -10,37 +10,37 @@ export const penceAba: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Medine\'de sabah henüz serindi. Rivayetlere göre Peygamber, siyah yünlü bir örtüyle evinden çıktı. Bir rivayet bu evi Ümmü Seleme\'nin evi diye anar. Önce **Hz. Hasan** geldi ve Peygamber onu örtünün altına aldı. Ardından **Hz. Hüseyin** geldi, onu da yanına çekti. Sonra kızı **Hz. Fatıma**, en sonra **Hz. Ali** geldi. Beş kişi aynı örtünün altında toplanınca Peygamber Ahzâb 33:33\'ü okudu: "Ey Ehl-i Beyt, Allah sizden kiri gidermek ve sizi tertemiz yapmak ister."' },
+      text: { tr: 'Medine\'de sabah henüz serindi. Rivayetlere göre Peygamber, siyah yünlü bir örtüyle evinden çıktı. Bir rivayet bu evi Ümmü Seleme\'nin evi diye anar. Sokak sessizdi. Önce **Hz. Hasan** geldi. Peygamber onu örtünün altına aldı. Ardından **Hz. Hüseyin** geldi ve onu da yanına çekti. Sonra kızı **Hz. Fatıma** geldi. En sonra **Hz. Ali** geldi. Beş kişi aynı örtünün altında toplanınca Peygamber durdu. Ahzâb 33:33\'ü okudu. "Ey Ehl-i Beyt, Allah sizden kiri gidermek ve sizi tertemiz yapmak ister." Ayet bir meydanda değil, bu evin eşiğinde okundu. Örtünün altında beş kişi vardı. Dışarıda şehir kendi işine bakıyordu.' },
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 38, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 52, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 62, label: { tr: 'Hz. Fatıma' } }, { kind: 'hasan', x: 72, scale: 0.7, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 80, scale: 0.65, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Peygamber örtünün altındakiler için dua etti. "Allah\'ım, bunlar benim Ehl-i Beyt\'imdir. Onlardan kiri uzaklaştır ve onları tertemiz yap." Ümmü Seleme evdeydi ve örtünün dışında duruyordu. "Ya Resulallah, ben de onlarla birlikte miyim?" diye sordu. Peygamber "Sen hayır üzeresin" dedi, fakat örtüyü onun için açmadı. Örtünün altında Peygamber, **Hz. Ali**, **Hz. Fatıma**, **Hz. Hasan** ve **Hz. Hüseyin** kaldı.' },
+      text: { tr: 'Örtü kapanınca Peygamber dua etti. "Allah\'ım, bunlar benim Ehl-i Beyt\'imdir. Onlardan kiri uzaklaştır ve onları tertemiz yap." Ümmü Seleme o evdeydi. Örtünün dışında duruyor, içeriyi görüyordu. Dayanamayıp sordu. "Ya Resulallah, ben de onlarla birlikte miyim?" Peygamber onu azarlamadı. "Sen hayır üzeresin" dedi. Yine de örtüyü onun için açmadı. Örtünün altında Peygamber, **Hz. Ali**, **Hz. Fatıma**, **Hz. Hasan** ve **Hz. Hüseyin** kaldı. Ümmü Seleme hayır üzereydi. O sabahki örtü ise bu beş kişiye kapanmıştı.' },
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 38, label: { tr: 'Hz. Peygamber' } }, { kind: 'woman', x: 70 }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Bu ayete Ayet-i Tathir denir. Tathir, kirden arındırmak demektir. Ayetteki ehl ise ev halkıdır. Peygamber Ahzâb 33:33\'ü rastgele bir topluluğa değil, örtünün altına aldığı beş kişinin üzerine okudu. Şii okuyuşta bu arındırma, onların günahtan korunmuş olmasıdır ve buna ==ismet== denir. İmamet, yani Allah\'ın bildirdiği önderlik, bu temizliğe dayanır. Sonraki imamlar da bu beşin soyundan gelir.' },
+      text: { tr: 'Bu ayete Ayet-i Tathir denir. Tathir, kirden arındırmak demektir. Ayetteki ehl, ev halkıdır. Peygamber Ahzâb 33:33\'ü rastgele bir kalabalığa okumadı. Örtünün altına aldığı beş kişinin üzerine okudu. Şii okuyuşta bu arındırma, onların günahtan korunmuş olmasıdır. Buna ==ismet== denir. İmamet, yani Allah\'ın bildirdiği önderlik, bu temizliğe dayanır. Sonraki imamlar da bu beşin soyundan gelir. Ayet, o sabah bir evin içinde okunmuştu. Hitap, örtünün altındakilereydi.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'woman', x: 66 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Yıllar sonra Zeyd b. Erkam\'a Ehl-i Beyt\'in kim olduğu soruldu. Zeyd, Peygamber\'in hanımlarını bu yakın halkanın dışında tuttu ve **Hz. Ali**\'nin, Akîl\'in, Cafer\'in ve Abbas\'ın ailelerini andı. Listenin ortasında, o sabah örtünün altında duran beş kişi vardı. Soru bir soy kütüğü için değil, Peygamber\'in sevgiyi ve emaneti kime bıraktığını sormak içindi.' },
+      text: { tr: 'Yıllar sonra Zeyd b. Erkam\'a Ehl-i Beyt\'in kim olduğu soruldu. Zeyd durdu ve düşündü. Peygamber\'in hanımlarını bu yakın halkanın dışında tuttu. **Hz. Ali**\'nin, Akîl\'in, Cafer\'in ve Abbas\'ın ailelerini andı. Liste uzundu. Ortasında, o sabah örtünün altında duran beş kişi vardı. Soru bir soy kütüğü için sorulmamıştı. Peygamber\'in sevgiyi ve emaneti kime bıraktığını sormak içindi. Zeyd\'in cevabı, Medine\'deki o sabahı yıllar sonra da açık tuttu.' },
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Şiiler bu beş kişiye **Pence-i Âl-i Aba** der. Pence beş, Âl-i Aba örtü ailesi demektir. Onlar Peygamber, **Hz. Ali**, **Hz. Fatıma**, **Hz. Hasan** ve **Hz. Hüseyin**\'dir. Bayraklardaki açık el de bu beş kişiyi hatırlatır. El bir süs değildir. Medine\'de bir sabah aynı örtünün altında duranları gösterir.' },
+      text: { tr: 'Şiiler bu beş kişiye **Pence-i Âl-i Aba** der. Pence beş demektir. Âl-i Aba, örtü ailesi demektir. Onlar Peygamber, **Hz. Ali**, **Hz. Fatıma**, **Hz. Hasan** ve **Hz. Hüseyin**\'dir. Bayraklardaki açık el de bu beş kişiyi hatırlatır. El bir süs değildir. Bir çocuk bu eli görünce önce bir şekil görür. Sonra beş ismi öğrenir. İsimler öğrenilince el, Medine\'de bir sabah aynı örtünün altında duranları gösterir.' },
       art: { bg: 'night', props: ['stars'], actors: [{ kind: 'prophet', x: 20, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 36, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 50, label: { tr: 'Hz. Fatıma' } }, { kind: 'hasan', x: 64, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 76, scale: 0.8, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Ehl-i Beyt rivayetinde **Hz. Fatıma**\'dan gelen daha uzun bir anlatı vardır ve adı Hadis-i Kisa\'dır. Kisa, örtü demektir. Bu anlatıda örtünün altında Cebrail\'in getirdiği ilahî hitap da duyulur. Hitap, beş kişiyi yalnız bir evin halkı diye bırakmaz ve onları Ehl-i Beyt diye anar. Şii evlerinde bu hadis, o sabahın kimleri bir araya getirdiğini anlatmak için okunur.' },
+      text: { tr: 'Ehl-i Beyt rivayetinde **Hz. Fatıma**\'dan gelen daha uzun bir anlatı vardır. Adı Hadis-i Kisa\'dır. Kisa, örtü demektir. Bu anlatıda örtünün altında Cebrail\'in getirdiği ilahî hitap da duyulur. Hitap, beş kişiyi yalnız bir evin halkı diye bırakmaz. Onları Ehl-i Beyt diye anar. Ev sıcaktır. Seçim de açıktır. Şii evlerinde bu hadis, o sabah kimlerin bir araya geldiğini anlatmak için okunur.' },
       art: { bg: 'interior', props: ['scroll', 'stars'], actors: [{ kind: 'fatima', x: 50, label: { tr: 'Hz. Fatıma' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Hadis-i Kisa, ==Ehl-i Beyt==\'in çekirdeğini bu beş kişide toplar. Sonraki imamlar onların soyundan gelir ve imamet bu eve dayanır. Gadir\'de Peygamber, aynı beşin içinden **Hz. Ali**\'nin elini herkesin önünde kaldıracaktır. Medine\'deki sabah evin eşiğinde kalmıştı. Hum\'daki öğle ise kalabalığın ortasında söylenecekti.' },
+      text: { tr: 'Hadis-i Kisa, ==Ehl-i Beyt==\'in çekirdeğini bu beş kişide toplar. Sonraki imamlar onların soyundan gelir. İmamet bu eve dayanır. Gadir\'de Peygamber, aynı beşin içinden **Hz. Ali**\'nin elini herkesin önünde kaldıracaktır. Medine\'deki sabah evin eşiğinde kalmıştı. Hum\'daki öğle ise kalabalığın ortasında söylenecekti. Örtü kapanmış, dua bitmiş, beş kişi o evden çıkmıştı. Söz ise bitmemişti.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 56, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 68, scale: 0.8, label: { tr: 'Hz. Hüseyin' } }] },
     },
   ],

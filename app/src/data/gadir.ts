@@ -8,37 +8,37 @@ export const gadir: HistEvent = {
   hook: { tr: 'Çölün ortasında kafile durdu. Bir el havaya kalktı. O gün Hz. Ali\'nin velayeti ilan edildi.', en: 'A caravan halted in the desert, and a raised hand.' },
   scenes: [
     {
-      text: { tr: 'Veda Haccı bitmiş, **Hz. Peygamber** hacılarla birlikte Mekke\'den Medine\'ye dönüyordu. Yemen\'den gelip hacda ona katılan **Hz. Ali** de kafiledeydi. İnsanlar evlerine dağılmak üzereyken kafile **Gadir Hum**\'a vardı ve Peygamber orada durdurdu. Su başı, yolların ayrıldığı yerdi. Hayber\'de sancağı Hz. Ali\'ye veren, Tebük\'te onu Hz. Hârûn\'a benzeten Peygamber, kalabalık dağılmadan bir şey daha söyleyecekti.' },
+      text: { tr: 'Veda Haccı bitmişti. **Hz. Peygamber**, hacılarla birlikte Mekke\'den Medine\'ye dönüyordu. Yemen\'den gelip hacda ona katılan **Hz. Ali** de kafiledeydi. Yol uzundu. İnsanlar evlerine dağılmak üzereydi. Kafile **Gadir Hum**\'a varınca Peygamber durdurdu. Burası bir su başıydı ve yollar burada ayrılıyordu. Hayber\'de sancağı Hz. Ali\'ye veren, Tebük\'te onu Hz. Hârûn\'a benzeten Peygamber, kalabalık dağılmadan bir şey daha söyleyecekti. Develer durdu. İnsanlar suyun başına toplandı.' },
       art: { bg: 'dune-day', props: ['sun', 'camels'], actors: [{ kind: 'crowd', x: 40, scale: 8 }, { kind: 'prophet', x: 74, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 88, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hum, çölün ortasında bir suydu. Mekke\'den dönenlerin bir kısmı Medine\'ye, bir kısmı kendi yurduna sapacaktı. **Hz. Peygamber** önden gidenleri durdurdu, geriden gelenleri bekledi. Rivayetler dinleyenlerin sayısını farklı verir. Öğle sıcağında insanlar, Peygamber ne diyecek diye suyun başına toplandı.' },
+      text: { tr: 'Hum, çölün ortasında bir suydu. Mekke\'den dönenlerin bir kısmı Medine\'ye, bir kısmı kendi yurduna sapacaktı. **Hz. Peygamber** önden gidenleri durdurdu ve geriden gelenleri bekledi. Öğle sıcağı başların üstündeydi. Rivayetler dinleyenlerin sayısını farklı verir. Sayı ne olursa olsun, insanlar Peygamber ne diyecek diye suyun çevresinde durdu. Kafile dağılmadan önce bir konuşma olacaktı.' },
       art: { bg: 'oasis', props: ['sun', 'palms', 'well'], actors: [{ kind: 'crowd', x: 36, scale: 9 }, { kind: 'prophet', x: 70, label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Peygamber** önce sordu: "Ben size kendi canınızdan daha yakın değil miyim?" Kalabalık "Evet" dedi. Bu, bir nezaket değildi. Peygamber, müminler üzerindeki hakkını onların ağzından söyletti. **Hz. Ali**\'nin adını henüz anmamıştı. Şii okuyuş, sırayı boşuna saymaz. Önce kendi yakınlığı söylenir, sonra o yakınlık bir başkasına verilir.' },
+      text: { tr: '**Hz. Peygamber** önce bir soru sordu. "Ben size kendi canınızdan daha yakın değil miyim?" Kalabalık "Evet" dedi. Bu bir nezaket değildi. Peygamber, müminler üzerindeki hakkını onların ağzından söyletti. **Hz. Ali**\'nin adını henüz anmamıştı. Ses, suyun başında yükseldi. Şii okuyuş bu sırayı boşuna saymaz. Önce kendi yakınlığı söylenir. Sonra o yakınlık bir başkasına verilir. Soru, biraz sonra gelecek cümlenin eşiğiydi.' },
       art: { bg: 'dune-day', props: ['sun', 'minbar'], actors: [{ kind: 'crowd', x: 32, scale: 9 }, { kind: 'prophet', x: 72, label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Peygamber**, **Hz. Ali**\'nin elini kaldırdı ve "Ben kimin mevlâsıysam, Ali de onun mevlâsıdır" dedi. Bazı rivayetlerde ardından dua da gelir: Ali\'ye dost olana Allah dost olsun, Ali\'ye düşman olana Allah düşman olsun. **Mevlâ** kelimesini kimisi dost, kimisi sahip ve önder diye okur. Şii okuyuş, kelimeyi bir önceki soruyla birlikte tutar. Peygamber kendi yakınlığını söyletmiş, aynı yakınlığı Hz. Ali\'ye vermiştir. Velayet, yani önderlik, o kaldırılan elin adıdır.' },
+      text: { tr: '**Hz. Peygamber**, **Hz. Ali**\'nin elini tuttu ve yukarı kaldırdı. El, başların üstünde göründü. "Ben kimin mevlâsıysam, Ali de onun mevlâsıdır" dedi. Biraz önce sorduğu yakınlık, şimdi bu ele bağlanmıştı. Bazı rivayetlerde ardından dua da gelir. Ali\'ye dost olana Allah dost olsun. Ali\'ye düşman olana Allah düşman olsun. **Mevlâ** kelimesini kimisi dost diye, kimisi sahip ve önder diye okur. Şii okuyuş, kelimeyi o soruyla birlikte tutar. Peygamber kendi hakkını söyletmiş, sonra o hakkı Hz. Ali\'nin eline bağlamıştır. Velayet, yani önderlik, o kaldırılan elin adıdır. Hacılar sözü duydu. Su hâlâ akıyordu. El hâlâ yukarıdaydı.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 62, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 78, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Aynı durakta **Hz. Peygamber** iki emanet bıraktı: **Allah\'ın Kitabı** ve **Ehl-i Beyt**. "Bu ikisi Havz\'a varıncaya dek ayrılmaz" dedi. Havz, kıyametteki havuzdur. Uyarıyı bir kez söylemedi, tekrarladı. Hacılar sonra kendi yollarına dağıldı. İtret, Ehl-i Beyt demektir. Kitap, o aile yanından ayrılmasın diye söylenmişti.' },
+      text: { tr: 'Aynı durakta **Hz. Peygamber** iki emanet daha bıraktı. Biri **Allah\'ın Kitabı**\'ydı. Öbürü **Ehl-i Beyt**\'ti. "Bu ikisi Havz\'a varıncaya dek ayrılmaz" dedi. Havz, kıyametteki havuzdur. Uyarıyı bir kez söylemedi. Tekrarladı. İnsanlar bu sözü de duydu. Sonra kendi yollarına dağıldılar. İtret, Ehl-i Beyt demektir. Kitap, o aile yanından ayrılmasın diye söylenmişti. Kafile Hum\'dan ayrılırken emanet geride kalmadı. Gidenlerin yanında gitti.' },
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 82, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Rivayetlere göre konuşma bitince **Hz. Ali**\'yi tebrik edenler oldu. Bu anlatılardan birinde **Ömer**, onu mümin erkeklerin ve kadınların mevlâsı diye kutladı. Çok geçmeden Peygamber vefat etti. Birkaç gün sonra insanların bir kısmı Sakife\'nin gölgeliğine girdi ve orada Hz. Ali\'nin adı sorulmadı. Hum\'da kaldırılan el, cenaze henüz yıkanmadan bir kenara bırakıldı.' },
+      text: { tr: 'Rivayetlere göre konuşma bitince **Hz. Ali**\'yi tebrik edenler oldu. Bu anlatılardan birinde **Ömer**, onu mümin erkeklerin ve kadınların mevlâsı diye kutladı. Tebrik, suyun başında yapıldı. Çok geçmeden Peygamber vefat etti. Birkaç gün sonra insanların bir kısmı Sakife\'nin gölgeliğine girdi. Orada Hz. Ali\'nin adı sorulmadı. Hum\'da kaldırılan el, cenaze henüz yıkanmadan bir kenara bırakıldı. Tebrik eden ağızlar, o gölgelikte başka bir biat aradı.' },
       art: { bg: 'dune-dusk', props: ['sun', 'tents'], actors: [{ kind: 'crowd', x: 30, scale: 6 }, { kind: 'man', x: 56 }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Hayber**\'de Peygamber sancağı **Hz. Ali**\'ye vermiş, **Tebük** yolunda onu Hz. Hârûn\'a benzetmiş, **Gadir Hum**\'da ise elini hacdan dönenlerin önünde kaldırmıştı. Üç gün ayrıdır, gösterilen kişi aynıdır. Peygamber vefat edince bu söz Sakife\'de sınanacaktı.' },
+      text: { tr: '**Hayber**\'de Peygamber sancağı **Hz. Ali**\'ye vermişti. **Tebük** yolunda onu Hz. Hârûn\'a benzetmişti. **Gadir Hum**\'da ise elini hacdan dönenlerin önünde kaldırmıştı. Üç gün ayrıdır. Gösterilen kişi aynıdır. Güven Hayber\'de, yakınlık Tebük\'te, önderlik Hum\'daydı. Peygamber vefat edince bu üç söz Sakife\'de sınanacaktı. Kafile dağılmıştı. Söz dağılmamıştı.' },
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'ali', x: 50, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 22, scale: 5 }] },
       by: 'both',
     },
