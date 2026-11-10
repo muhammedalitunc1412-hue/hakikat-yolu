@@ -8,13 +8,13 @@ export const nehrevan: HistEvent = {
   hook: { tr: 'Hakemden sonra bir grup Hz. Ali\'nin yanından ayrıldı. Çatışma Nehrevan\'da oldu.', en: 'After the arbitration a group left Ali. The fight was at Nahrawan.' },
   scenes: [
     {
-      text: { tr: '**Sıffin**\'de mushaflar mızrağa kalkınca iki taraf hakemi kabul etti. **Hz. Ali**\'nin ordusundan bir grup buna karşı çıktı. Hükmün yalnız Allah\'a ait olduğunu söyledi. Hz. Ali, sözün kendisini doğru buldu. Bu anlaşmazlıkta ise sözün yanlış bir amaçla kullanıldığını söyledi. "Söz haktır, ama onunla batıl kastediliyor" dedi. Ayrılanlar sonra **Haricîler** adıyla anıldı. Seven, sloganı bir takva diye okumaz. Doğru cümlenin, yanlış elde nasıl silaha döndüğünü görür.' },
+      text: { tr: 'Sıffin\'de mushaflar mızraklara asılıp savaş durdurulunca iki taraf hakemliği kabul etti. Ama **Hz. Ali**\'nin ordusundan bir grup buna şiddetle karşı çıktı. "Hüküm yalnızca Allah\'ındır" diyerek Hz. Ali\'yi suçladılar ve onun yanından ayrıldılar. Oysa savaşın durması için Hz. Ali\'yi en çok zorlayanların arasında onlar da vardı. Hz. Ali, söyledikleri sözün kendisinin doğru olduğunu kabul etti, ama bu sözün yanlış bir amaç için kullanıldığını söyledi: "Söz haktır, ama onunla batıl kastediliyor." Bu ayrılanlar sonradan **Haricîler**, yani ayrılanlar adıyla anıldı. Hz. Ali onlarla kılıçla değil, önce sözle konuşmayı seçti.' },
       image: 'nehrevan-1',
       art: { bg: 'dune-day', props: ['flags'], actors: [{ kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 30, scale: 6 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Haricîler, **Abdullah b. Habbâb** ile hamile eşini öldürünce **Hz. Ali** durdu. Şam\'a karşı hazırladığı orduyu **Nehrevan**\'a çevirdi. Önce konuştu. Uzlaşma olmadı. Sonra iki taraf savaştı. Ölü sayısı rivayetlerde ayrılır. Kesin bir sayım yoktur. Yolun başı, Sıffin\'deki hakem kararıydı. Sonu, bir hamile kadının kanıydı. Seven, Nehrevan\'ı bir iç savaş lakabı diye geçmez. Hz. Ali\'nin, önce sözü, sonra kılıcı neden bu tarafa çevirdiğini görür.' },
+      text: { tr: 'Haricîler zamanla daha da sertleşti ve kendileri gibi düşünmeyenlere kılıç çekmeye başladı. Sonunda **Abdullah b. Habbâb**\'ı ve hamile eşini öldürdüler. Bu haber Hz. Ali\'ye ulaşınca durum değişti. **Hz. Ali**, Şam\'a karşı hazırladığı orduyu **Nehrevan**\'a çevirdi. Savaştan önce onlarla yeniden konuştu ve onları geri dönmeye çağırdı. Ama bir uzlaşma sağlanamadı ve iki taraf arasında savaş başladı. Ölenlerin sayısını rivayetler farklı verir, kesin bir sayım yoktur. Sıffin\'deki mızraklara asılmış mushaflarla başlayan yol, Nehrevan\'da masum bir kadının ve doğmamış bebeğinin kanına varmış, oradan da bir savaşa dönüşmüştü.' },
       image: 'nehrevan-2',
       art: { bg: 'battle', props: ['flags', 'swords'], actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 70, scale: 6 }] },
       by: 'both',
