@@ -47,7 +47,7 @@ export const hayber: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Hayber düştükten sonra kalelerin halkı, ürünlerinin yarısını vermek şartıyla topraklarında kalmaya razı oldu. Yakınlardaki **Fedek** halkı ise savaşmadan, kılıç çekilmeden anlaşma yaptı. Savaşsız alınan bu toprak doğrudan Peygamber\'e ait oldu. Peygamber de Fedek\'in hurmalıklarını kızı **Hz. Fatıma**\'ya hibe etti. Hibe, karşılıksız bağış demektir. Fedek, Hz. Fatıma\'nın evine helal bir geçim kaynağı oldu. Ancak Peygamber\'in vefatından sonra bu bahçe Hz. Fatıma\'nın elinden alınacak ve Fedek, Ehl-i Beyt\'in gasp edilen hakkının adı olacaktı.' },
+      text: { tr: 'Hayber düştükten sonra kalelerin halkı, ürünlerinin yarısını vermek şartıyla topraklarında kalmaya razı oldu. Yakınlardaki **Fedek** halkı ise savaşmadan, kılıç çekilmeden anlaşma yaptı. Savaşsız alınan bu toprak doğrudan Peygamber\'e ait oldu. Peygamber de Fedek\'in hurmalıklarını kızı **Hz. Fatıma**\'ya hibe etti ve ona miras olarak bıraktı. Hibe, karşılıksız bağış demektir. Fedek, Hz. Fatıma\'nın evine helal bir geçim kaynağı oldu. Ancak Peygamber\'in vefatından sonra bu bahçe Hz. Fatıma\'nın elinden alınacak ve Fedek, Ehl-i Beyt\'in gasp edilen hakkının adı olacaktı.' },
       art: { bg: 'river', props: ['palms'], actors: [{ kind: 'crowd', x: 50, scale: 5 }] },
     },
   ],

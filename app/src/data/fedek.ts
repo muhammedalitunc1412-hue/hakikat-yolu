@@ -10,7 +10,7 @@ export const fedek: HistEvent = {
   hook: { tr: 'Peygamber\'in kızına bağışladığı Fedek elinden alındı. O, hakkını ayetle söyledi ve küs vefat etti.', en: 'Why did the Prophet\'s daughter never speak to the caliph again?' },
   scenes: [
     {
-      text: { tr: 'Medine\'nin kuzeyinde, Hayber\'e yakın bir yerde **Fedek** adında verimli bir hurmalık vardı. Buranın halkı, Müslümanlarla savaşmadan anlaşma yapmıştı. Savaşsız alınan topraklar doğrudan Peygamber\'in tasarrufuna bırakılırdı. **Hz. Peygamber** de bu bahçeyi kızı **Hz. Fatıma**\'ya hibe etti. Hibe, bir malı karşılıksız olarak bağışlamak demektir. Fedek\'in hurmaları her yıl Hz. Fatıma\'nın evine bereket getiriyordu. Bu gelir, ==Ehl-i Beyt==\'in geçiminin büyük kısmını karşılıyordu. Peygamber vefat ettiğinde **Hz. Ali** onun cenazesinin başındaydı ve aile derin bir yasın içindeydi. Tam o günlerde, Sakife\'de biat alınırken Fedek için de yeni bir hesap başladı.' },
+      text: { tr: 'Medine\'nin kuzeyinde, Hayber\'e yakın bir yerde **Fedek** adında verimli bir hurmalık vardı. Buranın halkı, Müslümanlarla savaşmadan anlaşma yapmıştı. Savaşsız alınan topraklar doğrudan Peygamber\'in tasarrufuna bırakılırdı. **Hz. Peygamber** de bu bahçeyi kızı **Hz. Fatıma**\'ya hibe etti ve ona miras olarak bıraktı. Hibe, bir malı karşılıksız olarak bağışlamak demektir. Fedek\'in hurmaları her yıl Hz. Fatıma\'nın evine bereket getiriyordu. Bu gelir, ==Ehl-i Beyt==\'in geçiminin büyük kısmını karşılıyordu. Peygamber vefat ettiğinde **Hz. Ali** onun cenazesinin başındaydı ve aile derin bir yasın içindeydi. Tam o günlerde, Sakife\'de biat alınırken Fedek için de yeni bir hesap başladı.' },
       art: { bg: 'oasis', props: ['sun', 'palms', 'well'], actors: [{ kind: 'prophet', x: 36, label: { tr: 'Hz. Peygamber' } }, { kind: 'fatima', x: 64, label: { tr: 'Hz. Fatıma' } }] },
       by: 'shia',
       cites: [{ side: 'shia', i: 0 }],
@@ -68,7 +68,7 @@ export const fedek: HistEvent = {
     {
       title: { tr: 'Fedek kime aitti?' },
       sunni: { tr: 'Fedek savaşsız alınan bir topraktı ve Peygamber\'in tasarrufundaydı. Sünni okumada o, Peygamber\'den sonra devletin sadakasıdır.' },
-      shia: { tr: 'Fedek savaşsız alınan bir topraktı. Şii okumada Peygamber onu Hz. Fatıma\'ya hibe etmişti. El koyuş, Ehl-i Beyt\'i ekonomik olarak zayıf bırakmak ve Hz. Ali\'nin hilafet hakkını savunacak gücü kesmek diye okunur.' },
+      shia: { tr: 'Fedek savaşsız alınan bir topraktı. Şii okumada Peygamber onu Hz. Fatıma\'ya hibe etmiş ve miras olarak bırakmıştı. El koyuş, Ehl-i Beyt\'i ekonomik olarak zayıf bırakmak ve Hz. Ali\'nin hilafet hakkını savunacak gücü kesmek diye okunur.' },
     },
     {
       title: { tr: '"Peygamberler miras bırakmaz"' },
@@ -86,5 +86,5 @@ export const fedek: HistEvent = {
     { tr: 'Hz. Ali ve Ümmü Eymen şahit oldu, sözleri alınmadı. Hakkı elinde olan bir kadına belge sormak size ne hissettirir?' },
     { tr: 'Hz. Fatıma küs vefat etti. Bu suskunluk, bir hakkın mezara kadar taşınması olarak size ne söyler?' },
   ],
-  summary: { tr: 'Peygamber Fedek\'i Hz. Fatıma\'ya hibe etmişti. Halife Ebu Bekir buna el koydu. Hz. Fatıma mescitte Neml 16 ve Meryem 6 ile cevap verdi. Hz. Ali ile Ümmü Eymen\'in şahitliği kabul edilmedi. O, küs vefat etti. Buhari 4240 küskünlüğü ve gece defni yazar. Hibe ve şahitler el-Kâfî 1/543 kaydındadır. Hutbe Belâğatü\'n-Nisâ\'dadır. Sayfa numarası ayrıca verilmedi.' },
+  summary: { tr: 'Peygamber Fedek\'i Hz. Fatıma\'ya hibe etmiş ve miras olarak bırakmıştı. Halife Ebu Bekir buna el koydu. Hz. Fatıma mescitte Neml 16 ve Meryem 6 ile cevap verdi. Hz. Ali ile Ümmü Eymen\'in şahitliği kabul edilmedi. O, küs vefat etti. Buhari 4240 küskünlüğü ve gece defni yazar. Hibe ve şahitler el-Kâfî 1/543 kaydındadır. Hutbe Belâğatü\'n-Nisâ\'dadır. Sayfa numarası ayrıca verilmedi.' },
 };
