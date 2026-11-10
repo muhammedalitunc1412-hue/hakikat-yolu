@@ -10,57 +10,57 @@ export const ibadetFarklari: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Ezan, Peygamber döneminde Bilal\'in okuduğu çağrıdır. "Hayye alâ hayri\'l-amel" ifadesini bazılarının zaman zaman kullandığına dair rivayetler vardır. Sıhhati tartışmalıdır. Uygulama sonradan terk edilmiş olarak aktarılır. Câferî mektep, bu ifadeyi ezanın asli bir parçası olarak sürdürür. Halife Ömer\'in kaldırdığı da rivayet edilir. Hayya alâ hayr el-amel, Şii ezanında durur. Çağrı, en hayırlı amele davet eder.' },
+      text: { tr: 'Ezan, Peygamber döneminde Bilal\'in okuduğu çağrıdır. "Hayye alâ hayri\'l-amel" ifadesini bazılarının zaman zaman kullandığına dair rivayetler vardır. Sıhhati tartışmalıdır. Câferî mektep bu ifadeyi ezanın asli bir parçası olarak sürdürür. Halife Ömer\'in kaldırdığı da rivayet edilir.' },
       art: { bg: 'dawn', props: ['moon'], actors: [{ kind: 'man', x: 50, pose: 'raise', label: { tr: 'Bilal' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Câferî fıkıhta "Hayye alâ hayri\'l-amel" ezanın bir cüzüdür. Halife Ömer\'in bunu, savaş ruhunu zayıflatır diye kaldırdığı rivayet edilir. "Eşhedü enne Aliyyen veliyyullah" bugünkü Şii ulema görüşüne göre ezanın şartı değildir. Müstehap bir şiar olarak okunur. "Es-salâtü hayrun mine\'n-nevm" Câferî ezanında okunmaz. Sünni kaynaklarda bu son ifade sabah ezanında sabit bir sünnet olarak anılır. Sabah ezanı, iki mektepte iki cümleyle ayrılır.' },
+      text: { tr: 'Câferî fıkıhta "Hayye alâ hayri\'l-amel" ezanın bir cüzüdür. Halife Ömer\'in bunu savaş ruhunu zayıflatır diye kaldırdığı rivayet edilir. "Eşhedü enne Aliyyen veliyyullah" bugünkü Şii ulema görüşüne göre ezanın şartı değildir, müstehap bir şiar olarak okunur. "Es-salâtü hayrun mine\'n-nevm" Câferî ezanında okunmaz. Sünni kaynaklarda bu son ifade sabah ezanında sabit bir sünnet olarak anılır.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'man', x: 40, pose: 'raise', label: { tr: 'Müezzin' } }, { kind: 'crowd', x: 72, scale: 0.7 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Mâlikî mezhebinde namazda ellerin sarkıtılması bir görüş olarak nakledilir. Diğer Sünni mezheplerin çoğunda ayakta eller bağlanır ve bu sünnet sayılır. Câferî fıkıhta eller yanlarda bırakılır. Bağlamak namazı bozar diye görülür. Sarkıtma, Peygamber\'in ve Ehl-i Beyt\'in uygulaması olarak sürdürülür. Eller, namazda yana durur. Bağ, bir sünnet değil, bir ayrılıktır.' },
+      text: { tr: 'Mâlikî mezhebinde namazda ellerin sarkıtılması bir görüş olarak nakledilir. Diğer Sünni mezheplerin çoğunda ayakta eller bağlanır. Câferî fıkıhta eller yanlarda bırakılır ve bağlamak namazı bozar diye görülür. Sarkıtma, Peygamber\'in ve Ehl-i Beyt\'in uygulaması olarak sürdürülür.' },
       art: { bg: 'interior', actors: [{ kind: 'man', x: 40, label: { tr: 'Namaz kılan' } }, { kind: 'man', x: 66, label: { tr: 'Namaz kılan' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Cabir\'den gelen rivayette "Yeryüzü bana ve ümmetime mescit ve teyemmüm vasıtası kılındı" denir. Câferî fıkıh, secdeyi yerden biten, yenmeyen ve giyilmeyen bir şeye ve toprağa yapar. Toprağa secdeyi şart sayar. Bu yüzden birçok Şii yanında bir secde taşı, türbe, taşır. Kerbelâ toprağı özellikle tercih edilir. Sünni mezheplerde secde yeri halı, hasır veya toprak olabilir. Secde yeri, Sünni mezheplerde daha geniştir. Câferî secde, yerin kendisine iner.' },
+      text: { tr: 'Cabir\'den gelen rivayette yeryüzünün mescit ve teyemmüm vasıtası kılındığı söylenir. Câferî fıkıh secdeyi yerden biten, yenmeyen ve giyilmeyen bir şeye ve toprağa yapar. Bu yüzden birçok Şii yanında bir secde taşı taşır. Kerbelâ toprağı özellikle tercih edilir. Sünni mezheplerde secde yeri halı, hasır veya toprak olabilir.' },
       art: { bg: 'interior', actors: [{ kind: 'man', x: 50, pose: 'sit', label: { tr: 'Secdede' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Kerbelâ toprağının sevilmesi, Hz. Hüseyin\'in şehit olduğu yer olmasıyla ilgilidir. Bazı rivayetlerde bu toprağa şifa ve sevap bağlanır. Bu rivayetlerin senet değeri Şii âlimler arasında da tartışılır. Şii fıkhında toprak secdesi sünnet, Kerbelâ toprağı ise müstehap sayılır. Secde taşı kullanmak Sünni mezheplerde yasak değildir. Câferî mektep, yerden biten şeye secdeyi Peygamber\'in secde uygulamasının devamı sayar. Türbe, yerden biten bir topraktır. Sevgi, o toprağı öne alır.' },
+      text: { tr: 'Kerbelâ toprağının sevilmesi, Hz. Hüseyin\'in şehit olduğu yer olmasıyla ilgilidir. Bazı rivayetlerde bu toprağa şifa ve sevap bağlanır. Bu rivayetlerin senet değeri Şii âlimler arasında da tartışılır. Toprak secdesi sünnet, Kerbelâ toprağı ise müstehap sayılır. Secde taşı kullanmak Sünni mezheplerde yasak değildir.' },
       art: { bg: 'dune-dusk', props: ['sun'], actors: [{ kind: 'husayn', x: 50, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'İbn Abbas, Peygamber\'in korku, yağmur veya yolculuk olmadan Medine\'de öğle-ikindi ve akşam-yatsıyı birleştirdiğini anlatır. Gerekçe, ümmetini zora koşmamaktır. Câferî fıkıh, bu uygulamayı mazeretsiz cem olarak sürdürür. Vakitler öğleden akşama ve güneş batımından gece yarısına kadar ortaktır. Ayrı kılmak daha faziletlidir. Sünni mezheplerde aynı hadis çoğunlukla özel bir mazeret diye yorumlanır. Hanefiler yolculuk ve arefe gibi dar durumlar dışında cem\'i kabul etmez. Cem, iki namazın bir vakitte kılınmasıdır. Kolaylık, Peygamber\'in ümmetine bir nefestir.' },
+      text: { tr: 'İbn Abbas, Peygamber\'in korku, yağmur veya yolculuk olmadan Medine\'de öğle ile ikindiyi, akşam ile yatsıyı birleştirdiğini anlatır. Gerekçe, ümmetini zora koşmamaktır. Câferî fıkıh bunu mazeretsiz cem olarak sürdürür. Ayrı kılmak daha faziletlidir. Hanefiler yolculuk ve arefe gibi dar durumlar dışında cem\'i kabul etmez. Cem, iki namazın bir vakitte kılınmasıdır.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'prophet', x: 50, label: { tr: 'Hz. Peygamber' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Halife Ömer, Ramazan gecesi insanları dağınık görünce onları Ubey b. Kâ\'b\'ın arkasında topladı ve "Ne güzel bid\'at bu" dedi. Sünni mezheplerde teravih sünnettir. Bu toplama, sahabenin kabulüyle meşru sayılır. Câferî fıkıhta Ramazan gecesi nafilesi bireysel kılınır. Cemaatle teravih Peygamber sünneti sayılmaz. Bu toplama Halife Ömer\'in uygulamasıdır. Onun "bid\'at" sözü de bu okuyuşta hatırlanır. Teravih, cemaatle kılınan bu gece namazıdır. Câferî gece, tek başına kılınan bir nafiledir.' },
+      text: { tr: 'Halife Ömer, Ramazan gecesi insanları Ubey b. Kâ\'b\'ın arkasında topladı ve "Ne güzel bid\'at bu" dedi. Sünni mezheplerde teravih sünnettir. Câferî fıkıhta Ramazan gecesi nafilesi bireysel kılınır. Cemaatle teravih Peygamber sünneti sayılmaz. Bu toplama Halife Ömer\'in uygulamasıdır.' },
       art: { bg: 'night', props: ['moon', 'stars'], actors: [{ kind: 'man', x: 34, label: { tr: 'Ömer' } }, { kind: 'crowd', x: 68, scale: 0.7 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Enfâl 8:41, ganimet olarak alınan şeyin beşte birinin Allah\'a, Peygamber\'e, yakınlara, yetimlere, yoksullara ve yolculara ait olduğunu söyler. Câferî fıkıh "ganimet"i geniş okur. Yıllık kazancın fazlasından beşte bir verilir. Humus iki eşit parçadır. İmam hissesi ve seyyidlere, yani Haşimoğullarından yetim, yoksul ve yolculara ait hisse. Gaybet döneminde imam hissesi müçtehidin nezaretinde harcanır. Sünni mezheplerde ayet savaş ganimeti için geçerli sayılır ve kazançtan humus alınmaz. Ayetin kabulü ortaktır. Fark, kapsamdadır. Ehl-i Beyt, ayetteki yakınların içinde sayılır.' },
+      text: { tr: 'Enfâl 8:41, ganimetin beşte birinin Allah\'a, Peygamber\'e, yakınlara, yetimlere, yoksullara ve yolculara ait olduğunu söyler. Câferî fıkıh ganimeti geniş okur ve yıllık kazancın fazlasından beşte bir alır. Humus iki parçadır: imam hissesi ve Haşimoğullarından yetim, yoksul ve yolculara ait hisse. Gaybet döneminde imam hissesi müçtehidin nezaretinde harcanır. Sünni mezheplerde ayet savaş ganimeti için geçerli sayılır. Ehl-i Beyt, ayetteki yakınların içinde sayılır.' },
       art: { bg: 'city', actors: [{ kind: 'man', x: 40, label: { tr: 'Tüccar' } }, { kind: 'man', x: 66, label: { tr: 'Müçtehid' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Âl-i İmrân 3:28, "Onlardan sakınmanız hariç" der. Nahl 16:106, "kalbi imanla dolu olduğu halde zorlanan hariç" der. Ammar b. Yasir\'in işkence altında dil ile inkâr sözü söylediği ve Peygamber\'in ona "tekrar edersen yine söyle" dediği rivayet bilinir. Câferî fıkıhta takiyye, can, mal ve ırz tehlikesinde ve mezhebin korunması gerektiğinde caizdir. Bazen de gereklidir. Tarihte Şiiler baskı altında yaşadığı için bu hüküm fıkıhta yer bulmuştur. Sünni kaynaklarda da aynı ayetler dayanak gösterilir. Takiyye, can tehlikesinde bir ruhsattır. Dil, kalbi satmaz.' },
+      text: { tr: 'Âl-i İmrân 3:28 ve Nahl 16:106, kalbi imanla dolu olduğu halde zorlanan kişiye ruhsat verir. Ammar b. Yasir işkence altında dil ile inkâr sözü söylemiş, Peygamber ona tekrar ederse yine söylemesini bildirmiştir. Câferî fıkıhta takiyye can, mal ve ırz tehlikesinde caizdir, bazen de gereklidir. Sünni kaynaklarda da aynı ayetler, can tehlikesinde bir ruhsat diye anılır.' },
       art: { bg: 'mountain', actors: [{ kind: 'man', x: 50, label: { tr: 'Ammar b. Yasir' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Gadir hadisi, "Ben kimin mevlası isem Hz. Ali de onun mevlasıdır", Sünni kitaplarda da yer alır. "Mevla" kelimesinin yönetim mi dostluk mu olduğu ayrıca konuşulur. Âşûrâ, Sünni kaynaklarda bir oruç günüdür. Hz. Musa\'nın kurtuluşu anılır. Hz. Hüseyin\'in şehadeti de hatırlanır. Câferî gelenekte Muharrem\'in ilk on günü ve Âşûrâ, Kerbelâ matemidir. 18 Zilhicce ise Gadir bayramı sayılır. Bir gün oruçtur. Bir gün matemdir. Bir gün, kaldırılan elin bayramıdır.' },
+      text: { tr: '"Ben kimin mevlası isem Hz. Ali de onun mevlasıdır" sözü Sünni kitaplarda da yer alır. Mevlâ\'nın yönetim mi dostluk mu olduğu ayrıca konuşulur. Âşûrâ Sünni kaynaklarda bir oruç günüdür. Câferî gelenekte Muharrem\'in ilk on günü ve Âşûrâ, Kerbelâ matemidir. 18 Zilhicce ise Gadir bayramı sayılır.' },
       art: { bg: 'dune-dusk', props: ['flags'], actors: [{ kind: 'husayn', x: 34, label: { tr: 'Hz. Hüseyin' } }, { kind: 'ali', x: 66, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Ahzâb 33:33, "Allah sizden kirleri gidermek ve sizi tertemiz yapmak ister, ey Ehl-i Beyt" der. Müslim\'deki Kisâ hadisinde Peygamber, Hz. Ali, Fatıma, Hz. Hasan ve Hz. Hüseyin\'i abasının altına alır ve bu ayeti okur. Buhari 6585\'te Peygamber, havz başında bazı arkadaşlarının uzaklaştırılacağını söyler. Câferî okuyuş, Tathir ayetini Ehl-i Beyt\'in ismetine delil sayar. Sahabe adaletini ise kişinin davranışı ve ilmiyle ölçer. Sünni kaynaklarda Ehl-i Beyt sevilir. İsmet peygamberlere özgü sayılır. Havz hadisi irtidat edenlere veya münafıklara bağlanır. Havz, kıyametteki havuzdur. Yorumlar ayrılır. Örtünün altındaki beş, Câferî okuyuşta o ayetin adresidir.' },
+      text: { tr: 'Ahzâb 33:33, "Allah sizden kirleri gidermek ve sizi tertemiz yapmak ister, ey Ehl-i Beyt" der. Müslim\'deki Kisâ hadisinde Peygamber, Hz. Ali, Fatıma, Hz. Hasan ve Hz. Hüseyin\'i abasının altına alır ve bu ayeti okur. Buhari 6585\'te Peygamber, havz başında bazı arkadaşlarının uzaklaştırılacağını söyler. Câferî okuyuş Tathir ayetini Ehl-i Beyt\'in ismetine delil sayar. Sünni kaynaklarda ismet peygamberlere özgü sayılır. Havz, kıyametteki havuzdur. Yorumlar ayrılır.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 36, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 60, label: { tr: 'Hz. Ali' } }] },
     },
   ],
