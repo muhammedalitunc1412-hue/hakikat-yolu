@@ -31,7 +31,7 @@ export const hayber: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Hz. Ali sancakla kalenin önüne geldiğinde kapı açıldı ve Hayber\'in en ünlü savaşçısı **Merhab** meydana çıktı. Başında miğfer, üzerinde zırh vardı. Kılıcını sallayarak şiir okudu ve Hayber\'in kendisini tanıdığını, silahının keskin olduğunu söyledi. **Hz. Ali** onun karşısına geçti ve o da şiirle cevap verdi: "Ben, annemin Haydar adını verdiği kişiyim." Haydar, aslan demektir. Ehl-i Beyt rivayetlerine göre Hz. Ali, hafifçe eğri kılıcı Zülfikar\'ı tek bir kez indirdi ve bu darbe Merhab\'ı yere yıktı. Hayber\'in en güçlü savaşçısının düşmesiyle kaleyi savunanların cesareti kırıldı ve kale kısa süre içinde fethedildi.' },
+      text: { tr: 'Hz. Ali sancakla kalenin önüne geldiğinde kapı açıldı ve Hayber\'in en ünlü savaşçısı **Merhab** meydana çıktı. Başında miğfer, üzerinde zırh vardı. Kılıcını sallayarak şiir okudu ve Hayber\'in kendisini tanıdığını, silahının keskin olduğunu söyledi. **Hz. Ali** onun karşısına geçti ve o da şiirle cevap verdi: "Ben, annemin Haydar adını verdiği kişiyim." Haydar, aslan demektir. Ehl-i Beyt rivayetlerine göre Hz. Ali, kılıcı Zülfikar\'ı tek bir kez indirdi ve bu darbe Merhab\'ı yere yıktı. Hayber\'in en güçlü savaşçısının düşmesiyle kaleyi savunanların cesareti kırıldı ve kale kısa süre içinde fethedildi.' },
       cites: [{ side: 'sunni', i: 4 }, { side: 'shia', i: 1 }, { side: 'shia', i: 2 }],
       art: { bg: 'dune-day', actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 74, scale: 3 }] },
     },
