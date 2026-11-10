@@ -9,47 +9,47 @@ export const mezhepler: HistEvent = {
   hook: { tr: 'Tek ümmet, siyasi ayrılıklardan ilim halkalarına ve fıkıh ekollerine nasıl yürüdü?', en: 'How did one community branch into different schools, from political disputes to law and theology?' },
   scenes: [
     {
-      text: { tr: 'Şii kaynaklarına göre "Şîatü Alî", Hz. Ali\'nin taraftarları, daha Peygamber döneminde vardı. Bu bağlılık Peygamber\'in yönlendirmesiyle oluştu. Şii kaynakları bunu Gadir-i Hum ve benzeri olaylarla ilişkilendirir. "Şîa" sözcüğü taraftar demektir. Terim olarak Peygamber\'den sonra başkanlığın Hz. Ali ve soyuna ait olduğunu savunan grupları anlatır. Erken kullanım, bir soyun etrafında toplananları adlandırır.' },
+      text: { tr: 'Şii kaynaklarına göre "Şîatü Alî", Hz. Ali\'nin taraftarları, daha Peygamber döneminde vardı. Bu bağlılık Peygamber\'in yönlendirmesiyle oluştu ve Gadir-i Hum ile ilişkilendirilir. "Şîa" taraftar demektir. Terim olarak Peygamber\'den sonra başkanlığın Hz. Ali ve soyuna ait olduğunu savunan grupları anlatır.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'prophet', x: 38, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Beyyine 98:7 için Peygamber\'in Hz. Ali\'ye "Bu, sen ve şiandır" dediği bir rivayet aktarılır. Şii kaynakları bunu, "Şia" sözünün Peygamber döneminde kullanıldığına bir delil sayar. Rivayetin sıhhati tartışmalıdır. Seven, sözü bir unvan diye ezberlemez. Peygamber\'in, kendi tarafını kime bağladığını duyar.' },
+      text: { tr: 'Beyyine 98:7 için Peygamber\'in Hz. Ali\'ye "Bu, sen ve şiandır" dediği bir rivayet aktarılır. Şii kaynakları bunu, sözün Peygamber döneminde kullanıldığına bir delil sayar. Rivayetin sıhhati tartışmalıdır.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 36, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Peygamber\'in vefatından sonra Sakîfe\'de Ebû Bekir seçildi. Hz. Ali\'nin biati gecikti. Selmân-ı Fârisî, Ebû Zer, Mikdâd ve Ammâr, Hz. Ali taraftarları arasında anılır. Bir okuyuş bunu siyasi bir tercih sayar. Şii anlatım, aynı sahabileri imamet konusundaki Peygamber vasiyetine bağlı kalanlar sayar. Onlar, gölgelikte değil, vasiyette durdu.' },
+      text: { tr: 'Peygamber\'in vefatından sonra Sakîfe\'de Ebû Bekir seçildi, Hz. Ali\'nin biati gecikti. Selmân-ı Fârisî, Ebû Zer, Mikdâd ve Ammâr, Hz. Ali taraftarları arasında anılır. Bir okuyuş bunu siyasi tercih sayar. Şii anlatım, aynı sahabileri Peygamber\'in vasiyetine bağlı kalanlar sayar.' },
       art: { bg: 'city', actors: [{ kind: 'man', x: 28, label: { tr: 'Selman' } }, { kind: 'man', x: 46, label: { tr: 'Ebu Zer' } }, { kind: 'man', x: 62, label: { tr: 'Mikdad' } }, { kind: 'man', x: 78, label: { tr: 'Ammar' } }, { kind: 'ali', x: 12, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Cemel ve Sıffîn, ümmetin siyasi birliğini böldü. Sıffîn\'de Muâviye\'nin ordusu Kur\'an sayfalarını mızraklara takıp hakem istedi. Hz. Ali\'nin ordusundan bir grup, onun itirazına rağmen hakemi kabul etti. Sonra "hüküm ancak Allah\'ındır" diyerek ayrılıp Harûrâ\'ya çekildiler. Bunlar ilk Hâricîler, Muhakkime\'dir. Hz. Ali onlarla Nehrevan\'da, 658\'de savaştı. Hâricîler büyük günah işleyeni kâfir saydı. Buna karşı, kişilerin akıbetini Allah\'a bırakan Mürcie doğdu. Hz. Ali\'ye bağlı kalanlar Şia\'yı oluşturdu. Sakife, Cemel ve Sıffin, bu ayrılığın duraklarıdır.' },
+      text: { tr: 'Cemel ve Sıffîn ümmetin siyasi birliğini böldü. Sıffîn\'de Muâviye\'nin ordusu Kur\'an sayfalarını mızraklara takıp hakem istedi. Hz. Ali\'nin ordusundan bir grup hakemi kabul etti, sonra "hüküm ancak Allah\'ındır" diyerek Harûrâ\'ya çekildi. Bunlar ilk Hâricîler, Muhakkime\'dir. Hz. Ali onlarla Nehrevan\'da, 658\'de savaştı. Hâricîler büyük günah işleyeni kâfir sayınca, akıbeti Allah\'a bırakan Mürcie doğdu. Hz. Ali\'ye bağlı kalanlar Şia\'yı oluşturdu.' },
       art: { bg: 'battle', props: ['swords', 'flags'], actors: [{ kind: 'ali', x: 30, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 62, scale: 5, label: { tr: 'Hakem karşıtı grup' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Kerbelâ\'da Hz. Hüseyin\'in şehadeti Şia\'yı derinden etkiledi. Kûfe\'de Muhtâr es-Sekafî, şehitlerin hesabını sormak için 66 (685) yılında ayaklandı ve yaklaşık 18 ay Kûfe\'yi yönetti. 67\'de öldürüldü. Muhammed b. el-Hanefiyye adına çağrı yaptığı rivayet, Keysâniyye\'nin doğuşuna bağlanır. Şii kaynaklarında Muhtâr\'a bakış farklıdır. Çoğu onu olumlu anar. Kimisi susmayı tercih eder. Keysâniyye\'nin Muhtâr\'dan mı, yoksa ölümünden sonra mı çıktığı da tartışmalıdır. Kol, Kûfe\'nin o aylarında konuşulur.' },
+      text: { tr: 'Kerbelâ\'dan sonra Kûfe\'de Muhtâr es-Sekafî, şehitlerin hesabını sormak için 66 (685) yılında ayaklandı ve yaklaşık 18 ay şehri yönetti. 67\'de öldürüldü. Muhammed b. el-Hanefiyye adına çağrı yaptığı rivayet, Keysâniyye\'nin doğuşuna bağlanır. Keysâniyye\'nin Muhtâr\'dan mı, ölümünden sonra mı çıktığı tartışmalıdır.' },
       art: { bg: 'city', props: ['swords', 'flags'], actors: [{ kind: 'man', x: 34, label: { tr: 'Muhtâr es-Sekafî' } }, { kind: 'crowd', x: 68, scale: 5 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Hüseyin\'in torunu Zeyd b. Ali, Emevi halifesi Hişâm\'a karşı 122 (740) yılında Kûfe\'de ayaklandı ve öldürüldü. Zeyd, imameti Hz. Ali soyundan en faziletli ve ayaklanan kişiye verdi. Halife Ebû Bekir ile Halife Ömer\'in hilafetini de meşru saydı. Bu çizgi Zeydiyye adıyla ayrı bir kol oldu. Taberistan ve Yemen\'de devletler kurdu. İmâmî Şia kaynaklarında ise imamet nasla, yani açık belirlemeyle anlatılır. Ayaklanmak başka, nass başka bir kapıdır.' },
+      text: { tr: 'Zeyd b. Ali, Hişâm\'a karşı 122 (740) yılında Kûfe\'de ayaklandı ve öldürüldü. İmameti Hz. Ali soyundan en faziletli ve ayaklanan kişiye verdi. Halife Ebû Bekir ile Halife Ömer\'in hilafetini de meşru saydı. Bu çizgi Zeydiyye oldu. İmâmî kaynaklarda imamet nasla, yani açık belirlemeyle anlatılır.' },
       art: { bg: 'dune-dusk', props: ['swords', 'flags'], actors: [{ kind: 'man', x: 36, label: { tr: 'Zeyd b. Ali' } }, { kind: 'crowd', x: 68, scale: 5 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Emevi iktidarı zayıflarken ve Abbasi iktidarı henüz oturmamışken Hz. Muhammed Bâkır ile Hz. Ca\'fer-i Sâdık Medine\'de geniş bir ilim halkası kurdu. Şeyh Tûsî\'nin Ricâl\'inde yaklaşık 3200, Müfid\'e göre yaklaşık 4000 ravi ondan nakleder. Câferî fıkhı büyük ölçüde onun rivayetlerinden oluşur. Dört Yüz Usûl denen derlemeler öğrencilerine bağlanır. Mâlik\'in ondan hadis aldığı ve Ebû Hanîfe\'nin onu çağının en bilgin kişisi saydığı Şii kaynaklarında geçer. Sünni anlatım, bu ilişkiyi hadis alışverişi ve ilmî saygı diye okur. Saygı da bir kapıdır. Talebe olmak da bir kapıdır.' },
+      text: { tr: 'Hz. Muhammed Bâkır ile Hz. Ca\'fer-i Sâdık Medine\'de geniş bir ilim halkası kurdu. Şeyh Tûsî\'nin Ricâl\'inde yaklaşık 3200, Müfid\'e göre yaklaşık 4000 ravi ondan nakleder. Câferî fıkhı büyük ölçüde onun rivayetlerinden oluşur. Mâlik\'in ondan hadis aldığı ve Ebû Hanîfe\'nin onu çağının en bilgin kişisi saydığı Şii kaynaklarında geçer. Sünni anlatım bu ilişkiyi ilmî saygı diye okur.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 36, pose: 'sit', label: { tr: 'Hz. Ca\'fer-i Sâdık' } }, { kind: 'crowd', x: 70, scale: 5 }] },
       by: 'shia',
     },
     {
-      text: { tr: 'Aynı yüzyıllarda Sünni fıkıh ve kelam ekolleri de şekillendi. Ebû Hanîfe 150\'de, Mâlik 179\'da, Şâfiî 204\'te, Ahmed b. Hanbel 241\'de vefat etti. "Ehl-i Sünnet" terimi, 3. yüzyılda yerleşti. Kelamda Eş\'arî ve Mâtürîdî ekolleri doğdu. Akla geniş yer veren Mutezile ile Şia arasında bazı kelam yakınlıkları vardır. Zeydiyye\'nin Mutezile\'ye yakın olduğu da söylenir. Ekollerin temel ayrışması imamet, halifelik ve hadis kaynaklarıdır. Asıl ayrılık, kimin önder sayılacağındadır.' },
+      text: { tr: 'Aynı yüzyıllarda Sünni fıkıh ekolleri de şekillendi. Ebû Hanîfe 150\'de, Mâlik 179\'da, Şâfiî 204\'te, Ahmed b. Hanbel 241\'de vefat etti. Kelamda Eş\'arî ve Mâtürîdî ekolleri doğdu. Ekollerin temel ayrışması imamet, halifelik ve hadis kaynaklarıdır.' },
       art: { bg: 'city', props: ['scroll'], actors: [{ kind: 'man', x: 22, label: { tr: 'Ebû Hanîfe' } }, { kind: 'man', x: 40, label: { tr: 'Mâlik' } }, { kind: 'man', x: 58, label: { tr: 'Şâfiî' } }, { kind: 'man', x: 76, label: { tr: 'Ahmed b. Hanbel' } }] },
       by: 'sunni',
     },
     {
-      text: { tr: 'Hz. Ca\'fer-i Sâdık\'ın büyük oğlu İsmâil babasından önce ölünce, ya da öldü sanılınca, imamet konusunda ayrılık çıktı. İsmâil\'in imametini sürdürenler İsmâiliyye\'yi kurdu ve oğlu Muhammed b. İsmâil ile devam ettiler. Sonraki Fâtımî devleti bu koldan çıktı. Çoğunluk ise Hz. Musa Kâzım\'a bağlandı. Bu kol On İki İmam Şiası\'dır. Hz. Musa Kâzım, Hârûnürreşîd\'in baskısıyla Bağdat\'ta tutuklandı ve 183\'te vefat etti. On İkinci İmam\'ın gaybeti, Şii kaynaklarına göre 260\'ta başladı. Küçük gaybet 260-329 sürer. Ardından büyük gaybet gelir. On iki imam, bu çizginin son halkasıdır. Gaybet, ölüm değildir.' },
+      text: { tr: 'Hz. Ca\'fer-i Sâdık\'ın büyük oğlu İsmâil babasından önce ölünce imamet konusunda ayrılık çıktı. İsmâil\'in imametini sürdürenler İsmâiliyye\'yi kurdu. Çoğunluk Hz. Musa Kâzım\'a bağlandı. Bu kol On İki İmam Şiası\'dır. Hz. Musa Kâzım 183\'te Bağdat\'ta vefat etti. On İkinci İmam\'ın gaybeti Şii kaynaklarına göre 260\'ta başladı. Küçük gaybet 260-329 sürer, ardından büyük gaybet gelir. Gaybet ölüm değildir.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 30, label: { tr: 'Hz. Musa Kâzım' } }, { kind: 'man', x: 66, label: { tr: 'Hârûnürreşîd' } }] },
       by: 'shia',
     },

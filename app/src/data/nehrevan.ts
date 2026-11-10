@@ -8,13 +8,13 @@ export const nehrevan: HistEvent = {
   hook: { tr: 'Hakemden sonra bir grup Hz. Ali\'nin yanından ayrıldı. Çatışma Nehrevan\'da oldu.', en: 'After the arbitration a group left Ali. The fight was at Nahrawan.' },
   scenes: [
     {
-      text: { tr: '**Sıffin**\'de mushaflar mızrağa kalkınca iki taraf hakemi kabul etti. **Hz. Ali**\'nin ordusundan bir grup buna karşı çıktı. Hükmün yalnız Allah\'a ait olduğunu söyledi. Hz. Ali, sözün kendisini doğru buldu. Bu anlaşmazlıkta ise sözün yanlış bir amaçla kullanıldığını söyledi. "Söz haktır, ama onunla batıl kastediliyor" dedi. Ayrılanlar sonra **Haricîler** adıyla anıldı. Seven, sloganı bir takva diye okumaz. Doğru cümlenin, yanlış elde nasıl silaha döndüğünü görür.' },
+      text: { tr: '**Sıffin**\'de mushaflar mızrağa kalkınca iki taraf hakemi kabul etti. **Hz. Ali**\'nin ordusundan bir grup buna karşı çıktı. Hükmün yalnız Allah\'a ait olduğunu söyledi. Hz. Ali sözün kendisini doğru buldu. Bu anlaşmazlıkta ise sözün yanlış bir amaçla kullanıldığını söyledi. "Söz haktır, ama onunla batıl kastediliyor" dedi. Ayrılanlar çadırlarını topladı. Sonra **Haricîler** adıyla anıldı. Ordu ikiye bölünmüştü. Şam hâlâ karşıda duruyordu. Hz. Ali önce kendi safındaki bu ayrılığa döndü.' },
       image: 'nehrevan-1',
       art: { bg: 'dune-day', props: ['flags'], actors: [{ kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 30, scale: 6 }] },
       by: 'both',
     },
     {
-      text: { tr: 'Haricîler, **Abdullah b. Habbâb** ile hamile eşini öldürünce **Hz. Ali** durdu. Şam\'a karşı hazırladığı orduyu **Nehrevan**\'a çevirdi. Önce konuştu. Uzlaşma olmadı. Sonra iki taraf savaştı. Ölü sayısı rivayetlerde ayrılır. Kesin bir sayım yoktur. Yolun başı, Sıffin\'deki hakem kararıydı. Sonu, bir hamile kadının kanıydı. Seven, Nehrevan\'ı bir iç savaş lakabı diye geçmez. Hz. Ali\'nin, önce sözü, sonra kılıcı neden bu tarafa çevirdiğini görür.' },
+      text: { tr: 'Haricîler **Abdullah b. Habbâb** ile hamile eşini öldürünce **Hz. Ali** durdu. Şam\'a karşı hazırladığı orduyu **Nehrevan**\'a çevirdi. Önce konuştu. Elçi gitti. Uzlaşma olmadı. Sonra iki taraf savaştı. Ölü sayısı rivayetlerde ayrılır. Kesin bir sayım yoktur. Yolun başı Sıffin\'deki hakem kararıydı. Sonu bir hamile kadının kanıydı. Hz. Ali kılıcı bu kan için çekti. Nehrevan\'ın suyu o gün bir iç savaşa baktı.' },
       image: 'nehrevan-2',
       art: { bg: 'battle', props: ['flags', 'swords'], actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 70, scale: 6 }] },
       by: 'both',
