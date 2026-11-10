@@ -10,44 +10,44 @@ export const hayber: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Hicretin 7. yılıydı. Peygamber, Medine\'nin kuzeyindeki **Hayber**\'e yürüdü. Hurma kaleleri yan yanaydı. Her biri bir kapı, her kapı bir direnişti. Ordu onları birer birer kuşattı. Toz, günlerce inmedi. Bu sefer bir ganimet yürüyüşü değildi. Peygamber\'in davasını kimin koruduğunu gösterecekti. O kişi **Hz. Ali**\'ydi. Sancak, kalelerin önünde ona verilecekti. Seven, Hayber\'i bir sınır savaşı diye okumaz. Güvenin kime konduğunu görmek için okur.' },
+      text: { tr: 'Hicretin yedinci yılında **Hz. Peygamber**, ordusuyla Medine\'nin kuzeyindeki **Hayber**\'e yürüdü. Hayber, verimli hurmalıkların ortasına kurulmuş, yan yana sıralanmış sağlam kalelerden oluşan bir yerleşimdi. Kalelerin her biri yüksek duvarlarla ve ağır kapılarla korunuyordu. Müslüman ordusu kaleleri birer birer kuşattı. Günler geçti, çölün sıcağı ve kuşatmanın yorgunluğu askerlerin üzerine çöktü. Bazı kaleler düştü, ama en güçlü olanlar direnmeye devam ediyordu. Bu kuşatma, Peygamber\'in en zor işi kime emanet edeceğini herkese gösterecekti.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'crowd', x: 34, scale: 8 }, { kind: 'prophet', x: 68, label: { tr: 'Hz. Peygamber' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Kalelerden biri günlerce alınamadı. Anlatılan o ki önce Ebu Bekir sancakla gitti. Fethi tamamlamadan döndü. Sonra Ömer gitti. O da döndü. Kale yerinde duruyordu. Ordugâhta bir sıkıntı vardı. Sancak eldeydi. Kapı açılmamıştı. Peygamber, kaleyi alacak kişiyi henüz söylememişti. Gece, o ismin üzerine kapandı. Sabah, ismi bekliyordu. Seven, dönüşleri bir başarısızlık listesi diye okumaz. Sancağın neden bekletildiğini anlamak için okur.' },
+      text: { tr: 'Kalelerden biri günlerce alınamadı. Anlatıldığına göre önce **Ebu Bekir** sancağı alıp kaleye yürüdü, ama fethi tamamlayamadan geri döndü. Ertesi gün **Ömer** sancağı aldı. O da kalenin kapısını açamadan döndü. Ordugâhta bir sıkıntı başladı. Askerler kalenin duvarlarına bakıyor, bu direnişin nasıl kırılacağını konuşuyordu. **Hz. Ali** ise o günlerde gözlerindeki şiddetli bir ağrı yüzünden çadırında yatıyordu ve savaşa katılamıyordu. Peygamber her şeyi sessizce izliyordu. Sancağı kimin taşıyacağı konusundaki asıl sözünü henüz söylememişti.' },
       art: { bg: 'dune-dusk', actors: [{ kind: 'crowd', x: 50, scale: 6 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Peygamber o akşam buyurdu: "Yarın sancağı, Allah\'ı ve Resulü\'nü seven, Allah\'ın ve Resulü\'nün de sevdiği bir kişiye vereceğim. Allah onun eliyle fethettirecek." Cümle, bir isim söylemiyordu. Yine de çadırlar o gece susmadı. Herkes sancağın kime gideceğini konuştu. Kimisi umdu. Kimisi bekledi. Sevgi, burada bir iltifat değildi. Fetihin şartıydı. Seven, geceyi bir merak diye okumaz. Sabah verilecek emanetin, daha söz söylenmeden ordunun yüreğini tuttuğunu görür.' },
+      text: { tr: 'O akşam Peygamber ashabını topladı ve şöyle dedi: "Yarın sancağı, Allah\'ı ve Resulünü seven, Allah\'ın ve Resulünün de sevdiği birine vereceğim. Allah fethi onun eliyle nasip edecek." Peygamber bir isim söylememişti. O gece çadırlarda bu sözden başka bir şey konuşulmadı. Ashabın her biri sancağın kendisine verilmesini umarak uyudu, çünkü bu söz, sancağı alacak kişinin Allah\'ın ve Resulünün sevgisini kazandığını müjdeliyordu. Bu sözü Buhari ve Müslim de aktarır. Gece boyunca ordugâhta herkes sabahı bekledi.' },
       art: { bg: 'night', props: ['stars'], actors: [{ kind: 'prophet', x: 46, label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 74, scale: 5 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Sabah Hayber\'in önünde herkes sancağa baktı. Peygamber "Hz. Ali nerede?" diye sordu. **Hz. Ali**\'nin gözleri ağrıyordu. Onu getirdiler. Peygamber tükürüğünü gözlerine sürdü. Gözler açıldı. Sancak o anda **Hz. Ali**\'nin eline geçti. Hz. Ali sordu: "Ya Resulallah, onlar bizim gibi Müslüman olana kadar mı savaşayım?" Peygamber, "Yavaşça git" dedi. "Önce onları İslam\'a davet et. Allah\'ın haklarını bildir." Sonra yemin etti. **Allah\'ın onun vasıtasıyla tek bir kişiyi hidayete erdirmesi, kızıl develere sahip olmaktan daha hayırlıydı.** Savaş, davetten önce gelmiyordu. Seven, gözlerin açılmasını bir keramet diye bırakmaz. Sancağın kime ve hangi şartla verildiğini görür.' },
+      text: { tr: 'Sabah olunca herkes Peygamber\'in çadırının önünde toplandı. Peygamber kalabalığa baktı ve "Ali nerede?" diye sordu. "Gözleri ağrıyor" dediler. Onu çağırttı. **Hz. Ali** getirildiğinde Peygamber mübarek tükürüğünü onun gözlerine sürdü ve gözler o anda iyileşti. Sonra sancağı Hz. Ali\'nin eline verdi. Hz. Ali sordu: "Ya Resulallah, onlar bizim gibi Müslüman olana kadar mı savaşayım?" Peygamber şöyle cevap verdi: "Acele etmeden git. Önce onları İslam\'a davet et ve Allah\'ın haklarını bildir. Allah\'a yemin olsun ki Allah\'ın senin vasıtanla tek bir kişiyi hidayete erdirmesi, senin için kızıl develere sahip olmaktan daha hayırlıdır."' },
       cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 1 }, { side: 'sunni', i: 2 }],
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'prophet', x: 42, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Hayber\'in kapısı açılınca **Merhab** meydana çıktı. Miğferi başındaydı. Zırhı üzerindeydi. Kılıcını sallayarak recez okudu. Hayber\'in kendisini tanıdığını, silahının tam olduğunu söyledi. **Hz. Ali** karşısına geçti. O da recezle cevap verdi. Annesinin ona Haydar dediğini söyledi. Haydar, aslan demektir. Ehl-i Beyt rivayetinde Hz. Ali tek bir yara almadan Zülfikar\'ı indirdi. Zülfikar, tek ve hafif eğri bir kılıçtır. Boyu yaklaşık yüz yirmi santimdir. Rivayete göre tek darbe Merhab\'ı yere yıktı. Kale, bu darbeden sonra fethedildi. Seven, vuruşu bir övünç diye büyütmez. Peygamber\'in sancağını taşıyan kişinin, kapının önünde nasıl durduğunu görür.' },
+      text: { tr: 'Hz. Ali sancakla kalenin önüne geldiğinde kapı açıldı ve Hayber\'in en ünlü savaşçısı **Merhab** meydana çıktı. Başında miğfer, üzerinde zırh vardı. Kılıcını sallayarak şiir okudu ve Hayber\'in kendisini tanıdığını, silahının keskin olduğunu söyledi. **Hz. Ali** onun karşısına geçti ve o da şiirle cevap verdi: "Ben, annemin Haydar adını verdiği kişiyim." Haydar, aslan demektir. Ehl-i Beyt rivayetlerine göre Hz. Ali, hafifçe eğri kılıcı Zülfikar\'ı tek bir kez indirdi ve bu darbe Merhab\'ı yere yıktı. Hayber\'in en güçlü savaşçısının düşmesiyle kaleyi savunanların cesareti kırıldı ve kale kısa süre içinde fethedildi.' },
       cites: [{ side: 'sunni', i: 4 }, { side: 'shia', i: 1 }, { side: 'shia', i: 2 }],
       art: { bg: 'dune-day', actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 74, scale: 3 }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Ehl-i Beyt rivayetinde **Hz. Ali**, Hayber\'in kapısını yerinden söktü. Kapıyı kalkan gibi önünde tuttu. Kapı, o gün bir siper oldu. Arkadaşları bu gücü sonradan anlata anlata andı. Rivayet, ölçüyü tek bir sayıya bağlamaz. Gücü, Hayber\'in fethine bağlar. Seven, kapıyı bir masal diye okumaz. Sancağı alan kişinin, kalenin önünde yalnız kılıçla değil, kapıyla da durduğunu duyar. Bu güç, Peygamber\'in "onun eliyle fethettirecek" dediği elin gücüdür.' },
+      text: { tr: 'Ehl-i Beyt rivayetlerinde o günden bir sahne daha anlatılır. Savaşın en kızgın anında **Hz. Ali**, Hayber kalesinin ağır kapısını yerinden söktü ve onu bir kalkan gibi önünde tutarak savaştı. Okları ve darbeleri bu kapıyla karşıladı. Arkadaşları bu gücü yıllarca anlata anlata andı. Rivayetler kapının ağırlığı için kesin bir ölçü vermez, ama hepsi bu gücü Hayber\'in fethine bağlar. Şiiler bu sahneyi anlatırken Peygamber\'in akşam söylediği sözü hatırlar: Allah fethi onun eliyle nasip edecekti.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Sancak, Allah\'ı ve Resulünü seven kişiye verilmişti. Allah ve Resulü de onu seviyordu. O kişi **Hz. Ali**\'ydi. Peygamber\'in "kaçıcı değil, saldırgandır" dediği de anlatılır. Bir gün önce fethi tamamlamadan dönenlerin yanında bu söz, Hz. Ali\'nin yerini açıkça gösterdi. Dönmek ayıp değildi. Sancağın kime emanet edildiği ayrı bir şeydi. Seven, karşılaştırmayı bir aşağılama diye kullanmaz. Peygamber\'in, fetih günü kimi öne çağırdığını görür. Çağrı, sevgiden ve güvenden gelmişti.' },
+      text: { tr: 'Sancak, Peygamber\'in sözüyle, Allah\'ı ve Resulünü seven ve onlar tarafından sevilen kişiye verilmişti. O kişi **Hz. Ali**\'ydi. Rivayetlere göre Peygamber onu, savaştan kaçmayan ve hep ileri atılan biri olarak da tanıtmıştı. Önceki günlerde kaleyi alamadan dönenler vardı. Savaşta geri dönmek kimse için bir ayıp sayılmazdı. Ama Peygamber\'in, ordunun en zor gününde kimi öne çağırdığı herkesin gözü önündeydi. Bu seçim, Allah\'ın ve Resulünün sevgisine dayanıyordu. Sahabe Sa\'d b. Ebi Vakkas yıllar sonra Hz. Ali\'nin faziletlerini sayarken Hayber sancağını da anacaktı.' },
       art: { bg: 'night', props: ['stars', 'scroll'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Hayber düşünce halk, ürünün yarısını vermek üzere yerinde kaldı. **Fedek** halkı kılıç çekmeden anlaştı. Toprak Peygamber\'in eline geçti. Peygamber bu hurmalığı kızı **Hz. Fatıma**\'ya hibe etti. Hibe, bağış demektir. Bahçe, o gün bir sevinçti. Kızın elinde helal bir geçimdi. Aynı bahçe, Peygamber\'in vefatından sonra Hz. Fatıma\'nın elinden alınacaktı. Fedek **gasp edilecekti**. Seven, fethi bir ganimet listesiyle kapatmaz. Hayber\'de verilen sancağın sahibine, az sonra kızının hakkının da sorulacağını görür.' },
+      text: { tr: 'Hayber düştükten sonra kalelerin halkı, ürünlerinin yarısını vermek şartıyla topraklarında kalmaya razı oldu. Yakınlardaki **Fedek** halkı ise savaşmadan, kılıç çekilmeden anlaşma yaptı. Savaşsız alınan bu toprak doğrudan Peygamber\'e ait oldu. Peygamber de Fedek\'in hurmalıklarını kızı **Hz. Fatıma**\'ya hibe etti. Hibe, karşılıksız bağış demektir. Fedek, Hz. Fatıma\'nın evine helal bir geçim kaynağı oldu. Ancak Peygamber\'in vefatından sonra bu bahçe Hz. Fatıma\'nın elinden alınacak ve Fedek, Ehl-i Beyt\'in gasp edilen hakkının adı olacaktı.' },
       art: { bg: 'river', props: ['palms'], actors: [{ kind: 'crowd', x: 50, scale: 5 }] },
     },
   ],

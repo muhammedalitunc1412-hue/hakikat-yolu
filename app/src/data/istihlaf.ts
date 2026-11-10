@@ -9,42 +9,42 @@ export const istihlaf: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Halife Ebu Bekir, Medine\'de ölümün yaklaştığını anlayınca yerine Ömer\'i bıraktı. Sakife\'de aceleyle kurulan yönetim, bir kişiden bir kişiye geçti. **Hz. Ali** bu tayine çağrılmadı. Adı sorulmadı. Gadir\'de ilan edilen hak yine yok sayıldı. Tayin, Medine\'de, Hz. Ali çağrılmadan yapıldı. Seven, devri bir düzen diye okumaz. Çölde herkese gösterilen elin, ölüm döşeğinde neden anılmadığını görür.' },
+      text: { tr: 'Halife Ebu Bekir, iki yılı biraz aşan halifeliğinin sonunda Medine\'de ağır bir hastalığa yakalandı. Ölümünün yaklaştığını anlayınca yerine kimin geçeceğini kendisi belirlemek istedi ve **Ömer**\'i halife olarak tayin etti. Sakife\'de aceleyle kurulan yönetim, böylece bir kişiden diğerine el değiştirdi. Bu tayinde **Hz. Ali**\'nin görüşü sorulmadı ve kendisi bu karara çağrılmadı. Gadir Hum\'da Peygamber\'in binlerce kişinin önünde elini kaldırdığı kişi, ikinci kez yönetimin dışında bırakılıyordu. Hz. Ali, ümmetin birliği için yine sabretti.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'Ebu Bekir' } }, { kind: 'man', x: 66, label: { tr: 'Ömer' } }] },
     },
     {
       by: 'sunni',
-      text: { tr: 'Ebu Bekir, tayinden önce Abdurrahman\'a ve Osman\'a danıştı. Bir grup, Ömer\'in sertliğinden korktu. "Rabbine ne cevap vereceksin?" dendi. Talha da itiraz etti. Ebu Bekir, Allah\'a kullarının en hayırlısını seçtiğini söyleyeceğini bildirdi. Danışılanlar arasında **Hz. Ali** yoktu. Onun adı sorulmadı. Şûra, Gadir\'deki ilanı sormadı. Seven, danışmayı bir genişlik diye okumaz. Sorulanların arasında kimin olmadığını görür.' },
+      text: { tr: 'Ebu Bekir, bu kararı vermeden önce **Abdurrahman b. Avf** ve **Osman** ile görüştü. Ömer\'in sert mizacını bilen bazı sahabeler bu seçimden endişe ediyordu. **Talha** itiraz etti ve Ebu Bekir\'e, "Böyle sert birini başımıza getirirsen Rabbine ne cevap vereceksin?" diye sordu. Ebu Bekir ise Allah\'a, kullarının en hayırlısını seçtiğini söyleyeceğini bildirdi. Danışılanlar arasında Peygamber\'in amcasının oğlu ve damadı **Hz. Ali** yoktu. Ehl-i Beyt\'in görüşü bu kararda hiç alınmadı.' },
       art: { bg: 'interior', actors: [{ kind: 'man', x: 30, label: { tr: 'Talha' } }, { kind: 'man', x: 68, pose: 'sit', label: { tr: 'Ebu Bekir' } }, { kind: 'crowd', x: 50, scale: 0.6 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Ebu Bekir öldü. Peygamber\'in vefatından 22 Cemâziyelâhir 13\'e kadar yaklaşık iki yıl üç ay halife kalmıştı. Ömer Medine\'de halife oldu. Fetihler genişledi. **Hz. Ali** Medine\'de yaşadı. Kendisine danışılanlardan biri oldu. Danışılmak, Gadir\'deki hakkın yerine konması değildi. Hz. Ali sabretti. Evinde durdu. Hakkı için kılıç çekmedi. Seven, sabrı bir razı oluş diye okumaz. Fetihler büyürken emanetin sahibinin neden evinde beklediğini görür.' },
+      text: { tr: 'Ebu Bekir, hicretin 13. yılında, Cemâziyelâhir ayının 22\'sinde vefat etti. Yaklaşık iki yıl üç ay halifelik yapmıştı. Ardından **Ömer** halife oldu. Onun döneminde İslam toprakları hızla genişledi, Irak, Suriye ve Mısır fethedildi. **Hz. Ali** bu yıllarda Medine\'de yaşadı. Zor meselelerde halife zaman zaman ona danışıyordu. Ama danışılmak, Gadir\'de ilan edilen önderliğin yerini tutmuyordu. Hz. Ali hakkı için kılıç çekmedi ve ümmetin içinde bir ayrılık çıkmasın diye sessizce evinde bekledi. Fetihler büyürken Peygamber\'in vasisi, Medine\'deki evinde sabırla günlerini geçirdi.' },
       art: { bg: 'city', props: ['sun', 'minbar'], actors: [{ kind: 'man', x: 60, pose: 'raise', label: { tr: 'Ömer' } }, { kind: 'ali', x: 34, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Medine\'de sabah namazında Halife Ömer hançerlendi. 26 Zilhicce 23\'te öldü. Hilafeti yaklaşık on yıl altı ay sürmüştü. Saldırgan on üç kişiyi yaraladı. Ömer, yerine geçecek kişiyi tek başına seçmedi. İşi altı kişiye bırakacaktı. **Hz. Ali** o altının içinde sayılacak, yine de hilafetin dışında bırakılacaktı. Altı kişi, Medine\'de bir odaya alındı. Seven, odayı bir adalet diye okumaz. Sayılan ismin, sonuçta neden dışarıda kaldığını bekler.' },
+      text: { tr: 'Hicretin 23. yılında, Medine\'de bir sabah namazı sırasında Halife **Ömer** hançerlendi. Saldırgan, mescitte on üç kişiyi daha yaraladı. Ömer ağır yaralı olarak evine taşındı ve birkaç gün sonra, Zilhicce ayının 26\'sında vefat etti. Halifeliği yaklaşık on yıl altı ay sürmüştü. Ölüm döşeğindeyken kendisinden sonraki halifeyi tek başına seçmedi. Bunun yerine işi altı kişilik bir kurula bırakmaya karar verdi. **Hz. Ali** de bu altı kişinin arasında olacaktı. Ama kurulun kuralları, sonunda onu yine hilafetin dışında bırakacaktı.' },
       art: { bg: 'dawn', actors: [{ kind: 'man', x: 50, pose: 'sit', label: { tr: 'Ömer' } }, { kind: 'crowd', x: 78, scale: 0.7 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Yaralı Halife Ömer altı kişiyi saydı: **Hz. Ali**, Osman, Zübeyr, Talha, Sa\'d ve Abdurrahman. Oğlu Abdullah tanık olacaktı. Hilafette payı olmayacaktı. Gadir\'de hakkı ilan edilen Hz. Ali, bu kurulun bir üyesi yapıldı. Üye olmak, seçilmek değildi. Abdurrahman b. Avf, seçimin ipini elinde tuttu. Seven, altı ismi eşit sanmaz. İpin kimin elinde olduğunu görür.' },
+      text: { tr: 'Yaralı Ömer, şuraya katılacak altı kişiyi tek tek saydı: **Hz. Ali**, **Osman**, **Zübeyr**, **Talha**, **Sa\'d b. Ebi Vakkas** ve **Abdurrahman b. Avf**. Oğlu Abdullah da toplantıya tanık olarak katılacak, ama halife seçilemeyecekti. Gadir\'de hakkı ilan edilen Hz. Ali, bu kurulun sıradan bir üyesi yapılmıştı. Kurula üye olmak, seçilmek anlamına gelmiyordu.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 22, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 40, label: { tr: 'Osman' } }, { kind: 'man', x: 58, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'crowd', x: 78, scale: 0.7 }] },
     },
     {
       by: 'both',
-      text: { tr: 'Altı kişilik kurulda Zübeyr ile Talha, haklarını **Hz. Ali** ve Osman lehine bıraktı. Sa\'d, Abdurrahman lehine çekildi. Karar fiilen Abdurrahman\'ın eline geçti. Abdurrahman, Hz. Ali ile Osman\'dan adil davranma ve seçilene itaat sözü istedi. Söz, iki halifenin yoluna bağlandı. Gadir\'in yolu, bu şartın içinde yoktu. Seven, çekilmeleri bir feragat diye okumaz. Seçimin nasıl tek ele indiğini görür.' },
+      text: { tr: 'Altı kişi bir odada toplandı. Tartışmalar birkaç gün sürdü. **Zübeyr**, kendi hakkını **Hz. Ali**\'ye bıraktı. **Talha** ise hakkını **Osman**\'a bıraktı. **Sa\'d b. Ebi Vakkas** da hakkını **Abdurrahman b. Avf**\'a devretti. Böylece geriye Hz. Ali, Osman ve Abdurrahman kaldı. Seçimin ipi artık Abdurrahman\'ın elindeydi. Hz. Ali ile Osman\'dan, kim seçilirse seçilsin ona itaat edeceklerine dair söz aldı. Artık ümmetin yöneticisini tek bir kişi belirleyecekti.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 52, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'ali', x: 26, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 76, label: { tr: 'Osman' } }] },
     },
     {
       by: 'sunni',
-      text: { tr: 'Abdurrahman, **Hz. Ali**\'den Allah\'ın kitabı, Peygamber\'in sünneti ve iki halifenin yolu üzerine biat etmesini istedi. Biat, bağlılık sözüdür. Hz. Ali, "Allah\'ın kitabı, Peygamber\'in sünneti ve kendi içtihadım" dedi. İki halifenin yolunu şart koşmadı. Aynı şart Osman\'a sunulunca Osman kabul etti. Biat ona yapıldı. Hz. Ali, Gadir\'deki hakkını iki halifenin yoluna değişmedi. O, Gadir\'deki ilanı o şarta değişmedi. Seven, reddi bir inat diye okumaz. Çölde ilan edilen yerin, bir oda şartına neden bağlanmadığını görür.' },
+      text: { tr: 'Abdurrahman önce **Hz. Ali**\'ye döndü ve ona bir şart sundu: Allah\'ın Kitabı, Peygamber\'in sünneti ve önceki iki halifenin yolu üzerine biat edecekti. Biat, bağlılık sözüdür. Hz. Ali şöyle cevap verdi: "Allah\'ın Kitabı ve Peygamber\'in sünneti üzerine, bir de kendi içtihadıma göre." Önceki iki halifenin yolunu bir şart olarak kabul etmedi, çünkü Allah\'ın Kitabı ve Peygamber\'in sünneti varken başka bir yola bağlanmak istemiyordu. Abdurrahman aynı şartı **Osman**\'a sundu ve Osman hiç tereddüt etmeden kabul etti. Bunun üzerine Abdurrahman, Osman\'a biat etti ve diğerleri de onu izledi.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 30, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 56, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'man', x: 78, label: { tr: 'Osman' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Biat Osman\'a yapıldı. Şura, danışma kuruludur. Şıkşıkıyye hutbesinde **Hz. Ali**, kendisini o altıdan biri saymalarını anlatır. Şuranın düzeninin sonucu daha baştan etkilediğini de söyler. Sakife\'den şuraya kadar onun hakkı yine bir kenara kondu. O, sabrı seçti. Osman seçildi. Hz. Ali evinde kaldı. Seven, evi bir köşe diye okumaz. Hakkını kılıca vermeyen, yine de unutmayan bir bekleyiş görür.' },
+      text: { tr: 'Böylece **Osman** üçüncü halife oldu. Yıllar sonra **Hz. Ali**, Şıkşıkıyye adıyla bilinen hutbesinde bu günleri acıyla anlatacaktı. Ömer\'in kendisini o altı kişiden biri sayıp onlarla bir tutmasından yakındı. Şuranın düzeninin, sonucu daha baştan belirlediğini de anlattı. Sakife\'den şuraya kadar hakkı üç kez bir kenara konmuştu. Yine de kılıç çekmedi, ümmetin birliğini kendi hakkının önünde tuttu. Bu hutbede Hz. Ali, o yılları gözünde diken, boğazında kemik varken sabrederek geçirdiğini söyler.' },
       art: { bg: 'mountain', props: ['stars'], actors: [{ kind: 'ali', x: 50, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
     },
   ],
