@@ -66,7 +66,6 @@ export const SCENE_IMAGES: Record<string, number> = {
   'hasan-12': require('../../assets/scenes/hasan-12.jpg'),
   'hasan-13': require('../../assets/scenes/hasan-13.jpg'),
   'hasan-2': require('../../assets/scenes/hasan-2.jpg'),
-  'hasan-3': require('../../assets/scenes/hasan-3.jpg'),
   'hasan-4': require('../../assets/scenes/hasan-4.jpg'),
   'hasan-5': require('../../assets/scenes/hasan-5.jpg'),
   'hasan-6': require('../../assets/scenes/hasan-6.jpg'),
