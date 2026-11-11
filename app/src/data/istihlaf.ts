@@ -39,11 +39,12 @@ export const istihlaf: HistEvent = {
     },
     {
       by: 'sunni',
-      text: { tr: 'Abdurrahman önce **Hz. Ali**\'ye döndü ve ona bir şart sundu: Allah\'ın Kitabı, Peygamber\'in sünneti ve önceki iki halifenin yolu üzerine biat edecekti. Biat, bağlılık sözüdür. Hz. Ali şöyle cevap verdi: "Allah\'ın Kitabı ve Peygamber\'in sünneti üzerine, bir de kendi içtihadıma göre." Önceki iki halifenin yolunu bir şart olarak kabul etmedi, çünkü Allah\'ın Kitabı ve Peygamber\'in sünneti varken başka bir yola bağlanmak istemiyordu. Abdurrahman aynı şartı **Osman**\'a sundu ve Osman hiç tereddüt etmeden kabul etti. Bunun üzerine Abdurrahman, Osman\'a biat etti ve diğerleri de onu izledi.' },
+      text: { tr: 'Abdurrahman önce **Hz. Ali**\'ye döndü ve ona bir şart sundu: Allah\'ın Kitabı, Peygamber\'in sünneti ve önceki iki halifenin yolu üzerine biat edecekti. Biat, bağlılık sözüdür. Hz. Ali şöyle cevap verdi: "Allah\'ın Kitabı ve Peygamber\'in sünneti üzerine, bir de kendi içtihadıma göre." Önceki iki halifenin yolunu bir şart olarak kabul etmedi. Haksız yere başa geçen halifelerin izini değil, Peygamber\'in izini ön planda tutmak istiyordu. Bu cevap, hilafetin kapısını ona bir kez daha kapattı. Abdurrahman aynı şartı **Osman**\'a sundu. Osman ise makam ve mevki uğruna, hakkı olmadan hilafete geçenlerin yoluna bağlanmayı tercih etti ve şartı hiç tereddüt etmeden kabul etti. Bunun üzerine Abdurrahman, Osman\'a biat etti ve diğerleri de onu izledi.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 30, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 56, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'man', x: 78, label: { tr: 'Osman' } }] },
     },
     {
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 5 }, { side: 'sunni', i: 2 }],
       text: { tr: 'Böylece **Osman** üçüncü halife oldu. Yıllar sonra **Hz. Ali**, Şıkşıkıyye adıyla bilinen hutbesinde bu günleri acıyla anlatacaktı. Ömer\'in kendisini o altı kişiden biri sayıp onlarla bir tutmasından yakındı. Şuranın düzeninin, sonucu daha baştan belirlediğini de anlattı. Sakife\'den şuraya kadar hakkı üç kez bir kenara konmuştu. Yine de kılıç çekmedi, ümmetin birliğini kendi hakkının önünde tuttu. Bu hutbede Hz. Ali, o yılları gözünde diken, boğazında kemik varken sabrederek geçirdiğini söyler.' },
       art: { bg: 'mountain', props: ['stars'], actors: [{ kind: 'ali', x: 50, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
     },
@@ -54,6 +55,7 @@ export const istihlaf: HistEvent = {
     { book: 'Taberî, Târîh', ref: '3. ve 4. cilt, 13 H ve 23-24 H olayları; sayfa DOĞRULANMADI', says: { tr: 'Halife Ebu Bekir\'in vasiyeti, Halife Ömer\'in şurası, Abdurrahman\'ın "Allah\'ın kitabı, sünnet, iki şeyhin sireti" şartı ve Hz. Ali\'nin "kendi içtihadım" cevabı (varyantlıdır).' }, status: 'check' },
     { book: 'İbnü\'l-Esîr, el-Kâmil; İbn Kesîr, el-Bidâye', ref: 'DOĞRULANMADI (sayfa/cilt)', says: { tr: 'Talha\'nın Halife Ömer\'in tayinine itirazı (ikincil olarak WikiShia ve çeşitli sitelerde atıf olarak görüldü).' }, status: 'check' },
     { book: 'Belâzurî, Ensâbü\'l-Eşrâf', ref: 'DOĞRULANMADI (cilt/sayfa)', says: { tr: 'Şura ve Osman\'ın biatı ayrıntıları.' }, status: 'check' },
+    { book: 'İbn Ebi\'l-Hadîd, Şerhu Nehci\'l-Belâğa; Sıbt İbnü\'l-Cevzî, Tezkiretü\'l-Havâs', ref: '3. hutbe (Şıkşıkıyye) şerhi ve aktarımı; cilt/sayfa kontrol edilecek', says: { tr: 'Mu\'tezilî âlim İbn Ebi\'l-Hadîd ve Hanefî âlim Sıbt İbnü\'l-Cevzî, Şıkşıkıyye hutbesini nakleder. Sünni ana akım hutbenin Hz. Ali\'ye aidiyetini tartışır.' }, status: 'check' },
   ],
   shia: [
     { book: 'Nehcü\'l-Belağa (Şerif er-Radî)', ref: '3. hutbe (Şıkşıkıyye)', says: { tr: 'Hz. Ali\'nin hilafetin devri, Halife Ömer\'in şurası ve kendisinin onlardan biri sayılması hakkındaki yakınması. Metni bu oturumda okunamadı; özet WikiShia\'dan.' }, url: 'https://en.wikishia.net/view/Shiqshiqiyya_sermon', status: 'check' },

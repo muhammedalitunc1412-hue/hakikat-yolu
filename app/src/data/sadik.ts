@@ -16,7 +16,8 @@ export const sadik: HistEvent = {
     {
       text: { tr: '**Hz. Ca\'fer-i Sâdık**\'ın gençlik yılları, Emevi hanedanının çözülmeye başladığı karışık bir döneme denk geldi. Kısa süre sonra iktidar Abbasilerin eline geçti. Bu yıllarda birçok isyan çıktı ve pek çok kişi iktidar mücadelesine atıldı. Ama Hz. Sâdık bu isyanlara katılmadı. Bütün gücünü Medine\'de ilme, öğretmeye ve öğrenci yetiştirmeye verdi. Peygamber\'den gelen ilmi korumanın ve yaymanın, kılıçtan daha kalıcı bir yol olduğunu biliyordu. Şii kaynaklarına göre Abbasi halifesi **Mansûr**, onun halk üzerindeki etkisinden rahatsız oldu ve sonunda onu zehirletti.' },
       art: { bg: 'night', props: ['moon', 'stars'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'Hz. Ca\'fer-i Sâdık' } }, { kind: 'man', x: 76, label: { tr: 'Halife Mansûr' } }] },
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 6 }],
     },
     {
       text: { tr: 'Medine\'de, Peygamber\'in mescidinin çevresinde Hz. Ca\'fer-i Sâdık\'ın ders halkaları kuruldu. Şii kaynaklarına göre ondan hadis dinleyenlerin sayısı dört bine kadar ulaşır. Şeyh Müfid el-İrşâd adlı eserinde, İbn Ukde de öğrencilerini sayan kitabında dört bin kişiden söz eder. Şeyh Tûsî\'nin Ricâl\'inde ise yaklaşık 3200 isim geçer. Sayılar kaynaktan kaynağa değişir, ama hepsi Medine\'de çok büyük bir ilim meclisinin kurulduğunu gösterir. Farklı şehirlerden, farklı görüşlerden insanlar onu dinlemek için Medine\'ye geliyordu.' },
@@ -36,7 +37,8 @@ export const sadik: HistEvent = {
     {
       text: { tr: 'Şii kaynaklarına göre Ebû Hanîfe, Hz. Ca\'fer-i Sâdık\'tan iki yıl boyunca ders aldı ve bu yılları anlatırken şöyle dedi: "O iki yıl olmasaydı Nu\'mân helak olurdu." Nu\'mân, Ebû Hanîfe\'nin kendi adıdır. Bu sözün ne kadar eski olduğu ve gerçekten Ebû Hanîfe\'ye ait olup olmadığı tartışılır. Bazıları sözü başka bir hocaya bağlar. Câferî okuyuşu ise bu iki yılı Hz. Ca\'fer-i Sâdık\'ın halkasına yerleştirir. Hangi fıkıh metninin ona ait olduğu da tartışmalıdır. Ama bütün bu tartışmalar, Medine\'deki o halkanın büyüklüğünü ve açıklığını değiştirmez.' },
       art: { bg: 'dawn', props: ['scroll'], actors: [{ kind: 'man', x: 40, label: { tr: 'Ebû Hanîfe' } }, { kind: 'man', x: 66, pose: 'sit', label: { tr: 'Hz. Ca\'fer-i Sâdık' } }] },
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 1 }],
     },
     {
       text: { tr: 'Maliki mezhebinin kurucusu ve Medine\'nin büyük âlimi **Mâlik b. Enes**, Hz. Ca\'fer-i Sâdık\'tan hadis dinleyenler arasında anılır. Şeyh Sadûk\'un el-Hısâl adlı eserinde, Mâlik\'in imamın yanına giderek ondan hadis dinlediği aktarılır. Bazı Sünni tabakat kitaplarında ise bu ilişkiden söz edilmez. Ama bir kitapta adın geçmemesi, Medine\'de herkesin bildiği o halkayı silmez. Mâlik de Medine\'nin âlimlerinden biri olarak, aynı şehirde ders veren Ehl-i Beyt imamının meclisinden faydalananlar arasında yer alır.' },
@@ -61,6 +63,7 @@ export const sadik: HistEvent = {
     { book: 'Mâlik b. Enes, el-Muvatta\'', ref: 'Hz. Ca\'fer-i Sâdık\'tan nakiller (numara bulunamadı)', says: { tr: 'Mâlik\'in Hz. Ca\'fer-i Sâdık\'den nakli bildirilir.' }, grade: { tr: 'DOĞRULANMADI (ikincil aktarım)' }, status: 'check' },
     { book: 'Zehebî, Tezkiretü\'l-huffâz ve Siyeru a\'lâmi\'n-nübelâ', ref: 'Hz. Ca\'fer-i Sâdık maddesi', says: { tr: 'Hz. Ca\'fer-i Sâdık\'ı büyük âlimler arasında anar. TDV de bu iki eseri kaynakçada verir.' }, grade: { tr: 'İKİNCİL (WikiShia ve Wikipedia aktarımı; metin okunmadı)' }, status: 'check' },
     { book: 'İbn Hacer el-Heytemî, es-Savâiku\'l-muhrika', ref: 'c. 2, s. 586 (WikiShia aktarımı)', says: { tr: 'Ebû Hanîfe ve Mâlik\'in Hz. Ca\'fer-i Sâdık\'tan rivayet edenler arasında olduğu belirtilir.' }, grade: { tr: 'İKİNCİL (WikiShia\'dan)' }, url: 'https://en.wikishia.net/view/Ja%27far_b._Muhammad_al-Sadiq_(a)', status: 'check' },
+    { book: 'İbn Hacer el-Heytemî, es-Savâiku\'l-muhrika', ref: 'Hz. Ca\'fer-i Sâdık bölümü (WikiShia aktarımı; sayfa kontrol edilecek)', says: { tr: 'Hz. Ca\'fer-i Sâdık\'ın 148 yılında, anlatıldığına göre zehirlenerek vefat ettiği aktarılır.' }, status: 'check' },
   ],
   shia: [
     { book: 'WikiShia, "Ja\'far b. Muhammad al-Sadiq (a)"', ref: 'Doğum, öğrenciler, övgüler', says: { tr: '17 Rebîülevvel 83 (702) Medine; bazı tarihçilere göre 80. Ümmü Ferve. Mâlik\'in imama hadis dinlemeye gittiği (Saduk, el-Hısâl s. 168). Rivayetçi sayısı: Tûsî ~3.200, Müfîd 4.000 (el-İrşâd c. 2 s. 254), İbn Uknde 4.000.' }, grade: { tr: 'DOĞRULANDI (WikiShia sayfası okundu; alıntılanan kitaplar okunmadı)' }, url: 'https://en.wikishia.net/view/Ja%27far_b._Muhammad_al-Sadiq_(a)', status: 'verified' },

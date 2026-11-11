@@ -26,14 +26,15 @@ export const sebb: HistEvent = {
     },
     {
       text: { tr: 'Rivayetlere göre **Muaviye**, bütün valilerine bir genelge gönderdi. Genelge, valilere yazılan resmî emirdir. Bu emirde Hz. Ali\'ye sövülmesini, onu öven ve sevenlerin cezalandırılmasını istedi. Hz. Ali\'nin faziletlerini anlatanlar devletin düşmanı ilan edildi. Ehl-i Beyt\'i sevenler, sevgilerini gizlemek zorunda kaldı. Evlerde bile Hz. Ali\'nin adı fısıltıyla anılır oldu. Peygamber\'in ailesine duyulan sevgi, Emevi topraklarında can pahasına taşınan bir sırra dönüştü.' },
-      cites: [{ side: 'shia', i: 0 }],
+      cites: [{ side: 'shia', i: 0 }, { side: 'sunni', i: 3 }],
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'Muaviye' } }, { kind: 'crowd', x: 72, scale: 4 }] },
-      by: 'shia',
+      by: 'partial',
     },
     {
       text: { tr: 'Ehl-i Beyt rivayetlerine göre Peygamber\'in eşi **Ümmü Seleme**, bu laneti duyunca Muaviye\'ye ve valilerine bir mektup yazdı. Mektubunda Peygamber\'in şu sözünü hatırlattı: "Ali\'ye söven bana sövmüş olur." Yani minberlerde Hz. Ali\'ye okunan lanet, aslında Peygamber\'in kendisine dokunuyordu. Ümmü Seleme, Peygamber\'in hanımlarından biri olarak bu konuda konuşmayı görev bildi. Ama Muaviye bu uyarıya aldırmadı. Mektup okundu, ama hutbelerdeki lanet değişmedi.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'woman', x: 36, pose: 'sit', label: { tr: 'Ümmü Seleme' } }, { kind: 'man', x: 68, label: { tr: 'Muaviye' } }] },
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 6 }, { side: 'sunni', i: 7 }],
     },
     {
       text: { tr: 'Kûfe\'de **Hucr b. Adî**, Cemel ve Sıffin\'de Hz. Ali\'nin safında savaşmış yiğit bir komutandı. Bir cuma günü vali Muğîre hutbede **Hz. Ali**\'yi kötülerken Hucr dayanamadı ve ayağa kalktı. Hz. Ali\'nin faziletinin, onu kötüleyenlerden çok daha üstün olduğunu yüksek sesle söyledi. Muğîre\'den sonra Kûfe\'ye vali olan **Ziyâd**, Hucr\'u yakalattı. Hucr, on iki kadar arkadaşıyla birlikte Şam yoluna çıkarıldı. Tek suçları, minberden okunan laneti kabul etmemekti.' },
@@ -49,7 +50,8 @@ export const sebb: HistEvent = {
     {
       text: { tr: 'Ehl-i Beyt rivayetlerine göre minberlerdeki bu lanet yaklaşık altmış yıl sürdü. Hicretin 41. yılında başlayan uygulama, 99-101 yıllarına kadar devam etti. Bu süre kesin bir sayı olarak değil, yaklaşık bir hesap olarak verilir. Ömer b. Abdülaziz bu uygulamayı kaldırana kadar her cuma, **Hz. Ali**\'nin adı minberlerde bir hakaret gibi anıldı. Bu yıllarda doğup büyüyen çocuklar, Peygamber\'in en yakınına okunan laneti cuma namazlarında dinleyerek yetişti. Bir nesil, Hz. Ali\'yi bu laneti işiterek tanıdı.' },
       art: { bg: 'city', props: ['minbar', 'sun'], actors: [{ kind: 'crowd', x: 30, scale: 7 }, { kind: 'man', x: 70, label: { tr: 'Hatip' } }] },
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 2 }, { side: 'sunni', i: 8 }],
     },
     {
       text: { tr: '**Ömer b. Abdülaziz** halife olunca bu laneti kaldırdı. Rivayetlere göre bütün beldelere yazı gönderip uygulamanın durdurulmasını emretti. Hutbelerde lanetin yerine Nahl Suresi\'nin 90. ayeti okunmaya başlandı: "Allah adaleti, iyiliği ve yakınlara yardım etmeyi emreder. Hayâsızlığı, kötülüğü ve zulmü yasaklar." Altmış yıla yakın süren bu zulüm böylece sona erdi. Minberlerde artık Hz. Ali\'ye lanet okunmuyordu. Ama yılların açtığı yara kolayca kapanmadı ve Ehl-i Beyt\'i sevenler o yılları hiçbir zaman unutmadı.' },

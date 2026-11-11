@@ -66,7 +66,8 @@ export const sakife: HistEvent = {
       text: { tr: 'Yıllar geçti, Ebu Bekir\'den sonra Ömer halife oldu. Ömer bir suikastla yaralanınca, kendisinden sonraki halifeyi seçmek için altı kişilik bir şura kurdu. Şura, karar almak için bir araya gelen danışma kuruluydu. **Hz. Ali** bu altı kişinin arasındaydı. Şuranın sonunda **Abdurrahman b. Avf**, halifeliği Hz. Ali\'ye bir şartla teklif etti: Kur\'an ve sünnetle birlikte Ebu Bekir ile Ömer\'in yolundan da gidecekti. Hz. Ali, Kur\'an ve sünnetle birlikte kendi içtihadıyla hareket edeceğini söyledi. Aynı şartı **Osman** kabul etti ve halife o oldu. Hz. Ali, yıllar sonra okuduğu Şıkşıkıyye hutbesinde bu günleri anarken, gözünde diken, boğazında kemik varken sabrettiğini söyler.' },
       image: 'sakife-8',
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'ali', x: 30, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 56, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'man', x: 78, label: { tr: 'Osman' } }] },
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 7 }, { side: 'sunni', i: 9 }],
     },
   ],
   sunni: [

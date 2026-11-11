@@ -10,7 +10,7 @@ function load(name) {
 }
 const e = load('events').EVENTS.find(x => x.id === process.argv[2]);
 const t = v => (v && v.tr) || '';
-const A = { both: 'Kabul eden: Sünni ve Şii', shia: 'Kabul eden: Şii', sunni: 'Kabul eden: Sünni' };
+const A = { both: 'Kabul eden: Sünni ve Şii', shia: 'Kabul eden: Şii', sunni: 'Kabul eden: Sünni', partial: 'Kabul eden: Şii ve kısmi Sünni' };
 const L = [t(e.title), t(e.key), t(e.date), '', t(e.hook), '', 'SAHNELER'];
 e.scenes.forEach((s, i) => { L.push('', (i + 1) + '. ' + t(s.text), '   (' + (A[s.by] || '') + ')'); });
 L.push('', 'Şİİ KAYNAKLARI');

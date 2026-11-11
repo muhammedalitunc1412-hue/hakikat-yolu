@@ -23,12 +23,13 @@ export const osman: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Ama bu anlaşma kısa sürede bozuldu. Hz. Ali, halifeyi daha önce **Mervân**\'a karşı uyarmış ve onun Osman\'ı zor durumda bırakacağını söylemişti. Mervân\'dan uzak durmasını öğütlemişti. Bu sırada bir mektup meselesi ortaya çıktı. Mektubu kimin yazdığı bugün de tartışılır ve kesin bir isim söylenemez. Hz. Ali\'nin öğüdü tutulmadı. Mısırlılar öfkeyle Medine\'ye geri döndü. Bu kez kimse onları ikna edemedi. Halifenin evi, günlerce sürecek bir kuşatmanın içine düştü.' },
+      text: { tr: 'Ama bu anlaşma kısa sürede bozuldu. Hz. Ali, halifeyi daha önce **Mervân**\'a karşı uyarmış ve onun Osman\'ı zor durumda bırakacağını söylemişti. Mervân\'dan uzak durmasını öğütlemişti. Hz. Ali\'nin öğüdü tutulmadı. Mısırlılar memleketlerine dönerken yolda, aceleyle Mısır\'a doğru giden bir atlı gördüler. Tarih kitaplarının anlattığına göre bu kişi halifenin kölesiydi ve halifenin devesine binmişti. Üzerini aradıklarında, Mısır valisi **Abdullah b. Sa\'d**\'a yazılmış ve halifenin mührüyle mühürlenmiş bir mektup buldular. Rivayetlere göre mektupta, heyetin önde gelenleri Mısır\'a varınca öldürülmeleri ya da ağır şekilde cezalandırılmaları emrediliyordu. Yani Medine\'de verilen söz bozulmuş, şikâyet edenlere tuzak kurulmuştu. Mısırlılar mektubu alıp öfkeyle Medine\'ye geri döndü. Halife Osman mektubu kendisinin yazmadığına yemin etti. Mühür ve deve onundu, ama halifenin yazışmalarını yürüten kâtibi **Mervân** olduğu için şüpheler onun üzerinde toplandı. Mektubu kimin yazdığı bugün de tartışılır ve kesin bir isim söylenemez. Mısırlılar Mervân\'ın kendilerine teslim edilmesini istedi, halife ise bunu kabul etmedi. Bu kez kimse onları ikna edemedi. Halifenin evi, günlerce sürecek bir kuşatmanın içine düştü.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'ali', x: 36, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 64, label: { tr: 'Osman' } }, { kind: 'man', x: 84, label: { tr: 'Mervan' } }] },
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 2 }],
     },
     {
-      text: { tr: 'Kuşatma başladığında Halife Osman evine çekildi. Evin çevresi silahlı kalabalıkla doluydu. İçeriye su ve yiyecek ulaştırmak giderek zorlaştı. Osman, yanındakilere şöyle dedi: "Peygamber benden bir söz aldı. Ben de ona sabrediyorum." Medine\'nin sokaklarında kuşatanların öfkesi her gün biraz daha arttı. **Hz. Ali** ise bütün bu karışıklığın ortasında kan dökülmemesi için çabalamaya devam etti. Yıllarca hakkı bir kenara konmuş olmasına rağmen, halifenin canına kastedilmesini kabul etmiyordu.' },
+      text: { tr: 'Allah\'ın rızasını bir kenara koyup akrabalarının ve çevresindekilerin rızasını öne alan Osman, sonunda bunun sonuçlarıyla kendi kapısının önünde yüz yüze geldi. Kuşatma başladığında Halife Osman evine çekildi. Evin çevresi silahlı kalabalıkla doluydu. İçeriye su ve yiyecek ulaştırmak giderek zorlaştı. Osman, yanındakilere şöyle dedi: "Peygamber benden bir söz aldı. Ben de ona sabrediyorum." Medine\'nin sokaklarında kuşatanların öfkesi her gün biraz daha arttı. **Hz. Ali** ise bütün bu karışıklığın ortasında kan dökülmemesi için çabalamaya devam etti. Yıllarca hakkı bir kenara konmuş olmasına rağmen, halifenin canına kastedilmesini kabul etmiyordu.' },
       art: { bg: 'night', props: ['stars', 'moon'], actors: [{ kind: 'crowd', x: 30, scale: 8 }, { kind: 'man', x: 74, label: { tr: 'Osman' } }] },
       by: 'both',
     },
@@ -40,10 +41,11 @@ export const osman: HistEvent = {
     {
       text: { tr: 'Bütün bu çabalara rağmen Halife Osman, hicretin 35. yılında, Zilhicce ayının 18\'inde Medine\'deki evinde öldürüldü. Halifeliği yaklaşık on iki yıl sürmüştü. **Hz. Ali** daha sonra bir hutbesinde bu olayı şöyle anlattı: Öldürülmesini emretmiş olsaydı katil sayılırdı. İnsanları ondan alıkoyabilmiş olsaydı onun yardımcısı olurdu. Hükmü Allah\'a bıraktığını söyledi. Hz. Ali bu cinayette ne kılıç kullandı ne de bu kanın yanında yer aldı. Osman\'ın cenazesi Bakî\'ye defnedildi ve Medine büyük bir sarsıntının içine düştü.' },
       art: { bg: 'dawn', actors: [{ kind: 'crowd', x: 34, scale: 7 }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 2 }],
     },
     {
-      text: { tr: 'Osman\'ın ölümünden sonra Medine birkaç gün yönetimsiz kaldı. Şehirde korku ve belirsizlik vardı. Sonunda halk akın akın **Hz. Ali**\'nin kapısına geldi ve ondan halifeliği kabul etmesini istedi. Hz. Ali bu görevin ne kadar ağır olduğunu biliyordu. Devralacağı devlet yıllardır biriken haksızlıklarla doluydu. Kalabalık mescide toplandı ve Hz. Ali\'ye orada biat edildi. Biat, bağlılık sözüdür. Peygamber\'in Gadir\'de elini kaldırdığı kişi, aradan geçen yaklaşık çeyrek asrın ardından ümmetin önüne geçti. Bu kez onu halkın kendisi istemişti.' },
+      text: { tr: 'Osman\'ın ölümünden sonra Medine birkaç gün yönetimsiz kaldı. Şehirde korku ve belirsizlik vardı. Sonunda halk akın akın **Hz. Ali**\'nin kapısına geldi ve ondan halifeliği kabul etmesini istedi. Hz. Ali bu görevin ne kadar ağır olduğunu biliyordu. Devralacağı şey sıradan bir devlet değildi. Haksız vali atamalarının, beytülmalın hak etmeyenlere dağıtılmasının ve adam kayırmanın biriktirdiği çeyrek asırlık bir yönetim enkazını devralacaktı. Kalabalık mescide toplandı ve Hz. Ali\'ye orada biat edildi. Biat, bağlılık sözüdür. Peygamber\'in Gadir\'de elini kaldırdığı kişi, aradan geçen yaklaşık çeyrek asrın ardından ümmetin önüne geçti. Bu kez onu halkın kendisi istemişti.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'crowd', x: 32, scale: 9 }, { kind: 'man', x: 56, label: { tr: 'Talha' } }, { kind: 'ali', x: 78, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },

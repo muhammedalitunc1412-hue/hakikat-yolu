@@ -16,10 +16,10 @@ export const muaviyeIktidar: HistEvent = {
       cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 1 }],
     },
     {
-      by: 'shia',
+      by: 'partial',
       text: { tr: 'Muaviye, Şam\'da Yeşil Saray anlamına gelen **Hadrâ**\'yı yaptırdı. Sarayın parlaklığı uzaktan göze çarpıyordu. Peygamber\'in yakın sahabelerinden **Ebuzer el-Gifârî** bir gün Muaviye\'nin karşısına dikildi ve ona şöyle dedi: "Bu sarayı Allah\'ın malından yaptırdıysan hıyanettir, kendi malından yaptırdıysan israftır." Bu söz Belâzurî\'nin Ensâbü\'l-Eşrâf adlı eserinde aktarılır. Muaviye cevap veremedi, ama Ebuzer\'i halifeye şikâyet etti. Ebuzer Şam\'dan sürüldü ve sonunda Rebeze çölünde yalnızlık içinde vefat etti. Ebuzer bir dilenci değildi. Saray karşısında hakkı söylemekten korkmayan, Peygamber\'in sevdiği bir sahabeydi.' },
       art,
-      cites: [{ side: 'shia', i: 2 }],
+      cites: [{ side: 'shia', i: 2 }, { side: 'sunni', i: 6 }],
     },
     {
       by: 'both',
@@ -46,10 +46,10 @@ export const muaviyeIktidar: HistEvent = {
       cites: [{ side: 'sunni', i: 3 }, { side: 'sunni', i: 5 }],
     },
     {
-      by: 'shia',
+      by: 'partial',
       text: { tr: '**Yezid**, şarap içmesi, av köpekleri ve maymunlarla eğlenmesi, günahları açıkça işlemesiyle tanınırdı. Medine halkının ona yönelttiği bu suçlamalar tarih kitaplarında aktarılır. Böyle birine biat etmek, onun yaptıklarını meşru saymak demekti. **Hz. Hüseyin** bu biatı vermeyi reddetti. Biat, bağlılık sözüdür. Peygamber\'in torunu, dedesinin dinini açıkça çiğneyen birine bağlılık sözü vermeyecekti. Hz. Hüseyin Medine valisine şöyle diyecekti: "Benim gibisi onun gibisine biat etmez." Kerbelâ, Muaviye\'nin bu veliahtlık kararının acı bir sonucu oldu.' },
       art,
-      cites: [{ side: 'shia', i: 1 }],
+      cites: [{ side: 'shia', i: 1 }, { side: 'sunni', i: 5 }],
     },
     {
       by: 'both',
@@ -71,6 +71,7 @@ export const muaviyeIktidar: HistEvent = {
     { book: 'Buhari, Sahih', ref: 'No. 4827 (Tefsir, Ahkâf; Abdurrahman b. Ebi Bekir; numara kontrol edilecek)', says: { tr: "Abdurrahman b. Ebi Bekir'in Yezid'in biatına itirazı." }, grade: { tr: 'Sahih' }, status: 'check' },
     { book: 'Buhari, Sahih', ref: 'No. 3764-3765 (Menâkıb; Muaviye; numara kontrol edilecek)', says: { tr: "İbn Abbas'ın Muaviye hakkındaki «fakihtir» sözü." }, grade: { tr: 'Sahih' }, status: 'check' },
     { book: 'Taberî, Târîhu\'r-Rusül ve\'l-Mülûk; İbn Abdilber, el-İstîâb', ref: 'Hucr, Amr b. Hamk ve Ziyâd istilhakı (cilt/sayfa kontrol edilecek)', says: { tr: "51 H olayları, Ziyâd'ın Muaviye'nin kardeşi ilan edilmesi ve Yezid'in veliahtlığı." }, status: 'check' },
+    { book: 'Belâzurî, Ensâbü\'l-Eşrâf', ref: 'cilt 5, s. 542', says: { tr: 'Ebuzer\'in Muaviye\'ye Hadrâ sarayı için "Allah\'ın malından yaptırdıysan hıyanet, kendi malından yaptırdıysan israftır" demesi.' }, status: 'check' },
   ],
   shia: [
     { book: 'İbn Ebi\'l-Hadîd, Şerhu Nehci\'l-Belâğa', ref: 'Muaviye ve sövme genelgeleri (cilt/sayfa kontrol edilecek)', says: { tr: "Muaviye'nin valilerine Hz. Ali'ye sövülmesini emretmesi; Medâinî'den aktarım." }, status: 'check' },

@@ -22,8 +22,9 @@ export type Art = {
   actors: Actor[];
 };
 
-// by: sahnedeki anlatımı hangi mezhebin kaynakları kabul eder ('both' = hem Sünni hem Şii kaynaklarında; 'shia' = yalnız Şii kaynaklarında; 'sunni' = yalnız Sünni kaynaklarında).
-export type Accept = 'both' | 'shia' | 'sunni';
+// by: sahnedeki anlatımı hangi mezhebin kaynakları kabul eder ('both' = hem Sünni hem Şii kaynaklarında; 'shia' = yalnız Şii kaynaklarında; 'sunni' = yalnız Sünni kaynaklarında;
+// 'partial' = Şii kaynaklarında ve en az bir tanınmış Sünni kaynakta geçer, ama Sünni ana akım tamamen kabul etmez).
+export type Accept = 'both' | 'shia' | 'sunni' | 'partial';
 export type SceneCite = { side: 'sunni' | 'shia'; i: number };
 export type Scene = { text: L; art: Art; by?: Accept; cites?: SceneCite[]; image?: string };
 export type Dispute = { title: L; sunni: L; shia: L };

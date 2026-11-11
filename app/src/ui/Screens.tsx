@@ -274,8 +274,8 @@ function SceneImage({ evId, n, title, width, image }: { evId: string; n: number;
 }
 
 function AcceptChip({ by }: { by: Accept }) {
-  const col = by === 'shia' ? C.shia : by === 'sunni' ? C.sunni : C.gold;
-  const label = by === 'shia' ? ui('acceptShia') : by === 'sunni' ? ui('acceptSunni') : ui('acceptBoth');
+  const col = by === 'shia' ? C.shia : by === 'sunni' ? C.sunni : by === 'partial' ? C.partial : C.gold;
+  const label = by === 'shia' ? ui('acceptShia') : by === 'sunni' ? ui('acceptSunni') : by === 'partial' ? ui('acceptPartial') : ui('acceptBoth');
   return <Text style={[s.accept, { color: col, borderColor: col }]}>{label}</Text>;
 }
 

@@ -23,16 +23,16 @@ export const muaviyeHasan: HistEvent = {
       cites: [{ side: 'sunni', i: 0 }, { side: 'shia', i: 3 }],
     },
     {
-      by: 'shia',
+      by: 'partial',
       text: { tr: 'Sulh anlaşmasında **Hz. Hasan**\'ın koyduğu şartlar açıktı. **Muaviye** Allah\'ın Kitabı ve Peygamber\'in sünnetiyle hükmedecekti. Kimseye Hz. Ali\'yi kötületmeyecek ve minberlerde ona sövdürmeyecekti. Kendisinden sonra yerine bir halife tayin etmeyecekti. Hz. Hasan bu şartlarla ==Ehl-i Beyt==\'in onurunu, dostlarının canını ve minberin temizliğini korumak istiyordu. Muaviye bu şartların hepsini kabul etti ve anlaşma imzalandı. Kûfe halkı bir süre rahat bir nefes aldı. Ama imzalanan kâğıdın ömrü, Muaviye\'nin sözüne bağlıydı.' },
       art,
-      cites: [{ side: 'shia', i: 1 }, { side: 'shia', i: 3 }],
+      cites: [{ side: 'shia', i: 1 }, { side: 'shia', i: 3 }, { side: 'sunni', i: 2 }],
     },
     {
-      by: 'shia',
+      by: 'partial',
       text: { tr: 'Sulhtan kısa süre sonra **Muaviye**, Kûfe yakınlarındaki **Nuhayle**\'de halka bir konuşma yaptı. Bu konuşmada niyetini hiç saklamadı: "Ben sizinle namaz kılasınız ya da oruç tutasınız diye savaşmadım. Size hükmetmek için savaştım." Ardından Hz. Hasan\'a verdiği sözleri ==ayaklarının altında== saydığını söyledi. Peygamber\'in torununun kan dökülmesin diye yaptığı sulh, daha mürekkebi kurumadan açıkça çiğnenmişti. Muaviye\'nin asıl amacı, ümmetin dinini korumak değil, ümmetin üzerinde hüküm sürmekti. Oğlu Yezid\'i veliaht yapması da bu sözün devamı olacaktı.' },
       art,
-      cites: [{ side: 'shia', i: 1 }, { side: 'shia', i: 2 }],
+      cites: [{ side: 'shia', i: 1 }, { side: 'shia', i: 2 }, { side: 'sunni', i: 3 }],
     },
     {
       by: 'both',
@@ -41,10 +41,10 @@ export const muaviyeHasan: HistEvent = {
       cites: [{ side: 'shia', i: 2 }, { side: 'shia', i: 0 }],
     },
     {
-      by: 'shia',
+      by: 'partial',
       text: { tr: 'Rivayetlere göre **Muaviye**, oğlu **Yezid**\'i kendisinden sonra halife yapmak istiyordu. Bunun önündeki en büyük engel, sulh şartlarını bilen ve halkın sevgisini taşıyan Hz. Hasan\'dı. Muaviye, Hz. Hasan\'ın eşi **Ca\'de bint Eş\'as**\'a gizlice haber gönderdi. Ona, Hz. Hasan\'ı zehirlerse oğlu Yezid\'le evlendireceğini ve yüz bin dirhem vereceğini vaat etti. Ca\'de bu vaade kandı. Hz. Hasan şehit olduktan sonra Muaviye vaadini tutmadı. Ca\'de ne Yezid\'le evlendi ne de paranın tamamını aldı.' },
       art,
-      cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }],
+      cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }, { side: 'sunni', i: 1 }],
     },
     {
       by: 'both',
@@ -63,6 +63,7 @@ export const muaviyeHasan: HistEvent = {
     { book: 'Buhari, Sahih', ref: 'No. 2704 (Sulh; Hz. Hasan hadisi)', says: { tr: "Peygamber'in Hz. Hasan için «seyyid» demesi ve «iki büyük grubu barıştıracak» sözü." }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/bukhari:2704', status: 'check' },
     { book: 'İbn Teymiye, Minhâcü\'s-Sünne; İbn Kesîr, el-Bidâye ve\'n-Nihâye', ref: 'Hz. Hasan\'ın zehirlenmesi (cilt/sayfa kontrol edilecek)', says: { tr: "Muaviye'nin Cü'de'ye vaat ettiği rivayetini sabit görmezler; zehirlenmeyi bir olay olarak aktarırlar." }, status: 'check' },
     { book: 'Taberî, Târîhu\'r-Rusül ve\'l-Mülûk', ref: '41 H olayları (sulh ve Âmü\'l-Cemâa; cilt/sayfa kontrol edilecek)', says: { tr: "Sulhun şartları, Muaviye'nin Kûfe'ye girişi ve birlik yılı." }, status: 'check' },
+    { book: 'İbn Ebî Şeybe, el-Musannef', ref: 'No. 31197 (Kitâbü\'l-Ümerâ; başka baskıda No. 29962); aynı haber İbn Sa\'d ve İbn Kesîr\'de (el-Bidâye 8/140) de anılır', says: { tr: 'Saîd b. Süveyd\'den: Muaviye Nuhayle\'de cuma kıldırıp hutbede "Sizinle namaz kılasınız, oruç tutasınız, hac edesiniz, zekât veresiniz diye savaşmadım. Sizin başınıza emir olmak için savaştım" der.' }, grade: { tr: 'Senetteki Saîd b. Süveyd\'i İbn Adî zayıflar arasında anar. Bu yüzden bazı Sünni âlimler haberi sabit saymaz.' }, url: 'https://hdith.com/encyclopedia/book/b-15/h/273036', status: 'verified' },
   ],
   shia: [
     { book: 'Şeyh Müfid, el-İrşâd', ref: 'Hz. Hasan bölümü (sayfa kontrol edilecek)', says: { tr: "Zehirlenme, Cü'de ve Muaviye'nin vaadi." }, status: 'check' },

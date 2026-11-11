@@ -35,7 +35,8 @@ export const hasan: HistEvent = {
     {
       text: { tr: 'Sulh yazıya geçirilirken **Hz. Hasan** önemli şartlar koydu. **Muaviye**, Allah\'ın Kitabı ve Peygamber\'in sünnetiyle hükmedecek, kimseye **Hz. Ali**\'yi kötületmeyecek ve kendisinden sonra yerine bir halife tayin etmeyecekti. Hz. Hasan bu şartlarla imamlık hakkından vazgeçmiş olmadı. Yalnızca ümmetin kanını korumak için yönetimi bıraktı. Ama Muaviye bu şartların hiçbirine uymadı. Sulhun mürekkebi kurumadan minberlerde Hz. Ali\'ye lanet okunmaya başlandı. Antlaşma kâğıtta duruyordu, ama her cuma hutbesinde yeniden çiğneniyordu.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'hasan', x: 50, pose: 'sit', label: { tr: 'Hz. Hasan' } }] },
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 3 }],
     },
     {
       text: { tr: 'Sulhtan sonra **Hz. Hasan** Kûfe\'den ayrılıp Medine\'ye döndü. Orada yaklaşık on yıl, dedesinin şehrinde sessiz bir hayat sürdü. Bu yılların sonunda ağır bir hastalığa yakalandı. Rivayetlere göre bu hastalık bir zehirlenmeydi ve zehri ona eşi **Ca\'de bint Eş\'as** vermişti. Hz. Hasan kırk gün kadar acı çektikten sonra vefat etti. Vefatı, 28 Safer 49 ya da 50 yılı olarak anılır. Hz. Câfer-i Sâdık\'tan gelen rivayete göre Hz. Hasan\'ı zehirleyen Ca\'de\'dir. Peygamber\'in seyyid dediği torun, dedesinin şehrinde zehirle şehit edildi.' },
@@ -44,9 +45,9 @@ export const hasan: HistEvent = {
     },
     {
       text: { tr: 'Rivayetlere göre bu zehrin arkasında **Muaviye** vardı. Muaviye, Ca\'de\'ye oğlu **Yezid**\'le evlendirme sözü ve yüz bin dirhem vaat etmişti. Ca\'de bu vaade kanıp kocasını zehirledi. Hz. Hasan şehit olunca Muaviye sözünü tutmadı. Ca\'de ne Yezid\'le evlendi ne de vaat edilen paranın tamamını aldı. Bazı Sünni âlimler bu rivayetin güvenilir bir delille sabit olmadığını söyler. İbn Abdilberr gibi bazıları ise haberi nakleder, ama kesin bir hüküm vermez. Şii kaynaklarında ise bu rivayet açıkça yer alır. Hz. Hasan\'ın ölümüyle sulhun önündeki son engel de kalkmış oldu.' },
-      cites: [{ side: 'shia', i: 5 }, { side: 'shia', i: 9 }],
+      cites: [{ side: 'shia', i: 5 }, { side: 'shia', i: 9 }, { side: 'sunni', i: 10 }, { side: 'sunni', i: 13 }],
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 24, label: { tr: 'Muaviye' } }, { kind: 'woman', x: 50, label: { tr: 'Cü\'de' } }, { kind: 'hasan', x: 76, pose: 'sit', label: { tr: 'Hz. Hasan' } }] },
-      by: 'shia',
+      by: 'partial',
     },
     {
       text: { tr: 'Ölüm döşeğindeyken **Hz. Hasan**, kardeşi **Hz. Hüseyin**\'i yanına çağırdı ve ona vasiyet etti. Kendisini dedesi Resûlullah\'ın yanına defnetmelerini istedi. Ama bir şart koştu: "Cenazemde bir damla bile kan dökülmesin." Eğer Peygamber\'in yanına defnedilmesine engel olunur ve kan dökülme tehlikesi doğarsa, kendisini Bakî mezarlığına, ninesi **Fatıma bint Esed**\'in yanına gömmelerini söyledi. Rivayetlere göre Hz. Hasan, Peygamber\'in yanına defnedilmesine engel olunacağını önceden haber vermişti. Hayatı boyunca ümmetin kanını korumak için hakkından vazgeçen imam, ölümünde bile aynı merhameti gösteriyordu.' },
