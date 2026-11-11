@@ -30,7 +30,7 @@ export const mezhepler: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Kerbelâ\'da Hz. Hüseyin\'in şehadeti, Şiileri derinden sarstı ve onları daha da birbirine bağladı. Kûfe\'de **Muhtâr es-Sekafî**, Kerbelâ şehitlerinin intikamını almak için hicretin 66. yılında, yani 685\'te ayaklandı. Yaklaşık on sekiz ay Kûfe\'yi yönetti ve bu sürede Kerbelâ\'da Hz. Hüseyin\'e kılıç çekenlerin birçoğunu cezalandırdı. 67 yılında öldürüldü. Muhtâr\'ın, Hz. Ali\'nin oğlu Muhammed b. el-Hanefiyye adına çağrı yaptığı anlatılır ve bu çağrı Keysâniyye fırkasının doğuşuna bağlanır. Şii kaynaklarında Muhtâr\'a bakış farklıdır. Çoğu onu olumlu anar, bazıları ise susmayı tercih eder.' },
+      text: { tr: 'Kerbelâ\'da Hz. Hüseyin\'in şehadeti, Şiileri derinden sarstı ve onları daha da birbirine bağladı. Kûfe\'de **Muhtâr es-Sekafî**, Kerbelâ şehitlerinin intikamını almak için hicretin 66. yılında, yani 685\'te ayaklandı. Yaklaşık on sekiz ay Kûfe\'yi yönetti ve bu sürede Kerbelâ\'da Hz. Hüseyin\'e kılıç çekenlerin birçoğunu cezalandırdı. 67 yılında öldürüldü. Muhtâr\'ın, Hz. Ali\'nin oğlu Muhammed b. el-Hanefiyye adına çağrı yaptığı anlatılır ve bu çağrı Keysâniyye fırkasının doğuşuna bağlanır.' },
       art: { bg: 'city', props: ['swords', 'flags'], actors: [{ kind: 'man', x: 34, label: { tr: 'Muhtâr es-Sekafî' } }, { kind: 'crowd', x: 68, scale: 5 }] },
       by: 'both',
     },
