@@ -9,7 +9,7 @@ export const imamlar: HistEvent = {
   hook: { tr: 'Kerbela\'dan sağ çıkan genç bir imam, ilim ve sabırla yürüyen bir rehberlik zincirini nasıl başlattı?', en: 'How did a sick young survivor of Karbala begin a line of learning and patience?' },
   scenes: [
     {
-      text: { tr: 'Kerbelâ\'da **Hz. Hüseyin** şehit edildiğinde imamet, yani Ehl-i Beyt\'in önderliği, onun hasta oğlu **Hz. Zeynelâbidîn**\'e geçti. Asıl adı Ali\'ydi. Hastalığı yüzünden meydana çıkamamış, halası Hz. Zeynep\'in kendi bedenini siper etmesiyle çadırda sağ kalmıştı. Kûfe\'nin ve Şam\'ın esaret yollarından geçtikten sonra ailesinin kalanlarıyla birlikte Medine\'ye döndü. Kılıçla susturulmak istenen önderlik, bu genç imamın ellerinde yeni bir şekil aldı. Hz. Zeynelâbidîn, babasının mesajını kılıçla değil, gözyaşı, dua ve sabırla ümmete taşıdı.' },
+      text: { tr: 'Kerbelâ\'da **Hz. Hüseyin** şehit edildiğinde imamet, yani Ehl-i Beyt\'in önderliği, onun hasta oğlu **Hz. Zeynelâbidîn**\'e geçti. Asıl adı Ali\'ydi. Hastalığı yüzünden meydana çıkamamış, halası Hz. Zeynep\'in kendini siper etmesiyle çadırda sağ kalmıştı. Kûfe\'nin ve Şam\'ın esaret yollarından geçtikten sonra ailesinin kalanlarıyla birlikte Medine\'ye döndü. Kılıçla susturulmak istenen önderlik, bu genç imamın ellerinde yeni bir şekil aldı. Hz. Zeynelâbidîn, babasının mesajını kılıçla değil, gözyaşı, dua ve sabırla ümmete taşıdı.' },
       art: { bg: 'dune-dusk', props: ['tents'], actors: [] },
       by: 'both',
     },
