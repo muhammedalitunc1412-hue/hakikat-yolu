@@ -45,13 +45,13 @@ export const imamlar: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Muhammed Takî**, babası Hz. Rızâ\'yı yedi yaşında kaybetti ve bu küçük yaşta imamet ona geçti. Abbasiler onu da Bağdat\'a götürüp gözetim altında tuttu. Hicretin 220. yılında orada, Abbasi halifesi **Mu\'tasım**\'ın emriyle zehirlenerek şehit edildi. Oğlu **Hz. Ali Nakî**, Abbasi halifesi **Mütevekkil** tarafından Samarra\'ya getirildi ve şehirden çıkması yasaklandı. Onun oğlu **Hz. Hasan Askerî** de bütün hayatını Samarra\'da, bir askerî ordugâhın içinde geçirdi. Askerî lakabı, ordugâhta tutulan anlamına gelir. Hicretin 260. yılında Abbasi halifesi **Mu\'temid**\'in emriyle zehirlenerek şehit edildi. Ehl-i Beyt rivayetlerine göre bu son iki imam da zehirlenerek şehit edildi.' },
+      text: { tr: '**Hz. Muhammed Takî**, babası Hz. Rızâ\'yı yedi yaşında kaybetti ve bu küçük yaşta imamet ona geçti. Abbasiler onu da Bağdat\'a götürüp gözetim altında tuttu. Hicretin 220. yılında orada, Abbasi halifesi **Mu\'tasım**\'ın emriyle zehirlenerek şehit edildi. Oğlu **Hz. Ali Nakî**, Abbasi halifesi **Mütevekkil** tarafından Samarra\'ya getirildi ve şehirden çıkması yasaklandı. Hicretin 254. yılında Abbasi halifesi **Mu\'tez**\'in emriyle zehirlenerek şehit edildi. Onun oğlu **Hz. Hasan Askerî** de bütün hayatını Samarra\'da, bir askerî ordugâhın içinde geçirdi. Askerî lakabı, ordugâhta tutulan anlamına gelir. Hicretin 260. yılında Abbasi halifesi **Mu\'temid**\'in emriyle zehirlenerek şehit edildi.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 26, label: { tr: 'Hz. Ali Nakî' } }, { kind: 'man', x: 56, label: { tr: 'Hz. Hasan Askerî' } }, { kind: 'crowd', x: 82, scale: 3 }] },
       by: 'partial',
       cites: [{ side: 'sunni', i: 5 }, { side: 'sunni', i: 6 }],
     },
     {
-      text: { tr: '**Hz. Hasan Askerî**\'nin vefatından önce Samarra\'da bir oğlu dünyaya geldi. Bu çocuk, On İkinci İmam **Hz. Mehdî**\'ydi. Abbasiler imamın evini sürekli gözetim altında tutuyordu. Bu baskı yüzünden çocuğun doğumu gizli tutuldu. Babasının vefatından sonra Hz. Mehdî gaybete, yani gizlenme dönemine girdi. Önce küçük gaybet başladı. Bu dönemde dört nâib, yani vekil, imam ile halk arasında aracılık yaptı. Ardından büyük gaybet başladı ve bugüne kadar sürdü. Hz. Mehdî ölmemiştir, Allah\'ın izniyle gizlidir.' },
+      text: { tr: '**Hz. Hasan Askerî**\'nin şehadetinden önce Samarra\'da bir oğlu dünyaya geldi. Bu çocuk, On İkinci İmam **Hz. Mehdî**\'ydi. Abbasiler imamın evini sürekli gözetim altında tutuyordu. Bu baskı yüzünden çocuğun doğumu gizli tutuldu. Babasının vefatından sonra Hz. Mehdî gaybete, yani gizlenme dönemine girdi. Önce küçük gaybet başladı. Bu dönemde dört nâib, yani vekil, imam ile halk arasında aracılık yaptı. Ardından büyük gaybet başladı ve bugüne kadar sürdü. Hz. Mehdî ölmemiştir, Allah\'ın izniyle gizlidir.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'crowd', x: 50, scale: 5 }] },
       by: 'partial',
       cites: [{ side: 'sunni', i: 9 }],
