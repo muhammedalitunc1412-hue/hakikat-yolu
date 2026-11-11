@@ -57,12 +57,6 @@ export const muaviyeIktidar: HistEvent = {
       art,
       cites: [{ side: 'shia', i: 1 }],
     },
-    {
-      by: 'both',
-      text: { tr: 'Muaviye\'yi sahabe ve fakih olarak ananlar da vardır. Sünni okumada o, Peygamber\'in kâtiplerinden bir sahabedir. Ama onun yönetimindeki yıllar, Şiilerin hafızasında çok farklı izler bıraktı. O yıllarda minberlerden **Hz. Ali**\'ye lanet okunuyordu. **Hucr b. Adî**\'nin kanı Mercü Azra\'da dökülmüştü. **Ziyâd**, Peygamber\'in hükmüne rağmen kardeş ilan edilmişti. Ebuzer çölde yalnız ölmüştü. **Yezid** ise ümmetin başına zorla veliaht yapılmıştı. Şii okuyuşu bu yılları bir fazilet dönemi olarak değil, Kerbelâ\'ya doğru adım adım ilerleyen bir zulüm dönemi olarak görür.' },
-      art,
-      cites: [{ side: 'sunni', i: 4 }, { side: 'shia', i: 0 }],
-    },
   ],
   sunni: [
     { book: 'Tirmizi, el-Câmi\'', ref: 'No. 2226 (Fiten; hilafet otuz yıl; numara kontrol edilecek)', says: { tr: "«Hilafet otuz yıldır, sonra mülk olacak» hadisi." }, status: 'check' },

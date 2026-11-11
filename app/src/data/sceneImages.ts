@@ -193,7 +193,6 @@ export const SCENE_IMAGES: Record<string, number> = {
   'muaviye-iktidar-6': require('../../assets/scenes/muaviye-iktidar-6.jpg'),
   'muaviye-iktidar-7': require('../../assets/scenes/muaviye-iktidar-7.jpg'),
   'muaviye-iktidar-8': require('../../assets/scenes/muaviye-iktidar-8.jpg'),
-  'muaviye-iktidar-9': require('../../assets/scenes/muaviye-iktidar-9.jpg'),
   'muaviye-kimdir-1': require('../../assets/scenes/muaviye-kimdir-1.jpg'),
   'muaviye-kimdir-2': require('../../assets/scenes/muaviye-kimdir-2.jpg'),
   'muaviye-kimdir-3': require('../../assets/scenes/muaviye-kimdir-3.jpg'),
