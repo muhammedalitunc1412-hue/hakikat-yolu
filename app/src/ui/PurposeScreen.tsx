@@ -1,6 +1,7 @@
 import { Pressable, ScrollView, Text, View } from 'react-native';
 import { APP_PURPOSE_PARAGRAPHS, APP_PURPOSE_TITLE } from '../data/amac';
 import { C, TOP, font } from './theme';
+import { LogoZoom } from './LogoZoom';
 
 export function PurposeScreen({ onContinue }: { onContinue: () => void }) {
   return (
@@ -9,6 +10,9 @@ export function PurposeScreen({ onContinue }: { onContinue: () => void }) {
         style={{ flex: 1 }}
         contentContainerStyle={{ paddingHorizontal: 24, paddingTop: TOP, paddingBottom: 40, flexGrow: 1 }}
       >
+        <View style={{ alignItems: 'center', marginBottom: 20 }}>
+          <LogoZoom size={112} />
+        </View>
         <Text style={{ color: C.gold, fontFamily: font.sans, fontSize: 12, fontWeight: '700', letterSpacing: 2.4 }}>
           HAKİKAT YOLU
         </Text>

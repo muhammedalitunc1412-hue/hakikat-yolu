@@ -29,7 +29,7 @@ type Route =
 const LANGUAGE_KEY = 'hakikat-yolu:language';
 const PURPOSE_AT_KEY = 'hakikat-yolu:purpose-seen-at';
 const PURPOSE_LEGACY_KEY = 'hakikat-yolu:purpose-seen';
-const PURPOSE_INTERVAL_MS = 48 * 60 * 60 * 1000;
+const PURPOSE_INTERVAL_MS = 4 * 24 * 60 * 60 * 1000;
 
 export default function App() {
   const [lang, setLanguage] = useState<Lang>('tr');
@@ -55,7 +55,7 @@ export default function App() {
       if (Number.isFinite(t)) {
         setPurposeSeen(Date.now() - t < PURPOSE_INTERVAL_MS);
       } else if (legacy === '1') {
-        // Eski bayrak: bir kez gösterilmiş, zaman damgası yok; 48 saatlik süreyi şimdi başlat.
+        // Eski bayrak: bir kez gösterilmiş, zaman damgası yok; 4 günlük süreyi şimdi başlat.
         setPurposeSeen(true);
         void AsyncStorage.setItem(PURPOSE_AT_KEY, String(Date.now())).catch(() => {});
       } else {

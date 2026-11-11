@@ -9,6 +9,7 @@ import { BORDERS_CREDIT } from '../data/borders';
 import { mapsForEvent } from '../data/maps';
 import { TRAVEL_METHOD } from '../data/travel';
 import { APP_PURPOSE_TEXT, APP_PURPOSE_TITLE } from '../data/amac';
+import { LogoZoom } from './LogoZoom';
 import { Rich } from './Rich';
 import { EventVideo } from './EventVideo';
 import { ArchIcon, BookIcon, Chevron, CompassIcon, PinIcon, SearchIcon } from './icons';
@@ -77,7 +78,7 @@ export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, o
           <Text style={s.brand}>{ui('appName')}</Text>
           <Text style={[s.tagline, align()]}>{ui('tagline')}</Text>
         </View>
-        <Image source={require('../../assets/logo.png')} resizeMode="contain" accessibilityLabel="Hakikat Yolu" style={s.logo} />
+        <LogoZoom size={84} />
       </View>
       <View style={s.rule} />
 
