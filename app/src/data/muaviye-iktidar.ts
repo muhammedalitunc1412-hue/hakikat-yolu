@@ -17,13 +17,13 @@ export const muaviyeIktidar: HistEvent = {
     },
     {
       by: 'partial',
-      text: { tr: 'Muaviye, Şam\'da Yeşil Saray anlamına gelen **Hadrâ**\'yı yaptırdı. Sarayın parlaklığı uzaktan göze çarpıyordu. Peygamber\'in yakın sahabelerinden **Ebuzer el-Gifârî** bir gün Muaviye\'nin karşısına dikildi ve ona şöyle dedi: "Bu sarayı Allah\'ın malından yaptırdıysan hıyanettir, kendi malından yaptırdıysan israftır." Bu söz Belâzurî\'nin Ensâbü\'l-Eşrâf adlı eserinde aktarılır. Muaviye cevap veremedi, ama Ebuzer\'i halifeye şikâyet etti. Ebuzer Şam\'dan sürüldü ve sonunda Rebeze çölünde yalnızlık içinde vefat etti. Ebuzer bir dilenci değildi. Saray karşısında hakkı söylemekten korkmayan, Peygamber\'in sevdiği bir sahabeydi.' },
+      text: { tr: 'Muaviye, Şam\'da Yeşil Saray anlamına gelen **Hadrâ**\'yı yaptırdı. Sarayın parlaklığı uzaktan göze çarpıyordu. Peygamber\'in yakın sahabelerinden **Ebuzer el-Gifârî** bir gün Muaviye\'nin karşısına dikildi ve ona şöyle dedi: "Bu sarayı Allah\'ın malından yaptırdıysan hıyanettir, kendi malından yaptırdıysan israftır." Bu söz Belâzurî\'nin Ensâbü\'l-Eşrâf adlı eserinde aktarılır. Muaviye cevap veremedi, ama Ebuzer\'i halifeye şikâyet etti. Ebuzer Şam\'dan sürüldü ve sonunda Rebeze çölünde yalnızlık içinde vefat etti. Ebuzer, saray karşısında hakkı söylemekten korkmayan, Peygamber\'in sevdiği bir sahabeydi.' },
       art,
       cites: [{ side: 'shia', i: 2 }, { side: 'sunni', i: 6 }],
     },
     {
       by: 'both',
-      text: { tr: '**Muaviye**, **Ziyâd** adındaki adamı, babası Ebu Süfyan\'ın oğlu ilan ederek kendisine kardeş edindi. Bu işe istilhak, yani soya katma denir. Oysa Peygamber, "Çocuk, yatağın sahibine aittir" buyurmuştu. Muaviye, kendi iktidarını güçlendirmek için Peygamber\'in bu açık hükmünü çiğnedi. Kardeş ilan edilen Ziyâd, Kûfe ve Basra\'ya vali yapıldı. Bu şehirlerde **Hz. Ali**\'yi sevenlerin üzerine acımasızca yürüdü. Sahte bir soy bağı, Ehl-i Beyt dostlarını ezmek için kullanılan bir kırbaca dönüşmüştü.' },
+      text: { tr: '**Muaviye**, **Ziyâd** adındaki adamı, babası Ebu Süfyan\'ın oğlu ilan ederek kendisine kardeş edindi. Bu işe istilhak, yani soya katma denir. Oysa Peygamber, "Çocuk, yatağın sahibine aittir" buyurmuştu. Bu hükme göre bir çocuk, annesinin kocasının soyundan sayılır ve onu zina iddiasıyla başka birinin soyuna katmak haramdır. Ziyâd, Sümeyye adındaki bir cariyenin kocası **Ubeyd**\'in yatağında doğmuş ve yıllarca Ziyâd b. Ubeyd diye tanınmıştı. Muaviye bu işin haram olduğunu bile bile, kendi iktidarını güçlendirmek için Peygamber\'in açık hükmünü çiğnedi. Kardeş ilan edilen Ziyâd, Kûfe ve Basra\'ya vali yapıldı. Bu şehirlerde **Hz. Ali**\'yi sevenlerin üzerine acımasızca yürüdü. Sahte bir soy bağı, Ehl-i Beyt dostlarını ezmek için kullanılan bir kırbaca dönüşmüştü.' },
       art,
       cites: [{ side: 'sunni', i: 5 }],
     },
