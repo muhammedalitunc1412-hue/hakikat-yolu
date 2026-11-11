@@ -74,6 +74,10 @@ export function nextStory(id: string): HistEvent | undefined {
   for (let j = i + 1; j < EVENTS.length; j++) if (isStory(EVENTS[j].id)) return EVENTS[j];
   return undefined;
 }
+export function nextEvent(id: string): HistEvent | undefined {
+  const i = EVENTS.findIndex(e => e.id === id);
+  return i >= 0 && i + 1 < EVENTS.length ? EVENTS[i + 1] : undefined;
+}
 
 // Ana ekranda gösterilen kategoriler (olay kimliklerine göre)
 export const CATEGORIES: { id: string; title: string; sub: string; ids: string[] }[] = [

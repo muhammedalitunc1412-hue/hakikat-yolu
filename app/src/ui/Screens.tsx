@@ -3,7 +3,7 @@ import { FlatList, Image, Linking, Platform, Pressable, ScrollView, StyleSheet, 
 import type { Accept, Dispute, Dua, HistEvent, Scene, Source } from '../types';
 import { tx, ui } from '../i18n';
 import { SCENE_IMAGES } from '../data/sceneImages';
-import { CATEGORIES, isStory, nextStory } from '../data/events';
+import { CATEGORIES, isStory, nextEvent } from '../data/events';
 import { SCENE_VIDEOS } from '../data/sceneVideos';
 import { BORDERS_CREDIT } from '../data/borders';
 import { mapsForEvent } from '../data/maps';
@@ -318,7 +318,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   const has = (p: Panel) => open.includes(p);
   const nDis = ev.disputes?.length ?? 0;
   const story = isStory(ev.id);
-  const nxt = story ? nextStory(ev.id) : undefined;
+  const nxt = nextEvent(ev.id);
   const pages: StoryPage[] = [
     ...ev.scenes.map((scene, n) => ({ kind: 'scene' as const, scene, n })),
     ...(story && SCENE_VIDEOS[ev.id + '-video'] ? [{ kind: 'video' as const }] : []),
@@ -549,7 +549,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
           <Text style={s.prevBarText}>‹  {ui('prevScene')}</Text>
         </Pressable>
       )}
-      {onSources && nxt && onNext && (
+      {idx === total - 1 && nxt && onNext && (
         <Pressable onPress={() => onNext(nxt.id)} accessibilityRole="button" accessibilityLabel={ui('nextEvent')} style={({ pressed }) => [s.nextBar, pressed && s.pressed, webHit]}>
           <View style={{ flex: 1 }}>
             <Text style={s.nextKicker}>{ui('nextEvent').toLocaleUpperCase('tr')}</Text>
