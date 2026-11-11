@@ -28,7 +28,7 @@ export const hasan: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: '**Muaviye**, savaştan önce hile ve rüşvetle **Hz. Hasan**\'ın komutanlarını satın almaya başladı. Hz. Hasan\'ın komutanlarından **Ubeydullah b. Abbas**, bir gece ordusunu bırakıp gizlice Muaviye\'nin tarafına geçti. Ardından başkaları da onu izledi. Ordu içeriden çürüyordu. Hz. Hasan, güçsüz kalmış bir orduyla savaşa girerse Ehl-i Beyt dostlarının boşuna kırılacağını gördü. Ümmetin kanı dökülmesin ve sadık insanlar telef olmasın diye savaşı durdurdu. Yönetim Muaviye\'ye geçti. 41 yılına Âmü\'l-Cemâa, yani birlik yılı dendi. Ama bu birlik, satın alınmış bir ordunun sessizliği üzerine kurulmuştu.' },
+      text: { tr: '**Muaviye**, savaştan önce hile ve rüşvetle **Hz. Hasan**\'ın komutanlarını satın almaya başladı. Hz. Hasan\'ın komutanlarından **Ubeydullah b. Abbas**, bir gece ordusunu bırakıp gizlice Muaviye\'nin tarafına geçti. Ardından başkaları da onu izledi. Ordu içeriden çürüyordu. Hz. Hasan, güçsüz kalmış bir orduyla savaşa girerse Ehl-i Beyt dostlarının boşuna kırılacağını gördü. Ümmetin kanı dökülmesin ve sadık insanlar telef olmasın diye savaşı durdurdu. Böylece hicrî 41 yılında yönetim Muaviye\'ye geçti. Muaviye ve taraftarları, ümmet artık tek bir yöneticide birleşti diyerek bu yıla "Âmü\'l-Cemâa", yani "birlik yılı" adını verdi. Oysa bu birlik, rüşvetle satın alınmış komutanların ve dağıtılmış bir ordunun sessizliği üzerine kurulmuştu.' },
       art: { bg: 'dawn', props: ['sun', 'scroll'], actors: [{ kind: 'hasan', x: 34, label: { tr: 'Hz. Hasan' } }, { kind: 'man', x: 68, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },
