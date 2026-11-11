@@ -88,7 +88,7 @@ test('genişleme sahnelerinin görseli kayıtlı, yer tutucu kalmaz', () => {
     assert.equal(texts.length, expected);
     assert.equal(keys.length, texts.length);
     assert.equal(new Set(keys).size, keys.length);
-    const pending = new Set(['kerbela-egersiz']);
+    const pending = new Set(['kerbela-egersiz', 'kerbela-zeynep-hutbe']);
     for (const id of keys) {
       if (pending.has(id)) {
         assert.doesNotMatch(img, new RegExp("'" + id + "':"));
@@ -97,7 +97,7 @@ test('genişleme sahnelerinin görseli kayıtlı, yer tutucu kalmaz', () => {
       assert.match(img, new RegExp("'" + id + "': require\\('../../assets/scenes/" + id + "\\.jpg'\\)"));
     }
   };
-  bound('./kerbela.ts', 37);
+  bound('./kerbela.ts', 38);
   assert.match(read('./kerbela.ts'), /image: 'kerbela-egersiz'/);
   assert.match(read('./kerbela.ts'), /eğersiz develere bindirildi/);
   bound('./sakife.ts', 10);
