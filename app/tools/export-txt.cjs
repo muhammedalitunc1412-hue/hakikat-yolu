@@ -45,7 +45,7 @@ EVENTS.forEach((e, i) => {
   line();
   line('--- HİKÂYE (SAHNELER) ---');
   e.scenes.forEach((s, k) => {
-    const by = s.by === 'shia' ? 'Kabul eden: Şii' : s.by === 'sunni' ? 'Kabul eden: Sünni' : s.by === 'both' ? 'Kabul eden: Sünni ve Şii' : '';
+    const by = s.by === 'shia' ? 'Kabul eden: Şii' : s.by === 'sunni' ? 'Kabul eden: Sünni' : s.by === 'both' ? 'Kabul eden: Sünni ve Şii' : s.by === 'partial' ? 'Kabul eden: Şii ve kısmi Sünni' : '';
     line(`Sahne ${k + 1}: ${t(s.text)}${by ? '  [' + by + ']' : ''}`);
     const who = s.art.actors.filter(a => a.label).map(a => t(a.label)).join(', ');
     if (who) line(`   (Sahnedekiler: ${who})`);

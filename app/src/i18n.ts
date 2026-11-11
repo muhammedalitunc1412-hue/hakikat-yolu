@@ -87,6 +87,7 @@ const UI: Record<string, L> = {
   acceptBoth: { tr: 'Kabul eden: Sünni ve Şii', en: 'Accepted by: Sunni and Shia' },
   acceptShia: { tr: 'Kabul eden: Şii', en: 'Accepted by: Shia' },
   acceptSunni: { tr: 'Kabul eden: Sünni', en: 'Accepted by: Sunni' },
+  acceptPartial: { tr: 'Kabul eden: Şii ve kısmi Sünni', en: 'Accepted by: Shia and some Sunni sources' },
   none: { tr: 'Bu olay için bu kaynak grubunda kayıt yok.', en: 'No entry in this group of sources.' },
 };
 export const LANGUAGES: readonly { id: Lang; name: string; title: string; confirm: string }[] = [

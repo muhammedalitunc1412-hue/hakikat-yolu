@@ -36,12 +36,14 @@ export const hayber: HistEvent = {
       art: { bg: 'dune-day', actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 74, scale: 3 }] },
     },
     {
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 5 }],
       text: { tr: 'Ehl-i Beyt rivayetlerinde o günden bir sahne daha anlatılır. Savaşın en kızgın anında **Hz. Ali**, Hayber kalesinin ağır kapısını yerinden söktü ve onu bir kalkan gibi önünde tutarak savaştı. Okları ve darbeleri bu kapıyla karşıladı. Arkadaşları bu gücü yıllarca anlata anlata andı. Rivayetler kapının ağırlığı için kesin bir ölçü vermez, ama hepsi bu gücü Hayber\'in fethine bağlar. Şiiler bu sahneyi anlatırken Peygamber\'in akşam söylediği sözü hatırlar: Allah fethi onun eliyle nasip edecekti.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 2 }, { side: 'sunni', i: 3 }],
       text: { tr: 'Sancak, Peygamber\'in sözüyle, Allah\'ı ve Resulünü seven ve onlar tarafından sevilen kişiye verilmişti. O kişi **Hz. Ali**\'ydi. Rivayetlere göre Peygamber onu, savaştan kaçmayan ve hep ileri atılan biri olarak da tanıtmıştı. Önceki günlerde kaleyi alamadan dönenler vardı. Savaşta geri dönmek kimse için bir ayıp sayılmazdı. Ama Peygamber\'in, ordunun en zor gününde kimi öne çağırdığı herkesin gözü önündeydi. Bu seçim, Allah\'ın ve Resulünün sevgisine dayanıyordu. Sahabe Sa\'d b. Ebi Vakkas yıllar sonra Hz. Ali\'nin faziletlerini sayarken Hayber sancağını da anacaktı.' },
       art: { bg: 'night', props: ['stars', 'scroll'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
@@ -57,6 +59,7 @@ export const hayber: HistEvent = {
     { book: 'Müslim, Sahih', ref: 'No. 2406 (Fedâilü\'s-Sahâbe, Hz. Ali\'nin faziletleri; Sehl b. Sa\'d)', says: { tr: 'Aynı sancak diyaloğu. Hz. Ali "Ya Resulallah, onlar bizim gibi olana kadar mı savaşayım?" der. Peygamber yavaşça varıp İslam\'a davet etmesini ve Allah\'ın haklarını bildirmesini söyler. Bir kişiyi hidayete erdirmek, kızıl develere sahip olmaktan hayırlıdır.' }, grade: { tr: 'Sahih' }, url: 'https://sunnah.com/muslim:2406', status: 'verified' },
     { book: 'Hâkim, el-Müstedrek; Ahmed b. Hanbel, Müsned', ref: 'Büreyde rivayeti: sancakla önce Ebu Bekir sonra Ömer gönderilir (numara kontrol edilecek)', says: { tr: 'Önceki iki denemeden sonra sancağın Hz. Ali\'ye verildiği anlatılır.' }, grade: { tr: 'Sıhhati tartışmalı' }, status: 'check' },
     { book: 'Müslim, Sahih', ref: 'No. 1807a (Kitâbü\'l-Cihâd ve\'s-Siyer, Hayber; Seleme b. el-Ekva)', says: { tr: 'Merhab zırhlı olarak "Hayber bilir ki ben Merhab\'ım" diye meydana çıkar. Hz. Ali "Ben annemin Haydar adını verdiği kişiyim" diye karşılık verir, başına vurur ve onu öldürür. Fetih onun eliyle olur. Miğferi tepeden ikiye yarma, yara almama ve cehenneme gitme bu metinde yoktur.' }, grade: { tr: 'Sahih' }, url: 'https://sunnah.com/muslim:1807a', status: 'verified' },
+    { book: 'İbn Hişâm, es-Sîre (İbn İshak); Taberî, Târîh', ref: 'Hayber gazvesi, Ebû Râfi\' rivayeti (sayfa kontrol edilecek)', says: { tr: 'Ebû Râfi\': Hz. Ali kalenin yanındaki bir kapıyı alıp kalkan gibi kullandı ve fetih olana kadar elinde tuttu. Sonra sekiz kişi o kapıyı çevirmeye çalıştı ama çeviremedi.' }, grade: { tr: 'Sünni hadis âlimleri kapı rivayetlerinin bazı uzun şekillerini zayıf ya da münker sayar.' }, status: 'check' },
   ],
   shia: [
     { book: 'WikiShia, Battle of Khaybar (ikincil)', ref: 'Hayber Savaşı maddesi', says: { tr: 'Hayber\'de sancağın Hz. Ali\'ye verilmesi, kapı rivayeti ve olayın Şii kaynaklardaki anlatımı.' }, url: 'https://en.wikishia.net/view/Battle_of_Khaybar', status: 'check' },

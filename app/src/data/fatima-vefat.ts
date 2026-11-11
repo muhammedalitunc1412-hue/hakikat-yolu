@@ -18,13 +18,13 @@ export const fatimaVefat: HistEvent = {
     {
       text: { tr: 'Biat günlerinde, Sakife\'deki seçimi kabul etmeyen bir grup **Hz. Ali**\'nin evinde toplanmıştı. **Ömer** yanındakilerle birlikte o evin kapısına geldi. Odun ve ateş getirtmişti. Kapının önünde yüksek sesle bağırdı: "Çıkın, yoksa evi içindekilerle birlikte yakarım!" Birisi ona, "Ama içeride Fatıma var" dedi. Ömer\'in cevabı kısa oldu: "Olsa da!" Bu ev, Peygamber\'in kızının ve Gadir\'de eli kaldırılan Hz. Ali\'nin eviydi. İçeride Hz. Hasan ile Hz. Hüseyin de vardı. Şimdi bu evin kapısının önüne odunlar yığılıyor ve içindekiler ateşle tehdit ediliyordu.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 28, pose: 'raise', label: { tr: 'Ömer' } }, { kind: 'fatima', x: 68, label: { tr: 'Hz. Fatıma' } }] },
-      by: 'shia',
+      by: 'partial',
       cites: [{ side: 'sunni', i: 1 }, { side: 'sunni', i: 2 }, { side: 'sunni', i: 4 }, { side: 'shia', i: 6 }],
     },
     {
       text: { tr: 'Ehl-i Beyt rivayetlerine göre bu tehdit sözde kalmadı. Kapı ateşe verildi ve **Ömer** onu zorla iterek açtı. Kapının arkasında duran **Hz. Fatıma**, kapı ile duvarın arasında sıkıştı. Rivayetlere göre kapının çivisi göğsüne saplandı ve kaburgası kırıldı. O sırada karnında taşıdığı **Muhsin** adındaki bebeğini kaybetti. Acıyla "Babacığım!" diye seslendi. **Hz. Ali** koşup eşini yerden kaldırdı. Öfkesine hâkim oldu ve ümmet bölünmesin diye sabretti. Dünyaya gelemeyen Muhsin, Şiilerin yüreğinde Ehl-i Beyt\'in ilk şehit çocuğu olarak yaşar. Bu yaralar, Hz. Fatıma\'nın kısa ömrünün geri kalanını bir hastalık yatağına çevirdi.' },
       art: { bg: 'interior', actors: [{ kind: 'fatima', x: 48, pose: 'sit', label: { tr: 'Hz. Fatıma' } }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
-      by: 'shia',
+      by: 'partial',
       cites: [{ side: 'shia', i: 6 }, { side: 'shia', i: 7 }, { side: 'shia', i: 8 }, { side: 'shia', i: 9 }, { side: 'shia', i: 0 }, { side: 'sunni', i: 2 }],
     },
     {
@@ -36,14 +36,14 @@ export const fatimaVefat: HistEvent = {
     {
       text: { tr: 'Medine\'deki küçük evde **Hz. Fatıma**\'nın hastalığı günden güne ağırlaştı. Yaraları iyileşmiyordu ve yatağından kalkmakta zorlanıyordu. **Hz. Ali** onun başucundan ayrılmadı. Eşinin acısını kimseye belli etmeden yüreğinde taşıdı. Küçük **Hz. Hasan** ve **Hz. Hüseyin** annelerinin yatağının yanında oturuyor, onun nefes alışını dinliyordu. Hz. Fatıma acısını sokağa taşımadı, şikâyetini Allah\'a bıraktı. Bu çocuklar, ileride biri zehirlenerek, öbürü Kerbelâ\'da susuz bırakılarak şehit edilecekti. Annelerinin yatağının başında öğrendikleri sabır, bütün hayatları boyunca onlara yol gösterdi.' },
       art: { bg: 'interior', actors: [{ kind: 'fatima', x: 40, pose: 'sit', label: { tr: 'Hz. Fatıma' } }, { kind: 'ali', x: 58, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 72, scale: 0.7 }, { kind: 'husayn', x: 82, scale: 0.65 }] },
-      by: 'shia',
-      cites: [{ side: 'shia', i: 0 }],
+      by: 'partial',
+      cites: [{ side: 'shia', i: 0 }, { side: 'sunni', i: 2 }],
     },
     {
       text: { tr: 'Vefatından kısa süre önce **Hz. Fatıma**, eşi **Hz. Ali**\'yi yanına çağırdı ve ona vasiyetini söyledi. Kendisine haksızlık edenlerin cenazesine katılmasını istemiyordu. Onların namazına durmasını da istemiyordu. Gece yıkanmasını ve gece defnedilmesini, kabrinin de kimse tarafından bilinmemesini istedi. Bu vasiyet bir korkudan değil, bir duruştan doğuyordu. Peygamber\'in kızı, kendisine yapılan haksızlığı ümmete en açık şekilde göstermek istiyordu. Kabrini gizlemek, bu haksızlığa karşı söylenmiş son ve en uzun süren sözüydü. Hz. Ali gözyaşları içinde vasiyetin her kelimesini dinledi ve yerine getireceğine söz verdi.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'fatima', x: 36, pose: 'sit', label: { tr: 'Hz. Fatıma' } }, { kind: 'ali', x: 66, label: { tr: 'Hz. Ali' } }] },
-      by: 'shia',
-      cites: [{ side: 'shia', i: 4 }],
+      by: 'partial',
+      cites: [{ side: 'shia', i: 4 }, { side: 'sunni', i: 0 }, { side: 'sunni', i: 6 }],
     },
     {
       text: { tr: '**Hz. Fatıma** vefat ettiğinde **Hz. Ali**, verdiği sözü tuttu. Eşini gece, karanlıkta yıkadı. Ehl-i Beyt\'ten ve en yakın dostlardan birkaç kişiyle namazını kıldırdı. Ardından onu Medine\'nin karanlığında, kimsenin bilmediği bir yere defnetti. Halife Ebu Bekir\'e haber verilmedi ve o namazda bulunmadı. Peygamber\'in tek kızının cenazesi, kalabalıklar olmadan, bir avuç insanla uğurlandı. Hz. Hasan ile Hz. Hüseyin, babalarının yanında annelerinin toprağa verilişini izledi. Sabah olduğunda Medine halkı, Peygamber\'in kızının çoktan toprağa verildiğini öğrendi.' },
@@ -54,7 +54,7 @@ export const fatimaVefat: HistEvent = {
     {
       text: { tr: 'Defin bittikten sonra **Hz. Ali**, kabrin yerinin anlaşılmaması için yakınlarda birkaç yeni mezar şekli yaptı. Sabah Medine halkı bu yeni toprak yığınlarını gördü, ama hangisinin **Hz. Fatıma**\'nın kabri olduğunu ayırt edemedi. Bugün de kabrin yeri kesin olarak bilinmez. Bazı rivayetler onun kendi evinde, bazıları Bakî mezarlığında, bazıları da Peygamber\'in kabri ile minberi arasında defnedildiğini söyler. Peygamber\'in kabrine her yıl milyonlarca insan gelir. Ama onun kızının kabri için kimse tek bir taş gösteremez. Şiiler bu belirsizliği, Hz. Fatıma\'nın vasiyetinin yüzyıllardır yerine getirilmesi olarak görür.' },
       art: { bg: 'dawn', props: ['palms'], actors: [{ kind: 'ali', x: 50, pose: 'sit', label: { tr: 'Hz. Ali' } }] },
-      by: 'shia',
+      by: 'partial',
       cites: [{ side: 'sunni', i: 6 }, { side: 'shia', i: 5 }, { side: 'shia', i: 1 }],
     },
     {

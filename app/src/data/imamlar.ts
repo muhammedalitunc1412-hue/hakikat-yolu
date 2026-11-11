@@ -31,7 +31,8 @@ export const imamlar: HistEvent = {
     {
       text: { tr: 'Hz. Ca\'fer-i Sâdık\'ın ders halkası yalnızca Şiilere açık değildi. Sünni mezheplerin kurucularından **Ebû Hanîfe** ve **Mâlik** de ondan faydalananlar arasında anılır. Ebû Hanîfe\'ye, "O iki yıl olmasaydı Nu\'mân helak olurdu" sözü atfedilir. Nu\'mân, Ebû Hanîfe\'nin kendi adıdır ve bu söz, Hz. Sâdık\'ın yanında geçirdiği yılları anlatır. Mâlik\'in de ondan hadis dinlediği aktarılır. Hz. Sâdık\'ın oğlu **Hz. Musa el-Kâzım** da bu halkanın içinde, babasının yanında büyüdü. Ehl-i Beyt\'in kapısı, ilim arayan herkese açık kalmıştı.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 30, label: { tr: 'Ebû Hanîfe' } }, { kind: 'man', x: 52, pose: 'sit', label: { tr: 'Hz. Ca\'fer-i Sâdık' } }, { kind: 'man', x: 76, label: { tr: 'Mâlik b. Enes' } }] },
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 0 }],
     },
     {
       text: { tr: '**Hz. Musa Kâzım**, Medine\'de ilmi, cömertliği ve sabrıyla tanındı. Kâzım, öfkesini yutan demektir. Abbasi halifesi **Hârûnürreşîd**, onun halk üzerindeki etkisinden korktu ve onu Medine\'den Bağdat\'a getirtti. Hz. Musa Kâzım hayatının son dört yılını zindanlarda ve sıkı bir gözetim altında geçirdi. Zindandan zindana nakledildi, ama sabrını ve ibadetini hiç bırakmadı. Hicretin 183. yılında Bağdat\'ta, zindanda vefat etti. Ölümünün Bermekîlerin emriyle gerçekleştiği aktarılır. Kabri bugün Bağdat\'taki **Kâzımeyn**\'dedir ve her yıl milyonlarca ziyaretçiyi ağırlar.' },
@@ -46,12 +47,14 @@ export const imamlar: HistEvent = {
     {
       text: { tr: '**Hz. Muhammed Takî**, babası Hz. Rızâ\'yı yedi yaşında kaybetti ve bu küçük yaşta imamet ona geçti. Abbasiler onu da Bağdat\'a götürüp gözetim altında tuttu. Hicretin 220. yılında orada vefat etti. Oğlu **Hz. Ali Nakî**, Abbasi halifesi **Mütevekkil** tarafından Samarra\'ya getirildi ve şehirden çıkması yasaklandı. Onun oğlu **Hz. Hasan Askerî** de bütün hayatını Samarra\'da, bir askerî ordugâhın içinde geçirdi. Askerî lakabı, ordugâhta tutulan anlamına gelir. Hicretin 260. yılında vefat etti. Ehl-i Beyt rivayetlerine göre bu son iki imam da zehirlenerek şehit edildi.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 26, label: { tr: 'Hz. Ali Nakî' } }, { kind: 'man', x: 56, label: { tr: 'Hz. Hasan Askerî' } }, { kind: 'crowd', x: 82, scale: 3 }] },
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 5 }, { side: 'sunni', i: 6 }],
     },
     {
       text: { tr: '**Hz. Hasan Askerî**\'nin vefatından önce Samarra\'da bir oğlu dünyaya geldi. Bu çocuk, On İkinci İmam **Hz. Mehdî**\'ydi. Abbasiler imamın evini sürekli gözetim altında tutuyordu. Bu baskı yüzünden çocuğun doğumu gizli tutuldu. Babasının vefatından sonra Hz. Mehdî gaybete, yani gizlenme dönemine girdi. Önce küçük gaybet başladı. Bu dönemde dört nâib, yani vekil, imam ile halk arasında aracılık yaptı. Ardından büyük gaybet başladı ve bugüne kadar sürdü. Hz. Mehdî ölmemiştir, Allah\'ın izniyle gizlidir.' },
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'crowd', x: 50, scale: 5 }] },
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 9 }],
     },
     {
       text: { tr: '**Hz. Mehdî**, Peygamber\'in soyundan, Hz. Fatıma\'nın evlatlarındandır. Şii inancına göre o doğmuş ve Allah\'ın izniyle gizlenmiştir. Ahir zamanda, yeryüzü zulümle dolduğunda ortaya çıkacak ve dünyayı adaletle dolduracaktır. Hz. Mehdî\'ye dair rivayetler bazı Sünni kaynaklarda da yer alır. Şiiler onun gelişini sabırla ve umutla bekler. Bu bekleyişe intizar denir. Kerbelâ\'da suyu kesilen ailenin son imamı, bir gün mazlumların hakkını alacak ve yeryüzüne adaleti getirecektir. Hz. Ali ile başlayan on iki imamlık zincir, onunla tamamlanır.' },
@@ -69,6 +72,7 @@ export const imamlar: HistEvent = {
     { book: 'TDV İslâm Ansiklopedisi, "Hasan el-Askerî" (Hamid Algar, C. 16, s. 289)', ref: 'islamansiklopedisi.org.tr/hasan-el-askeri-hasan-b-ali', says: { tr: 'Samarra\'da ikamete mecbur edilip ayrılmasına izin verilmemesi, 8 Rebîülevvel 260 (1 Ocak 874) vefatı. Madde ağırlıklı olarak Şii kaynaklara dayanır, Sünni kaynak bilgisi içermez.' }, grade: { tr: 'İKİNCİL' }, url: 'https://islamansiklopedisi.org.tr/hasan-el-askeri-hasan-b-ali', status: 'verified' },
     { book: 'TDV İslâm Ansiklopedisi, "Mehdî" (Yusuf Şevki Yavuz)', ref: 'islamansiklopedisi.org.tr/mehdi', says: { tr: 'Hz. Mehdî rivayetlerinin Mâlik, Buhârî, Müslim\'de bulunmadığı; Ahmed b. Hanbel, Ebû Dâvûd, Tirmizî\'de bulunduğu; Sünni anlayışta Hz. Hasan veya Hz. Hüseyin soyundan ahir zamanda gelecek biri; İbn Haldûn ve Kādî Abdülcebbâr\'ın reddi. Hadis numaraları okunmadı.' }, grade: { tr: 'İKİNCİL; hadis sıhhati tartışmalı' }, url: 'https://islamansiklopedisi.org.tr/mehdi', status: 'check' },
     { book: 'TDV İslâm Ansiklopedisi, "Mehdî el-Muntazar" (Mustafa Öz, 2003)', ref: 'islamansiklopedisi.org.tr/mehdi-el-muntazar', says: { tr: 'İbn Teymiye gibi bazı âlimlerin On İkinci İmam\'ı hayali bir şahıs saydığı eleştirisi.' }, grade: { tr: 'İKİNCİL' }, url: 'https://islamansiklopedisi.org.tr/mehdi-el-muntazar', status: 'verified' },
+    { book: 'İbn Hallikân, Vefeyâtü\'l-a\'yân', ref: 'Ebü\'l-Kâsım Muhammed b. el-Hasan el-Askerî maddesi (cilt/sayfa kontrol edilecek)', says: { tr: 'On İkinci İmam\'ın 255 yılında Hz. Hasan Askerî\'nin oğlu olarak doğduğu ve Şiilerin onu beklenen Mehdî saydığı aktarılır.' }, status: 'check' },
   ],
   shia: [
     { book: 'Şeyh Müfid, el-İrşâd', ref: 'imamlar bölümleri; Hz. Musa Kâzım için s. 298-302, Hz. Hasan Askerî için s. 335-345 (TDV dipnotlarındaki sayfalar; kitap okunmadı)', says: { tr: 'Her imamın doğumu, ilmi, imametine nass ve vefatı. Şii inancın temel kaynaklarından.' }, grade: { tr: 'Şii birincil kaynak; doğrudan okunmadı (al-islam.org 403 verdi). DOĞRULANMADI' }, url: 'https://al-islam.org/kitab-al-irshad-book-shaykh-al-mufid', status: 'check' },

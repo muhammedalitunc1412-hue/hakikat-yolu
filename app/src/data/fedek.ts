@@ -12,8 +12,8 @@ export const fedek: HistEvent = {
     {
       text: { tr: 'Medine\'nin kuzeyinde, Hayber\'e yakın bir yerde **Fedek** adında verimli bir hurmalık vardı. Buranın halkı, Müslümanlarla savaşmadan anlaşma yapmıştı. Savaşsız alınan topraklar doğrudan Peygamber\'in tasarrufuna bırakılırdı. **Hz. Peygamber** de bu bahçeyi kızı **Hz. Fatıma**\'ya hibe etti ve ona miras olarak bıraktı. Hibe, bir malı karşılıksız olarak bağışlamak demektir. Fedek\'in hurmaları her yıl Hz. Fatıma\'nın evine bereket getiriyordu. Bu gelir, ==Ehl-i Beyt==\'in geçiminin büyük kısmını karşılıyordu. Peygamber vefat ettiğinde **Hz. Ali** onun cenazesinin başındaydı ve aile derin bir yasın içindeydi. Tam o günlerde, Sakife\'de biat alınırken Fedek için de yeni bir hesap başladı.' },
       art: { bg: 'oasis', props: ['sun', 'palms', 'well'], actors: [{ kind: 'prophet', x: 36, label: { tr: 'Hz. Peygamber' } }, { kind: 'fatima', x: 64, label: { tr: 'Hz. Fatıma' } }] },
-      by: 'shia',
-      cites: [{ side: 'shia', i: 0 }],
+      by: 'partial',
+      cites: [{ side: 'shia', i: 0 }, { side: 'sunni', i: 5 }, { side: 'sunni', i: 4 }],
     },
     {
       text: { tr: 'Peygamber\'in vefatının üzerinden çok geçmeden **Halife Ebu Bekir**, Fedek\'e el koydu. **Hz. Fatıma**, babasının kendisine bağışladığı bu toprağı geri istedi. Önce Fedek\'in kendisine hibe edildiğini söyledi. Bu kabul edilmeyince, babasının kızı olarak mirasını istedi. İki talep de geri çevrildi. Şii okuyuşuna göre bu el koyuş yalnızca bir mal meselesi değildi. Fedek\'in geliri ==Ehl-i Beyt==\'i güçlü tutuyordu. Bu gelir ellerinden alınırsa, **Hz. Ali** halifelik hakkını savunacak gücü de bulamayacaktı. Hz. Fatıma için ise mesele, babasının sözüne ve kendi hakkına sahip çıkmaktı.' },
@@ -24,14 +24,14 @@ export const fedek: HistEvent = {
     {
       text: { tr: 'Bunun üzerine **Hz. Fatıma** Peygamber\'in mescidine gitti. Mescit kalabalıktı ve cemaat onun ne söyleyeceğini merakla bekliyordu. Hz. Fatıma orada, sonradan Fedek Hutbesi diye anılacak konuşmasını yaptı. Sesi, babasını yeni kaybetmiş bir kızın sesiydi, ama sözleri hakkını iyi bilen birinin sözleriydi. Kendisine söylenen söz şuydu: "Biz peygamberler miras bırakmayız. Bıraktığımız sadakadır." Hz. Fatıma buna Kur\'an\'la cevap verdi. Neml Suresi\'nin 16. ayetinde Süleyman\'ın Davud\'a varis olduğunu, Meryem Suresi\'nin 6. ayetinde de Zekeriyya\'nın oğlu Yahya\'nın ona varis olmasını istediğini hatırlattı. Peygamberlerin çocukları miras alabiliyorsa, Peygamber\'in kızı neden alamıyordu?' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'fatima', x: 40, pose: 'raise', label: { tr: 'Hz. Fatıma' } }, { kind: 'crowd', x: 72, scale: 5 }] },
-      by: 'shia',
-      cites: [{ side: 'shia', i: 1 }, { side: 'sunni', i: 0 }, { side: 'sunni', i: 1 }],
+      by: 'partial',
+      cites: [{ side: 'shia', i: 1 }, { side: 'sunni', i: 0 }, { side: 'sunni', i: 1 }, { side: 'sunni', i: 6 }],
     },
     {
       text: { tr: 'Hutbeden sonra Fedek\'in kendisine hibe edildiğini ispat etmek için **Hz. Fatıma** iki şahit getirdi. Biri eşi **Hz. Ali**\'ydi. Diğeri **Ümmü Eymen**\'di. Ümmü Eymen, Peygamber\'in çocukluğunda ona bakmış, onun evinde yaşlanmış bir kadındı. İki şahit de Peygamber\'in Fedek\'i Hz. Fatıma\'ya bağışladığını söyledi. Ama şahitlikleri kabul edilmedi. Hz. Ali\'nin sözü yetersiz sayıldı. Ümmü Eymen\'in sözü de yetersiz sayıldı. Oysa bahçe yıllardır Hz. Fatıma\'nın elindeydi. Bir malı elinde tutan kişiden belge istenmesi, Medine\'de herkesin görebileceği bir haksızlıktı.' },
       art: { bg: 'city', props: ['scroll'], actors: [{ kind: 'fatima', x: 28, label: { tr: 'Hz. Fatıma' } }, { kind: 'ali', x: 48, label: { tr: 'Hz. Ali' } }, { kind: 'woman', x: 68, label: { tr: 'Ümmü Eymen' } }] },
-      by: 'shia',
-      cites: [{ side: 'shia', i: 0 }],
+      by: 'partial',
+      cites: [{ side: 'shia', i: 0 }, { side: 'sunni', i: 4 }],
     },
     {
       text: { tr: 'Peygamber, kızı için şöyle demişti: "Fatıma benden bir parçadır. Onu kızdıran beni kızdırmış olur." Bu hadis Sünni kaynaklarda da sahih kabul edilir. Fedek reddedilip şahitler geri çevrilince **Hz. Fatıma**, **Halife Ebu Bekir**\'e küstü. O günden sonra onunla bir daha konuşmadı. Buhari\'nin rivayetine göre bu küskünlük vefatına kadar sürdü. Hz. Fatıma\'nın kırgınlığı bir anlık bir öfke değildi. Babasının bağışı, Kur\'an\'la savunduğu mirası ve getirdiği şahitlerin sözü birer birer reddedilmişti. Peygamber\'in "Onu kızdıran beni kızdırır" dediği kız, babasının vefatından sonraki bütün günlerini bu kırgınlıkla geçirdi.' },
@@ -58,6 +58,8 @@ export const fedek: HistEvent = {
     { book: 'Müslim, Sahih', ref: 'No. 1759', says: { tr: 'Peygamber mirası hakkında Halife Ebu Bekir\'in rivayeti ve Hz. Fatıma\'nın talebi.' }, grade: { tr: 'Sahih' }, status: 'check' },
     { book: 'Buhari, Sahih', ref: 'No. 3714 ve 3767; Müslim No. 2449', says: { tr: '"Hz. Fatıma benden bir parçadır; onu kızdıran beni kızdırmıştır."' }, grade: { tr: 'Sahih' }, status: 'check' },
     { book: 'Belâzurî, Fütûhu\'l-Büldân', ref: 'cilt 1, sayfa 37-41', says: { tr: 'Ömer b. Abdülaziz\'in ve Me\'mun\'un Fedek\'i Hz. Fatıma\'nın soyuna iadesi.' }, status: 'check' },
+    { book: 'Suyûtî, ed-Dürrü\'l-Mensûr; Hâkim el-Haskânî, Şevâhidü\'t-Tenzîl', ref: 'İsrâ 17:26 tefsiri; ed-Dürrü\'l-Mensûr cilt 4, s. 177; Şevâhid cilt 1, s. 438-439 (WikiShia atfı; kitaplar bu turda açılmadı)', says: { tr: 'İsrâ 26 ("Yakınlara hakkını ver") inince Peygamber\'in Hz. Fatıma\'yı çağırıp Fedek\'i ona verdiği rivayeti (Ebû Saîd el-Hudrî\'den) aktarılır. Sünni ana akım bu rivayeti zayıf sayar.' }, status: 'check' },
+    { book: 'İbn Tayfûr, Belâğâtü\'n-Nisâ; İbn Ebi\'l-Hadîd, Şerhu Nehci\'l-Belâğa', ref: 'Fedek hutbesi (Belâğâtü\'n-Nisâ s. 16-25; İbn Ebi\'l-Hadîd hutbeyi Ebû Bekir el-Cevherî\'nin es-Sakîfe ve Fedek\'inden nakleder; sayfa kontrol edilecek)', says: { tr: 'Hz. Fatıma\'nın mescitte yaptığı Fedek hutbesi. İbn Tayfûr (ö. 280) Sünni bir edebiyatçıdır ve hutbenin bilinen en eski yazılı kaynağıdır. Sünni hadis ana akımı hutbeye yer vermez.' }, status: 'check' },
   ],
   shia: [
     { book: 'Kuleynî, el-Kâfî', ref: 'cilt 1, sayfa 543', says: { tr: 'Fedek\'in Hz. Fatıma\'ya hibe edilmesi ve şahitler.' }, grade: { tr: 'Sayfa bu turda yeniden açılmadı. El koyuşun hilafet korkusuyla okunması, Şii mektebin bu gaspı yorumudur. Ayrı bir sayfa numarası verilmedi.' }, status: 'check' },

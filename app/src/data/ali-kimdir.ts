@@ -72,7 +72,8 @@ export const aliKimdir: HistEvent = {
       text: { tr: 'Medine\'de **Hz. Ali**, Peygamber\'in kızı **Hz. Fatıma** ile evlendi. Rivayete göre Hz. Ali\'nin mehir olarak verecek parası yoktu. Zırhını sattı ve onun parasını mehir olarak verdi. Kurdukları ev gösterişsiz ve sadeydi. Ehl-i Beyt rivayetlerinde bu nikâhın gökte de kıyıldığı anlatılır. Bu küçük evden **Hz. Hasan** ve **Hz. Hüseyin** dünyaya geldi. Peygamber\'in soyu bu iki torunla devam etti. Sonraki imamların hepsi bu evin çocuklarından doğdu.' },
       image: 'ali-kimdir-9',
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'ali', x: 36, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 60, label: { tr: 'Hz. Fatıma' } }, { kind: 'prophet', x: 80, scale: 0.9, label: { tr: 'Hz. Peygamber' } }] },
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 10 }],
     },
     {
       text: { tr: 'Peygamber vefat ettiğinde **Hz. Ali** onun başucundaydı. Mübarek gözlerini o kapadı. Ehl-i Beyt rivayetlerine göre Peygamber, kendisini Hz. Ali\'nin yıkamasını vasiyet etmişti. Hz. Ali gözyaşları içinde Peygamber\'in bedenini yıkamaya başladı. Aynı saatlerde Medine\'nin bir köşesinde, Sakife\'de, Peygamber\'den sonra yönetimin kime geçeceği konuşuluyordu. Gadir\'de eli kaldırılan Hz. Ali, o toplantıya çağrılmadı. O sırada o, en değerli emanetin, Peygamber\'in mübarek bedeninin başında duruyordu.' },
@@ -92,6 +93,7 @@ export const aliKimdir: HistEvent = {
     { book: 'Buhari, Sahih (Tefsir)', ref: 'Şûrâ 23 ile ilgili İbn Abbas rivayeti (numara kontrol edilecek)', says: { tr: '"Yakınlar" ifadesinin Kureyş\'le akrabalığa işaret ettiği yorumu.' }, status: 'check' },
     { book: 'İbn Mâce, es-Sünen', ref: 'Cenâiz bölümü, Peygamber\'in yıkanması (numara kontrol edilecek)', says: { tr: 'Hz. Ali\'nin Peygamber\'i yıkamada yer aldığı rivayeti.' }, status: 'check' },
     { book: 'İbn Hişâm, es-Sîre; Halebî, es-Sîre', ref: 'Hicret bölümü (WikiShia atfı; kitaplar okunmadı)', says: { tr: 'Hz. Ali\'nin hicret gecesi Peygamber\'in yatağında yatması.' }, status: 'check' },
+    { book: 'Ebû Dâvûd, es-Sünen', ref: 'No. 2125 (Nikâh)', says: { tr: 'İbn Abbas: Hz. Ali Hz. Fatıma ile evlenince Peygamber ona "Ona bir şey ver" dedi. Hz. Ali "Bir şeyim yok" deyince Peygamber "Hutamî zırhın nerede?" diye sordu.' }, url: 'https://sunnah.com/abudawud:2125', status: 'verified' },
   ],
   shia: [
     { book: 'Şeyh Müfid, el-İrşâd', ref: 'cilt 1, s. 5 (Müessesetü Âli\'l-Beyt)', says: { tr: 'Hz. Ali Cuma günü, 13 Receb, Fil yılından otuz yıl sonra Mekke\'de Beytullah\'ta doğdu. Ondan önce de sonra da Allah\'ın evinde doğan olmadı; bu, Allah\'ın ona ikramıdır. Annesi Fatıma bint Esed\'dir.' }, url: 'https://lib.eshia.ir/27035/1/5', status: 'verified' },

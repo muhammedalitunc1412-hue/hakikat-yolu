@@ -36,7 +36,8 @@ export const muta: HistEvent = {
     {
       text: { tr: '**Hz. Ali**\'ye şu söz nispet edilir: "Ömer yasaklamasaydı, zinaya ancak bedbaht bir kişi başvururdu." Benzer bir ifade, İbn Abbas ve Atâ üzerinden Abdürrezzâk\'ın Musannef\'inde ve Taberî tefsirinde de geçer. Sözün Hz. Ali\'ye mi yoksa İbn Abbas\'a mı ait olduğu ve sıhhati tartışmalıdır. Ama söz, mut\'anın insanları haramdan koruyan meşru bir yol olarak görüldüğünü anlatır. Câferî mektep, mut\'ayı Peygamber dönemindeki izin üzere sürdürür. Bu nikâhı helal sayanlar süreyi ve mehri şart koşar. Bu şartlar olmadan iki erişkin bu nikâha giremez.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 32 }] },
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 7 }],
     },
     {
       text: { tr: 'İbn Abbas\'ın mut\'aya izin verdiği bildirilir. Bu fetvayı zorunluluk ve kadın azlığı gibi şartlara bağladığı da aktarılır. Onun sonradan bu görüşten tamamen vazgeçtiği haberi ise zayıf senetlerle gelir. İbn Hacer, Fethu\'l-Bârî\'de bunu anar. Kısaca mut\'a, süresi ve mehri belli olarak iki erişkin arasında kurulan geçici bir nikâhtır. Boşanma gerekmez, süre bitince nikâh sona erer ve kadın iddet bekler. Kaynaklar onu gizli bir aldatmaca olarak anlatmaz. Câferî okuyuş Nisâ 24\'ü süresi belli nikâh olarak, Sünni okuyuş ise olağan nikâh ve mehir olarak okur. Müslim 1405d\'de Câbir, uygulamanın Peygamber ve Ebû Bekir döneminde sürdüğünü, Ömer\'in yasakladığını söyler. Müslim 1406a\'da Sebre, izin verildiğini, sonra bırakmalarının söylendiğini anlatır. Buhari 4216\'da Hz. Ali, Hayber günündeki yasağı İbn Abbas\'a bildirir. Yasağın kimden ve hangi günden geldiği rivayetlere göre değişir. Nevevî bu konuda icmâ olduğunu söyler, ama Câferî mektep bu icmâyı kabul etmez. Sünni mezheplerin çoğu bugün mut\'ayı helal saymaz. Câferî mektep ise süre, mehir ve iddet şartıyla onu sürdürür.' },

@@ -11,7 +11,8 @@ export const mezhepler: HistEvent = {
     {
       text: { tr: 'Şii kaynaklarına göre "Şîatü Alî", yani Hz. Ali\'nin taraftarları, daha Peygamber\'in hayattayken ortaya çıkmıştı. Bu kaynaklar, Hz. Ali\'ye duyulan bu bağlılığın Peygamber\'in kendi yönlendirmesiyle oluştuğunu söyler ve onu Gadir Hum gibi olaylarla ilişkilendirir. Arapçada "Şîa" kelimesi taraftar, bir kişinin yanında duranlar demektir. Zamanla bu kelime bir terime dönüştü. Peygamber\'den sonra ümmetin önderliğinin Hz. Ali\'ye ve onun soyundan gelen imamlara ait olduğunu savunanlara Şia denmeye başlandı. Yani Şia, en başından beri bir kişinin, Hz. Ali\'nin etrafında toplanan insanların adıdır.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'prophet', x: 38, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }] },
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 3 }],
     },
     {
       text: { tr: 'Beyyine Suresi\'nin 7. ayeti, iman edip salih amel işleyenlerin yaratılmışların en hayırlısı olduğunu söyler. Bir rivayete göre bu ayet indiğinde Peygamber, Hz. Ali\'ye dönüp şöyle dedi: "Bu, sen ve senin Şian\'dır." Şii kaynakları bu rivayeti, "Şia" kelimesinin daha Peygamber döneminde Hz. Ali\'nin taraftarları için kullanıldığının bir delili olarak görür. Rivayetin sıhhati âlimler arasında tartışmalıdır. Ama Şiiler için bu söz, Peygamber\'in Hz. Ali\'yi sevenleri kendi ağzıyla müjdelediği, gönüllerine en yakın hadislerden biridir.' },
@@ -41,7 +42,8 @@ export const mezhepler: HistEvent = {
     {
       text: { tr: 'Emevi iktidarı zayıflarken ve Abbasiler henüz gücünü tam kurmamışken, **Hz. Muhammed Bâkır** ve oğlu **Hz. Ca\'fer-i Sâdık** Medine\'de geniş bir ilim halkası kurdu. Şeyh Tûsî\'nin Ricâl adlı eserinde Hz. Sâdık\'tan rivayet eden yaklaşık 3200 kişinin adı geçer. Şeyh Müfid ise bu sayıyı yaklaşık 4000 olarak verir. Bugün Şiilerin takip ettiği Câferî fıkhı, büyük ölçüde onun rivayetlerine dayanır. Dört Yüz Usûl denen ilk hadis derlemeleri de onun öğrencilerine bağlanır. Şii kaynaklarında Mâlik\'in ondan hadis aldığı ve Ebû Hanîfe\'nin onu çağının en bilgin insanı saydığı anlatılır. Sünni anlatım ise bu ilişkiyi hadis alışverişi ve ilmî bir saygı olarak görür.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 36, pose: 'sit', label: { tr: 'Hz. Ca\'fer-i Sâdık' } }, { kind: 'crowd', x: 70, scale: 5 }] },
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 4 }],
     },
     {
       text: { tr: 'Aynı yüzyıllarda Sünni fıkıh ve kelam ekolleri de şekillenmeye başladı. Mezheplerin kurucuları olan Ebû Hanîfe 150\'de, Mâlik 179\'da, Şâfiî 204\'te, Ahmed b. Hanbel ise 241\'de vefat etti. "Ehl-i Sünnet" terimi ancak üçüncü yüzyılda yerleşti. Kelam alanında Eş\'arî ve Mâtürîdî ekolleri doğdu. Akla geniş yer veren Mutezile ile Şia arasında bazı kelam yakınlıkları vardır. Zeydiyye\'nin de Mutezile\'ye yakın olduğu söylenir. Bütün bu ekoller arasındaki temel ayrılık noktaları imamet, halifelik ve hangi hadis kaynaklarına güvenileceği meseleleridir. En derin ayrılık ise Peygamber\'den sonra ümmetin önderinin kim olacağı sorusundadır.' },
@@ -51,7 +53,8 @@ export const mezhepler: HistEvent = {
     {
       text: { tr: 'Hz. Ca\'fer-i Sâdık\'ın büyük oğlu **İsmâil** babasından önce vefat edince, ya da bazılarına göre vefat ettiği sanılınca, imamet konusunda bir ayrılık çıktı. İsmâil\'in imametini savunanlar İsmâiliyye\'yi kurdu ve imameti onun oğlu Muhammed b. İsmâil ile sürdürdü. Sonraki yüzyıllarda Mısır\'da kurulan Fâtımî devleti bu koldan çıktı. Şiilerin çoğunluğu ise **Hz. Musa Kâzım**\'a bağlandı ve bu kol On İki İmam Şiası adını aldı. Hz. Musa Kâzım, Hârûnürreşîd\'in baskısıyla Bağdat\'ta hapsedildi ve 183\'te vefat etti. Şii kaynaklarına göre On İkinci İmam\'ın gaybeti 260\'ta başladı. Küçük gaybet 329\'a kadar sürdü, ardından büyük gaybet başladı. Gaybet ölüm değil, Allah\'ın izniyle bir gizlenmedir.' },
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 30, label: { tr: 'Hz. Musa Kâzım' } }, { kind: 'man', x: 66, label: { tr: 'Hârûnürreşîd' } }] },
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 5 }],
     },
   ],
   sunni: [
@@ -59,6 +62,8 @@ export const mezhepler: HistEvent = {
     { book: 'TDV İslâm Ansiklopedisi, "Hâricîler"', ref: 'islamansiklopedisi.org.tr/hariciler', says: { tr: 'Sıffîn hakem olayı, Harûrâ\'ya çekilen Muhakkime, Nehrevan (658).' }, grade: { tr: 'İKİNCİL' }, url: 'https://islamansiklopedisi.org.tr/hariciler', status: 'verified' },
     { book: 'TDV İslâm Ansiklopedisi, "Mürcie"', ref: 'islamansiklopedisi.org.tr/murcie', says: { tr: 'Mürcie\'nin Hâricîlerin tekfirine karşı ortaya çıkışı (yaklaşık 680-694), iman anlayışı, Ebû Hanîfe ile ilişkisi.' }, grade: { tr: 'İKİNCİL' }, url: 'https://islamansiklopedisi.org.tr/murcie', status: 'verified' },
     { book: 'Süyûtî, ed-Dürrü\'l-Mensûr (Beyyine 98:7); İbn Asâkir, Târîhu Dimaşk', ref: 'Beyyine 98:7 tefsiri; cilt/sayfa kontrol edilecek (Ehlulbeyt Kütüphanesi\'ndeki derleme ed-Dürrü\'l-Mensûr II, 259\'u anar)', says: { tr: 'Hz. Ali ve şiasının "hayrü\'l-beriyye" olduğu rivayeti.' }, grade: { tr: 'Sıhhati tartışmalı; kitaplar doğrudan okunmadı. DOĞRULANMADI' }, url: 'https://al-islam.org/ghadir/chains792b.html', status: 'check' },
+    { book: 'Zehebî, Siyeru a\'lâmi\'n-nübelâ ve Tezkiretü\'l-huffâz', ref: 'Ca\'fer es-Sâdık maddesi (Siyer cilt 6; sayfa kontrol edilecek)', says: { tr: 'Ebû Hanîfe\'nin "Ca\'fer b. Muhammed\'den daha fakih birini görmedim" dediği aktarılır.' }, status: 'check' },
+    { book: 'Şehristânî, el-Milel ve\'n-Nihal', ref: 'İmâmiyye ve İsmâiliyye bölümleri (cilt/sayfa kontrol edilecek)', says: { tr: 'Hz. Ca\'fer-i Sâdık\'tan sonra İsmâil ve Hz. Musa Kâzım etrafındaki ayrılık, İsmâiliyye ve İmâmiyye kolları ile On İkinci İmam\'ın gaybeti inancı aktarılır.' }, status: 'check' },
   ],
   shia: [
     { book: 'TDV İslâm Ansiklopedisi, "Şîa" (Mustafa Öz, İlyas Üzüm, C. 39, s. 111-121)', ref: 'islamansiklopedisi.org.tr/sia', says: { tr: 'Şîa kavramı; Selman, Ebû Zer, Mikdâd, Ammâr; Sakîfe; Cemel, Sıffîn, Kerbelâ; Muhtâr ve Keysâniyye; Zeydiyye, İsmâiliyye, On İki İmam.' }, grade: { tr: 'İKİNCİL (maddenin ilk 100.000 karakteri okundu; Beyyine rivayeti bu bölümde görünmedi)' }, url: 'https://islamansiklopedisi.org.tr/sia', status: 'verified' },

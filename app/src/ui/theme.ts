@@ -14,6 +14,8 @@ export const C = {
   faint: '#8ea89e',
   sunni: '#7eb7e0',
   shia: '#3dbe86',
+  // 'Şii ve kısmi Sünni' kabul çipi: Şii yeşili ile altın arası zeytin yeşili
+  partial: '#9cc46e',
   warn: '#e0a45a',
   line: 'rgba(228,197,106,0.16)',
   lineStrong: 'rgba(228,197,106,0.40)',

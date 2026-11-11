@@ -14,7 +14,8 @@ export const ehlibeyt: HistEvent = {
       art: { bg: 'dune-day', props: ['sun', 'tents'], actors: [{ kind: 'prophet', x: 44, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 58, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 70, label: { tr: 'Hz. Fatıma' } }, { kind: 'hasan', x: 80, scale: 0.7, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 88, scale: 0.65, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 0 }],
       text: { tr: 'Mübahele ayetinde Peygamber\'e, oğullarını, kadınlarını ve kendisini getirmesi emredilmişti. Peygamber oğullar yerine Hz. Hasan ile Hz. Hüseyin\'i, kadınlar yerine Hz. Fatıma\'yı getirdi. "Kendimizi" sözünün karşılığı olarak ise yanında **Hz. Ali** vardı. Yani Peygamber, Hz. Ali\'yi kendi nefsi, kendi canı yerine koymuştu. Bu, onu yalnızca bir amca oğlu ya da damat olarak yanına almak değildi. Necranlılar o gün iki ayrı insan gördü, ama ayet onları tek bir nefis olarak tanıttı. Tebük\'te Peygamber Hz. Ali\'yi Harun\'a benzetmişti. Mübahele\'de ise onu kendi canı saymıştı. Şiiler, Hz. Ali\'nin velayetini bu yakınlığa dayandırır.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'prophet', x: 44, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 58, label: { tr: 'Hz. Ali' } }] },
     },

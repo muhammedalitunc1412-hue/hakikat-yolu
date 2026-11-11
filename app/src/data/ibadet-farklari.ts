@@ -14,7 +14,8 @@ export const ibadetFarklari: HistEvent = {
       art: { bg: 'dawn', props: ['moon'], actors: [{ kind: 'man', x: 50, pose: 'raise', label: { tr: 'Bilal' } }] },
     },
     {
-      by: 'shia',
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 5 }],
       text: { tr: 'Câferî fıkıhta "Hayye alâ hayri\'l-amel" ezanın bir cüzü sayılır. Rivayete göre Halife Ömer bu ifadeyi, insanlar namazı cihattan üstün görüp savaş ruhu zayıflar diye kaldırmıştı. Şii ezanında okunan "Eşhedü enne Aliyyen veliyyullah", yani "Şahitlik ederim ki Ali Allah\'ın velisidir" cümlesi ise bugünkü Şii ulemaya göre ezanın şartı değildir. Müstehap bir şiar olarak okunur. Öte yandan "Es-salâtü hayrun mine\'n-nevm", yani "Namaz uykudan hayırlıdır" cümlesi Câferî ezanında yer almaz. Sünni kaynaklarda ise bu cümle sabah ezanında sabit bir sünnet olarak anılır.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'man', x: 40, pose: 'raise', label: { tr: 'Müezzin' } }, { kind: 'crowd', x: 72, scale: 0.7 }] },
     },
