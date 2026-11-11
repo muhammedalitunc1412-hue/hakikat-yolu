@@ -31,7 +31,7 @@ export const hayber: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Hz. Ali sancakla kalenin önüne geldiğinde kapı açıldı ve Hayber\'in en ünlü savaşçısı **Merhab** meydana çıktı. Başında miğfer, üzerinde zırh vardı. Kılıcını sallayarak şiir okudu ve Hayber\'in kendisini tanıdığını, silahının keskin olduğunu söyledi. **Hz. Ali** onun karşısına geçti ve o da şiirle cevap verdi: "Ben, annemin Haydar adını verdiği kişiyim." Haydar, aslan demektir. Ehl-i Beyt rivayetlerine göre Hz. Ali, hafifçe eğri kılıcı Zülfikar\'ı tek bir kez indirdi ve bu darbe Merhab\'ı yere yıktı. Hayber\'in en güçlü savaşçısının düşmesiyle kaleyi savunanların cesareti kırıldı ve kale kısa süre içinde fethedildi.' },
+      text: { tr: 'Hz. Ali sancakla kalenin önüne geldiğinde kapı açıldı ve Hayber\'in en ünlü savaşçısı **Merhab** meydana çıktı. Başında miğfer, üzerinde zırh vardı. Kılıcını sallayarak şiir okudu ve Hayber\'in kendisini tanıdığını, silahının keskin olduğunu söyledi. **Hz. Ali** onun karşısına geçti ve o da şiirle cevap verdi: "Ben, annemin Haydar adını verdiği kişiyim." Haydar, aslan demektir. Ehl-i Beyt rivayetlerine göre Hz. Ali, kılıcı Zülfikar\'ı tek bir kez indirdi ve bu darbe Merhab\'ı yere yıktı. Hayber\'in en güçlü savaşçısının düşmesiyle kaleyi savunanların cesareti kırıldı ve kale kısa süre içinde fethedildi.' },
       cites: [{ side: 'sunni', i: 4 }, { side: 'shia', i: 1 }, { side: 'shia', i: 2 }],
       art: { bg: 'dune-day', actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 74, scale: 3 }] },
     },
@@ -47,7 +47,7 @@ export const hayber: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Hayber düştükten sonra kalelerin halkı, ürünlerinin yarısını vermek şartıyla topraklarında kalmaya razı oldu. Yakınlardaki **Fedek** halkı ise savaşmadan, kılıç çekilmeden anlaşma yaptı. Savaşsız alınan bu toprak doğrudan Peygamber\'e ait oldu. Peygamber de Fedek\'in hurmalıklarını kızı **Hz. Fatıma**\'ya hibe etti. Hibe, karşılıksız bağış demektir. Fedek, Hz. Fatıma\'nın evine helal bir geçim kaynağı oldu. Ancak Peygamber\'in vefatından sonra bu bahçe Hz. Fatıma\'nın elinden alınacak ve Fedek, Ehl-i Beyt\'in gasp edilen hakkının adı olacaktı.' },
+      text: { tr: 'Hayber düştükten sonra kalelerin halkı, ürünlerinin yarısını vermek şartıyla topraklarında kalmaya razı oldu. Yakınlardaki **Fedek** halkı ise savaşmadan, kılıç çekilmeden anlaşma yaptı. Savaşsız alınan bu toprak doğrudan Peygamber\'e ait oldu. Peygamber de Fedek\'in hurmalıklarını kızı **Hz. Fatıma**\'ya hibe etti ve ona miras olarak bıraktı. Hibe, karşılıksız bağış demektir. Fedek, Hz. Fatıma\'nın evine helal bir geçim kaynağı oldu. Ancak Peygamber\'in vefatından sonra bu bahçe Hz. Fatıma\'nın elinden alınacak ve Fedek, Ehl-i Beyt\'in gasp edilen hakkının adı olacaktı.' },
       art: { bg: 'river', props: ['palms'], actors: [{ kind: 'crowd', x: 50, scale: 5 }] },
     },
   ],

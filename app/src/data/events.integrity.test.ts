@@ -27,7 +27,6 @@ test('Sakîfe resimleri kaymaz, kuyu ayrı anahtardadır', () => {
   assert.ok(imgs.indexOf('sakife-7') < yalniz && yalniz < kuyu && kuyu < imgs.indexOf('sakife-8'));
   assert.match(src, /insanların Hz\. Ali\\'ye karşı tavrı değişti/);
   assert.match(src, /Buhari 4240/);
-  assert.match(src, /biat ettiğini de yazar/);
   assert.match(src, /Rivayetlere göre \*\*Hz\. Ali\*\* sokakta selam verirdi/);
   assert.match(src, /İnsanlar selamını almazdı/);
   assert.doesNotMatch(src, /Buhari 4240[^.]*selam/);

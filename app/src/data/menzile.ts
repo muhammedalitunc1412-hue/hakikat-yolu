@@ -22,7 +22,7 @@ export const menzile: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Ordu Medine\'den uzaklaşınca şehirde fısıltılar başladı. Bazıları, Peygamber\'in **Hz. Ali**\'yi sefere layık görmediğini, onu bir yük gibi geride bıraktığını söylemeye başladılar. Bu sözler Hz. Ali\'nin kulağına kadar geldi ve içini bir sızı kapladı. Peygamber\'in yanında olmak onun için her şeyden değerliydi. Bu dedikoduların gerçek olmadığını biliyordu, ama sebebini Peygamber\'in kendi ağzından duymak istedi. Atına bindi ve ordunun bıraktığı izleri takip ederek çölün sıcağında yola koyuldu.' },
+      text: { tr: 'Ordu Medine\'den uzaklaşınca şehirde fısıltılar başladı. Bazıları, Peygamber\'in **Hz. Ali**\'yi sefere layık görmediğini, onu bir yük gibi geride bıraktığını söylemeye başladılar. Bu sözler Hz. Ali\'nin kulağına kadar geldi ve içini bir sızı kapladı. Bu dedikoduların gerçek olmadığını biliyordu, ama sebebini Peygamber\'in kendi ağzından duymak istedi. Atına bindi ve ordunun bıraktığı izleri takip ederek çölün sıcağında yola koyuldu.' },
       image: 'menzile-3',
       art: { bg: 'dune-dusk', actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 72, scale: 5 }] },
     },

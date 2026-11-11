@@ -20,7 +20,7 @@ export const sakife: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Toplantının haberini alan **Ebu Bekir**, **Ömer** ve **Ebu Ubeyde** hızla Sakife\'ye gitti. Cenazenin başındaki aileye haber vermeden, doğrudan toplantıya katıldılar. Ebu Bekir söze Ensar\'ı övmekle başladı. Onların İslam\'a yardımını ve fedakârlıklarını uzun uzun anlattı. Ardından Arapların yönetimi Kureyş\'ten başka bir kabileye bırakmayacağını söyledi. Bu söz, tartışmayı Ensar ile Kureyş arasındaki bir yarışa çevirdi. Oysa Kureyş\'in içinde Peygamber\'e en yakın olan, onun amcasının oğlu ve damadı Hz. Ali\'ydi. Gadir\'de eli kaldırılan da oydu. Ama o sırada Hz. Ali, Peygamber\'in bedenini yıkıyordu ve Sakife\'de onun adını anan çıkmadı.' },
+      text: { tr: 'Toplantının haberini alan **Ebu Bekir**, **Ömer** ve **Ebu Ubeyde** hızla Sakife\'ye gitti. Cenazenin başındaki **Hz. Ali**\'ye haber vermeden, doğrudan toplantıya katıldılar. Ebu Bekir söze Ensar\'ı övmekle başladı. Onların İslam\'a yardımını ve fedakârlıklarını uzun uzun anlattı. Ardından Arapların yönetimi Kureyş\'ten başka bir kabileye bırakmayacağını söyledi. Bu söz, tartışmayı Ensar ile Kureyş arasındaki bir yarışa çevirdi. Oysa Kureyş\'in içinde Peygamber\'e en yakın olan, onun amcasının oğlu ve damadı Hz. Ali\'ydi. Gadir\'de eli kaldırılan da oydu. Ama o sırada Hz. Ali, Peygamber\'in bedenini yıkıyordu ve Sakife\'de onun adını anan çıkmadı.' },
       image: 'sakife-3',
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'crowd', x: 24, scale: 5, label: { tr: 'Ensar' } }, { kind: 'man', x: 48, label: { tr: 'Ebu Bekir' } }, { kind: 'man', x: 64, label: { tr: 'Ömer' } }, { kind: 'man', x: 80, label: { tr: 'Ebu Ubeyde' } }] },
       by: 'both',
@@ -50,7 +50,7 @@ export const sakife: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Fâtıma\'nın vefatından sonra insanların Hz. Ali\'ye karşı tavrı değişti. Hz. Fâtıma hayattayken ona gösterilen saygı, onun gidişiyle birlikte kayboldu. Buhari 4240, Hz. Ali\'nin bu dönemde insanların yüzlerini yabancı bulduğunu anlatır. Aynı hadis, ardından Hz. Ali\'nin Ebu Bekir\'e biat ettiğini de yazar. Şii okuyuşu bu devamı onun gönüllü bir kabulü saymaz. Medine sokaklarında yaşanan bu soğukluk başka rivayetlerde daha açık anlatılır. Rivayetlere göre **Hz. Ali** sokakta selam verirdi. İnsanlar selamını almazdı. Peygamber\'in en yakını, Hz. Fâtıma\'nın eşi ve Hasan ile Hüseyin\'in babası, kendi şehrinde selamı karşılıksız kalan bir adam olmuştu.' },
+      text: { tr: 'Hz. Fâtıma\'nın vefatından sonra insanların Hz. Ali\'ye karşı tavrı değişti. Hz. Fâtıma hayattayken ona gösterilen saygı, onun gidişiyle birlikte kayboldu. Buhari 4240, Hz. Ali\'nin bu dönemde insanların yüzlerini yabancı bulduğunu anlatır. Medine sokaklarında yaşanan bu soğukluk başka rivayetlerde daha açık anlatılır. Rivayetlere göre **Hz. Ali** sokakta selam verirdi. İnsanlar selamını almazdı. Peygamber\'in en yakını, Hz. Fâtıma\'nın eşi ve Hasan ile Hüseyin\'in babası, kendi şehrinde selamı karşılıksız kalan bir adam olmuştu.' },
       image: 'sakife-yalnizlik-1',
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'ali', x: 38, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 72, scale: 4 }] },
       by: 'both',
