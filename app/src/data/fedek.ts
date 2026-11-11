@@ -40,7 +40,7 @@ export const fedek: HistEvent = {
       cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 3 }],
     },
     {
-      text: { tr: 'Peygamber\'in vefatından altı ay sonra **Hz. Fatıma** da dünyaya gözlerini yumdu. Kırgınlığı ölümünden sonra da devam etti. **Hz. Ali**, onu gece yıkadı, namazını kendisi kıldırdı ve karanlıkta defnetti. Halife Ebu Bekir\'e haber vermedi. Bu ayrıntı Buhari\'de de geçer. Hz. Fatıma, kendisini incitenlerin cenazesine katılmasını istememişti ve Hz. Ali bu isteği yerine getirdi. Sabah olduğunda Medine halkı Peygamber\'in kızının defnedildiğini öğrendi, ama kabrinin yerini kimse bilmiyordu. Hz. Fatıma\'nın hastalık günleri, kapısının önünde yaşananlar ve gizli kabri **Eyyâm-ı Fâtımiyye** başlıklı hikâyede anlatılır.' },
+      text: { tr: 'Peygamber\'in vefatından altı ay sonra **Hz. Fatıma** da dünyaya gözlerini yumdu. Kırgınlığı ölümünden sonra da devam etti. **Hz. Ali**, onu gece yıkadı, namazını kendisi kıldırdı ve karanlıkta defnetti. Halife Ebu Bekir\'e haber vermedi. Bu ayrıntı Buhari\'de de geçer. Hz. Fatıma, kendisini incitenlerin cenazesine katılmasını istememişti ve Hz. Ali bu isteği yerine getirdi. Sabah olduğunda Medine halkı Peygamber\'in kızının defnedildiğini öğrendi, ama kabrinin yerini kimse bilmiyordu. Hz. Fatıma\'nın son günleri, kapısının önünde yaşananlar ve gizli kabri **Eyyâm-ı Fâtımiyye** başlıklı hikâyede anlatılır.' },
       art: { bg: 'night', props: ['stars', 'moon'], actors: [{ kind: 'ali', x: 40, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 54, scale: 0.7 }, { kind: 'husayn', x: 62, scale: 0.65 }] },
       by: 'both',
       cites: [{ side: 'sunni', i: 0 }],
