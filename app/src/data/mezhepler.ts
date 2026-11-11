@@ -20,7 +20,7 @@ export const mezhepler: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Peygamber\'in vefatından sonra Sakife\'de Ebû Bekir halife seçildi. **Hz. Ali** ise biat etmeyi geciktirdi. Bu zor günlerde bazı sahabeler Hz. Ali\'nin yanından ayrılmadı. **Selmân-ı Fârisî**, **Ebû Zer**, **Mikdâd** ve **Ammâr**, Hz. Ali\'nin taraftarları arasında anılan ilk isimlerdir. Bazı tarihçiler onların bu tutumunu siyasi bir tercih olarak yorumlar. Şii anlatısı ise bu sahabeleri, Peygamber\'in imamet konusundaki vasiyetine sadık kalanlar olarak görür. Onlar, Sakife\'de verilen karara değil, Gadir\'de duydukları söze bağlı kaldılar.' },
+      text: { tr: 'Peygamber\'in vefatından sonra Sakife\'de Ebû Bekir halife seçildi. Bu zor günlerde bazı sahabeler **Hz. Ali**\'nin yanından ayrılmadı. **Selmân-ı Fârisî**, **Ebû Zer**, **Mikdâd** ve **Ammâr**, Hz. Ali\'nin taraftarları arasında anılan ilk isimlerdir. Onlar Hz. Ali\'nin yanında, Peygamber\'in Gadir\'de söylediği "Ben kimin mevlâsıysam Ali de onun mevlâsıdır" sözü için durdular. Sakife\'de verilen karara değil, Gadir\'de kendi kulaklarıyla duydukları söze bağlı kaldılar.' },
       art: { bg: 'city', actors: [{ kind: 'man', x: 28, label: { tr: 'Selman' } }, { kind: 'man', x: 46, label: { tr: 'Ebu Zer' } }, { kind: 'man', x: 62, label: { tr: 'Mikdad' } }, { kind: 'man', x: 78, label: { tr: 'Ammar' } }, { kind: 'ali', x: 12, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
