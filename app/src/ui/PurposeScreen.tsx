@@ -1,7 +1,7 @@
 import { Pressable, ScrollView, Text, View } from 'react-native';
-import { APP_PURPOSE_PARAGRAPHS, APP_PURPOSE_TITLE } from '../data/amac';
 import { C, TOP, font } from './theme';
 import { LogoZoom } from './LogoZoom';
+import { PurposeCopy } from './PurposeCopy';
 
 export function PurposeScreen({ onContinue }: { onContinue: () => void }) {
   return (
@@ -13,28 +13,15 @@ export function PurposeScreen({ onContinue }: { onContinue: () => void }) {
         <View style={{ alignItems: 'center', marginBottom: 20 }}>
           <LogoZoom size={112} />
         </View>
-        <Text style={{ color: C.gold, fontFamily: font.sans, fontSize: 12, fontWeight: '700', letterSpacing: 2.4 }}>
+        <Text style={{ color: C.gold, fontFamily: font.sans, fontSize: 12, fontWeight: '700', letterSpacing: 2.4, textAlign: 'center' }}>
           HAKİKAT YOLU
         </Text>
-        <Text
-          accessibilityRole="header"
-          style={{ color: C.cream, fontFamily: font.serif, fontSize: 30, lineHeight: 36, fontWeight: '700', marginTop: 8, marginBottom: 18 }}
-        >
-          {APP_PURPOSE_TITLE}
-        </Text>
-        {APP_PURPOSE_PARAGRAPHS.map((p, i) => (
-          <Text
-            key={i}
-            style={{ color: C.text, fontFamily: font.sans, fontSize: 17, lineHeight: 28, marginBottom: 16 }}
-          >
-            {p}
-          </Text>
-        ))}
+        <PurposeCopy centered />
         <Pressable
           onPress={onContinue}
           accessibilityRole="button"
           style={({ pressed }) => ({
-            marginTop: 12,
+            marginTop: 28,
             minHeight: 56,
             alignItems: 'center',
             justifyContent: 'center',
