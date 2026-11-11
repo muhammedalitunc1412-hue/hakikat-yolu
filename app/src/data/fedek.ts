@@ -18,7 +18,7 @@ export const fedek: HistEvent = {
     {
       text: { tr: 'Peygamber\'in vefatının üzerinden çok geçmeden **Halife Ebu Bekir**, Fedek\'e el koydu. **Hz. Fatıma**, babasının kendisine bağışladığı bu toprağı geri istedi. Önce Fedek\'in kendisine hibe edildiğini söyledi. Bu kabul edilmeyince, babasının kızı olarak mirasını istedi. İki talep de geri çevrildi. Şii okuyuşuna göre bu el koyuş yalnızca bir mal meselesi değildi. Fedek\'in geliri ==Ehl-i Beyt==\'i güçlü tutuyordu. Bu gelir ellerinden alınırsa, **Hz. Ali** halifelik hakkını savunacak gücü de bulamayacaktı. Hz. Fatıma için ise mesele, babasının sözüne ve kendi hakkına sahip çıkmaktı.' },
       art: { bg: 'city', props: ['sun'], actors: [{ kind: 'fatima', x: 34, label: { tr: 'Hz. Fatıma' } }, { kind: 'man', x: 66, label: { tr: 'Ebu Bekir' } }] },
-      by: 'shia',
+      by: 'both',
       cites: [{ side: 'shia', i: 0 }, { side: 'sunni', i: 0 }],
     },
     {
