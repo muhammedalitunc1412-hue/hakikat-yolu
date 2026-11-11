@@ -24,102 +24,114 @@
   "Müaviyə"
  ],
  "scenes.1.text": [
-  "6wh8et",
-  "İllər əvvəl məscid tikilərkən Peyğəmbər, **Əmmar**ın yanında idi. Ona baxıb “Yazıq Əmmara, onu azğın bir qrup öldürəcək” demişdi. Səhabə bu sözü eşitdi. Bağı, qanuni imama qarşı vuruşan deməkdir. Bu söz, Siffeyndə kimin bağı olduğunu göstərəcəkdi."
- ],
- "scenes.1.art.actors.0.label": [
-  "19izoul",
-  "Həzrət Peyğəmbər"
+  "1caprs6",
+  "Fərat sahilini əlində saxlayan Şam ordusu **Həzrət Əli**nin əsgərlərinin suya enməsinə icazə vermədi. Həzrət Əli **Sə'sə'ə ibn Suhanı** Müaviyənin yanına göndərdi və müharibədən söz açılmamışdan əvvəl insanlarla suyun arasından çəkilməsini istədi. Müaviyənin məclisində **Vəlid ibn Uqbə** \"Onları susuzluqla öldür\" deyə qışqırdı və Müaviyə süvarilərini suyu qorumağa göndərdi. Həzrət Əlinin əsgərləri bir gün bir gecə susuz qaldı. Nəhayət qılınclarını çəkib Şam səflərinin üzərinə yeridilər və Fərat sahilini onların əlindən aldılar. Bu dəfə qorxuya düşən Şam tərəfi idi və **Əmr ibn əl-As** Müaviyədən dünən onlara etdiyini bu gün onlar ona etsə nə olacağını soruşdu. Müaviyə \"Əli haqqında nə düşünürsən?\" deyəndə Əmr bu cavabı verdi: \"Məncə o, sənin ona halal bildiyini sənə halal bilməz.\" Susuzluğu dadmış Həzrət Əli əsgərləri isə \"Vallah, onlara bir damla belə verməyəcəyik\" deyirdilər. Rəvayətlərə görə Həzrət Əli onlara \"Xeyr, vallah, onlara etdiklərinin eynisi ilə qarşılıq vermərəm\" dedi və bu əmri göndərdi: \"Ehtiyacınız qədər su götürün və qərargahınıza qayıdın. Onlarla suyun arasından çəkilin. Allah sizə onların zülmü və azğınlığı səbəbindən zəfər verdi.\" Daha dünən suyu kəsənlər eyni sahildən qablarını doldurdu və iki ordunun atları eyni sudan içdi. Həzrət Əlinin düzlüyü elə bir düzlük idi ki, ona qılınc çəkən düşməni belə onun əxlaqına güvənirdi."
  ],
  "scenes.1.art.actors.1.label": [
-  "sf7oxz",
-  "Əmmar ibn Yasir"
- ],
- "scenes.2.text": [
-  "hz7soz",
-  "**Siffeyn**də qoca **Əmmar**, **Həzrət Əli**nin sırasında şəhid oldu. Peyğəmbər, onu ==bağı bir qrupun== öldürəcəyini söyləmişdi. O qrup **Müaviyə**nin ordusu idi. Sevənlər o gün, Peyğəmbərin xəbərinin **Müaviyə** tərəfində gerçəkləşdiyini gördü."
- ],
- "scenes.2.art.actors.0.label": [
-  "sf7oxz",
-  "Əmmar ibn Yasir"
- ],
- "scenes.2.art.actors.1.label": [
   "lhg99z",
   "Həzrət Əli"
  ],
- "scenes.3.text": [
-  "2x3fc5",
-  "**Siffeyn**də **Əmr ibn əl-As**, “Əmmarı öldürdük” deyə hədisi **Müaviyə**yə xatırlatdı. **Müaviyə**, “Onu biz mi öldürdük? Onu gətirənlər öldürdü” dedi. Təqsiri, Əmmarı oraya gətirənlərin üstünə atdı. Peyğəmbərin xəbəri açıq idi. ==Bağı qrup==, bu xəbəri inkar etmək üçün sözü təhrif etdi."
- ],
- "scenes.3.art.actors.0.label": [
+ "scenes.1.art.actors.2.label": [
   "pt51vl",
   "Əmr ibn əl-As"
  ],
+ "scenes.2.text": [
+  "6wh8et",
+  "İllər əvvəl məscid tikilərkən Peyğəmbər, **Əmmar**ın yanında idi. Ona baxıb “Yazıq Əmmara, onu azğın bir qrup öldürəcək” demişdi. Səhabə bu sözü eşitdi. Bağı, qanuni imama qarşı vuruşan deməkdir. Bu söz, Siffeyndə kimin bağı olduğunu göstərəcəkdi."
+ ],
+ "scenes.2.art.actors.0.label": [
+  "19izoul",
+  "Həzrət Peyğəmbər"
+ ],
+ "scenes.2.art.actors.1.label": [
+  "sf7oxz",
+  "Əmmar ibn Yasir"
+ ],
+ "scenes.3.text": [
+  "hz7soz",
+  "**Siffeyn**də qoca **Əmmar**, **Həzrət Əli**nin sırasında şəhid oldu. Peyğəmbər, onu ==bağı bir qrupun== öldürəcəyini söyləmişdi. O qrup **Müaviyə**nin ordusu idi. Sevənlər o gün, Peyğəmbərin xəbərinin **Müaviyə** tərəfində gerçəkləşdiyini gördü."
+ ],
+ "scenes.3.art.actors.0.label": [
+  "sf7oxz",
+  "Əmmar ibn Yasir"
+ ],
  "scenes.3.art.actors.1.label": [
-  "1inzbgl",
-  "Müaviyə"
- ],
- "scenes.4.text": [
-  "1jvj07j",
-  "**Siffeyn**də döyüş **Həzrət Əli**nin xeyrinə dönərkən Şamlılar müshəfi nizəyə taxdı. “Allahın kitabı aramızda hakəm olsun” dedilər. Bu ibadət deyil, ==bir hiylə idi.== **Həzrət Əli** bunun hiylə olduğunu o anda söylədi. Ordusunun bir qismi, Quran nizədədir deyə onu dayandırdı. Haqlı tərəf üstün ikən döyüş yarıda kəsildi."
- ],
- "scenes.4.art.actors.1.label": [
   "lhg99z",
   "Həzrət Əli"
  ],
- "scenes.5.text": [
-  "w8g3nb",
-  "**Siffeyn**də razılaşma yazıldı. Hakəm, tərəflərin seçdiyi hakim deməkdir. **Həzrət Əli** başqa adlar istəmişdi. Yenə də Əbu Musa ilə **Əmr ibn əl-As** oturdu. Mətndən “Əmirəl-möminin” ünvanı çıxarıldı. Bu hakəmlik, Qədir-Xumda elan edilən səlahiyyəti zəiflətdi. **Həzrət Əli**nin haqqına zərər verdi."
+ "scenes.4.text": [
+  "2x3fc5",
+  "**Siffeyn**də **Əmr ibn əl-As**, “Əmmarı öldürdük” deyə hədisi **Müaviyə**yə xatırlatdı. **Müaviyə**, “Onu biz mi öldürdük? Onu gətirənlər öldürdü” dedi. Təqsiri, Əmmarı oraya gətirənlərin üstünə atdı. Peyğəmbərin xəbəri açıq idi. ==Bağı qrup==, bu xəbəri inkar etmək üçün sözü təhrif etdi."
  ],
- "scenes.5.art.actors.0.label": [
-  "8bxja1",
-  "Əbu Musa əl-Əşari"
+ "scenes.4.art.actors.0.label": [
+  "pt51vl",
+  "Əmr ibn əl-As"
+ ],
+ "scenes.4.art.actors.1.label": [
+  "1inzbgl",
+  "Müaviyə"
+ ],
+ "scenes.5.text": [
+  "1jvj07j",
+  "**Siffeyn**də döyüş **Həzrət Əli**nin xeyrinə dönərkən Şamlılar müshəfi nizəyə taxdı. “Allahın kitabı aramızda hakəm olsun” dedilər. Bu ibadət deyil, ==bir hiylə idi.== **Həzrət Əli** bunun hiylə olduğunu o anda söylədi. Ordusunun bir qismi, Quran nizədədir deyə onu dayandırdı. Haqlı tərəf üstün ikən döyüş yarıda kəsildi."
  ],
  "scenes.5.art.actors.1.label": [
   "lhg99z",
   "Həzrət Əli"
  ],
- "scenes.5.art.actors.2.label": [
-  "pt51vl",
-  "Əmr ibn əl-As"
- ],
  "scenes.6.text": [
-  "1mnhiu8",
-  "**Həzrət Əli**nin ordusundan bir qrup hakəmi rədd etdi. “Hökm yalnız Allahındır” deyərək yanından ayrıldılar. Bunlara Xaricilər deyilir. Həzrət Əli, “Söz haqdır, amma onunla batil nəzərdə tutulur” dedi. Əvvəlcə onlarla danışıldı. Sonra Nəhrəvanda toqquşuldu. Nizədəki müshəf hiyləsi, **Həzrət Əli**nin öz sırasını da bölmüşdü."
+  "w8g3nb",
+  "**Siffeyn**də razılaşma yazıldı. Hakəm, tərəflərin seçdiyi hakim deməkdir. **Həzrət Əli** başqa adlar istəmişdi. Yenə də Əbu Musa ilə **Əmr ibn əl-As** oturdu. Mətndən “Əmirəl-möminin” ünvanı çıxarıldı. Bu hakəmlik, Qədir-Xumda elan edilən səlahiyyəti zəiflətdi. **Həzrət Əli**nin haqqına zərər verdi."
+ ],
+ "scenes.6.art.actors.0.label": [
+  "8bxja1",
+  "Əbu Musa əl-Əşari"
  ],
  "scenes.6.art.actors.1.label": [
   "lhg99z",
   "Həzrət Əli"
  ],
- "scenes.7.text": [
-  "5xbo7n",
-  "**Həzrət Əli**, Xaricilər haqqında Peyğəmbərdən bir xəbər nəql edir. Onları öldürənlərə Allah yanında savab var. Haqqa daha yaxın tərəf onlarla vuruşacaqdır. O tərəf, Həzrət Əlinin sırasıdır."
+ "scenes.6.art.actors.2.label": [
+  "pt51vl",
+  "Əmr ibn əl-As"
  ],
- "scenes.7.art.actors.0.label": [
+ "scenes.7.text": [
+  "1mnhiu8",
+  "**Həzrət Əli**nin ordusundan bir qrup hakəmi rədd etdi. “Hökm yalnız Allahındır” deyərək yanından ayrıldılar. Bunlara Xaricilər deyilir. Həzrət Əli, “Söz haqdır, amma onunla batil nəzərdə tutulur” dedi. Əvvəlcə onlarla danışıldı. Sonra Nəhrəvanda toqquşuldu. Nizədəki müshəf hiyləsi, **Həzrət Əli**nin öz sırasını da bölmüşdü."
+ ],
+ "scenes.7.art.actors.1.label": [
   "lhg99z",
   "Həzrət Əli"
  ],
  "scenes.8.text": [
-  "1kwwrwk",
-  "Əməvi dövründə minbərlərdə **Həzrət Əli**yə ==lənət== oxundu. **Müaviyə**, Sə'dən niyə söymədiyini soruşdu. Sə'd, Mənzilə hədisini, Xeybər bayrağını və Mübahiləni sayaraq cavab verdi. Ömər ibn Əbdüləziz bu zülmü illər sonra qaldırdı. O günə qədər bu zülm ==Əhli-Beyt==ə qarşı davam etdi."
+  "5xbo7n",
+  "**Həzrət Əli**, Xaricilər haqqında Peyğəmbərdən bir xəbər nəql edir. Onları öldürənlərə Allah yanında savab var. Haqqa daha yaxın tərəf onlarla vuruşacaqdır. O tərəf, Həzrət Əlinin sırasıdır."
  ],
  "scenes.8.art.actors.0.label": [
-  "17k143j",
-  "Sə'd ibn Əbi Vəqqas"
- ],
- "scenes.8.art.actors.1.label": [
-  "1inzbgl",
-  "Müaviyə"
- ],
- "scenes.9.text": [
-  "16dc9uv",
-  "Ramazan 40-da Kufə Ulu Camesində səhər namazı qılınarkən İbn Mülcəm, **Həzrət Əli**nin alnına vurdu. Səcdə halında olduğu ayrıca yazılmır. Həzrət Əlinin, Kəbənin Rəbbinə and olsun ki, qurtuldum dediyi nəql olunur. Bu söz Şiə kitablarında Rədi və İbn Şəhraşub, Sünni kitablarında İbnül-Əsir və Bəlazuri vasitəsilə anılır. Bu sözün tam Azərbaycan dilindəki ləfzləri rəvayətə görə dəyişir. Qatilinə yemək və su verilməsini, əsirliyində yaxşı saxlanmasını istədi. Ölərsə bir zərbəyə bir zərbə olsun, üzv kəsilməsin, dedi. “Yediyinizdən yedirdin” deyə uzadılan cümlə Sünni kitablarında tapılmadı. 18 Zilhiccə 35-dən Ramazan 40-a qədər təxminən dörd il doqquz ay xəlifə qalmışdı. Oğlu **Həzrət Həsən**ə vəsiyyətini qoydu. İdarəni **Müaviyə**yə təhvil ver demədi."
- ],
- "scenes.9.art.actors.0.label": [
   "lhg99z",
   "Həzrət Əli"
  ],
+ "scenes.9.text": [
+  "4clnsd",
+  "Siffindən sonra **Müaviyə** öz hakimiyyəti altındakı minbərlərdə **Həzrət Əli**yə ==lənət== oxunmasını və söyülməsini əmr etdi. Kufəyə vali olaraq göndərdiyi **Müğirə ibn Şö'bə**yə verdiyi öyüdlərin başında Həzrət Əlini söyməkdən və pisləməkdən geri durmaması gəlirdi. Cümə xütbələrində Peyğəmbərin vəsisi və kürəkəni pislənirdi. Bir gün Müaviyə səhabə **Sə'd ibn Əbi Vəqqasdan** niyə Əbu Turabı, yəni Həzrət Əlini söymədiyini soruşdu. Sə'd Peyğəmbərin Həzrət Əli haqqında dediyi üç sözü saydı: Mənzilə hədisini, Xeybər bayrağını və Mübahilə gününü. Buna görə onu heç vaxt söyməyəcəyini söylədi. Bu zülm illər sonra Əməvi xəlifəsi **Ömər ibn Əbdüləziz** onu qadağan edənə qədər davam etdi. Ömər ibn Əbdüləziz lənətin yerinə xütbələrdə Nəhl surəsinin 90-cı ayəsinin oxunmasını əmr etdi."
+ ],
+ "scenes.9.art.actors.0.label": [
+  "17k143j",
+  "Sə'd ibn Əbi Vəqqas"
+ ],
  "scenes.9.art.actors.1.label": [
+  "1inzbgl",
+  "Müaviyə"
+ ],
+ "scenes.10.text": [
+  "j8vl7w",
+  "Hicrətin 40-cı ilində, Ramazan ayında Kufənin ulu məscidində sübh namazı qılınırdı. **Həzrət Əli** namaz qıldırarkən Xəvariclərdən **İbn Mülcəm** bir ay boyunca zəhərə yatırdığı qılıncla onun mübarək başına vurdu. Həzrət Əli mehrabın içinə düşdü. Rəvayətlərə görə o anda \"Kəbənin Rəbbinə and olsun ki, qurtuldum\" dedi. Yaralı halda evinə aparıldı. Qatilinə kin bəsləmədi. Ona yemək və su verilməsini, əsirliyi boyunca yaxşı davranılmasını istədi. Özü vəfat edərsə, bir zərbəyə qarşılıq yalnız bir zərbə vurulmasını və qatilin üzvlərinin kəsilməməsini vəsiyyət etdi. Təxminən dörd il doqquz ay sürən xilafətinin sonunda vəsiyyətini oğlu **Həzrət Həsən**ə buraxdı. Peyğəmbərin Qədirdə əlini qaldırdığı imam mehrabda şəhid oldu."
+ ],
+ "scenes.10.art.actors.0.label": [
+  "lhg99z",
+  "Həzrət Əli"
+ ],
+ "scenes.10.art.actors.1.label": [
   "1bj9fo",
   "Həzrət Həsən"
  ],
