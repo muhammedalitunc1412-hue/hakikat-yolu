@@ -27,7 +27,9 @@ type Route =
   | { name: 'map'; id: string };
 
 const LANGUAGE_KEY = 'hakikat-yolu:language';
-const PURPOSE_KEY = 'hakikat-yolu:purpose-seen';
+const PURPOSE_AT_KEY = 'hakikat-yolu:purpose-seen-at';
+const PURPOSE_LEGACY_KEY = 'hakikat-yolu:purpose-seen';
+const PURPOSE_INTERVAL_MS = 48 * 60 * 60 * 1000;
 
 export default function App() {
   const [lang, setLanguage] = useState<Lang>('tr');
@@ -41,14 +43,24 @@ export default function App() {
     let active = true;
     Promise.all([
       AsyncStorage.getItem(LANGUAGE_KEY),
-      AsyncStorage.getItem(PURPOSE_KEY),
-    ]).then(([saved, purpose]) => {
+      AsyncStorage.getItem(PURPOSE_AT_KEY),
+      AsyncStorage.getItem(PURPOSE_LEGACY_KEY),
+    ]).then(([saved, seenAt, legacy]) => {
       if (!active) return;
       const option = languageOption(saved);
       setLanguage(option.id);
       setDraftLanguage(option.id);
       setChoosing(saved !== option.id);
-      setPurposeSeen(purpose === '1');
+      const t = seenAt ? Number(seenAt) : NaN;
+      if (Number.isFinite(t)) {
+        setPurposeSeen(Date.now() - t < PURPOSE_INTERVAL_MS);
+      } else if (legacy === '1') {
+        // Eski bayrak: bir kez gösterilmiş, zaman damgası yok; 48 saatlik süreyi şimdi başlat.
+        setPurposeSeen(true);
+        void AsyncStorage.setItem(PURPOSE_AT_KEY, String(Date.now())).catch(() => {});
+      } else {
+        setPurposeSeen(false);
+      }
     }).catch(() => {}).finally(() => {
       if (active) setReady(true);
     });
@@ -64,7 +76,7 @@ export default function App() {
 
   function confirmPurpose() {
     setPurposeSeen(true);
-    void AsyncStorage.setItem(PURPOSE_KEY, '1').catch(() => {});
+    void AsyncStorage.setItem(PURPOSE_AT_KEY, String(Date.now())).catch(() => {});
   }
 
   setLang(lang);
