@@ -9,7 +9,7 @@ export const meysem: HistEvent = {
   hook: { tr: 'Hz. Ali, hurma satan dostuna asılacağı ağacı önceden gösterdi. O ağaç, hicri 60\'ta dar ağacı oldu.', en: 'Hz. Ali showed his friend the palm on which he would be hanged. In 60 AH that tree became the gallows.' },
   scenes: [
     {
-      text: { tr: '**Meysem et-Temmâr**, Kûfe çarşısında hurma satan bir adamdı. Temmâr, hurmacı demektir. Önceden köleydi, ama sonra azat edilmişti. Dilenci değildi. Kendi tezgâhının sahibiydi ve alnının teriyle geçimini sağlıyordu. **Hz. Ali**\'ye olan yakınlığıyla tanınırdı. Meysem de ondan öğrendiklerini, hurma satarken müşterilerine anlatırdı. Çarşının ortasındaki bu küçük tezgâh, Ehl-i Beyt\'in sözlerinin duyulduğu bir ders yerine dönüşmüştü. Yıllar sonra bu bağlılık, onun canına mal olacaktı.' },
+      text: { tr: '**Meysem et-Temmâr**, Kûfe çarşısında hurma satan bir adamdı. Temmâr, hurmacı demektir. Önceden köleydi, ama sonra azat edilmişti. Kendi tezgâhının sahibiydi ve alnının teriyle geçimini sağlıyordu. **Hz. Ali**\'ye olan yakınlığıyla tanınırdı. Meysem de ondan öğrendiklerini, hurma satarken müşterilerine anlatırdı. Çarşının ortasındaki bu küçük tezgâh, Ehl-i Beyt\'in sözlerinin duyulduğu bir ders yerine dönüşmüştü. Yıllar sonra bu bağlılık, onun canına mal olacaktı.' },
       art: { bg: 'city', props: ['palms', 'sun'], actors: [{ kind: 'man', x: 42, label: { tr: 'Meysem' } }, { kind: 'ali', x: 70, label: { tr: 'Hz. Ali' } }] },
       by: 'partial',
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }, { side: 'sunni', i: 0 }],
@@ -21,7 +21,7 @@ export const meysem: HistEvent = {
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 2 }, { side: 'sunni', i: 0 }],
     },
     {
-      text: { tr: '**Hz. Ali**\'nin şehadetinden sonra Kûfe\'de zor günler başladı. Emevi valileri minberlerde Hz. Ali\'ye sövdürüyordu. Bu laneti kabul etmeyen **Hucr b. Adî** ve arkadaşları öldürülmüştü. Kûfe\'de Hz. Ali\'yi açıkça savunmanın bedeli artık ölüm olabilirdi. Birçok kişi korkudan sustu. Ama **Meysem**, çarşıdaki tezgâhının başında Ehl-i Beyt\'in faziletlerini anlatmayı bırakmadı. Hurmalarını satarken Hz. Ali\'nin sözlerini aktarmaya devam etti. Minberler lanet okurken çarşının ortasında küçük bir tezgâh, Hz. Ali\'nin adını sevgiyle anmayı sürdürdü.' },
+      text: { tr: '**Hz. Ali**\'nin şehadetinden sonra Kûfe\'de zor günler başladı. Muaviye\'nin emriyle valiler minberlerde Hz. Ali\'ye sövdürüyordu. Bu laneti kabul etmeyen **Hucr b. Adî** ve arkadaşları öldürülmüştü. Kûfe\'de Hz. Ali\'yi açıkça savunmanın bedeli artık ölüm olabilirdi. Birçok kişi korkudan sustu. Ama **Meysem**, çarşıdaki tezgâhının başında Ehl-i Beyt\'in faziletlerini anlatmayı bırakmadı. Hurmalarını satarken Hz. Ali\'nin sözlerini aktarmaya devam etti. Minberler lanet okurken çarşının ortasında küçük bir tezgâh, Hz. Ali\'nin adını sevgiyle anmayı sürdürdü.' },
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'man', x: 30, pose: 'raise', label: { tr: 'Meysem' } }, { kind: 'crowd', x: 68, scale: 6 }] },
       by: 'shia',
       cites: [{ side: 'shia', i: 1 }],

@@ -54,7 +54,7 @@ export const muaviyeHasan: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: '**Hz. Hüseyin**, kardeşi **Hz. Hasan**\'ın naaşını dedesi Resûlullah\'ın yanına defnetmek için götürdü. Ama Aişe ve Mervan yolu kesti, tabut oklandı. Hz. Hasan ölmeden önce, "Cenazemde bir damla kan dökülmesin" diye vasiyet etmişti. Engel çıkarsa kendisini Bakî\'ye gömmelerini istemişti. Hz. Hüseyin kılıç çekmedi ve tabutu Bakî\'ye çevirdi. **Hz. Hasan**, Bakî mezarlığında ninesi **Fatıma bint Esed**\'in yanına defnedildi. Kardeşinin vasiyeti sayesinde o gün kan dökülmedi. Ama Medine, Peygamber\'in torununun cenazesine ok atıldığını hiç unutmadı.' },
+      text: { tr: '**Hz. Hüseyin**, kardeşi **Hz. Hasan**\'ın naaşını dedesi Resûlullah\'ın yanına defnetmek için götürdü. Ama Aişe ve Mervan yolu kesti. Aişe\'nin emriyle Peygamber\'in torununun tabutuna oklar atıldı. Hz. Hasan ölmeden önce, "Cenazemde bir damla kan dökülmesin" diye vasiyet etmişti. Engel çıkarsa kendisini Bakî\'ye gömmelerini istemişti. Hz. Hüseyin kılıç çekmedi ve tabutu Bakî\'ye çevirdi. **Hz. Hasan**, Bakî mezarlığında ninesi **Fatıma bint Esed**\'in yanına defnedildi. Kardeşinin vasiyeti sayesinde o gün kan dökülmedi. Ama Medine, Peygamber\'in torununun cenazesine ok atıldığını hiç unutmadı.' },
       art,
       cites: [{ side: 'shia', i: 1 }],
     },
