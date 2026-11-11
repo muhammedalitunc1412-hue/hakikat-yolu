@@ -3,6 +3,7 @@ import { BackHandler, Pressable, ScrollView, Text, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StatusBar } from 'expo-status-bar';
 import { DuaList, DuaScreen, EventScreen, Home, Method } from './src/ui/Screens';
+import { PurposeScreen } from './src/ui/PurposeScreen';
 import { MapDetail, MapList } from './src/ui/MapScreens';
 import { QiblaScreen } from './src/ui/Qibla';
 import { ImamDetail, ImamList } from './src/ui/ImamScreens';
@@ -26,22 +27,28 @@ type Route =
   | { name: 'map'; id: string };
 
 const LANGUAGE_KEY = 'hakikat-yolu:language';
+const PURPOSE_KEY = 'hakikat-yolu:purpose-seen';
 
 export default function App() {
   const [lang, setLanguage] = useState<Lang>('tr');
   const requiredStore = useRequiredUpdate();
   const [ready, setReady] = useState(false);
   const [choosing, setChoosing] = useState(true);
+  const [purposeSeen, setPurposeSeen] = useState(false);
   const [editingLanguage, setEditingLanguage] = useState(false);
   const [draftLanguage, setDraftLanguage] = useState<Lang>('tr');
   useEffect(() => {
     let active = true;
-    AsyncStorage.getItem(LANGUAGE_KEY).then(saved => {
+    Promise.all([
+      AsyncStorage.getItem(LANGUAGE_KEY),
+      AsyncStorage.getItem(PURPOSE_KEY),
+    ]).then(([saved, purpose]) => {
       if (!active) return;
       const option = languageOption(saved);
       setLanguage(option.id);
       setDraftLanguage(option.id);
       setChoosing(saved !== option.id);
+      setPurposeSeen(purpose === '1');
     }).catch(() => {}).finally(() => {
       if (active) setReady(true);
     });
@@ -53,6 +60,11 @@ export default function App() {
     setChoosing(false);
     setEditingLanguage(false);
     void AsyncStorage.setItem(LANGUAGE_KEY, draftLanguage).catch(() => {});
+  }
+
+  function confirmPurpose() {
+    setPurposeSeen(true);
+    void AsyncStorage.setItem(PURPOSE_KEY, '1').catch(() => {});
   }
 
   setLang(lang);
@@ -108,6 +120,8 @@ export default function App() {
               <Text style={{ color: C.gold, fontSize: 17, fontWeight: '700' }}>{editingLanguage ? ui('saveLanguage') : languageOption(draftLanguage).confirm}</Text>
             </Pressable>
           </ScrollView>
+        ) : !purposeSeen ? (
+          <PurposeScreen onContinue={confirmPurpose} />
         ) : <>
         <View style={{ flex: 1 }}>
         {route.name === 'home' && (

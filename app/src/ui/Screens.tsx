@@ -8,6 +8,7 @@ import { SCENE_VIDEOS } from '../data/sceneVideos';
 import { BORDERS_CREDIT } from '../data/borders';
 import { mapsForEvent } from '../data/maps';
 import { TRAVEL_METHOD } from '../data/travel';
+import { APP_PURPOSE_TEXT, APP_PURPOSE_TITLE } from '../data/amac';
 import { Rich } from './Rich';
 import { EventVideo } from './EventVideo';
 import { ArchIcon, BookIcon, Chevron, CompassIcon, PinIcon, SearchIcon } from './icons';
@@ -643,7 +644,12 @@ export function Method({ onBack }: { onBack: () => void }) {
   return (
     <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page}>
       <Back onPress={onBack} />
-      <Text style={[s.kicker, align()]}>YÖNTEM</Text>
+      <Text style={[s.kicker, align()]}>AMAÇ</Text>
+      <Text style={[s.evTitle, align()]}>{APP_PURPOSE_TITLE}</Text>
+      <View style={s.methodCard}>
+        <Text style={[s.body, align(), { flex: 1 }]}>{APP_PURPOSE_TEXT}</Text>
+      </View>
+      <Text style={[s.kicker, align(), { marginTop: 28 }]}>YÖNTEM</Text>
       <Text style={[s.evTitle, align()]}>{ui('method')}</Text>
       {paragraphs.map((t, k) => (
         <View key={k} style={s.methodCard}>
