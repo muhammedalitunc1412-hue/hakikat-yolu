@@ -23,7 +23,7 @@ export const cemel: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Bu sırada Mekke\'de umre için bulunan **Aişe**, Talha ve Zübeyr ile bir araya geldi. Üçü de Osman\'ın kanını gerekçe göstererek Basra\'ya doğru yola çıktı. Yanlarına toplanan kalabalıkla birlikte, biat ettikleri **Hz. Ali**\'ye karşı bir ordu kurdular. Böylece daha yeni kabul edilen halifeliği yeniden tartışmaya açtılar. Basra yolunda Gadir\'deki ilan değil, Osman\'ın kanı anılıyordu. Peygamber\'in vefatından yaklaşık çeyrek asır sonra Müslümanlar ilk kez kendi aralarında büyük bir savaşa doğru sürükleniyordu.' },
+      text: { tr: 'Bu sırada Mekke\'de umre için bulunan **Aişe**, Talha ve Zübeyr ile bir araya geldi. İstedikleri makamı alamayan Talha ve Zübeyr, Osman\'ın kanını bahane ederek Aişe ile birlikte Basra\'ya doğru yola çıktı. Yanlarına toplanan kalabalıkla birlikte, biat ettikleri **Hz. Ali**\'ye karşı bir ordu kurdular. Böylece daha yeni kabul edilen halifeliği yeniden tartışmaya açtılar. Basra yolunda Gadir\'deki ilan değil, Osman\'ın kanı anılıyordu. Peygamber\'in vefatından yaklaşık çeyrek asır sonra Müslümanlar ilk kez kendi aralarında büyük bir savaşa doğru sürükleniyordu.' },
       art: { bg: 'dune-day', props: ['sun', 'camels'], actors: [{ kind: 'woman', x: 24, label: { tr: 'Aişe' } }, { kind: 'man', x: 50, label: { tr: 'Talha' } }, { kind: 'man', x: 74, label: { tr: 'Zübeyr' } }] },
       by: 'both',
     },
