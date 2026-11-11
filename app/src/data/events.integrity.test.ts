@@ -88,7 +88,7 @@ test('genişleme sahnelerinin görseli kayıtlı, yer tutucu kalmaz', () => {
     assert.equal(texts.length, expected);
     assert.equal(keys.length, texts.length);
     assert.equal(new Set(keys).size, keys.length);
-    const pending = new Set(['kerbela-egersiz']);
+    const pending = new Set(['kerbela-egersiz', 'kerbela-zeynep-hutbe', 'harre-emir', 'harre-yagma']);
     for (const id of keys) {
       if (pending.has(id)) {
         assert.doesNotMatch(img, new RegExp("'" + id + "':"));
@@ -97,11 +97,17 @@ test('genişleme sahnelerinin görseli kayıtlı, yer tutucu kalmaz', () => {
       assert.match(img, new RegExp("'" + id + "': require\\('../../assets/scenes/" + id + "\\.jpg'\\)"));
     }
   };
-  bound('./kerbela.ts', 37);
+  const events = read('./events.ts');
+  bound('./kerbela.ts', 36);
+  assert.doesNotMatch(read('./kerbela.ts'), /Harre|mancınık/);
+  bound('./harre.ts', 5);
+  assert.match(read('./harre.ts'), /image: 'harre-1'/);
+  assert.match(read('./harre.ts'), /image: 'harre-2'/);
+  assert.match(events, /, kerbela, harre, imamlar,/);
+  assert.match(events, /id: 'harre', title: 'Harre Vakası'/);
   assert.match(read('./kerbela.ts'), /image: 'kerbela-egersiz'/);
   assert.match(read('./kerbela.ts'), /eğersiz develere bindirildi/);
   bound('./sakife.ts', 10);
-  const events = read('./events.ts');
   assert.match(events, /export function nextStory/);
   assert.match(events, /TEACHING_IDS = new Set\(\['mezhepler', 'sadik', 'muta', 'abdest', 'ibadet-farklari'\]\)/);
 });

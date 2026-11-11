@@ -167,7 +167,13 @@ export const NOTES: Record<string, string[]> = {
     "Mektlede Hz. Rukayye Şam harabesinde babasının başına sarılır ve orada şehit olur (Nefesü'l-Mehmûm, cilt 1, s. 416).",
     "9 Muharrem gecesi Hz. Hüseyin bey'ati kaldırdı. Karanlıkta gidenler oldu. Kalanlar, bin kere dirilseler de ayrılmayız dedi.",
     "Müslim'in yetimleri Muhammed ve İbrahim, Kûfe zindanından sonra Fırat kıyısında şehit edildi (Şeyh Sadûk, el-Emâlî; Bihâr).",
-    "63 H'de Harre'de Medine üç gün yağmalandı. 64 H'de Kâbe mancınıkla taşlandı ve örtüsü yandı. Yezid bu sırada öldü.",
+  ],
+  harre: [
+    "Medine heyeti Şam'dan dönünce Yezid'in şarap içtiğini, köpeklerle oynadığını ve namazı terk ettiğini anlattı; halk biatı bozdu (Taberî 5/480, el-Bidâye 6/262).",
+    "Yezid, Müslim b. Ukbe'ye: üç gün çağır, uymazlarsa savaş, galip gelince şehri üç gün helal et, dedi (Taberî 5/484).",
+    "Harre'de Abdullah b. Hanzala oğullarıyla, Abdullah b. Zeyd ve Ma'kil b. Sinân şehit edildi (Vefâü'l-Vefâ 1/108).",
+    "Halktan Yezid'in kulları olarak biat alındı. Hz. Zeynelâbidîn'e dokunulmadı (Taberî 5/493).",
+    "64 H'de Husayn b. Numeyr Mekke'yi kuşattı. 3 Rebiülevvel'de Kâbe mancınıkla taşlandı ve yandı. Yezid 14 Rebiülevvel'de öldü (Taberî 5/498-499).",
   ],
   imamlar: [
     "Hz. Hüseyin'den sonra imamet Hz. Zeynelâbidîn'e geçti.",

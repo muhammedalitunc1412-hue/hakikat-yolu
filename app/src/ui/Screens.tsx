@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FlatList, Image, Linking, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import type { Accept, Dispute, Dua, HistEvent, Scene, Source } from '../types';
 import { tx, ui } from '../i18n';
@@ -309,6 +309,9 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   const [open, setOpen] = useState<Panel[]>([]);
   const [srcOpen, setSrcOpen] = useState({ shia: false, sunni: false });
   const listRef = useRef<FlatList<StoryPage>>(null);
+  // initialScrollIndex yalnızca ilk açılışta okunmalı; idx ile birlikte değişirse FlatList
+  // içerik boyutu değiştiğinde listeyi o eski/yeni indekse geri kaydırabiliyor.
+  const [initialIdx] = useState(idx);
   const swipe = useRef({ x: 0, y: 0 });
   const toggle = (p: Panel) => setOpen(o => (o.includes(p) ? o.filter(x => x !== p) : [...o, p]));
   const has = (p: Panel) => open.includes(p);
@@ -349,10 +352,29 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
     setIdx(next);
     rememberScene('event:' + ev.id, next);
   };
+  // Kaydırma bitmeden sahne değiştirilmez. Eskiden parmak kalkar kalkmaz (onScrollEndDrag) yarım
+  // kalmış konumdan sahne hesaplanıyordu; bu, kayma sürerken listenin yüksekliğini yeni sahneye göre
+  // değiştiriyor ve Android'de süren sayfa kaydırmasını yarıda kesip eski sahneye geri attırıyordu.
+  const dragging = useRef(false);
+  const lastX = useRef(0);
+  const settle = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => () => { if (settle.current) clearTimeout(settle.current); }, []);
   const sync = (x: number) => {
-    const i = Math.max(0, Math.min(total - 1, Math.round(x / Math.max(width, 1))));
+    if (settle.current) { clearTimeout(settle.current); settle.current = null; }
+    const w = Math.max(width, 1);
+    const i = Math.max(0, Math.min(total - 1, Math.round(x / w)));
+    // Sayfanın tam ortasında durmadıysa (örn. web'de) en yakın sahneye oturt
+    if (Math.abs(x - i * w) > 1) listRef.current?.scrollToOffset({ offset: i * w, animated: true });
     rememberScene('event:' + ev.id, i);
     setIdx(cur => (cur === i ? cur : i));
+  };
+  const onListScroll = (x: number) => {
+    lastX.current = x;
+    if (settle.current) clearTimeout(settle.current);
+    settle.current = setTimeout(() => {
+      settle.current = null;
+      if (!dragging.current) sync(lastX.current);
+    }, 180);
   };
 
   const Btn = ({ p, label, n, color }: { p: Panel; label: string; n: number; color: string }) => (
@@ -395,7 +417,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
         <FlatList
           ref={listRef}
           data={pages}
-          initialScrollIndex={Math.min(idx, pages.length - 1)}
+          initialScrollIndex={Math.max(0, Math.min(initialIdx, pages.length - 1))}
           horizontal
           pagingEnabled
           nestedScrollEnabled
@@ -404,8 +426,11 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
           showsHorizontalScrollIndicator={false}
           style={[s.sceneList, listHeight ? { height: listHeight } : null]}
           keyExtractor={(_, i) => String(i)}
-          onMomentumScrollEnd={e => sync(e.nativeEvent.contentOffset.x)}
-          onScrollEndDrag={e => sync(e.nativeEvent.contentOffset.x)}
+          scrollEventThrottle={16}
+          onScroll={e => onListScroll(e.nativeEvent.contentOffset.x)}
+          onScrollBeginDrag={() => { dragging.current = true; }}
+          onScrollEndDrag={e => { dragging.current = false; onListScroll(e.nativeEvent.contentOffset.x); }}
+          onMomentumScrollEnd={e => { dragging.current = false; sync(e.nativeEvent.contentOffset.x); }}
           getItemLayout={(_, i) => ({ length: width, offset: width * i, index: i })}
           renderItem={({ item, index }) => item.kind === 'video' ? (
             <View style={{ width }}>
