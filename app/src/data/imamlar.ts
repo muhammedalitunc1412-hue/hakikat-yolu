@@ -19,7 +19,7 @@ export const imamlar: HistEvent = {
       by: 'shia',
     },
     {
-      text: { tr: 'Hz. Zeynelâbidîn\'in oğlu **Hz. Muhammed Bâkır**, Bâkır lakabıyla anılır. Bu ad, ilmi yarıp derinliklerine inen demektir. Hz. Bâkır, Medine\'de büyük bir ders halkası kurdu. Çevresinde yalnızca Ehl-i Beyt\'in dostları değil, farklı görüşlerden âlimler de toplanıyordu. Bu halkada oğlu **Hz. Ca\'fer**\'in yanında Katâde, Zührî ve Evzâî gibi tanınmış isimler de bulundu. Emevi baskısının en ağır olduğu yıllarda Hz. Bâkır, Peygamber\'den gelen ilmi sessizce, ama kararlılıkla yaydı. Hicretin 114. yılı civarında vefat etti ve Bakî\'de defnedildi.' },
+      text: { tr: 'Hz. Zeynelâbidîn\'in oğlu **Hz. Muhammed Bâkır**, Bâkır lakabıyla anılır. Bu ad, ilmi yarıp derinliklerine inen demektir. Hz. Bâkır, Medine\'de büyük bir ders halkası kurdu. Çevresinde yalnızca Ehl-i Beyt\'in dostları değil, farklı görüşlerden âlimler de toplanıyordu. Bu halkada oğlu **Hz. Ca\'fer**\'in yanında Katâde, Zührî ve Evzâî gibi tanınmış isimler de bulundu. Emevi baskısının en ağır olduğu yıllarda Hz. Bâkır, Peygamber\'den gelen ilmi sessizce, ama kararlılıkla yaydı. Hicretin 114. yılında Emevi halifesi **Hişam b. Abdülmelik**\'in emriyle zehirlenerek şehit edildi ve Bakî\'de defnedildi.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 36, pose: 'sit', label: { tr: 'Hz. Muhammed Bâkır' } }, { kind: 'crowd', x: 68, scale: 4 }] },
       by: 'both',
     },
