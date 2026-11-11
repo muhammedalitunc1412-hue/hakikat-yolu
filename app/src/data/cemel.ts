@@ -13,7 +13,7 @@ export const cemel: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: '**Talha** ile **Zübeyr** de Medine\'de **Hz. Ali**\'ye biat etmişti. Ama verdikleri söz dillerinde kaldı, gönüllerine yerleşmedi. Hz. Ali, Osman\'ın valilerini değiştirirken onlara beklediklerini vermedi. Haksız malları beytülmale geri aldı ve kimseye ayrıcalık tanımadı. Şam\'da ise **Muaviye** valilik koltuğunu bırakmayı reddetti. Kaybedilen makamlar ve geri alınan mallar, itirazın asıl sebebiydi. Ama itiraz edenler, Osman\'ın kanını gerekçe olarak öne sürdü. Osman\'ın kanı, menfaatleri zarar gören herkes için bir bahane haline geldi.' },
+      text: { tr: '**Talha** ile **Zübeyr** de Medine\'de **Hz. Ali**\'ye biat etmişti. Ama verdikleri söz dillerinde kaldı, gönüllerine yerleşmedi. Rivayetlere göre ikisi de Hz. Ali\'den devlette yüksek bir makam istedi ve Basra ile Kûfe valiliklerine göz dikti. Hz. Ali, adam kayırmayı doğru bulmadığı için bu isteği geri çevirdi. Osman\'ın valilerini değiştirirken de onlara beklediklerini vermedi. Haksız malları beytülmale geri aldı ve kimseye ayrıcalık tanımadı. Şam\'da ise **Muaviye** valilik koltuğunu bırakmayı reddetti. Kaybedilen makamlar ve geri alınan mallar, itirazın asıl sebebiydi. Ama itiraz edenler, Osman\'ın kanını gerekçe olarak öne sürdü. Osman\'ın kanı, menfaatleri zarar gören herkes için bir bahane haline geldi.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 24, label: { tr: 'Talha' } }, { kind: 'man', x: 46, label: { tr: 'Zübeyr' } }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
