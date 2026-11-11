@@ -21,6 +21,7 @@ import { nehrevan } from './nehrevan';
 import { hasan } from './hasan';
 import { meysem } from './meysem';
 import { kerbela } from './kerbela';
+import { harre } from './harre';
 import { imamlar } from './imamlar';
 import { aliKimdir } from './ali-kimdir';
 import { sebb } from './sebb';
@@ -54,6 +55,7 @@ const KEYS: Record<string, string> = {
   "hasan": "Hz. Hasan'ın barışı ve şehadeti",
   "meysem": "Meysem et-Temmâr: haber verilen hurma ağacında şehadet",
   "kerbela": "Yezid'e biat yok: eman reddedildi, Kerbela'nın on günü",
+  "harre": "Yezid'in emriyle Medine üç gün yağmalandı, Kâbe mancınıkla taşlandı",
   "imamlar": "Kerbela'dan sonra imamet zinciri",
   "mezhepler": "Sakife'den Kerbela'ya mekteplerin doğuşu",
   "sadik": "Hz. Ca\'fer-i Sâdık ve ilim mektebi",
@@ -62,7 +64,7 @@ const KEYS: Record<string, string> = {
   "ibadet-farklari": "Ezan, namaz ve secde farkları"
 };
 
-export const EVENTS: HistEvent[] = [penceAba, ehlibeyt, aliKimdir, hayber, menzile, gadir, raziyye, sakife, fedek, fatimaVefat, istihlaf, osman, cemel, siffin, nehrevan, sebb, muaviyeKimdir, muaviyeAli, muaviyeHasan, muaviyeIktidar, hasan, meysem, kerbela, imamlar, mezhepler, sadik, muta, abdest, ibadetFarklari].map(ev => ({ ...ev, key: { tr: KEYS[ev.id] }, notes: (NOTES[ev.id] ?? []).map(tr => ({ tr })) }));
+export const EVENTS: HistEvent[] = [penceAba, ehlibeyt, aliKimdir, hayber, menzile, gadir, raziyye, sakife, fedek, fatimaVefat, istihlaf, osman, cemel, siffin, nehrevan, sebb, muaviyeKimdir, muaviyeAli, muaviyeHasan, muaviyeIktidar, hasan, meysem, kerbela, harre, imamlar, mezhepler, sadik, muta, abdest, ibadetFarklari].map(ev => ({ ...ev, key: { tr: KEYS[ev.id] }, notes: (NOTES[ev.id] ?? []).map(tr => ({ tr })) }));
 
 // Öğretici sayfalar roman gibi sahnelenmez. Kısa not, kaynak ve vurgu yeter.
 export const TEACHING_IDS = new Set(['mezhepler', 'sadik', 'muta', 'abdest', 'ibadet-farklari']);
@@ -81,5 +83,6 @@ export const CATEGORIES: { id: string; title: string; sub: string; ids: string[]
   { id: 'ali', title: 'Hz. Ali Dönemi', sub: 'Cemel, Sıffin, Hakem, Nehrevan, minberlerde sövme', ids: ['cemel', 'siffin', 'nehrevan', 'sebb'] },
   { id: 'muaviye', title: 'Muaviye Kimdir?', sub: "Ailesi, Hz. Ali'ye karşı Sıffin, Hz. Hasan ile sulhu ve iktidarı", ids: ['muaviye-kimdir', 'muaviye-ali', 'muaviye-hasan', 'muaviye-iktidar'] },
   { id: 'imamlar', title: 'İmamlar ve Kerbela', sub: 'Hz. Hasan, Meysem et-Temmâr, Kerbela, imamlar', ids: ['hasan', 'meysem', 'kerbela', 'imamlar'] },
+  { id: 'harre', title: 'Harre Vakası', sub: 'Medine\'nin yağmalanması, Yezid\'in emri ve Kâbe\'nin taşlanması', ids: ['harre'] },
   { id: 'mezhep', title: 'Mezhepler ve İbadet Farkları', sub: 'Mezheplerin doğuşu, Hz. Ca\'fer-i Sâdık, mut\'a, abdest, ezan ve diğer farklar', ids: ['mezhepler', 'sadik', 'muta', 'abdest', 'ibadet-farklari'] },
 ];

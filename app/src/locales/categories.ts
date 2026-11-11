@@ -10,6 +10,7 @@ export const CATEGORY_TEXT: Partial<Record<Lang, Record<string, CatText>>> = {
     ali: { title: 'The Era of Imam Ali', sub: 'The Camel, Siffin, the arbitration, Nahrawan, cursing from the pulpits' },
     muaviye: { title: 'Who Is Mu\'awiya?', sub: 'His family, Siffin against Imam Ali, his treaty with Imam Hasan, and his rule' },
     imamlar: { title: 'The Imams and Karbala', sub: 'Imam Hasan, Maytham al-Tammar, Karbala, the imams' },
+    harre: { title: 'The Day of al-Harra', sub: 'The sack of Medina, Yazid\'s order and the bombardment of the Kaaba' },
     mezhep: { title: 'Schools of Thought and Differences in Worship', sub: 'The birth of the schools, Imam Ja\'far al-Sadiq, mut\'a, ablution, the call to prayer and other differences' },
   },
   ar: {
