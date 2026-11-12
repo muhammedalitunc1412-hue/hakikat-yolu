@@ -84,7 +84,6 @@ export const SCENE_IMAGES: Record<string, number> = {
   'hayber-8': require('../../assets/scenes/hayber-8.jpg'),
   'ibadet-farklari-1': require('../../assets/scenes/ibadet-farklari-1.jpg'),
   'ibadet-farklari-10': require('../../assets/scenes/ibadet-farklari-10.jpg'),
-  'ibadet-farklari-11': require('../../assets/scenes/ibadet-farklari-11.jpg'),
   'ibadet-farklari-2': require('../../assets/scenes/ibadet-farklari-2.jpg'),
   'ibadet-farklari-3': require('../../assets/scenes/ibadet-farklari-3.jpg'),
   'ibadet-farklari-4': require('../../assets/scenes/ibadet-farklari-4.jpg'),

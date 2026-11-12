@@ -26,12 +26,12 @@ export const ibadetFarklari: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Câbir b. Abdillah\'tan gelen bir rivayette Peygamber şöyle der: "Yeryüzü bana ve ümmetime mescit ve teyemmüm vasıtası kılındı." Câferî fıkıh bu hadise dayanarak secdenin toprağa ya da yerden biten, yenmeyen ve giyilmeyen bir şeye yapılmasını şart koşar. Halı ya da kumaş gibi şeyler bu şartı karşılamaz. Bu yüzden birçok Şii yanında "türbe" denen küçük bir secde taşı taşır ve namazda alnını onun üstüne koyar. Bu taş için özellikle Kerbelâ toprağı tercih edilir. Sünni mezheplerde ise secde yeri daha geniştir. Halı, hasır ya da toprak üzerine secde edilebilir.' },
+      text: { tr: 'Câbir b. Abdillah\'tan gelen bir rivayette Peygamber şöyle der: "Yeryüzü bana ve ümmetime mescit ve teyemmüm vasıtası kılındı." Câferî fıkıh bu hadise dayanarak secdenin toprağa ya da yerden biten, yenmeyen ve giyilmeyen bir şeye yapılmasını şart koşar. Halı ya da kumaş gibi şeyler bu şartı karşılamaz. Bu yüzden birçok Şii yanında "mühür" denen küçük bir secde taşı taşır ve namazda alnını onun üstüne koyar. Bu taş için özellikle Kerbelâ toprağı tercih edilir. Sünni mezheplerde ise secde yeri daha geniştir. Halı, hasır ya da toprak üzerine secde edilebilir.' },
       art: { bg: 'interior', actors: [{ kind: 'man', x: 50, pose: 'sit', label: { tr: 'Secdede' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Kerbelâ toprağına duyulan sevgi, orasının **Hz. Hüseyin**\'in şehit olduğu yer olmasından gelir. Bazı rivayetler bu toprağa şifa ve sevap bağlar, ama bu rivayetlerin senet değeri Şii âlimler arasında da tartışılır. Şii fıkhında toprağa secde etmek sünnettir, Kerbelâ toprağından yapılmış türbeyi kullanmak ise müstehap sayılır. Secde taşı kullanmak Sünni mezheplerde de yasak değildir. Câferî mektep için türbe, Peygamber\'in toprağa yaptığı secdenin bir devamıdır. Kerbelâ toprağını seçmek ise o toprağa düşen kanın hatırasıdır.' },
+      text: { tr: 'Kerbelâ toprağına duyulan sevgi, orasının **Hz. Hüseyin**\'in şehit olduğu yer olmasından gelir. Bazı rivayetler bu toprağa şifa ve sevap bağlar, ama bu rivayetlerin senet değeri Şii âlimler arasında da tartışılır. Şii fıkhında toprağa secde etmek sünnettir, Kerbelâ toprağından yapılmış mührü kullanmak ise müstehap sayılır. Secde taşı kullanmak Sünni mezheplerde de yasak değildir. Câferî mektep için mühür, Peygamber\'in toprağa yaptığı secdenin bir devamıdır. Kerbelâ toprağını seçmek ise o toprağa düşen kanın hatırasıdır.' },
       art: { bg: 'dune-dusk', props: ['sun'], actors: [{ kind: 'husayn', x: 50, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
@@ -51,12 +51,7 @@ export const ibadetFarklari: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Âl-i İmrân Suresi\'nin 28. ayeti, müminlerin kâfirleri dost edinmemesini söyler, ama "onlardan sakınmanız hariç" diye bir istisna koyar. Nahl Suresi\'nin 106. ayeti de "kalbi imanla dolu olduğu halde zorlanan" kişiyi ayrı tutar. **Ammâr b. Yâsir**\'in işkence altında diliyle inkâr sözü söylediği ve Peygamber\'in ona "Tekrar ederlerse sen de yine söyle" dediği rivayet bilinir. Câferî fıkıhta takiyye, can, mal ve namus tehlikesinde ve mezhebin korunması gerektiğinde caizdir, bazen de gereklidir. Tarih boyunca Şiiler baskı altında yaşadığı için bu hüküm fıkıhta önemli bir yer buldu. Sünni kaynaklar da aynı ayetleri bu ruhsatın dayanağı olarak gösterir.' },
-      art: { bg: 'mountain', actors: [{ kind: 'man', x: 50, label: { tr: 'Ammar b. Yasir' } }] },
-    },
-    {
-      by: 'both',
-      text: { tr: 'Bazı günler ve hadisler de iki mektepte farklı anlam taşır. Peygamber\'in "Ben kimin mevlâsı isem Ali de onun mevlâsıdır" dediği Gadir hadisi, Sünni kitaplarda da yer alır. Ama "mevlâ" kelimesinin yönetici mi yoksa dost mu anlamına geldiği tartışılır. Âşûrâ günü Sünni kaynaklarda bir oruç günüdür ve Hz. Musa\'nın Firavun\'dan kurtuluşuyla anılır. Bu günde **Hz. Hüseyin**\'in şehadeti de hatırlanır. Câferî gelenekte ise Muharrem\'in ilk on günü ve Âşûrâ, Kerbelâ için tutulan matemin günleridir. Zilhicce\'nin 18\'i de Gadir bayramı olarak kutlanır, çünkü o gün Peygamber Hz. Ali\'nin elini kaldırmıştı.' },
+      text: { tr: 'Bazı günler ve hadisler de iki mektepte farklı anlam taşır. Peygamber\'in "Ben kimin mevlâsı isem Ali de onun mevlâsıdır" dediği Gadir hadisi, Sünni kitaplarda da yer alır. Ama "mevlâ" kelimesinin yönetici mi yoksa dost mu anlamına geldiği tartışılır. Âşûrâ günü Sünni kaynaklarda bir oruç günüdür ve Hz. Musa\'nın Firavun\'dan kurtuluşuyla anılır. Bu günde **Hz. Hüseyin**\'in şehadeti de hatırlanır. Ancak Emevî hanedanı, Âşûrâ gününde Peygamber\'in torununa yapılan zulmün unutulması için bu güne başka anlamlar yükledi. Firavun\'un boğulmasını ve Hz. Nuh\'un gemisinin karaya oturmasını bu güne bağlayan hikâyeler yaydı. Bu günde sofrada kapları açık bırakanın evine bereket geleceği gibi, hiçbir sağlam kaynağa dayanmayan birçok hurafe uydurdu. Amaç, Kerbelâ\'da dökülen kanın hatırasını örtmekti ve bunda büyük ölçüde başarılı oldular. Bugün Müslümanların çok büyük bir kısmının aklına Âşûrâ denince bir tatlı geliyor, ama Kerbelâ maalesef gelmiyor. Câferî gelenekte ise Muharrem\'in ilk on günü ve Âşûrâ, Kerbelâ için tutulan matemin günleridir. Zilhicce\'nin 18\'i de Gadir bayramı olarak kutlanır, çünkü o gün Peygamber Hz. Ali\'nin elini kaldırmıştı.' },
       art: { bg: 'dune-dusk', props: ['flags'], actors: [{ kind: 'husayn', x: 34, label: { tr: 'Hz. Hüseyin' } }, { kind: 'ali', x: 66, label: { tr: 'Hz. Ali' } }] },
     },
     {
@@ -93,7 +88,7 @@ export const ibadetFarklari: HistEvent = {
       sunni: { tr: 'Namazda elin duruşu iki fıkıhta da konuşulur. Çoğunlukta eller bağlanır; Mâlikî mezhebinde sarkıtma görüşü de nakledilmiştir.' },
     },
     {
-      title: { tr: 'Secde taşı (türbe)' },
+      title: { tr: 'Secde taşı (mühür)' },
       shia: { tr: 'Toprağa secde iki gelenekte de delillidir. Câferî fıkıhta secde yerden biten şeye yapılır; Kerbela toprağı müstehaptır.' },
       sunni: { tr: 'Toprağa secde iki gelenekte de delillidir. Sünni mezheplerde secde yeri serbesttir; Buhari 335 yeryüzünün mescit kılındığını bildirir.' },
     },
