@@ -51,11 +51,6 @@ export const ibadetFarklari: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Âl-i İmrân Suresi\'nin 28. ayeti, müminlerin kâfirleri dost edinmemesini söyler, ama "onlardan sakınmanız hariç" diye bir istisna koyar. Nahl Suresi\'nin 106. ayeti de "kalbi imanla dolu olduğu halde zorlanan" kişiyi ayrı tutar. **Ammâr b. Yâsir**\'in işkence altında diliyle inkâr sözü söylediği ve Peygamber\'in ona "Tekrar ederlerse sen de yine söyle" dediği rivayet bilinir. Câferî fıkıhta takiyye, can, mal ve namus tehlikesinde ve mezhebin korunması gerektiğinde caizdir, bazen de gereklidir. Tarih boyunca Şiiler baskı altında yaşadığı için bu hüküm fıkıhta önemli bir yer buldu. Sünni kaynaklar da aynı ayetleri bu ruhsatın dayanağı olarak gösterir.' },
-      art: { bg: 'mountain', actors: [{ kind: 'man', x: 50, label: { tr: 'Ammar b. Yasir' } }] },
-    },
-    {
-      by: 'both',
       text: { tr: 'Bazı günler ve hadisler de iki mektepte farklı anlam taşır. Peygamber\'in "Ben kimin mevlâsı isem Ali de onun mevlâsıdır" dediği Gadir hadisi, Sünni kitaplarda da yer alır. Ama "mevlâ" kelimesinin yönetici mi yoksa dost mu anlamına geldiği tartışılır. Âşûrâ günü Sünni kaynaklarda bir oruç günüdür ve Hz. Musa\'nın Firavun\'dan kurtuluşuyla anılır. Bu günde **Hz. Hüseyin**\'in şehadeti de hatırlanır. Câferî gelenekte ise Muharrem\'in ilk on günü ve Âşûrâ, Kerbelâ için tutulan matemin günleridir. Zilhicce\'nin 18\'i de Gadir bayramı olarak kutlanır, çünkü o gün Peygamber Hz. Ali\'nin elini kaldırmıştı.' },
       art: { bg: 'dune-dusk', props: ['flags'], actors: [{ kind: 'husayn', x: 34, label: { tr: 'Hz. Hüseyin' } }, { kind: 'ali', x: 66, label: { tr: 'Hz. Ali' } }] },
     },
