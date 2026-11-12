@@ -10,6 +10,7 @@ import { mapsForEvent } from '../data/maps';
 import { TRAVEL_METHOD } from '../data/travel';
 import { PurposeCopy } from './PurposeCopy';
 import { LogoZoom } from './LogoZoom';
+import { ImageViewer } from './ImageViewer';
 import { Rich } from './Rich';
 import { EventVideo } from './EventVideo';
 import { ArchIcon, BookIcon, Chevron, CompassIcon, PinIcon, SearchIcon } from './icons';
@@ -245,8 +246,8 @@ function SceneImage({ evId, n, title, width, image }: { evId: string; n: number;
     const f = SCENE_IMAGES[k === 1 ? stem : stem + '-' + k];
     if (f) imgs.push(f);
   }
-  const [pick, setPick] = useState(0);
-  const cur = imgs.length ? imgs[pick % imgs.length] : 0;
+  const [viewer, setViewer] = useState<number | null>(null);
+  const cur = imgs.length ? imgs[0] : 0;
   const resolve = (Image as { resolveAssetSource?: (src: number) => { width?: number; height?: number } | null }).resolveAssetSource;
   let meta: { width?: number; height?: number } | null = null;
   if (cur && typeof resolve === 'function') {
@@ -255,14 +256,15 @@ function SceneImage({ evId, n, title, width, image }: { evId: string; n: number;
   const h = meta && meta.width && meta.height ? Math.round((width * meta.height) / meta.width) : Math.round((width * 9) / 16);
   if (imgs.length) {
     return (
-      <Pressable disabled={imgs.length < 2} onPress={() => setPick(p => (p + 1) % imgs.length)} accessibilityRole={imgs.length > 1 ? 'button' : undefined}>
-        <Image source={cur} resizeMode="cover" style={{ width, height: h }} />
-        {imgs.length > 1 && (
+      <>
+        <Pressable onPress={() => setViewer(0)} accessibilityRole="button" accessibilityLabel="Görseli tam ekran aç">
+          <Image source={cur} resizeMode="cover" style={{ width, height: h }} />
           <View style={s.imgCount}>
-            <Text style={s.imgCountText}>{(pick % imgs.length) + 1}/{imgs.length} · dokun</Text>
+            <Text style={s.imgCountText}>⤢{imgs.length > 1 ? ` ${imgs.length} görsel` : ''}</Text>
           </View>
-        )}
-      </Pressable>
+        </Pressable>
+        {viewer !== null && <ImageViewer images={imgs} start={viewer} caption={title + ' · Sahne ' + n} onClose={() => setViewer(null)} />}
+      </>
     );
   }
   return (
