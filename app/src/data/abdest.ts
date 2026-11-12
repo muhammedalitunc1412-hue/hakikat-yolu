@@ -20,7 +20,7 @@ export const abdest: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: 'Ehl-i Beyt imamlarından gelen rivayetlerde ayak meshinin nasıl yapılacağı ayrıntısıyla anlatılır. Mesh, ayağın üstüne, parmak uçlarından topuğa kadar ıslak elle yapılır ve ayak yıkanmaz. Şeyh Tûsî\'nin Tehzîb\'i ve Kuleynî\'nin el-Kâfî\'si bu görüşün başlıca kaynakları arasındadır. Câferî mektep, Mâide 6\'yı bu rivayetlerin ışığında uygular. Ona göre ayak meshi kişisel bir tercih değildir. Ayetin okunuşu ile Peygamber\'in Ehl-i Beyt\'inden gelen bilgi aynı noktada buluşur.' },
+      text: { tr: 'Ehl-i Beyt imamlarından gelen rivayetlerde ayak meshinin nasıl yapılacağı ayrıntısıyla anlatılır. Mesh, ayağın üstüne, parmak uçlarından bileğe kadar ıslak elle yapılır ve ayak yıkanmaz. Şeyh Tûsî\'nin Tehzîb\'i ve Kuleynî\'nin el-Kâfî\'si bu görüşün başlıca kaynakları arasındadır. Câferî mektep, Mâide 6\'yı bu rivayetlerin ışığında uygular. Ona göre ayak meshi kişisel bir tercih değildir. Ayetin okunuşu ile Peygamber\'in Ehl-i Beyt\'inden gelen bilgi aynı noktada buluşur.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 40, pose: 'sit', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 66, pose: 'sit', label: { tr: 'Öğrenci' } }] },
     },
     {
