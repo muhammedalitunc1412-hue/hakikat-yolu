@@ -99,9 +99,9 @@ export function Rich({ text, style, selectable }: { text: L | string | undefined
         <Pressable style={r.backdrop} onPress={() => setOpen(null)}>
           <Pressable style={r.card} onPress={() => {}}>
             {v && (
-              <ScrollView showsVerticalScrollIndicator={false}>
+              <ScrollView style={r.scroll} showsVerticalScrollIndicator persistentScrollbar>
                 <Text style={r.title}>{v.sure} Suresi, {v.ayah}. ayet</Text>
-                <Text style={r.arabic}>{v.ar}</Text>
+                <Text style={[r.arabic, v.ar.length > 300 && r.arabicLong]}>{v.ar}</Text>
                 <Text style={[r.label, { color: C.shia }]}>MEAL (Diyanet İşleri)</Text>
                 <Text style={r.body}>{v.meal}</Text>
               </ScrollView>
@@ -123,6 +123,8 @@ const r = themedStyles(() => StyleSheet.create({
   card: { backgroundColor: C.card, borderRadius: 18, borderWidth: 1, borderColor: C.line, padding: 18, maxHeight: '86%' },
   title: { color: C.gold, fontFamily: font.serif, fontSize: 18, fontWeight: '700', marginBottom: 10 },
   arabic: { color: '#fff8e0', fontFamily: font.arabic, fontSize: 26, lineHeight: 48, textAlign: 'right', writingDirection: 'rtl', marginBottom: 8 },
+  scroll: { flexShrink: 1 },
+  arabicLong: { fontSize: 21, lineHeight: 38 },
   label: { fontFamily: font.sans, fontWeight: '800', fontSize: 12, letterSpacing: 1, marginTop: 10, marginBottom: 3 },
   body: { color: C.text, fontFamily: font.sans, fontSize: 16, lineHeight: 25 },
   close: { marginTop: 14, minHeight: 48, padding: 12, borderRadius: 14, backgroundColor: C.gold, alignItems: 'center', justifyContent: 'center' },
