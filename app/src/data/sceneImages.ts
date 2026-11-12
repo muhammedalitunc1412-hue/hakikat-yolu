@@ -55,7 +55,6 @@ export const SCENE_IMAGES: Record<string, number> = {
   'gadir-1': require('../../assets/scenes/gadir-1.jpg'),
   'gadir-2': require('../../assets/scenes/gadir-2.jpg'),
   'gadir-3': require('../../assets/scenes/gadir-3.jpg'),
-  'gadir-4-2': require('../../assets/scenes/gadir-4-2.jpg'),
   'gadir-4': require('../../assets/scenes/gadir-4.jpg'),
   'gadir-5': require('../../assets/scenes/gadir-5.jpg'),
   'gadir-6': require('../../assets/scenes/gadir-6.jpg'),
