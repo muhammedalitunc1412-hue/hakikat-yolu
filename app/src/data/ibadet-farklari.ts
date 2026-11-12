@@ -26,12 +26,12 @@ export const ibadetFarklari: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Câbir b. Abdillah\'tan gelen bir rivayette Peygamber şöyle der: "Yeryüzü bana ve ümmetime mescit ve teyemmüm vasıtası kılındı." Câferî fıkıh bu hadise dayanarak secdenin toprağa ya da yerden biten, yenmeyen ve giyilmeyen bir şeye yapılmasını şart koşar. Halı ya da kumaş gibi şeyler bu şartı karşılamaz. Bu yüzden birçok Şii yanında "türbe" denen küçük bir secde taşı taşır ve namazda alnını onun üstüne koyar. Bu taş için özellikle Kerbelâ toprağı tercih edilir. Sünni mezheplerde ise secde yeri daha geniştir. Halı, hasır ya da toprak üzerine secde edilebilir.' },
+      text: { tr: 'Câbir b. Abdillah\'tan gelen bir rivayette Peygamber şöyle der: "Yeryüzü bana ve ümmetime mescit ve teyemmüm vasıtası kılındı." Câferî fıkıh bu hadise dayanarak secdenin toprağa ya da yerden biten, yenmeyen ve giyilmeyen bir şeye yapılmasını şart koşar. Halı ya da kumaş gibi şeyler bu şartı karşılamaz. Bu yüzden birçok Şii yanında "mühür" denen küçük bir secde taşı taşır ve namazda alnını onun üstüne koyar. Bu taş için özellikle Kerbelâ toprağı tercih edilir. Sünni mezheplerde ise secde yeri daha geniştir. Halı, hasır ya da toprak üzerine secde edilebilir.' },
       art: { bg: 'interior', actors: [{ kind: 'man', x: 50, pose: 'sit', label: { tr: 'Secdede' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Kerbelâ toprağına duyulan sevgi, orasının **Hz. Hüseyin**\'in şehit olduğu yer olmasından gelir. Bazı rivayetler bu toprağa şifa ve sevap bağlar, ama bu rivayetlerin senet değeri Şii âlimler arasında da tartışılır. Şii fıkhında toprağa secde etmek sünnettir, Kerbelâ toprağından yapılmış türbeyi kullanmak ise müstehap sayılır. Secde taşı kullanmak Sünni mezheplerde de yasak değildir. Câferî mektep için türbe, Peygamber\'in toprağa yaptığı secdenin bir devamıdır. Kerbelâ toprağını seçmek ise o toprağa düşen kanın hatırasıdır.' },
+      text: { tr: 'Kerbelâ toprağına duyulan sevgi, orasının **Hz. Hüseyin**\'in şehit olduğu yer olmasından gelir. Bazı rivayetler bu toprağa şifa ve sevap bağlar, ama bu rivayetlerin senet değeri Şii âlimler arasında da tartışılır. Şii fıkhında toprağa secde etmek sünnettir, Kerbelâ toprağından yapılmış mührü kullanmak ise müstehap sayılır. Secde taşı kullanmak Sünni mezheplerde de yasak değildir. Câferî mektep için mühür, Peygamber\'in toprağa yaptığı secdenin bir devamıdır. Kerbelâ toprağını seçmek ise o toprağa düşen kanın hatırasıdır.' },
       art: { bg: 'dune-dusk', props: ['sun'], actors: [{ kind: 'husayn', x: 50, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
@@ -93,7 +93,7 @@ export const ibadetFarklari: HistEvent = {
       sunni: { tr: 'Namazda elin duruşu iki fıkıhta da konuşulur. Çoğunlukta eller bağlanır; Mâlikî mezhebinde sarkıtma görüşü de nakledilmiştir.' },
     },
     {
-      title: { tr: 'Secde taşı (türbe)' },
+      title: { tr: 'Secde taşı (mühür)' },
       shia: { tr: 'Toprağa secde iki gelenekte de delillidir. Câferî fıkıhta secde yerden biten şeye yapılır; Kerbela toprağı müstehaptır.' },
       sunni: { tr: 'Toprağa secde iki gelenekte de delillidir. Sünni mezheplerde secde yeri serbesttir; Buhari 335 yeryüzünün mescit kılındığını bildirir.' },
     },
