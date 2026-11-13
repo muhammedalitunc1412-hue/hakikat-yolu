@@ -13,6 +13,7 @@ import { LANGUAGES, languageOption, setLang, ui } from './src/i18n';
 import type { Lang } from './src/types';
 import { RequiredUpdate, useRequiredUpdate } from './src/update/RequiredUpdate';
 import { C, PAGE_MAX, TOP, font, setTheme } from './src/ui/theme';
+import { cancel, ensurePermission, loadEnabled, nextReminder, openOf, saveEnabled, schedule, setupNotifications, useLastResponse } from './src/notifications';
 
 type Route =
   | { name: 'home' }
@@ -25,6 +26,8 @@ type Route =
   | { name: 'imams' }
   | { name: 'imam'; id: string }
   | { name: 'map'; id: string };
+
+setupNotifications();
 
 const LANGUAGE_KEY = 'hakikat-yolu:language';
 const PURPOSE_AT_KEY = 'hakikat-yolu:purpose-seen-at';
@@ -39,6 +42,10 @@ export default function App() {
   const [purposeSeen, setPurposeSeen] = useState(false);
   const [editingLanguage, setEditingLanguage] = useState(false);
   const [draftLanguage, setDraftLanguage] = useState<Lang>('tr');
+  const [remind, setRemind] = useState(false);
+  const [remindDenied, setRemindDenied] = useState(false);
+  const handledResponse = useRef('');
+  const lastResponse = useLastResponse();
   useEffect(() => {
     let active = true;
     Promise.all([
@@ -66,6 +73,24 @@ export default function App() {
     });
     return () => { active = false; };
   }, []);
+
+  useEffect(() => { void loadEnabled().then(setRemind); }, []);
+  // Açıkken yaklaşan günleri (dile göre) her açılışta yeniden zamanla.
+  useEffect(() => { if (ready && remind) void schedule(lang); }, [ready, remind, lang]);
+
+  async function toggleRemind() {
+    if (remind) {
+      setRemind(false); setRemindDenied(false);
+      await saveEnabled(false); await cancel();
+      return;
+    }
+    if (await ensurePermission()) {
+      setRemindDenied(false); setRemind(true);
+      await saveEnabled(true);
+    } else {
+      setRemindDenied(true);
+    }
+  }
 
   function confirmLanguage() {
     setLanguage(draftLanguage);
@@ -105,6 +130,18 @@ export default function App() {
   // Kerbela ve Hz. Hüseyin alanları kan kırmızısı temayla açılır
   setTheme((route.name === 'event' && (route.id === 'kerbela' || route.id === 'fatima-vefat')) || (route.name === 'imam' && route.id === 'huseyin') ? 'blood' : 'default');
 
+  // Bildirime dokunulunca ilgili dua / olay / imam sayfasını aç.
+  useEffect(() => {
+    if (!ready || requiredStore || !lastResponse) return;
+    const key = lastResponse.notification.request.identifier;
+    if (handledResponse.current === key) return;
+    handledResponse.current = key;
+    const o = openOf(lastResponse);
+    if (!o) return;
+    setEditingLanguage(false);
+    setStack([{ name: 'home' }, o.kind === 'event' ? { name: 'event', id: o.id } : o.kind === 'dua' ? { name: 'dua', id: o.id } : { name: 'imam', id: o.id }]);
+  }, [ready, requiredStore, lastResponse]);
+
   const ev = route.name === 'event' ? EVENTS.find(e => e.id === route.id) : undefined;
   const dua = route.name === 'dua' ? DUAS.find(d => d.id === route.id) : undefined;
 
@@ -128,6 +165,17 @@ export default function App() {
                 <Text style={{ color: C.cream, fontSize: 17 }}>{option.id === draftLanguage ? '✓ ' : ''}{option.name}</Text>
               </Pressable>
             ))}
+            {editingLanguage && (
+              <View style={{ marginTop: 18, gap: 10 }}>
+                <Text accessibilityRole="header" style={{ color: C.gold, fontSize: 20, fontWeight: '700' }}>{ui('occasions')}</Text>
+                <Text style={{ color: C.text, fontSize: 14, lineHeight: 21 }}>{ui('occasionsHint')}</Text>
+                <Pressable onPress={() => void toggleRemind()} accessibilityRole="switch" accessibilityState={{ checked: remind }} style={{ padding: 12, backgroundColor: C.card, borderWidth: 1, borderColor: remind ? C.gold : C.lineStrong }}>
+                  <Text style={{ color: C.cream, fontSize: 17 }}>{remind ? '✓ ' : ''}{ui('occasions')}: {remind ? ui('occasionsOn') : ui('occasionsOff')}</Text>
+                </Pressable>
+                {remindDenied && <Text style={{ color: C.gold, fontSize: 14, lineHeight: 21 }}>{ui('occasionsDenied')}</Text>}
+                {remind && (() => { const n = nextReminder(lang); return n ? <Text style={{ color: C.text, fontSize: 14, lineHeight: 21 }}>{ui('occasionsNext')}: {n.title} · {n.at.toLocaleDateString(lang, { day: 'numeric', month: 'long' })}</Text> : null; })()}
+              </View>
+            )}
             <Pressable onPress={confirmLanguage} accessibilityRole="button" style={{ padding: 14, alignItems: 'center', backgroundColor: C.card }}>
               <Text style={{ color: C.gold, fontSize: 17, fontWeight: '700' }}>{editingLanguage ? ui('saveLanguage') : languageOption(draftLanguage).confirm}</Text>
             </Pressable>

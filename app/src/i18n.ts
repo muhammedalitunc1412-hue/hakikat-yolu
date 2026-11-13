@@ -106,6 +106,12 @@ export const languageOption = (id: string | null) =>
 
 const navigation: Record<string, L> = {
   settings: { tr: 'Ayarlar', en: 'Settings', ar: 'الإعدادات', az: 'Parametrlər', fa: 'تنظیمات', ur: 'ترتیبات', es: 'Ajustes', fr: 'Paramètres', de: 'Einstellungen' },
+  occasions: { tr: 'Özel gün bildirimleri', en: 'Reminders for special days' },
+  occasionsHint: { tr: 'Kerbela, Aşure, Eyyâm-ı Fâtımiyye, Gadir gibi günlerde ilgili duayı ya da olayı hatırlatan bildirim gelir. Bildirimler yalnızca telefonunda oluşur; hiçbir veri gönderilmez. Günler Hicri takvimden hesaplanır, hilal gözlemine göre bir gün kayabilir.', en: 'On days such as Karbala, Ashura, the Fatimid days and Ghadir you get a reminder about the related dua or story. Reminders are created on your phone only; no data is sent. Days are calculated from the Hijri calendar and may differ by a day depending on moon sighting.' },
+  occasionsOn: { tr: 'Açık', en: 'On' },
+  occasionsOff: { tr: 'Kapalı', en: 'Off' },
+  occasionsDenied: { tr: 'Bildirim izni verilmedi. Telefonun ayarlarından uygulamaya bildirim izni verip tekrar dene.', en: 'Notification permission was not granted. Allow notifications for the app in your phone settings and try again.' },
+  occasionsNext: { tr: 'Sıradaki', en: 'Next' },
   saveLanguage: { tr: 'Dili kaydet', en: 'Save language', ar: 'احفظ اللغة', az: 'Dili yadda saxla', fa: 'ذخیره زبان', ur: 'زبان محفوظ کریں', es: 'Guardar idioma', fr: 'Enregistrer la langue', de: 'Sprache speichern' },
   back: { tr: 'Geri', en: 'Back', ar: 'رجوع', az: 'Geri', fa: 'بازگشت', es: 'Atrás', fr: 'Retour', de: 'Zurück' },
   homeBtn: { tr: 'Ana sayfa', en: 'Home', ar: 'الرئيسية', az: 'Ana səhifə', fa: 'خانه', es: 'Inicio', fr: 'Accueil', de: 'Startseite' },

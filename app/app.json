@@ -26,6 +26,7 @@
     },
     "plugins": [
       "expo-video",
+      "expo-notifications",
       [
         "expo-location",
         {
