@@ -47,6 +47,8 @@ function Back({ onPress }: { onPress: () => void }) {
   );
 }
 
+let lastCat = 0; // Hikâyeden dönünce aynı kategoride kalmak için
+
 export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, onMaps, onQibla, onImams }: {
   events: HistEvent[];
   langName: string;
@@ -61,7 +63,8 @@ export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, o
   const sc = useScrollMemory('home');
   const width = usePageWidth();
   const [q, setQ] = useState('');
-  const [catI, setCatI] = useState(0);
+  const [catI, setCatIState] = useState(lastCat);
+  const setCatI = (i: number) => { lastCat = i; setCatIState(i); };
   const catRef = useRef<FlatList<(typeof CATEGORIES)[number]>>(null);
   const query = norm(q.trim());
   const wide = width >= 560;
@@ -157,6 +160,7 @@ export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, o
         <View style={{ marginTop: 22 }}>
           <FlatList
             ref={catRef}
+            onLayout={() => { if (lastCat > 0) catRef.current?.scrollToOffset({ offset: lastCat * (cardW + gap), animated: false }); }}
             data={CATEGORIES}
             horizontal
             keyExtractor={c => c.id}
