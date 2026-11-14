@@ -40,6 +40,7 @@ export const SCENE_IMAGES: Record<string, number> = {
   'fatima-vefat-10': require('../../assets/scenes/fatima-vefat-10.jpg'),
   'fatima-vefat-2': require('../../assets/scenes/fatima-vefat-2.jpg'),
   'fatima-vefat-3': require('../../assets/scenes/fatima-vefat-3.jpg'),
+  'fatima-vefat-4': require('../../assets/scenes/fatima-vefat-4.jpg'),
   'fatima-vefat-5': require('../../assets/scenes/fatima-vefat-5.jpg'),
   'fatima-vefat-6': require('../../assets/scenes/fatima-vefat-6.jpg'),
   'fatima-vefat-7': require('../../assets/scenes/fatima-vefat-7.jpg'),
