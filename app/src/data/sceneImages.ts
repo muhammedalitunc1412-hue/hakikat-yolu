@@ -261,6 +261,7 @@ export const SCENE_IMAGES: Record<string, number> = {
   'siffin-1': require('../../assets/scenes/siffin-1.jpg'),
   'siffin-10': require('../../assets/scenes/siffin-10.jpg'),
   'siffin-11': require('../../assets/scenes/siffin-11.jpg'),
+  'siffin-2': require('../../assets/scenes/siffin-2.jpg'),
   'siffin-3': require('../../assets/scenes/siffin-3.jpg'),
   'siffin-4': require('../../assets/scenes/siffin-4.jpg'),
   'siffin-5': require('../../assets/scenes/siffin-5.jpg'),
