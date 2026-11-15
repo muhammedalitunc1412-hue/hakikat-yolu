@@ -84,7 +84,7 @@ export const CATEGORIES: { id: string; title: string; sub: string; ids: string[]
   { id: 'ehlibeyt', title: 'Ehl-i Beyt ve Gadir', sub: 'Pence-i Âl-i Aba, Mübahele, Hz. Ali kimdir, Hayber, Tebük, Gadir Hum', ids: ['pence-aba', 'ehlibeyt', 'ali-kimdir', 'hayber', 'menzile', 'gadir'] },
   { id: 'hilafet', title: 'Peygamber\'den Sonra: Hilafet', sub: 'Kırtas, Sakife, istihlaf ve Şura, Halife Osman dönemi', ids: ['raziyye', 'sakife', 'istihlaf', 'osman'] },
   { id: 'fatima', title: 'Hz. Fatıma', sub: 'Fedek hakkı, Eyyâm-ı Fâtımiyye, gece defin ve gizli kabir', ids: ['fedek', 'fatima-vefat'] },
-  { id: 'ali', title: 'Hz. Ali Dönemi', sub: 'Cemel, Sıffin, Hakem, Nehrevan, minberlerde sövme', ids: ['cemel', 'siffin', 'nehrevan', 'sebb'] },
+  { id: 'ali', title: 'Hz. Ali Dönemi', sub: 'Cemel, Sıffin, Hakem, Nehrevan, minberlerde sövme, Mâlik el-Eşter\'e ahidnâme', ids: ['cemel', 'siffin', 'nehrevan', 'sebb'] },
   { id: 'muaviye', title: 'Muaviye Kimdir?', sub: "Ailesi, Hz. Ali'ye karşı Sıffin, Hz. Hasan ile sulhu ve iktidarı", ids: ['muaviye-kimdir', 'muaviye-ali', 'muaviye-hasan', 'muaviye-iktidar'] },
   { id: 'imamlar', title: 'İmamlar ve Kerbela', sub: 'Hz. Hasan, Meysem et-Temmâr, Kerbela, imamlar', ids: ['hasan', 'meysem', 'kerbela', 'imamlar'] },
   { id: 'harre', title: 'Harre Vakası', sub: 'Medine\'nin yağmalanması, Yezid\'in emri ve Kâbe\'nin taşlanması', ids: ['harre'] },
