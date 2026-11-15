@@ -26,7 +26,7 @@ export type Art = {
 // 'partial' = Şii kaynaklarında ve en az bir tanınmış Sünni kaynakta geçer, ama Sünni ana akım tamamen kabul etmez).
 export type Accept = 'both' | 'shia' | 'sunni' | 'partial';
 export type SceneCite = { side: 'sunni' | 'shia'; i: number };
-export type Scene = { text: L; art: Art; by?: Accept; cites?: SceneCite[]; image?: string };
+export type Scene = { text: L; art: Art; by?: Accept; cites?: SceneCite[]; image?: string; textOnly?: boolean };
 export type Dispute = { title: L; sunni: L; shia: L };
 
 export type HistEvent = {

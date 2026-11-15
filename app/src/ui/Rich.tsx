@@ -26,7 +26,7 @@ for (const [n, names] of SURAH_NAMES) for (const name of names) SURAH[name] = n;
 const NAME_ALT = Object.keys(SURAH).sort((a, b) => b.length - a.length).map(s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
 const DIG = '[0-9\\u0660-\\u0669\\u06F0-\\u06F9]';
 const BEFORE = "A-Za-z\\u00C0-\\u024F\\u0259\\u018F\\u0600-\\u06FF'’ʿʾ";
-const RE = new RegExp(`(^|[^${BEFORE}])(${NAME_ALT})(?: suresi| sûresi)?\\s+(?:(${DIG}{1,3})\\s*:\\s*)?(${DIG}{1,3})(?!${DIG}|:)`, 'g');
+const RE = new RegExp(`(^|[^${BEFORE}])(${NAME_ALT})(?: [Ss][uû]resi(?:['’]n[iıuü]n)?)?\\s+(?:(${DIG}{1,3})\\s*:\\s*)?(${DIG}{1,3})(?!${DIG}|:)`, 'g');
 const latinDigits = (s: string) => s.replace(/[٠-٩]/g, c => String(c.charCodeAt(0) - 0x660)).replace(/[۰-۹]/g, c => String(c.charCodeAt(0) - 0x6F0));
 
 type Part = { t: string; key?: string };

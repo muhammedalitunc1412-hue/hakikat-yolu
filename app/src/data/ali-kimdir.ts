@@ -76,6 +76,21 @@ export const aliKimdir: HistEvent = {
       cites: [{ side: 'sunni', i: 10 }],
     },
     {
+      text: { tr: '**Ebû Zer**, bir gün Hz. Peygamber\'le birlikte onun mescidinde öğle namazını kılıyordu. Namazın huzuru mescidin içini kaplamıştı. Saflar duruyordu, sesler kesilmişti. Tam o sırada içeri bir dilenci girdi. Ellerini açtı ve orada namaz kılanlardan yardım istedi. Mescidin içindekilerden hiçbiri ona bir şey vermedi. Dilenci bir süre bekledi, sonra ellerini göğe kaldırdı. Hz. Peygamber\'in mescidinde sadaka istediğini, fakat kimsenin ona el uzatmadığını söyledi. O sırada **Hz. Ali** rükûdaydı. Namazını bozmadan sağ elinin küçük parmağını uzattı. O parmağında bir yüzük vardı. Dilenci bu işareti gördü, yaklaştı, yüzüğü parmağından sıyırıp aldı ve mescidin içinden uzaklaştı. Hz. Peygamber, Hz. Ali\'nin rükû hâlindeyken yüzüğünü sadaka olarak vermesini görmüştü. Bunun üzerine Mâide Suresi\'nin 55. ayeti indi: "Sizin veliniz ancak Allah, Resulü ve namaz kılıp rükû hâlindeyken zekât veren müminlerdir." Bu ayet velayet ayeti olarak anılır. Ayet "ancak" kelimesiyle başlar ve velayeti Allah\'a, Resulüne ve rükû hâlindeyken zekât veren müminlere has kılar. Şii tefsirler ayetteki velinin, Allah ve Resulünden sonra, rükû hâlindeyken yüzüğünü veren **Hz. Ali** olduğunu söyler. Birçok Sünni tefsir de bu olayın Hz. Ali hakkında nakledildiğini yazar. **Ebû Zer**, o gün mescidde gördüklerini ve işittiklerini sonraları kendisi nakletti.' },
+      textOnly: true,
+      art: { bg: 'interior', actors: [{ kind: 'ali', x: 40, pose: 'sit', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 68, label: { tr: 'Dilenci' } }] },
+      by: 'partial',
+      cites: [
+        { side: 'sunni', i: 11 },
+        { side: 'sunni', i: 12 },
+        { side: 'sunni', i: 13 },
+        { side: 'sunni', i: 14 },
+        { side: 'sunni', i: 15 },
+        { side: 'sunni', i: 16 },
+        { side: 'shia', i: 9 },
+      ],
+    },
+    {
       text: { tr: 'Peygamber vefat ettiğinde **Hz. Ali** onun başucundaydı. Mübarek gözlerini o kapadı. Ehl-i Beyt rivayetlerine göre Peygamber, kendisini Hz. Ali\'nin yıkamasını vasiyet etmişti. Hz. Ali gözyaşları içinde Peygamber\'in bedenini yıkamaya başladı. Aynı saatlerde Medine\'nin bir köşesinde, Sakife\'de, Peygamber\'den sonra yönetimin kime geçeceği konuşuluyordu. Gadir\'de eli kaldırılan Hz. Ali, o toplantıya çağrılmadı. O sırada o, en değerli emanetin, Peygamber\'in mübarek bedeninin başında duruyordu.' },
       image: 'ali-kimdir-10',
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 40, pose: 'sit', label: { tr: 'Hz. Ali' } }, { kind: 'prophet', x: 64, pose: 'sit', label: { tr: 'Hz. Peygamber' } }] },
@@ -94,6 +109,12 @@ export const aliKimdir: HistEvent = {
     { book: 'İbn Mâce, es-Sünen', ref: 'Cenâiz bölümü, Peygamber\'in yıkanması (numara kontrol edilecek)', says: { tr: 'Hz. Ali\'nin Peygamber\'i yıkamada yer aldığı rivayeti.' }, status: 'check' },
     { book: 'İbn Hişâm, es-Sîre; Halebî, es-Sîre', ref: 'Hicret bölümü (WikiShia atfı; kitaplar okunmadı)', says: { tr: 'Hz. Ali\'nin hicret gecesi Peygamber\'in yatağında yatması.' }, status: 'check' },
     { book: 'Ebû Dâvûd, es-Sünen', ref: 'No. 2125 (Nikâh)', says: { tr: 'İbn Abbas: Hz. Ali Hz. Fatıma ile evlenince Peygamber ona "Ona bir şey ver" dedi. Hz. Ali "Bir şeyim yok" deyince Peygamber "Hutamî zırhın nerede?" diye sordu.' }, url: 'https://sunnah.com/abudawud:2125', status: 'verified' },
+    { book: 'Taberî, Câmi\'u\'l-Beyân', ref: 'Mâide 55 tefsiri (cilt/sayfa baskıya göre değişir)', says: { tr: 'Suddî ve Mücahid tariklerinden, ayetin Hz. Ali hakkında indiğini ve onun rükûdayken yüzüğünü sadaka olarak verdiğini nakleder.' }, status: 'check' },
+    { book: 'Vâhidî, Esbâbü\'n-Nüzûl', ref: 'Mâide 55', says: { tr: 'Ayetin, Hz. Ali\'nin namazın rükûunda yüzüğünü fakire vermesi üzerine indiğini yazar.' }, status: 'check' },
+    { book: 'Zemahşerî, el-Keşşâf', ref: 'Mâide 55–56 tefsiri', says: { tr: 'Ayetin Hz. Ali hakkında indiğini, dilencinin rükûdaki Hz. Ali\'den yardım istediğini ve Hz. Ali\'nin küçük parmağındaki yüzüğü ona verdiğini yazar.' }, status: 'check' },
+    { book: 'Fahreddin Râzî, Mefâtîhu\'l-Gayb', ref: 'Mâide 55; atıfta cilt 11, s. 26 (Tahran, tarihsiz) geçer, sayfa DOĞRULANMADI', says: { tr: 'Ebû Zer tarikiyle öğle namazında mescide gelen dilenciye kimsenin vermediğini, rükûdaki Hz. Ali\'nin sağ elinin küçük parmağındaki yüzüğü işaret ettiğini ve dilencinin yüzüğü aldığını genişçe nakleder; ardından ayetin indiğini yazar.' }, status: 'check' },
+    { book: 'Sa\'lebî, el-Keşf ve\'l-Beyân', ref: 'Mâide 55 (Ebû Zer rivayeti)', says: { tr: 'Ebû Zer\'den, Peygamber\'le birlikte namaz kılarken bir dilencinin mescidde yardım isteyip kimsenin vermediğini, rükûdaki Hz. Ali\'nin yüzüklü küçük parmağını uzattığını ve dilencinin yüzüğü aldığını nakleder; ardından ayetin indiğini yazar.' }, status: 'check' },
+    { book: 'İbn Kesîr, Tefsîrü\'l-Kur\'ânü\'l-Azîm', ref: 'Mâide 55 tefsiri', says: { tr: 'Hz. Ali\'nin rükûdayken yüzüğünü verdiğine dair rivayetleri aktarır. İbn Abbas, Suddî ve Mücahid tariklerini de anar. Ardından bu haberlerin hiçbirinin isnadlarının zayıflığı ve râvilerinin mechullüğü sebebiyle sahih olmadığını söyler. Ayeti bütün müminlerin vilayeti olarak okur.' }, url: 'https://quranpedia.net/tafsir/al-maida/55/ibn-kathir', status: 'check' },
   ],
   shia: [
     { book: 'Şeyh Müfid, el-İrşâd', ref: 'cilt 1, s. 5 (Müessesetü Âli\'l-Beyt)', says: { tr: 'Hz. Ali Cuma günü, 13 Receb, Fil yılından otuz yıl sonra Mekke\'de Beytullah\'ta doğdu. Ondan önce de sonra da Allah\'ın evinde doğan olmadı; bu, Allah\'ın ona ikramıdır. Annesi Fatıma bint Esed\'dir.' }, url: 'https://lib.eshia.ir/27035/1/5', status: 'verified' },
@@ -105,6 +126,7 @@ export const aliKimdir: HistEvent = {
     { book: 'Emînî, el-Gadîr', ref: 'İlim şehri hadisi bölümü (WikiShia atfı)', says: { tr: 'İlim şehri hadisinin birçok Sünni ravisinin sahih saydığı aktarılır; Şia\'ya göre mütevatirdir.' }, status: 'check' },
     { book: 'Kuleynî, el-Kâfî; Şeyh Müfid, el-İrşâd', ref: 'Peygamber\'in yıkanması ve defni bölümü (cilt/sayfa kontrol edilecek)', says: { tr: 'Peygamber\'in vefatı, Hz. Ali\'nin yıkaması ve defni.' }, status: 'check' },
     { book: 'Şii tefsirleri ve hadis kitapları', ref: 'Şûrâ 23 (Mevedde) - Hz. Ali, Fatıma, Hz. Hasan, Hz. Hüseyin (kitap/numara kontrol edilecek)', says: { tr: '"Yakınlar" ifadesinin Ehl-i Beyt\'i kastettiği görüşü.' }, status: 'check' },
+    { book: 'Tabersî, Mecmau\'l-Beyân', ref: 'Mâide 55 tefsiri (cilt/sayfa baskıya göre değişir)', says: { tr: 'Ayetin Hz. Ali hakkında indiğini yazar ve Ebû Zer tarikiyle rükûdayken yüzüğün sadaka olarak verilişini nakleder.' }, status: 'check' },
   ],
   disputes: [
     {
@@ -136,6 +158,11 @@ export const aliKimdir: HistEvent = {
       title: { tr: 'Mevedde ayetinde "yakınlar" kimdir?' },
       shia: { tr: 'Şûrâ 23 yakınlara sevgi ister; Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin diye açıklayan tefsirler vardır. Şia\'da bu dört kişi kastedilir ve sevgileri risaletin karşılığıdır.' },
       sunni: { tr: 'Şûrâ 23 yakınlara sevgi ister; Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin diye açıklayan tefsirler vardır. Buhari, Sahih\'teki İbn Abbas rivayeti ise yakınları Kureyş akrabalığı olarak anlar.' },
+    },
+    {
+      title: { tr: 'Mâide 55 kimin hakkında indi?' },
+      shia: { tr: 'Şia\'da Mâide 55, Hz. Ali\'nin rükûdayken yüzüğünü sadaka olarak vermesi üzerine inmiştir ve velayetini bildirir. Tabersî, Mecmau\'l-Beyân\'da bu nüzul sebebini nakleder.' },
+      sunni: { tr: 'Taberî, Vâhidî, Zemahşerî, Râzî ve Sa\'lebî, ayetin Hz. Ali\'nin rükûdayken yüzüğünü vermesiyle bağını nakleder. İbn Kesîr ise bu haberlerin isnadlarını zayıf, râvilerini mechul sayar ve ayeti bütün müminlerin vilayeti olarak okur.' },
     },
   ],
   questions: [
