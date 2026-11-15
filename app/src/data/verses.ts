@@ -33,6 +33,12 @@ export const VERSES: Record<string, Verse> = {
     "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِذَا قُمْتُمْ إِلَى ٱلصَّلَوٰةِ فَٱغْسِلُوا۟ وُجُوهَكُمْ وَأَيْدِيَكُمْ إِلَى ٱلْمَرَافِقِ وَٱمْسَحُوا۟ بِرُءُوسِكُمْ وَأَرْجُلَكُمْ إِلَى ٱلْكَعْبَيْنِ ۚ وَإِن كُنتُمْ جُنُبًۭا فَٱطَّهَّرُوا۟ ۚ وَإِن كُنتُم مَّرْضَىٰٓ أَوْ عَلَىٰ سَفَرٍ أَوْ جَآءَ أَحَدٌۭ مِّنكُم مِّنَ ٱلْغَآئِطِ أَوْ لَٰمَسْتُمُ ٱلنِّسَآءَ فَلَمْ تَجِدُوا۟ مَآءًۭ فَتَيَمَّمُوا۟ صَعِيدًۭا طَيِّبًۭا فَٱمْسَحُوا۟ بِوُجُوهِكُمْ وَأَيْدِيكُم مِّنْهُ ۚ مَا يُرِيدُ ٱللَّهُ لِيَجْعَلَ عَلَيْكُم مِّنْ حَرَجٍۢ وَلَٰكِن يُرِيدُ لِيُطَهِّرَكُمْ وَلِيُتِمَّ نِعْمَتَهُۥ عَلَيْكُمْ لَعَلَّكُمْ تَشْكُرُونَ",
     "meal": "Ey İnananlar! Namaza kalktığınızda yüzlerinizi, dirseklere kadar ellerinizi, -başlarınızı meshedip- topuk kemiklerine kadar ayaklarınızı yıkayın. Eğer cünüpseniz yıkanıp temizlenin; şayet hasta veya yolculukta iseniz veya ayak yolundan gelmişseniz yahut kadınlara yaklaşmışsanız ve su bulamamışsanız temiz bir toprağa teyemmüm edin, yüzlerinizi, ellerinizi onunla meshedin. Allah sizi zorlamak istemez, Allah sizi arıtıp üzerinize olan nimetini tamamlamak ister ki şükredesiniz."
   },
+  "5:55": {
+    "sure": "Mâide",
+    "ayah": 55,
+    "ar": "إِنَّمَا وَلِيُّكُمُ ٱللَّهُ وَرَسُولُهُۥ وَٱلَّذِينَ ءَامَنُوا۟ ٱلَّذِينَ يُقِيمُونَ ٱلصَّلَوٰةَ وَيُؤْتُونَ ٱلزَّكَوٰةَ وَهُمْ رَٰكِعُونَ",
+    "meal": "Sizin dostunuz ancak Allah, O'nun Peygamberi ve namaz kılan, zekat veren ve rüku eden müminlerdir."
+  },
   "4:24": {
     "sure": "Nisâ",
     "ayah": 24,
