@@ -468,7 +468,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
           ) : (
             <View style={{ width }}>
               <View collapsable={false} onLayout={e => setPageHeight(index, e.nativeEvent.layout.height)}>
-                <SceneImage evId={ev.id} n={item.n + 1} title={tx(ev.title)} width={width} image={item.scene.image} />
+                {!item.scene.textOnly && <SceneImage evId={ev.id} n={item.n + 1} title={tx(ev.title)} width={width} image={item.scene.image} />}
                 <View style={s.sceneText}>
                   <Rich style={[s.sceneBody, align()]} text={item.scene.text} selectable />
                   {!!item.scene.by && <AcceptChip by={item.scene.by} />}
