@@ -9,6 +9,7 @@ import { BORDERS_CREDIT } from '../data/borders';
 import { mapsForEvent } from '../data/maps';
 import { TRAVEL_METHOD } from '../data/travel';
 import { PurposeCopy } from './PurposeCopy';
+import { AHIDNAME_DATE, AHIDNAME_HOOK, AHIDNAME_TITLE } from '../data/malik-ahidname';
 import { LogoZoom } from './LogoZoom';
 import { ImageViewer } from './ImageViewer';
 import { Rich } from './Rich';
@@ -39,6 +40,21 @@ function EventCard({ e, i, onOpen }: { e: HistEvent; i: number; onOpen: (id: str
   );
 }
 
+
+function AhidCard({ i, onOpen }: { i: number; onOpen: () => void }) {
+  return (
+    <Pressable onPress={onOpen} accessibilityRole="button" style={({ pressed }) => [s.card, s.ahidCard, pressed && s.pressed, webHit]}>
+      <View style={s.numWrap}><Text style={s.num}>{i + 1}</Text></View>
+      <View style={{ flex: 1 }}>
+        <Text style={[s.cardTitle, align()]}>{tx(AHIDNAME_TITLE)}</Text>
+        <Text style={[s.cardDate, align()]}>{tx(AHIDNAME_DATE)}</Text>
+        <Text style={[s.cardHook, align()]}>{tx(AHIDNAME_HOOK)}</Text>
+      </View>
+      <View style={{ marginTop: 4 }}><Chevron color={C.gold} /></View>
+    </Pressable>
+  );
+}
+
 function Back({ onPress }: { onPress: () => void }) {
   return (
     <Pressable onPress={onPress} hitSlop={8} style={s.back} accessibilityRole="button">
@@ -49,7 +65,7 @@ function Back({ onPress }: { onPress: () => void }) {
 
 let lastCat = 0; // Hikâyeden dönünce aynı kategoride kalmak için
 
-export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, onMaps, onQibla, onImams }: {
+export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, onMaps, onQibla, onImams, onOpenAhid }: {
   events: HistEvent[];
   langName: string;
   onSettings: () => void;
@@ -59,6 +75,7 @@ export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, o
   onMaps: () => void;
   onQibla: () => void;
   onImams: () => void;
+  onOpenAhid: () => void;
 }) {
   const sc = useScrollMemory('home');
   const width = usePageWidth();
@@ -146,14 +163,16 @@ export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, o
           .map(id => events.find(e => e.id === id))
           .filter((e): e is HistEvent => !!e)
           .filter(e => norm([tx(e.title), tx(e.hook), tx(e.key), tx(e.date), cat.title].join(' ')).includes(query));
-        if (!list.length) return null;
-        shown += list.length;
+        const ahidHit = cat.id === 'ali' && norm([tx(AHIDNAME_TITLE), tx(AHIDNAME_HOOK), tx(AHIDNAME_DATE), cat.title, cat.sub, 'mektup nehcü l belâğa mektup 53 eşter malik ahidname ahidnâme tuhaf'].join(' ')).includes(query);
+        if (!list.length && !ahidHit) return null;
+        shown += list.length + (ahidHit ? 1 : 0);
         return (
           <View key={cat.id} style={{ marginTop: 26 }}>
             <Text style={s.catIndex}>{String(catIndex + 1).padStart(2, '0')}</Text>
             <Text style={[s.catTitle, align()]}>{cat.title}</Text>
             <Text style={[s.catSub, align()]}>{cat.sub}</Text>
             {list.map((e, i) => <EventCard key={e.id} e={e} i={i} onOpen={onOpen} />)}
+            {ahidHit && <AhidCard i={list.length} onOpen={onOpenAhid} />}
           </View>
         );
       }) : (
@@ -193,10 +212,17 @@ export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, o
           </View>
           <Text style={s.swipe}>Sola kaydır, sonraki başlıklar sağda</Text>
           <View style={{ marginTop: 8 }}>
-            {(CATEGORIES[catI]?.ids ?? [])
-              .map(id => events.find(e => e.id === id))
-              .filter((e): e is HistEvent => !!e)
-              .map((e, i) => <EventCard key={e.id} e={e} i={i} onOpen={onOpen} />)}
+            {(() => {
+              const evs = (CATEGORIES[catI]?.ids ?? [])
+                .map(id => events.find(e => e.id === id))
+                .filter((e): e is HistEvent => !!e);
+              return (
+                <>
+                  {evs.map((e, i) => <EventCard key={e.id} e={e} i={i} onOpen={onOpen} />)}
+                  {CATEGORIES[catI]?.id === 'ali' && <AhidCard i={evs.length} onOpen={onOpenAhid} />}
+                </>
+              );
+            })()}
           </View>
         </View>
       )}
@@ -699,6 +725,7 @@ const s = themedStyles(() => StyleSheet.create({
   nextKicker: { color: C.ink, fontFamily: font.sans, fontSize: 11, fontWeight: '800', letterSpacing: 1 },
   nextTitle: { color: C.ink, fontFamily: font.serif, fontSize: 18, fontWeight: '700', marginTop: 2 },
   card: { flexDirection: 'row', gap: 12, alignItems: 'flex-start', backgroundColor: C.card, borderRadius: 18, padding: 14, marginBottom: 10, borderWidth: 1, borderColor: C.line },
+  ahidCard: { borderColor: C.gold, borderLeftWidth: 3, borderLeftColor: C.gold },
   pressed: { opacity: 0.86 },
   numWrap: { width: 32, height: 32, borderRadius: 16, backgroundColor: C.gold, alignItems: 'center', justifyContent: 'center', marginTop: 2 },
   num: { color: C.ink, fontFamily: font.sans, fontWeight: '800', fontSize: 14 },
