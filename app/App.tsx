@@ -4,6 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StatusBar } from 'expo-status-bar';
 import { DuaList, DuaScreen, EventScreen, Home, Method } from './src/ui/Screens';
 import { PurposeScreen } from './src/ui/PurposeScreen';
+import { AhidnameScreen } from './src/ui/AhidnameScreen';
 import { MapDetail, MapList } from './src/ui/MapScreens';
 import { QiblaScreen } from './src/ui/Qibla';
 import { ImamDetail, ImamList } from './src/ui/ImamScreens';
@@ -25,7 +26,8 @@ type Route =
   | { name: 'qibla' }
   | { name: 'imams' }
   | { name: 'imam'; id: string }
-  | { name: 'map'; id: string };
+  | { name: 'map'; id: string }
+  | { name: 'ahidname' };
 
 setupNotifications();
 
@@ -185,11 +187,12 @@ export default function App() {
         ) : <>
         <View style={{ flex: 1 }}>
         {route.name === 'home' && (
-          <Home events={EVENTS} langName={languageOption(lang).name} onSettings={() => { setDraftLanguage(lang); setEditingLanguage(true); }} onOpen={id => push({ name: 'event', id })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onMaps={() => push({ name: 'maps' })} onQibla={() => push({ name: 'qibla' })} onImams={() => push({ name: 'imams' })} />
+          <Home events={EVENTS} langName={languageOption(lang).name} onSettings={() => { setDraftLanguage(lang); setEditingLanguage(true); }} onOpen={id => push({ name: 'event', id })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onMaps={() => push({ name: 'maps' })} onQibla={() => push({ name: 'qibla' })} onImams={() => push({ name: 'imams' })} onOpenAhid={() => push({ name: 'ahidname' })} />
         )}
         {route.name === 'event' && ev && <EventScreen key={ev.id} ev={ev} onBack={back} onOpenMap={id => push({ name: 'map', id })} onNext={id => push({ name: 'event', id })} />}
         {route.name === 'event' && !ev && <Missing onBack={back} />}
         {route.name === 'method' && <Method onBack={back} />}
+        {route.name === 'ahidname' && <AhidnameScreen onBack={back} />}
         {route.name === 'duas' && <DuaList duas={DUAS} onOpen={id => push({ name: 'dua', id })} onBack={back} />}
         {route.name === 'dua' && dua && <DuaScreen key={dua.id} dua={dua} onBack={back} />}
         {route.name === 'dua' && !dua && <Missing onBack={back} />}
