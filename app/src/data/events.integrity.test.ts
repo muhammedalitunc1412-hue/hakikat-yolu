@@ -88,7 +88,7 @@ test('genişleme sahnelerinin görseli kayıtlı, yer tutucu kalmaz', () => {
     assert.equal(texts.length, expected);
     assert.equal(keys.length, texts.length);
     assert.equal(new Set(keys).size, keys.length);
-    const pending = new Set(['harre-emir', 'harre-yagma']);
+    const pending = new Set([] as string[]);
     for (const id of keys) {
       if (pending.has(id)) {
         assert.doesNotMatch(img, new RegExp("'" + id + "':"));
