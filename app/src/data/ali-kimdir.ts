@@ -77,7 +77,7 @@ export const aliKimdir: HistEvent = {
     },
     {
       text: { tr: '**Ebû Zer**, bir gün Hz. Peygamber\'le birlikte onun mescidinde öğle namazını kılıyordu. Namazın huzuru mescidin içini kaplamıştı. Saflar duruyordu, sesler kesilmişti. Tam o sırada içeri bir dilenci girdi. Ellerini açtı ve orada namaz kılanlardan yardım istedi. Mescidin içindekilerden hiçbiri ona bir şey vermedi. Dilenci bir süre bekledi, sonra ellerini göğe kaldırdı. Hz. Peygamber\'in mescidinde sadaka istediğini, fakat kimsenin ona el uzatmadığını söyledi. O sırada **Hz. Ali** rükûdaydı. Namazını bozmadan sağ elinin küçük parmağını uzattı. O parmağında bir yüzük vardı. Dilenci bu işareti gördü, yaklaştı, yüzüğü parmağından sıyırıp aldı ve mescidin içinden uzaklaştı. Hz. Peygamber, Hz. Ali\'nin rükû hâlindeyken yüzüğünü sadaka olarak vermesini görmüştü. Bunun üzerine Mâide Suresi\'nin 55. ayeti indi: "Sizin veliniz ancak Allah, Resulü ve namaz kılıp rükû hâlindeyken zekât veren müminlerdir." Bu ayet velayet ayeti olarak anılır. Ayet "ancak" kelimesiyle başlar ve velayeti Allah\'a, Resulüne ve rükû hâlindeyken zekât veren müminlere has kılar. Şii tefsirler ayetteki velinin, Allah ve Resulünden sonra, rükû hâlindeyken yüzüğünü veren **Hz. Ali** olduğunu söyler. Birçok Sünni tefsir de bu olayın Hz. Ali hakkında nakledildiğini yazar. **Ebû Zer**, o gün mescidde gördüklerini ve işittiklerini sonraları kendisi nakletti.' },
-      textOnly: true,
+      image: 'ali-kimdir-11',
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 40, pose: 'sit', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 68, label: { tr: 'Dilenci' } }] },
       by: 'partial',
       cites: [
