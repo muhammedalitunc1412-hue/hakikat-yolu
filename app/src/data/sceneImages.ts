@@ -138,6 +138,8 @@ export const SCENE_IMAGES: Record<string, number> = {
   'kerbela-9': require('../../assets/scenes/kerbela-9.jpg'),
   'kerbela-cadir-sabah': require('../../assets/scenes/kerbela-cadir-sabah.jpg'),
   'kerbela-erbain': require('../../assets/scenes/kerbela-erbain.jpg'),
+  'kerbela-zeynep-hutbe': require('../../assets/scenes/kerbela-zeynep-hutbe.jpg'),
+  'kerbela-egersiz': require('../../assets/scenes/kerbela-egersiz.jpg'),
   'kerbela-esir-yol': require('../../assets/scenes/kerbela-esir-yol.jpg'),
   'kerbela-kufe-pencere': require('../../assets/scenes/kerbela-kufe-pencere.jpg'),
   'kerbela-muslim-su': require('../../assets/scenes/kerbela-muslim-su.jpg'),
