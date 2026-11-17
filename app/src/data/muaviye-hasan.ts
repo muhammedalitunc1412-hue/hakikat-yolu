@@ -7,7 +7,7 @@ const art = { bg: 'interior' as const, actors: [{ kind: 'crowd' as const, x: 50,
 export const muaviyeHasan: HistEvent = {
   id: 'muaviye-hasan',
   date: { tr: '40-50 H (661-670)', en: '40-50 AH (661-670)' },
-  title: { tr: "Muaviye ve Hz. Hasan: sulh, ihlal ve zehirlenme iddiası", en: 'Muawiya and Hz. Hasan: the treaty, its breach and the poisoning claim' },
+  title: { tr: "Hz. Hasan'ı zehirlemesi", en: 'The poisoning of Hz. Hasan' },
   hook: { tr: "Hz. Hasan kan dökülmesin diye sulh yaptı. Muaviye şartı ayağının altına aldı ve onu zehirletti.", en: "Why did Hz. Hasan make peace with Muawiya, what became of the terms, and what role did Muawiya play in his poisoning?" },
   scenes: [
     {
