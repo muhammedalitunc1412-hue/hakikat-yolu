@@ -24,7 +24,7 @@ export const istihlaf: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Hicretin 23. yılında, Medine\'de bir sabah namazı sırasında Halife **Ömer** hançerlendi. Saldırgan, mescitte on üç kişiyi daha yaraladı. Ömer ağır yaralı olarak evine taşındı ve birkaç gün sonra, Zilhicce ayının 26\'sında vefat etti. Halifeliği yaklaşık on yıl altı ay sürmüştü. Ölüm döşeğindeyken kendisinden sonraki halifeyi tek başına seçmedi. Bunun yerine işi altı kişilik bir kurula bırakmaya karar verdi. **Hz. Ali** de bu altı kişinin arasında olacaktı. Ama kurulun kuralları, sonunda onu yine hilafetin dışında bırakacaktı.' },
+      text: { tr: 'Hicretin 23. yılında, Medine\'de bir sabah namazı sırasında Halife **Ömer** hançerlendi. Saldırgan, mescitte on üç kişiyi daha yaraladı. Ömer ağır yaralı olarak evine taşındı ve birkaç gün sonra, Zilhicce ayının 26\'sında öldü. Halifeliği yaklaşık on yıl altı ay sürmüştü. Ölüm döşeğindeyken kendisinden sonraki halifeyi tek başına seçmedi. Bunun yerine işi altı kişilik bir kurula bırakmaya karar verdi. **Hz. Ali** de bu altı kişinin arasında olacaktı. Ama kurulun kuralları, sonunda onu yine hilafetin dışında bırakacaktı.' },
       art: { bg: 'dawn', actors: [{ kind: 'man', x: 50, pose: 'sit', label: { tr: 'Ömer' } }, { kind: 'crowd', x: 78, scale: 0.7 }] },
     },
     {
@@ -38,7 +38,7 @@ export const istihlaf: HistEvent = {
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 52, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'ali', x: 26, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 76, label: { tr: 'Osman' } }] },
     },
     {
-      by: 'sunni',
+      by: 'both',
       text: { tr: 'Abdurrahman önce **Hz. Ali**\'ye döndü ve ona bir şart sundu: Allah\'ın Kitabı, Peygamber\'in sünneti ve önceki iki halifenin yolu üzerine biat edecekti. Biat, bağlılık sözüdür. Hz. Ali şöyle cevap verdi: "Allah\'ın Kitabı ve Peygamber\'in sünneti üzerine, bir de kendi içtihadıma göre." Önceki iki halifenin yolunu bir şart olarak kabul etmedi. Haksız yere başa geçen halifelerin izini değil, Peygamber\'in izini ön planda tutmak istiyordu. Bu cevap, hilafetin kapısını ona bir kez daha kapattı. Abdurrahman aynı şartı **Osman**\'a sundu. Osman ise makam ve mevki uğruna, hakkı olmadan hilafete geçenlerin yoluna bağlanmayı tercih etti ve şartı hiç tereddüt etmeden kabul etti. Bunun üzerine Abdurrahman, Osman\'a biat etti ve diğerleri de onu izledi.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 30, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 56, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'man', x: 78, label: { tr: 'Osman' } }] },
     },
