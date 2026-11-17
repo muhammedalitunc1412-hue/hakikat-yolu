@@ -10,7 +10,7 @@ export const penceAba: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Rivayetlere göre bir sabah **Hz. Peygamber**, omzunda siyah yünden dokunmuş bir örtüyle evinden çıktı ve Ehl-i Beyt\'ini yanına çağırdı. Bir rivayete göre bu buluşma, Peygamber\'in eşi Ümmü Seleme\'nin evinde oldu. İlk gelen torunu **Hz. Hasan**\'dı. Peygamber onu örtünün altına aldı. Ardından küçük kardeşi **Hz. Hüseyin** geldi ve o da dedesinin yanına sokuldu. Sonra Peygamber\'in kızı **Hz. Fatıma** geldi. En son **Hz. Ali** geldi. Peygamber dördünü de örtünün altına aldı ve onu üzerlerine kapattı. Beşi aynı örtünün altında bir araya geldiğinde Peygamber Ahzâb 33:33\'ü okudu: "Ey Ehl-i Beyt, Allah sizden kiri gidermek ve sizi tertemiz yapmak ister."' },
+      text: { tr: 'Bir sabah **Hz. Peygamber**, omzunda siyah yünden dokunmuş bir örtüyle evinden çıktı ve Ehl-i Beyt\'ini yanına çağırdı. Bu buluşma, Peygamber\'in eşi Ümmü Seleme\'nin evinde oldu. İlk gelen torunu **Hz. Hasan**\'dı. Peygamber onu örtünün altına aldı. Ardından küçük kardeşi **Hz. Hüseyin** geldi ve o da dedesinin yanına sokuldu. Sonra Peygamber\'in kızı **Hz. Fatıma** geldi. En son **Hz. Ali** geldi. Peygamber dördünü de örtünün altına aldı ve onu üzerlerine kapattı. Beşi aynı örtünün altında bir araya geldiğinde Peygamber Ahzâb 33:33\'ü okudu: "Ey Ehl-i Beyt, Allah sizden kiri gidermek ve sizi tertemiz yapmak ister."' },
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 38, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 52, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 62, label: { tr: 'Hz. Fatıma' } }, { kind: 'hasan', x: 72, scale: 0.7, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 80, scale: 0.65, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
