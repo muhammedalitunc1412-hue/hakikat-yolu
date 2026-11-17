@@ -6,9 +6,7 @@ import { FontButton, useFontScale } from './FontScale';
 import { SCENE_IMAGES } from '../data/sceneImages';
 import { CATEGORIES, isStory, nextEvent } from '../data/events';
 import { SCENE_VIDEOS } from '../data/sceneVideos';
-import { BORDERS_CREDIT } from '../data/borders';
 import { mapsForEvent } from '../data/maps';
-import { TRAVEL_METHOD } from '../data/travel';
 import { PurposeCopy } from './PurposeCopy';
 import { AHIDNAME_DATE, AHIDNAME_HOOK, AHIDNAME_TITLE } from '../data/malik-ahidname';
 import { LogoZoom } from './LogoZoom';
@@ -723,31 +721,10 @@ export function DuaScreen({ dua, onBack }: { dua: Dua; onBack: () => void }) {
 
 export function Method({ onBack }: { onBack: () => void }) {
   const sc = useScrollMemory('method');
-  const paragraphs = [
-    'Bu uygulama Şii bakışını esas alır. Tarihî olaylar sahne sahne hikâye gibi anlatılır. Her sahnenin altında, o sahnenin dayandığı kaynak küçük bir düğmeyle açılır.',
-    'Hikâyenin son sayfası "Bu olay için bütün kaynaklar"dır. Kaynak grupları kapalıdır; başlığa dokununca açılır. Sonraki olay düğmesi o sayfanın altında, kaydırmadan durur. Mezhep ve ibadet farkları gibi öğretici sayfalar sahne romanı değildir; kaynakları sayfanın altındaki düğmelerde durur.',
-    '"Ayrılıklar" düğmesi, iki geleneğin aynı olayı nasıl yorumladığını ya da bir rivayeti hangi kaynakların kabul edip etmediğini gösterir.',
-    '"Düşünelim" bölümündeki sorular, kaynaklarda yazılanlardan hareketle okuyucuyu kendi sonucunu kurmaya davet eder.',
-    'Uygulamada kimseye hakaret, lanet ya da nefret söylemi yoktur. Hz. Peygamber, Ehl-i Beyt ve sahabeye saygı esastır. Ziyâret-i Âşûrâ gibi dua metinleri kendi aslına sadık olarak verilmiştir.',
-    'Dualarda Arapça metin güvenilir bir kaynak sayfasından alınmıştır; Türkçe okunuş ve anlam hazırlanmıştır ve yayın öncesinde bir uzman tarafından kontrol edilmelidir.',
-    'Haritalar bölümündeki mesafeler, yerlerin koordinatından kuş uçuşu (büyük daire) olarak hesaplanır. Kara yolu ve eski kervan yolu daha uzun olabilir; bilinen farklar haritada ayrıca belirtilir.',
-    TRAVEL_METHOD,
-    'Harita zemini NASA Blue Marble Next Generation görüntüsüdür (gölgeli rölyef ve batimetri, kamu malı). Dağların okunması için üzerine METI ve NASA ASTER GDEM kabartması işlenmiştir. Yakın kadrajların altında, Kızıldeniz’den Hürmüz Boğazı’na uzanan geniş Orta Doğu levhası durur. Görüntüler bölgeye kırpılıp sıkıştırılmıştır; uygulama çevrimdışı çalışır, bir harita servisine bağlanmaz.',
-    BORDERS_CREDIT,
-  ];
   return (
     <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page}>
       <Back onPress={onBack} />
-      <Text style={[s.kicker, align()]}>AMAÇ</Text>
       <PurposeCopy />
-      <Text style={[s.kicker, align(), { marginTop: 28 }]}>YÖNTEM</Text>
-      <Text style={[s.evTitle, align()]}>{ui('method')}</Text>
-      {paragraphs.map((t, k) => (
-        <View key={k} style={s.methodCard}>
-          <Text style={s.methodNum}>{String(k + 1).padStart(2, '0')}</Text>
-          <Text style={[s.body, align(), { flex: 1 }]}>{t}</Text>
-        </View>
-      ))}
     </ScrollView>
   );
 }
