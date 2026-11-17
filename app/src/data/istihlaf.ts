@@ -24,7 +24,7 @@ export const istihlaf: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Hicretin 23. yılında, Medine\'de bir sabah namazı sırasında Halife **Ömer** hançerlendi. Saldırgan, mescitte on üç kişiyi daha yaraladı. Ömer ağır yaralı olarak evine taşındı ve birkaç gün sonra, Zilhicce ayının 26\'sında vefat etti. Halifeliği yaklaşık on yıl altı ay sürmüştü. Ölüm döşeğindeyken kendisinden sonraki halifeyi tek başına seçmedi. Bunun yerine işi altı kişilik bir kurula bırakmaya karar verdi. **Hz. Ali** de bu altı kişinin arasında olacaktı. Ama kurulun kuralları, sonunda onu yine hilafetin dışında bırakacaktı.' },
+      text: { tr: 'Hicretin 23. yılında, Medine\'de bir sabah namazı sırasında Halife **Ömer** hançerlendi. Saldırgan, mescitte on üç kişiyi daha yaraladı. Ömer ağır yaralı olarak evine taşındı ve birkaç gün sonra, Zilhicce ayının 26\'sında öldü. Halifeliği yaklaşık on yıl altı ay sürmüştü. Ölüm döşeğindeyken kendisinden sonraki halifeyi tek başına seçmedi. Bunun yerine işi altı kişilik bir kurula bırakmaya karar verdi. **Hz. Ali** de bu altı kişinin arasında olacaktı. Ama kurulun kuralları, sonunda onu yine hilafetin dışında bırakacaktı.' },
       art: { bg: 'dawn', actors: [{ kind: 'man', x: 50, pose: 'sit', label: { tr: 'Ömer' } }, { kind: 'crowd', x: 78, scale: 0.7 }] },
     },
     {
