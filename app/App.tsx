@@ -14,6 +14,7 @@ import { LANGUAGES, languageOption, setLang, ui } from './src/i18n';
 import type { Lang } from './src/types';
 import { RequiredUpdate, useRequiredUpdate } from './src/update/RequiredUpdate';
 import { C, PAGE_MAX, TOP, font, setTheme } from './src/ui/theme';
+import { FontButton, FontScaleProvider, useFontScale } from './src/ui/FontScale';
 import { cancel, ensurePermission, loadEnabled, nextReminder, openOf, saveEnabled, schedule, setupNotifications, useLastResponse } from './src/notifications';
 
 type Route =
@@ -36,7 +37,12 @@ const PURPOSE_AT_KEY = 'hakikat-yolu:purpose-seen-at';
 const PURPOSE_LEGACY_KEY = 'hakikat-yolu:purpose-seen';
 const PURPOSE_INTERVAL_MS = 4 * 24 * 60 * 60 * 1000;
 
-export default function App() {
+export default function Root() {
+  return <FontScaleProvider>{() => <App />}</FontScaleProvider>;
+}
+
+function App() {
+  const { scale } = useFontScale();
   const [lang, setLanguage] = useState<Lang>('tr');
   const requiredStore = useRequiredUpdate();
   const [ready, setReady] = useState(false);
@@ -183,9 +189,9 @@ export default function App() {
             </Pressable>
           </ScrollView>
         ) : !purposeSeen ? (
-          <PurposeScreen onContinue={confirmPurpose} />
+          <PurposeScreen key={'fs' + scale} onContinue={confirmPurpose} />
         ) : <>
-        <View style={{ flex: 1 }}>
+        <View key={'fs' + scale} style={{ flex: 1 }}>
         {route.name === 'home' && (
           <Home events={EVENTS} langName={languageOption(lang).name} onSettings={() => { setDraftLanguage(lang); setEditingLanguage(true); }} onOpen={id => push({ name: 'event', id })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onMaps={() => push({ name: 'maps' })} onQibla={() => push({ name: 'qibla' })} onImams={() => push({ name: 'imams' })} onOpenAhid={() => push({ name: 'ahidname' })} />
         )}
@@ -203,9 +209,12 @@ export default function App() {
         {route.name === 'map' && <MapDetail key={route.id} id={route.id} onBack={back} onOpenEvent={id => push({ name: 'event', id })} />}
         </View>
         {route.name !== 'home' && (
-          <Pressable onPress={home} accessibilityRole="button" accessibilityLabel={ui('homeBtn')} style={({ pressed }) => [{ minHeight: 52, alignItems: 'center', justifyContent: 'center', backgroundColor: C.card, borderTopWidth: 1, borderTopColor: C.lineStrong, paddingBottom: 6, opacity: pressed ? 0.86 : 1 }]}>
-            <Text style={{ color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '800' }}>{ui('homeBtn')}</Text>
-          </Pressable>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10, backgroundColor: C.card, borderTopWidth: 1, borderTopColor: C.lineStrong, paddingLeft: 10, paddingRight: 12, paddingBottom: 6, paddingTop: 4 }}>
+            <Pressable onPress={home} accessibilityRole="button" accessibilityLabel={ui('homeBtn')} style={({ pressed }) => [{ flex: 1, minHeight: 48, alignItems: 'center', justifyContent: 'center', opacity: pressed ? 0.86 : 1 }]}>
+              <Text style={{ color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '800' }}>{ui('homeBtn')}</Text>
+            </Pressable>
+            <FontButton compact />
+          </View>
         )}
         </>}
       </View>

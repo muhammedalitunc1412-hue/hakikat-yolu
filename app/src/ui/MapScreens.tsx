@@ -8,7 +8,7 @@ import { TRAVEL_NOTE, formatDays, travelFor } from '../data/travel';
 import { tx, ui } from '../i18n';
 import { BirdMap, MAP_H, MAP_W, MapChrome, MapZoom, regionCamera, zoomBand, type Camera, type CrispLabel } from './BirdMap';
 import { CamelIcon, Chevron, PinIcon } from './icons';
-import { C, TOP, align, font, usePageWidth } from './theme';
+import { C, TOP, align, font, themedStyles, usePageWidth } from './theme';
 import { useScrollMemory } from './scrollMemory';
 
 const GROUPS: { id: MapRegion; title: string; sub: string }[] = [
@@ -270,7 +270,7 @@ function Back({ onPress }: { onPress: () => void }) {
   );
 }
 
-const s = StyleSheet.create({
+const s = themedStyles(() => StyleSheet.create({
   page: { paddingHorizontal: 18, paddingTop: TOP, paddingBottom: 56 },
   back: { alignSelf: 'flex-start', minHeight: 44, justifyContent: 'center', paddingRight: 12 },
   backText: { color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '700' },
@@ -356,4 +356,4 @@ const s = StyleSheet.create({
   primarySub: { color: '#3d3422', fontFamily: font.sans, fontSize: 12, marginTop: 2, fontWeight: '700' },
   chip: { flexDirection: 'row', alignItems: 'center', gap: 10, borderRadius: 14, paddingHorizontal: 14, paddingVertical: 12, marginBottom: 8, minHeight: 48, borderWidth: 1, borderColor: C.lineStrong, backgroundColor: C.card },
   chipText: { color: C.cream, fontFamily: font.sans, fontSize: 15, fontWeight: '700' },
-});
+}));

@@ -42,10 +42,33 @@ export function setTheme(name: ThemeName) {
   current = name;
   Object.assign(C, PALETTES[name]);
 }
-// StyleSheet'i temaya göre yeniden kuran sarmalayıcı: s.xxx her okunduğunda geçerli temanın stilini verir.
-export function themedStyles<T extends object>(build: () => T): T {
-  const cache: Partial<Record<ThemeName, T>> = {};
-  const get = () => (cache[current] ??= build());
+// Yazı boyutu çarpanı (Küçük 0.9 · Normal 1 · Büyük 1.15 · Çok büyük 1.3). FontScaleProvider ayarlar.
+let fontScale = 1;
+export const getFontScale = () => fontScale;
+export function setFontScale(v: number) { fontScale = v; }
+// Okuma metni tam çarpanla büyür; küçük etiketler (≤12) ve büyük başlıklar (>22) yumuşak büyür, yerleşim bozulmasın.
+export function scaled(size: number, scale: number = fontScale): number {
+  if (scale === 1) return size;
+  const f = size <= 12 ? 1 + (scale - 1) * 0.4 : size > 22 ? 1 + (scale - 1) * 0.55 : scale;
+  return Math.round(size * f * 2) / 2;
+}
+function scaleStyles<T extends object>(styles: T): T {
+  if (fontScale === 1) return styles;
+  const out: Record<string, unknown> = {};
+  for (const [k, v] of Object.entries(styles)) {
+    const st = v as { fontSize?: number; lineHeight?: number } | null;
+    if (st && typeof st === 'object' && typeof st.fontSize === 'number') {
+      const f = scaled(st.fontSize) / st.fontSize;
+      out[k] = { ...st, fontSize: scaled(st.fontSize), ...(typeof st.lineHeight === 'number' ? { lineHeight: Math.round(st.lineHeight * f) } : null) };
+    } else out[k] = v;
+  }
+  return out as T;
+}
+// StyleSheet'i temaya ve yazı boyutuna göre yeniden kuran sarmalayıcı: s.xxx her okunduğunda geçerli stili verir.
+export function themedStyles<T extends object>(build: () => T, opts?: { scale?: boolean }): T {
+  const cache: Record<string, T> = {};
+  const sc = opts?.scale !== false;
+  const get = () => (cache[current + ':' + (sc ? fontScale : 1)] ??= sc ? scaleStyles(build()) : build());
   return new Proxy({} as T, { get: (_t, k) => (get() as any)[k] });
 }
 
