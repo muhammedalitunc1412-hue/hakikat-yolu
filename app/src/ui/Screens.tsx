@@ -6,16 +6,14 @@ import { FontButton, useFontScale } from './FontScale';
 import { SCENE_IMAGES } from '../data/sceneImages';
 import { CATEGORIES, isStory, nextEvent } from '../data/events';
 import { SCENE_VIDEOS } from '../data/sceneVideos';
-import { BORDERS_CREDIT } from '../data/borders';
 import { mapsForEvent } from '../data/maps';
-import { TRAVEL_METHOD } from '../data/travel';
 import { PurposeCopy } from './PurposeCopy';
 import { AHIDNAME_DATE, AHIDNAME_HOOK, AHIDNAME_TITLE } from '../data/malik-ahidname';
 import { LogoZoom } from './LogoZoom';
 import { ImageViewer } from './ImageViewer';
 import { Rich } from './Rich';
 import { EventVideo } from './EventVideo';
-import { ArchIcon, BookIcon, Chevron, CompassIcon, PinIcon, SearchIcon } from './icons';
+import { ArchIcon, BookIcon, Chevron, CompassIcon, InstagramIcon, PinIcon, SearchIcon } from './icons';
 import { C, TOP, align, font, usePageWidth, themedStyles, BLOOD } from './theme';
 import { rememberScene, rememberedScene, useScrollMemory } from './scrollMemory';
 
@@ -66,29 +64,20 @@ function Back({ onPress }: { onPress: () => void }) {
 
 let lastCat = 0; // Hikâyeden dönünce aynı kategoride kalmak için
 
-export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, onMaps, onQibla, onImams, onOpenAhid }: {
-  events: HistEvent[];
+const CONTACT_URL = 'https://www.instagram.com/huseynimtnc/';
+
+export function Home({ langName, onSettings, onStories, onMethod, onDuas, onQibla, onImams }: {
   langName: string;
   onSettings: () => void;
-  onOpen: (id: string) => void;
+  onStories: () => void;
   onMethod: () => void;
   onDuas: () => void;
-  onMaps: () => void;
   onQibla: () => void;
   onImams: () => void;
-  onOpenAhid: () => void;
 }) {
   const sc = useScrollMemory('home');
   const width = usePageWidth();
-  const [q, setQ] = useState('');
-  const [catI, setCatIState] = useState(lastCat);
-  const setCatI = (i: number) => { lastCat = i; setCatIState(i); };
-  const catRef = useRef<FlatList<(typeof CATEGORIES)[number]>>(null);
-  const query = norm(q.trim());
   const wide = width >= 560;
-  const cardW = Math.min(width - 64, 460);
-  const gap = 12;
-  let shown = 0;
   return (
     <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page} keyboardShouldPersistTaps="handled">
       <View style={s.topRow}>
@@ -107,15 +96,18 @@ export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, o
       </View>
       <View style={s.rule} />
 
-      <View style={{ flexDirection: wide ? 'row' : 'column', gap: 12 }}>
-        <Pressable style={({ pressed }) => [s.feature, wide && { flex: 1 }, pressed && s.pressed, webHit]} onPress={onMaps} accessibilityRole="button">
-          <View style={s.bubble}><PinIcon /></View>
-          <View style={{ flex: 1 }}>
-            <Text style={[s.featureTitle, align()]}>{ui('maps')}</Text>
-            <Text style={[s.featureSub, align()]}>{ui('mapsSub')}</Text>
-          </View>
-          <Chevron color={C.gold} />
-        </Pressable>
+      <Pressable onPress={onStories} accessibilityRole="button" accessibilityLabel={ui('stories')} style={({ pressed }) => [s.hikaye, pressed && s.pressed, webHit]}>
+        <View style={s.hikayeGlow} pointerEvents="none" />
+        <View style={s.hikayeBubble}><BookIcon size={30} /></View>
+        <View style={{ flex: 1 }}>
+          <Text style={s.hikayeKicker}>{ui('storiesKicker')}</Text>
+          <Text style={[s.hikayeTitle, align()]}>{ui('stories')}</Text>
+          <Text style={[s.hikayeSub, align()]}>{ui('storiesSub')}</Text>
+        </View>
+        <Chevron color={C.gold} />
+      </Pressable>
+
+      <View style={{ flexDirection: wide ? 'row' : 'column', gap: 12, marginTop: 14 }}>
         <Pressable style={({ pressed }) => [s.feature, s.featureAlt, wide && { flex: 1 }, pressed && s.pressed, webHit]} onPress={onDuas} accessibilityRole="button">
           <View style={s.bubble}><ArchIcon /></View>
           <View style={{ flex: 1 }}>
@@ -144,7 +136,59 @@ export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, o
         <Chevron color={C.gold} />
       </Pressable>
 
-      <View style={s.search}>
+      <Pressable onPress={onMethod} accessibilityRole="button" style={({ pressed }) => [s.method, pressed && s.pressed, webHit]}>
+        <View style={s.bubble}><BookIcon /></View>
+        <Text style={s.methodText}>{ui('method')}</Text>
+        <Chevron />
+      </Pressable>
+
+      <Pressable onPress={() => { void Linking.openURL(CONTACT_URL).catch(() => {}); }} accessibilityRole="link" accessibilityLabel={ui('contact')} style={({ pressed }) => [s.method, { marginTop: 12 }, pressed && s.pressed, webHit]}>
+        <View style={s.bubble}><InstagramIcon /></View>
+        <View style={{ flex: 1 }}>
+          <Text style={s.methodText}>{ui('contact')}</Text>
+          <Text style={[s.featureSub, align()]}>{ui('contactSub')}</Text>
+        </View>
+        <Chevron />
+      </Pressable>
+    </ScrollView>
+  );
+}
+
+export function Stories({ events, onBack, onOpen, onOpenAhid }: {
+  events: HistEvent[];
+  onBack: () => void;
+  onOpen: (id: string) => void;
+  onOpenAhid: () => void;
+}) {
+  const sc = useScrollMemory('stories');
+  const width = usePageWidth();
+  const [q, setQ] = useState('');
+  const [catI, setCatIState] = useState(lastCat);
+  const setCatI = (i: number) => { lastCat = i; setCatIState(i); };
+  const catRef = useRef<FlatList<(typeof CATEGORIES)[number]>>(null);
+  const query = norm(q.trim());
+  const cardW = Math.min(width - 64, 460);
+  const gap = 12;
+  let shown = 0;
+  return (
+    <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page} keyboardShouldPersistTaps="handled">
+      <View style={s.topRow}>
+        <Pressable onPress={onBack} hitSlop={8} style={s.backInline} accessibilityRole="button">
+          <Text style={s.backText}>‹  {ui('back')}</Text>
+        </Pressable>
+        <FontButton />
+      </View>
+      <View style={s.storiesHead}>
+        <View style={s.hikayeBubble}><BookIcon size={30} /></View>
+        <View style={{ flex: 1 }}>
+          <Text style={s.hikayeKicker}>{ui('storiesKicker')}</Text>
+          <Text accessibilityRole="header" style={[s.storiesTitle, align()]}>{ui('stories')}</Text>
+        </View>
+      </View>
+      <Text style={[s.tagline, align()]}>{ui('storiesSub')}</Text>
+      <View style={s.rule} />
+
+      <View style={[s.search, { marginTop: 0 }]}>
         <SearchIcon />
         <TextInput
           value={q}
@@ -231,23 +275,15 @@ export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, o
         </View>
       )}
       {query && shown === 0 && <Text style={[s.empty, align()]}>{ui('noResult')}</Text>}
-
-      <Pressable onPress={onMethod} accessibilityRole="button" style={({ pressed }) => [s.method, pressed && s.pressed, webHit]}>
-        <View style={s.bubble}><BookIcon /></View>
-        <Text style={s.methodText}>{ui('method')}</Text>
-        <Chevron />
-      </Pressable>
     </ScrollView>
   );
 }
 
 function SourceCard({ src, tone }: { src: Source; tone: string }) {
-  const ok = src.status === 'verified';
   return (
     <View style={[s.src, { borderLeftColor: tone }]}>
       <View style={s.srcHead}>
         <Text style={[s.srcBook, align(), { flex: 1 }]}>{src.book}</Text>
-        <Text style={[s.badge, { color: ok ? C.shia : C.warn, borderColor: ok ? C.shia : C.warn }]}>{ok ? '✓ ' + ui('verified') : '⚠ ' + ui('check')}</Text>
       </View>
       <Text style={[s.srcRef, align()]}>{src.ref}</Text>
       <Rich style={[s.srcSays, align()]} text={src.says} />
@@ -696,7 +732,6 @@ export function DuaList({ duas, onOpen, onBack }: { duas: Dua[]; onOpen: (id: st
 export function DuaScreen({ dua, onBack }: { dua: Dua; onBack: () => void }) {
   const sc = useScrollMemory('dua:' + dua.id);
   const [show, setShow] = useState({ ar: true, ok: true, me: true });
-  const ok = dua.status === 'verified';
   const Chip = ({ k, label }: { k: 'ar' | 'ok' | 'me'; label: string }) => (
     <Pressable onPress={() => setShow(v => ({ ...v, [k]: !v[k] }))} accessibilityRole="button" style={[s.chip, show[k] && s.chipOn, webHit]}>
       <Text style={[s.chipText, show[k] && { color: C.ink }]}>{label}</Text>
@@ -711,7 +746,6 @@ export function DuaScreen({ dua, onBack }: { dua: Dua; onBack: () => void }) {
       <View style={s.chipRow}>
         <Chip k="ar" label={ui('arabic')} /><Chip k="ok" label={ui('okunus')} /><Chip k="me" label={ui('meal')} />
       </View>
-      <Text style={[s.badge, { alignSelf: 'flex-start', color: ok ? C.shia : C.warn, borderColor: ok ? C.shia : C.warn, marginBottom: 8 }]}>{ok ? '✓ ' + ui('verified') : '⚠ ' + ui('check')}</Text>
       {!!dua.note && <Text style={[s.dim, { marginBottom: 10 }]}>{dua.note}</Text>}
 
       {dua.parts.map((p, i) => (
@@ -735,32 +769,10 @@ export function DuaScreen({ dua, onBack }: { dua: Dua; onBack: () => void }) {
 
 export function Method({ onBack }: { onBack: () => void }) {
   const sc = useScrollMemory('method');
-  const paragraphs = [
-    'Bu uygulama Şii bakışını esas alır. Tarihî olaylar sahne sahne hikâye gibi anlatılır. Her sahnenin altında, o sahnenin dayandığı kaynak küçük bir düğmeyle açılır.',
-    'Hikâyenin son sayfası "Bu olay için bütün kaynaklar"dır. Kaynak grupları kapalıdır; başlığa dokununca açılır. Sonraki olay düğmesi o sayfanın altında, kaydırmadan durur. Mezhep ve ibadet farkları gibi öğretici sayfalar sahne romanı değildir; kaynakları sayfanın altındaki düğmelerde durur.',
-    '✓ Doğrulandı: Metin ve numara kaynağından okunmuştur. ⚠ Kontrol edilmeli: Numara ya da sayfa, yayın öncesinde birincil kaynaktan teyit edilecektir.',
-    '"Ayrılıklar" düğmesi, iki geleneğin aynı olayı nasıl yorumladığını ya da bir rivayeti hangi kaynakların kabul edip etmediğini gösterir.',
-    '"Düşünelim" bölümündeki sorular, kaynaklarda yazılanlardan hareketle okuyucuyu kendi sonucunu kurmaya davet eder.',
-    'Uygulamada kimseye hakaret, lanet ya da nefret söylemi yoktur. Hz. Peygamber, Ehl-i Beyt ve sahabeye saygı esastır. Ziyâret-i Âşûrâ gibi dua metinleri kendi aslına sadık olarak verilmiştir.',
-    'Dualarda Arapça metin güvenilir bir kaynak sayfasından alınmıştır; Türkçe okunuş ve anlam hazırlanmıştır ve yayın öncesinde bir uzman tarafından kontrol edilmelidir.',
-    'Haritalar bölümündeki mesafeler, yerlerin koordinatından kuş uçuşu (büyük daire) olarak hesaplanır. Kara yolu ve eski kervan yolu daha uzun olabilir; bilinen farklar haritada ayrıca belirtilir.',
-    TRAVEL_METHOD,
-    'Harita zemini NASA Blue Marble Next Generation görüntüsüdür (gölgeli rölyef ve batimetri, kamu malı). Dağların okunması için üzerine METI ve NASA ASTER GDEM kabartması işlenmiştir. Yakın kadrajların altında, Kızıldeniz’den Hürmüz Boğazı’na uzanan geniş Orta Doğu levhası durur. Görüntüler bölgeye kırpılıp sıkıştırılmıştır; uygulama çevrimdışı çalışır, bir harita servisine bağlanmaz.',
-    BORDERS_CREDIT,
-  ];
   return (
     <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page}>
       <Back onPress={onBack} />
-      <Text style={[s.kicker, align()]}>AMAÇ</Text>
       <PurposeCopy />
-      <Text style={[s.kicker, align(), { marginTop: 28 }]}>YÖNTEM</Text>
-      <Text style={[s.evTitle, align()]}>{ui('method')}</Text>
-      {paragraphs.map((t, k) => (
-        <View key={k} style={s.methodCard}>
-          <Text style={s.methodNum}>{String(k + 1).padStart(2, '0')}</Text>
-          <Text style={[s.body, align(), { flex: 1 }]}>{t}</Text>
-        </View>
-      ))}
     </ScrollView>
   );
 }
@@ -781,6 +793,15 @@ const s = themedStyles(() => StyleSheet.create({
   featureTitle: { color: C.cream, fontFamily: font.serif, fontSize: 18, fontWeight: '700' },
   featureSub: { color: C.dim, fontFamily: font.sans, fontSize: 13, lineHeight: 18, marginTop: 3 },
   bubble: { width: 44, height: 44, borderRadius: 22, alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(228,197,106,0.12)', borderWidth: 1, borderColor: 'rgba(228,197,106,0.35)' },
+  hikaye: { flexDirection: 'row', alignItems: 'center', gap: 14, borderRadius: 22, padding: 18, minHeight: 124, borderWidth: 1.5, borderColor: C.gold, backgroundColor: C.card2, overflow: 'hidden' },
+  hikayeGlow: { position: 'absolute', left: -40, top: -40, width: 200, height: 200, borderRadius: 100, backgroundColor: 'rgba(228,197,106,0.10)' },
+  hikayeBubble: { width: 58, height: 58, borderRadius: 29, alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(228,197,106,0.16)', borderWidth: 1.5, borderColor: C.gold },
+  hikayeKicker: { color: C.goldDeep, fontFamily: font.sans, fontSize: 11, fontWeight: '800', letterSpacing: 2.4 },
+  hikayeTitle: { color: C.cream, fontFamily: font.serif, fontSize: 28, lineHeight: 34, fontWeight: '700', marginTop: 2 },
+  hikayeSub: { color: C.dim, fontFamily: font.sans, fontSize: 14, lineHeight: 20, marginTop: 4 },
+  storiesHead: { flexDirection: 'row', alignItems: 'center', gap: 14, marginTop: 4, marginBottom: 12 },
+  storiesTitle: { color: C.cream, fontFamily: font.serif, fontSize: 36, lineHeight: 42, fontWeight: '700', marginTop: 2 },
+  backInline: { flex: 1, minHeight: 44, justifyContent: 'center' },
   search: { flexDirection: 'row', alignItems: 'center', gap: 10, marginTop: 16, backgroundColor: C.card, borderRadius: 16, paddingHorizontal: 14, minHeight: 52, borderWidth: 1, borderColor: C.line },
   searchInput: { flex: 1, color: C.cream, fontFamily: font.sans, fontSize: 16, paddingVertical: 12 },
   clear: { color: C.gold, fontSize: 22, fontWeight: '600', paddingHorizontal: 4 },

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { BackHandler, Pressable, ScrollView, Text, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StatusBar } from 'expo-status-bar';
-import { DuaList, DuaScreen, EventScreen, Home, Method } from './src/ui/Screens';
+import { DuaList, DuaScreen, EventScreen, Home, Method, Stories } from './src/ui/Screens';
 import { PurposeScreen } from './src/ui/PurposeScreen';
 import { AhidnameScreen } from './src/ui/AhidnameScreen';
 import { MapDetail, MapList } from './src/ui/MapScreens';
@@ -19,6 +19,7 @@ import { cancel, ensurePermission, loadEnabled, nextReminder, openOf, saveEnable
 
 type Route =
   | { name: 'home' }
+  | { name: 'stories' }
   | { name: 'event'; id: string }
   | { name: 'method' }
   | { name: 'duas' }
@@ -120,6 +121,9 @@ function App() {
   const push = (r: Route) => setStack(s => [...s, r]);
   const back = () => setStack(s => (s.length > 1 ? s.slice(0, -1) : s));
   const home = () => setStack([{ name: 'home' }]);
+  const toStories = () => setStack([{ name: 'home' }, { name: 'stories' }]);
+  // Hikâye içinden (olay, ahidnâme, hikâyeden açılan harita) alttaki düğme Hikâyeler sayfasına döner.
+  const inStories = (route.name === 'event' || route.name === 'ahidname' || route.name === 'map') && stack.some(r => r.name === 'stories');
 
   useEffect(() => {
     const sub = BackHandler.addEventListener('hardwareBackPress', () => {
@@ -147,7 +151,7 @@ function App() {
     const o = openOf(lastResponse);
     if (!o) return;
     setEditingLanguage(false);
-    setStack([{ name: 'home' }, o.kind === 'event' ? { name: 'event', id: o.id } : o.kind === 'dua' ? { name: 'dua', id: o.id } : { name: 'imam', id: o.id }]);
+    setStack(o.kind === 'event' ? [{ name: 'home' }, { name: 'stories' }, { name: 'event', id: o.id }] : [{ name: 'home' }, o.kind === 'dua' ? { name: 'dua', id: o.id } : { name: 'imam', id: o.id }]);
   }, [ready, requiredStore, lastResponse]);
 
   const ev = route.name === 'event' ? EVENTS.find(e => e.id === route.id) : undefined;
@@ -193,7 +197,10 @@ function App() {
         ) : <>
         <View key={'fs' + scale} style={{ flex: 1 }}>
         {route.name === 'home' && (
-          <Home events={EVENTS} langName={languageOption(lang).name} onSettings={() => { setDraftLanguage(lang); setEditingLanguage(true); }} onOpen={id => push({ name: 'event', id })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onMaps={() => push({ name: 'maps' })} onQibla={() => push({ name: 'qibla' })} onImams={() => push({ name: 'imams' })} onOpenAhid={() => push({ name: 'ahidname' })} />
+          <Home langName={languageOption(lang).name} onSettings={() => { setDraftLanguage(lang); setEditingLanguage(true); }} onStories={() => push({ name: 'stories' })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onQibla={() => push({ name: 'qibla' })} onImams={() => push({ name: 'imams' })} />
+        )}
+        {route.name === 'stories' && (
+          <Stories events={EVENTS} onBack={back} onOpen={id => push({ name: 'event', id })} onOpenAhid={() => push({ name: 'ahidname' })} />
         )}
         {route.name === 'event' && ev && <EventScreen key={ev.id} ev={ev} onBack={back} onOpenMap={id => push({ name: 'map', id })} onNext={id => push({ name: 'event', id })} />}
         {route.name === 'event' && !ev && <Missing onBack={back} />}
@@ -208,10 +215,10 @@ function App() {
         {route.name === 'maps' && <MapList onOpen={id => push({ name: 'map', id })} onBack={back} />}
         {route.name === 'map' && <MapDetail key={route.id} id={route.id} onBack={back} onOpenEvent={id => push({ name: 'event', id })} />}
         </View>
-        {route.name !== 'home' && (
+        {route.name !== 'home' && route.name !== 'stories' && (
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10, backgroundColor: C.card, borderTopWidth: 1, borderTopColor: C.lineStrong, paddingLeft: 10, paddingRight: 12, paddingBottom: 6, paddingTop: 4 }}>
-            <Pressable onPress={home} accessibilityRole="button" accessibilityLabel={ui('homeBtn')} style={({ pressed }) => [{ flex: 1, minHeight: 48, alignItems: 'center', justifyContent: 'center', opacity: pressed ? 0.86 : 1 }]}>
-              <Text style={{ color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '800' }}>{ui('homeBtn')}</Text>
+            <Pressable onPress={inStories ? toStories : home} accessibilityRole="button" accessibilityLabel={inStories ? ui('stories') : ui('homeBtn')} style={({ pressed }) => [{ flex: 1, minHeight: 48, alignItems: 'center', justifyContent: 'center', opacity: pressed ? 0.86 : 1 }]}>
+              <Text style={{ color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '800' }}>{inStories ? ui('stories') : ui('homeBtn')}</Text>
             </Pressable>
             <FontButton compact />
           </View>

@@ -69,14 +69,10 @@ export function AhidnameScreen({ onBack }: { onBack: () => void }) {
       })}
       <Text style={[s.kicker, align(), { marginTop: 28 }]}>KAYNAKLAR</Text>
       {AHIDNAME_SOURCES.map((src, i) => {
-        const ok = src.status === 'verified';
         return (
           <View key={i} style={s.src}>
             <View style={s.srcHead}>
               <Text style={[s.srcBook, align(), { flex: 1 }]}>{src.book}</Text>
-              <Text style={[s.badge, { color: ok ? C.shia : C.warn, borderColor: ok ? C.shia : C.warn }]}>
-                {ok ? '✓ ' + ui('verified') : '⚠ ' + ui('check')}
-              </Text>
             </View>
             <Text style={[s.srcRef, align()]}>{src.ref}</Text>
             <Rich style={[s.srcSays, align()]} text={src.says} />

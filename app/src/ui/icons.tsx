@@ -1,5 +1,5 @@
 import React from 'react';
-import Svg, { Circle, Path } from 'react-native-svg';
+import Svg, { Circle, Path, Rect } from 'react-native-svg';
 import { C } from './theme';
 
 export function CompassIcon({ size = 22, color = C.gold }: { size?: number; color?: string }) {
@@ -75,6 +75,16 @@ export function Chevron({ size = 18, color = C.faint }: { size?: number; color?:
   return (
     <Svg width={size} height={size} viewBox="0 0 18 18">
       <Path d="M7 4.2 L12 9 L7 13.8" stroke={color} strokeWidth={1.6} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    </Svg>
+  );
+}
+
+export function InstagramIcon({ size = 22, color = C.gold }: { size?: number; color?: string }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Rect x={3.5} y={3.5} width={17} height={17} rx={5} stroke={color} strokeWidth={1.6} fill="none" />
+      <Circle cx={12} cy={12} r={4} stroke={color} strokeWidth={1.6} fill="none" />
+      <Circle cx={16.9} cy={7.1} r={1.1} fill={color} />
     </Svg>
   );
 }
