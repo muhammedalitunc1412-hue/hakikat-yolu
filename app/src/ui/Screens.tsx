@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { FlatList, Image, type LayoutChangeEvent, Linking, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import type { Accept, Dispute, Dua, HistEvent, Scene, Source } from '../types';
 import { getLang, tx, ui } from '../i18n';
+import { FontButton, useFontScale } from './FontScale';
 import { SCENE_IMAGES } from '../data/sceneImages';
 import { CATEGORIES, isStory, nextEvent } from '../data/events';
 import { SCENE_VIDEOS } from '../data/sceneVideos';
@@ -90,9 +91,12 @@ export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, o
   let shown = 0;
   return (
     <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page} keyboardShouldPersistTaps="handled">
-      <Pressable onPress={onSettings} accessibilityRole="button" style={s.settings}>
-        <Text style={s.settingsText}>{ui('settings')} · {langName}</Text>
-      </Pressable>
+      <View style={s.topRow}>
+        <FontButton />
+        <Pressable onPress={onSettings} accessibilityRole="button" style={s.settings}>
+          <Text style={s.settingsText}>{ui('settings')} · {langName}</Text>
+        </Pressable>
+      </View>
       <View style={s.hero}>
         <View style={{ flex: 1 }}>
           <Text style={s.kicker}>{ui('kicker')}</Text>
@@ -340,11 +344,11 @@ type ScenePageItem = Extract<StoryPage, { kind: 'scene' }>;
 
 // Sahne sayfası: yalnızca kendi verisi değişince yeniden çizilir. Eskiden EventScreen her
 // setIdx / yükseklik güncellemesinde bütün sahneleri (görsel + uzun metin) baştan çiziyordu.
-const ScenePage = React.memo(function ScenePage({ ev, item, index, width, story, lang, onHeight }: {
-  ev: HistEvent; item: ScenePageItem; index: number; width: number; story: boolean; lang: string;
+const ScenePage = React.memo(function ScenePage({ ev, item, index, width, story, lang, scale, onHeight }: {
+  ev: HistEvent; item: ScenePageItem; index: number; width: number; story: boolean; lang: string; scale: number;
   onHeight: (index: number, h: number) => void;
 }) {
-  void lang; // dil değişince memo'yu kırmak için
+  void lang; void scale; // dil ve yazı boyutu değişince memo'yu kırmak için
   const onLayout = useCallback((e: LayoutChangeEvent) => onHeight(index, e.nativeEvent.layout.height), [onHeight, index]);
   return (
     <View style={{ width }}>
@@ -479,6 +483,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   const keyExtractor = useCallback((_: StoryPage, i: number) => String(i), []);
   const getItemLayout = useCallback((_: ArrayLike<StoryPage> | null | undefined, i: number) => ({ length: width, offset: width * i, index: i }), [width]);
   const lang = getLang();
+  const { scale } = useFontScale();
   const renderPage = useCallback(({ item, index }: { item: StoryPage; index: number }) => item.kind === 'video' ? (
     <View style={{ width }}>
       <View collapsable={false} onLayout={e => setPageHeight(index, e.nativeEvent.layout.height)}>
@@ -505,8 +510,8 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
     </View>
     </View>
   ) : (
-    <ScenePage ev={ev} item={item} index={index} width={width} story={story} lang={lang} onHeight={setPageHeight} />
-  ), [width, ev, story, srcOpen, setPageHeight, lang]);
+    <ScenePage ev={ev} item={item} index={index} width={width} story={story} lang={lang} scale={scale} onHeight={setPageHeight} />
+  ), [width, ev, story, srcOpen, setPageHeight, lang, scale]);
 
   const Btn = ({ p, label, n, color }: { p: Panel; label: string; n: number; color: string }) => (
     <Pressable onPress={() => toggle(p)} accessibilityRole="button" style={[s.panelBtn, { borderColor: color }, has(p) && { backgroundColor: color }, webHit]}>
@@ -762,7 +767,8 @@ export function Method({ onBack }: { onBack: () => void }) {
 
 const s = themedStyles(() => StyleSheet.create({
   page: { paddingHorizontal: 18, paddingTop: TOP, paddingBottom: 56 },
-  settings: { alignSelf: 'flex-end', minHeight: 36, justifyContent: 'center', paddingHorizontal: 12, marginBottom: 6, backgroundColor: C.card, borderRadius: 12 },
+  topRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end', gap: 8, marginBottom: 6 },
+  settings: { minHeight: 36, justifyContent: 'center', paddingHorizontal: 12, backgroundColor: C.card, borderRadius: 12 },
   settingsText: { color: C.gold, fontFamily: font.sans, fontSize: 13, fontWeight: '700' },
   hero: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   logo: { width: 84, height: 84, backgroundColor: 'transparent' },
