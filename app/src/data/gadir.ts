@@ -18,7 +18,7 @@ export const gadir: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: '**Hz. Peygamber** konuşmasına bir soruyla başladı: "Ben müminlere kendi canlarından daha yakın değil miyim?" Kalabalık hep bir ağızdan cevap verdi: "Evet, ya Resulallah." Bu soru sıradan bir giriş değildi. Peygamber önce herkesin önünde kendi konumunu ve insanların üzerindeki hakkını teyit ettiriyordu. Müminlerin işlerinde onların kendilerinden daha çok söz sahibi olduğunu, binlerce kişiye yüksek sesle kabul ettirdi. Şii okuyuş bu sıraya özellikle dikkat çeker. Çünkü hemen ardından gelecek söz, bu yakınlığın ve bu yetkinin kimde devam edeceğini açıklayacaktı. Kalabalık, Peygamber\'in bir sonraki sözünü bekledi.' },
+      text: { tr: 'Bu, **Veda Hutbesi**\'nden sonra **Hz. Peygamber**\'in yaptığı en kalabalık konuşmaydı. Hac dönüşü orada yüz binin üzerinde insan toplanmıştı. **Hz. Peygamber** konuşmasına bir soruyla başladı: "Ben müminlere kendi canlarından daha yakın değil miyim?" Kalabalık hep bir ağızdan cevap verdi: "Evet, ya Resulallah." Bu soru sıradan bir giriş değildi. Peygamber önce herkesin önünde kendi konumunu ve insanların üzerindeki hakkını teyit ettiriyordu. Müminlerin işlerinde onların kendilerinden daha çok söz sahibi olduğunu, bu büyük kalabalığa yüksek sesle kabul ettirdi. Şii okuyuş bu sıraya özellikle dikkat çeker. Çünkü hemen ardından gelecek söz, bu yakınlığın ve bu yetkinin kimde devam edeceğini açıklayacaktı. Kalabalık, Peygamber\'in bir sonraki sözünü bekledi.' },
       art: { bg: 'dune-day', props: ['sun', 'minbar'], actors: [{ kind: 'crowd', x: 32, scale: 9 }, { kind: 'prophet', x: 72, label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },

@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { FlatList, Image, Linking, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { FlatList, Image, type LayoutChangeEvent, Linking, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import type { Accept, Dispute, Dua, HistEvent, Scene, Source } from '../types';
-import { tx, ui } from '../i18n';
+import { getLang, tx, ui } from '../i18n';
+import { FontButton, useFontScale } from './FontScale';
 import { SCENE_IMAGES } from '../data/sceneImages';
 import { CATEGORIES, isStory, nextEvent } from '../data/events';
 import { SCENE_VIDEOS } from '../data/sceneVideos';
@@ -90,9 +91,12 @@ export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, o
   let shown = 0;
   return (
     <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page} keyboardShouldPersistTaps="handled">
-      <Pressable onPress={onSettings} accessibilityRole="button" style={s.settings}>
-        <Text style={s.settingsText}>{ui('settings')} · {langName}</Text>
-      </Pressable>
+      <View style={s.topRow}>
+        <FontButton />
+        <Pressable onPress={onSettings} accessibilityRole="button" style={s.settings}>
+          <Text style={s.settingsText}>{ui('settings')} · {langName}</Text>
+        </Pressable>
+      </View>
       <View style={s.hero}>
         <View style={{ flex: 1 }}>
           <Text style={s.kicker}>{ui('kicker')}</Text>
@@ -288,7 +292,7 @@ function SceneImage({ evId, n, title, width, image }: { evId: string; n: number;
     return (
       <>
         <Pressable onPress={() => setViewer(0)} accessibilityRole="button" accessibilityLabel="Görseli tam ekran aç">
-          <Image source={cur} resizeMode="cover" style={{ width, height: h }} />
+          <Image source={cur} resizeMode="cover" resizeMethod="resize" style={{ width, height: h }} />
           <View style={s.imgCount}>
             <Text style={s.imgCountText}>⤢{imgs.length > 1 ? ` ${imgs.length} görsel` : ''}</Text>
           </View>
@@ -336,6 +340,30 @@ function SceneCites({ ev, cites }: { ev: HistEvent; cites?: Scene['cites'] }) {
   );
 }
 
+type ScenePageItem = Extract<StoryPage, { kind: 'scene' }>;
+
+// Sahne sayfası: yalnızca kendi verisi değişince yeniden çizilir. Eskiden EventScreen her
+// setIdx / yükseklik güncellemesinde bütün sahneleri (görsel + uzun metin) baştan çiziyordu.
+const ScenePage = React.memo(function ScenePage({ ev, item, index, width, story, lang, scale, onHeight }: {
+  ev: HistEvent; item: ScenePageItem; index: number; width: number; story: boolean; lang: string; scale: number;
+  onHeight: (index: number, h: number) => void;
+}) {
+  void lang; void scale; // dil ve yazı boyutu değişince memo'yu kırmak için
+  const onLayout = useCallback((e: LayoutChangeEvent) => onHeight(index, e.nativeEvent.layout.height), [onHeight, index]);
+  return (
+    <View style={{ width }}>
+      <View collapsable={false} onLayout={onLayout}>
+        {!item.scene.textOnly && <SceneImage evId={ev.id} n={item.n + 1} title={tx(ev.title)} width={width} image={item.scene.image} />}
+        <View style={s.sceneText}>
+          <Rich style={[s.sceneBody, align()]} text={item.scene.text} selectable />
+          {!!item.scene.by && <AcceptChip by={item.scene.by} />}
+          {story && <SceneCites ev={ev} cites={item.scene.cites} />}
+        </View>
+      </View>
+    </View>
+  );
+});
+
 export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; onBack: () => void; onOpenMap: (mapId: string) => void; onNext?: (id: string) => void }) {
   const sc = useScrollMemory('event:' + ev.id);
   const width = usePageWidth();
@@ -352,14 +380,14 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   const nDis = ev.disputes?.length ?? 0;
   const story = isStory(ev.id);
   const nxt = nextEvent(ev.id);
-  const pages: StoryPage[] = [
+  const pages = useMemo<StoryPage[]>(() => [
     ...ev.scenes.map((scene, n) => ({ kind: 'scene' as const, scene, n })),
     ...(story && SCENE_VIDEOS[ev.id + '-video'] ? [{ kind: 'video' as const }] : []),
     ...(story ? [{ kind: 'sources' as const }] : []),
-  ];
+  ], [ev, story]);
   const total = pages.length;
   const [pageHeights, setPageHeights] = useState<number[]>([]);
-  const setPageHeight = (index: number, h: number) => {
+  const setPageHeight = useCallback((index: number, h: number) => {
     const next = Math.ceil(h);
     setPageHeights(prev => {
       if (Math.abs((prev[index] ?? 0) - next) < 2) return prev;
@@ -367,8 +395,11 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
       copy[index] = next;
       return copy;
     });
-  };
-  const listHeight = pageHeights[idx];
+  }, []);
+  // Liste yüksekliği, kaydırma bitip sahne oturduktan sonra değişir (heightIdx). Animasyon sürerken
+  // yüksekliği değiştirmek Android'de süren sayfa kaydırmasını yarıda kesebiliyordu.
+  const [heightIdx, setHeightIdx] = useState(idx);
+  const listHeight = pageHeights[heightIdx];
   const maps = mapsForEvent(ev.id);
   const onSources = pages[idx]?.kind === 'sources';
   const beginSwipe = (x: number, y: number) => { swipe.current = { x, y }; };
@@ -377,39 +408,110 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
     const dx = x - swipe.current.x;
     const dy = y - swipe.current.y;
     if (Math.abs(dx) < 56 || Math.abs(dx) < Math.abs(dy)) return;
-    go(dx > 0 ? idx - 1 : idx + 1);
+    step(dx > 0 ? -1 : 1);
   };
 
+  // idxRef: arka arkaya basışlarda eski (render'dan kalma) idx yerine en son hedef kullanılır.
+  const idxRef = useRef(idx);
+  const dragging = useRef(false);
+  const momentum = useRef(false);
+  const pendingGo = useRef<number | null>(null);
+  const lastX = useRef(0);
+  const lastT = useRef(0);
+  const settle = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const goTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => () => {
+    if (settle.current) clearTimeout(settle.current);
+    if (goTimer.current) clearTimeout(goTimer.current);
+  }, []);
+  const commit = (i: number) => {
+    idxRef.current = i;
+    rememberScene('event:' + ev.id, i);
+    setIdx(cur => (cur === i ? cur : i));
+    setHeightIdx(cur => (cur === i ? cur : i));
+  };
   const go = (i: number) => {
     const next = Math.max(0, Math.min(total - 1, i));
+    pendingGo.current = next;
     listRef.current?.scrollToOffset({ offset: width * next, animated: true });
-    setIdx(next);
+    idxRef.current = next;
     rememberScene('event:' + ev.id, next);
+    setIdx(cur => (cur === next ? cur : next));
+    // Animasyon bitince (ya da olay gelmezse 700 ms sonra) yükseklik yeni sahneye göre ayarlanır.
+    if (goTimer.current) clearTimeout(goTimer.current);
+    goTimer.current = setTimeout(() => {
+      goTimer.current = null;
+      pendingGo.current = null;
+      setHeightIdx(cur => (cur === idxRef.current ? cur : idxRef.current));
+    }, 700);
   };
+  const step = (d: number) => go(idxRef.current + d);
   // Kaydırma bitmeden sahne değiştirilmez. Eskiden parmak kalkar kalkmaz (onScrollEndDrag) yarım
   // kalmış konumdan sahne hesaplanıyordu; bu, kayma sürerken listenin yüksekliğini yeni sahneye göre
   // değiştiriyor ve Android'de süren sayfa kaydırmasını yarıda kesip eski sahneye geri attırıyordu.
-  const dragging = useRef(false);
-  const lastX = useRef(0);
-  const settle = useRef<ReturnType<typeof setTimeout> | null>(null);
-  useEffect(() => () => { if (settle.current) clearTimeout(settle.current); }, []);
   const sync = (x: number) => {
     if (settle.current) { clearTimeout(settle.current); settle.current = null; }
     const w = Math.max(width, 1);
+    // Düğmeyle başlatılmış animasyon henüz hedefe varmadıysa ara konumdan sahne hesaplanmaz.
+    if (pendingGo.current !== null) {
+      if (Math.abs(x - pendingGo.current * w) > 1) return;
+      pendingGo.current = null;
+      if (goTimer.current) { clearTimeout(goTimer.current); goTimer.current = null; }
+    }
     const i = Math.max(0, Math.min(total - 1, Math.round(x / w)));
     // Sayfanın tam ortasında durmadıysa (örn. web'de) en yakın sahneye oturt
-    if (Math.abs(x - i * w) > 1) listRef.current?.scrollToOffset({ offset: i * w, animated: true });
-    rememberScene('event:' + ev.id, i);
-    setIdx(cur => (cur === i ? cur : i));
+    if (Math.abs(x - i * w) > 1 && !momentum.current) listRef.current?.scrollToOffset({ offset: i * w, animated: true });
+    commit(i);
+  };
+  // Kaydırma olayı başına yalnızca iki ref yazılır; zamanlayıcı sessizlik olunca bir kez çalışır.
+  const armSettle = (ms: number) => {
+    settle.current = setTimeout(() => {
+      settle.current = null;
+      const quiet = Date.now() - lastT.current;
+      if (quiet < 170) { armSettle(180 - quiet); return; }
+      if (dragging.current) return;
+      if (momentum.current && quiet < 600) { armSettle(200); return; }
+      momentum.current = false;
+      sync(lastX.current);
+    }, ms);
   };
   const onListScroll = (x: number) => {
     lastX.current = x;
-    if (settle.current) clearTimeout(settle.current);
-    settle.current = setTimeout(() => {
-      settle.current = null;
-      if (!dragging.current) sync(lastX.current);
-    }, 180);
+    lastT.current = Date.now();
+    if (!settle.current) armSettle(200);
   };
+  const keyExtractor = useCallback((_: StoryPage, i: number) => String(i), []);
+  const getItemLayout = useCallback((_: ArrayLike<StoryPage> | null | undefined, i: number) => ({ length: width, offset: width * i, index: i }), [width]);
+  const lang = getLang();
+  const { scale } = useFontScale();
+  const renderPage = useCallback(({ item, index }: { item: StoryPage; index: number }) => item.kind === 'video' ? (
+    <View style={{ width }}>
+      <View collapsable={false} onLayout={e => setPageHeight(index, e.nativeEvent.layout.height)}>
+        <EventVideo evId={ev.id} width={width} />
+        <View style={s.sceneText}>
+          <Text style={[s.sceneBody, align(), { fontWeight: '800', color: C.gold }]}>{ui('video')}</Text>
+          <Text style={[s.dim, align(), { marginTop: 6 }]}>{ui('videoHint')}</Text>
+        </View>
+      </View>
+    </View>
+  ) : item.kind === 'sources' ? (
+    <View style={{ width }}>
+    <View collapsable={false} onLayout={e => setPageHeight(index, e.nativeEvent.layout.height)} style={{ paddingHorizontal: 16, paddingTop: 8 }}>
+      <Text style={[s.catTitle, align()]}>Bu olay için bütün kaynaklar</Text>
+      <Text style={[s.catSub, align()]}>Kaynak grupları kapalıdır; başlığa dokununca açılır.</Text>
+      <Pressable onPress={() => setSrcOpen(v => ({ ...v, shia: !v.shia }))} accessibilityRole="button" accessibilityState={{ expanded: srcOpen.shia }} style={[s.srcFold, { borderColor: C.shia }, srcOpen.shia && { backgroundColor: C.shia }, webHit]}>
+        <Text style={[s.srcFoldText, { color: srcOpen.shia ? C.ink : C.shia }]}>{ui('shiaSources')} ({ev.shia.length}) {srcOpen.shia ? '▲' : '▼'}</Text>
+      </Pressable>
+      {srcOpen.shia && (ev.shia.length ? ev.shia.map((x, i) => <SourceCard key={'h' + i} src={x} tone={C.shia} />) : <Text style={s.dim}>{ui('none')}</Text>)}
+      <Pressable onPress={() => setSrcOpen(v => ({ ...v, sunni: !v.sunni }))} accessibilityRole="button" accessibilityState={{ expanded: srcOpen.sunni }} style={[s.srcFold, { borderColor: C.sunni }, srcOpen.sunni && { backgroundColor: C.sunni }, webHit]}>
+        <Text style={[s.srcFoldText, { color: srcOpen.sunni ? C.ink : C.sunni }]}>{ui('sunniSources')} ({ev.sunni.length}) {srcOpen.sunni ? '▲' : '▼'}</Text>
+      </Pressable>
+      {srcOpen.sunni && (ev.sunni.length ? ev.sunni.map((x, i) => <SourceCard key={'s' + i} src={x} tone={C.sunni} />) : <Text style={s.dim}>{ui('none')}</Text>)}
+    </View>
+    </View>
+  ) : (
+    <ScenePage ev={ev} item={item} index={index} width={width} story={story} lang={lang} scale={scale} onHeight={setPageHeight} />
+  ), [width, ev, story, srcOpen, setPageHeight, lang, scale]);
 
   const Btn = ({ p, label, n, color }: { p: Panel; label: string; n: number; color: string }) => (
     <Pressable onPress={() => toggle(p)} accessibilityRole="button" style={[s.panelBtn, { borderColor: color }, has(p) && { backgroundColor: color }, webHit]}>
@@ -459,54 +561,26 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
           scrollEnabled={!onSources}
           showsHorizontalScrollIndicator={false}
           style={[s.sceneList, listHeight ? { height: listHeight } : null]}
-          keyExtractor={(_, i) => String(i)}
-          scrollEventThrottle={16}
+          keyExtractor={keyExtractor}
+          scrollEventThrottle={32}
           onScroll={e => onListScroll(e.nativeEvent.contentOffset.x)}
-          onScrollBeginDrag={() => { dragging.current = true; }}
+          onScrollBeginDrag={() => { dragging.current = true; pendingGo.current = null; }}
           onScrollEndDrag={e => { dragging.current = false; onListScroll(e.nativeEvent.contentOffset.x); }}
-          onMomentumScrollEnd={e => { dragging.current = false; sync(e.nativeEvent.contentOffset.x); }}
-          getItemLayout={(_, i) => ({ length: width, offset: width * i, index: i })}
-          renderItem={({ item, index }) => item.kind === 'video' ? (
-            <View style={{ width }}>
-              <View collapsable={false} onLayout={e => setPageHeight(index, e.nativeEvent.layout.height)}>
-                <EventVideo evId={ev.id} width={width} />
-                <View style={s.sceneText}>
-                  <Text style={[s.sceneBody, align(), { fontWeight: '800', color: C.gold }]}>{ui('video')}</Text>
-                  <Text style={[s.dim, align(), { marginTop: 6 }]}>{ui('videoHint')}</Text>
-                </View>
-              </View>
-            </View>
-          ) : item.kind === 'sources' ? (
-            <View style={{ width }}>
-            <View collapsable={false} onLayout={e => setPageHeight(index, e.nativeEvent.layout.height)} style={{ paddingHorizontal: 16, paddingTop: 8 }}>
-              <Text style={[s.catTitle, align()]}>Bu olay için bütün kaynaklar</Text>
-              <Text style={[s.catSub, align()]}>Kaynak grupları kapalıdır; başlığa dokununca açılır.</Text>
-              <Pressable onPress={() => setSrcOpen(v => ({ ...v, shia: !v.shia }))} accessibilityRole="button" accessibilityState={{ expanded: srcOpen.shia }} style={[s.srcFold, { borderColor: C.shia }, srcOpen.shia && { backgroundColor: C.shia }, webHit]}>
-                <Text style={[s.srcFoldText, { color: srcOpen.shia ? C.ink : C.shia }]}>{ui('shiaSources')} ({ev.shia.length}) {srcOpen.shia ? '▲' : '▼'}</Text>
-              </Pressable>
-              {srcOpen.shia && (ev.shia.length ? ev.shia.map((x, i) => <SourceCard key={'h' + i} src={x} tone={C.shia} />) : <Text style={s.dim}>{ui('none')}</Text>)}
-              <Pressable onPress={() => setSrcOpen(v => ({ ...v, sunni: !v.sunni }))} accessibilityRole="button" accessibilityState={{ expanded: srcOpen.sunni }} style={[s.srcFold, { borderColor: C.sunni }, srcOpen.sunni && { backgroundColor: C.sunni }, webHit]}>
-                <Text style={[s.srcFoldText, { color: srcOpen.sunni ? C.ink : C.sunni }]}>{ui('sunniSources')} ({ev.sunni.length}) {srcOpen.sunni ? '▲' : '▼'}</Text>
-              </Pressable>
-              {srcOpen.sunni && (ev.sunni.length ? ev.sunni.map((x, i) => <SourceCard key={'s' + i} src={x} tone={C.sunni} />) : <Text style={s.dim}>{ui('none')}</Text>)}
-            </View>
-            </View>
-          ) : (
-            <View style={{ width }}>
-              <View collapsable={false} onLayout={e => setPageHeight(index, e.nativeEvent.layout.height)}>
-                {!item.scene.textOnly && <SceneImage evId={ev.id} n={item.n + 1} title={tx(ev.title)} width={width} image={item.scene.image} />}
-                <View style={s.sceneText}>
-                  <Rich style={[s.sceneBody, align()]} text={item.scene.text} selectable />
-                  {!!item.scene.by && <AcceptChip by={item.scene.by} />}
-                  {story && <SceneCites ev={ev} cites={item.scene.cites} />}
-                </View>
-              </View>
-            </View>
-          )}
+          onMomentumScrollBegin={() => { momentum.current = true; }}
+          onMomentumScrollEnd={e => { momentum.current = false; dragging.current = false; sync(e.nativeEvent.contentOffset.x); }}
+          getItemLayout={getItemLayout}
+          // Sahneler tam ekran genişliğinde ve görselli; hepsini birden bellekte tutmak (varsayılan
+          // windowSize 21) hızlı kaydırmada takılma yaratıyordu. Yalnızca yakın sahneler bağlı kalır.
+          windowSize={5}
+          initialNumToRender={3}
+          maxToRenderPerBatch={3}
+          updateCellsBatchingPeriod={40}
+          removeClippedSubviews={false}
+          renderItem={renderPage}
         />
 
         <View style={s.pager}>
-          <Pressable onPress={() => go(idx - 1)} disabled={idx === 0} accessibilityRole="button" accessibilityLabel={ui('prev')} style={[s.pagerBtn, idx === 0 && s.pagerOff, webHit]}>
+          <Pressable onPress={() => step(-1)} disabled={idx === 0} accessibilityRole="button" accessibilityLabel={ui('prev')} style={[s.pagerBtn, idx === 0 && s.pagerOff, webHit]}>
             <Text style={s.pagerIcon}>‹</Text>
           </Pressable>
           <View style={{ flex: 1, alignItems: 'center' }}>
@@ -515,7 +589,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
               {pages.map((_, i) => <View key={i} style={[s.dot, i === idx && s.dotOn]} />)}
             </View>
           </View>
-          <Pressable onPress={() => go(idx + 1)} disabled={idx === total - 1} accessibilityRole="button" accessibilityLabel={ui('nextScene')} style={[s.pagerBtn, idx === total - 1 && s.pagerOff, webHit]}>
+          <Pressable onPress={() => step(1)} disabled={idx === total - 1} accessibilityRole="button" accessibilityLabel={ui('nextScene')} style={[s.pagerBtn, idx === total - 1 && s.pagerOff, webHit]}>
             <Text style={s.pagerIcon}>›</Text>
           </Pressable>
         </View>
@@ -578,7 +652,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
         )}
       </ScrollView>
       {onSources && idx > 0 && (
-        <Pressable onPress={() => go(idx - 1)} accessibilityRole="button" accessibilityLabel={ui('prevScene')} style={({ pressed }) => [s.prevBar, pressed && s.pressed, webHit]}>
+        <Pressable onPress={() => step(-1)} accessibilityRole="button" accessibilityLabel={ui('prevScene')} style={({ pressed }) => [s.prevBar, pressed && s.pressed, webHit]}>
           <Text style={s.prevBarText}>‹  {ui('prevScene')}</Text>
         </Pressable>
       )}
@@ -693,7 +767,8 @@ export function Method({ onBack }: { onBack: () => void }) {
 
 const s = themedStyles(() => StyleSheet.create({
   page: { paddingHorizontal: 18, paddingTop: TOP, paddingBottom: 56 },
-  settings: { alignSelf: 'flex-end', minHeight: 36, justifyContent: 'center', paddingHorizontal: 12, marginBottom: 6, backgroundColor: C.card, borderRadius: 12 },
+  topRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end', gap: 8, marginBottom: 6 },
+  settings: { minHeight: 36, justifyContent: 'center', paddingHorizontal: 12, backgroundColor: C.card, borderRadius: 12 },
   settingsText: { color: C.gold, fontFamily: font.sans, fontSize: 13, fontWeight: '700' },
   hero: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   logo: { width: 84, height: 84, backgroundColor: 'transparent' },

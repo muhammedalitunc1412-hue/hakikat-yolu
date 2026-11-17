@@ -6,7 +6,7 @@ const art = { bg: 'city' as const, props: ['sun' as const, 'minbar' as const], a
 export const muaviyeIktidar: HistEvent = {
   id: 'muaviye-iktidar',
   date: { tr: '41-60 H (661-680)', en: '41-60 AH (661-680)' },
-  title: { tr: "Muaviye'nin iktidarı: mülk, Ziyâd, Hucr ve Yezid'in veliahtlığı", en: "Muawiya's rule: kingship, Ziyad, Hujr and the succession of Yazid" },
+  title: { tr: "Muaviye'nin gasp ettiği gayrimeşru iktidar", en: "The illegitimate rule Muawiya usurped" },
   hook: { tr: "Muaviye'nin yıllarında hilafet mülke döndü; Hz. Ali'ye sövüldü ve Yezid veliaht oldu.", en: "How did Muawiya turn the caliphate into a monarchy in twenty years, and how did he prepare the road to Karbala?" },
   scenes: [
     {
@@ -17,7 +17,7 @@ export const muaviyeIktidar: HistEvent = {
     },
     {
       by: 'partial',
-      text: { tr: 'Muaviye, Şam\'da Yeşil Saray anlamına gelen **Hadrâ**\'yı yaptırdı. Sarayın parlaklığı uzaktan göze çarpıyordu. Peygamber\'in yakın sahabelerinden **Ebuzer el-Gifârî** bir gün Muaviye\'nin karşısına dikildi ve ona şöyle dedi: "Bu sarayı Allah\'ın malından yaptırdıysan hıyanettir, kendi malından yaptırdıysan israftır." Bu söz Belâzurî\'nin Ensâbü\'l-Eşrâf adlı eserinde aktarılır. Muaviye cevap veremedi, ama Ebuzer\'i halifeye şikâyet etti. Ebuzer Şam\'dan sürüldü ve sonunda Rebeze çölünde yalnızlık içinde vefat etti. Ebuzer, saray karşısında hakkı söylemekten korkmayan, Peygamber\'in sevdiği bir sahabeydi.' },
+      text: { tr: 'Halife **Osman** döneminde Şam valisi olan Muaviye, Şam\'da Yeşil Saray anlamına gelen **Hadrâ**\'yı yaptırdı. Sarayın parlaklığı uzaktan göze çarpıyordu. Peygamber\'in yakın sahabelerinden **Ebuzer el-Gifârî** bir gün Muaviye\'nin karşısına dikildi ve ona şöyle dedi: "Bu sarayı Allah\'ın malından yaptırdıysan hıyanettir, kendi malından yaptırdıysan israftır." Bu söz Belâzurî\'nin Ensâbü\'l-Eşrâf adlı eserinde aktarılır. Muaviye cevap veremedi, ama Ebuzer\'i Medine\'deki Halife **Osman**\'a şikâyet etti. Ebuzer Şam\'dan sürüldü ve sonunda Rebeze çölünde yalnızlık içinde vefat etti. Ebuzer, saray karşısında hakkı söylemekten korkmayan, Peygamber\'in sevdiği bir sahabeydi.' },
       art,
       cites: [{ side: 'shia', i: 2 }, { side: 'sunni', i: 6 }],
     },
