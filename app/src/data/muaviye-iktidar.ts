@@ -6,7 +6,7 @@ const art = { bg: 'city' as const, props: ['sun' as const, 'minbar' as const], a
 export const muaviyeIktidar: HistEvent = {
   id: 'muaviye-iktidar',
   date: { tr: '41-60 H (661-680)', en: '41-60 AH (661-680)' },
-  title: { tr: "Muaviye'nin iktidarı: mülk, Ziyâd, Hucr ve Yezid'in veliahtlığı", en: "Muawiya's rule: kingship, Ziyad, Hujr and the succession of Yazid" },
+  title: { tr: "Muaviye'nin gasp ettiği gayrimeşru iktidar", en: "The illegitimate rule Muawiya usurped" },
   hook: { tr: "Muaviye'nin yıllarında hilafet mülke döndü; Hz. Ali'ye sövüldü ve Yezid veliaht oldu.", en: "How did Muawiya turn the caliphate into a monarchy in twenty years, and how did he prepare the road to Karbala?" },
   scenes: [
     {
