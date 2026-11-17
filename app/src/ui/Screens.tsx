@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { FlatList, Image, type LayoutChangeEvent, Linking, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { FlatList, Image, PanResponder, type LayoutChangeEvent, Linking, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import type { Accept, Dispute, Dua, HistEvent, Scene, Source } from '../types';
 import { getLang, tx, ui } from '../i18n';
 import { FontButton, useFontScale } from './FontScale';
@@ -410,7 +410,6 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   // initialScrollIndex yalnızca ilk açılışta okunmalı; idx ile birlikte değişirse FlatList
   // içerik boyutu değiştiğinde listeyi o eski/yeni indekse geri kaydırabiliyor.
   const [initialIdx] = useState(idx);
-  const swipe = useRef({ x: 0, y: 0 });
   const toggle = (p: Panel) => setOpen(o => (o.includes(p) ? o.filter(x => x !== p) : [...o, p]));
   const has = (p: Panel) => open.includes(p);
   const nDis = ev.disputes?.length ?? 0;
@@ -438,15 +437,6 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   const listHeight = pageHeights[heightIdx];
   const maps = mapsForEvent(ev.id);
   const onSources = pages[idx]?.kind === 'sources';
-  const beginSwipe = (x: number, y: number) => { swipe.current = { x, y }; };
-  const endSwipe = (x: number, y: number) => {
-    if (!onSources) return;
-    const dx = x - swipe.current.x;
-    const dy = y - swipe.current.y;
-    if (Math.abs(dx) < 56 || Math.abs(dx) < Math.abs(dy)) return;
-    step(dx > 0 ? -1 : 1);
-  };
-
   // idxRef: arka arkaya basışlarda eski (render'dan kalma) idx yerine en son hedef kullanılır.
   const idxRef = useRef(idx);
   const dragging = useRef(false);
@@ -482,6 +472,20 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
     }, 700);
   };
   const step = (d: number) => go(idxRef.current + d);
+  // Kaynaklar sayfasında yatay kaydırma önceki sahneyi getirir. Sayfa dikey ScrollView içinde olduğundan
+  // (ve içindeki başlıklar dokunmayı yakaladığından) yatay hareket PanResponder ile yakalanır; dikey kaydırma
+  // ve dokunma etkilenmez. Eşik: |dx| > 56 ve |dx| baskın. Son sayfada ileri yön olmadığı için iki yön de geri götürür.
+  const onSourcesRef = useRef(false);
+  onSourcesRef.current = onSources;
+  const stepRef = useRef(step);
+  stepRef.current = step;
+  const pan = useMemo(() => PanResponder.create({
+    onMoveShouldSetPanResponderCapture: (_e, g) => onSourcesRef.current && Math.abs(g.dx) > 14 && Math.abs(g.dx) > Math.abs(g.dy) * 1.6,
+    onPanResponderTerminationRequest: () => false,
+    onPanResponderRelease: (_e, g) => {
+      if (onSourcesRef.current && Math.abs(g.dx) >= 56 && Math.abs(g.dx) > Math.abs(g.dy)) stepRef.current(-1);
+    },
+  }), []);
   // Kaydırma bitmeden sahne değiştirilmez. Eskiden parmak kalkar kalkmaz (onScrollEndDrag) yarım
   // kalmış konumdan sahne hesaplanıyordu; bu, kayma sürerken listenin yüksekliğini yeni sahneye göre
   // değiştiriyor ve Android'de süren sayfa kaydırmasını yarıda kesip eski sahneye geri attırıyordu.
@@ -556,7 +560,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   );
 
   return (
-    <View style={{ flex: 1, backgroundColor: C.bg }}>
+    <View style={{ flex: 1, backgroundColor: C.bg }} {...pan.panHandlers}>
       <ScrollView
         {...sc}
         style={{ flex: 1 }}
@@ -564,8 +568,6 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
         keyboardShouldPersistTaps="handled"
         nestedScrollEnabled
         directionalLockEnabled
-        onTouchStart={e => beginSwipe(e.nativeEvent.pageX, e.nativeEvent.pageY)}
-        onTouchEnd={e => endSwipe(e.nativeEvent.pageX, e.nativeEvent.pageY)}
       >
         <View style={s.evHead}>
           <Back onPress={onBack} />
@@ -616,17 +618,19 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
         />
 
         <View style={s.pager}>
-          <Pressable onPress={() => step(-1)} disabled={idx === 0} accessibilityRole="button" accessibilityLabel={ui('prev')} style={[s.pagerBtn, idx === 0 && s.pagerOff, webHit]}>
-            <Text style={s.pagerIcon}>‹</Text>
+          <Pressable onPress={() => step(-1)} disabled={idx === 0} accessibilityRole="button" accessibilityLabel={ui('prev')} style={({ pressed }) => [s.pill, idx === 0 && s.pagerOff, pressed && s.pressed, webHit]}>
+            <Text style={s.pillIcon}>‹</Text>
+            <Text style={s.pillText} numberOfLines={1}>{ui('prev')}</Text>
           </Pressable>
-          <View style={{ flex: 1, alignItems: 'center' }}>
-            <Text style={s.pagerLabel}>{pages[idx]?.kind === 'video' ? ui('video') : pages[idx]?.kind === 'sources' ? 'Bütün kaynaklar' : `${ui('scene')} ${(pages[idx] && pages[idx].kind === 'scene' ? pages[idx].n : idx) + 1} / ${ev.scenes.length}`}</Text>
+          <View style={{ flex: 1, alignItems: 'center', paddingHorizontal: 4 }}>
+            <Text style={s.pagerLabel} numberOfLines={1}>{pages[idx]?.kind === 'video' ? ui('video') : pages[idx]?.kind === 'sources' ? 'Bütün kaynaklar' : `${ui('scene')} ${(pages[idx] && pages[idx].kind === 'scene' ? pages[idx].n : idx) + 1} / ${ev.scenes.length}`}</Text>
             <View style={s.dots}>
               {pages.map((_, i) => <View key={i} style={[s.dot, i === idx && s.dotOn]} />)}
             </View>
           </View>
-          <Pressable onPress={() => step(1)} disabled={idx === total - 1} accessibilityRole="button" accessibilityLabel={ui('nextScene')} style={[s.pagerBtn, idx === total - 1 && s.pagerOff, webHit]}>
-            <Text style={s.pagerIcon}>›</Text>
+          <Pressable onPress={() => step(1)} disabled={idx === total - 1} accessibilityRole="button" accessibilityLabel={ui('nextScene')} style={({ pressed }) => [s.pill, idx === total - 1 && s.pagerOff, pressed && s.pressed, webHit]}>
+            <Text style={s.pillText} numberOfLines={1}>{ui('nextScene')}</Text>
+            <Text style={s.pillIcon}>›</Text>
           </Pressable>
         </View>
         {idx === 0 && <Text style={s.swipe}>Kaydır veya oklara bas</Text>}
@@ -698,7 +702,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
             <Text style={s.nextKicker}>{ui('nextEvent').toLocaleUpperCase('tr')}</Text>
             <Text style={s.nextTitle} numberOfLines={2}>{tx(nxt.title)}</Text>
           </View>
-          <Chevron color={C.ink} />
+          <View style={s.nextArrow}><Chevron color={C.gold} /></View>
         </Pressable>
       )}
     </View>
@@ -815,11 +819,12 @@ const s = themedStyles(() => StyleSheet.create({
   citeBtnText: { color: C.gold, fontFamily: font.sans, fontSize: 13, fontWeight: '800' },
   srcFold: { marginTop: 12, borderWidth: 1.5, borderRadius: 16, paddingVertical: 14, paddingHorizontal: 14, minHeight: 52, justifyContent: 'center' },
   srcFoldText: { fontFamily: font.sans, fontWeight: '800', fontSize: 15, lineHeight: 20 },
-  prevBar: { minHeight: 52, marginHorizontal: 16, marginBottom: 8, borderRadius: 14, borderWidth: 1.5, borderColor: C.gold, backgroundColor: C.card, alignItems: 'center', justifyContent: 'center' },
+  prevBar: { minHeight: 52, marginHorizontal: 16, marginBottom: 10, borderRadius: 26, borderWidth: 1.5, borderColor: C.gold, backgroundColor: 'rgba(228,197,106,0.12)', alignItems: 'center', justifyContent: 'center' },
   prevBarText: { color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '800' },
-  nextBar: { flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: C.gold, paddingHorizontal: 16, paddingVertical: 12, minHeight: 72 },
-  nextKicker: { color: C.ink, fontFamily: font.sans, fontSize: 11, fontWeight: '800', letterSpacing: 1 },
-  nextTitle: { color: C.ink, fontFamily: font.serif, fontSize: 18, fontWeight: '700', marginTop: 2 },
+  nextBar: { flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: C.gold, marginHorizontal: 16, marginBottom: 14, paddingLeft: 20, paddingRight: 12, paddingVertical: 12, minHeight: 76, borderRadius: 24, borderWidth: 1, borderColor: C.cream },
+  nextKicker: { color: C.ink, fontFamily: font.sans, fontSize: 11, fontWeight: '800', letterSpacing: 1.4 },
+  nextTitle: { color: C.ink, fontFamily: font.serif, fontSize: 19, lineHeight: 24, fontWeight: '700', marginTop: 2 },
+  nextArrow: { width: 40, height: 40, borderRadius: 20, backgroundColor: C.ink, alignItems: 'center', justifyContent: 'center' },
   card: { flexDirection: 'row', gap: 12, alignItems: 'flex-start', backgroundColor: C.card, borderRadius: 18, padding: 14, marginBottom: 10, borderWidth: 1, borderColor: C.line },
   ahidCard: { borderColor: C.gold, borderLeftWidth: 3, borderLeftColor: C.gold },
   pressed: { opacity: 0.86 },
@@ -848,6 +853,9 @@ const s = themedStyles(() => StyleSheet.create({
   pager: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 12, marginTop: 8 },
   pagerBtn: { width: 48, height: 48, borderRadius: 24, alignItems: 'center', justifyContent: 'center', backgroundColor: C.card, borderWidth: 1, borderColor: C.lineStrong },
   pagerOff: { opacity: 0.35 },
+  pill: { minWidth: 96, minHeight: 48, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, paddingHorizontal: 14, borderRadius: 24, borderWidth: 1.5, borderColor: C.gold, backgroundColor: 'rgba(228,197,106,0.12)' },
+  pillIcon: { color: C.gold, fontSize: 24, lineHeight: 26, fontWeight: '700', marginTop: -2 },
+  pillText: { color: C.gold, fontFamily: font.sans, fontSize: 15, fontWeight: '800' },
   pagerIcon: { color: C.gold, fontSize: 26, fontWeight: '700', marginTop: -2 },
   pagerLabel: { color: C.cream, fontFamily: font.sans, fontSize: 13, fontWeight: '700' },
   dots: { flexDirection: 'row', justifyContent: 'center', gap: 5, marginTop: 6, flexWrap: 'wrap', maxWidth: 220 },

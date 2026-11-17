@@ -217,8 +217,8 @@ function App() {
         </View>
         {route.name !== 'home' && route.name !== 'stories' && (
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10, backgroundColor: C.card, borderTopWidth: 1, borderTopColor: C.lineStrong, paddingLeft: 10, paddingRight: 12, paddingBottom: 6, paddingTop: 4 }}>
-            <Pressable onPress={inStories ? toStories : home} accessibilityRole="button" accessibilityLabel={inStories ? ui('stories') : ui('homeBtn')} style={({ pressed }) => [{ flex: 1, minHeight: 48, alignItems: 'center', justifyContent: 'center', opacity: pressed ? 0.86 : 1 }]}>
-              <Text style={{ color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '800' }}>{inStories ? ui('stories') : ui('homeBtn')}</Text>
+            <Pressable onPress={inStories ? toStories : home} accessibilityRole="button" accessibilityLabel={inStories ? ui('backToStories') : ui('homeBtn')} style={({ pressed }) => [{ flex: 1, minHeight: 48, alignItems: 'center', justifyContent: 'center', opacity: pressed ? 0.86 : 1 }]}>
+              <Text numberOfLines={1} adjustsFontSizeToFit style={{ color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '800' }}>{inStories ? '‹  ' + ui('backToStories') : ui('homeBtn')}</Text>
             </Pressable>
             <FontButton compact />
           </View>
