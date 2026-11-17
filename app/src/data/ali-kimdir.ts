@@ -40,13 +40,13 @@ export const aliKimdir: HistEvent = {
     },
     {
       text: { tr: 'Sabah olduğunda müşrikler kılıçlarını çekerek eve daldı. Yatağın örtüsünü kaldırdıklarında karşılarında Peygamber\'i değil, **Hz. Ali**\'yi buldular. Şaşkınlık içinde geri çekildiler, Peygamber ise çoktan şehirden uzaklaşmıştı. Bakara Suresi\'nin 207. ayeti, Allah\'ın rızasını kazanmak için canını ortaya koyan kişiden söz eder: "İnsanlardan öylesi de vardır ki Allah\'ın rızasını kazanmak için canını satar." Şii ve bazı Sünni tefsirler bu ayetin o gece Hz. Ali hakkında indiğini söyler. Bazı kaynaklar ise ayeti başka sahabelerle ilişkilendirir. Ama Peygamber\'in yatağında, ölümü göze alarak sabahı bekleyen kişinin Hz. Ali olduğunda kaynaklar birleşir.' },
-      image: 'ali-kimdir-4',
+      image: 'ali-kimdir-5',
       art: { bg: 'night', props: ['moon', 'stars'], actors: [{ kind: 'ali', x: 64, pose: 'sit', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Hicretten sonra Medine, Müslümanlar için yeni bir yurt oluyordu. Mekke\'den göç eden Muhacirler evlerini ve mallarını geride bırakmıştı. Peygamber, onları Medine\'nin yerlisi olan Ensar ile kardeş ilan etti. Her Muhacire bir Ensarlı kardeş verdi. Sıra **Hz. Ali**\'ye geldiğinde Peygamber onu kimseyle eşleştirmedi. Ona döndü ve şöyle dedi: "Sen dünyada da ahirette de benim kardeşimsin." Böylece Hz. Ali\'yi başka birine değil, kendisine kardeş seçti. Bu söz, Peygamber\'in kalbinde Hz. Ali\'nin yerini Medine\'deki herkese gösterdi.' },
-      image: 'ali-kimdir-5',
+      image: 'ali-kimdir-12',
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
