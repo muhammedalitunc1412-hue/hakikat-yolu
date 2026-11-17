@@ -17,6 +17,8 @@ const UI: Record<string, L> = {
   appName: { tr: 'HAKİKAT YOLU', en: 'PATH OF TRUTH' },
   tagline: { tr: 'İslam tarihinin kırılma anları, kaynaklarıyla', en: 'The turning points of Islamic history, with their sources' },
   events: { tr: 'Olaylar', en: 'Events' },
+  contact: { tr: 'Bize ulaşın', en: 'Contact us' },
+  contactSub: { tr: 'Sorularınız ve önerileriniz için Instagram\'dan yazın', en: 'Message us on Instagram with your questions and suggestions' },
   method: { tr: 'Uygulamanın amacı', en: 'Purpose of the app' },
   back: { tr: 'Geri', en: 'Back' },
   fontSize: { tr: 'Yazı boyutu', en: 'Text size', ar: 'حجم الخط', az: 'Yazı ölçüsü', es: 'Tamaño del texto', fr: 'Taille du texte', de: 'Schriftgröße' },

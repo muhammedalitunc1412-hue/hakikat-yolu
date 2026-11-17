@@ -13,7 +13,7 @@ import { LogoZoom } from './LogoZoom';
 import { ImageViewer } from './ImageViewer';
 import { Rich } from './Rich';
 import { EventVideo } from './EventVideo';
-import { ArchIcon, BookIcon, Chevron, CompassIcon, PinIcon, SearchIcon } from './icons';
+import { ArchIcon, BookIcon, Chevron, CompassIcon, InstagramIcon, PinIcon, SearchIcon } from './icons';
 import { C, TOP, align, font, usePageWidth, themedStyles, BLOOD } from './theme';
 import { rememberScene, rememberedScene, useScrollMemory } from './scrollMemory';
 
@@ -63,6 +63,8 @@ function Back({ onPress }: { onPress: () => void }) {
 }
 
 let lastCat = 0; // Hikâyeden dönünce aynı kategoride kalmak için
+
+const CONTACT_URL = 'https://www.instagram.com/huseynimtnc/';
 
 export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, onMaps, onQibla, onImams, onOpenAhid }: {
   events: HistEvent[];
@@ -225,6 +227,15 @@ export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, o
       <Pressable onPress={onMethod} accessibilityRole="button" style={({ pressed }) => [s.method, pressed && s.pressed, webHit]}>
         <View style={s.bubble}><BookIcon /></View>
         <Text style={s.methodText}>{ui('method')}</Text>
+        <Chevron />
+      </Pressable>
+
+      <Pressable onPress={() => { void Linking.openURL(CONTACT_URL).catch(() => {}); }} accessibilityRole="link" accessibilityLabel={ui('contact')} style={({ pressed }) => [s.method, { marginTop: 12 }, pressed && s.pressed, webHit]}>
+        <View style={s.bubble}><InstagramIcon /></View>
+        <View style={{ flex: 1 }}>
+          <Text style={s.methodText}>{ui('contact')}</Text>
+          <Text style={[s.featureSub, align()]}>{ui('contactSub')}</Text>
+        </View>
         <Chevron />
       </Pressable>
     </ScrollView>
