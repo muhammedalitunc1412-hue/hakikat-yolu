@@ -40,7 +40,7 @@ export const OCCASIONS: Occasion[] = [
   {
     id: 'erbain', month: 2, day: 20,
     title: t('Erbain', 'Arbaeen'),
-    body: t('Kerbela şehitlerinin kırkıncı günü. Kerbela olayını ve Hz. Zeynep\'in sözlerini hatırlayalım.', 'The fortieth day after Karbala. Let us remember the story and the words of Lady Zaynab.'),
+    body: t('Kerbela şehitlerinin kırkıncı günü. Kerbela olayını ve Hz. Zeyneb\'in sözlerini hatırlayalım.', 'The fortieth day after Karbala. Let us remember the story and the words of Lady Zaynab.'),
     open: { kind: 'event', id: 'kerbela' },
   },
   {
@@ -63,8 +63,8 @@ export const OCCASIONS: Occasion[] = [
   },
   {
     id: 'zeynep-dogum', month: 5, day: 5,
-    title: t('Hz. Zeynep\'in doğum günü', 'Birthday of Lady Zaynab'),
-    body: t('5 Cemaziyelevvel, Hz. Zeynep\'in doğum günü (Şii kaynaklarına göre). Kerbela\'daki sabrını ve duruşunu okuyabilirsin.', '5 Jumada al-awwal, the birthday of Lady Zaynab according to Shia sources. You can read about her patience and stand at Karbala.'),
+    title: t('Hz. Zeyneb\'in doğum günü', 'Birthday of Lady Zaynab'),
+    body: t('5 Cemaziyelevvel, Hz. Zeyneb\'in doğum günü (Şii kaynaklarına göre). Kerbela\'daki sabrını ve duruşunu okuyabilirsin.', '5 Jumada al-awwal, the birthday of Lady Zaynab according to Shia sources. You can read about her patience and stand at Karbala.'),
     open: { kind: 'event', id: 'kerbela' },
   },
   {
