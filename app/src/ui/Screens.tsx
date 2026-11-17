@@ -66,29 +66,18 @@ let lastCat = 0; // Hikâyeden dönünce aynı kategoride kalmak için
 
 const CONTACT_URL = 'https://www.instagram.com/huseynimtnc/';
 
-export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, onMaps, onQibla, onImams, onOpenAhid }: {
-  events: HistEvent[];
+export function Home({ langName, onSettings, onStories, onMethod, onDuas, onQibla, onImams }: {
   langName: string;
   onSettings: () => void;
-  onOpen: (id: string) => void;
+  onStories: () => void;
   onMethod: () => void;
   onDuas: () => void;
-  onMaps: () => void;
   onQibla: () => void;
   onImams: () => void;
-  onOpenAhid: () => void;
 }) {
   const sc = useScrollMemory('home');
   const width = usePageWidth();
-  const [q, setQ] = useState('');
-  const [catI, setCatIState] = useState(lastCat);
-  const setCatI = (i: number) => { lastCat = i; setCatIState(i); };
-  const catRef = useRef<FlatList<(typeof CATEGORIES)[number]>>(null);
-  const query = norm(q.trim());
   const wide = width >= 560;
-  const cardW = Math.min(width - 64, 460);
-  const gap = 12;
-  let shown = 0;
   return (
     <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page} keyboardShouldPersistTaps="handled">
       <View style={s.topRow}>
@@ -107,7 +96,18 @@ export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, o
       </View>
       <View style={s.rule} />
 
-      <View style={{ flexDirection: wide ? 'row' : 'column', gap: 12 }}>
+      <Pressable onPress={onStories} accessibilityRole="button" accessibilityLabel={ui('stories')} style={({ pressed }) => [s.hikaye, pressed && s.pressed, webHit]}>
+        <View style={s.hikayeGlow} pointerEvents="none" />
+        <View style={s.hikayeBubble}><BookIcon size={30} /></View>
+        <View style={{ flex: 1 }}>
+          <Text style={s.hikayeKicker}>{ui('storiesKicker')}</Text>
+          <Text style={[s.hikayeTitle, align()]}>{ui('stories')}</Text>
+          <Text style={[s.hikayeSub, align()]}>{ui('storiesSub')}</Text>
+        </View>
+        <Chevron color={C.gold} />
+      </Pressable>
+
+      <View style={{ flexDirection: wide ? 'row' : 'column', gap: 12, marginTop: 14 }}>
         <Pressable style={({ pressed }) => [s.feature, s.featureAlt, wide && { flex: 1 }, pressed && s.pressed, webHit]} onPress={onDuas} accessibilityRole="button">
           <View style={s.bubble}><ArchIcon /></View>
           <View style={{ flex: 1 }}>
@@ -136,7 +136,59 @@ export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, o
         <Chevron color={C.gold} />
       </Pressable>
 
-      <View style={s.search}>
+      <Pressable onPress={onMethod} accessibilityRole="button" style={({ pressed }) => [s.method, pressed && s.pressed, webHit]}>
+        <View style={s.bubble}><BookIcon /></View>
+        <Text style={s.methodText}>{ui('method')}</Text>
+        <Chevron />
+      </Pressable>
+
+      <Pressable onPress={() => { void Linking.openURL(CONTACT_URL).catch(() => {}); }} accessibilityRole="link" accessibilityLabel={ui('contact')} style={({ pressed }) => [s.method, { marginTop: 12 }, pressed && s.pressed, webHit]}>
+        <View style={s.bubble}><InstagramIcon /></View>
+        <View style={{ flex: 1 }}>
+          <Text style={s.methodText}>{ui('contact')}</Text>
+          <Text style={[s.featureSub, align()]}>{ui('contactSub')}</Text>
+        </View>
+        <Chevron />
+      </Pressable>
+    </ScrollView>
+  );
+}
+
+export function Stories({ events, onBack, onOpen, onOpenAhid }: {
+  events: HistEvent[];
+  onBack: () => void;
+  onOpen: (id: string) => void;
+  onOpenAhid: () => void;
+}) {
+  const sc = useScrollMemory('stories');
+  const width = usePageWidth();
+  const [q, setQ] = useState('');
+  const [catI, setCatIState] = useState(lastCat);
+  const setCatI = (i: number) => { lastCat = i; setCatIState(i); };
+  const catRef = useRef<FlatList<(typeof CATEGORIES)[number]>>(null);
+  const query = norm(q.trim());
+  const cardW = Math.min(width - 64, 460);
+  const gap = 12;
+  let shown = 0;
+  return (
+    <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page} keyboardShouldPersistTaps="handled">
+      <View style={s.topRow}>
+        <Pressable onPress={onBack} hitSlop={8} style={s.backInline} accessibilityRole="button">
+          <Text style={s.backText}>‹  {ui('back')}</Text>
+        </Pressable>
+        <FontButton />
+      </View>
+      <View style={s.storiesHead}>
+        <View style={s.hikayeBubble}><BookIcon size={30} /></View>
+        <View style={{ flex: 1 }}>
+          <Text style={s.hikayeKicker}>{ui('storiesKicker')}</Text>
+          <Text accessibilityRole="header" style={[s.storiesTitle, align()]}>{ui('stories')}</Text>
+        </View>
+      </View>
+      <Text style={[s.tagline, align()]}>{ui('storiesSub')}</Text>
+      <View style={s.rule} />
+
+      <View style={[s.search, { marginTop: 0 }]}>
         <SearchIcon />
         <TextInput
           value={q}
@@ -223,21 +275,6 @@ export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, o
         </View>
       )}
       {query && shown === 0 && <Text style={[s.empty, align()]}>{ui('noResult')}</Text>}
-
-      <Pressable onPress={onMethod} accessibilityRole="button" style={({ pressed }) => [s.method, pressed && s.pressed, webHit]}>
-        <View style={s.bubble}><BookIcon /></View>
-        <Text style={s.methodText}>{ui('method')}</Text>
-        <Chevron />
-      </Pressable>
-
-      <Pressable onPress={() => { void Linking.openURL(CONTACT_URL).catch(() => {}); }} accessibilityRole="link" accessibilityLabel={ui('contact')} style={({ pressed }) => [s.method, { marginTop: 12 }, pressed && s.pressed, webHit]}>
-        <View style={s.bubble}><InstagramIcon /></View>
-        <View style={{ flex: 1 }}>
-          <Text style={s.methodText}>{ui('contact')}</Text>
-          <Text style={[s.featureSub, align()]}>{ui('contactSub')}</Text>
-        </View>
-        <Chevron />
-      </Pressable>
     </ScrollView>
   );
 }
@@ -756,6 +793,15 @@ const s = themedStyles(() => StyleSheet.create({
   featureTitle: { color: C.cream, fontFamily: font.serif, fontSize: 18, fontWeight: '700' },
   featureSub: { color: C.dim, fontFamily: font.sans, fontSize: 13, lineHeight: 18, marginTop: 3 },
   bubble: { width: 44, height: 44, borderRadius: 22, alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(228,197,106,0.12)', borderWidth: 1, borderColor: 'rgba(228,197,106,0.35)' },
+  hikaye: { flexDirection: 'row', alignItems: 'center', gap: 14, borderRadius: 22, padding: 18, minHeight: 124, borderWidth: 1.5, borderColor: C.gold, backgroundColor: C.card2, overflow: 'hidden' },
+  hikayeGlow: { position: 'absolute', left: -40, top: -40, width: 200, height: 200, borderRadius: 100, backgroundColor: 'rgba(228,197,106,0.10)' },
+  hikayeBubble: { width: 58, height: 58, borderRadius: 29, alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(228,197,106,0.16)', borderWidth: 1.5, borderColor: C.gold },
+  hikayeKicker: { color: C.goldDeep, fontFamily: font.sans, fontSize: 11, fontWeight: '800', letterSpacing: 2.4 },
+  hikayeTitle: { color: C.cream, fontFamily: font.serif, fontSize: 28, lineHeight: 34, fontWeight: '700', marginTop: 2 },
+  hikayeSub: { color: C.dim, fontFamily: font.sans, fontSize: 14, lineHeight: 20, marginTop: 4 },
+  storiesHead: { flexDirection: 'row', alignItems: 'center', gap: 14, marginTop: 4, marginBottom: 12 },
+  storiesTitle: { color: C.cream, fontFamily: font.serif, fontSize: 36, lineHeight: 42, fontWeight: '700', marginTop: 2 },
+  backInline: { flex: 1, minHeight: 44, justifyContent: 'center' },
   search: { flexDirection: 'row', alignItems: 'center', gap: 10, marginTop: 16, backgroundColor: C.card, borderRadius: 16, paddingHorizontal: 14, minHeight: 52, borderWidth: 1, borderColor: C.line },
   searchInput: { flex: 1, color: C.cream, fontFamily: font.sans, fontSize: 16, paddingVertical: 12 },
   clear: { color: C.gold, fontSize: 22, fontWeight: '600', paddingHorizontal: 4 },
