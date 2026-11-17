@@ -88,10 +88,10 @@ export const ehlibeyt: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Peygamber Necran heyetinin karşısına Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin ile çıktı. Bu seçim, Ehl-i Beyt sevgisini içinizde nasıl büyütüyor?' },
-    { tr: 'Peygamber Kitap ile birlikte Ehl-i Beyt\'i de emanet bıraktı. Günlük hayatınızda bu emanete nasıl yer açabilirsiniz?' },
-    { tr: 'Buhari ve Müslim\'de "on iki" sayısı duruyor. Şia bu sayıyı On İki İmam\'ın adlarıyla karşılar. Bu isimleri öğrenmek size ne hissettiriyor?' },
-    { tr: 'Safine hadisi Ehl-i Beyt\'i Nuh\'un gemisine benzetir. Zinciri konuşulsa da bu benzetme, onlara tutunmanın size ne anlattığını düşündürüyor mu?' },
+    { tr: 'Peygamber Necran heyetinin karşısına Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin ile çıktı. Sizce Peygamber yanına özellikle bu dört kişiyi neden aldı?' },
+    { tr: 'Peygamber Kitap ile birlikte Ehl-i Beyt\'i de emanet bıraktı. Sizce Peygamber, Kitap\'ı tek başına değil de Ehl-i Beyt ile birlikte neden emanet etti?' },
+    { tr: 'Buhari ve Müslim\'de "on iki" sayısı duruyor. Şia bu sayıyı On İki İmam\'ın adlarıyla karşılar. Sizce bir sayının anlamı için neden isimlere ihtiyaç duyulur?' },
+    { tr: 'Safine hadisi Ehl-i Beyt\'i Nuh\'un gemisine benzetir. Sizce Peygamber, Ehl-i Beyt\'i neden özellikle Nuh\'un gemisine benzetti?' },
   ],
   summary: { tr: 'Mübahele, iki emanet ve on iki halife sözleri Ehl-i Beyt\'in yerini gösterir. Bunlar Sünni kaynaklarında da geçer (Müslim, Sahih; Tirmizi, el-Câmi\', no. 3788; Buhari, Sahih, no. 7222; Müslim, Sahih, no. 1821). Şia bunları, Hz. Ali ve soyundan gelen On İki İmam\'ın ilahi tayinine delil sayar.' },
 };

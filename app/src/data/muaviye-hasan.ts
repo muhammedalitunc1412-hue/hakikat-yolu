@@ -86,9 +86,9 @@ export const muaviyeHasan: HistEvent = {
     },
   ],
   questions: [
-    { tr: "Hz. Hasan'ın ordusu dağılırken o, kanı durdurmayı seçti. Bu sulh size nasıl bir fedakârlık gibi görünüyor?" },
-    { tr: "Sulhun ardından minberlerde sövme yayıldı ve veliahtlık gündeme geldi. Hz. Hasan'ın niyeti ile sonraki uygulamalar arasındaki fark size ne söylüyor?" },
-    { tr: "Bir olay birçok kitapta geçiyor, fail ise ihtilaflı kalıyor. Böyle bir yerde nasıl sakin düşünürsünüz?" },
+    { tr: "Hz. Hasan'ın ordusu dağılırken o, kanı durdurmayı seçti. Sizce Hz. Hasan sulhta Hz. Ali'ye sövülmemesi ve yerine halife tayin edilmemesi şartlarını neden koydu?" },
+    { tr: "Sulhun ardından minberlerde sövme yayıldı ve veliahtlık gündeme geldi. Sizce bu iki uygulama, sulh şartlarının tam da bu iki maddesine neden dokundu?" },
+    { tr: "Hz. Hasan'ın zehirlenmesi birçok kitapta geçiyor, fail ise ihtilaflı kalıyor. Sizce failin ihtilaflı olması, olayın kendisini neden ortadan kaldırmıyor?" },
   ],
   summary: { tr: "Muaviye Şam'ın ticaret yollarıyla zengindi. Ubeydullah b. Abbas'ı ve komutanları satın aldı. Hz. Hasan kan dökülmesin diye savaşı bitirdi. Muaviye sulhun şartlarını çiğnedi. Hz. Hasan 50 H civarında zehirlenerek vefat etti." },
 };

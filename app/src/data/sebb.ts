@@ -106,11 +106,11 @@ export const sebb: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Hz. Ali\'ye sövmenin Peygamber\'e dokunduğu rivayet edilir. Yıllarca minberlerde ona sövülmesi, Ehl-i Beyt sevgisi hakkında size ne düşündürüyor?' },
-    { tr: 'Sa\'d, soru karşısında Peygamber\'in Hz. Ali hakkındaki üç sözünü saydı. Onun bu sözleri hatırlatması size ne söylüyor?' },
-    { tr: 'Hz. Ali, Sıffin\'de kendi askerlerinin karşı tarafa sövmesini yasaklamıştı. Buna rağmen onun adına minberlerde sövülmesi size ne düşündürüyor?' },
-    { tr: 'Hucr ve arkadaşları sövmeyi reddettikleri için öldürüldü. Hutbede haksızlığa karşı duran bir insanın hâli size ne söylüyor?' },
-    { tr: 'Ömer b. Abdülaziz sövmeyi kaldırıp hutbede adalet ayetini okuttu. Bu değişiklik, o sözlerin ağırlığını size nasıl gösteriyor?' },
+    { tr: 'Ümmü Seleme, Peygamber\'in "Ali\'ye söven bana sövmüş olur" sözünü hatırlatan bir mektup yazdı. Sizce Muaviye bu uyarıya rağmen sövdürmeyi neden sürdürdü?' },
+    { tr: 'Sa\'d, Muaviye\'ye Peygamber\'in Hz. Ali hakkındaki üç sözünü saydı: Menzile, Hayber sancağı ve Mübahele. Sizce Sa\'d bu üç sözü sövmeyi reddetmesinin gerekçesi olarak neden seçti?' },
+    { tr: 'Hz. Ali Sıffin\'de kendi askerlerinin karşı tarafa sövmesini yasaklamıştı. Sizce Muaviye aynı sövmeyi neden bir devlet emrine çevirdi?' },
+    { tr: 'Hucr ve arkadaşları sövmeyi reddettikleri için öldürüldü. Sizce Muaviye\'nin yönetimi sövmeyi reddedenlere neden ölümle karşılık verdi?' },
+    { tr: 'Ömer b. Abdülaziz laneti kaldırıp yerine Nahl Suresi\'nin 90. ayetini okuttu. Sizce Ömer b. Abdülaziz laneti kaldırmakla yetinmeyip hutbede neden adalet ayetini okuttu?' },
   ],
   summary: { tr: 'Emevi döneminde Cuma hutbelerinde Hz. Ali\'ye sövüldü. Sövmeyi reddeden Hucr b. Adî, 51 H\'de Mercü Azra\'da öldürüldü. Ömer b. Abdülaziz uygulamayı kaldırdı. Şii anlatıda bu, yaklaşık altmış yıl süren ağır bir haksızlıktır.' },
 };

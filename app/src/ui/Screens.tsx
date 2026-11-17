@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { FlatList, Image, type LayoutChangeEvent, Linking, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { FlatList, Image, PanResponder, type LayoutChangeEvent, Linking, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import type { Accept, Dispute, Dua, HistEvent, Scene, Source } from '../types';
 import { getLang, tx, ui } from '../i18n';
 import { FontButton, useFontScale } from './FontScale';
@@ -13,7 +13,8 @@ import { LogoZoom } from './LogoZoom';
 import { ImageViewer } from './ImageViewer';
 import { Rich } from './Rich';
 import { EventVideo } from './EventVideo';
-import { ArchIcon, BookIcon, Chevron, CompassIcon, InstagramIcon, PinIcon, SearchIcon } from './icons';
+import { ArchIcon, BookIcon, ChatIcon, Chevron, CompassIcon, PinIcon, SearchIcon } from './icons';
+import { ContactSheet } from './ContactSheet';
 import { C, TOP, align, font, usePageWidth, themedStyles, BLOOD } from './theme';
 import { rememberScene, rememberedScene, useScrollMemory } from './scrollMemory';
 
@@ -64,8 +65,6 @@ function Back({ onPress }: { onPress: () => void }) {
 
 let lastCat = 0; // Hikâyeden dönünce aynı kategoride kalmak için
 
-const CONTACT_URL = 'https://www.instagram.com/huseynimtnc/';
-
 export function Home({ langName, onSettings, onStories, onMethod, onDuas, onQibla, onImams }: {
   langName: string;
   onSettings: () => void;
@@ -78,6 +77,7 @@ export function Home({ langName, onSettings, onStories, onMethod, onDuas, onQibl
   const sc = useScrollMemory('home');
   const width = usePageWidth();
   const wide = width >= 560;
+  const [contactOpen, setContactOpen] = useState(false);
   return (
     <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page} keyboardShouldPersistTaps="handled">
       <View style={s.topRow}>
@@ -136,20 +136,21 @@ export function Home({ langName, onSettings, onStories, onMethod, onDuas, onQibl
         <Chevron color={C.gold} />
       </Pressable>
 
-      <Pressable onPress={onMethod} accessibilityRole="button" style={({ pressed }) => [s.method, pressed && s.pressed, webHit]}>
-        <View style={s.bubble}><BookIcon /></View>
-        <Text style={s.methodText}>{ui('method')}</Text>
-        <Chevron />
-      </Pressable>
-
-      <Pressable onPress={() => { void Linking.openURL(CONTACT_URL).catch(() => {}); }} accessibilityRole="link" accessibilityLabel={ui('contact')} style={({ pressed }) => [s.method, { marginTop: 12 }, pressed && s.pressed, webHit]}>
-        <View style={s.bubble}><InstagramIcon /></View>
+      <Pressable onPress={() => setContactOpen(true)} accessibilityRole="button" accessibilityLabel={ui('contact')} style={({ pressed }) => [s.method, pressed && s.pressed, webHit]}>
+        <View style={s.bubble}><ChatIcon /></View>
         <View style={{ flex: 1 }}>
           <Text style={s.methodText}>{ui('contact')}</Text>
           <Text style={[s.featureSub, align()]}>{ui('contactSub')}</Text>
         </View>
         <Chevron />
       </Pressable>
+
+      <Pressable onPress={onMethod} accessibilityRole="button" style={({ pressed }) => [s.method, { marginTop: 12 }, pressed && s.pressed, webHit]}>
+        <View style={s.bubble}><BookIcon /></View>
+        <Text style={s.methodText}>{ui('method')}</Text>
+        <Chevron />
+      </Pressable>
+      <ContactSheet visible={contactOpen} onClose={() => setContactOpen(false)} />
     </ScrollView>
   );
 }
@@ -391,7 +392,7 @@ const ScenePage = React.memo(function ScenePage({ ev, item, index, width, story,
       <View collapsable={false} onLayout={onLayout}>
         {!item.scene.textOnly && <SceneImage evId={ev.id} n={item.n + 1} title={tx(ev.title)} width={width} image={item.scene.image} />}
         <View style={s.sceneText}>
-          <Rich style={[s.sceneBody, align()]} text={item.scene.text} selectable />
+          <Rich style={[s.sceneBody, align()]} text={item.scene.text} selectable={Platform.OS !== 'android'} />
           {!!item.scene.by && <AcceptChip by={item.scene.by} />}
           {story && <SceneCites ev={ev} cites={item.scene.cites} />}
         </View>
@@ -410,7 +411,6 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   // initialScrollIndex yalnızca ilk açılışta okunmalı; idx ile birlikte değişirse FlatList
   // içerik boyutu değiştiğinde listeyi o eski/yeni indekse geri kaydırabiliyor.
   const [initialIdx] = useState(idx);
-  const swipe = useRef({ x: 0, y: 0 });
   const toggle = (p: Panel) => setOpen(o => (o.includes(p) ? o.filter(x => x !== p) : [...o, p]));
   const has = (p: Panel) => open.includes(p);
   const nDis = ev.disputes?.length ?? 0;
@@ -422,33 +422,25 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
     ...(story ? [{ kind: 'sources' as const }] : []),
   ], [ev, story]);
   const total = pages.length;
-  const [pageHeights, setPageHeights] = useState<number[]>([]);
+  // Liste yüksekliği SABİT: ölçülmüş en uzun sahnenin yüksekliği (maxH), yalnızca uzun bir sahne ilk kez
+  // ölçülünce büyür. Kaydırma sırasında liste hiç yeniden boyutlanmaz. Kısa sahnelerin altındaki boşluk,
+  // kaydırma durup 320 ms geçince negatif alt kenar boşluğuyla (curH) kapatılır; böylece görünüm eskisi gibi kalır.
+  const heightsRef = useRef<number[]>([]);
+  const [maxH, setMaxH] = useState(0);
+  const [curH, setCurH] = useState(0);
+  const settledRef = useRef(idx);
   const setPageHeight = useCallback((index: number, h: number) => {
-    const next = Math.ceil(h);
-    setPageHeights(prev => {
-      if (Math.abs((prev[index] ?? 0) - next) < 2) return prev;
-      const copy = prev.slice();
-      copy[index] = next;
-      return copy;
-    });
+    const n = Math.ceil(h);
+    if (Math.abs((heightsRef.current[index] ?? 0) - n) < 2) return;
+    heightsRef.current[index] = n;
+    setMaxH(m => (n > m ? n : m));
+    if (index === settledRef.current) setCurH(n);
   }, []);
-  // Liste yüksekliği, kaydırma bitip sahne oturduktan sonra değişir (heightIdx). Animasyon sürerken
-  // yüksekliği değiştirmek Android'de süren sayfa kaydırmasını yarıda kesebiliyordu.
-  const [heightIdx, setHeightIdx] = useState(idx);
-  const listHeight = pageHeights[heightIdx];
   const maps = mapsForEvent(ev.id);
   const onSources = pages[idx]?.kind === 'sources';
-  const beginSwipe = (x: number, y: number) => { swipe.current = { x, y }; };
-  const endSwipe = (x: number, y: number) => {
-    if (!onSources) return;
-    const dx = x - swipe.current.x;
-    const dy = y - swipe.current.y;
-    if (Math.abs(dx) < 56 || Math.abs(dx) < Math.abs(dy)) return;
-    step(dx > 0 ? -1 : 1);
-  };
-
   // idxRef: arka arkaya basışlarda eski (render'dan kalma) idx yerine en son hedef kullanılır.
   const idxRef = useRef(idx);
+  const idleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const dragging = useRef(false);
   const momentum = useRef(false);
   const pendingGo = useRef<number | null>(null);
@@ -459,12 +451,23 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   useEffect(() => () => {
     if (settle.current) clearTimeout(settle.current);
     if (goTimer.current) clearTimeout(goTimer.current);
+    if (idleTimer.current) clearTimeout(idleTimer.current);
   }, []);
+  // Kaydırma tamamen durup 320 ms geçince sayfa altı boşluğu (curH) güncellenir.
+  const armIdle = () => {
+    if (idleTimer.current) clearTimeout(idleTimer.current);
+    idleTimer.current = setTimeout(() => {
+      idleTimer.current = null;
+      if (dragging.current || momentum.current) { armIdle(); return; }
+      settledRef.current = idxRef.current;
+      setCurH(heightsRef.current[idxRef.current] ?? 0);
+    }, 320);
+  };
   const commit = (i: number) => {
     idxRef.current = i;
     rememberScene('event:' + ev.id, i);
     setIdx(cur => (cur === i ? cur : i));
-    setHeightIdx(cur => (cur === i ? cur : i));
+    armIdle();
   };
   const go = (i: number) => {
     const next = Math.max(0, Math.min(total - 1, i));
@@ -473,15 +476,29 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
     idxRef.current = next;
     rememberScene('event:' + ev.id, next);
     setIdx(cur => (cur === next ? cur : next));
-    // Animasyon bitince (ya da olay gelmezse 700 ms sonra) yükseklik yeni sahneye göre ayarlanır.
+    armIdle();
+    // Animasyon bitince (ya da olay gelmezse 700 ms sonra) bekleyen hedef temizlenir.
     if (goTimer.current) clearTimeout(goTimer.current);
     goTimer.current = setTimeout(() => {
       goTimer.current = null;
       pendingGo.current = null;
-      setHeightIdx(cur => (cur === idxRef.current ? cur : idxRef.current));
     }, 700);
   };
   const step = (d: number) => go(idxRef.current + d);
+  // Kaynaklar sayfasında yatay kaydırma önceki sahneyi getirir. Sayfa dikey ScrollView içinde olduğundan
+  // (ve içindeki başlıklar dokunmayı yakaladığından) yatay hareket PanResponder ile yakalanır; dikey kaydırma
+  // ve dokunma etkilenmez. Eşik: |dx| > 56 ve |dx| baskın. Son sayfada ileri yön olmadığı için iki yön de geri götürür.
+  const onSourcesRef = useRef(false);
+  onSourcesRef.current = onSources;
+  const stepRef = useRef(step);
+  stepRef.current = step;
+  const pan = useMemo(() => PanResponder.create({
+    onMoveShouldSetPanResponderCapture: (_e, g) => onSourcesRef.current && Math.abs(g.dx) > 14 && Math.abs(g.dx) > Math.abs(g.dy) * 1.6,
+    onPanResponderTerminationRequest: () => false,
+    onPanResponderRelease: (_e, g) => {
+      if (onSourcesRef.current && Math.abs(g.dx) >= 56 && Math.abs(g.dx) > Math.abs(g.dy)) stepRef.current(-1);
+    },
+  }), []);
   // Kaydırma bitmeden sahne değiştirilmez. Eskiden parmak kalkar kalkmaz (onScrollEndDrag) yarım
   // kalmış konumdan sahne hesaplanıyordu; bu, kayma sürerken listenin yüksekliğini yeni sahneye göre
   // değiştiriyor ve Android'de süren sayfa kaydırmasını yarıda kesip eski sahneye geri attırıyordu.
@@ -506,7 +523,8 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
       const quiet = Date.now() - lastT.current;
       if (quiet < 170) { armSettle(180 - quiet); return; }
       if (dragging.current) return;
-      if (momentum.current && quiet < 600) { armSettle(200); return; }
+      // Native'de momentum sürerken onScroll yok: sahne onMomentumScrollEnd ile belirlenir; yalnızca 2,5 sn'lik emniyet payı.
+      if (momentum.current && quiet < 2500) { armSettle(400); return; }
       momentum.current = false;
       sync(lastX.current);
     }, ms);
@@ -555,18 +573,10 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
     </Pressable>
   );
 
-  return (
-    <View style={{ flex: 1, backgroundColor: C.bg }}>
-      <ScrollView
-        {...sc}
-        style={{ flex: 1 }}
-        contentContainerStyle={{ paddingBottom: 64, flexGrow: 0 }}
-        keyboardShouldPersistTaps="handled"
-        nestedScrollEnabled
-        directionalLockEnabled
-        onTouchStart={e => beginSwipe(e.nativeEvent.pageX, e.nativeEvent.pageY)}
-        onTouchEnd={e => endSwipe(e.nativeEvent.pageX, e.nativeEvent.pageY)}
-      >
+  // Sahne kaydırılırken yalnızca sayfa sayacı yeniden çizilsin: başlık ve alt bölümler (özet, notlar, sorular)
+  // idx'ten bağımsızdır, bu yüzden önbelleğe alınır.
+  const header = useMemo(() => (
+    <>
         <View style={s.evHead}>
           <Back onPress={onBack} />
           <Text style={[s.evTitle, align()]}>{tx(ev.title)}</Text>
@@ -585,52 +595,10 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
             </Pressable>
           ))}
         </View>
-
-        <FlatList
-          ref={listRef}
-          data={pages}
-          initialScrollIndex={Math.max(0, Math.min(initialIdx, pages.length - 1))}
-          horizontal
-          pagingEnabled
-          nestedScrollEnabled
-          directionalLockEnabled
-          scrollEnabled={!onSources}
-          showsHorizontalScrollIndicator={false}
-          style={[s.sceneList, listHeight ? { height: listHeight } : null]}
-          keyExtractor={keyExtractor}
-          scrollEventThrottle={32}
-          onScroll={e => onListScroll(e.nativeEvent.contentOffset.x)}
-          onScrollBeginDrag={() => { dragging.current = true; pendingGo.current = null; }}
-          onScrollEndDrag={e => { dragging.current = false; onListScroll(e.nativeEvent.contentOffset.x); }}
-          onMomentumScrollBegin={() => { momentum.current = true; }}
-          onMomentumScrollEnd={e => { momentum.current = false; dragging.current = false; sync(e.nativeEvent.contentOffset.x); }}
-          getItemLayout={getItemLayout}
-          // Sahneler tam ekran genişliğinde ve görselli; hepsini birden bellekte tutmak (varsayılan
-          // windowSize 21) hızlı kaydırmada takılma yaratıyordu. Yalnızca yakın sahneler bağlı kalır.
-          windowSize={5}
-          initialNumToRender={3}
-          maxToRenderPerBatch={3}
-          updateCellsBatchingPeriod={40}
-          removeClippedSubviews={false}
-          renderItem={renderPage}
-        />
-
-        <View style={s.pager}>
-          <Pressable onPress={() => step(-1)} disabled={idx === 0} accessibilityRole="button" accessibilityLabel={ui('prev')} style={[s.pagerBtn, idx === 0 && s.pagerOff, webHit]}>
-            <Text style={s.pagerIcon}>‹</Text>
-          </Pressable>
-          <View style={{ flex: 1, alignItems: 'center' }}>
-            <Text style={s.pagerLabel}>{pages[idx]?.kind === 'video' ? ui('video') : pages[idx]?.kind === 'sources' ? 'Bütün kaynaklar' : `${ui('scene')} ${(pages[idx] && pages[idx].kind === 'scene' ? pages[idx].n : idx) + 1} / ${ev.scenes.length}`}</Text>
-            <View style={s.dots}>
-              {pages.map((_, i) => <View key={i} style={[s.dot, i === idx && s.dotOn]} />)}
-            </View>
-          </View>
-          <Pressable onPress={() => step(1)} disabled={idx === total - 1} accessibilityRole="button" accessibilityLabel={ui('nextScene')} style={[s.pagerBtn, idx === total - 1 && s.pagerOff, webHit]}>
-            <Text style={s.pagerIcon}>›</Text>
-          </Pressable>
-        </View>
-        {idx === 0 && <Text style={s.swipe}>Kaydır veya oklara bas</Text>}
-
+    </>
+  ), [ev, maps, onBack, onOpenMap, scale, lang]);
+  const below = useMemo(() => (
+    <>
         <View style={{ paddingHorizontal: 16, marginTop: 18, gap: 10 }}>
           {!story && (
             <View style={{ flexDirection: 'row', gap: 10 }}>
@@ -686,6 +654,71 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
             </View>
           </>
         )}
+    </>
+  ), [ev, story, nDis, open, scale, lang]);
+
+  return (
+    <View style={{ flex: 1, backgroundColor: C.bg }} {...(onSources ? pan.panHandlers : null)}>
+      <ScrollView
+        {...sc}
+        style={{ flex: 1 }}
+        contentContainerStyle={{ paddingBottom: 64, flexGrow: 0 }}
+        keyboardShouldPersistTaps="handled"
+        nestedScrollEnabled
+        directionalLockEnabled
+      >
+        {header}
+
+        <FlatList
+          ref={listRef}
+          data={pages}
+          initialScrollIndex={Math.max(0, Math.min(initialIdx, pages.length - 1))}
+          horizontal
+          pagingEnabled
+          nestedScrollEnabled
+          directionalLockEnabled
+          scrollEnabled={!onSources}
+          showsHorizontalScrollIndicator={false}
+          style={[s.sceneList, maxH ? { height: maxH, marginBottom: curH && curH <= maxH ? curH - maxH : 0 } : null]}
+          keyExtractor={keyExtractor}
+          scrollEventThrottle={Platform.OS === 'web' ? 32 : undefined}
+          decelerationRate="fast"
+          // Native'de kaydırma olayı (60/sn JS trafiği) gerekmez; web'de momentum olayı olmadığından onScroll kalır.
+          onScroll={Platform.OS === 'web' ? (e => onListScroll(e.nativeEvent.contentOffset.x)) : undefined}
+          onScrollBeginDrag={() => { dragging.current = true; pendingGo.current = null; armIdle(); }}
+          onScrollEndDrag={e => { dragging.current = false; onListScroll(e.nativeEvent.contentOffset.x); }}
+          onMomentumScrollBegin={() => { momentum.current = true; }}
+          onMomentumScrollEnd={e => { momentum.current = false; dragging.current = false; sync(e.nativeEvent.contentOffset.x); }}
+          getItemLayout={getItemLayout}
+          // Sahneler tam ekran genişliğinde ve görselli; hepsini birden bellekte tutmak (varsayılan
+          // windowSize 21) hızlı kaydırmada takılma yaratıyordu. Yalnızca yakın sahneler bağlı kalır.
+          windowSize={7}
+          initialNumToRender={5}
+          maxToRenderPerBatch={4}
+          updateCellsBatchingPeriod={30}
+          removeClippedSubviews={false}
+          renderItem={renderPage}
+        />
+
+        <View style={s.pager}>
+          <Pressable onPress={() => step(-1)} disabled={idx === 0} accessibilityRole="button" accessibilityLabel={ui('prev')} style={({ pressed }) => [s.pill, idx === 0 && s.pagerOff, pressed && s.pressed, webHit]}>
+            <Text style={s.pillIcon}>‹</Text>
+            <Text style={s.pillText} numberOfLines={1}>{ui('prev')}</Text>
+          </Pressable>
+          <View style={{ flex: 1, alignItems: 'center', paddingHorizontal: 4 }}>
+            <Text style={s.pagerLabel} numberOfLines={1}>{pages[idx]?.kind === 'video' ? ui('video') : pages[idx]?.kind === 'sources' ? 'Bütün kaynaklar' : `${ui('scene')} ${(pages[idx] && pages[idx].kind === 'scene' ? pages[idx].n : idx) + 1} / ${ev.scenes.length}`}</Text>
+            <View style={s.dots}>
+              {pages.map((_, i) => <View key={i} style={[s.dot, i === idx && s.dotOn]} />)}
+            </View>
+          </View>
+          <Pressable onPress={() => step(1)} disabled={idx === total - 1} accessibilityRole="button" accessibilityLabel={ui('nextScene')} style={({ pressed }) => [s.pill, idx === total - 1 && s.pagerOff, pressed && s.pressed, webHit]}>
+            <Text style={s.pillText} numberOfLines={1}>{ui('nextScene')}</Text>
+            <Text style={s.pillIcon}>›</Text>
+          </Pressable>
+        </View>
+        {idx === 0 && <Text style={s.swipe}>Kaydır veya oklara bas</Text>}
+
+        {below}
       </ScrollView>
       {onSources && idx > 0 && (
         <Pressable onPress={() => step(-1)} accessibilityRole="button" accessibilityLabel={ui('prevScene')} style={({ pressed }) => [s.prevBar, pressed && s.pressed, webHit]}>
@@ -698,7 +731,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
             <Text style={s.nextKicker}>{ui('nextEvent').toLocaleUpperCase('tr')}</Text>
             <Text style={s.nextTitle} numberOfLines={2}>{tx(nxt.title)}</Text>
           </View>
-          <Chevron color={C.ink} />
+          <View style={s.nextArrow}><Chevron color={C.gold} /></View>
         </Pressable>
       )}
     </View>
@@ -815,11 +848,12 @@ const s = themedStyles(() => StyleSheet.create({
   citeBtnText: { color: C.gold, fontFamily: font.sans, fontSize: 13, fontWeight: '800' },
   srcFold: { marginTop: 12, borderWidth: 1.5, borderRadius: 16, paddingVertical: 14, paddingHorizontal: 14, minHeight: 52, justifyContent: 'center' },
   srcFoldText: { fontFamily: font.sans, fontWeight: '800', fontSize: 15, lineHeight: 20 },
-  prevBar: { minHeight: 52, marginHorizontal: 16, marginBottom: 8, borderRadius: 14, borderWidth: 1.5, borderColor: C.gold, backgroundColor: C.card, alignItems: 'center', justifyContent: 'center' },
+  prevBar: { minHeight: 52, marginHorizontal: 16, marginBottom: 10, borderRadius: 26, borderWidth: 1.5, borderColor: C.gold, backgroundColor: 'rgba(228,197,106,0.12)', alignItems: 'center', justifyContent: 'center' },
   prevBarText: { color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '800' },
-  nextBar: { flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: C.gold, paddingHorizontal: 16, paddingVertical: 12, minHeight: 72 },
-  nextKicker: { color: C.ink, fontFamily: font.sans, fontSize: 11, fontWeight: '800', letterSpacing: 1 },
-  nextTitle: { color: C.ink, fontFamily: font.serif, fontSize: 18, fontWeight: '700', marginTop: 2 },
+  nextBar: { flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: C.gold, marginHorizontal: 16, marginBottom: 14, paddingLeft: 20, paddingRight: 12, paddingVertical: 12, minHeight: 76, borderRadius: 24, borderWidth: 1, borderColor: C.cream },
+  nextKicker: { color: C.ink, fontFamily: font.sans, fontSize: 11, fontWeight: '800', letterSpacing: 1.4 },
+  nextTitle: { color: C.ink, fontFamily: font.serif, fontSize: 19, lineHeight: 24, fontWeight: '700', marginTop: 2 },
+  nextArrow: { width: 40, height: 40, borderRadius: 20, backgroundColor: C.ink, alignItems: 'center', justifyContent: 'center' },
   card: { flexDirection: 'row', gap: 12, alignItems: 'flex-start', backgroundColor: C.card, borderRadius: 18, padding: 14, marginBottom: 10, borderWidth: 1, borderColor: C.line },
   ahidCard: { borderColor: C.gold, borderLeftWidth: 3, borderLeftColor: C.gold },
   pressed: { opacity: 0.86 },
@@ -848,6 +882,9 @@ const s = themedStyles(() => StyleSheet.create({
   pager: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 12, marginTop: 8 },
   pagerBtn: { width: 48, height: 48, borderRadius: 24, alignItems: 'center', justifyContent: 'center', backgroundColor: C.card, borderWidth: 1, borderColor: C.lineStrong },
   pagerOff: { opacity: 0.35 },
+  pill: { minWidth: 96, minHeight: 48, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, paddingHorizontal: 14, borderRadius: 24, borderWidth: 1.5, borderColor: C.gold, backgroundColor: 'rgba(228,197,106,0.12)' },
+  pillIcon: { color: C.gold, fontSize: 24, lineHeight: 26, fontWeight: '700', marginTop: -2 },
+  pillText: { color: C.gold, fontFamily: font.sans, fontSize: 15, fontWeight: '800' },
   pagerIcon: { color: C.gold, fontSize: 26, fontWeight: '700', marginTop: -2 },
   pagerLabel: { color: C.cream, fontFamily: font.sans, fontSize: 13, fontWeight: '700' },
   dots: { flexDirection: 'row', justifyContent: 'center', gap: 5, marginTop: 6, flexWrap: 'wrap', maxWidth: 220 },

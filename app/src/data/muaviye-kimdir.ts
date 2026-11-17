@@ -81,9 +81,9 @@ export const muaviyeKimdir: HistEvent = {
     },
   ],
   questions: [
-    { tr: "Muaviye'nin ailesi Peygamber'e karşı savaşmışken, sonra yönetimde yer alması size ne düşündürüyor?" },
-    { tr: "Bir insanın Müslüman olmadan önceki aile geçmişi, sonraki yolunu anlamakta size ne kadar yardımcı olur?" },
-    { tr: "Müslim'de Muaviye hakkında geçen söz, farklı gönüllerde farklı duyulabiliyor. Bir metni okurken sevgi ve ihtiyat size ne söylüyor?" },
+    { tr: "Peygamber \"Kim Ebu Süfyan'ın evine girerse güvendedir\" diyerek yıllarca savaşmış eski düşmanına bile aman verdi. Sizce Peygamber Ebu Süfyan'a neden bu amanı verdi?" },
+    { tr: "Peygamber Huneyn ganimetlerinden Ebu Süfyan'a ve Muaviye'ye de pay verdi. Sizce bu cömertliğe rağmen bu ailenin Ehl-i Beyt'e düşmanlığı neden sürdü?" },
+    { tr: "Peygamber Muaviye için \"Allah karnını doyurmasın\" dedi. Sünni şârihler bu sözü farklı yorumlarken Şii okuyuş onu bir uyarı sayıyor. Sizce aynı söz neden bu kadar farklı yorumlanıyor?" },
   ],
   summary: { tr: "Muaviye, Mekke'de İslam'a karşı duran Ebu Süfyan ile Hind'in oğludur. Uhud'da Hz. Hamza'nın şehit edilmesi bu ailenin Peygamber'le geçmişinin bir parçasıdır. Aile fetihle Müslüman oldu. Onun kâtip sayılması Sünni kitaplarda yer alır; Şii anlatıda tartışılır." },
 };

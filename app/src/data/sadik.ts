@@ -93,8 +93,8 @@ export const sadik: HistEvent = {
     { tr: 'Buhârî\'nin Sahîh\'inde Hz. Ca\'fer-i Sâdık\'tan rivayet olmamasını TDV, zayıflığa değil, adına uydurma hadis isnat edilmesine bağlar. Geniş bir ilim halkasında ismin korunması neden zorlaşır?' },
     { tr: 'Dört bin rakamı Müfîd ve İbn Uknde\'de, yaklaşık 3.200 ise Tûsî\'de geçer. Büyük ravi sayıları bir ilim halkasının genişliğini nasıl okutur?' },
     { tr: '"İki yıl" sözü erken kaynaklarda bulunamıyor. Güzel bir sözün meşhur olması, onun tarihî kaydını neden tek başına göstermez?' },
-    { tr: 'Hz. Ca\'fer-i Sâdık, Emevilerin çözülüşünde ve Abbasilerin yükselişinde isyana girmeden öğretmeyi seçti. İlim halkasını açık tutmak, o yıllarda nasıl bir rehberlikti?' },
-    { tr: 'Mâlik ve Hz. Ca\'fer-i Sâdık aynı Medine ilminde yetişti. Mezhep sınırları çizilirken ortak hocalar ve ortak rivayetler nasıl hatırlanabilir?' },
+    { tr: 'Hz. Ca\'fer-i Sâdık, Emevilerin çözülüşünde ve Abbasilerin yükselişinde isyana girmedi. Sizce Hz. Ca\'fer-i Sâdık isyan yerine neden öğretmeyi seçti?' },
+    { tr: 'Mâlik ve Hz. Ca\'fer-i Sâdık aynı Medine ilminde yetişti. Sizce ortak hocalar ve ortak rivayetler, mezhepler arasındaki yakınlığı neden açıklar?' },
   ],
   summary: { tr: 'Hz. Ca\'fer-i Sâdık (ö. 148 H) Medine\'de açık bir ilim halkası kurdu. Mâlik\'in ondan hadis dinlediği TDV\'de de geçer. Ebû Hanîfe ile ilişkisi Şii kaynaklarında öğrencilik, TDV\'de ilmî görüşme olarak anılır. Câferî mezhep, bu halkanın rivayetleriyle oluştu.' },
 };

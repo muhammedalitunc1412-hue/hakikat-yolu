@@ -88,3 +88,20 @@ export function InstagramIcon({ size = 22, color = C.gold }: { size?: number; co
     </Svg>
   );
 }
+
+export function YouTubeIcon({ size = 22, color = C.gold }: { size?: number; color?: string }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Rect x={2.5} y={5.5} width={19} height={13} rx={4} stroke={color} strokeWidth={1.6} fill="none" />
+      <Path d="M10 9.2v5.6l4.8-2.8z" fill={color} />
+    </Svg>
+  );
+}
+
+export function ChatIcon({ size = 22, color = C.gold }: { size?: number; color?: string }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path d="M4.5 5.5h15a1.5 1.5 0 0 1 1.5 1.5v8.5a1.5 1.5 0 0 1-1.5 1.5H10l-4.5 3.5V17H4.5A1.5 1.5 0 0 1 3 15.5V7a1.5 1.5 0 0 1 1.5-1.5z" stroke={color} strokeWidth={1.6} fill="none" strokeLinejoin="round" />
+    </Svg>
+  );
+}

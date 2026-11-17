@@ -113,10 +113,10 @@ export const fatimaVefat: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Peygamber "Fatıma benden bir parçadır" demişti. Onun suskunluğu, Ehl-i Beyt sevgisini nerede tutar?' },
-    { tr: 'Kapının önündeki yemin iki kitabın tarihinde de yazılı. O eşiği düşünürken sabır size ne söyler?' },
-    { tr: 'Kabri bilinmiyor. Aranan ve bulunamayan bir kabir, protestoyu nasıl diri tutar?' },
-    { tr: 'Hz. Ali kabri korurken kendi hakkını yere bırakmıştı. Bu sabır, onun faziletini size nasıl anlatır?' },
+    { tr: 'Peygamber "Fatıma benden bir parçadır, onu kızdıran beni kızdırmış olur" demişti. Sizce bu söz bilindiği hâlde Hz. Fatıma\'nın başına gelenler neden engellenemedi?' },
+    { tr: 'Hz. Ali\'nin evinin kapısına odun yığıldığında Halife Ömer\'e "İçeride Fatıma var" denmiş, o da "Olsa da!" demişti. Sizce Sakife\'deki seçimi kabul etmeyenlerin o evde toplanması, bu sert tehdidi neden doğurdu?' },
+    { tr: 'Hz. Fatıma kabrinin kimse tarafından bilinmemesini vasiyet etti. Sizce Hz. Fatıma kabrini neden gizli tutmak istedi?' },
+    { tr: 'Halife Ömer Bakî\'de Hz. Fatıma\'nın mezarını aratınca Hz. Ali elinde Zülfikar ile gelip "Onun mezarından tek bir taş bile oynatırsanız, bu toprakları kanınızla sularım" dedi. Sizce Hz. Ali mezarın açılmasına neden bu kadar sert karşı çıktı?' },
   ],
   summary: { tr: 'Fedek reddedildi. Ehl-i Beyt rivayetinde Ömer kapıyı yaktı ve tekmeledi. Hz. Fatıma kapı ile duvar arasında kaldı, kaburgası kırıldı ve Muhsin düştü. Hz. Ali\'nin elleri bağlanıp biata götürüldü. Hz. Fatıma onu kurtarmak için beddua ile uyardı. Gece defnedildi. Sabah Ömer mezarları kazdırmak istedi. Hz. Ali Zülfikar ile durdurdu. Kabri bugün de gizlidir.' },
 };

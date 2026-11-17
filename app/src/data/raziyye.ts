@@ -74,10 +74,10 @@ export const raziyye: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Peygamber "sapmayasınız diye" bir yazı istemişti. Onun ümmetini koruma arzusu, Ehl-i Beyt sevgisiyle size nasıl bağlanır?' },
-    { tr: 'İbn Abbas bu günü anarken ağlardı. Peygamber\'i seven bir kalp, bu gözyaşında neyi fark eder sizce?' },
-    { tr: 'Gadir\'de Kitap ile Ehl-i Beyt birlikte emanet edilmişti. Son gündeki yazı isteğini bu emanete yakın okumak, sevginizi nasıl derinleştirir?' },
-    { tr: 'Yazının içeriği rivayetlerde yoktur. Peygamber\'in "sapmayasınız" sözünü sükûnetle ve Ehl-i Beyt sevgisiyle okumak size ne açar?' },
+    { tr: 'Peygamber hastalığı ağırlaşmışken bile mescide çıkıp ordunun yola çıkmasını emretti, ama ordu Cürf\'te kaldı. Sizce Peygamber sonraki günlerde neden "yolunuzu şaşırmayasınız" diye bir yazı istedi?' },
+    { tr: 'İbn Abbas bu günü anarken "Asıl musibet, gürültünün ve anlaşmazlığın Resulullah ile o yazı arasına girmesidir" derdi. Sizce İbn Abbas asıl musibeti neden yazının yazılmamasında değil, tartışmanın araya girmesinde gördü?' },
+    { tr: 'Kaynaklarda Ömer\'e atfedilen "Allah\'ın Kitabı bize yeter" sözü var. Sizce bu söz, Peygamber\'in Gadir\'de Kitap ile Ehl-i Beyt\'i birlikte emanet etmesiyle nasıl bağdaşır?' },
+    { tr: 'Şiilere göre o odada yazılmasına engel olunan vasiyet, birkaç gün sonra Sakife\'de Hz. Ali\'nin hakkının bir kenara konmasının yolunu açtı. Sizce yazının yazılamaması bunu neden kolaylaştırdı?' },
   ],
   summary: { tr: 'Buhari ve Müslim, Peygamber\'in "size bir yazı yazayım ki sapmayasınız" dediğini ve odadaki anlaşmazlık yüzünden yazının yazılmadığını aktarır (Buhari, Sahih, no. 114; Müslim, Sahih, no. 1637a). Şii okumada bu veda isteği, Ehl-i Beyt\'e ve Hz. Ali\'nin yerine duyulan sevgiyle anılır.' },
 };

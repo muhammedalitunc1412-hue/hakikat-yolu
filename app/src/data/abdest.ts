@@ -91,9 +91,9 @@ export const abdest: HistEvent = {
   ],
   questions: [
     { tr: 'Mâide 6\'nın iki kıraati varken, bir okunuşu diğerine bağlamak için ayetin akışı ve Peygamber\'in uygulaması nasıl birlikte okunur?' },
-    { tr: 'İbn Abbas\'a nispet edilen "Allah\'ın kitabında mesh buluyorum" sözünün senedi zayıf bulunmuştur. Zayıf bir söz, tartışmanın tarihi için yine de ne anlatır?' },
+    { tr: 'İbn Abbas\'a nispet edilen "Allah\'ın kitabında mesh buluyorum" sözünün senedi zayıf bulunmuştur. Sizce senedi zayıf bulunan bu söz, mesh tartışmasında neden hâlâ anılıyor?' },
     { tr: 'Cerr-i civâr açıklamasında aradaki "ve" edatı, esrenin komşuluktan geldiği görüşünü nasıl etkiler?' },
-    { tr: '"Topuklara ateşten vay" hadisi, ayağın hangi yerinin ihmale uğramaması gerektiğini vurgular? Rivayetin bağlamı size ne söyler?' },
+    { tr: 'Sünni okuyuş "Topuklara ateşten vay" rivayetini ayakların yıkanmasına dayandırır, Câferî mektep ise onu ayağın iyice temizlenmesi uyarısı olarak okur. Sizce aynı söz neden iki farklı hükme dayanak oluyor?' },
   ],
   summary: { tr: 'Mâide 6\'nın iki kıraati, ayakların meshine ve yıkanmasına kapı açar. Câferî fıkıh ayağın üstüne mesh yapar. Sünni mezheplerin çoğunluğu yıkamayı farz sayar. Bazı Sünni nakiller mesh görüşünü de aktarır.' },
 };

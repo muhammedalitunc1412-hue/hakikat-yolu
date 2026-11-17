@@ -71,9 +71,9 @@ export const harre: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Abdullah b. Hanzala, Yezid\'in hediyelerini aldı ama ona karşı durdu. Bir zalimin ikramı, hakkı söylemeye engel olabilir mi?' },
-    { tr: 'İbn Ziyâd bile Kâbe\'ye saldırmayı reddetti. Yezid\'in emri bu durumda size ne anlatıyor?' },
-    { tr: 'Hz. Zeynelâbidîn, Mervan\'ın ailesini himaye etti. Düşmana karşı merhamet, Ehl-i Beyt ahlâkında nerede durur?' },
+    { tr: 'Yezid, Abdullah b. Hanzala\'ya yüz bin dirheme yakın bağış yapmıştı. Sizce Abdullah b. Hanzala bu bağışı aldığı hâlde Yezid\'e karşı neden durdu?' },
+    { tr: 'İbn Ziyâd, Hz. Hüseyin\'i öldürmüş biri olarak bile "Hem Resûlullah\'ın kızının oğlunu öldürüp hem de Kâbe\'ye saldırmam" dedi. Sizce Yezid bu reddi görünce emrinden neden vazgeçmeyip ordunun başına Müslim b. Ukbe\'yi getirdi?' },
+    { tr: 'Ümeyyeoğulları Medine\'den çıkarılırken Hz. Zeynelâbidîn Mervan\'ın ailesini himayesine aldı. Sizce Kerbelâ\'yı yaşamış olan Hz. Zeynelâbidîn bunu neden yaptı?' },
   ],
   summary: { tr: '63 H\'de Medine halkı, Yezid\'in şarap içtiğini ve namazı terk ettiğini gören heyetin sözü üzerine biatı bozdu. Yezid, Müslim b. Ukbe\'ye şehri üç gün helal kılma emri verdi. Harre\'de sahabeler ve oğulları öldürüldü, halk Yezid\'in kulları olarak biata zorlandı. Hz. Zeynelâbidîn\'e dokunulmadı. 64 H\'de Husayn b. Numeyr Mekke\'yi kuşattı, Kâbe mancınıkla taşlandı ve yandı. Yezid bu sırada öldü. Ortak cümleler Taberî 5/480-499 ve el-Bidâye\'dedir.' },
 };

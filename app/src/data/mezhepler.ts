@@ -98,7 +98,7 @@ export const mezhepler: HistEvent = {
   questions: [
     { tr: 'Hz. Ali taraftarlığı hem Peygamber dönemi hem Sakîfe sonrası için anlatılır. Bir kavramın tarihini anlamak için hangi kaynakları yan yana okumak gerekir?' },
     { tr: 'Hâricîler büyük günahı tekfirle, Mürcie ise akıbeti Allah\'a bırakarak cevapladı. Aynı krize iki farklı cevap, topluluğun dengesini nasıl etkiler?' },
-    { tr: 'Zeyd b. Ali ayaklanmayı, Hz. Ca\'fer-i Sâdık ilim halkasını seçti. Ehl-i Beyt içindeki bu iki yol, amacı ve yöntemi nasıl ayırır?' },
+    { tr: 'Zeyd b. Ali ayaklanmayı, Hz. Ca\'fer-i Sâdık ilim halkasını seçti. Sizce Ehl-i Beyt içindeki bu iki yol neden birbirinden ayrıldı?' },
     { tr: 'Hz. Ca\'fer-i Sâdık\'ın ders halkası hem Şii hem Sünni âlimlerin andığı bir kapıdır. Ortak ilim mirası, sonraki mezhep sınırlarını nasıl yumuşatabilir?' },
     { tr: 'Mezhepler siyasi ayrılıkla başlayıp fıkıh ve kelam ekollerine döndü. Bu yolculukta ilim, topluluğu bir arada tutmaya nasıl yardım etti?' },
   ],

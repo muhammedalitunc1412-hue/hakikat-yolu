@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Modal, Pressable, ScrollView, StyleProp, StyleSheet, Text, TextStyle, View } from 'react-native';
 import { tx } from '../i18n';
 import type { L } from '../types';
@@ -86,7 +86,9 @@ function marked(t: string): React.ReactNode[] {
 
 export function Rich({ text, style, selectable }: { text: L | string | undefined; style?: StyleProp<TextStyle>; selectable?: boolean }) {
   const [open, setOpen] = useState<string | null>(null);
-  const parts = split(tx(text));
+  const str = tx(text);
+  // Büyük düzenli ifade taraması metin başına bir kez yapılır; üst bileşen her yeniden çizildiğinde tekrarlanmaz.
+  const parts = useMemo(() => split(str), [str]);
   const v = open ? VERSES[open] : null;
   return (
     <>

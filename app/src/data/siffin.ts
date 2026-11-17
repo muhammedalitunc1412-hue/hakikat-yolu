@@ -121,11 +121,11 @@ export const siffin: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Peygamber, Ammar\'ı azgın bir grubun öldüreceğini haber vermişti. Sıffin\'de Ammar Hz. Ali\'nin yanındaydı. Bu haber, Ehl-i Beyt\'in yanında durmayı size nasıl düşündürüyor?' },
-    { tr: 'Ammar şehit olunca hadis hatırlatıldı ve "Onu getirenler öldürdü" diye karşılandı. Bir haber ile onun yorumu arasındaki mesafe size ne söylüyor?' },
-    { tr: 'Sa\'d, soru üzerine Peygamber\'in Hz. Ali hakkındaki üç sözünü saydı. Bu sözler, ona duyulan sevgiyi size nasıl anlatıyor?' },
-    { tr: 'Ömer b. Abdülaziz, minberlerde Hz. Ali\'ye sövme uygulamasını kaldırdı. Bu adım, o sözlerin ağırlığını size nasıl gösteriyor?' },
-    { tr: 'Peygamber, Haricîler hakkında hakka daha yakın tarafın onlarla savaşacağını haber vermişti. Hz. Ali onlarla karşılaştı. Bu haber, onun yerini size nasıl okutuyor?' },
+    { tr: 'Peygamber, Ammar\'ı azgın bir grubun öldüreceğini haber vermişti ve Ammar Sıffin\'de Hz. Ali\'nin safındaydı. Sizce bu haber, Ammar\'ın hangi safta durduğuna bakmayı neden gerektirir?' },
+    { tr: 'Ammar şehit olunca hadis hatırlatıldı ve Muaviye "Onu getirenler öldürdü" diye karşılık verdi. Sizce bu yorum, Peygamber\'in sözünü neden ortadan kaldırmıyor?' },
+    { tr: 'Hz. Ali, kendi tarafının hakemi olarak güvendiği başka isimleri önermişti, ama Ebu Musa el-Eş\'arî seçildi. Sizce ordusundaki baskı hakem seçiminde neden belirleyici oldu?' },
+    { tr: 'Hz. Ali, Haricîlerin "Hüküm yalnızca Allah\'ındır" sloganına "Söz haktır, ama onunla batıl kastediliyor" dedi. Sizce Hz. Ali sözü kabul edip amacı neden reddetti?' },
+    { tr: 'Peygamber, Haricîler hakkında onları iki taraftan hakka daha yakın olanın öldüreceğini haber vermişti. Sizce Peygamber, onlarla savaşacak tarafı neden "hakka daha yakın olan" diye tarif etti?' },
   ],
   summary: { tr: 'Sıffin\'de Ammar, Hz. Ali\'nin safında şehit oldu. Mushaflar mızraklara asıldı; Hakem ve Nehrevan geldi. Hz. Ali sabırla hakkını korudu ve bir sabah namazında şehit edildi.' },
 };

@@ -85,9 +85,9 @@ export const muaviyeIktidar: HistEvent = {
     },
   ],
   questions: [
-    { tr: "Hilafetin otuz yıl süreceği haberi ve ardından gelen veliahtlık, bu yönetimi size hangi adla düşündürüyor?" },
-    { tr: "Minberde Hz. Ali'ye sövülmesi ve bunu reddedenlerin öldürülmesi, Ehl-i Beyt sevgisi bakımından size ne söylüyor?" },
-    { tr: "Hz. Hüseyin ve Abdurrahman b. Ebi Bekir, Yezid'in veliahtlığına razı olmadı. Onların duruşu, biatı zorlayan bir düzen karşısında size ne öğretiyor?" },
+    { tr: "Peygamber hilafetin otuz yıl süreceğini haber vermişti ve Hz. Hasan'ın sulhuyla bu otuz yıl doldu. Sizce Muaviye'nin oğlunu veliaht ilan etmesi bu haberle neden birlikte anılıyor?" },
+    { tr: "Muaviye Cuma hutbelerinde Hz. Ali'ye lanet okuttu ve Hucr b. Adî laneti reddedince Mercü Azra'da öldürüldü. Sizce Muaviye laneti neden hutbeye, reddedenleri neden ölüme bağladı?" },
+    { tr: "Sizce Hz. Hüseyin ve Abdurrahman b. Ebi Bekir, Yezid'in veliahtlığına neden razı olmadı?" },
   ],
   summary: { tr: "Muaviye 41 H'den sonra Şam merkezli bir yönetim kurdu. Ziyâd'ı kardeşi ilan etti. Hutbelerde Hz. Ali'ye sövüldü. Hucr b. Adî öldürüldü ve oğlu Yezid veliaht oldu. Sünni kitaplarda Muaviye, sahabi ve yönetici olarak da anılır. Şii anlatıda bu yıllar, Kerbela'ya giden yolu hazırlamıştır." },
 };
