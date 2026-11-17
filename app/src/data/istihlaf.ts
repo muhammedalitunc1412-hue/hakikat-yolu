@@ -38,7 +38,7 @@ export const istihlaf: HistEvent = {
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 52, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'ali', x: 26, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 76, label: { tr: 'Osman' } }] },
     },
     {
-      by: 'sunni',
+      by: 'both',
       text: { tr: 'Abdurrahman önce **Hz. Ali**\'ye döndü ve ona bir şart sundu: Allah\'ın Kitabı, Peygamber\'in sünneti ve önceki iki halifenin yolu üzerine biat edecekti. Biat, bağlılık sözüdür. Hz. Ali şöyle cevap verdi: "Allah\'ın Kitabı ve Peygamber\'in sünneti üzerine, bir de kendi içtihadıma göre." Önceki iki halifenin yolunu bir şart olarak kabul etmedi. Haksız yere başa geçen halifelerin izini değil, Peygamber\'in izini ön planda tutmak istiyordu. Bu cevap, hilafetin kapısını ona bir kez daha kapattı. Abdurrahman aynı şartı **Osman**\'a sundu. Osman ise makam ve mevki uğruna, hakkı olmadan hilafete geçenlerin yoluna bağlanmayı tercih etti ve şartı hiç tereddüt etmeden kabul etti. Bunun üzerine Abdurrahman, Osman\'a biat etti ve diğerleri de onu izledi.' },
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 30, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 56, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'man', x: 78, label: { tr: 'Osman' } }] },
     },
