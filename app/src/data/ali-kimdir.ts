@@ -166,11 +166,11 @@ export const aliKimdir: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Hz. Ali çocuk yaşta Peygamber\'e iman etti ve hayatı boyunca yanında kaldı. Onun terbiyesinde büyüyen bu yakınlık, içinizde nasıl bir sevgi uyandırıyor?' },
-    { tr: 'Hicret gecesi Hz. Ali, kılıçlı kalabalığın sardığı evde Peygamber\'in yatağına yattı. Bu fedakârlık, ona olan sevginize ne katıyor?' },
-    { tr: 'Peygamber ona "Dünyada da ahirette de kardeşimsin" dedi. Bu kardeşlik, Hz. Ali\'nin onun yanındaki yerini size nasıl anlatıyor?' },
-    { tr: 'İlim şehri sözünün sıhhati konuşulsa da Hz. Ali\'nin ilmi övülür. Sahabenin ona danışması, size onun ilmi hakkında ne söylüyor?' },
-    { tr: 'Peygamber\'i yıkayan ve defneden kişi Hz. Ali\'dir. Son vedada yanında olmak, Ehl-i Beyt sevgisine ne katıyor?' },
+    { tr: 'Hz. Ali çocuk yaşta Peygamber\'e iman etti ve hayatı boyunca yanında kaldı. Sizce Peygamber\'in terbiyesinde büyümek, bu yakınlığı neden bu kadar kalıcı kıldı?' },
+    { tr: 'Hicret gecesi kılıçlı kalabalık Peygamber\'in evini sardı ve Hz. Ali onun yatağına yattı. Sizce Peygamber yatağına özellikle Hz. Ali\'yi neden yatırdı?' },
+    { tr: 'Peygamber ona "Dünyada da ahirette de kardeşimsin" dedi. Sizce Peygamber bu kardeşliği neden hem dünya hem ahiret için ilan etti?' },
+    { tr: 'İlim şehri sözünün sıhhati konuşulsa da Hz. Ali\'nin ilmi övülür. Sizce Peygamber, ilim benzetmesinde Hz. Ali\'yi neden şehrin kapısı olarak andı?' },
+    { tr: 'Hz. Ali Peygamber\'i yıkarken Sakife\'de yönetimin kime geçeceği konuşuluyordu. Sizce Hz. Ali neden o toplantıya gitmeyip Peygamber\'in yanında kaldı?' },
   ],
   summary: { tr: 'Hz. Ali, Peygamber\'in yanında büyüdü; ilk iman edenlerdendir, hicret gecesi canını ortaya koydu, savaşlarda sancak taşıdı, Hz. Fatıma ile evlendi ve Peygamber\'i yıkayıp defnetti.' },
 };

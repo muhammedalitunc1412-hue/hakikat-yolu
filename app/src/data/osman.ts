@@ -79,11 +79,11 @@ export const osman: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Hz. Ali hem şikâyeti iletti hem de heyeti geri çevirmeye çalıştı. Onun bu ara yerde durması, Ehl-i Beyt\'in ölçülü duruşu hakkında ne söyler sizce?' },
-    { tr: 'Halife Osman "Peygamber benden bir söz aldı, ona sabrediyorum" dedi. Bu sabır, o günleri daha sakin okumaya nasıl yardım eder?' },
-    { tr: 'Hz. Ali ne emir verdiğini ne de tamamen engellediğini söyleyip hükmü Allah\'a bırakıyor. Bu söz, onu seven bir gönle ne öğretir?' },
-    { tr: 'Hz. Hasan ve Hz. Hüseyin\'in evin yanında olduğu rivayet bazı âlimlerce zayıf sayılıyor. Böyle bir rivayeti sevgiyle ve ihtiyatla nasıl okuruz?' },
-    { tr: 'Hz. Ali hilafeti bilinçle üstlendi. Haksız malları ve bozuk valileri düzeltmeye başlaması, ona duyulan sevgiyi size nasıl anlatıyor?' },
+    { tr: 'Hz. Ali halkın şikâyetlerini Halife Osman\'a iletti ve Mısırlı heyetle görüşmeye gitti. Sizce Hz. Ali neden hem halifeyi hem halkı sakinleştirmeye çalışıp iki tarafın arasında durdu?' },
+    { tr: 'Halife Osman kuşatma altında "Peygamber benden bir söz aldı, ona sabrediyorum" dedi. Sizce Halife Osman geri adım atmak yerine neden bu sözle sabrı seçti?' },
+    { tr: 'Hz. Ali hutbesinde, Halife Osman\'ın öldürülmesini emretseydi katil, insanları alıkoyabilseydi yardımcısı olacağını söyledi. Sizce Hz. Ali o günlerdeki tutumunu neden bu iki ihtimalle anlattı?' },
+    { tr: 'Hz. Hasan ve Hz. Hüseyin\'in Halife Osman\'ın evini korumaya gönderildiği rivayeti bazı âlimlerce zayıf sayılıyor. Sizce zayıf sayılan bir rivayet, Hz. Ali\'nin kan dökülmesine bakışı anlatılırken neden yine de anılıyor?' },
+    { tr: 'Hz. Ali hilafeti, çeyrek asırlık bir yönetim enkazını devraldığını bilerek üstlendi. Sizce Hz. Ali işe haksız vali atamalarını ve malların haksız dağıtımını düzeltmekle neden başladı?' },
   ],
   summary: { tr: 'Halife Osman\'ın ikinci yarısındaki şikâyetler kuşatmaya ve 35 H\'de öldürülmesine vardı. Hz. Ali aracılık etti. "Peygamber benden bir söz aldı, ona sabrediyorum" dedi. Halk ona koşunca Hz. Ali hilafeti bilinçle üstlendi ve adaleti kurmaya başladı.' },
 };

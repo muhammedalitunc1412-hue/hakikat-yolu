@@ -81,10 +81,10 @@ export const istihlaf: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Halife Ebu Bekir\'in Halife Ömer\'i seçmesi kaynaklarda durur. Bu tayini Hz. Ali\'nin yeriyle birlikte sükûnetle okumak size ne düşündürür?' },
-    { tr: 'Halife Ömer altı kişinin içinde Hz. Ali\'yi de saydı. Onun Peygamber katındaki yerini seven bir kalp, bu şurayı nasıl okur sizce?' },
-    { tr: 'Karar Abdurrahman b. Avf\'ın elinde toplandı ve Osman seçildi. Bu tabloyu Hz. Ali\'ye duyulan sevgiyle düşünmek size ne hatırlatır?' },
-    { tr: 'Hz. Ali "kendi içtihadım" dedi. Kitap ve sünnetin yanında kendi ilmine sahip çıkması, ona olan sevgiyi nasıl derinleştirir?' },
+    { tr: 'Halife Ebu Bekir, Halife Ömer\'i tayin etmeden önce Abdurrahman b. Avf ve Osman ile görüştü. Sizce Hz. Ali\'ye neden danışılmadı?' },
+    { tr: 'Halife Ömer şuraya altı kişiyi saydı ve Hz. Ali de bunların arasındaydı. Sizce Hz. Ali\'nin kurulun üyesi olması neden seçilmesi anlamına gelmiyordu?' },
+    { tr: 'Zübeyr hakkını Hz. Ali\'ye, Talha Osman\'a, Sa\'d da Abdurrahman b. Avf\'a bıraktı. Sizce bu devirlerin sonunda karar neden Abdurrahman b. Avf\'ın elinde toplandı?' },
+    { tr: 'Abdurrahman b. Avf biatı Kitap, sünnet ve önceki iki halifenin yolu üzerine şart koştu. Sizce Hz. Ali önceki iki halifenin yolunu neden şart olarak kabul etmedi de "bir de kendi içtihadıma göre" dedi?' },
   ],
   summary: { tr: 'Halife Ebu Bekir, Halife Ömer\'i yerine seçti. Halife Ömer yaralanınca altı kişilik şurayı bıraktı; Abdurrahman b. Avf Osman\'ı seçti. Bu şura Şii okumada Hz. Ali\'nin "kendi içtihadım" sözü ve Şıkşıkıyye, onun yerini anlatır.' },
 };

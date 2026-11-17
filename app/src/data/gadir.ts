@@ -73,10 +73,10 @@ export const gadir: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Peygamber sıcak çölde binlerce kişiyi durdurup Hz. Ali\'nin elini kaldırdı. Bu özen, velayet ilanının ağırlığını size nasıl hissettiriyor?' },
-    { tr: 'Hutbe "Ben müminlere kendi canlarından daha yakın değil miyim?" diye açıldı, sonra mevlâ dendi. Bu iki söz yan yana gelince, Hz. Ali\'nin velayeti size ne söylüyor?' },
-    { tr: 'Aynı konuşmada Kitap ve Ehl-i Beyt birlikte emanet edildi. Bu emanet, Ehl-i Beyt sevgisini hayatınızda nereye koyuyor?' },
-    { tr: 'Sa\'d b. Ebi Vakkas, Hz. Ali\'nin faziletlerini saydı. Bu sözler, ona olan sevginizi nasıl derinleştiriyor?' },
+    { tr: 'Peygamber sıcak çölde binlerce kişiyi durdurup Hz. Ali\'nin elini kaldırdı. Sizce Peygamber bu ilanı neden hacdan dönen kalabalığı durdurarak yaptı?' },
+    { tr: 'Hutbe "Ben müminlere kendi canlarından daha yakın değil miyim?" diye açıldı, sonra mevlâ dendi. Sizce Peygamber "mevlâ" sözünden önce neden bu soruyu sordu?' },
+    { tr: 'Aynı konuşmada Kitap ve Ehl-i Beyt birlikte emanet edildi. Sizce Peygamber Kitap ile Ehl-i Beyt\'i neden Hz. Ali\'nin velayetini ilan ettiği konuşmada birlikte emanet etti?' },
+    { tr: 'Sa\'d b. Ebi Vakkas, Muaviye ona Hz. Ali\'ye neden sövmediğini sorunca mevlâ sözünü, Menzile\'yi ve Hayber sancağını saydı. Sizce Sa\'d, sövmeyi reddederken cevabını neden Peygamber\'in bu sözleriyle verdi?' },
   ],
   summary: { tr: 'Gadir Hum\'da Peygamber, Hz. Ali\'nin elini kaldırıp "Ben kimin mevlâsıysam, Hz. Ali de onun mevlâsıdır" dedi; bu, onun velayetinin ilanıydı.' },
 };

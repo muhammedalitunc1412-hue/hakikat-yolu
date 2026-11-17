@@ -112,11 +112,11 @@ export const imamlar: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Hz. Zeynelâbidîn Kerbela\'dan hasta olarak sağ çıktı ve sonraki imamlar ilim ile duayı öne aldı. Bu çizgi, zor bir dönemde rehberliğin nasıl sürdüğünü nasıl anlatır?' },
-    { tr: 'Hz. Ca\'fer-i Sâdık\'ın ders halkasında hem Ehl-i Beyt talebeleri hem Katâde ve Zührî gibi isimler anılır. Ortak bir ilim sofrası, mezhepleri birbirine nasıl yaklaştırır?' },
-    { tr: 'Hz. Musa Kâzım ve Hz. Ali Nakî yıllarca gözetim altında yaşadı. Baskı altında ilim halkasını sürdürmek, imamların rehberliğini nasıl gösterir?' },
-    { tr: 'Hz. Ali Rızâ veliahtlığı iki ay direndikten sonra kabul etti. Güç karşısında ilkeyi korumak ile fitneyi önlemek arasında nasıl bir denge görüyorsunuz?' },
-    { tr: 'Hz. Mehdî rivayetleri bazı Sünni kitaplarda da vardır; doğmuş ve gizlenmiş imam inancı ise Şii kaynaklarına özgüdür. İki anlatının paylaştığı adalet umudu size ne söyler?' },
+    { tr: 'Hz. Zeynelâbidîn Kerbela\'dan hasta olarak sağ çıktı ve sonraki imamlar ilim ile duayı öne aldı. Sizce imamlar zor bir dönemde rehberliği neden ilim ve dua üzerinden sürdürdü?' },
+    { tr: 'Hz. Ca\'fer-i Sâdık\'ın ders halkasında hem Ehl-i Beyt talebeleri hem Katâde ve Zührî gibi isimler anılır. Sizce bu ortak ilim sofrası, mezhepler arasındaki yakınlığın neden bir göstergesi sayılır?' },
+    { tr: 'Hz. Musa Kâzım ve Hz. Ali Nakî yıllarca gözetim altında yaşadı. Sizce onlar baskı altında bile ilim halkasını neden sürdürdü?' },
+    { tr: 'Hz. Ali Rızâ veliahtlığı iki ay direndikten sonra kabul etti. Sizce Hz. Ali Rızâ önce neden direndi, sonra neden kabul etti?' },
+    { tr: 'Hz. Mehdî rivayetleri bazı Sünni kitaplarda da vardır; doğmuş ve gizlenmiş imam inancı ise Şii kaynaklarına özgüdür. Sizce bu fark neden mezhepler arasında bu noktada ayrışıyor?' },
   ],
   summary: { tr: 'Kerbela\'dan sonra Hz. Zeynelâbidîn\'den Hz. Hasan Askerî\'ye imamlar, çoğu zaman gözetim altında ilim, dua ve sabır çizgisini sürdürdü. On İkinci İmam\'ın gaybeti Şii inancının temelidir. Hz. Mehdî rivayetleri bazı Sünni kaynaklarında da yer alır.' },
 };

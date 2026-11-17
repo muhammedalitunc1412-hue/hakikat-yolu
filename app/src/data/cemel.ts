@@ -90,10 +90,10 @@ export const cemel: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Hz. Ali hilafeti bilinçle üstlendi. Haksız malları geri alması ve bozuk valileri azletmesi, Cemel ile Sıffin\'deki karşı duruşu size nasıl anlatıyor?' },
-    { tr: 'Hz. Ali, Zübeyr\'e Peygamber\'in "Onu seviyor musun?" sorusunu ve "ona zulmederek savaşacaksın" sözünü hatırlatınca Zübeyr saftan ayrıldı. Bu sahne, Hz. Ali\'nin yanında durmanın anlamı hakkında size ne söylüyor?' },
-    { tr: 'Hz. Ali savaştan sonra esirleri bıraktı ve Aişe\'yi saygıyla Medine\'ye uğurladı. Bu incelik, onun niyeti hakkında size ne düşündürüyor?' },
-    { tr: 'Birçok Sünni âlim, Cemel\'de Hz. Ali\'yi hakka daha yakın bulur. Bu ortak bakış, onu daha yakından tanımak için size bir kapı açıyor mu?' },
+    { tr: 'Hz. Ali hilafeti devralınca haksız malları geri aldı ve bozuk valileri azletti. Sizce bu kararlar, Cemel ve Sıffin\'de ona karşı çıkanların tavrını nasıl etkiledi?' },
+    { tr: 'Hz. Ali, Zübeyr\'e Peygamber\'in "Onu seviyor musun?" sorusunu ve "ona zulmederek savaşacaksın" sözünü hatırlatınca Zübeyr saftan ayrıldı. Sizce bu hatırlatma Zübeyr\'i neden saftan ayrılmaya götürdü?' },
+    { tr: 'Hz. Ali savaştan sonra esirleri bıraktı ve Aişe\'yi saygıyla Medine\'ye uğurladı. Sizce Hz. Ali galip geldiği hâlde esirleri neden bıraktı?' },
+    { tr: 'Birçok Sünni âlim, Cemel\'de Hz. Ali\'yi hakka daha yakın bulur. Sizce bu ortak bakış neden mezhep farkını aşıyor?' },
   ],
   summary: { tr: 'Halife Osman\'ın öldürülmesinden sonra Hz. Ali hilafeti bilinçle üstlendi. Hav\'eb\'de Aişe geri dönmek istedi, yine de yürütüldü. Hz. Ali, Zübeyr\'e Peygamber\'in sözünü hatırlattı. Zübeyr saftan ayrıldı ve sonra öldürüldü. Hz. Ali esirleri bağışladı ve Aişe\'yi saygıyla Medine\'ye uğurladı.' },
 };

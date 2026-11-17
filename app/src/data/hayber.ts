@@ -84,9 +84,9 @@ export const hayber: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Peygamber sancağı, Allah\'ı ve Resulü\'nü seven ve onlarca sevilen Hz. Ali\'ye verdi. Bu söz, ona olan sevginizi nasıl besliyor?' },
-    { tr: 'Buhari ve Müslim sancağın Hz. Ali\'ye verildiğini anlatır. Bu ortak sahneyi okuyunca içinizde ne uyanıyor?' },
-    { tr: '"Allah ve Resulü\'nü seven" sözü Hz. Ali için söylenmiştir. Bu sevgi, onun Peygamber\'in yanındaki yerini size nasıl anlatıyor?' },
+    { tr: 'Ebu Bekir ve Ömer sancakla kaleye gidip kapıyı açamadan dönmüştü. Sizce Peygamber, sancağı kimin alacağını akşamdan isim vermeden "Allah\'ı ve Resulünü seven" diye tarif edip ertesi sabaha neden bıraktı?' },
+    { tr: 'Hz. Ali gözlerindeki ağrı yüzünden çadırında yatıyor ve savaşa katılamıyordu. Sizce Peygamber sancağı vermek için neden gözleri ağrıyan Hz. Ali\'yi çağırttı?' },
+    { tr: 'Hz. Ali "Onlar bizim gibi Müslüman olana kadar mı savaşayım?" diye sordu. Sizce Peygamber savaşmadan önce neden önce İslam\'a davet etmesini istedi?' },
   ],
   summary: { tr: 'Hayber\'de Peygamber sancağı, Allah\'ı ve Resulü\'nü seven ve onlarca sevilen kişiye vereceğini söyledi. O kişi Hz. Ali oldu. Bu söz Sünni kaynaklarında da geçer (Buhari, Sahih, no. 2942; Müslim, Sahih, no. 2406). Şia bunu, Hz. Ali\'nin Peygamber\'in yanındaki yerinin delili sayar.' },
 };

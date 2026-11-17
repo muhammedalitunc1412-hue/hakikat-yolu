@@ -54,9 +54,9 @@ export const meysem: HistEvent = {
     { book: 'Meclisî, Bihârü\'l-Envâr', ref: 'Meysem et-Temmâr (cilt ve sayfa numarası ayrıca verilmedi)', says: { tr: 'Kehanet, ağaç, asılma, gem ve dilin kesilmesi bu derlemede nakledilir. Sayfa numarası ayrıca verilmedi.' }, status: 'check' },
   ],
   questions: [
-    { tr: 'Meysem, asılacağı ağacı yıllar önce biliyordu. Yine de o ağacın köküne su verdi. Bu bekleyiş size ne söyler?' },
-    { tr: 'Minberlerde Hz. Ali\'ye lanet okunurken Meysem susmadı. Ehl-i Beyt sevgisini yüksek sesle söylemek size ne öğretir?' },
-    { tr: 'Dar ağacında bile faziletini anlattı. Dilini kestiler. Hz. Ali\'nin sözü harfiyen çıktı. Bu sahne, Kerbela\'dan önce size ne haber verir?' },
+    { tr: 'Hz. Ali, Meysem\'e asılacağı hurma ağacını gösterdi. Sizce Meysem kaçmak yerine neden o ağacın yanına gidip kökünü suladı?' },
+    { tr: 'Hucr b. Adî ve arkadaşları laneti kabul etmedikleri için öldürülmüştü. Sizce Meysem, Hz. Ali\'yi savunmanın bedeli ölüm olabilecekken neden tezgâhında anlatmayı bırakmadı?' },
+    { tr: 'İbn Ziyâd, Meysem\'in asıldığı yerden konuşmaya devam ettiğini duyunca dilinin kesilmesini emretti. Sizce İbn Ziyâd Meysem\'in konuşmasına neden bu kadar öfkelendi?' },
   ],
   summary: { tr: 'Meysem et-Temmâr, Kûfe\'de hurma satan, Hz. Ali\'nin dostuydu. Hz. Ali ona asılacağını, dilinin kesileceğini ve ağacı haber verdi. Hicri 60\'ta İbn Ziyâd teberri istedi. Meysem reddetti. Haber verilen ağaçta şehit edildi.' },
 };

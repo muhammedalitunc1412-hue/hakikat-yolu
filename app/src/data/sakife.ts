@@ -118,10 +118,10 @@ export const sakife: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Peygamber\'in ailesi cenaze hazırlarken Sakife\'de biat alındı. O saatte Hz. Ali\'nin yanında durmayı düşünmek, Ehl-i Beyt sevgisini nasıl besler?' },
-    { tr: 'Buhari, Hz. Ali\'nin biatını Hz. Fatıma\'nın vefatından sonraya bağlar. Onun bu aylarda Hz. Fatıma\'nın üzüntüsünde durması size ne söyler?' },
-    { tr: 'Sakife\'de "Araplar yönetimi Kureyş\'e tanır" denmişti. Peygamber\'in en yakın ailesini bu sözün yanında sevgiyle anmak size ne hatırlatır?' },
-    { tr: 'Hz. Ali, Şıkşıkıyye hutbesinde bu günleri sabırla anar. Onun sabrı, Ehl-i Beyt\'e duyulan sevgiye ne katar sizce?' },
+    { tr: 'Hz. Ali ve Hâşimoğulları Peygamber\'i yıkarken Sakife\'de biat alındı. Sizce Ebu Bekir, Ömer ve Ebu Ubeyde cenazenin başındaki Hz. Ali\'ye haber vermeden neden doğrudan toplantıya gitti?' },
+    { tr: 'Hz. Ali Sakife\'deki biatı kabul etmedi ve altı ay Hz. Fatıma\'nın yanında durdu. Sizce Hz. Ali bu altı ay boyunca neden kılıcını çekmedi?' },
+    { tr: 'Ebu Bekir Arapların yönetimi Kureyş\'ten başka bir kabileye bırakmayacağını söyledi. Sizce Kureyş\'in içinde Peygamber\'e en yakın olan Hz. Ali bu gerekçeyle neden anılmadı?' },
+    { tr: 'Halife Ömer kendi hutbesinde "Ebu Bekir\'e yapılan biat bir felte idi" dedi ve bunun tekrarlanmaması gerektiğini ekledi. Sizce Halife Ömer bu uyarıyı neden yaptı?' },
   ],
   summary: { tr: 'Peygamber\'in ailesi onun cenazesini hazırlarken Sakife\'de biat alındı. Halife Ömer\'in bu biata "felte" dediği Buhari\'de anlatılır. Hz. Ali\'nin biatının Hz. Fatıma\'nın vefatından sonraya kaldığı da Sünni kaynaklarında geçmektedir (Buhari, Sahih, no. 4240-4241). Şii okumada bu gün, Ehl-i Beyt\'in acısı ve Hz. Ali\'nin yeri birlikte anılır.' },
 };

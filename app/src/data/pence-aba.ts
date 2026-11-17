@@ -66,9 +66,9 @@ export const penceAba: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Peygamber beş kişiyi bir örtünün altında topladı. Bu tablo, Ehl-i Beyt sevgisini içinizde nasıl büyütüyor?' },
-    { tr: 'Zeyd b. Erkam, Ehl-i Beyt\'i Peygamber\'in yakın ailesi diye anlattı. Bu söz, o aileye olan sevginize ne katıyor?' },
-    { tr: 'Tathir ayeti "sizi tertemiz yapmak ister" der. Şia bunu günahtan korunmuşluk diye okur. Bu temizlik, onlara duyduğunuz güveni nasıl besliyor?' },
+    { tr: 'Ümmü Seleme "Ben de onlarla birlikte miyim?" diye sorunca Peygamber ona "Sen hayır üzeresin" dedi, ama örtüyü onun için açmadı. Sizce Peygamber örtünün altına neden yalnızca bu beş kişiyi aldı?' },
+    { tr: 'Zeyd b. Erkam Ehl-i Beyt\'in kimler olduğu sorulunca Peygamber\'in hanımlarını dışarıda tuttu ve zekât almaları yasak olan aileleri saydı. Sizce Zeyd Ehl-i Beyt\'i neden kan bağıyla tarif etti?' },
+    { tr: 'Peygamber Ahzâb 33:33\'ü rastgele bir topluluğa değil, kendi elleriyle örtünün altına aldığı beş kişiye okudu. Sizce ayetin kimlere okunduğu, "ehl" kelimesinin kimleri kapsadığını belirlemede neden önemlidir?' },
   ],
   summary: { tr: 'Peygamber, Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin\'i örtünün altına alıp onları Ehl-i Beyt diye andı. Bu beş, Pence-i Âl-i Aba\'dır ve Şia\'da ismet sahibi Ehl-i Beyt\'in çekirdeğidir.' },
 };
