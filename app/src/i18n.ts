@@ -51,7 +51,7 @@ const UI: Record<string, L> = {
   imamsKicker: { tr: 'EHL-İ BEYT İMAMLARI', en: 'IMAMS OF THE AHL AL-BAYT' },
   imamsSub: { tr: 'Her imamın künyesi, lakapları, tarihleri ve karakteristik özellikleri; Hz. Ca\'fer-i Sâdık için öğrencileri ve mezheplerle ilişkisi.', en: 'Names, epithets, dates and traits of each imam.' },
   imamsShort: { tr: 'Lakapları ve özellikleri; Hz. Ca\'fer-i Sâdık\'ın öğrencileri', en: 'Epithets and traits of each imam' },
-  imamsNote: { tr: 'Künye, tarih ve lakap bilgileri Şii biyografi geleneği ve TDV İslâm Ansiklopedisi\'ndeki genel anlatımlardan özetlenmiştir; kaynaklarda küçük farklar vardır. Yayın öncesinde birincil kaynaklardan kontrol edilmelidir.', en: 'Summarised from general accounts; check primary sources.' },
+  imamsNote: { tr: 'Künye, tarih ve lakap bilgileri Şii biyografi geleneği ve TDV İslâm Ansiklopedisi\'ndeki genel anlatımlardan özetlenmiştir; kaynaklarda küçük farklar vardır.', en: 'Summarised from Shia biographical tradition and general encyclopedia accounts; sources differ slightly.' },
   qibla: { tr: 'Kıble Pusulası', en: 'Qibla Compass' },
   qiblaSub: { tr: 'Bulunduğun yerden Kâbe yönünü gösterir.', en: 'Shows the direction of the Kaaba from where you are.' },
   qiblaShort: { tr: 'Kâbe yönünü bul', en: 'Find the direction of the Kaaba' },

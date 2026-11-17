@@ -175,7 +175,6 @@ export function ImamDetail({ id, onBack, onOpenEvent, onOpenImam }: { id: string
       </View>
 
       <View style={s.check}>
-        <Text style={s.checkBadge}>⚠ Kontrol edilmeli</Text>
         <Text style={s.checkText}>{ui('imamsNote')}</Text>
       </View>
     </ScrollView>

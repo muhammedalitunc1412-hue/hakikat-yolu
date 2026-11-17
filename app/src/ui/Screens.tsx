@@ -242,12 +242,10 @@ export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, o
 }
 
 function SourceCard({ src, tone }: { src: Source; tone: string }) {
-  const ok = src.status === 'verified';
   return (
     <View style={[s.src, { borderLeftColor: tone }]}>
       <View style={s.srcHead}>
         <Text style={[s.srcBook, align(), { flex: 1 }]}>{src.book}</Text>
-        <Text style={[s.badge, { color: ok ? C.shia : C.warn, borderColor: ok ? C.shia : C.warn }]}>{ok ? '✓ ' + ui('verified') : '⚠ ' + ui('check')}</Text>
       </View>
       <Text style={[s.srcRef, align()]}>{src.ref}</Text>
       <Rich style={[s.srcSays, align()]} text={src.says} />
@@ -696,7 +694,6 @@ export function DuaList({ duas, onOpen, onBack }: { duas: Dua[]; onOpen: (id: st
 export function DuaScreen({ dua, onBack }: { dua: Dua; onBack: () => void }) {
   const sc = useScrollMemory('dua:' + dua.id);
   const [show, setShow] = useState({ ar: true, ok: true, me: true });
-  const ok = dua.status === 'verified';
   const Chip = ({ k, label }: { k: 'ar' | 'ok' | 'me'; label: string }) => (
     <Pressable onPress={() => setShow(v => ({ ...v, [k]: !v[k] }))} accessibilityRole="button" style={[s.chip, show[k] && s.chipOn, webHit]}>
       <Text style={[s.chipText, show[k] && { color: C.ink }]}>{label}</Text>
@@ -711,7 +708,6 @@ export function DuaScreen({ dua, onBack }: { dua: Dua; onBack: () => void }) {
       <View style={s.chipRow}>
         <Chip k="ar" label={ui('arabic')} /><Chip k="ok" label={ui('okunus')} /><Chip k="me" label={ui('meal')} />
       </View>
-      <Text style={[s.badge, { alignSelf: 'flex-start', color: ok ? C.shia : C.warn, borderColor: ok ? C.shia : C.warn, marginBottom: 8 }]}>{ok ? '✓ ' + ui('verified') : '⚠ ' + ui('check')}</Text>
       {!!dua.note && <Text style={[s.dim, { marginBottom: 10 }]}>{dua.note}</Text>}
 
       {dua.parts.map((p, i) => (
@@ -738,7 +734,6 @@ export function Method({ onBack }: { onBack: () => void }) {
   const paragraphs = [
     'Bu uygulama Şii bakışını esas alır. Tarihî olaylar sahne sahne hikâye gibi anlatılır. Her sahnenin altında, o sahnenin dayandığı kaynak küçük bir düğmeyle açılır.',
     'Hikâyenin son sayfası "Bu olay için bütün kaynaklar"dır. Kaynak grupları kapalıdır; başlığa dokununca açılır. Sonraki olay düğmesi o sayfanın altında, kaydırmadan durur. Mezhep ve ibadet farkları gibi öğretici sayfalar sahne romanı değildir; kaynakları sayfanın altındaki düğmelerde durur.',
-    '✓ Doğrulandı: Metin ve numara kaynağından okunmuştur. ⚠ Kontrol edilmeli: Numara ya da sayfa, yayın öncesinde birincil kaynaktan teyit edilecektir.',
     '"Ayrılıklar" düğmesi, iki geleneğin aynı olayı nasıl yorumladığını ya da bir rivayeti hangi kaynakların kabul edip etmediğini gösterir.',
     '"Düşünelim" bölümündeki sorular, kaynaklarda yazılanlardan hareketle okuyucuyu kendi sonucunu kurmaya davet eder.',
     'Uygulamada kimseye hakaret, lanet ya da nefret söylemi yoktur. Hz. Peygamber, Ehl-i Beyt ve sahabeye saygı esastır. Ziyâret-i Âşûrâ gibi dua metinleri kendi aslına sadık olarak verilmiştir.',
