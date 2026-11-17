@@ -31,7 +31,8 @@ export const MAPS: MapEntry[] = [
     subtitle: 'Kâbe ve Mescid-i Haram. Hz. Ali\'nin doğduğu rivayet edilen şehir.',
     region: 'hicaz',
     focus: 'mekke',
-    eventId: 'ali-kimdir',
+    // Tek şehirde geçen olaylarda harita gösterilmez.
+    eventId: '',
     also: [],
     show: ['mekke', 'medine'],
     lines: [MM],
@@ -49,8 +50,9 @@ export const MAPS: MapEntry[] = [
     subtitle: 'Mescid-i Nebevî, Sakîfe ve Ehl-i Beyt\'in evi.',
     region: 'hicaz',
     focus: 'medine',
-    eventId: 'sakife',
-    also: ['fatima-vefat', 'pence-aba', 'raziyye', 'istihlaf', 'osman', 'sadik'],
+    // Tek şehirde geçen olaylarda harita gösterilmez.
+    eventId: '',
+    also: [],
     show: ['medine', 'mekke'],
     lines: [MM],
     paragraphs: [

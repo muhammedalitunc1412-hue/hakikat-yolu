@@ -108,14 +108,6 @@ export function Home({ events, langName, onSettings, onOpen, onMethod, onDuas, o
       <View style={s.rule} />
 
       <View style={{ flexDirection: wide ? 'row' : 'column', gap: 12 }}>
-        <Pressable style={({ pressed }) => [s.feature, wide && { flex: 1 }, pressed && s.pressed, webHit]} onPress={onMaps} accessibilityRole="button">
-          <View style={s.bubble}><PinIcon /></View>
-          <View style={{ flex: 1 }}>
-            <Text style={[s.featureTitle, align()]}>{ui('maps')}</Text>
-            <Text style={[s.featureSub, align()]}>{ui('mapsSub')}</Text>
-          </View>
-          <Chevron color={C.gold} />
-        </Pressable>
         <Pressable style={({ pressed }) => [s.feature, s.featureAlt, wide && { flex: 1 }, pressed && s.pressed, webHit]} onPress={onDuas} accessibilityRole="button">
           <View style={s.bubble}><ArchIcon /></View>
           <View style={{ flex: 1 }}>
