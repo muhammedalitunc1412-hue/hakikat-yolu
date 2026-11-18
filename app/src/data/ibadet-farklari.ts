@@ -26,12 +26,12 @@ export const ibadetFarklari: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Câbir b. Abdillah\'tan gelen bir rivayette Peygamber şöyle der: "Yeryüzü bana ve ümmetime mescit ve teyemmüm vasıtası kılındı." Câferî fıkıh bu hadise dayanarak secdenin toprağa ya da yerden biten, yenmeyen ve giyilmeyen bir şeye yapılmasını şart koşar. Halı ya da kumaş gibi şeyler bu şartı karşılamaz. Bu yüzden birçok Şii yanında "mühür" denen küçük bir secde taşı taşır ve namazda alnını onun üstüne koyar. Bu taş için özellikle Kerbelâ toprağı tercih edilir. Sünni mezheplerde ise secde yeri daha geniştir. Halı, hasır ya da toprak üzerine secde edilebilir.' },
+      text: { tr: 'Câbir b. Abdillah\'tan gelen bir rivayette Peygamber şöyle der: "Yeryüzü bana ve ümmetime mescit ve teyemmüm vasıtası kılındı." Câferî fıkıh bu hadise dayanarak secdenin toprağa ya da yerden biten, yenmeyen ve giyilmeyen bir şeye yapılmasını şart koşar. Halı ya da kumaş gibi şeyler bu şartı karşılamaz. Bu yüzden birçok Şii yanında "mühür" denen küçük bir toprak parçası taşır ve namazda alnını onun üstüne koyar. Bu taş için özellikle Kerbelâ toprağı tercih edilir. Sünni mezheplerde ise secde yeri daha geniştir. Halı, hasır ya da toprak üzerine secde edilebilir.' },
       art: { bg: 'interior', actors: [{ kind: 'man', x: 50, pose: 'sit', label: { tr: 'Secdede' } }] },
     },
     {
       by: 'shia',
-      text: { tr: 'Kerbelâ toprağına duyulan sevgi, orasının **Hz. Hüseyin**\'in şehit olduğu yer olmasından gelir. Bazı rivayetler bu toprağa şifa ve sevap bağlar, ama bu rivayetlerin senet değeri Şii âlimler arasında da tartışılır. Şii fıkhında toprağa secde etmek sünnettir, Kerbelâ toprağından yapılmış mührü kullanmak ise müstehap sayılır. Secde taşı kullanmak Sünni mezheplerde de yasak değildir. Câferî mektep için mühür, Peygamber\'in toprağa yaptığı secdenin bir devamıdır. Kerbelâ toprağını seçmek ise o toprağa düşen kanın hatırasıdır.' },
+      text: { tr: 'Kerbelâ toprağına duyulan sevgi, orasının **Hz. Hüseyin**\'in şehit olduğu yer olmasından gelir. Bazı rivayetler bu toprağa şifa ve sevap bağlar, ama bu rivayetlerin senet değeri Şii âlimler arasında da tartışılır. Şii fıkhında toprağa secde etmek sünnettir, Kerbelâ toprağından yapılmış mührü kullanmak ise müstehap sayılır. Mühür kullanmak Sünni mezheplerde de yasak değildir. Câferî mektep için mühür, Peygamber\'in toprağa yaptığı secdenin bir devamıdır. Kerbelâ toprağını seçmek ise o toprağa düşen kanın hatırasıdır.' },
       art: { bg: 'dune-dusk', props: ['sun'], actors: [{ kind: 'husayn', x: 50, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
@@ -46,12 +46,12 @@ export const ibadetFarklari: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Enfâl Suresi\'nin 41. ayeti, ganimet olarak elde edilen şeyin beşte birinin Allah\'a, Peygamber\'e, yakınlarına, yetimlere, yoksullara ve yolculara ait olduğunu söyler. Câferî fıkıh ayetteki "ganimet" kelimesini geniş anlar ve kişinin yıllık kazancından artan kısmın beşte birini, yani humusu verir. Humus iki eşit parçaya ayrılır. Birincisi imam hissesidir. İkincisi seyyidlerin, yani Hâşimoğullarından yetim, yoksul ve yolcuların hissesidir. Gaybet döneminde imam hissesi müçtehidin gözetiminde harcanır. Sünni mezheplerde ise ayet yalnızca savaş ganimeti için geçerli sayılır ve kazançtan humus alınmaz. Câferî okuyuşta Ehl-i Beyt, ayette anılan yakınların içindedir.' },
+      text: { tr: 'Enfâl Suresi\'nin 41. ayeti, ganimet olarak elde edilen şeyin beşte birinin Allah\'a, Peygamber\'e, yakınlarına, yetimlere, yoksullara ve yolculara ait olduğunu söyler. Câferî fıkıh ayetteki "ganimet" kelimesini geniş anlar ve kişinin yıllık kazancından artan kısmın beşte birini, yani humusu verir. Humus iki eşit parçaya ayrılır. Birincisi imam hissesidir. İkincisi seyyidlerin, yani Haşimoğullarından yetim, yoksul ve yolcuların hissesidir. Gaybet döneminde imam hissesi müçtehidin gözetiminde harcanır. Sünni mezheplerde ise ayet yalnızca savaş ganimeti için geçerli sayılır ve kazançtan humus alınmaz. Câferî okuyuşta Ehl-i Beyt, ayette anılan yakınların içindedir.' },
       art: { bg: 'city', actors: [{ kind: 'man', x: 40, label: { tr: 'Tüccar' } }, { kind: 'man', x: 66, label: { tr: 'Müçtehid' } }] },
     },
     {
       by: 'both',
-      text: { tr: 'Bazı günler ve hadisler de iki mektepte farklı anlam taşır. Peygamber\'in "Ben kimin mevlâsı isem Ali de onun mevlâsıdır" dediği Gadir hadisi, Sünni kitaplarda da yer alır. Ama "mevlâ" kelimesinin yönetici mi yoksa dost mu anlamına geldiği tartışılır. Âşûrâ günü Sünni kaynaklarda bir oruç günüdür ve Hz. Musa\'nın Firavun\'dan kurtuluşuyla anılır. Bu günde **Hz. Hüseyin**\'in şehadeti de hatırlanır. Ancak Emevî hanedanı, Âşûrâ gününde Peygamber\'in torununa yapılan zulmün unutulması için bu güne başka anlamlar yükledi. Firavun\'un boğulmasını ve Hz. Nuh\'un gemisinin karaya oturmasını bu güne bağlayan hikâyeler yaydı. Bu günde sofrada kapları açık bırakanın evine bereket geleceği gibi, hiçbir sağlam kaynağa dayanmayan birçok hurafe uydurdu. Amaç, Kerbelâ\'da dökülen kanın hatırasını örtmekti ve bunda maalesef büyük ölçüde başarılı oldular. Bugün Müslümanların çok büyük bir kısmının aklına Âşûrâ denince bir tatlı geliyor, ama Kerbelâ maalesef gelmiyor. Câferî gelenekte ise Muharrem\'in ilk on günü ve Âşûrâ, Kerbelâ için tutulan matemin günleridir. Zilhicce\'nin 18\'i de Gadir bayramı olarak kutlanır, çünkü o gün Peygamber Hz. Ali\'nin elini kaldırmıştı.' },
+      text: { tr: 'Bazı günler ve hadisler de iki mektepte farklı anlam taşır. Peygamber\'in "Ben kimin mevlâsı isem Ali de onun mevlâsıdır" dediği Gadir hadisi, Sünni kitaplarda da yer alır. Ama "mevlâ" kelimesinin yönetici mi yoksa dost mu anlamına geldiği tartışılır. Aşûrâ günü Sünni kaynaklarda bir oruç günüdür ve Hz. Musa\'nın Firavun\'dan kurtuluşuyla anılır. Bu günde **Hz. Hüseyin**\'in şehadeti de hatırlanır. Ancak Emevî hanedanı, Aşûrâ gününde Peygamber\'in torununa yapılan zulmün unutulması için bu güne başka anlamlar yükledi. Firavun\'un boğulmasını ve Hz. Nuh\'un gemisinin karaya oturmasını bu güne bağlayan hikâyeler yaydı. Bu günde sofrada kapları açık bırakanın evine bereket geleceği gibi, hiçbir sağlam kaynağa dayanmayan birçok hurafe uydurdu. Amaç, Kerbelâ\'da dökülen kanın hatırasını örtmekti ve bunda maalesef büyük ölçüde başarılı oldular. Bugün Müslümanların çok büyük bir kısmının aklına Aşûrâ denince bir tatlı geliyor, ama Kerbelâ maalesef gelmiyor. Câferî gelenekte ise Muharrem\'in ilk on günü ve Aşûrâ, Kerbelâ için tutulan matemin günleridir. Zilhicce\'nin 18\'i de Gadir bayramı olarak kutlanır, çünkü o gün Peygamber Hz. Ali\'nin elini kaldırmıştı.' },
       art: { bg: 'dune-dusk', props: ['flags'], actors: [{ kind: 'husayn', x: 34, label: { tr: 'Hz. Hüseyin' } }, { kind: 'ali', x: 66, label: { tr: 'Hz. Ali' } }] },
     },
     {
@@ -64,23 +64,23 @@ export const ibadetFarklari: HistEvent = {
     { book: 'Buhari, Sahih', ref: 'No. 2010 (Salâtü\'t-Terâvih)', says: { tr: 'Halife Ömer Ramazan gecesi insanları Ubey b. Ka\'b arkasında toplar ve "Ne güzel bid\'at bu" der; gecenin son kısmında kılınan namazın daha faziletli olduğunu da söyler.' }, grade: { tr: 'Sahih' }, url: 'https://ihadis.com/en/bukhari/hadith/2010', status: 'verified' },
     { book: 'Buhari, Sahih', ref: 'No. 6585 (Rikak, Havz bölümü)', says: { tr: 'Peygamber, arkadaşlarından bazılarının havz başında uzaklaştırılacağını söyler; "Onların senden sonra neler ihdas ettiklerini bilmezsin" cevabı verilir.' }, grade: { tr: 'Sahih' }, url: 'https://ihadis.com/en/bukhari/hadith/6585', status: 'verified' },
     { book: 'Buhari, Sahih', ref: 'No. 335 (Teyemmüm)', says: { tr: 'Cabir\'den: "Yeryüzü bana ve ümmetime mescit ve teyemmüm vasıtası kılındı." Sünni kaynaklarda toprağın secde yeri olduğuna delil gösterilir.' }, grade: { tr: 'Sahih' }, url: 'https://ihadis.com/en/bukhari/hadith/335', status: 'verified' },
-    { book: 'Müslim, Sahih', ref: 'No. 705 (Cem hadisi, İbn Abbas) — numara DOĞRULANMADI; site erişilemedi', says: { tr: 'İbn Abbas, Peygamber\'in korku ve yağmur olmaksızın Medine\'de öğle-ikindi ve akşam-yatsıyı birleştirdiğini, gerekçenin ümmetini zora sokmamak olduğunu söyler.' }, status: 'check' },
-    { book: 'Müslim, Sahih', ref: 'Fedâilü\'s-Sahâbe, Kisâ (Âişe) hadisi; numara DOĞRULANMADI', says: { tr: 'Peygamber, Hz. Ali, Fatıma, Hz. Hasan ve Hz. Hüseyin\'i abasının altına alır ve Ahzâb 33:33 ayetini okur.' }, status: 'check' },
-    { book: 'Beyhakî, es-Sünenü\'l-Kübrâ; Ebu Davud, Sünen (Ezan bölümü)', ref: 'DOĞRULANMADI (ezan ifadeleri, İbn Halife Ömer ve Ebu Mahzure rivayetleri)', says: { tr: 'Ezan sözlerinin rivayet farkları; İbn Halife Ömer\'in "hayye alâ hayri\'l-amel" dediğine dair rivayet ikincil kaynaklardan bilinir, sıhhati tartışmalıdır.' }, status: 'check' },
-    { book: 'Mâlik, Muvatta\'; el-Müdevvene', ref: 'DOĞRULANMADI', says: { tr: 'Maliki mezhebinde namazda elleri sarkıtma (sadl) görüşünün aktarılması; Ramazan kıyamı ile ilgili Halife Ömer rivayeti.' }, status: 'check' },
-    { book: 'Tirmizî, Sünen', ref: 'Menâkıb, Hz. Ali bölümü, "men kuntu mevlâ" hadisi; numara DOĞRULANMADI', says: { tr: 'Gadir hadisi Sünni hadis kitaplarında da yer alır.' }, status: 'check' },
+    { book: 'Müslim, Sahih', ref: 'No. 705 (Cem hadisi, İbn Abbas)', says: { tr: 'İbn Abbas, Peygamber\'in korku ve yağmur olmaksızın Medine\'de öğle-ikindi ve akşam-yatsıyı birleştirdiğini, gerekçenin ümmetini zora sokmamak olduğunu söyler.' }, status: 'check' },
+    { book: 'Müslim, Sahih', ref: 'Fedâilü\'s-Sahâbe, Kisâ (Aişe) hadisi', says: { tr: 'Peygamber, Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin\'i abasının altına alır ve Ahzâb 33:33 ayetini okur.' }, status: 'check' },
+    { book: 'Beyhakî, es-Sünenü\'l-Kübrâ; Ebu Davud, Sünen (Ezan bölümü)', ref: 'Ezan ifadeleri, İbn Ömer ve Ebu Mahzure rivayetleri', says: { tr: 'Ezan sözlerinin rivayet farkları; İbn Ömer\'in "hayye alâ hayri\'l-amel" dediğine dair rivayet ikincil kaynaklardan bilinir, sıhhati tartışmalıdır.' }, status: 'check' },
+    { book: 'Mâlik, Muvatta\'; el-Müdevvene', ref: '', says: { tr: 'Maliki mezhebinde namazda elleri sarkıtma (sadl) görüşünün aktarılması; Ramazan kıyamı ile ilgili Halife Ömer rivayeti.' }, status: 'check' },
+    { book: 'Tirmizi, Sünen', ref: 'Menâkıb, Hz. Ali bölümü, "men kuntu mevlâ" hadisi', says: { tr: 'Gadir hadisi Sünni hadis kitaplarında da yer alır.' }, status: 'check' },
   ],
   shia: [
-    { book: 'Kuleynî, el-Kâfî', ref: 'Ezan, humus, takiyye ve Gadir bölümleri; cilt/numara DOĞRULANMADI', says: { tr: 'İmamlardan ezan, humus ve takiyyeye dair rivayetler ve Gadir\'in anlamı.' }, status: 'check' },
-    { book: 'Şeyh Tûsî, et-Tehzîb; Şeyh Sadûk, Men Lâ Yahzuruhu\'l-Fakîh', ref: 'Salât ve ezan bölümleri; numara DOĞRULANMADI', says: { tr: '"Hayye alâ hayri\'l-amel"in ezanda yeri, ellerin sarkıtılması, namazların cemi ve secde yeri hakkında Şii fıkhının dayandığı rivayetler.' }, status: 'check' },
-    { book: 'Hürr el-Âmilî, Vesâilü\'ş-Şîa', ref: 'Ebvâbü\'s-Sücûd ve Ebvâbü\'l-Humus bölümleri; numara DOĞRULANMADI', says: { tr: 'Secdenin yerden biten şeye yapılması, Kerbela toprağı üzerine secde ve humusun taksimi hakkında rivayetler.' }, status: 'check' },
-    { book: 'WikiShia, Fiqh makaleleri (Adhan, Khums, Taqiyya)', ref: 'İkincil özet; okunmadı', says: { tr: 'Şii görüşün özeti ve ulema ayrıntıları.' }, url: 'https://en.wikishia.net', status: 'check' },
+    { book: 'Kuleynî, el-Kâfî', ref: 'Ezan, humus, takiyye ve Gadir bölümleri', says: { tr: 'İmamlardan ezan, humus ve takiyyeye dair rivayetler ve Gadir\'in anlamı.' }, status: 'check' },
+    { book: 'Şeyh Tûsî, et-Tehzîb; Şeyh Sadûk, Men Lâ Yahzuruhu\'l-Fakîh', ref: 'Salât ve ezan bölümleri', says: { tr: '"Hayye alâ hayri\'l-amel"in ezanda yeri, ellerin sarkıtılması, namazların cemi ve secde yeri hakkında Şii fıkhının dayandığı rivayetler.' }, status: 'check' },
+    { book: 'Hürr el-Âmilî, Vesâilü\'ş-Şia', ref: 'Ebvâbü\'s-Sücûd ve Ebvâbü\'l-Humus bölümleri', says: { tr: 'Secdenin yerden biten şeye yapılması, Kerbelâ toprağı üzerine secde ve humusun taksimi hakkında rivayetler.' }, status: 'check' },
+    { book: 'WikiShia, Fiqh makaleleri (Adhan, Khums, Taqiyya)', ref: 'İkincil özet', says: { tr: 'Şii görüşün özeti ve ulema ayrıntıları.' }, url: 'https://en.wikishia.net', status: 'check' },
   ],
   disputes: [
     {
       title: { tr: 'Ezan ifadeleri' },
       shia: { tr: '"Hayye alâ hayri\'l-amel" ifadesi bazı erken rivayetlerde anılır. Câferî fıkıhta o, ezanın parçasıdır; Hz. Ali\'ye şahitlik şart değil, müstehap bir şiardır. "Es-salâtü hayrun mine\'n-nevm" ise Câferî ezanında okunmaz.' },
-      sunni: { tr: '"Hayye alâ hayri\'l-amel" ifadesi bazı erken rivayetlerde anılır. Sünni ezanda bu söz okunmaz; "es-salâtü hayrun mine\'n-nevm" sabah ezanının sünnetidir. İbn Halife Ömer\'e dair rivayetler de vardır.' },
+      sunni: { tr: '"Hayye alâ hayri\'l-amel" ifadesi bazı erken rivayetlerde anılır. Sünni ezanda bu söz okunmaz; "es-salâtü hayrun mine\'n-nevm" sabah ezanının sünnetidir. İbn Ömer\'e dair rivayetler de vardır.' },
     },
     {
       title: { tr: 'Kolların durumu' },
@@ -88,8 +88,8 @@ export const ibadetFarklari: HistEvent = {
       sunni: { tr: 'Namazda elin duruşu iki fıkıhta da konuşulur. Çoğunlukta eller bağlanır; Mâlikî mezhebinde sarkıtma görüşü de nakledilmiştir.' },
     },
     {
-      title: { tr: 'Secde taşı (mühür)' },
-      shia: { tr: 'Toprağa secde iki gelenekte de delillidir. Câferî fıkıhta secde yerden biten şeye yapılır; Kerbela toprağı müstehaptır.' },
+      title: { tr: 'Mühür ve secde yeri' },
+      shia: { tr: 'Toprağa secde iki gelenekte de delillidir. Câferî fıkıhta secde yerden biten şeye yapılır; Kerbelâ toprağı müstehaptır.' },
       sunni: { tr: 'Toprağa secde iki gelenekte de delillidir. Sünni mezheplerde secde yeri serbesttir; Buhari 335 yeryüzünün mescit kılındığını bildirir.' },
     },
     {
@@ -113,14 +113,14 @@ export const ibadetFarklari: HistEvent = {
       sunni: { tr: 'Zor altında söz söyleme ruhsatı, Ammar olayı ve ilgili ayetlerle iki kaynakta da anılır. Sünni fıkıhta takiyye, zorlama anında bir ruhsattır; sürekli bir ilke sayılmaz.' },
     },
     {
-      title: { tr: 'Âşûrâ ve Gadir' },
-      shia: { tr: 'Âşûrâ günü ve Gadir hadisi iki gelenekte de bilinir. Câferî takvimde Âşûrâ matem, 18 Zilhicce Gadir bayramıdır.' },
-      sunni: { tr: 'Âşûrâ günü ve Gadir hadisi iki gelenekte de bilinir. Sünni uygulamada Âşûrâ oruç günüdür; "mevla" kelimesi dostluk olarak yorumlanır.' },
+      title: { tr: 'Aşûrâ ve Gadir' },
+      shia: { tr: 'Aşûrâ günü ve Gadir hadisi iki gelenekte de bilinir. Câferî takvimde Aşûrâ matem, 18 Zilhicce Gadir bayramıdır.' },
+      sunni: { tr: 'Aşûrâ günü ve Gadir hadisi iki gelenekte de bilinir. Sünni uygulamada Aşûrâ oruç günüdür; "mevla" kelimesi dostluk olarak yorumlanır.' },
     },
     {
       title: { tr: 'İsmet ve sahabe adaleti' },
-      shia: { tr: 'Tahir ayeti ve Kisâ hadisi iki kaynakta da Ehl-i Beyt\'i anar. Câferî inançta Ehl-i Beyt bu ayetle ma\'sumdur; sahabe adaleti ölçüye bağlıdır.' },
-      sunni: { tr: 'Tahir ayeti ve Kisâ hadisi iki kaynakta da Ehl-i Beyt\'i anar. Sünni inançta bütün sahabe adildir; ismet peygamberlere özgüdür. Havz hadisi irtidat edenlere veya münafıklara bağlanır.' },
+      shia: { tr: 'Tathir ayeti ve Kisa hadisi iki kaynakta da Ehl-i Beyt\'i anar. Câferî inançta Ehl-i Beyt bu ayetle ma\'sumdur; sahabe adaleti ölçüye bağlıdır.' },
+      sunni: { tr: 'Tathir ayeti ve Kisa hadisi iki kaynakta da Ehl-i Beyt\'i anar. Sünni inançta bütün sahabe adildir; ismet peygamberlere özgüdür. Havz hadisi irtidat edenlere veya münafıklara bağlanır.' },
     },
   ],
   questions: [

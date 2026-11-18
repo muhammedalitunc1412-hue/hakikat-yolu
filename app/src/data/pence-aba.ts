@@ -16,7 +16,7 @@ export const penceAba: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Örtünün altındakiler için Peygamber ellerini kaldırıp dua etti: "Allah\'ım, bunlar benim Ehl-i Beyt\'imdir. Onlardan kiri uzaklaştır ve onları tertemiz yap." **Ümmü Seleme** o sırada evdeydi ve bu duayı duydu. Kendisi de bu şerefe ortak olmak istedi ve örtüye doğru yaklaşarak sordu: "Ya Resulallah, ben de onlarla birlikte miyim?" Peygamber onu kırmadı ve "Sen hayır üzeresin" dedi. Ama örtüyü onun için açmadı. Ümmü Seleme, Peygamber\'in değerli bir eşiydi ve hayır üzere olduğu Peygamber\'in kendi sözüyle sabitti. Yine de o sabah örtünün altında yalnızca Peygamber, **Hz. Ali**, **Hz. Fatıma**, **Hz. Hasan** ve **Hz. Hüseyin** vardı.' },
+      text: { tr: 'Örtünün altındakiler için Peygamber ellerini kaldırıp dua etti: "Allah\'ım, bunlar benim Ehl-i Beyt\'imdir. Onlardan kiri uzaklaştır ve onları tertemiz yap." **Ümmü Seleme** o sırada evdeydi ve bu duayı duydu. Kendisi de bu şerefe ortak olmak istedi ve örtüye doğru yaklaşarak sordu: "Ya Resulallah, ben de onlarla birlikte miyim?" Peygamber onu kırmadı ve "Sen hayır üzerindesin" dedi. Ama örtüyü onun için açmadı. Ümmü Seleme, Peygamber\'in değerli bir eşiydi ve hayır üzere olduğu Peygamber\'in kendi sözüyle sabitti. Yine de o sabah örtünün altında yalnızca Peygamber, **Hz. Ali**, **Hz. Fatıma**, **Hz. Hasan** ve **Hz. Hüseyin** vardı.' },
       cites: [{ side: 'sunni', i: 1 }],
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 38, label: { tr: 'Hz. Peygamber' } }, { kind: 'woman', x: 70 }] },
     },
@@ -39,7 +39,7 @@ export const penceAba: HistEvent = {
     },
     {
       by: 'shia',
-      text: { tr: 'Ehl-i Beyt rivayetlerinde bu olay, **Hz. Fatıma**\'nın ağzından daha uzun bir şekilde anlatılır. Bu anlatının adı Hadis-i Kisa\'dır. Kisa, Arapçada örtü demektir. Bu rivayete göre örtünün altında beş kişi toplandığında Allah, meleklerine bu beş kişiyi tanıtır. Cebrail de yeryüzüne inip örtünün altına girmek için izin ister. Hadis-i Kisa, Şii evlerinde özellikle dilek ve dua meclislerinde okunur. Okunurken insanlar başlarını eğer, ellerini açar ve bu beş kişinin hatırına dua eder. Şiiler, bu meclislerde dileklerin kabul olacağına inanır.' },
+      text: { tr: 'Ehl-i Beyt rivayetlerinde bu olay, **Hz. Fatıma**\'nın ağzından daha uzun bir şekilde anlatılır. Bu anlatının adı Hadis-i Kisa\'dır. Kisa, Arapçada örtü demektir. Bu rivayette örtünün altında beş kişi toplandığında Allah, meleklerine bu beş kişiyi tanıtır. Cebrail de yeryüzüne inip örtünün altına girmek için izin ister. Hadis-i Kisa, Şii evlerinde özellikle dilek ve dua meclislerinde okunur. Okunurken insanlar başlarını eğer, ellerini açar ve bu beş kişinin hatırına dua eder. Şiiler, bu meclislerde dileklerin kabul olacağına inanır.' },
       cites: [{ side: 'shia', i: 0 }],
       art: { bg: 'interior', props: ['scroll', 'stars'], actors: [{ kind: 'fatima', x: 50, label: { tr: 'Hz. Fatıma' } }] },
     },
@@ -50,8 +50,8 @@ export const penceAba: HistEvent = {
     },
   ],
   sunni: [
-    { book: 'Müslim, Sahih', ref: 'No. 2424 (Fezâil)', says: { tr: 'Aişe: Peygamber siyah örtü altına Hz. Hasan, Hz. Hüseyin, Fatıma ve Hz. Ali\'yi alır, Ahzâb 33:33\'ü okur.' }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/muslim:2424', status: 'verified' },
-    { book: 'Tirmizi, el-Câmi\'', ref: 'Tefsir ve Menâkıb bâbları (Ahzâb 33:33; Ümmü Seleme rivayeti; numara kontrol edilecek)', says: { tr: 'Peygamber örtünün altındakiler için "bunlar Ehl-i Beytimdir" diye dua eder; Ümmü Seleme "ben de mi" diye sorar.' }, grade: { tr: 'Tirmizi: hasen/sahih (rivayete göre)' }, status: 'check' },
+    { book: 'Müslim, Sahih', ref: 'No. 2424 (Fezâil)', says: { tr: 'Aişe: Peygamber siyah örtü altına Hz. Hasan, Hz. Hüseyin, Hz. Fatıma ve Hz. Ali\'yi alır, Ahzâb 33:33\'ü okur.' }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/muslim:2424', status: 'verified' },
+    { book: 'Tirmizi, el-Câmi\'', ref: 'Tefsir ve Menâkıb bâbları (Ahzâb 33:33; Ümmü Seleme rivayeti)', says: { tr: 'Peygamber örtünün altındakiler için "bunlar Ehl-i Beytimdir" diye dua eder; Ümmü Seleme "ben de mi" diye sorar.' }, grade: { tr: 'Tirmizi: hasen/sahih (rivayete göre)' }, status: 'check' },
     { book: 'Müslim, Sahih', ref: 'No. 2408a (Zeyd b. Erkam)', says: { tr: 'Ehl-i Beyt\'in kapsamı: zekât yasaklanan aileler; hanımlar bu kapsam tartışmasında.' }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/muslim:2408a', status: 'verified' },
   ],
   shia: [
@@ -71,7 +71,7 @@ export const penceAba: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Ümmü Seleme "Ben de onlarla birlikte miyim?" diye sorunca Peygamber ona "Sen hayır üzeresin" dedi, ama örtüyü onun için açmadı. Sizce Peygamber örtünün altına neden yalnızca bu beş kişiyi aldı?' },
+    { tr: 'Ümmü Seleme "Ben de onlarla birlikte miyim?" diye sorunca Peygamber ona "Sen hayır üzerindesin" dedi, ama örtüyü onun için açmadı. Sizce Peygamber örtünün altına neden yalnızca bu beş kişiyi aldı?' },
     { tr: 'Zeyd b. Erkam Ehl-i Beyt\'in kimler olduğu sorulunca Peygamber\'in hanımlarını dışarıda tuttu ve zekât almaları yasak olan aileleri saydı. Sizce Zeyd Ehl-i Beyt\'i neden kan bağıyla tarif etti?' },
     { tr: 'Peygamber Ahzâb 33:33\'ü rastgele bir topluluğa değil, kendi elleriyle örtünün altına aldığı beş kişiye okudu. Sizce ayetin kimlere okunduğu, "ehl" kelimesinin kimleri kapsadığını belirlemede neden önemlidir?' },
   ],

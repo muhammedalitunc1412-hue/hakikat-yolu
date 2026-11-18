@@ -9,7 +9,7 @@ export const sadik: HistEvent = {
   hook: { tr: 'Medine\'de bir ilim kapısı açıldı: Hz. Ca\'fer-i Sâdık ve halkasına uğrayan âlimler.', en: 'A circle of learning in Medina, open to the founders of two schools.' },
   scenes: [
     {
-      text: { tr: '**Hz. Ca\'fer-i Sâdık**, hicretin 80. ya da 83. yılında, yani 699 ya da 702\'de, Medine\'de dünyaya geldi. Kaynakların çoğu 83 yılını esas alır. Babası Beşinci İmam **Hz. Muhammed Bâkır**\'dır ve soyu Hz. Ali ile Hz. Fatıma\'ya uzanır. Annesi Ümmü Ferve, Kâsım b. Muhammed\'in kızıdır. Kâsım ise Ebû Bekir\'in torunudur. Şii kaynaklarında o Altıncı İmam\'dır. Sünni kaynaklarında da büyük bir âlim ve Ehl-i Beyt\'in saygın bir mensubu olarak anılır. "es-Sâdık" lakabı, doğru sözlü demektir. Medine halkı bu lakabı, onun dürüstlüğüne ve ilim meclisine duyduğu güvenle verdi.' },
+      text: { tr: '**Hz. Ca\'fer-i Sâdık**, hicretin 80. ya da 83. yılında, yani 699 ya da 702\'de, Medine\'de dünyaya geldi. Kaynakların çoğu 83 yılını esas alır. Babası Beşinci İmam **Hz. Muhammed Bâkır**\'dır ve soyu Hz. Ali ile Hz. Fatıma\'ya uzanır. Annesi Ümmü Ferve, Kâsım b. Muhammed\'in kızıdır. Kâsım ise Ebu Bekir\'in torunudur. Şii kaynaklarda o Altıncı İmam\'dır. Sünni kaynaklarda da büyük bir âlim ve Ehl-i Beyt\'in saygın bir mensubu olarak anılır. "es-Sâdık" lakabı, doğru sözlü demektir. Medine halkı bu lakabı, onun dürüstlüğüne ve ilim meclisine duyduğu güvenle verdi.' },
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'man', x: 50, label: { tr: 'Hz. Ca\'fer-i Sâdık' } }, { kind: 'crowd', x: 22, scale: 4 }] },
       by: 'both',
     },
@@ -51,23 +51,23 @@ export const sadik: HistEvent = {
       by: 'sunni',
     },
     {
-      text: { tr: '**Hz. Ca\'fer-i Sâdık**, hicretin 148. yılında, yani 765\'te, Medine\'de vefat etti ve babası ile dedesinin yanına, Cennetü\'l-Bakî\'ye defnedildi. Şii kaynaklarında o, Ehl-i Beyt mektebinin ve Câferî mezhebinin kurucusu olarak anılır. Kurduğu ilim halkası, bu mektebin temel dayanağı olmuştur. Sünni kaynaklarda da Medine ilminin en saygın halkalarından biri olarak yer alır. Böylece Şii ve Sünni gelenekler, Hz. Sâdık\'ın kapısında buluşur. Medine\'de açtığı ilim kapısı, yüzyıllar boyunca hiç kapanmadı.' },
+      text: { tr: '**Hz. Ca\'fer-i Sâdık**, hicretin 148. yılında, yani 765\'te, Medine\'de vefat etti ve babası ile dedesinin yanına, Cennetü\'l-Bakî\'ye defnedildi. Şii kaynaklarda o, Ehl-i Beyt mektebinin ve Câferî mezhebinin kurucusu olarak anılır. Kurduğu ilim halkası, bu mektebin temel dayanağı olmuştur. Sünni kaynaklarda da Medine ilminin en saygın halkalarından biri olarak yer alır. Böylece Şii ve Sünni gelenekler, Hz. Sâdık\'ın kapısında buluşur. Medine\'de açtığı ilim kapısı, yüzyıllar boyunca hiç kapanmadı.' },
       art: { bg: 'dune-dusk', props: ['palms'], actors: [{ kind: 'crowd', x: 40, scale: 6 }, { kind: 'man', x: 74, label: { tr: 'Hz. Ca\'fer-i Sâdık' } }] },
       by: 'both',
     },
   ],
   sunni: [
-    { book: 'TDV İslâm Ansiklopedisi, "Câfer es-Sâdık"', ref: 'Hayatı, ilmî kişiliği ve rivayetleri', says: { tr: 'Doğum 80/83, vefat 148 H, Medine. Annesi Ümmü Ferve (Kâsım b. Muhammed\'in kızı). Mâlik ondan hadis dinledi, Ebû Hanîfe ile ilmî münakaşaları oldu. Rivayetleri Kütüb-i Sitte\'de var, Buhârî\'nin Sahîh\'inde yok. Kimya nisbeti çok şüpheli.' }, grade: { tr: 'DOĞRULANDI (sayfa bu oturumda okundu)' }, url: 'https://islamansiklopedisi.org.tr/cafer-es-sadik', status: 'verified' },
-    { book: 'TDV İslâm Ansiklopedisi, "Ebû Hanîfe"', ref: 'Hocaları ve ilişkileri', says: { tr: 'Ebû Hanîfe Hz. Ca\'fer-i Sâdık dahil Ehl-i Beyt âlimleriyle görüştü, akaidde yararlandı; Hz. Ca\'fer-i Sâdık açıkça hocası sayılmaz. "İki yıl" sözü tasavvuf bağlamında anılıp reddedilir.' }, grade: { tr: 'DOĞRULANDI (sayfanın ilk 100.000 karakteri okundu)' }, url: 'https://islamansiklopedisi.org.tr/ebu-hanife', status: 'verified' },
-    { book: 'TDV İslâm Ansiklopedisi, "Mâlik b. Enes"', ref: 'Hocaları, Muvatta', says: { tr: 'Hocaları arasında Zührî, Nâfi\', Yahyâ b. Saîd sayılır; sayfada Hz. Ca\'fer-i Sâdık geçmez. Muvatta hadis ve fıkhı birlikte düzenler.' }, grade: { tr: 'DOĞRULANDI (bu maddede Hz. Ca\'fer-i Sâdık\'tan söz yoktur)' }, url: 'https://islamansiklopedisi.org.tr/malik-b-enes', status: 'verified' },
-    { book: 'Mâlik b. Enes, el-Muvatta\'', ref: 'Hz. Ca\'fer-i Sâdık\'tan nakiller (numara bulunamadı)', says: { tr: 'Mâlik\'in Hz. Ca\'fer-i Sâdık\'den nakli bildirilir.' }, grade: { tr: 'DOĞRULANMADI (ikincil aktarım)' }, status: 'check' },
-    { book: 'Zehebî, Tezkiretü\'l-huffâz ve Siyeru a\'lâmi\'n-nübelâ', ref: 'Hz. Ca\'fer-i Sâdık maddesi', says: { tr: 'Hz. Ca\'fer-i Sâdık\'ı büyük âlimler arasında anar. TDV de bu iki eseri kaynakçada verir.' }, grade: { tr: 'İKİNCİL (WikiShia ve Wikipedia aktarımı; metin okunmadı)' }, status: 'check' },
+    { book: 'TDV İslâm Ansiklopedisi, "Câfer es-Sâdık"', ref: 'Hayatı, ilmî kişiliği ve rivayetleri', says: { tr: 'Doğum 80/83, vefat 148 H, Medine. Annesi Ümmü Ferve (Kâsım b. Muhammed\'in kızı). Mâlik ondan hadis dinledi, Ebû Hanîfe ile ilmî münakaşaları oldu. Rivayetleri Kütüb-i Sitte\'de var, Buhari\'nin Sahîh\'inde yok. Kimya nisbeti çok şüpheli.' }, url: 'https://islamansiklopedisi.org.tr/cafer-es-sadik', status: 'verified' },
+    { book: 'TDV İslâm Ansiklopedisi, "Ebû Hanîfe"', ref: 'Hocaları ve ilişkileri', says: { tr: 'Ebû Hanîfe Hz. Ca\'fer-i Sâdık dahil Ehl-i Beyt âlimleriyle görüştü, akaidde yararlandı; Hz. Ca\'fer-i Sâdık açıkça hocası sayılmaz. "İki yıl" sözü tasavvuf bağlamında anılıp reddedilir.' }, url: 'https://islamansiklopedisi.org.tr/ebu-hanife', status: 'verified' },
+    { book: 'TDV İslâm Ansiklopedisi, "Mâlik b. Enes"', ref: 'Hocaları, Muvatta', says: { tr: 'Hocaları arasında Zührî, Nâfi\', Yahyâ b. Saîd sayılır; sayfada Hz. Ca\'fer-i Sâdık geçmez. Muvatta hadis ve fıkhı birlikte düzenler.' }, grade: { tr: 'Bu maddede Hz. Ca\'fer-i Sâdık\'tan söz yoktur.' }, url: 'https://islamansiklopedisi.org.tr/malik-b-enes', status: 'verified' },
+    { book: 'Mâlik b. Enes, el-Muvatta\'', ref: 'Hz. Ca\'fer-i Sâdık\'tan nakiller', says: { tr: 'Mâlik\'in Hz. Ca\'fer-i Sâdık\'den nakli bildirilir.' }, grade: { tr: 'İkincil aktarım' }, status: 'check' },
+    { book: 'Zehebî, Tezkiretü\'l-huffâz ve Siyeru a\'lâmi\'n-nübelâ', ref: 'Hz. Ca\'fer-i Sâdık maddesi', says: { tr: 'Hz. Ca\'fer-i Sâdık\'ı büyük âlimler arasında anar. TDV de bu iki eseri kaynakçada verir.' }, grade: { tr: 'İKİNCİL (WikiShia ve Wikipedia aktarımı)' }, status: 'check' },
     { book: 'İbn Hacer el-Heytemî, es-Savâiku\'l-muhrika', ref: 'c. 2, s. 586 (WikiShia aktarımı)', says: { tr: 'Ebû Hanîfe ve Mâlik\'in Hz. Ca\'fer-i Sâdık\'tan rivayet edenler arasında olduğu belirtilir.' }, grade: { tr: 'İKİNCİL (WikiShia\'dan)' }, url: 'https://en.wikishia.net/view/Ja%27far_b._Muhammad_al-Sadiq_(a)', status: 'check' },
-    { book: 'İbn Hacer el-Heytemî, es-Savâiku\'l-muhrika', ref: 'Hz. Ca\'fer-i Sâdık bölümü (WikiShia aktarımı; sayfa kontrol edilecek)', says: { tr: 'Hz. Ca\'fer-i Sâdık\'ın 148 yılında, anlatıldığına göre zehirlenerek vefat ettiği aktarılır.' }, status: 'check' },
+    { book: 'İbn Hacer el-Heytemî, es-Savâiku\'l-muhrika', ref: 'Hz. Ca\'fer-i Sâdık bölümü (WikiShia aktarımı)', says: { tr: 'Hz. Ca\'fer-i Sâdık\'ın 148 yılında, zehirlenerek öldüğü aktarılır.' }, status: 'check' },
   ],
   shia: [
-    { book: 'WikiShia, "Ja\'far b. Muhammad al-Sadiq (a)"', ref: 'Doğum, öğrenciler, övgüler', says: { tr: '17 Rebîülevvel 83 (702) Medine; bazı tarihçilere göre 80. Ümmü Ferve. Mâlik\'in imama hadis dinlemeye gittiği (Saduk, el-Hısâl s. 168). Rivayetçi sayısı: Tûsî ~3.200, Müfîd 4.000 (el-İrşâd c. 2 s. 254), İbn Uknde 4.000.' }, grade: { tr: 'DOĞRULANDI (WikiShia sayfası okundu; alıntılanan kitaplar okunmadı)' }, url: 'https://en.wikishia.net/view/Ja%27far_b._Muhammad_al-Sadiq_(a)', status: 'verified' },
-    { book: 'WikiShia, "Abu Hanifa"', ref: 'Hz. Muhammed Bâkır ve Hz. Ca\'fer-i Sâdık ile ilişkisi', says: { tr: 'İbn Ebi\'l-Hadîd Ebû Hanîfe\'yi açıkça Hz. Ca\'fer-i Sâdık\'ın öğrencisi sayar. "Lev lâ\'s-seneteni" sözünün erken kaynaklarda bulunmadığı, ilk kez Tuhfe-i İsnâ Aşeriyye\'de anıldığı ve "iki yıl"ın Zeyd b. Ali\'ye de işaret edebileceği belirtilir.' }, grade: { tr: 'DOĞRULANDI (sayfa okundu; sayfada sayfa numaraları yok)' }, url: 'https://en.wikishia.net/view/Abu_Hanifa', status: 'verified' },
+    { book: 'WikiShia, "Ja\'far b. Muhammad al-Sadiq (a)"', ref: 'Doğum, öğrenciler, övgüler', says: { tr: '17 Rebîülevvel 83 (702) Medine; bazı tarihçilere göre 80. Ümmü Ferve. Mâlik\'in imama hadis dinlemeye gittiği (Saduk, el-Hısâl s. 168). Rivayetçi sayısı: Tûsî ~3.200, Müfîd 4.000 (el-İrşâd c. 2 s. 254), İbn Uknde 4.000.' }, url: 'https://en.wikishia.net/view/Ja%27far_b._Muhammad_al-Sadiq_(a)', status: 'verified' },
+    { book: 'WikiShia, "Abu Hanifa"', ref: 'Hz. Muhammed Bâkır ve Hz. Ca\'fer-i Sâdık ile ilişkisi', says: { tr: 'İbn Ebi\'l-Hadîd Ebû Hanîfe\'yi açıkça Hz. Ca\'fer-i Sâdık\'ın öğrencisi sayar. "Lev lâ\'s-seneteni" sözünün erken kaynaklarda bulunmadığı, ilk kez Tuhfe-i İsnâ Aşeriyye\'de anıldığı ve "iki yıl"ın Zeyd b. Ali\'ye de işaret edebileceği belirtilir.' }, url: 'https://en.wikishia.net/view/Abu_Hanifa', status: 'verified' },
     { book: 'Şeyh Müfîd, el-İrşâd', ref: 'c. 2, s. 254 (WikiShia aktarımı)', says: { tr: 'Hz. Ca\'fer-i Sâdık\'tan rivayet edenlerin sayısı 4.000.' }, grade: { tr: 'İKİNCİL (WikiShia\'dan)' }, url: 'https://al-islam.org/kitab-al-irshad-book-shaykh-al-mufid', status: 'check' },
     { book: 'Şeyh Saduk, el-Hısâl', ref: 's. 168 (WikiShia aktarımı)', says: { tr: 'Mâlik b. Enes\'in imamdan hadis dinlediği nakli.' }, grade: { tr: 'İKİNCİL (WikiShia\'dan)' }, status: 'check' },
     { book: 'Kâşân Üniversitesi, Ebû Hanîfe\'nin "Lev lâ\'s-seneteni" sözü üzerine inceleme', ref: 'Hadis araştırması makalesi', says: { tr: 'Sözün 13. yüzyıl H. bir eserde ortaya çıktığı ve Zeyd b. Ali\'ye işaret edebileceği ileri sürülür.' }, grade: { tr: 'İKİNCİL (yalnız arama sonucu özeti görüldü)' }, url: 'https://s-hadith.kashanu.ac.ir/article_111029.html', status: 'check' },
@@ -81,7 +81,7 @@ export const sadik: HistEvent = {
     {
       title: { tr: 'Mâlik, Hz. Ca\'fer-i Sâdık\'tan rivayet etti mi?' },
       shia: { tr: 'Mâlik\'in Hz. Ca\'fer-i Sâdık\'tan hadis dinlediği iki kaynakta da anılır. Şii aktarımda bu, Saduk\'un el-Hısâl\'indeki gidiş rivayetine dayanır.' },
-      sunni: { tr: 'Mâlik\'in Hz. Ca\'fer-i Sâdık\'tan hadis dinlediği iki kaynakta da anılır. TDV bunu açıkça yazar; Muvatta\'daki yer ve numaralar bu çalışmada doğrulanamadı.' },
+      sunni: { tr: 'Mâlik\'in Hz. Ca\'fer-i Sâdık\'tan hadis dinlediği iki kaynakta da anılır. TDV bunu açıkça yazar.' },
     },
     {
       title: { tr: 'Kimya ve tıp ilmi Hz. Ca\'fer-i Sâdık\'a mı aittir?' },
@@ -90,11 +90,11 @@ export const sadik: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Buhârî\'nin Sahîh\'inde Hz. Ca\'fer-i Sâdık\'tan rivayet olmamasını TDV, zayıflığa değil, adına uydurma hadis isnat edilmesine bağlar. Geniş bir ilim halkasında ismin korunması neden zorlaşır?' },
+    { tr: 'Buhari\'nin Sahîh\'inde Hz. Ca\'fer-i Sâdık\'tan rivayet olmamasını TDV, zayıflığa değil, adına uydurma hadis isnat edilmesine bağlar. Geniş bir ilim halkasında ismin korunması neden zorlaşır?' },
     { tr: 'Dört bin rakamı Müfîd ve İbn Uknde\'de, yaklaşık 3.200 ise Tûsî\'de geçer. Büyük ravi sayıları bir ilim halkasının genişliğini nasıl okutur?' },
     { tr: '"İki yıl" sözü erken kaynaklarda bulunamıyor. Güzel bir sözün meşhur olması, onun tarihî kaydını neden tek başına göstermez?' },
     { tr: 'Hz. Ca\'fer-i Sâdık, Emevilerin çözülüşünde ve Abbasilerin yükselişinde isyana girmedi. Sizce Hz. Ca\'fer-i Sâdık isyan yerine neden öğretmeyi seçti?' },
     { tr: 'Mâlik ve Hz. Ca\'fer-i Sâdık aynı Medine ilminde yetişti. Sizce ortak hocalar ve ortak rivayetler, mezhepler arasındaki yakınlığı neden açıklar?' },
   ],
-  summary: { tr: 'Hz. Ca\'fer-i Sâdık (ö. 148 H) Medine\'de açık bir ilim halkası kurdu. Mâlik\'in ondan hadis dinlediği TDV\'de de geçer. Ebû Hanîfe ile ilişkisi Şii kaynaklarında öğrencilik, TDV\'de ilmî görüşme olarak anılır. Câferî mezhep, bu halkanın rivayetleriyle oluştu.' },
+  summary: { tr: 'Hz. Ca\'fer-i Sâdık (ö. 148 H) Medine\'de açık bir ilim halkası kurdu. Mâlik\'in ondan hadis dinlediği TDV\'de de geçer. Ebû Hanîfe ile ilişkisi Şii kaynaklarda öğrencilik, TDV\'de ilmî görüşme olarak anılır. Câferî mezhep, bu halkanın rivayetleriyle oluştu.' },
 };

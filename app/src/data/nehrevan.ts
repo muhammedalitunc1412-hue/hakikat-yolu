@@ -23,10 +23,10 @@ export const nehrevan: HistEvent = {
     },
   ],
   sunni: [
-    { book: 'Taberî, Târîh', ref: 'Hakem sonrası ve Nehrevan (sayfa numarası ayrıca verilmedi)', says: { tr: 'Haricîlerin ayrılışı ve Nehrevan çatışması, Sıffin\'le birlikte anılır. Bu turda yeni sayfa açılmadı.' }, status: 'check' },
+    { book: 'Taberî, Târîh', ref: 'Hakem sonrası ve Nehrevan', says: { tr: 'Haricîlerin ayrılışı ve Nehrevan çatışması, Sıffin\'le birlikte anılır.' }, status: 'check' },
   ],
   shia: [
-    { book: 'Sıffin metnindeki ortak zemin', ref: 'Nehrevan (sayfa numarası ayrıca verilmedi)', says: { tr: 'Hz. Ali\'nin "söz haktır, batıl kastediliyor" dediği ve ardından Nehrevan\'da çatışıldığı, uygulamadaki Sıffin sahnesinde de yazılıdır. Ayrı sayfa açılmadı.' }, status: 'check' },
+    { book: 'Sıffin metnindeki ortak zemin', ref: 'Nehrevan', says: { tr: 'Hz. Ali\'nin "söz haktır, batıl kastediliyor" dediği ve ardından Nehrevan\'da çatışıldığı, uygulamadaki Sıffin sahnesinde de yazılıdır.' }, status: 'check' },
   ],
   questions: [
     { tr: 'Savaşın durması için Hz. Ali\'yi en çok zorlayanların arasında olan grup, hakemlik kabul edilince Hz. Ali\'ye neden karşı çıktı?' },

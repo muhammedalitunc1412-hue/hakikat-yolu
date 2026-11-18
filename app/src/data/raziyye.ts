@@ -49,7 +49,7 @@ export const raziyye: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Vefat haberi duyulunca Medine\'de büyük bir karışıklık oldu. Ömer ilk anda Peygamber\'in öldüğünü kabul etmedi. Ebu Bekir gelip halka Peygamber\'in vefat ettiğini duyurdu. **Hz. Ali** ve Hâşimoğulları ise cenazenin başından ayrılmadı. Peygamber\'in bedenini yıkamak ve defin hazırlıklarını yapmak onlara düşmüştü. Şehrin bir yanında insanlar gözyaşı dökerken, diğer yanında bir grup Sakife\'ye doğru yola çıkmıştı. Peygamber\'in bedeni henüz toprağa verilmemişken yönetimin kime geçeceği konuşulmaya başlanmıştı.' },
+      text: { tr: 'Vefat haberi duyulunca Medine\'de büyük bir karışıklık oldu. Ömer ilk anda Peygamber\'in öldüğünü kabul etmedi. Ebu Bekir gelip halka Peygamber\'in vefat ettiğini duyurdu. **Hz. Ali** ve Haşimoğulları ise cenazenin başından ayrılmadı. Peygamber\'in bedenini yıkamak ve defin hazırlıklarını yapmak onlara düşmüştü. Şehrin bir yanında insanlar gözyaşı dökerken, diğer yanında bir grup Sakife\'ye doğru yola çıkmıştı. Peygamber\'in bedeni henüz toprağa verilmemişken yönetimin kime geçeceği konuşulmaya başlanmıştı.' },
       cites: [{ side: 'sunni', i: 6 }],
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'crowd', x: 24, scale: 6 }, { kind: 'man', x: 48, label: { tr: 'Ömer' } }, { kind: 'man', x: 66, label: { tr: 'Ebu Bekir' } }, { kind: 'ali', x: 84, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
@@ -60,13 +60,13 @@ export const raziyye: HistEvent = {
     { book: 'Buhari, Sahih', ref: 'No. 3053 (Cihad)', says: { tr: 'Aynı olayın rivayeti; İbn Abbas ağlar.' }, grade: { tr: 'Müttefekun aleyh' }, url: 'https://hadithunlocked.com/bukhari:3053', status: 'verified' },
     { book: 'Buhari, Sahih', ref: 'No. 4431 (Meğâzî)', says: { tr: 'Üç vasiyet: müşrikleri çıkarın, heyetleri ağırlayın; üçüncüsünü râvi unuttuğunu söyler.' }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/bukhari:4431', status: 'verified' },
     { book: 'Müslim, Sahih', ref: 'No. 1637a (Vasiyyet)', says: { tr: '"Gelin size yazı yazayım ki sapmayasınız"; ortamdaki anlaşmazlık ve Peygamber\'in "Kalkın" demesi.' }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/muslim:1637', status: 'verified' },
-    { book: 'Taberî, Târîh; Vâkıdî, el-Meğâzî; Yakûbî, Târîh', ref: 'Taberî c.3 s.223; Vâkıdî c.3 s.1121-1125; Yakûbî c.2 s.127', says: { tr: 'Usame ordusunun hazırlığı, itirazlar ve ordunun Ebu Bekir döneminde sevk edilmesi. (Atıflar WikiShia aktarımıdır; birincil metinler açılmadı.)' }, url: 'https://en.wikishia.net/view/Usama_b._Zayd', status: 'check' },
-    { book: 'İbn Sa\'d, Tabakât', ref: 'Usame ordusu hazırlığı (sayfa kontrol edilecek)', says: { tr: 'Ordunun hazırlığı ve itirazlar.' }, status: 'check' },
-    { book: 'Buhari, Sahih', ref: 'Fedâilü\'l-Ashâb, yaklaşık 3667-3668 (kontrol edilecek)', says: { tr: 'Peygamber\'in vefatında Ömer\'in ölümü ilk anda kabul etmemesi ve Ebu Bekir\'in durumu duyurması.' }, grade: { tr: 'Sahih' }, status: 'check' },
+    { book: 'Taberî, Târîh; Vâkıdî, el-Meğâzî; Yakûbî, Târîh', ref: 'Taberî c.3 s.223; Vâkıdî c.3 s.1121-1125; Yakûbî c.2 s.127', says: { tr: 'Usame ordusunun hazırlığı, itirazlar ve ordunun Ebu Bekir döneminde sevk edilmesi. (Atıflar WikiShia aktarımıdır)' }, url: 'https://en.wikishia.net/view/Usama_b._Zayd', status: 'check' },
+    { book: 'İbn Sa\'d, Tabakât', ref: 'Usame ordusu hazırlığı', says: { tr: 'Ordunun hazırlığı ve itirazlar.' }, status: 'check' },
+    { book: 'Buhari, Sahih', ref: 'Fedâilü\'l-Ashâb, yaklaşık 3667-3668', says: { tr: 'Peygamber\'in vefatında Ömer\'in ölümü ilk anda kabul etmemesi ve Ebu Bekir\'in durumu duyurması.' }, grade: { tr: 'Sahih' }, status: 'check' },
   ],
   shia: [
-    { book: 'Şirvanî, Ceyşü Üsame risalesi', ref: 'Âğâ Büzürg, ez-Zerîa c.5 s.304 aktarımı', says: { tr: 'Usame ordusu konusunun kelam açısından ele alındığı Şii risale. Karşı yorum için Cahiz, el-Osmâniyye s.146-147 anılır.' }, status: 'check' },
-    { book: 'Şehristânî; İbn Ebi\'l-Hadîd (Şii kaynaklarda anılan)', ref: 'Usame ordusundan geri kalana lanet sözü', says: { tr: 'Peygamber\'in orduya katılmayanlara lanet ettiği rivayeti Şii kaynaklarda geçer; Sünni sahih bir zincirle teyit edilmemiştir. Kesin ifade olarak verilmemelidir.' }, status: 'check' },
+    { book: 'Şirvanî, Ceyşü Üsame risalesi', ref: 'Âğâ Büzürg, ez-Zerîa c.5 s.304 aktarımı', says: { tr: 'Usame ordusu konusunun kelam açısından ele alındığı Şii risale. Karşı yorum için Cahiz, el-Osmaniyye s.146-147 anılır.' }, status: 'check' },
+    { book: 'Şehristânî; İbn Ebi\'l-Hadîd (Şii kaynaklarda anılan)', ref: 'Usame ordusundan geri kalana lanet sözü', says: { tr: 'Peygamber\'in orduya katılmayanlara lanet ettiği rivayeti Şii kaynaklarda geçer; Sünni sahih bir zincirle teyit edilmemiştir.' }, status: 'check' },
   ],
   disputes: [
     {
@@ -77,7 +77,7 @@ export const raziyye: HistEvent = {
     {
       title: { tr: 'Usame ordusu' },
       sunni: { tr: 'Peygamber genç Usame\'yi komutan yaptı; itiraz çıktı, hareket gecikti. Sünni okumada bu, Mute sonrasında yapılan bir hazırlıktır ve Ebu Bekir orduyu sonra yola çıkarmıştır.' },
-      shia: { tr: 'Peygamber genç Usame\'yi komutan yaptı; itiraz çıktı, hareket gecikti. Şii okumada ordu, önde gelen sahabeyi Medine dışına almakla anılır; lanet rivayeti yalnız Şii kitaplarda geçer ve sahih bir Sünni zincirle teyit edilmemiştir.' },
+      shia: { tr: 'Peygamber genç Usame\'yi komutan yaptı; itiraz çıktı, hareket gecikti. Şii okumada ordu, önde gelen sahabeyi Medine dışına almakla anılır; lanet rivayeti Şehristânî ve İbn Ebi\'l-Hadîd gibi kaynaklarda anılır; sahih bir Sünni zincirle teyit edilmemiştir.' },
     },
   ],
   questions: [

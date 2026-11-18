@@ -286,7 +286,7 @@ function SourceCard({ src, tone }: { src: Source; tone: string }) {
       <View style={s.srcHead}>
         <Text style={[s.srcBook, align(), { flex: 1 }]}>{src.book}</Text>
       </View>
-      <Text style={[s.srcRef, align()]}>{src.ref}</Text>
+      {!!src.ref && <Text style={[s.srcRef, align()]}>{src.ref}</Text>}
       <Rich style={[s.srcSays, align()]} text={src.says} />
       {!!src.grade && <Text style={[s.srcGrade, align()]}>{ui('grade')}: {tx(src.grade)}</Text>}
       {!!src.url && (
@@ -380,7 +380,10 @@ function SceneCites({ ev, cites }: { ev: HistEvent; cites?: Scene['cites'] }) {
     const on = open[side];
     return (
       <Pressable key={side} onPress={() => setOpen(v => ({ ...v, [side]: !v[side] }))} accessibilityRole="button" accessibilityState={{ expanded: on }} style={[s.panelBtn, { borderColor: color }, on && { backgroundColor: color }, webHit]}>
-        <Text style={[s.panelBtnText, { color: on ? C.ink : color }]}>{ui(side === 'shia' ? 'shiaSources' : 'sunniSources')} ({n}) {on ? '▲' : '▼'}</Text>
+        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6 }}>
+          <Text style={[s.panelBtnText, { color: on ? C.ink : color, flexShrink: 1 }]}>{ui(side === 'shia' ? 'shiaSources' : 'sunniSources')} ({n})</Text>
+          <Text style={[s.panelBtnText, { color: on ? C.ink : color }]}>{on ? '▲' : '▼'}</Text>
+        </View>
       </Pressable>
     );
   };
@@ -556,7 +559,10 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
 
   const Btn = ({ p, label, n, color }: { p: Panel; label: string; n: number; color: string }) => (
     <Pressable onPress={() => toggle(p)} accessibilityRole="button" style={[s.panelBtn, { borderColor: color }, has(p) && { backgroundColor: color }, webHit]}>
-      <Text style={[s.panelBtnText, { color: has(p) ? C.ink : color }]}>{label} ({n}) {has(p) ? '▲' : '▼'}</Text>
+      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6 }}>
+        <Text style={[s.panelBtnText, { color: has(p) ? C.ink : color, flexShrink: 1 }]}>{label} ({n})</Text>
+        <Text style={[s.panelBtnText, { color: has(p) ? C.ink : color }]}>{has(p) ? '▲' : '▼'}</Text>
+      </View>
     </Pressable>
   );
 
@@ -799,7 +805,7 @@ export function Method({ onBack }: { onBack: () => void }) {
 const s = themedStyles(() => StyleSheet.create({
   page: { paddingHorizontal: 18, paddingTop: TOP, paddingBottom: 56 },
   topRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end', gap: 8, marginBottom: 6 },
-  settings: { minHeight: 36, justifyContent: 'center', paddingHorizontal: 12, backgroundColor: C.card, borderRadius: 12 },
+  settings: { minHeight: 44, justifyContent: 'center', paddingHorizontal: 12, backgroundColor: C.card, borderRadius: 12 },
   settingsText: { color: C.gold, fontFamily: font.sans, fontSize: 13, fontWeight: '700' },
   hero: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   logo: { width: 84, height: 84, backgroundColor: 'transparent' },
