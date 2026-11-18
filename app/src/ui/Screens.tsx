@@ -13,7 +13,7 @@ import { LogoZoom } from './LogoZoom';
 import { ImageViewer } from './ImageViewer';
 import { Rich } from './Rich';
 import { EventVideo } from './EventVideo';
-import { ArchIcon, BookIcon, ChatIcon, Chevron, CompassIcon, PinIcon, SearchIcon } from './icons';
+import { ArchIcon, BookIcon, ChatIcon, Chevron, PinIcon, SearchIcon } from './icons';
 import { ContactSheet } from './ContactSheet';
 import { C, TOP, align, font, usePageWidth, themedStyles, BLOOD } from './theme';
 import { rememberScene, rememberedScene, useScrollMemory } from './scrollMemory';
@@ -65,13 +65,13 @@ function Back({ onPress }: { onPress: () => void }) {
 
 let lastCat = 0; // Hikâyeden dönünce aynı kategoride kalmak için
 
-export function Home({ langName, onSettings, onStories, onMethod, onDuas, onQibla, onImams }: {
+export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps, onImams }: {
   langName: string;
   onSettings: () => void;
   onStories: () => void;
   onMethod: () => void;
   onDuas: () => void;
-  onQibla: () => void;
+  onMaps: () => void;
   onImams: () => void;
 }) {
   const sc = useScrollMemory('home');
@@ -127,11 +127,11 @@ export function Home({ langName, onSettings, onStories, onMethod, onDuas, onQibl
         <Chevron color={C.gold} />
       </Pressable>
 
-      <Pressable style={({ pressed }) => [s.feature, { marginTop: 12 }, pressed && s.pressed, webHit]} onPress={onQibla} accessibilityRole="button">
-        <View style={s.bubble}><CompassIcon /></View>
+      <Pressable style={({ pressed }) => [s.feature, { marginTop: 12 }, pressed && s.pressed, webHit]} onPress={onMaps} accessibilityRole="button">
+        <View style={s.bubble}><PinIcon /></View>
         <View style={{ flex: 1 }}>
-          <Text style={[s.featureTitle, align()]}>{ui('qibla')}</Text>
-          <Text style={[s.featureSub, align()]}>{ui('qiblaShort')}</Text>
+          <Text style={[s.featureTitle, align()]}>{ui('maps')}</Text>
+          <Text style={[s.featureSub, align()]}>{ui('mapsSub')}</Text>
         </View>
         <Chevron color={C.gold} />
       </Pressable>
@@ -551,16 +551,30 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   ) : item.kind === 'sources' ? (
     <View style={{ width }}>
     <View collapsable={false} onLayout={e => setPageHeight(index, e.nativeEvent.layout.height)} style={{ paddingHorizontal: 16, paddingTop: 8 }}>
-      <Text style={[s.catTitle, align()]}>Bu olay için bütün kaynaklar</Text>
-      <Text style={[s.catSub, align()]}>Kaynak grupları kapalıdır; başlığa dokununca açılır.</Text>
-      <Pressable onPress={() => setSrcOpen(v => ({ ...v, shia: !v.shia }))} accessibilityRole="button" accessibilityState={{ expanded: srcOpen.shia }} style={[s.srcFold, { borderColor: C.shia }, srcOpen.shia && { backgroundColor: C.shia }, webHit]}>
-        <Text style={[s.srcFoldText, { color: srcOpen.shia ? C.ink : C.shia }]}>{ui('shiaSources')} ({ev.shia.length}) {srcOpen.shia ? '▲' : '▼'}</Text>
-      </Pressable>
-      {srcOpen.shia && (ev.shia.length ? ev.shia.map((x, i) => <SourceCard key={'h' + i} src={x} tone={C.shia} />) : <Text style={s.dim}>{ui('none')}</Text>)}
-      <Pressable onPress={() => setSrcOpen(v => ({ ...v, sunni: !v.sunni }))} accessibilityRole="button" accessibilityState={{ expanded: srcOpen.sunni }} style={[s.srcFold, { borderColor: C.sunni }, srcOpen.sunni && { backgroundColor: C.sunni }, webHit]}>
-        <Text style={[s.srcFoldText, { color: srcOpen.sunni ? C.ink : C.sunni }]}>{ui('sunniSources')} ({ev.sunni.length}) {srcOpen.sunni ? '▲' : '▼'}</Text>
-      </Pressable>
-      {srcOpen.sunni && (ev.sunni.length ? ev.sunni.map((x, i) => <SourceCard key={'s' + i} src={x} tone={C.sunni} />) : <Text style={s.dim}>{ui('none')}</Text>)}
+      <View style={{ flexDirection: 'row', gap: 10 }}>
+        {ev.shia.length > 0 && (
+          <Pressable onPress={() => setSrcOpen(v => ({ ...v, shia: !v.shia }))} accessibilityRole="button" accessibilityState={{ expanded: srcOpen.shia }} style={[s.panelBtn, { borderColor: C.shia }, srcOpen.shia && { backgroundColor: C.shia }, webHit]}>
+            <Text style={[s.panelBtnText, { color: srcOpen.shia ? C.ink : C.shia }]}>{ui('shiaSources')} ({ev.shia.length}) {srcOpen.shia ? '▲' : '▼'}</Text>
+          </Pressable>
+        )}
+        {ev.sunni.length > 0 && (
+          <Pressable onPress={() => setSrcOpen(v => ({ ...v, sunni: !v.sunni }))} accessibilityRole="button" accessibilityState={{ expanded: srcOpen.sunni }} style={[s.panelBtn, { borderColor: C.sunni }, srcOpen.sunni && { backgroundColor: C.sunni }, webHit]}>
+            <Text style={[s.panelBtnText, { color: srcOpen.sunni ? C.ink : C.sunni }]}>{ui('sunniSources')} ({ev.sunni.length}) {srcOpen.sunni ? '▲' : '▼'}</Text>
+          </Pressable>
+        )}
+      </View>
+      {srcOpen.shia && ev.shia.length > 0 && (
+        <View style={s.panel}>
+          <Text style={[s.panelTitle, { color: C.shia }, align()]}>{ui('shiaSources')}</Text>
+          {ev.shia.map((x, i) => <SourceCard key={'h' + i} src={x} tone={C.shia} />)}
+        </View>
+      )}
+      {srcOpen.sunni && ev.sunni.length > 0 && (
+        <View style={s.panel}>
+          <Text style={[s.panelTitle, { color: C.sunni }, align()]}>{ui('sunniSources')}</Text>
+          {ev.sunni.map((x, i) => <SourceCard key={'s' + i} src={x} tone={C.sunni} />)}
+        </View>
+      )}
     </View>
     </View>
   ) : (
@@ -706,7 +720,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
             <Text style={s.pillText} numberOfLines={1}>{ui('prev')}</Text>
           </Pressable>
           <View style={{ flex: 1, alignItems: 'center', paddingHorizontal: 4 }}>
-            <Text style={s.pagerLabel} numberOfLines={1}>{pages[idx]?.kind === 'video' ? ui('video') : pages[idx]?.kind === 'sources' ? 'Bütün kaynaklar' : `${ui('scene')} ${(pages[idx] && pages[idx].kind === 'scene' ? pages[idx].n : idx) + 1} / ${ev.scenes.length}`}</Text>
+            <Text style={s.pagerLabel} numberOfLines={1}>{pages[idx]?.kind === 'video' ? ui('video') : pages[idx]?.kind === 'sources' ? ui('sourcesLabel') : `${ui('scene')} ${(pages[idx] && pages[idx].kind === 'scene' ? pages[idx].n : idx) + 1} / ${ev.scenes.length}`}</Text>
             <View style={s.dots}>
               {pages.map((_, i) => <View key={i} style={[s.dot, i === idx && s.dotOn]} />)}
             </View>
