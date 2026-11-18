@@ -15,7 +15,8 @@ const androidPackage = config.expo.android.package;
 let optionalHandled = false;
 
 // Reads the remote config at launch and every time the app returns to the foreground.
-// Offline or broken config -> the app simply opens normally.
+// A broken or unreachable config never starts a new lock. A rule saved from an earlier
+// successful read still blocks; with nothing saved, the app opens normally.
 export function useAppUpdate() {
   const supported = Platform.OS === 'android' || Platform.OS === 'ios';
   const [state, setState] = useState<UpdateState>(NONE);

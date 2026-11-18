@@ -72,9 +72,9 @@ test('fetch adds a cache-busting query, requires HTTPS and tolerates server erro
   fetchMock.mock.mockImplementation(async () => Response.json([1]));
   assert.equal(await fetchAppConfig(url, signal), undefined);
   fetchMock.mock.mockImplementation(async () => new Response('not JSON'));
-  await assert.rejects(fetchAppConfig(url, signal), SyntaxError);
+  assert.equal(await fetchAppConfig(url, signal), undefined);
   fetchMock.mock.mockImplementation(async () => { throw new TypeError('Offline'); });
-  await assert.rejects(fetchAppConfig(url, signal), TypeError);
+  assert.equal(await fetchAppConfig(url, signal), undefined);
 });
 
 test('the committed config matches app.json and is safe for the first release', () => {
@@ -124,10 +124,45 @@ test('a fresh fetch that lowers min overwrites the stored value and unblocks the
   assert.equal((await readStoredState(storage, 'android', '1', id)).kind, 'required');
   assert.equal((await applyFreshConfig(storage, config(1, 3), 'android', '1', id)).kind, 'optional');
   assert.equal((await readStoredState(storage, 'android', '1', id)).kind, 'none');
-  // A valid config without a rule for this platform clears the stored rule.
-  await applyFreshConfig(storage, config(3, 3), 'android', '1', id);
-  await applyFreshConfig(storage, {}, 'android', '1', id);
-  assert.equal(storage.data.has(STORED_KEY), false);
+});
+
+test('a failed or malformed config never creates a lock or replaces a stored rule', async t => {
+  const signal = new AbortController().signal;
+  const storage = memoryStorage();
+  const badRules = [
+    { android: { minVersionCode: '9', latestVersionCode: 9 } },
+    { android: { minVersionCode: -1, latestVersionCode: 9 } },
+    { android: { minVersionCode: 1.5, latestVersionCode: 9 } },
+    { android: { minVersionCode: 9 } },
+    { android: { latestVersionCode: 9 } },
+    { android: {} },
+    { android: null },
+    {},
+  ];
+  for (const bad of badRules) {
+    assert.equal(evaluateUpdate(bad, 'android', '1', id).kind, 'none');
+    assert.equal((await applyFreshConfig(storage, bad, 'android', '1', id)).kind, 'none');
+    assert.equal(storage.data.has(STORED_KEY), false);
+  }
+
+  await applyFreshConfig(storage, config(3, 4, { tr: 'Güncelle' }), 'android', '1', id);
+  const saved = storage.data.get(STORED_KEY);
+
+  const fetchMock = t.mock.method(globalThis, 'fetch', async () => new Response('missing', { status: 404 }));
+  assert.equal(await fetchAppConfig(url, signal), undefined);
+  fetchMock.mock.mockImplementation(async () => new Response('private', { status: 403 }));
+  assert.equal(await fetchAppConfig(url, signal), undefined);
+  fetchMock.mock.mockImplementation(async () => new Response('{', { status: 200 }));
+  assert.equal(await fetchAppConfig(url, signal), undefined);
+  fetchMock.mock.mockImplementation(async () => { throw new TypeError('Offline'); });
+  assert.equal(await fetchAppConfig(url, signal), undefined);
+
+  for (const bad of badRules) {
+    const live = await applyFreshConfig(storage, bad, 'android', '1', id);
+    assert.equal(live.kind, 'required');
+    assert.equal(storage.data.get(STORED_KEY), saved);
+  }
+  assert.equal((await readStoredState(storage, 'android', '1', id)).kind, 'required');
 });
 
 test('stored data is validated and storage failures never block', async () => {

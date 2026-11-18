@@ -41,8 +41,9 @@ görünmez.
   etkili olur; çevrimdışı kilitli bir cihaz o zamana kadar kilitli kalır.
 * Saklanan `latestVersionCode` yalnızca kayıt içindir; çevrimdışıyken "Yeni sürüm mevcut"
   penceresi göstermez.
-* Ağ hatası, zaman aşımı veya bozuk dosya saklanan değeri silmez ve yeni bir kilit koymaz.
-  Dosya geçerli ama Android kuralı içermiyorsa saklanan değer temizlenir.
+* 404, 403, silinmiş ya da özel depo, ağ hatası, zaman aşımı, bozuk JSON, eksik alan,
+  metin ya da negatif `minVersionCode` saklanan değeri silmez ve yeni bir kilit koymaz.
+  Böyle bir yanıtta cihaz, daha önce başarıyla alınmış kuralı kullanır; hiç yoksa uygulama açılır.
 
 ## Her yeni sürümde yapılacaklar
 
