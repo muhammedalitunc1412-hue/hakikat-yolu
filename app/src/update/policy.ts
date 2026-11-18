@@ -33,11 +33,13 @@ export function evaluateUpdate(config: unknown, platform: Platform, installed: u
   if (!config || typeof config !== 'object' || Array.isArray(config)) return none;
   const rule = (config as Record<string, unknown>)[platform];
   if (!rule || typeof rule !== 'object') return none;
+  const versions = versionCodes(rule);
+  // A string, negative, fractional, or missing code is not a rule. Never invent a lock from it.
+  if (!versions) return none;
   const current = buildNumber(installed);
-  const { minVersionCode, latestVersionCode, storeUrl } = rule as Record<string, unknown>;
   if (current == null) return none;
-  const min = code(minVersionCode) ?? 0;
-  const latest = Math.max(code(latestVersionCode) ?? 0, min);
+  const { min, latest } = versions;
+  const { storeUrl } = rule as Record<string, unknown>;
 
   // Android always uses this app's own Play listing; iOS needs a valid App Store link from the config.
   const url = platform === 'android' ? playUrl(androidPackage)
@@ -49,16 +51,22 @@ export function evaluateUpdate(config: unknown, platform: Platform, installed: u
   return none;
 }
 
-// Cache-busting query + caller-provided abort signal. Returns undefined on any server/format problem.
+// Cache-busting query + caller-provided abort signal.
+// 404/403, a deleted or private repo, a network error, or a body that is not a JSON object
+// all return undefined. Callers must keep the stored rule and must not create a new lock.
 export async function fetchAppConfig(url: string, signal: AbortSignal, now: number = Date.now()): Promise<unknown | undefined> {
   if (!url.startsWith('https://')) return undefined;
-  const response = await fetch(`${url}${url.includes('?') ? '&' : '?'}t=${now}`, {
-    signal,
-    headers: { 'Cache-Control': 'no-cache' },
-  });
-  if (!response.ok) return undefined;
-  const config: unknown = await response.json();
-  return config && typeof config === 'object' && !Array.isArray(config) ? config : undefined;
+  try {
+    const response = await fetch(`${url}${url.includes('?') ? '&' : '?'}t=${now}`, {
+      signal,
+      headers: { 'Cache-Control': 'no-cache' },
+    });
+    if (!response.ok) return undefined;
+    const config: unknown = await response.json();
+    return config && typeof config === 'object' && !Array.isArray(config) ? config : undefined;
+  } catch {
+    return undefined;
+  }
 }
 
 export const marketUrl = (androidPackage: string) => `market://details?id=${androidPackage}`;
@@ -75,13 +83,20 @@ export type Storage = {
 
 type Snapshot = { platform: Platform; minVersionCode: number; latestVersionCode: number; message?: Record<string, string> };
 
+function versionCodes(rule: unknown): { min: number; latest: number } | null {
+  if (!rule || typeof rule !== 'object' || Array.isArray(rule)) return null;
+  const { minVersionCode, latestVersionCode } = rule as Record<string, unknown>;
+  const min = code(minVersionCode);
+  const latest = code(latestVersionCode);
+  if (min == null || latest == null) return null;
+  return { min, latest: Math.max(latest, min) };
+}
+
 function snapshotOf(config: unknown, platform: Platform): Snapshot | null {
   if (!config || typeof config !== 'object' || Array.isArray(config)) return null;
-  const rule = (config as Record<string, unknown>)[platform];
-  if (!rule || typeof rule !== 'object') return null;
-  const { minVersionCode, latestVersionCode } = rule as Record<string, unknown>;
-  const min = code(minVersionCode) ?? 0;
-  return { platform, minVersionCode: min, latestVersionCode: Math.max(code(latestVersionCode) ?? 0, min), message: messages((config as Record<string, unknown>).message) };
+  const versions = versionCodes((config as Record<string, unknown>)[platform]);
+  if (!versions) return null;
+  return { platform, minVersionCode: versions.min, latestVersionCode: versions.latest, message: messages((config as Record<string, unknown>).message) };
 }
 
 // Stored rule -> blocking state only. A stored "latest" never nags offline; only fresh data can.
@@ -101,12 +116,13 @@ export async function readStoredState(storage: Storage, platform: Platform, inst
   }
 }
 
-// A successful fetch overwrites whatever was stored (so lowering min remotely unblocks users who are online).
+// Only a well-formed rule overwrites storage (so lowering min remotely unblocks users who are online).
+// Anything else leaves the previous rule untouched and cannot create a new lock.
 export async function applyFreshConfig(storage: Storage, config: unknown, platform: Platform, installed: unknown, androidPackage: string): Promise<UpdateState> {
   const snap = snapshotOf(config, platform);
+  if (!snap) return readStoredState(storage, platform, installed, androidPackage);
   try {
-    if (snap) await storage.setItem(STORED_KEY, JSON.stringify(snap));
-    else await storage.removeItem(STORED_KEY);
+    await storage.setItem(STORED_KEY, JSON.stringify(snap));
   } catch {
     // Storage trouble must not break the live decision.
   }
