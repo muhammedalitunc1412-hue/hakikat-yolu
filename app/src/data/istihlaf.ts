@@ -86,8 +86,8 @@ export const istihlaf: HistEvent = {
   ],
   questions: [
     { tr: 'Halife Ebu Bekir, Halife Ömer\'i tayin etmeden önce Abdurrahman b. Avf ve Osman ile görüştü. Sizce Hz. Ali\'ye neden danışılmadı?' },
-    { tr: 'Halife Ömer şuraya altı kişiyi saydı ve Hz. Ali de bunların arasındaydı. Sizce Hz. Ali\'nin kurulun üyesi olması neden seçilmesi anlamına gelmiyordu?' },
-    { tr: 'Zübeyr hakkını Hz. Ali\'ye, Talha Osman\'a, Sa\'d da Abdurrahman b. Avf\'a bıraktı. Sizce bu devirlerin sonunda karar neden Abdurrahman b. Avf\'ın elinde toplandı?' },
+    { tr: 'Halife Ömer şuraya altı kişiyi saydı ve Hz. Ali de bunların arasındaydı. Sizce Ali\'nin kurulun üyesi olması neden seçilmesi anlamına gelmiyordu?' },
+    { tr: 'Zübeyr hakkını Ali\'ye, Talha Osman\'a, Sa\'d da Abdurrahman b. Avf\'a bıraktı. Sizce bu devirlerin sonunda karar neden Abdurrahman b. Avf\'ın elinde toplandı?' },
     { tr: 'Abdurrahman b. Avf biatı Kitap, sünnet ve önceki iki halifenin yolu üzerine şart koştu. Sizce Hz. Ali önceki iki halifenin yolunu neden şart olarak kabul etmedi de "bir de kendi içtihadıma göre" dedi?' },
   ],
   summary: { tr: 'Halife Ebu Bekir, Halife Ömer\'i yerine seçti. Halife Ömer yaralanınca altı kişilik şurayı bıraktı; Abdurrahman b. Avf Osman\'ı seçti. Bu şura Şii okumada Hz. Ali\'nin "kendi içtihadım" sözü ve Şıkşıkıyye, onun yerini anlatır.' },

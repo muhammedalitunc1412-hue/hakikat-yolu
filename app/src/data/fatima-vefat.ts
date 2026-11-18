@@ -74,8 +74,8 @@ export const fatimaVefat: HistEvent = {
   ],
   sunni: [
     { book: 'Buhari, Sahih', ref: 'No. 4240 (Meğâzî, Gazvetü Hayber)', says: { tr: 'Hz. Fatıma, Medine\'deki fey\'i, Fedek\'i ve Hayber humusundan kalanı ister. "Bize miras kalmaz, bıraktığımız sadakadır" denir. O, darılır, vefat edene kadar konuşmaz. Altı ay yaşar. Hz. Ali onu gece defneder, Ebu Bekir\'e haber vermez ve namazını kılar.' }, grade: { tr: 'Sahih' }, url: 'https://hadits.net/ar/bukhari:4240', status: 'verified' },
-    { book: 'İbn Ebî Şeybe, el-Musannef', ref: 'Kitâbü\'l-Meğâzî; bir baskıda cilt 8, s. 571 (başka baskıda cilt 13, s. 469 da anılır)', says: { tr: 'Zeyd b. Eslem\'in babasından: Hz. Ali ve Zübeyr, Hz. Fatıma\'nın yanında toplanır. Ömer, yine toplanırlarsa evi üzerlerine yaktırmaya yemin ettiğini söyler. Fatıma bunu içeri bildirin ve dağılın der.' }, grade: { tr: 'Metin yaygın aktarılır.' }, status: 'check' },
-    { book: 'Şehristânî, el-Milel ve\'n-Nihal', ref: 'cilt 1, s. 57 (en-Nazzâmiyye; eş-Şâmile)', says: { tr: 'Şehristânî, Mu\'tezile\'den Nazzâm\'ın sözünü aktarır: Ömer biat günü Hz. Fatıma\'nın karnına vurdu, o cenini düşürdü; "Evi içindekilerle yakın" diye bağırıyordu; evde Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin vardı. Şehristânî bunu Nazzâm\'ın iftirası diye anar.' }, status: 'verified' },
+    { book: 'İbn Ebî Şeybe, el-Musannef', ref: 'Kitâbü\'l-Meğâzî; bir baskıda cilt 8, s. 571 (başka baskıda cilt 13, s. 469 da anılır)', says: { tr: 'Zeyd b. Eslem\'in babasından: Hz. Ali ve Zübeyr, Fatıma\'nın yanında toplanır. Ömer, yine toplanırlarsa evi üzerlerine yaktırmaya yemin ettiğini söyler. Fatıma bunu içeri bildirin ve dağılın der.' }, grade: { tr: 'Metin yaygın aktarılır.' }, status: 'check' },
+    { book: 'Şehristânî, el-Milel ve\'n-Nihal', ref: 'cilt 1, s. 57 (en-Nazzâmiyye; eş-Şâmile)', says: { tr: 'Şehristânî, Mu\'tezile\'den Nazzâm\'ın sözünü aktarır: Ömer biat günü Fatıma\'nın karnına vurdu, o cenini düşürdü; "Evi içindekilerle yakın" diye bağırıyordu; evde Hz. Ali, Fatıma, Hz. Hasan ve Hz. Hüseyin vardı. Şehristânî bunu Nazzâm\'ın iftirası diye anar.' }, status: 'verified' },
     { book: 'Belâzurî, Ensâbü\'l-Eşrâf', ref: 'cilt 1, s. 586 (VikîŞia atfı)', says: { tr: 'Evde toplananlara yönelik yakma tehdidi.' }, status: 'check' },
     { book: 'İbn Kuteybe\'ye atfedilen el-İmâme ve\'s-Siyâse', ref: 'cilt 1, s. 30-31 (VikîŞia atfı)', says: { tr: 'Odun getirilip "Çıkın, yoksa içindekilerle yakarım" denmesi ve "İçinde Fatıma var" denince "Olsa da" cevabı.' }, grade: { tr: 'Eserin İbn Kuteybe\'ye aidiyeti tartışmalıdır.' }, status: 'check' },
     { book: 'Müslim, Sahih', ref: 'No. 1759 (Cihâd ve siyer)', says: { tr: 'Fedek ve Hayber\'in miras talebi ile "peygamberler miras bırakmaz" sözü. Buhari 4240 ile aynı haberin paralelidir.' }, grade: { tr: 'Numara yaygın atıftır.' }, status: 'check' },
@@ -113,10 +113,10 @@ export const fatimaVefat: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Peygamber "Fatıma benden bir parçadır, onu kızdıran beni kızdırmış olur" demişti. Sizce bu söz bilindiği hâlde Hz. Fatıma\'nın başına gelenler neden engellenemedi?' },
+    { tr: 'Peygamber "Fatıma benden bir parçadır, onu kızdıran beni kızdırmış olur" demişti. Sizce bu söz bilindiği hâlde Fatıma\'nın başına gelenler neden engellenemedi?' },
     { tr: 'Hz. Ali\'nin evinin kapısına odun yığıldığında Halife Ömer\'e "İçeride Fatıma var" denmiş, o da "Olsa da!" demişti. Sizce Sakife\'deki seçimi kabul etmeyenlerin o evde toplanması, bu sert tehdidi neden doğurdu?' },
-    { tr: 'Hz. Fatıma kabrinin kimse tarafından bilinmemesini vasiyet etti. Sizce Hz. Fatıma kabrini neden gizli tutmak istedi?' },
-    { tr: 'Halife Ömer Bakî\'de Hz. Fatıma\'nın mezarını aratınca Hz. Ali elinde Zülfikar ile gelip "Onun mezarından tek bir taş bile oynatırsanız, bu toprakları kanınızla sularım" dedi. Sizce Hz. Ali mezarın açılmasına neden bu kadar sert karşı çıktı?' },
+    { tr: 'Fatıma kabrinin kimse tarafından bilinmemesini vasiyet etti. Sizce Fatıma kabrini neden gizli tutmak istedi?' },
+    { tr: 'Halife Ömer Bakî\'de Fatıma\'nın mezarını aratınca Ali elinde Zülfikar ile gelip "Onun mezarından tek bir taş bile oynatırsanız, bu toprakları kanınızla sularım" dedi. Sizce Ali mezarın açılmasına neden bu kadar sert karşı çıktı?' },
   ],
   summary: { tr: 'Fedek reddedildi. Ehl-i Beyt rivayetinde Ömer kapıyı yaktı ve tekmeledi. Hz. Fatıma kapı ile duvar arasında kaldı, kaburgası kırıldı ve Muhsin düştü. Hz. Ali\'nin elleri bağlanıp biata götürüldü. Hz. Fatıma onu kurtarmak için beddua ile uyardı. Gece defnedildi. Sabah Ömer mezarları kazdırmak istedi. Hz. Ali Zülfikar ile durdurdu. Kabri bugün de gizlidir.' },
 };

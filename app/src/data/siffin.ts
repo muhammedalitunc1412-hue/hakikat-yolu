@@ -127,8 +127,8 @@ export const siffin: HistEvent = {
   questions: [
     { tr: 'Peygamber, Ammar\'ı azgın bir grubun öldüreceğini haber vermişti ve Ammar Sıffin\'de Hz. Ali\'nin safındaydı. Sizce bu haber, Ammar\'ın hangi safta durduğuna bakmayı neden gerektirir?' },
     { tr: 'Ammar şehit olunca hadis hatırlatıldı ve Muaviye "Onu getirenler öldürdü" diye karşılık verdi. Sizce bu yorum, Peygamber\'in sözünü neden ortadan kaldırmıyor?' },
-    { tr: 'Hz. Ali, kendi tarafının hakemi olarak güvendiği başka isimleri önermişti, ama Ebu Musa el-Eş\'arî seçildi. Sizce ordusundaki baskı hakem seçiminde neden belirleyici oldu?' },
-    { tr: 'Hz. Ali, Haricîlerin "Hüküm yalnızca Allah\'ındır" sloganına "Söz haktır, ama onunla batıl kastediliyor" dedi. Sizce Hz. Ali sözü kabul edip amacı neden reddetti?' },
+    { tr: 'Ali, kendi tarafının hakemi olarak güvendiği başka isimleri önermişti, ama Ebu Musa el-Eş\'arî seçildi. Sizce ordusundaki baskı hakem seçiminde neden belirleyici oldu?' },
+    { tr: 'Ali, Haricîlerin "Hüküm yalnızca Allah\'ındır" sloganına "Söz haktır, ama onunla batıl kastediliyor" dedi. Sizce Hz. Ali sözü kabul edip amacı neden reddetti?' },
     { tr: 'Peygamber, Haricîler hakkında onları iki taraftan hakka daha yakın olanın öldüreceğini haber vermişti. Sizce Peygamber, onlarla savaşacak tarafı neden "hakka daha yakın olan" diye tarif etti?' },
   ],
   summary: { tr: 'Sıffin\'de Ammar, Hz. Ali\'nin safında şehit oldu. Mushaflar mızraklara asıldı; Hakem ve Nehrevan geldi. Hz. Ali sabırla hakkını korudu ve bir sabah namazında şehit edildi.' },

@@ -133,7 +133,7 @@ export const aliKimdir: HistEvent = {
     { book: 'Tabâtabâî, el-Mîzân', ref: 'cilt 2 (Bakara 207; WikiShia atfı)', says: { tr: 'Bakara 207\'nin Hz. Ali hakkında indiği görüşü.' }, status: 'check' },
     { book: 'Emînî, el-Gadîr', ref: 'İlim şehri hadisi bölümü (WikiShia atfı)', says: { tr: 'İlim şehri hadisinin birçok Sünni ravisinin sahih saydığı aktarılır; Şia\'ya göre mütevatirdir.' }, status: 'check' },
     { book: 'Kuleynî, el-Kâfî; Şeyh Müfid, el-İrşâd', ref: 'Peygamber\'in yıkanması ve defni bölümü', says: { tr: 'Peygamber\'in vefatı, Hz. Ali\'nin yıkaması ve defni.' }, status: 'check' },
-    { book: 'Şii tefsirleri ve hadis kitapları', ref: 'Şûrâ 23 (Mevedde) - Hz. Ali, Hz. Fatıma, Hz. Hasan, Hz. Hüseyin', says: { tr: '"Yakınlar" ifadesinin Ehl-i Beyt\'i kastettiği görüşü.' }, status: 'check' },
+    { book: 'Şii tefsirleri ve hadis kitapları', ref: 'Şûrâ 23 (Mevedde) - Hz. Ali, Fatıma, Hz. Hasan, Hz. Hüseyin', says: { tr: '"Yakınlar" ifadesinin Ehl-i Beyt\'i kastettiği görüşü.' }, status: 'check' },
     { book: 'Tabersî, Mecmau\'l-Beyân', ref: 'Mâide 55 tefsiri (cilt/sayfa baskıya göre değişir)', says: { tr: 'Ayetin Hz. Ali hakkında indiğini yazar ve Ebu Zer tarikiyle rükûdayken yüzüğün sadaka olarak verilişini nakleder.' }, status: 'check' },
   ],
   disputes: [
@@ -175,10 +175,10 @@ export const aliKimdir: HistEvent = {
   ],
   questions: [
     { tr: 'Hz. Ali çocuk yaşta Peygamber\'e iman etti ve hayatı boyunca yanında kaldı. Sizce Peygamber\'in terbiyesinde büyümek, bu yakınlığı neden bu kadar kalıcı kıldı?' },
-    { tr: 'Hicret gecesi kılıçlı kalabalık Peygamber\'in evini sardı ve Hz. Ali onun yatağına yattı. Sizce Peygamber yatağına özellikle Hz. Ali\'yi neden yatırdı?' },
+    { tr: 'Hicret gecesi kılıçlı kalabalık Peygamber\'in evini sardı ve Hz. Ali onun yatağına yattı. Sizce Peygamber yatağına özellikle Ali\'yi neden yatırdı?' },
     { tr: 'Peygamber ona "Dünyada da ahirette de kardeşimsin" dedi. Sizce Peygamber bu kardeşliği neden hem dünya hem ahiret için ilan etti?' },
-    { tr: 'İlim şehri sözünün sıhhati konuşulsa da Hz. Ali\'nin ilmi övülür. Sizce Peygamber, ilim benzetmesinde Hz. Ali\'yi neden şehrin kapısı olarak andı?' },
-    { tr: 'Hz. Ali Peygamber\'i yıkarken Sakife\'de yönetimin kime geçeceği konuşuluyordu. Sizce Hz. Ali neden o toplantıya gitmeyip Peygamber\'in yanında kaldı?' },
+    { tr: 'İlim şehri sözünün sıhhati konuşulsa da Hz. Ali\'nin ilmi övülür. Sizce Peygamber, ilim benzetmesinde Ali\'yi neden şehrin kapısı olarak andı?' },
+    { tr: 'Ali Peygamber\'i yıkarken Sakife\'de yönetimin kime geçeceği konuşuluyordu. Sizce Hz. Ali neden o toplantıya gitmeyip Peygamber\'in yanında kaldı?' },
   ],
   summary: { tr: 'Hz. Ali, Peygamber\'in yanında büyüdü; ilk iman edenlerdendir, hicret gecesi canını ortaya koydu, savaşlarda sancak taşıdı, Hz. Fatıma ile evlendi ve Peygamber\'i yıkayıp defnetti.' },
 };

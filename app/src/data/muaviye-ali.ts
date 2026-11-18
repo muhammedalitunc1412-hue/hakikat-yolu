@@ -84,9 +84,9 @@ export const muaviyeAli: HistEvent = {
     },
   ],
   questions: [
-    { tr: "Hz. Ali önce düzen, sonra dava diyordu. Sizce Hz. Ali davayı neden düzen sağlandıktan sonraya bıraktı?" },
+    { tr: "Hz. Ali önce düzen, sonra dava diyordu. Sizce Ali davayı neden düzen sağlandıktan sonraya bıraktı?" },
     { tr: "Peygamber, Ammar'ı azgın bir grubun öldüreceğini haber vermişti ve Ammar Hz. Ali'nin safında şehit oldu. Sizce bu haber Sıffin'de iki taraf arasında nasıl bir ayrım çiziyor?" },
-    { tr: "Hz. Ali mushafların bir hile olduğunu hemen söyledi. Sizce ordusunun bir kısmı mushaflar mızraklara asılınca neden savaşmayı reddetti?" },
+    { tr: "Ali mushafların bir hile olduğunu hemen söyledi. Sizce ordusunun bir kısmı mushaflar mızraklara asılınca neden savaşmayı reddetti?" },
   ],
   summary: { tr: "Muaviye biatı reddetti. Sıffin'de Ammar Hz. Ali'nin yanında şehit oldu. Mushaflar mızraklara asıldı ve Hakem orduyu böldü. Sonra Mısır alındı, Muhammed b. Ebi Bekir öldürüldü, Mâlik el-Eşter yolda zehirlendi. Hz. Ali 40 H'de şehit edildi." },
 };

@@ -77,6 +77,7 @@ test('genişleme sahnelerinin görseli kayıtlı, yer tutucu kalmaz', () => {
     'kerbela-esir-yol',
     'kerbela-kufe-pencere',
     'kerbela-erbain',
+    'kerbela-asure',
   ];
   for (const id of fresh) {
     assert.match(img, new RegExp("'" + id + "': require\\('../../assets/scenes/" + id + "\\.jpg'\\)"));
@@ -99,7 +100,7 @@ test('genişleme sahnelerinin görseli kayıtlı, yer tutucu kalmaz', () => {
     }
   };
   const events = read('./events.ts');
-  bound('./kerbela.ts', 36);
+  bound('./kerbela.ts', 37);
   assert.doesNotMatch(read('./kerbela.ts'), /Harre|mancınık/);
   bound('./harre.ts', 5);
   assert.match(read('./harre.ts'), /image: 'harre-1'/);

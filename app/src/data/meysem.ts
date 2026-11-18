@@ -54,7 +54,7 @@ export const meysem: HistEvent = {
     { book: 'Meclisî, Bihârü\'l-Envâr', ref: 'Meysem et-Temmâr', says: { tr: 'Kehanet, ağaç, asılma, gem ve dilin kesilmesi bu derlemede nakledilir.' }, status: 'check' },
   ],
   questions: [
-    { tr: 'Hz. Ali, Meysem\'e asılacağı hurma ağacını gösterdi. Sizce Meysem kaçmak yerine neden o ağacın yanına gidip kökünü suladı?' },
+    { tr: 'Ali, Meysem\'e asılacağı hurma ağacını gösterdi. Sizce Meysem kaçmak yerine neden o ağacın yanına gidip kökünü suladı?' },
     { tr: 'Hucr b. Adî ve arkadaşları laneti kabul etmedikleri için öldürülmüştü. Sizce Meysem, Hz. Ali\'yi savunmanın bedeli ölüm olabilecekken neden tezgâhında anlatmayı bırakmadı?' },
     { tr: 'İbn Ziyâd, Meysem\'in asıldığı yerden konuşmaya devam ettiğini duyunca dilinin kesilmesini emretti. Sizce İbn Ziyâd Meysem\'in konuşmasına neden bu kadar öfkelendi?' },
   ],

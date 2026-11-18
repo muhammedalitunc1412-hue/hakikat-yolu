@@ -84,9 +84,9 @@ export const fedek: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Hz. Fatıma Fedek için mescide gidip Neml 16 ve Meryem 6. ayetleri hatırlattı. Sizce Hz. Fatıma "Biz peygamberler miras bırakmayız" sözüne neden bu iki ayetle cevap verdi?' },
-    { tr: 'Fedek yıllardır Hz. Fatıma\'nın elindeydi ve Hz. Ali ile Ümmü Eymen onun lehine şahitlik etti, ama şahitlikleri kabul edilmedi. Sizce bir malı elinde tutan kişiden neden yine de belge istendi?' },
-    { tr: 'Fedek reddedilip şahitler geri çevrilince Hz. Fatıma Halife Ebu Bekir\'e küstü. Sizce bu küskünlük neden vefatına kadar sürdü?' },
+    { tr: 'Hz. Fatıma Fedek için mescide gidip Neml 16 ve Meryem 6. ayetleri hatırlattı. Sizce Fatıma "Biz peygamberler miras bırakmayız" sözüne neden bu iki ayetle cevap verdi?' },
+    { tr: 'Fedek yıllardır Fatıma\'nın elindeydi ve Ali ile Ümmü Eymen onun lehine şahitlik etti, ama şahitlikleri kabul edilmedi. Sizce bir malı elinde tutan kişiden neden yine de belge istendi?' },
+    { tr: 'Fedek reddedilip şahitler geri çevrilince Fatıma Halife Ebu Bekir\'e küstü. Sizce bu küskünlük neden vefatına kadar sürdü?' },
   ],
   summary: { tr: 'Peygamber Fedek\'i Hz. Fatıma\'ya hibe etmiş ve miras olarak bırakmıştı. Halife Ebu Bekir buna el koydu. Hz. Fatıma mescitte Neml 16 ve Meryem 6 ile cevap verdi. Hz. Ali ile Ümmü Eymen\'in şahitliği kabul edilmedi. O, küs vefat etti. Buhari 4240 küskünlüğü ve gece defni yazar. Hibe ve şahitler el-Kâfî 1/543 kaydındadır. Hutbe Belâğatü\'n-Nisâ\'dadır.' },
 };
