@@ -1,6 +1,6 @@
 {
   "android": {
-    "minVersionCode": 2,
+    "minVersionCode": 1,
     "latestVersionCode": 1,
     "storeUrl": "https://play.google.com/store/apps/details?id=com.tuncgames.hakikatyolu"
   },
