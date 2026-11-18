@@ -62,3 +62,53 @@ export async function fetchAppConfig(url: string, signal: AbortSignal, now: numb
 }
 
 export const marketUrl = (androidPackage: string) => `market://details?id=${androidPackage}`;
+
+// ---- Local persistence -------------------------------------------------------------------
+// The last successfully fetched rule is kept on the device so a required update still blocks offline.
+export const STORED_KEY = 'hakikat-yolu:update-policy';
+
+export type Storage = {
+  getItem(key: string): Promise<string | null>;
+  setItem(key: string, value: string): Promise<unknown>;
+  removeItem(key: string): Promise<unknown>;
+};
+
+type Snapshot = { platform: Platform; minVersionCode: number; latestVersionCode: number; message?: Record<string, string> };
+
+function snapshotOf(config: unknown, platform: Platform): Snapshot | null {
+  if (!config || typeof config !== 'object' || Array.isArray(config)) return null;
+  const rule = (config as Record<string, unknown>)[platform];
+  if (!rule || typeof rule !== 'object') return null;
+  const { minVersionCode, latestVersionCode } = rule as Record<string, unknown>;
+  const min = code(minVersionCode) ?? 0;
+  return { platform, minVersionCode: min, latestVersionCode: Math.max(code(latestVersionCode) ?? 0, min), message: messages((config as Record<string, unknown>).message) };
+}
+
+// Stored rule -> blocking state only. A stored "latest" never nags offline; only fresh data can.
+export async function readStoredState(storage: Storage, platform: Platform, installed: unknown, androidPackage: string): Promise<UpdateState> {
+  try {
+    const raw = await storage.getItem(STORED_KEY);
+    if (!raw) return { kind: 'none' };
+    const snap: unknown = JSON.parse(raw);
+    if (!snap || typeof snap !== 'object' || (snap as Snapshot).platform !== platform) return { kind: 'none' };
+    const { minVersionCode, message } = snap as Snapshot;
+    const state = evaluateUpdate({
+      [platform]: { minVersionCode, latestVersionCode: minVersionCode, storeUrl: '' }, message,
+    }, platform, installed, androidPackage);
+    return state.kind === 'required' ? state : { kind: 'none' };
+  } catch {
+    return { kind: 'none' };
+  }
+}
+
+// A successful fetch overwrites whatever was stored (so lowering min remotely unblocks users who are online).
+export async function applyFreshConfig(storage: Storage, config: unknown, platform: Platform, installed: unknown, androidPackage: string): Promise<UpdateState> {
+  const snap = snapshotOf(config, platform);
+  try {
+    if (snap) await storage.setItem(STORED_KEY, JSON.stringify(snap));
+    else await storage.removeItem(STORED_KEY);
+  } catch {
+    // Storage trouble must not break the live decision.
+  }
+  return evaluateUpdate(config, platform, installed, androidPackage);
+}

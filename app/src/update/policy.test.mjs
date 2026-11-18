@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
-import { buildNumber, evaluateUpdate, fetchAppConfig, marketUrl } from './policy.ts';
+import { applyFreshConfig, buildNumber, evaluateUpdate, fetchAppConfig, marketUrl, readStoredState, STORED_KEY } from './policy.ts';
 
 const id = 'com.tuncgames.hakikatyolu';
 const storeUrl = 'https://play.google.com/store/apps/details?id=' + id;
@@ -86,4 +86,59 @@ test('the committed config matches app.json and is safe for the first release', 
   assert.ok(cfg.android.minVersionCode <= app.android.versionCode);
   assert.equal(evaluateUpdate(cfg, 'android', String(app.android.versionCode), app.android.package).kind,
     cfg.android.latestVersionCode > app.android.versionCode ? 'optional' : 'none');
+});
+
+function memoryStorage(initial = {}) {
+  const data = new Map(Object.entries(initial));
+  return {
+    data,
+    getItem: async k => data.get(k) ?? null,
+    setItem: async (k, v) => { data.set(k, v); },
+    removeItem: async k => { data.delete(k); },
+  };
+}
+
+test('a successful fetch is stored and then blocks offline until the app is updated', async () => {
+  const storage = memoryStorage();
+  assert.equal((await readStoredState(storage, 'android', '1', id)).kind, 'none');
+  const live = await applyFreshConfig(storage, config(3, 4, { tr: 'Güncelle' }), 'android', '1', id);
+  assert.equal(live.kind, 'required');
+  assert.deepEqual(JSON.parse(storage.data.get(STORED_KEY)), { platform: 'android', minVersionCode: 3, latestVersionCode: 4, message: { tr: 'Güncelle' } });
+  // Offline relaunch: no fetch at all, only the stored rule.
+  assert.deepEqual(await readStoredState(storage, 'android', '1', id), { kind: 'required', storeUrl, message: { tr: 'Güncelle' } });
+  assert.equal((await readStoredState(storage, 'android', '2', id)).kind, 'required');
+  // After updating to the required build the app opens normally.
+  assert.equal((await readStoredState(storage, 'android', '3', id)).kind, 'none');
+  assert.equal((await readStoredState(storage, 'android', '4', id)).kind, 'none');
+});
+
+test('a stored latestVersionCode never nags offline', async () => {
+  const storage = memoryStorage();
+  assert.equal((await applyFreshConfig(storage, config(1, 5), 'android', '2', id)).kind, 'optional');
+  assert.equal((await readStoredState(storage, 'android', '2', id)).kind, 'none');
+});
+
+test('a fresh fetch that lowers min overwrites the stored value and unblocks the user', async () => {
+  const storage = memoryStorage();
+  await applyFreshConfig(storage, config(3, 3), 'android', '1', id);
+  assert.equal((await readStoredState(storage, 'android', '1', id)).kind, 'required');
+  assert.equal((await applyFreshConfig(storage, config(1, 3), 'android', '1', id)).kind, 'optional');
+  assert.equal((await readStoredState(storage, 'android', '1', id)).kind, 'none');
+  // A valid config without a rule for this platform clears the stored rule.
+  await applyFreshConfig(storage, config(3, 3), 'android', '1', id);
+  await applyFreshConfig(storage, {}, 'android', '1', id);
+  assert.equal(storage.data.has(STORED_KEY), false);
+});
+
+test('stored data is validated and storage failures never block', async () => {
+  for (const raw of ['not json', '{}', '[]', 'null', JSON.stringify({ platform: 'ios', minVersionCode: 9 }), JSON.stringify({ platform: 'android', minVersionCode: 'x' })]) {
+    assert.equal((await readStoredState(memoryStorage({ [STORED_KEY]: raw }), 'android', '1', id)).kind, 'none');
+  }
+  const broken = { getItem: async () => { throw new Error('x'); }, setItem: async () => { throw new Error('x'); }, removeItem: async () => { throw new Error('x'); } };
+  assert.equal((await readStoredState(broken, 'android', '1', id)).kind, 'none');
+  assert.equal((await applyFreshConfig(broken, config(3, 3), 'android', '1', id)).kind, 'required');
+  // Unknown installed build is never blocked by a stored rule.
+  const storage = memoryStorage();
+  await applyFreshConfig(storage, config(3, 3), 'android', '1', id);
+  assert.equal((await readStoredState(storage, 'android', null, id)).kind, 'none');
 });

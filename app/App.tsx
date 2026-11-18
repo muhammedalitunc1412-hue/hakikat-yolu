@@ -45,7 +45,7 @@ export default function Root() {
 function App() {
   const { scale } = useFontScale();
   const [lang, setLanguage] = useState<Lang>('tr');
-  const { state: update, dismissOptional } = useAppUpdate();
+  const { state: update, dismissOptional, loaded: updateLoaded } = useAppUpdate();
   const requiredUpdate = update.kind === 'required' ? update : null;
   const [ready, setReady] = useState(false);
   const [choosing, setChoosing] = useState(true);
@@ -162,7 +162,7 @@ function App() {
     <View style={{ flex: 1, backgroundColor: C.bgDeep, alignItems: 'center' }}>
       <StatusBar style="light" />
       <View style={{ flex: 1, width: '100%', maxWidth: PAGE_MAX, backgroundColor: C.bg }}>
-        {!ready ? null : requiredUpdate ? <RequiredUpdate lang={lang} storeUrl={requiredUpdate.storeUrl} message={requiredUpdate.message} /> : (choosing || editingLanguage) ? (
+        {!ready || !updateLoaded ? null : requiredUpdate ? <RequiredUpdate lang={lang} storeUrl={requiredUpdate.storeUrl} message={requiredUpdate.message} /> : (choosing || editingLanguage) ? (
           <ScrollView contentContainerStyle={{ padding: 24, paddingTop: TOP, gap: 10 }}>
             {editingLanguage && (
               <>
