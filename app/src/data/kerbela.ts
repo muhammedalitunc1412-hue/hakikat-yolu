@@ -255,19 +255,18 @@ export const kerbela: HistEvent = {
       cites: [{ side: 'shia', i: 11 }, { side: 'shia', i: 12 }, { side: 'shia', i: 13 }],
     },
     {
+      text: { tr: 'Emeviler Kerbelâ\'yı örtbas etmek için Aşûrâ gününü bayram ve bereket günü gibi göstermeye çalıştı. Aşure tatlısı da bu amaçla yaygınlaştırıldı. Bugün bu maalesef çok başarılı oldu: insanlar Aşûrâ denince Kerbelâ\'yı değil tatlıyı düşünüyor. Aşurenin Nuh\'un gemisinden kalan erzakla ve onun kurtuluşunu anmak için pişirildiği, o günün evine bereket getireceği, o gün gusül almanın sevabı, göze sürme çekenin yıl boyu gözünün ağrımayacağı gibi inanışların sağlam bir kaynağı yoktur. Hepsi kaynaksız hurafelerdir. İbn Teymiyye gusül ve sürme rivayetlerinin Ehl-i Beyt\'e buğzeden Nâsibîler tarafından uydurulduğunu söyler.' },
+      image: 'kerbela-asure',
+      art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'crowd', x: 46, scale: 6 }] },
+      by: 'partial',
+      cites: [{ side: 'sunni', i: 8 }],
+    },
+    {
       text: { tr: 'Kerbelâ\'nın üzerinden yüzyıllar geçti, ama şehitlerin adı unutulmadı. Hz. Hüseyin\'in şehadetinin kırkıncı gününe Erbaîn denir ve her yıl bu günde milyonlarca insan Kerbelâ\'ya yürür. Yol boyunca kurulan çadırlarda yürüyenlere yemek ve su ikram edilir. Kerbelâ\'daki Hz. Abbas türbesinin resmi açıklamasına göre 2024 yılının Erbaîn ziyaretinde Kerbelâ\'ya 21.480.525 ziyaretçi geldi. Suudi Arabistan\'ın resmi verilerine göre aynı yıl hacca gelenlerin sayısı 1.833.164\'tü. Yani Erbaîn\'de Kerbelâ\'ya akın eden insanların sayısı, hacca gidenlerin on katından fazladır.' },
       cites: [{ side: 'shia', i: 28 }, { side: 'shia', i: 29 }],
       image: 'kerbela-erbain',
       art: { bg: 'dawn', props: ['flags', 'sun'], actors: [{ kind: 'crowd', x: 46, scale: 8 }] },
       by: 'both',
-    },
-
-    {
-      text: { tr: 'Emeviler Kerbelâ\'yı örtbas etmek için Aşûrâ gününü bayram ve bereket günü gibi göstermeye çalıştı. Aşure tatlısı da bu amaçla yaygınlaştırıldı. Bugün bu maalesef çok başarılı oldu: insanlar Aşûrâ denince Kerbelâ\'yı değil tatlıyı düşünüyor. Aşurenin Nuh\'un gemisinden kalan erzakla ve onun kurtuluşunu anmak için pişirildiği, o günün evine bereket getireceği, o gün gusül almanın sevabı, göze sürme çekenin yıl boyu gözünün ağrımayacağı gibi inanışların sağlam bir kaynağı yoktur. Hepsi kaynaksız hurafelerdir. İbn Teymiyye gusül ve sürme rivayetlerinin Ehl-i Beyt\'e buğzeden Nâsibîler tarafından uydurulduğunu söyler.' },
-      textOnly: true,
-      art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'crowd', x: 46, scale: 6 }] },
-      by: 'partial',
-      cites: [{ side: 'sunni', i: 8 }],
     },
     {
       text: { tr: 'Yezid o gün Kerbelâ çölünü ele geçirdi, ama Peygamber\'in dinini ele geçiremedi. Hz. Hüseyin\'in biat etmemesi, İslam\'ın bir saltanat ailesinin oyuncağı olmadığını herkese gösterdi. Fırat\'ın suyu kesildi, çadırlar yakıldı, mübarek baş şehirden şehre taşındı. Ama Yezid\'in adı lanetle anılırken Hz. Hüseyin\'in adı her Muharrem\'de gözyaşıyla anılmaya devam etti. **Hz. Abbas** vefanın, **Hz. Ali Ekber** Peygamber\'e benzeyen gençliğin, **Hz. Kasım** sadakatin, **Hz. Ali Asgar** masumiyetin adı oldu. **Hz. Zeyneb**\'in Şam sarayındaki sözü hâlâ hatırlanıyor. Şiiler Kerbelâ\'yı her yıl matem meclislerinde, ağıtlarda ve ziyaretlerde anar. Türbenin önüne gelen ziyaretçiler başlarını eğip ona selam verir: "Esselâmu aleyke yâ Ebâ Abdillâhi\'l-Huseyn."' },

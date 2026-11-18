@@ -77,6 +77,7 @@ test('genişleme sahnelerinin görseli kayıtlı, yer tutucu kalmaz', () => {
     'kerbela-esir-yol',
     'kerbela-kufe-pencere',
     'kerbela-erbain',
+    'kerbela-asure',
   ];
   for (const id of fresh) {
     assert.match(img, new RegExp("'" + id + "': require\\('../../assets/scenes/" + id + "\\.jpg'\\)"));
@@ -86,9 +87,8 @@ test('genişleme sahnelerinin görseli kayıtlı, yer tutucu kalmaz', () => {
     const block = src.slice(src.indexOf('scenes: ['), src.indexOf('\n  sunni:'));
     const texts = [...block.matchAll(/text: \{ tr:/g)];
     const keys = [...block.matchAll(/image: '([^']+)'/g)].map(m => m[1]);
-    const textOnly = [...block.matchAll(/textOnly: true/g)];
     assert.equal(texts.length, expected);
-    assert.equal(keys.length + textOnly.length, texts.length);
+    assert.equal(keys.length, texts.length);
     assert.equal(new Set(keys).size, keys.length);
     const pending = new Set([] as string[]);
     for (const id of keys) {
