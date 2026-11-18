@@ -120,7 +120,7 @@ export const imamlar: HistEvent = {
     { tr: 'Hz. Zeynelâbidîn Kerbelâ\'dan hasta olarak sağ çıktı ve sonraki imamlar ilim ile duayı öne aldı. Sizce imamlar zor bir dönemde rehberliği neden ilim ve dua üzerinden sürdürdü?' },
     { tr: 'Hz. Ca\'fer-i Sâdık\'ın ders halkasında hem Ehl-i Beyt talebeleri hem Katâde ve Zührî gibi isimler anılır. Sizce bu ortak ilim sofrası, mezhepler arasındaki yakınlığın neden bir göstergesi sayılır?' },
     { tr: 'Hz. Musa Kâzım ve Hz. Ali Nakî yıllarca gözetim altında yaşadı. Sizce onlar baskı altında bile ilim halkasını neden sürdürdü?' },
-    { tr: 'Hz. Ali Rızâ veliahtlığı iki ay direndikten sonra kabul etti. Sizce Hz. Ali Rızâ önce neden direndi, sonra neden kabul etti?' },
+    { tr: 'Hz. Ali Rızâ veliahtlığı iki ay direndikten sonra kabul etti. Sizce Ali Rızâ önce neden direndi, sonra neden kabul etti?' },
     { tr: 'Hz. Mehdî rivayetleri bazı Sünni kitaplarda da vardır; doğmuş ve gizlenmiş imam inancı ise Şii kaynaklarına özgüdür. Sizce bu fark neden mezhepler arasında bu noktada ayrışıyor?' },
   ],
   summary: { tr: 'Kerbelâ\'dan sonra Hz. Zeynelâbidîn\'den Hz. Hasan Askerî\'ye imamlar, çoğu zaman gözetim altında ilim, dua ve sabır çizgisini sürdürdü. On İkinci İmam\'ın gaybeti Şii inancının temelidir. Hz. Mehdî rivayetleri bazı Sünni kaynaklarda da yer alır.' },

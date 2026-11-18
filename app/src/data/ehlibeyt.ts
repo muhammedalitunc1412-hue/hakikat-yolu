@@ -57,7 +57,7 @@ export const ehlibeyt: HistEvent = {
     },
   ],
   sunni: [
-    { book: 'Müslim, Sahih', ref: 'No. 2404 (Sa\'d b. Ebi Vakkas)', says: { tr: 'Mübahele ayeti inince Peygamber Hz. Ali, Hz. Fatıma, Hz. Hasan ve Hz. Hüseyin\'i çağırıp "Allah\'ım bunlar ehlimdir" der.' }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/muslim:2404a', status: 'check' },
+    { book: 'Müslim, Sahih', ref: 'No. 2404 (Sa\'d b. Ebi Vakkas)', says: { tr: 'Mübahele ayeti inince Peygamber Hz. Ali, Fatıma, Hz. Hasan ve Hz. Hüseyin\'i çağırıp "Allah\'ım bunlar ehlimdir" der.' }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/muslim:2404a', status: 'check' },
     { book: 'Müslim, Sahih', ref: 'No. 2408a (Zeyd b. Erkam)', says: { tr: 'Hum suyu başında iki ağır emanet: Allah\'ın Kitabı ve Ehl-i Beyt; kapsam tartışması.' }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/muslim:2408a', status: 'verified' },
     { book: 'Tirmizi, el-Câmi\'', ref: 'No. 3788', says: { tr: 'Kitap ve itret Havz\'da Peygamber\'e varıncaya dek ayrılmaz.' }, grade: { tr: 'Tirmizi: hasen garib; Albani: sahih' }, url: 'https://hadithunlocked.com/tirmidhi:3788', status: 'verified' },
     { book: 'Hâkim, el-Müstedrek', ref: 'cilt 3, s. 151 (Safine hadisi, Ebu Zer)', says: { tr: 'Ehl-i Beyt\'in Nuh\'un gemisi gibi olduğu; Hâkim sıhhat hükmü verir.' }, grade: { tr: 'Hâkim: sahih; bazı muhaddisler zayıf sayar (tartışmalı)' }, url: 'https://en.wikishia.net/view/Hadith_of_Safina', status: 'check' },

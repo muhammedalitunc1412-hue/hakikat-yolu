@@ -144,13 +144,13 @@ export const hasan: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Erken kaynakların çoğu Hz. Hasan\'ın zehirlendiğini aktarır. Sizce Hz. Hasan, Muaviye\'nin oğlu Yezid\'i halife yapma yolunda neden en büyük engel sayılıyordu?' },
-    { tr: 'Hz. Hasan dedesi Peygamber\'in yanına gömülmek isterken "Cenazemde bir damla bile kan dökülmesin" şartını koydu. Sizce Hz. Hasan bu şartı neden önceden koydu?' },
-    { tr: 'Hz. Hasan\'ın tabutuna ok atılırken Hz. Hüseyin kılıcını çekmedi. Sizce Hz. Hüseyin okların altında bile neden kılıcını çekmedi?' },
+    { tr: 'Erken kaynakların çoğu Hz. Hasan\'ın zehirlendiğini aktarır. Sizce Hasan, Muaviye\'nin oğlu Yezid\'i halife yapma yolunda neden en büyük engel sayılıyordu?' },
+    { tr: 'Hz. Hasan dedesi Peygamber\'in yanına gömülmek isterken "Cenazemde bir damla bile kan dökülmesin" şartını koydu. Sizce Hasan bu şartı neden önceden koydu?' },
+    { tr: 'Hasan\'ın tabutuna ok atılırken Hz. Hüseyin kılıcını çekmedi. Sizce Hüseyin okların altında bile neden kılıcını çekmedi?' },
     { tr: 'Peygamber Hz. Hasan için "Allah onun aracılığıyla Müslümanların iki büyük grubunu barıştıracak" dedi. Sizce Peygamber bu barışı neden önceden, yenilgi olarak değil müjde olarak haber verdi?' },
-    { tr: 'Peygamber iki kardeş için "cennet gençlerinin efendileri" dedi. Sizce Hz. Hasan\'ın yönetimi barış için bırakması ile Hz. Hüseyin\'in Yezid\'e biat etmemesi bu sözle neden birlikte anlam kazanıyor?' },
+    { tr: 'Peygamber iki kardeş için "cennet gençlerinin efendileri" dedi. Sizce Hz. Hasan\'ın yönetimi barış için bırakması ile Hüseyin\'in Yezid\'e biat etmemesi bu sözle neden birlikte anlam kazanıyor?' },
     { tr: 'Sulh şartları ve vefat, kitaplarda farklı anlatılıyor. Böyle bir yerde hangi anlatıya neden güvenirsiniz?' },
     { tr: 'Hz. Hasan sulh şartlarında Muaviye\'nin kendisinden sonra halife tayin etmemesini koşmuştu, Muaviye ise yerine oğlu Yezid\'i bıraktı. Sizce bu şartın çiğnenmesi, Hz. Hüseyin\'in Yezid\'e biat etmeyi neden reddettiğini nasıl açıklıyor?' },
   ],
-  summary: { tr: 'Peygamber\'in seyyid dediği Hz. Hasan, babasının şehadetinden sonra biat aldı. Muaviye\'nin orduyu rüşvetle çözmesi üzerine Hz. Hasan kan dökülmesin diye savaşı bitirdi. Sulh şartları sonra çiğnendi. Yaklaşık on yıl sonra zehirlenerek şehit oldu.' },
+  summary: { tr: 'Peygamber\'in seyyid dediği Hz. Hasan, babasının şehadetinden sonra biat aldı. Muaviye\'nin orduyu rüşvetle çözmesi üzerine Hasan kan dökülmesin diye savaşı bitirdi. Sulh şartları sonra çiğnendi. Yaklaşık on yıl sonra zehirlenerek şehit oldu.' },
 };

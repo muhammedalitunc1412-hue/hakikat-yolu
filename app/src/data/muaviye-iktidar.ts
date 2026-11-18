@@ -85,7 +85,7 @@ export const muaviyeIktidar: HistEvent = {
     },
   ],
   questions: [
-    { tr: "Peygamber hilafetin otuz yıl süreceğini haber vermişti ve Hz. Hasan'ın sulhuyla bu otuz yıl doldu. Sizce Muaviye'nin oğlunu veliaht ilan etmesi bu haberle neden birlikte anılıyor?" },
+    { tr: "Peygamber hilafetin otuz yıl süreceğini haber vermişti ve Hasan'ın sulhuyla bu otuz yıl doldu. Sizce Muaviye'nin oğlunu veliaht ilan etmesi bu haberle neden birlikte anılıyor?" },
     { tr: "Muaviye Cuma hutbelerinde Hz. Ali'ye lanet okuttu ve Hucr b. Adî laneti reddedince Mercü Azra'da öldürüldü. Sizce Muaviye laneti neden hutbeye, reddedenleri neden ölüme bağladı?" },
     { tr: "Sizce Hz. Hüseyin ve Abdurrahman b. Ebi Bekir, Yezid'in veliahtlığına neden razı olmadı?" },
   ],

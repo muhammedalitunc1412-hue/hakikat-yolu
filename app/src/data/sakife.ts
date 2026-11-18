@@ -56,7 +56,7 @@ export const sakife: HistEvent = {
       by: 'both',
     },
     {
-      text: { tr: 'Hz. Fatıma\'nın vefatından sonra insanların Hz. Ali\'ye karşı tavrı değişti. Hz. Fatıma hayattayken ona gösterilen saygı, onun gidişiyle birlikte kayboldu. Buhari 4240, Hz. Ali\'nin bu dönemde insanların yüzlerini yabancı bulduğunu anlatır. Medine sokaklarında yaşanan bu soğukluk başka rivayetlerde daha açık anlatılır. **Hz. Ali** sokakta selam verirdi. İnsanlar selamını almazdı. Peygamber\'in en yakını, Hz. Fatıma\'nın eşi ve Hz. Hasan ile Hz. Hüseyin\'in babası, kendi şehrinde selamı karşılıksız kalan bir adam olmuştu.' },
+      text: { tr: 'Hz. Fatıma\'nın vefatından sonra insanların Hz. Ali\'ye karşı tavrı değişti. Hz. Fatıma hayattayken ona gösterilen saygı, onun gidişiyle birlikte kayboldu. Buhari 4240, Hz. Ali\'nin bu dönemde insanların yüzlerini yabancı bulduğunu anlatır. Medine sokaklarında yaşanan bu soğukluk başka rivayetlerde daha açık anlatılır. **Hz. Ali** sokakta selam verirdi. İnsanlar selamını almazdı. Peygamber\'in en yakını, Hz. Fatıma\'nın eşi ve Hasan ile Hüseyin\'in babası, kendi şehrinde selamı karşılıksız kalan bir adam olmuştu.' },
       image: 'sakife-yalnizlik-1',
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'ali', x: 38, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 72, scale: 4 }] },
       by: 'both',
@@ -124,9 +124,9 @@ export const sakife: HistEvent = {
     },
   ],
   questions: [
-    { tr: 'Hz. Ali ve Haşimoğulları Peygamber\'i yıkarken Sakife\'de biat alındı. Sizce Ebu Bekir, Ömer ve Ebu Ubeyde cenazenin başındaki Hz. Ali\'ye haber vermeden neden doğrudan toplantıya gitti?' },
-    { tr: 'Hz. Ali Sakife\'deki biatı kabul etmedi ve altı ay Hz. Fatıma\'nın yanında durdu. Sizce Hz. Ali bu altı ay boyunca neden kılıcını çekmedi?' },
-    { tr: 'Ebu Bekir Arapların yönetimi Kureyş\'ten başka bir kabileye bırakmayacağını söyledi. Sizce Kureyş\'in içinde Peygamber\'e en yakın olan Hz. Ali bu gerekçeyle neden anılmadı?' },
+    { tr: 'Ali ve Haşimoğulları Peygamber\'i yıkarken Sakife\'de biat alındı. Sizce Ebu Bekir, Ömer ve Ebu Ubeyde cenazenin başındaki Hz. Ali\'ye haber vermeden neden doğrudan toplantıya gitti?' },
+    { tr: 'Hz. Ali Sakife\'deki biatı kabul etmedi ve altı ay Fatıma\'nın yanında durdu. Sizce Ali bu altı ay boyunca neden kılıcını çekmedi?' },
+    { tr: 'Ebu Bekir Arapların yönetimi Kureyş\'ten başka bir kabileye bırakmayacağını söyledi. Sizce Kureyş\'in içinde Peygamber\'e en yakın olan Ali bu gerekçeyle neden anılmadı?' },
     { tr: 'Halife Ömer kendi hutbesinde "Ebu Bekir\'e yapılan biat bir felte idi" dedi ve bunun tekrarlanmaması gerektiğini ekledi. Sizce Halife Ömer bu uyarıyı neden yaptı?' },
   ],
   summary: { tr: 'Peygamber\'in ailesi onun cenazesini hazırlarken Sakife\'de biat alındı. Halife Ömer\'in bu biata "felte" dediği Buhari\'de anlatılır. Hz. Ali\'nin biatının Hz. Fatıma\'nın vefatından sonraya kaldığı da Sünni kaynaklarda geçer (Buhari, Sahih, no. 4240-4241). Şii okumada bu gün, Ehl-i Beyt\'in acısı ve Hz. Ali\'nin yeri birlikte anılır.' },

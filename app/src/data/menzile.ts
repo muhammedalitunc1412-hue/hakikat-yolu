@@ -90,7 +90,7 @@ export const menzile: HistEvent = {
   ],
   questions: [
     { tr: 'Peygamber "Ancak benden sonra peygamber yoktur" diyerek peygamberliği ayırdı. Sizce Peygamber, peygamberliği açıkça ayırıp geri kalan bağları Hz. Ali\'ye neden bıraktı?' },
-    { tr: 'Hz. Ali Tebük\'e gitmeyip Medine\'de kalınca dedikodular çıktı. Sizce Peygamber, bu dedikodulara cevap olarak neden Hz. Musa ile Hz. Harun\'un örneğini seçti?' },
+    { tr: 'Ali Tebük\'e gitmeyip Medine\'de kalınca dedikodular çıktı. Sizce Peygamber, bu dedikodulara cevap olarak neden Hz. Musa ile Harun\'un örneğini seçti?' },
     { tr: 'Tebük\'te kılıç çekilmedi. Sizce seferin hafızalarda kalan en önemli olayı neden bir savaş değil, Hz. Ali\'ye söylenen o cümle oldu?' },
   ],
   summary: { tr: 'Tebük\'te Peygamber, Hz. Ali\'ye "Harun Musa\'ya nasılsa, sen de bana öylesin" dedi. "Benden sonra peygamber yoktur" diye de ekledi. Bu söz Sünni kaynaklarda da geçer (Buhari, Sahih, no. 3706; Müslim, Sahih, no. 2404). Şia bunu, Hz. Ali\'nin Peygamber\'in kardeşi, veziri ve halifesi olduğunun delili sayar.' },
