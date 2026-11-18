@@ -50,7 +50,6 @@ const UI: Record<string, L> = {
   next: { tr: 'Kaydır', en: 'Swipe' },
   duas: { tr: 'Dualar ve Ziyaretler', en: 'Prayers & Ziyarat' },
   duasSub: { tr: 'Ayetü\'l-Kürsî, Cevşen, Ziyâret-i Âşûrâ, İmam-ı Zaman duası ve daha fazlası: Arapça, okunuş ve anlam', en: 'Arabic, transliteration and meaning' },
-  sourcesLabel: { tr: 'Kaynaklar', en: 'Sources', ar: 'المصادر', az: 'Mənbələr', es: 'Fuentes', fr: 'Sources', de: 'Quellen' },
   maps: { tr: 'Haritalar', en: 'Maps' },
   imams: { tr: 'On İki İmam', en: 'The Twelve Imams' },
   imamsKicker: { tr: 'EHL-İ BEYT İMAMLARI', en: 'IMAMS OF THE AHL AL-BAYT' },

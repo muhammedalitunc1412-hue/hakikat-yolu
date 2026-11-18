@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { FlatList, Image, PanResponder, type LayoutChangeEvent, Linking, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { FlatList, Image, type LayoutChangeEvent, Linking, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import type { Accept, Dispute, Dua, HistEvent, Scene, Source } from '../types';
 import { getLang, tx, ui } from '../i18n';
 import { FontButton, useFontScale } from './FontScale';
@@ -357,22 +357,41 @@ function AcceptChip({ by }: { by: Accept }) {
 type Panel = 'shia' | 'sunni' | 'disputes';
 type StoryPage =
   | { kind: 'scene'; scene: Scene; n: number }
-  | { kind: 'video' }
-  | { kind: 'sources' };
+  | { kind: 'video' };
 
+// Sahnenin kendi kaynakları: mezhepler sayfasındaki gibi yan yana iki düğme (Şii | Sünni), varsayılan kapalı.
+// Yalnızca bu sahnenin `cites` listesindeki kaynaklar gösterilir; bir tarafta kaynak yoksa o düğme çıkmaz.
 function SceneCites({ ev, cites }: { ev: HistEvent; cites?: Scene['cites'] }) {
-  const [open, setOpen] = useState(false);
-  const items = (cites ?? []).flatMap(c => {
-    const src = (c.side === 'sunni' ? ev.sunni : ev.shia)[c.i];
-    return src ? [{ src, tone: c.side === 'sunni' ? C.sunni : C.shia }] : [];
-  });
-  if (!items.length) return null;
+  const [open, setOpen] = useState<{ shia: boolean; sunni: boolean }>({ shia: false, sunni: false });
+  const pick = (side: 'shia' | 'sunni') => {
+    const seen = new Set<number>();
+    const list = side === 'shia' ? ev.shia : ev.sunni;
+    return (cites ?? []).flatMap(c => {
+      if (c.side !== side || seen.has(c.i) || !list[c.i]) return [];
+      seen.add(c.i);
+      return [list[c.i]];
+    });
+  };
+  const shia = pick('shia');
+  const sunni = pick('sunni');
+  if (!shia.length && !sunni.length) return null;
+  const btn = (side: 'shia' | 'sunni', n: number) => {
+    const color = side === 'shia' ? C.shia : C.sunni;
+    const on = open[side];
+    return (
+      <Pressable key={side} onPress={() => setOpen(v => ({ ...v, [side]: !v[side] }))} accessibilityRole="button" accessibilityState={{ expanded: on }} style={[s.panelBtn, { borderColor: color }, on && { backgroundColor: color }, webHit]}>
+        <Text style={[s.panelBtnText, { color: on ? C.ink : color }]}>{ui(side === 'shia' ? 'shiaSources' : 'sunniSources')} ({n}) {on ? '▲' : '▼'}</Text>
+      </Pressable>
+    );
+  };
   return (
     <View style={{ marginTop: 14 }}>
-      <Pressable onPress={() => setOpen(v => !v)} accessibilityRole="button" style={s.citeBtn}>
-        <Text style={s.citeBtnText}>{open ? 'Kaynağı gizle' : `Kaynak · ${items.length}`}</Text>
-      </Pressable>
-      {open && items.map((it, i) => <SourceCard key={i} src={it.src} tone={it.tone} />)}
+      <View style={{ flexDirection: 'row', gap: 10 }}>
+        {shia.length > 0 && btn('shia', shia.length)}
+        {sunni.length > 0 && btn('sunni', sunni.length)}
+      </View>
+      {open.shia && shia.map((src, i) => <SourceCard key={'h' + i} src={src} tone={C.shia} />)}
+      {open.sunni && sunni.map((src, i) => <SourceCard key={'s' + i} src={src} tone={C.sunni} />)}
     </View>
   );
 }
@@ -406,7 +425,6 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   const width = usePageWidth();
   const [idx, setIdx] = useState(() => rememberedScene('event:' + ev.id));
   const [open, setOpen] = useState<Panel[]>([]);
-  const [srcOpen, setSrcOpen] = useState({ shia: false, sunni: false });
   const listRef = useRef<FlatList<StoryPage>>(null);
   // initialScrollIndex yalnızca ilk açılışta okunmalı; idx ile birlikte değişirse FlatList
   // içerik boyutu değiştiğinde listeyi o eski/yeni indekse geri kaydırabiliyor.
@@ -419,7 +437,6 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   const pages = useMemo<StoryPage[]>(() => [
     ...ev.scenes.map((scene, n) => ({ kind: 'scene' as const, scene, n })),
     ...(story && SCENE_VIDEOS[ev.id + '-video'] ? [{ kind: 'video' as const }] : []),
-    ...(story ? [{ kind: 'sources' as const }] : []),
   ], [ev, story]);
   const total = pages.length;
   // Liste yüksekliği SABİT: ölçülmüş en uzun sahnenin yüksekliği (maxH), yalnızca uzun bir sahne ilk kez
@@ -437,7 +454,6 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
     if (index === settledRef.current) setCurH(n);
   }, []);
   const maps = mapsForEvent(ev.id);
-  const onSources = pages[idx]?.kind === 'sources';
   // idxRef: arka arkaya basışlarda eski (render'dan kalma) idx yerine en son hedef kullanılır.
   const idxRef = useRef(idx);
   const idleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -485,20 +501,6 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
     }, 700);
   };
   const step = (d: number) => go(idxRef.current + d);
-  // Kaynaklar sayfasında yatay kaydırma önceki sahneyi getirir. Sayfa dikey ScrollView içinde olduğundan
-  // (ve içindeki başlıklar dokunmayı yakaladığından) yatay hareket PanResponder ile yakalanır; dikey kaydırma
-  // ve dokunma etkilenmez. Eşik: |dx| > 56 ve |dx| baskın. Son sayfada ileri yön olmadığı için iki yön de geri götürür.
-  const onSourcesRef = useRef(false);
-  onSourcesRef.current = onSources;
-  const stepRef = useRef(step);
-  stepRef.current = step;
-  const pan = useMemo(() => PanResponder.create({
-    onMoveShouldSetPanResponderCapture: (_e, g) => onSourcesRef.current && Math.abs(g.dx) > 14 && Math.abs(g.dx) > Math.abs(g.dy) * 1.6,
-    onPanResponderTerminationRequest: () => false,
-    onPanResponderRelease: (_e, g) => {
-      if (onSourcesRef.current && Math.abs(g.dx) >= 56 && Math.abs(g.dx) > Math.abs(g.dy)) stepRef.current(-1);
-    },
-  }), []);
   // Kaydırma bitmeden sahne değiştirilmez. Eskiden parmak kalkar kalkmaz (onScrollEndDrag) yarım
   // kalmış konumdan sahne hesaplanıyordu; bu, kayma sürerken listenin yüksekliğini yeni sahneye göre
   // değiştiriyor ve Android'de süren sayfa kaydırmasını yarıda kesip eski sahneye geri attırıyordu.
@@ -548,38 +550,9 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
         </View>
       </View>
     </View>
-  ) : item.kind === 'sources' ? (
-    <View style={{ width }}>
-    <View collapsable={false} onLayout={e => setPageHeight(index, e.nativeEvent.layout.height)} style={{ paddingHorizontal: 16, paddingTop: 8 }}>
-      <View style={{ flexDirection: 'row', gap: 10 }}>
-        {ev.shia.length > 0 && (
-          <Pressable onPress={() => setSrcOpen(v => ({ ...v, shia: !v.shia }))} accessibilityRole="button" accessibilityState={{ expanded: srcOpen.shia }} style={[s.panelBtn, { borderColor: C.shia }, srcOpen.shia && { backgroundColor: C.shia }, webHit]}>
-            <Text style={[s.panelBtnText, { color: srcOpen.shia ? C.ink : C.shia }]}>{ui('shiaSources')} ({ev.shia.length}) {srcOpen.shia ? '▲' : '▼'}</Text>
-          </Pressable>
-        )}
-        {ev.sunni.length > 0 && (
-          <Pressable onPress={() => setSrcOpen(v => ({ ...v, sunni: !v.sunni }))} accessibilityRole="button" accessibilityState={{ expanded: srcOpen.sunni }} style={[s.panelBtn, { borderColor: C.sunni }, srcOpen.sunni && { backgroundColor: C.sunni }, webHit]}>
-            <Text style={[s.panelBtnText, { color: srcOpen.sunni ? C.ink : C.sunni }]}>{ui('sunniSources')} ({ev.sunni.length}) {srcOpen.sunni ? '▲' : '▼'}</Text>
-          </Pressable>
-        )}
-      </View>
-      {srcOpen.shia && ev.shia.length > 0 && (
-        <View style={s.panel}>
-          <Text style={[s.panelTitle, { color: C.shia }, align()]}>{ui('shiaSources')}</Text>
-          {ev.shia.map((x, i) => <SourceCard key={'h' + i} src={x} tone={C.shia} />)}
-        </View>
-      )}
-      {srcOpen.sunni && ev.sunni.length > 0 && (
-        <View style={s.panel}>
-          <Text style={[s.panelTitle, { color: C.sunni }, align()]}>{ui('sunniSources')}</Text>
-          {ev.sunni.map((x, i) => <SourceCard key={'s' + i} src={x} tone={C.sunni} />)}
-        </View>
-      )}
-    </View>
-    </View>
   ) : (
     <ScenePage ev={ev} item={item} index={index} width={width} story={story} lang={lang} scale={scale} onHeight={setPageHeight} />
-  ), [width, ev, story, srcOpen, setPageHeight, lang, scale]);
+  ), [width, ev, story, setPageHeight, lang, scale]);
 
   const Btn = ({ p, label, n, color }: { p: Panel; label: string; n: number; color: string }) => (
     <Pressable onPress={() => toggle(p)} accessibilityRole="button" style={[s.panelBtn, { borderColor: color }, has(p) && { backgroundColor: color }, webHit]}>
@@ -672,7 +645,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   ), [ev, story, nDis, open, scale, lang]);
 
   return (
-    <View style={{ flex: 1, backgroundColor: C.bg }} {...(onSources ? pan.panHandlers : null)}>
+    <View style={{ flex: 1, backgroundColor: C.bg }}>
       <ScrollView
         {...sc}
         style={{ flex: 1 }}
@@ -691,7 +664,6 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
           pagingEnabled
           nestedScrollEnabled
           directionalLockEnabled
-          scrollEnabled={!onSources}
           showsHorizontalScrollIndicator={false}
           style={[s.sceneList, maxH ? { height: maxH, marginBottom: curH && curH <= maxH ? curH - maxH : 0 } : null]}
           keyExtractor={keyExtractor}
@@ -720,7 +692,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
             <Text style={s.pillText} numberOfLines={1}>{ui('prev')}</Text>
           </Pressable>
           <View style={{ flex: 1, alignItems: 'center', paddingHorizontal: 4 }}>
-            <Text style={s.pagerLabel} numberOfLines={1}>{pages[idx]?.kind === 'video' ? ui('video') : pages[idx]?.kind === 'sources' ? ui('sourcesLabel') : `${ui('scene')} ${(pages[idx] && pages[idx].kind === 'scene' ? pages[idx].n : idx) + 1} / ${ev.scenes.length}`}</Text>
+            <Text style={s.pagerLabel} numberOfLines={1}>{pages[idx]?.kind === 'video' ? ui('video') : `${ui('scene')} ${(pages[idx] && pages[idx].kind === 'scene' ? pages[idx].n : idx) + 1} / ${ev.scenes.length}`}</Text>
             <View style={s.dots}>
               {pages.map((_, i) => <View key={i} style={[s.dot, i === idx && s.dotOn]} />)}
             </View>
@@ -734,7 +706,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
 
         {below}
       </ScrollView>
-      {onSources && idx > 0 && (
+      {idx === total - 1 && idx > 0 && (
         <Pressable onPress={() => step(-1)} accessibilityRole="button" accessibilityLabel={ui('prevScene')} style={({ pressed }) => [s.prevBar, pressed && s.pressed, webHit]}>
           <Text style={s.prevBarText}>‹  {ui('prevScene')}</Text>
         </Pressable>
