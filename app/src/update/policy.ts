@@ -1,6 +1,6 @@
 export type Platform = 'android' | 'ios';
 
-export const CONFIG_URL = 'https://raw.githubusercontent.com/muhammedalitunc1412-hue/hakikat-yolu/main/config/app-config.json';
+export const CONFIG_URL = 'https://raw.githubusercontent.com/muhammedalitunc1412-hue/hakikat-yolu-config/main/app-config.json';
 
 export type UpdateState =
   | { kind: 'none' }

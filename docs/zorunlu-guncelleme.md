@@ -2,11 +2,12 @@
 
 Uygulama her açılışta ve arka plandan öne her dönüşünde şu dosyayı okur:
 
-https://raw.githubusercontent.com/muhammedalitunc1412-hue/hakikat-yolu/main/config/app-config.json
+https://raw.githubusercontent.com/muhammedalitunc1412-hue/hakikat-yolu-config/main/app-config.json
 
-Dosya `main` dalındaki `config/app-config.json` dosyasıdır. Depo herkese açık olmalıdır;
-özel yapılırsa bu adres çalışmaz ve kontrol sessizce devre dışı kalır. İstek 5 saniye
-sonra zaman aşımına uğrar ve adrese `?t=<zaman>` eklenerek önbellek atlanır.
+Dosya, herkese açık `hakikat-yolu-config` deposunun `main` dalındaki kök `app-config.json`
+dosyasıdır. Uygulama deposu özel olduğu için `raw.githubusercontent` oradaki
+`config/app-config.json` dosyasını okuyamaz; canlı ayar bu yüzden ayrı depodadır.
+İstek 5 saniye sonra zaman aşımına uğrar ve adrese `?t=<zaman>` eklenerek önbellek atlanır.
 
 ## Nasıl çalışır
 
@@ -51,7 +52,8 @@ görünmez.
 2. Sürümü derleyin (AAB) ve Play Console'a yükleyin.
 3. Sürümün Play Store'da **yayında ve herkes tarafından indirilebilir** olmasını bekleyin.
    İnceleme ve kademeli yayın bitmeden devam etmeyin.
-4. Ancak ondan sonra `config/app-config.json` içinde sayıları yükseltin ve `main`'e gönderin:
+4. Ancak ondan sonra herkese açık `hakikat-yolu-config` deposundaki kök `app-config.json`
+   dosyasında sayıları yükseltin ve o deponun `main` dalına gönderin:
    * İsteğe bağlı güncelleme: `latestVersionCode` = yeni `versionCode`.
    * Zorunlu güncelleme: `minVersionCode` = yeni `versionCode`.
 
@@ -65,19 +67,22 @@ görünmez.
 }
 ```
 
-Dosya `main`'e gittikten sonra yaklaşık 5 dakika içinde etkili olur (GitHub önbelleği).
+Dosya `hakikat-yolu-config` deposunun `main` dalına gittikten sonra yaklaşık 5 dakika içinde
+etkili olur (GitHub önbelleği). Bu uygulama deposundaki `config/app-config.json` kopyası
+uygulama tarafından okunmaz; `policy.test.mjs` içindeki "committed config matches app.json"
+testi bu kopyayı `app.json` ile karşılaştırır. Canlı sürümü yükseltmek bu kopyayı değiştirmez.
 
 ## Dikkat: kilitlenme riski
 
 `minVersionCode` değerini yeni sürüm Play Store'da yayında olmadan yükseltmeyin.
 Yükseltirseniz bütün kullanıcılar "Güncelleme gerekli" ekranını görür, ama mağazada
 indirecekleri yeni sürüm henüz yoktur. Uygulama herkes için kullanılamaz hale gelir.
-Yanlışlıkla yükseltirseniz sayıyı geri indirip `main`'e gönderin; kullanıcılar
-uygulamayı bir sonraki açışlarında ya da öne getirişlerinde kurtulur.
+Yanlışlıkla yükseltirseniz sayıyı `hakikat-yolu-config` deposunda geri indirip `main`'e
+gönderin; kullanıcılar uygulamayı bir sonraki açışlarında ya da öne getirişlerinde kurtulur.
 
-`minVersionCode` hiçbir zaman `app.json` içindeki `versionCode` değerinden büyük olamaz;
-`policy.test.mjs` testi bunu denetler. Bu yüzden önce `versionCode` artırılıp
-birlikte `main`'e gönderilmeli, `minVersionCode` ise yayına çıktıktan sonra yükseltilmelidir.
+Bu depodaki `config/app-config.json` kopyasında `minVersionCode`, `app.json` içindeki
+`versionCode` değerinden büyük olamaz; `policy.test.mjs` testi bunu denetler. Canlı
+`minVersionCode` ise Play'de yayınlandıktan sonra `hakikat-yolu-config` deposunda yükseltilir.
 
 ## Hatırlatma: `versionCode`
 
