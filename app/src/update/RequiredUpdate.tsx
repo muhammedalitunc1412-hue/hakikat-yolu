@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useState } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { AppState, Linking, Modal, Platform, Pressable, Text, View } from 'react-native';
 import * as Application from 'expo-application';
 import config from '../../app.json';
 import { ui } from '../i18n';
 import type { Lang } from '../types';
 import { C, TOP } from '../ui/theme';
-import { CONFIG_URL, evaluateUpdate, fetchAppConfig, marketUrl, type UpdateState } from './policy';
+import { applyFreshConfig, CONFIG_URL, fetchAppConfig, marketUrl, readStoredState, type UpdateState } from './policy';
 
 const FETCH_TIMEOUT_MS = 5000;
 const NONE: UpdateState = { kind: 'none' };
@@ -16,12 +17,21 @@ let optionalHandled = false;
 // Reads the remote config at launch and every time the app returns to the foreground.
 // Offline or broken config -> the app simply opens normally.
 export function useAppUpdate() {
+  const supported = Platform.OS === 'android' || Platform.OS === 'ios';
   const [state, setState] = useState<UpdateState>(NONE);
+  // False until the stored rule has been read, so the app never flashes before a blocking screen.
+  const [loaded, setLoaded] = useState(!supported);
   useEffect(() => {
-    const platform = Platform.OS;
-    if (platform !== 'android' && platform !== 'ios') return;
+    if (!supported) return;
+    const platform = Platform.OS as 'android' | 'ios';
     let request: AbortController | undefined;
     let alive = true;
+    let fresh = false;
+
+    // Independent of the network: a stored higher minVersionCode blocks immediately, even offline.
+    readStoredState(AsyncStorage, platform, Application.nativeBuildVersion, androidPackage).then(stored => {
+      if (alive && !fresh) setState(stored);
+    }).finally(() => { if (alive) setLoaded(true); });
 
     async function check() {
       request?.abort();
@@ -31,10 +41,12 @@ export function useAppUpdate() {
       try {
         const remote = await fetchAppConfig(CONFIG_URL, controller.signal);
         if (!alive || controller.signal.aborted || remote === undefined) return;
-        const next = evaluateUpdate(remote, platform as 'android' | 'ios', Application.nativeBuildVersion, androidPackage);
+        fresh = true;
+        const next = await applyFreshConfig(AsyncStorage, remote, platform, Application.nativeBuildVersion, androidPackage);
+        if (!alive) return;
         setState(prev => (next.kind === 'optional' && optionalHandled && prev.kind !== 'optional' ? NONE : next));
       } catch {
-        // Unreachable server or bad JSON must never lock anybody out.
+        // Unreachable server or bad JSON: keep whatever the stored rule says (never newly blocks).
       } finally {
         clearTimeout(timer);
       }
@@ -47,12 +59,12 @@ export function useAppUpdate() {
       request?.abort();
       subscription.remove();
     };
-  }, []);
+  }, [supported]);
   const dismissOptional = useCallback(() => {
     optionalHandled = true;
     setState(NONE);
   }, []);
-  return { state, dismissOptional };
+  return { state, dismissOptional, loaded };
 }
 
 export async function openStore(storeUrl: string) {

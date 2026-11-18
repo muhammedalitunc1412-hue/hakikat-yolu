@@ -17,12 +17,31 @@ Telefondaki sürüm numarası (Android'de `android.versionCode`) dosyadaki sayı
 | Yüklü sürüm < `minVersionCode` | Tam ekran, kapatılamayan "Güncelleme gerekli" ekranı. Geri tuşu çalışmaz. "Güncelle" düğmesi Play Store'u (`market://`) açar, açılmazsa web sayfasına geçer. |
 | `minVersionCode` ≤ yüklü sürüm < `latestVersionCode` | Kapatılabilir "Yeni sürüm mevcut" penceresi. Her oturumda en fazla bir kez görünür. |
 | Yüklü sürüm ≥ `latestVersionCode` | Hiçbir şey görünmez. |
-| İnternet yok, sunucu hatası, bozuk dosya | Uygulama normal açılır. Kimse kilitlenmez. |
+| İnternet yok, sunucu hatası, bozuk dosya | Cihazda daha önce yüksek bir `minVersionCode` görülmediyse uygulama normal açılır. Görüldüyse aşağıdaki "Cihazda saklanan değer" kuralı geçerlidir. |
 
 `message.tr` ve `message.en` yalnızca zorunlu güncelleme ekranındaki açıklamayı değiştirir.
 Diğer diller uygulamadaki çevrilmiş varsayılan metni gösterir. Mağaza adresi güvenlik
 için koddaki paket adından üretilir; dosyadaki `storeUrl` Android'de yalnızca bilgi içindir.
 Kontrol web ve iOS'ta (iOS için geçerli bir App Store adresi girilene kadar) bir şey yapmaz.
+
+## Cihazda saklanan değer (internet kapalıyken)
+
+Dosya başarıyla her okunduğunda `minVersionCode` ve `latestVersionCode` cihazda saklanır
+(AsyncStorage, `hakikat-yolu:update-policy`). Uygulama açılırken ağdan bağımsız olarak önce
+bu değer okunur; ekran bu okuma bitmeden çizilmez, bu yüzden uygulama içeriği bir an bile
+görünmez.
+
+* Yüklü sürüm saklanan `minVersionCode` değerinden küçükse "Güncelleme gerekli" ekranı
+  **internet kapalı olsa bile** hemen açılır. Cihaz bir kez daha yüksek bir minimum gördüyse,
+  güncellenene kadar çevrimdışı da kilitli kalır.
+* Yeni sürüm yüklenince (yüklü sürüm ≥ saklanan değer) uygulama normal açılır.
+* Çevrimiçi bir okuma başarılı olunca saklanan değerin üzerine yazılır. `minVersionCode`
+  değerini **düşürürseniz** bu yalnızca cihaz internete bağlanıp dosyayı okuduğunda
+  etkili olur; çevrimdışı kilitli bir cihaz o zamana kadar kilitli kalır.
+* Saklanan `latestVersionCode` yalnızca kayıt içindir; çevrimdışıyken "Yeni sürüm mevcut"
+  penceresi göstermez.
+* Ağ hatası, zaman aşımı veya bozuk dosya saklanan değeri silmez ve yeni bir kilit koymaz.
+  Dosya geçerli ama Android kuralı içermiyorsa saklanan değer temizlenir.
 
 ## Her yeni sürümde yapılacaklar
 

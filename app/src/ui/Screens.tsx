@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { FlatList, Image, type LayoutChangeEvent, Linking, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { FlatList, Image, type LayoutChangeEvent, Linking, Modal, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import type { Accept, Dispute, Dua, HistEvent, Scene, Source } from '../types';
 import { getLang, tx, ui } from '../i18n';
 import { FontButton, useFontScale } from './FontScale';
@@ -359,43 +359,46 @@ type StoryPage =
   | { kind: 'scene'; scene: Scene; n: number }
   | { kind: 'video' };
 
-// Sahnenin kendi kaynakları: mezhepler sayfasındaki gibi yan yana iki düğme (Şii | Sünni), varsayılan kapalı.
-// Yalnızca bu sahnenin `cites` listesindeki kaynaklar gösterilir; bir tarafta kaynak yoksa o düğme çıkmaz.
-function SceneCites({ ev, cites }: { ev: HistEvent; cites?: Scene['cites'] }) {
-  const [open, setOpen] = useState<{ shia: boolean; sunni: boolean }>({ shia: false, sunni: false });
-  const pick = (side: 'shia' | 'sunni') => {
-    const seen = new Set<number>();
-    const list = side === 'shia' ? ev.shia : ev.sunni;
-    return (cites ?? []).flatMap(c => {
-      if (c.side !== side || seen.has(c.i) || !list[c.i]) return [];
-      seen.add(c.i);
-      return [list[c.i]];
-    });
-  };
-  const shia = pick('shia');
-  const sunni = pick('sunni');
-  if (!shia.length && !sunni.length) return null;
-  const btn = (side: 'shia' | 'sunni', n: number) => {
-    const color = side === 'shia' ? C.shia : C.sunni;
-    const on = open[side];
-    return (
-      <Pressable key={side} onPress={() => setOpen(v => ({ ...v, [side]: !v[side] }))} accessibilityRole="button" accessibilityState={{ expanded: on }} style={[s.panelBtn, { borderColor: color }, on && { backgroundColor: color }, webHit]}>
-        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6 }}>
-          <Text style={[s.panelBtnText, { color: on ? C.ink : color, flexShrink: 1 }]}>{ui(side === 'shia' ? 'shiaSources' : 'sunniSources')} ({n})</Text>
-          <Text style={[s.panelBtnText, { color: on ? C.ink : color }]}>{on ? '▲' : '▼'}</Text>
-        </View>
-      </Pressable>
-    );
-  };
+// Hikâyenin bütün kaynakları: son sahnedeki "Kaynaklar" düğmesiyle açılan alt sayfa (varsayılan kapalı).
+function SourcesSheet({ ev, onClose }: { ev: HistEvent; onClose: () => void }) {
+  // Sheet her açılışta yeniden bağlanır; iki bölüm de kapalı başlar.
+  const [expanded, setExpanded] = useState<{ shia: boolean; sunni: boolean }>({ shia: false, sunni: false });
+  const sections = [
+    { key: 'shia', title: ui('shiaSourceList'), color: C.shia, list: ev.shia },
+    { key: 'sunni', title: ui('sunniSourceList'), color: C.sunni, list: ev.sunni },
+  ];
   return (
-    <View style={{ marginTop: 14 }}>
-      <View style={{ flexDirection: 'row', gap: 10 }}>
-        {shia.length > 0 && btn('shia', shia.length)}
-        {sunni.length > 0 && btn('sunni', sunni.length)}
+    <Modal transparent animationType="slide" onRequestClose={onClose} statusBarTranslucent>
+      <View style={s.sheetWrap}>
+        <Pressable style={{ flex: 1 }} onPress={onClose} accessibilityRole="button" accessibilityLabel={ui('close')} />
+        <View style={s.sheet}>
+          <View style={s.sheetGrip} />
+          <View style={s.sheetHead}>
+            <Text accessibilityRole="header" style={[s.sheetTitle, align(), { flex: 1 }]} numberOfLines={2}>{ui('sources')} · {tx(ev.title)}</Text>
+            <Pressable onPress={onClose} accessibilityRole="button" accessibilityLabel={ui('close')} style={[s.sheetClose, webHit]}>
+              <Text style={s.sheetCloseText}>{ui('close')}</Text>
+            </Pressable>
+          </View>
+          <ScrollView style={{ flexShrink: 1 }} contentContainerStyle={{ padding: 16, paddingBottom: 32 }} showsVerticalScrollIndicator>
+            {sections.map(sec => {
+              const on = expanded[sec.key as 'shia' | 'sunni'];
+              return (
+                <View key={sec.key} style={{ marginBottom: 12 }}>
+                  <Pressable
+                    onPress={() => setExpanded(v => ({ ...v, [sec.key]: !v[sec.key as 'shia' | 'sunni'] }))}
+                    accessibilityRole="button" accessibilityState={{ expanded: on }}
+                    style={[s.sheetSection, { borderColor: sec.color }, on && { backgroundColor: sec.color }, webHit]}>
+                    <Text style={[s.sheetSectionText, { color: on ? C.ink : sec.color }, align()]}>{sec.title} ({sec.list.length})</Text>
+                    <Text style={[s.sheetSectionText, { color: on ? C.ink : sec.color }]}>{on ? '▲' : '▼'}</Text>
+                  </Pressable>
+                  {on && (sec.list.length ? sec.list.map((x, i) => <SourceCard key={i} src={x} tone={sec.color} />) : <Text style={[s.dim, { marginTop: 10 }]}>{ui('none')}</Text>)}
+                </View>
+              );
+            })}
+          </ScrollView>
+        </View>
       </View>
-      {open.shia && shia.map((src, i) => <SourceCard key={'h' + i} src={src} tone={C.shia} />)}
-      {open.sunni && sunni.map((src, i) => <SourceCard key={'s' + i} src={src} tone={C.sunni} />)}
-    </View>
+    </Modal>
   );
 }
 
@@ -403,8 +406,8 @@ type ScenePageItem = Extract<StoryPage, { kind: 'scene' }>;
 
 // Sahne sayfası: yalnızca kendi verisi değişince yeniden çizilir. Eskiden EventScreen her
 // setIdx / yükseklik güncellemesinde bütün sahneleri (görsel + uzun metin) baştan çiziyordu.
-const ScenePage = React.memo(function ScenePage({ ev, item, index, width, story, lang, scale, onHeight }: {
-  ev: HistEvent; item: ScenePageItem; index: number; width: number; story: boolean; lang: string; scale: number;
+const ScenePage = React.memo(function ScenePage({ ev, item, index, width, lang, scale, onHeight }: {
+  ev: HistEvent; item: ScenePageItem; index: number; width: number; lang: string; scale: number;
   onHeight: (index: number, h: number) => void;
 }) {
   void lang; void scale; // dil ve yazı boyutu değişince memo'yu kırmak için
@@ -416,7 +419,6 @@ const ScenePage = React.memo(function ScenePage({ ev, item, index, width, story,
         <View style={s.sceneText}>
           <Rich style={[s.sceneBody, align()]} text={item.scene.text} selectable={Platform.OS !== 'android'} />
           {!!item.scene.by && <AcceptChip by={item.scene.by} />}
-          {story && <SceneCites ev={ev} cites={item.scene.cites} />}
         </View>
       </View>
     </View>
@@ -428,6 +430,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   const width = usePageWidth();
   const [idx, setIdx] = useState(() => rememberedScene('event:' + ev.id));
   const [open, setOpen] = useState<Panel[]>([]);
+  const [sourcesOpen, setSourcesOpen] = useState(false);
   const listRef = useRef<FlatList<StoryPage>>(null);
   // initialScrollIndex yalnızca ilk açılışta okunmalı; idx ile birlikte değişirse FlatList
   // içerik boyutu değiştiğinde listeyi o eski/yeni indekse geri kaydırabiliyor.
@@ -554,8 +557,8 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
       </View>
     </View>
   ) : (
-    <ScenePage ev={ev} item={item} index={index} width={width} story={story} lang={lang} scale={scale} onHeight={setPageHeight} />
-  ), [width, ev, story, setPageHeight, lang, scale]);
+    <ScenePage ev={ev} item={item} index={index} width={width} lang={lang} scale={scale} onHeight={setPageHeight} />
+  ), [width, ev, setPageHeight, lang, scale]);
 
   const Btn = ({ p, label, n, color }: { p: Panel; label: string; n: number; color: string }) => (
     <Pressable onPress={() => toggle(p)} accessibilityRole="button" style={[s.panelBtn, { borderColor: color }, has(p) && { backgroundColor: color }, webHit]}>
@@ -712,10 +715,20 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
 
         {below}
       </ScrollView>
-      {idx === total - 1 && idx > 0 && (
-        <Pressable onPress={() => step(-1)} accessibilityRole="button" accessibilityLabel={ui('prevScene')} style={({ pressed }) => [s.prevBar, pressed && s.pressed, webHit]}>
-          <Text style={s.prevBarText}>‹  {ui('prevScene')}</Text>
-        </Pressable>
+      {idx === total - 1 && (idx > 0 || story) && (
+        <View style={s.lastRow}>
+          {idx > 0 && (
+            <Pressable onPress={() => step(-1)} accessibilityRole="button" accessibilityLabel={ui('prevScene')} style={({ pressed }) => [s.prevBar, s.lastBtn, pressed && s.pressed, webHit]}>
+              <Text style={s.prevBarText} numberOfLines={1} adjustsFontSizeToFit>‹  {ui('prevScene')}</Text>
+            </Pressable>
+          )}
+          {story && (
+            <Pressable onPress={() => setSourcesOpen(true)} accessibilityRole="button" accessibilityLabel={ui('sources')} style={({ pressed }) => [s.sourcesBtn, s.lastBtn, pressed && s.pressed, webHit]}>
+              <BookIcon size={18} />
+              <Text style={s.sourcesBtnText} numberOfLines={1} adjustsFontSizeToFit>{ui('sources')}</Text>
+            </Pressable>
+          )}
+        </View>
       )}
       {idx === total - 1 && nxt && onNext && (
         <Pressable onPress={() => onNext(nxt.id)} accessibilityRole="button" accessibilityLabel={ui('nextEvent')} style={({ pressed }) => [s.nextBar, pressed && s.pressed, webHit]}>
@@ -726,6 +739,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
           <View style={s.nextArrow}><Chevron color={C.gold} /></View>
         </Pressable>
       )}
+      {sourcesOpen && <SourcesSheet ev={ev} onClose={() => setSourcesOpen(false)} />}
     </View>
   );
 }
@@ -840,6 +854,19 @@ const s = themedStyles(() => StyleSheet.create({
   citeBtnText: { color: C.gold, fontFamily: font.sans, fontSize: 13, fontWeight: '800' },
   srcFold: { marginTop: 12, borderWidth: 1.5, borderRadius: 16, paddingVertical: 14, paddingHorizontal: 14, minHeight: 52, justifyContent: 'center' },
   srcFoldText: { fontFamily: font.sans, fontWeight: '800', fontSize: 15, lineHeight: 20 },
+  lastRow: { flexDirection: 'row', gap: 10, marginHorizontal: 16, marginBottom: 10 },
+  lastBtn: { flex: 1, marginHorizontal: 0, marginBottom: 0, paddingHorizontal: 10 },
+  sourcesBtn: { minHeight: 52, borderRadius: 26, borderWidth: 1.5, borderColor: C.gold, backgroundColor: 'rgba(228,197,106,0.12)', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8 },
+  sourcesBtnText: { color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '800' },
+  sheetWrap: { flex: 1, backgroundColor: 'rgba(0,0,0,0.6)', justifyContent: 'flex-end', alignItems: 'center' },
+  sheet: { width: '100%', maxWidth: 720, maxHeight: '88%', backgroundColor: C.bg, borderTopLeftRadius: 24, borderTopRightRadius: 24, borderWidth: 1, borderBottomWidth: 0, borderColor: C.lineStrong },
+  sheetGrip: { alignSelf: 'center', width: 44, height: 5, borderRadius: 3, backgroundColor: C.lineStrong, marginTop: 8 },
+  sheetHead: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingHorizontal: 16, paddingTop: 10, paddingBottom: 10, borderBottomWidth: 1, borderBottomColor: C.line },
+  sheetSection: { minHeight: 52, alignSelf: 'stretch', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 10, borderWidth: 1.5, borderRadius: 16, paddingHorizontal: 16, paddingVertical: 10, marginBottom: 10 },
+  sheetSectionText: { fontFamily: font.sans, fontWeight: '800', fontSize: 16, lineHeight: 22, flexShrink: 1 },
+  sheetTitle: { color: C.cream, fontFamily: font.serif, fontSize: 20, fontWeight: '700' },
+  sheetClose: { minHeight: 44, minWidth: 44, paddingHorizontal: 16, borderRadius: 22, borderWidth: 1.5, borderColor: C.gold, alignItems: 'center', justifyContent: 'center' },
+  sheetCloseText: { color: C.gold, fontFamily: font.sans, fontSize: 14, fontWeight: '800' },
   prevBar: { minHeight: 52, marginHorizontal: 16, marginBottom: 10, borderRadius: 26, borderWidth: 1.5, borderColor: C.gold, backgroundColor: 'rgba(228,197,106,0.12)', alignItems: 'center', justifyContent: 'center' },
   prevBarText: { color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '800' },
   nextBar: { flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: C.gold, marginHorizontal: 16, marginBottom: 14, paddingLeft: 20, paddingRight: 12, paddingVertical: 12, minHeight: 76, borderRadius: 24, borderWidth: 1, borderColor: C.cream },
