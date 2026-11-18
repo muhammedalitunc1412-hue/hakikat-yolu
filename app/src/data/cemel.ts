@@ -9,21 +9,24 @@ export const cemel: HistEvent = {
   scenes: [
     {
       text: { tr: 'Biatın ardından **Hz. Ali** hemen işe koyuldu. Devraldığı düzen yıllardır bozulmuştu. Akraba kayırmacılığı, haksız yere dağıtılmış mallar ve halkı ezen valiler ortadaydı. Hz. Ali önce haksız yere verilmiş malları beytülmale, yani ümmetin ortak hazinesine geri aldı. Ardından halkın şikâyet ettiği valileri görevden aldı. Bu kararlar, Osman döneminde zenginleşen ve güç kazanan kişileri rahatsız etti. Hz. Ali\'nin adaleti, kısa süre içinde ona karşı kılıç çekecek düşmanlar doğurdu. Önce Basra\'da, sonra Sıffin\'de bu adaletin bedeli ödenecekti.' },
+      cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 3 }, { side: 'sunni', i: 1 }],
       art: { bg: 'city', props: ['minbar', 'palms'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'ali', x: 66, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: '**Talha** ile **Zübeyr** de Medine\'de **Hz. Ali**\'ye biat etmişti. Ama verdikleri söz dillerinde kaldı, gönüllerine yerleşmedi. Rivayetlere göre ikisi de Hz. Ali\'den devlette yüksek bir makam istedi ve Basra ile Kûfe valiliklerine göz dikti. Hz. Ali, adam kayırmayı doğru bulmadığı için bu isteği geri çevirdi. Osman\'ın valilerini değiştirirken de onlara beklediklerini vermedi. Haksız malları beytülmale geri aldı ve kimseye ayrıcalık tanımadı. Şam\'da ise **Muaviye** valilik koltuğunu bırakmayı reddetti. Kaybedilen makamlar ve geri alınan mallar, itirazın asıl sebebiydi. Ama itiraz edenler, Osman\'ın kanını gerekçe olarak öne sürdü. Osman\'ın kanı, menfaatleri zarar gören herkes için bir bahane haline geldi.' },
+      text: { tr: '**Talha** ile **Zübeyr** de Medine\'de **Hz. Ali**\'ye biat etmişti. Ama verdikleri söz dillerinde kaldı, gönüllerine yerleşmedi. İkisi de Hz. Ali\'den devlette yüksek bir makam istedi ve Basra ile Kûfe valiliklerine göz dikti. Hz. Ali, adam kayırmayı doğru bulmadığı için bu isteği geri çevirdi. Osman\'ın valilerini değiştirirken de onlara beklediklerini vermedi. Haksız malları beytülmale geri aldı ve kimseye ayrıcalık tanımadı. Şam\'da ise **Muaviye** valilik koltuğunu bırakmayı reddetti. Kaybedilen makamlar ve geri alınan mallar, itirazın asıl sebebiydi. Ama itiraz edenler, Osman\'ın kanını gerekçe olarak öne sürdü. Osman\'ın kanı, menfaatleri zarar gören herkes için bir bahane haline geldi.' },
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 24, label: { tr: 'Talha' } }, { kind: 'man', x: 46, label: { tr: 'Zübeyr' } }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Şam valisi **Muaviye**, Osman\'ın katilleri cezalandırılmadan **Hz. Ali**\'ye biat etmeyeceğini bildirdi. Osman\'ın kanı onun için bir gerekçeydi. Asıl istediği, elindeki gücü korumak ve iktidara uzanmaktı. Hz. Ali ise önce düzeni kurmak, ardından davayı adaletle görmek istiyordu. Acele intikamın yeni bir karışıklık doğuracağını biliyordu. Önce mektuplar yazdı, elçiler gönderdi. Kılıcı her zaman en son çare olarak gördü.' },
+      cites: [{ side: 'shia', i: 2 }],
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 34, label: { tr: 'Muaviye' } }, { kind: 'crowd', x: 70, scale: 7 }] },
       by: 'both',
     },
     {
       text: { tr: 'Bu sırada Mekke\'de umre için bulunan **Aişe**, Talha ve Zübeyr ile bir araya geldi. İstedikleri makamı alamayan Talha ve Zübeyr, Osman\'ın kanını bahane ederek Aişe ile birlikte Basra\'ya doğru yola çıktı. Yanlarına toplanan kalabalıkla birlikte, biat ettikleri **Hz. Ali**\'ye karşı bir ordu kurdular. Böylece daha yeni kabul edilen halifeliği yeniden tartışmaya açtılar. Basra yolunda Gadir\'deki ilan değil, Osman\'ın kanı anılıyordu. Peygamber\'in vefatından yaklaşık çeyrek asır sonra Müslümanlar ilk kez kendi aralarında büyük bir savaşa doğru sürükleniyordu.' },
+      cites: [{ side: 'sunni', i: 1 }],
       art: { bg: 'dune-day', props: ['sun', 'camels'], actors: [{ kind: 'woman', x: 24, label: { tr: 'Aişe' } }, { kind: 'man', x: 50, label: { tr: 'Talha' } }, { kind: 'man', x: 74, label: { tr: 'Zübeyr' } }] },
       by: 'both',
     },
@@ -40,17 +43,20 @@ export const cemel: HistEvent = {
       cites: [{ side: 'sunni', i: 5 }, { side: 'sunni', i: 0 }, { side: 'shia', i: 1 }],
     },
     {
-      text: { tr: 'Barış için yapılan bütün çabalar sonuçsuz kalınca iki ordu karşılaştı. Savaşın merkezinde Aişe\'nin bindiği deve duruyordu. Karşı tarafın askerleri devenin çevresinde toplanıyordu. Deve ayakta durdukça savaş da sürüyordu. Rivayete göre Hz. Ali, kan dökülmesini durdurmak için devenin kesilmesini emretti. Devenin çevresinde, sırtındaki hevdeci koruyanlardan yaklaşık yetmiş kişi can verdi. Deve yere çöktüğünde karşı taraf toplanacak bir yer bulamadı ve ordu dağıldı. **Talha** da bu savaşta öldürüldü. Bu savaşa, devenin adından dolayı **Cemel**, yani Deve Savaşı denir.' },
+      text: { tr: 'Barış için yapılan bütün çabalar sonuçsuz kalınca iki ordu karşılaştı. Savaşın merkezinde Aişe\'nin bindiği deve duruyordu. Karşı tarafın askerleri devenin çevresinde toplanıyordu. Deve ayakta durdukça savaş da sürüyordu. Hz. Ali, kan dökülmesini durdurmak için devenin kesilmesini emretti. Devenin çevresinde, sırtındaki hevdeci koruyanlardan yaklaşık yetmiş kişi can verdi. Deve yere çöktüğünde karşı taraf toplanacak bir yer bulamadı ve ordu dağıldı. **Talha** da bu savaşta öldürüldü. Bu savaşa, devenin adından dolayı **Cemel**, yani Deve Savaşı denir.' },
+      cites: [{ side: 'sunni', i: 2 }, { side: 'sunni', i: 6 }, { side: 'sunni', i: 7 }],
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'crowd', x: 24, scale: 7 }, { kind: 'woman', x: 56, label: { tr: 'Aişe' } }, { kind: 'ali', x: 84, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Savaş bittiğinde **Hz. Ali** galip gelmişti, ama hiçbir zaferin keyfini çıkarmadı. Esirleri serbest bıraktı. Yenilen tarafın malları, kadınları ve çocukları üzerinde ganimet hükmünü uygulamadı. Kimsenin evine girilmesine, kimsenin malına el sürülmesine izin vermedi. **Aişe**\'ye Peygamber\'in eşi olarak saygı gösterdi. Onu kardeşi **Muhammed b. Ebi Bekir**\'in yanında, onurlu bir şekilde Medine\'ye uğurladı. Kendisine kılıç çekenlere bile adaletle davranan Hz. Ali, Peygamber\'in ahlakını savaş meydanının ortasında da korudu.' },
+      cites: [{ side: 'sunni', i: 8 }],
       art: { bg: 'dawn', props: ['camels'], actors: [{ kind: 'ali', x: 26, label: { tr: 'Hz. Ali' } }, { kind: 'woman', x: 54, label: { tr: 'Aişe' } }, { kind: 'man', x: 80, label: { tr: 'Muhammed b. Ebi Bekir' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Anlatıldığına göre Aişe, Cemel\'den sonra bu savaşa katıldığı için derin bir üzüntü duydu. Hz. Ali ise biat sözünü bozanlara karşı hem sabrı hem de hakkı birlikte korumuştu. Basra\'da yaşanan bu kanlı gün sona ermişti, ama Hz. Ali\'nin önünde daha büyük bir sınav duruyordu. Şam\'da **Muaviye** hâlâ biat etmiyor ve Osman\'ın kanını bahane ederek büyük bir ordu topluyordu. Hz. Ali, Basra\'dan sonra Kûfe\'ye geçti ve orayı halifeliğinin merkezi yaptı. Kısa süre sonra Fırat\'ın kıyısında, Sıffin\'de, Muaviye\'nin ordusuyla karşı karşıya gelecekti.' },
+      cites: [{ side: 'sunni', i: 3 }],
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'woman', x: 36, pose: 'sit', label: { tr: 'Aişe' } }, { kind: 'crowd', x: 72, scale: 5 }] },
       by: 'sunni',
     },

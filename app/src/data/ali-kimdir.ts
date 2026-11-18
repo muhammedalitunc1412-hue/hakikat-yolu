@@ -8,7 +8,7 @@ export const aliKimdir: HistEvent = {
   hook: { tr: 'Kâbe\'nin içinde doğdu. Peygamber\'in yatağına yattı. İlim şehrinin kapısı odur.', en: 'Who is the man said to be born in the Kaaba, who lay in the Prophet\'s bed and is called the "gate of knowledge"?' },
   scenes: [
     {
-      text: { tr: 'Fil yılından otuz yıl sonra, Receb ayının on üçüncü günü, Mekke\'de **Fatıma bint Esed**\'in doğum sancısı başladı. Kâbe\'nin yanına gitti, ellerini açtı ve doğumunu kolaylaştırması için Allah\'a dua etti. Rivayetlere göre o anda Kâbe\'nin duvarı yarıldı. Fatıma bint Esed içeri girdi ve duvar arkasından yeniden kapandı. Dışarıda olanlar kapıyı açmak istedi ama açamadılar. **Hz. Ali**, Allah\'ın evinin içinde dünyaya geldi. Üç gün boyunca annesiyle birlikte orada kaldı. Dördüncü gün Fatıma bint Esed, kucağında bebeğiyle Kâbe\'den çıktı. Ondan önce de sonra da Kâbe\'nin içinde kimse doğmamıştı.' },
+      text: { tr: 'Fil yılından otuz yıl sonra, Receb ayının on üçüncü günü, Mekke\'de **Fatıma bint Esed**\'in doğum sancısı başladı. Kâbe\'nin yanına gitti, ellerini açtı ve doğumunu kolaylaştırması için Allah\'a dua etti. O anda Kâbe\'nin duvarı yarıldı. Fatıma bint Esed içeri girdi ve duvar arkasından yeniden kapandı. Dışarıda olanlar kapıyı açmak istedi ama açamadılar. **Hz. Ali**, Allah\'ın evinin içinde dünyaya geldi. Üç gün boyunca annesiyle birlikte orada kaldı. Dördüncü gün Fatıma bint Esed, kucağında bebeğiyle Kâbe\'den çıktı. Ondan önce de sonra da Kâbe\'nin içinde kimse doğmamıştı.' },
       image: 'ali-kimdir-1',
       art: { bg: 'dune-dusk', props: ['sun'], actors: [{ kind: 'woman', x: 30, label: { tr: 'Fatıma bint Esed' } }, { kind: 'ali', x: 66, scale: 0.6, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
@@ -28,48 +28,55 @@ export const aliKimdir: HistEvent = {
     },
     {
       text: { tr: 'Peygamber\'e ilk vahiy geldiğinde **Hz. Ali** henüz gençti. İslam\'a davet, o günlerde dar bir evin içinde, birkaç kişiyle başlamıştı. Hz. Ali, Peygamber\'in sözüne iman eden ilk insanların arasındaydı. İslam\'ı ilk kimin kabul ettiği konusunda kaynaklar farklı sıralamalar verir. Kimi Hz. Hatice\'yi, kimi Ebu Bekir\'i öne alır. Şii okuyuşu ise erkekler arasında ilk iman edenin Hz. Ali olduğunu söyler. Yaşının küçüklüğü, imanının değerini azaltmadı. Mekke\'nin bütün ileri gelenleri Peygamber\'e sırt çevirirken, onun evinde büyüyen bu genç hiç tereddüt etmeden ona inandı ve onun yanında durdu.' },
+      cites: [{ side: 'sunni', i: 2 }],
       image: 'ali-kimdir-3',
       art: { bg: 'night', props: ['stars'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, scale: 0.7, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Hicret gecesi Mekke\'nin müşrikleri Peygamber\'i öldürmek için anlaşmıştı. Gece olunca ev silahlı adamlarla kuşatıldı. Plan, Peygamber sabah evinden çıktığında hep birlikte saldırmaktı. Peygamber o gece Medine\'ye hicret etmek üzere yola çıkacaktı. Yerine yatağında birinin yatması gerekiyordu, böylece dışarıdakiler onun evde olduğunu sanacaktı. **Hz. Ali** bu görevi hiç düşünmeden kabul etti. Peygamber\'in yatağına uzandı ve onun örtüsüne büründü. Peygamber evden çıkıp gecenin karanlığında uzaklaştı. Kapıdaki adamlar sabaha kadar bekledi. Bu geceye **Leyletü\'l-Mebît**, yani yatakta geceleme gecesi denir.' },
+      cites: [{ side: 'shia', i: 3 }, { side: 'shia', i: 4 }, { side: 'shia', i: 5 }, { side: 'sunni', i: 9 }],
       image: 'ali-kimdir-4',
       art: { bg: 'night', props: ['moon', 'stars', 'swords'], actors: [{ kind: 'crowd', x: 22, scale: 5 }, { kind: 'ali', x: 64, pose: 'sit', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Sabah olduğunda müşrikler kılıçlarını çekerek eve daldı. Yatağın örtüsünü kaldırdıklarında karşılarında Peygamber\'i değil, **Hz. Ali**\'yi buldular. Şaşkınlık içinde geri çekildiler, Peygamber ise çoktan şehirden uzaklaşmıştı. Bakara Suresi\'nin 207. ayeti, Allah\'ın rızasını kazanmak için canını ortaya koyan kişiden söz eder: "İnsanlardan öylesi de vardır ki Allah\'ın rızasını kazanmak için canını satar." Şii ve bazı Sünni tefsirler bu ayetin o gece Hz. Ali hakkında indiğini söyler. Bazı kaynaklar ise ayeti başka sahabelerle ilişkilendirir. Ama Peygamber\'in yatağında, ölümü göze alarak sabahı bekleyen kişinin Hz. Ali olduğunda kaynaklar birleşir.' },
+      cites: [{ side: 'shia', i: 4 }, { side: 'sunni', i: 9 }],
       image: 'ali-kimdir-5',
       art: { bg: 'night', props: ['moon', 'stars'], actors: [{ kind: 'ali', x: 64, pose: 'sit', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Hicretten sonra Medine, Müslümanlar için yeni bir yurt oluyordu. Mekke\'den göç eden Muhacirler evlerini ve mallarını geride bırakmıştı. Peygamber, onları Medine\'nin yerlisi olan Ensar ile kardeş ilan etti. Her Muhacire bir Ensarlı kardeş verdi. Sıra **Hz. Ali**\'ye geldiğinde Peygamber onu kimseyle eşleştirmedi. Ona döndü ve şöyle dedi: "Sen dünyada da ahirette de benim kardeşimsin." Böylece Hz. Ali\'yi başka birine değil, kendisine kardeş seçti. Bu söz, Peygamber\'in kalbinde Hz. Ali\'nin yerini Medine\'deki herkese gösterdi.' },
+      cites: [{ side: 'sunni', i: 3 }],
       image: 'ali-kimdir-12',
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Medine yıllarında **Hz. Ali**, Bedir\'de, Uhud\'da ve Hendek\'te Peygamber\'in yanında savaştı. Müslümanların sancağı çoğu zaman onun elindeydi. Hayber kalesinin kuşatması uzayıp günler geçince Peygamber şöyle dedi: "Yarın sancağı, Allah\'ı ve Resulünü seven, Allah\'ın ve Resulünün de sevdiği birine vereceğim." O gece ashabın her biri sancağın kendisine verilmesini umarak uyudu. Sabah Peygamber Hz. Ali\'yi çağırttı. Hz. Ali\'nin gözleri ağrıyordu, ama Peygamber\'in yanına geldiğinde gözleri iyileşti ve sancak ona verildi. Hayber, o gün Hz. Ali\'nin eliyle fethedildi.' },
+      cites: [{ side: 'sunni', i: 4 }, { side: 'sunni', i: 6 }],
       image: 'ali-kimdir-6',
       art: { bg: 'battle', props: ['flags', 'swords'], actors: [{ kind: 'crowd', x: 22, scale: 6 }, { kind: 'ali', x: 62, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Peygamber\'in Hz. Ali için söylediği sözlerden biri şudur: "Ben ilmin şehriyim, Ali de onun kapısıdır." Bu hadisi birçok Sünni râvi sahih sayar, Şiiler ise onu mütevatir kabul eder. Benzetme açıktır. Bir şehre girmek isteyen, kapısından girer. Duvarların üzerinden atlamaya çalışan ise şehre ulaşamaz. Peygamber\'in getirdiği ilme ulaşmak isteyen de **Hz. Ali**\'ye başvurmalıdır. Ondan sonra gelen imamlar da bu ilmi babadan oğula taşıdı. Şiiler, dinlerini öğrenirken Ehl-i Beyt\'in kapısından girmeyi bu hadise dayandırır.' },
+      cites: [{ side: 'shia', i: 6 }, { side: 'sunni', i: 5 }],
       image: 'ali-kimdir-7',
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 38, pose: 'raise', label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Şûrâ Suresi\'nin 23. ayetinde Allah, Peygamber\'e şöyle demesini emreder: "Ben buna karşılık sizden yakınlarıma sevgiden başka bir ücret istemiyorum." Bu ayet, peygamberlik görevinin tek karşılığı olarak yakınlara duyulan sevgiyi gösterir. Ehl-i Beyt\'i merkeze alan yorumda bu yakınlar **Hz. Ali**, **Hz. Fatıma**, **Hz. Hasan** ve **Hz. Hüseyin**\'dir. Bazı Sünni âlimler ise ayeti Kureyş\'le olan akrabalık bağı olarak yorumlar. Şii okuyuşunda bu sevgi yalnızca bir duygu değildir. Onların hakkını tanımak, sözlerini dinlemek ve yollarından gitmek demektir. Peygamber, bütün emeğinin karşılığı olarak ümmetinden bu aileyi sevmesini istemiştir.' },
+      cites: [{ side: 'shia', i: 8 }, { side: 'sunni', i: 7 }],
       image: 'ali-kimdir-8',
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 24, scale: 0.9, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 42, scale: 0.9, label: { tr: 'Hz. Fatıma' } }, { kind: 'hasan', x: 60, scale: 0.7, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 76, scale: 0.7, label: { tr: 'Hz. Hüseyin' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Medine\'de **Hz. Ali**, Peygamber\'in kızı **Hz. Fatıma** ile evlendi. Rivayete göre Hz. Ali\'nin mehir olarak verecek parası yoktu. Zırhını sattı ve onun parasını mehir olarak verdi. Kurdukları ev gösterişsiz ve sadeydi. Ehl-i Beyt rivayetlerinde bu nikâhın gökte de kıyıldığı anlatılır. Bu küçük evden **Hz. Hasan** ve **Hz. Hüseyin** dünyaya geldi. Peygamber\'in soyu bu iki torunla devam etti. Sonraki imamların hepsi bu evin çocuklarından doğdu.' },
+      text: { tr: 'Medine\'de **Hz. Ali**, Peygamber\'in kızı **Hz. Fatıma** ile evlendi. Hz. Ali\'nin mehir olarak verecek parası yoktu. Zırhını sattı ve onun parasını mehir olarak verdi. Kurdukları ev gösterişsiz ve sadeydi. Ehl-i Beyt rivayetlerinde bu nikâhın gökte de kıyıldığı anlatılır. Bu küçük evden **Hz. Hasan** ve **Hz. Hüseyin** dünyaya geldi. Peygamber\'in soyu bu iki torunla devam etti. Sonraki imamların hepsi bu evin çocuklarından doğdu.' },
       image: 'ali-kimdir-9',
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'ali', x: 36, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 60, label: { tr: 'Hz. Fatıma' } }, { kind: 'prophet', x: 80, scale: 0.9, label: { tr: 'Hz. Peygamber' } }] },
       by: 'partial',
@@ -92,6 +99,7 @@ export const aliKimdir: HistEvent = {
     },
     {
       text: { tr: 'Peygamber vefat ettiğinde **Hz. Ali** onun başucundaydı. Mübarek gözlerini o kapadı. Ehl-i Beyt rivayetlerine göre Peygamber, kendisini Hz. Ali\'nin yıkamasını vasiyet etmişti. Hz. Ali gözyaşları içinde Peygamber\'in bedenini yıkamaya başladı. Aynı saatlerde Medine\'nin bir köşesinde, Sakife\'de, Peygamber\'den sonra yönetimin kime geçeceği konuşuluyordu. Gadir\'de eli kaldırılan Hz. Ali, o toplantıya çağrılmadı. O sırada o, en değerli emanetin, Peygamber\'in mübarek bedeninin başında duruyordu.' },
+      cites: [{ side: 'shia', i: 7 }, { side: 'sunni', i: 8 }],
       image: 'ali-kimdir-10',
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 40, pose: 'sit', label: { tr: 'Hz. Ali' } }, { kind: 'prophet', x: 64, pose: 'sit', label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',

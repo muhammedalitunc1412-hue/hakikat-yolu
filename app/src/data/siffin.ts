@@ -9,23 +9,25 @@ export const siffin: HistEvent = {
   scenes: [
     {
       text: { tr: 'Cemel\'den sonra **Hz. Ali** Kûfe\'yi halifeliğin merkezi yaptı. Şam ise hâlâ biat etmiyordu. **Muaviye**, Osman\'ın kanını bahane ederek büyük bir ordu toplamıştı. Hz. Ali, kan dökülmeden bu işin çözülmesi için ona mektuplar yazdı ve öğütler gönderdi. Bir sonuç alamayınca ordusuyla Fırat\'a doğru yürüdü. İki ordu, Fırat\'ın batı kıyısındaki **Sıffin** ovasında karşılaştı. Muaviye\'nin ordusu nehrin kıyısına önce ulaşmış ve suyu tutmuştu. Hz. Ali savaşı başlatan taraf olmadı. Kılıcını, ancak karşı taraf kılıç çektikten sonra çekti. Kısa süre içinde Fırat\'ın kıyısında aylar sürecek bir savaş başladı.' },
+      cites: [{ side: 'shia', i: 3 }, { side: 'sunni', i: 7 }, { side: 'sunni', i: 13 }],
       art: { bg: 'river', props: ['tents', 'flags'], actors: [{ kind: 'crowd', x: 22, scale: 7 }, { kind: 'ali', x: 52, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 82, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Fırat\'ın kıyısını tutan Şam ordusu, **Hz. Ali**\'nin askerlerinin suya inmesine izin vermedi. Hz. Ali, **Sa\'saa b. Sûhân**\'ı Muaviye\'ye gönderdi ve savaş konuşulmadan önce insanlarla suyun arasından çekilmesini istedi. Muaviye\'nin meclisinde **Velîd b. Ukbe** "Onları susuzlukla öldür" diye bağırdı ve Muaviye süvarilerini suyu korumaya gönderdi. Hz. Ali\'nin askerleri bir gün bir gece susuz kaldı. Sonunda kılıçlarını çekip Şam saflarının üzerine yürüdüler ve Fırat\'ın kıyısını onların elinden aldılar. Bu kez korkuya düşen Şam tarafıydı ve **Amr b. el-As**, Muaviye\'ye dün onlara yaptığını bugün onlar ona yaparsa ne olacağını sordu. Muaviye "Ali hakkında ne düşünüyorsun?" deyince Amr şu cevabı verdi: "Bence o, senin ona helal gördüğünü sana helal görmez." Hz. Ali\'nin susuzluğu tatmış askerleri ise "Vallahi onlara bir damla bile vermeyeceğiz" diyordu. Rivayetlere göre Hz. Ali onlara "Hayır, vallahi onlara yaptıklarının aynısıyla karşılık vermem" dedi ve şu emri gönderdi: "İhtiyacınız kadar su alın ve karargâhınıza dönün. Onlarla suyun arasından çekilin. Allah size onların zulmü ve azgınlığı yüzünden zafer verdi." Daha dün suyu kesenler aynı kıyıdan kaplarını doldurdu ve iki ordunun atları aynı sudan içti. Hz. Ali\'nin dürüstlüğü öyle bir dürüstlüktü ki ona kılıç çeken düşmanı bile onun ahlakına güveniyordu.' },
+      text: { tr: 'Fırat\'ın kıyısını tutan Şam ordusu, **Hz. Ali**\'nin askerlerinin suya inmesine izin vermedi. Hz. Ali, **Sa\'saa b. Sûhân**\'ı Muaviye\'ye gönderdi ve savaş konuşulmadan önce insanlarla suyun arasından çekilmesini istedi. Muaviye\'nin meclisinde **Velîd b. Ukbe** "Onları susuzlukla öldür" diye bağırdı ve Muaviye süvarilerini suyu korumaya gönderdi. Hz. Ali\'nin askerleri bir gün bir gece susuz kaldı. Sonunda kılıçlarını çekip Şam saflarının üzerine yürüdüler ve Fırat\'ın kıyısını onların elinden aldılar. Bu kez korkuya düşen Şam tarafıydı ve **Amr b. el-As**, Muaviye\'ye dün onlara yaptığını bugün onlar ona yaparsa ne olacağını sordu. Muaviye "Ali hakkında ne düşünüyorsun?" deyince Amr şu cevabı verdi: "Bence o, senin ona helal gördüğünü sana helal görmez." Hz. Ali\'nin susuzluğu tatmış askerleri ise "Vallahi onlara bir damla bile vermeyeceğiz" diyordu. Hz. Ali onlara "Hayır, vallahi onlara yaptıklarının aynısıyla karşılık vermem" dedi ve şu emri gönderdi: "İhtiyacınız kadar su alın ve karargâhınıza dönün. Onlarla suyun arasından çekilin. Allah size onların zulmü ve azgınlığı yüzünden zafer verdi." Daha dün suyu kesenler aynı kıyıdan kaplarını doldurdu ve iki ordunun atları aynı sudan içti. Hz. Ali\'nin dürüstlüğü öyle bir dürüstlüktü ki ona kılıç çeken düşmanı bile onun ahlakına güveniyordu.' },
       cites: [{ side: 'shia', i: 5 }, { side: 'sunni', i: 14 }, { side: 'sunni', i: 15 }, { side: 'shia', i: 6 }],
       art: { bg: 'river', props: ['flags', 'swords'], actors: [{ kind: 'crowd', x: 20, scale: 6 }, { kind: 'ali', x: 50, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 80, label: { tr: 'Amr b. el-As' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Bu savaşın kimin haklı olduğunu gösterecek bir işaret, yıllar önce Medine\'de verilmişti. Peygamber\'in mescidi inşa edilirken ashap kerpiçleri tek tek taşıyordu. **Ammâr b. Yâsir** de onların arasındaydı. Peygamber ona baktı ve şöyle dedi: "Yazık Ammâr\'a! Onu azgın bir grup öldürecek." Bu hadis Buhari\'de ve Müslim\'de geçer. Hadiste geçen bâği kelimesi, hak imama karşı ayaklanan taraf demektir. O gün mescidin inşasında çalışanların hepsi bu sözü duydu ve hafızalarına yazdı.' },
+      cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 2 }],
       art: { bg: 'city', props: ['palms', 'sun'], actors: [{ kind: 'prophet', x: 64, label: { tr: 'Hz. Peygamber' } }, { kind: 'man', x: 30, pose: 'raise', label: { tr: 'Ammar b. Yasir' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Ammâr, Sıffin\'e geldiğinde yaşlı bir adamdı, ama **Hz. Ali**\'nin safında savaşmak için gelmişti. Herkes onu tanıyordu ve Peygamber\'in onun hakkındaki sözünü hatırlıyordu. Savaşın en kızgın gününde Ammâr, Muaviye\'nin saflarına doğru ilerledi. Bir süre sonra yaşlı bedeni tozun içine düştü ve orada şehit oldu. Peygamber\'in "Onu azgın bir grup öldürecek" dediği Ammâr, **Muaviye**\'nin askerlerinin eliyle can vermişti. Bu haber iki orduya da yayıldı. Hz. Ali\'nin safındakiler, Peygamber\'in yıllar önce verdiği haberin gözlerinin önünde gerçekleştiğini gördü.' },
-      cites: [{ side: 'sunni', i: 1 }, { side: 'shia', i: 0 }],
+      cites: [{ side: 'sunni', i: 1 }, { side: 'shia', i: 0 }, { side: 'sunni', i: 12 }],
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'man', x: 26, label: { tr: 'Ammar b. Yasir' } }, { kind: 'ali', x: 70, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
@@ -48,23 +50,25 @@ export const siffin: HistEvent = {
     },
     {
       text: { tr: 'Hakem kararını kabul etmek zorunda kalan **Hz. Ali**\'nin ordusunda yeni bir bölünme başladı. Savaşın durmasını isteyenlerin bir kısmı şimdi de hakemliğe karşı çıkıyordu. "Hüküm yalnızca Allah\'ındır" diye bağırarak Hz. Ali\'nin yanından ayrıldılar. Bu gruba sonradan Haricîler, yani ayrılanlar denildi. Hz. Ali onların sloganını duyunca şöyle dedi: "Söz haktır, ama onunla batıl kastediliyor." Mushafları mızraklara asma hilesi, Şam ordusunu yenilgiden kurtarmakla kalmamış, Hz. Ali\'nin kendi ordusunu da ikiye bölmüştü. Bu bölünmenin acı sonucu kısa süre sonra Nehrevan\'da görülecekti.' },
+      cites: [{ side: 'shia', i: 1 }],
       art: { bg: 'river', props: ['flags'], actors: [{ kind: 'crowd', x: 28, scale: 7 }, { kind: 'ali', x: 74, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
       text: { tr: '**Hz. Ali**, Haricîler hakkında Peygamber\'den işittiği bir haberi aktarırdı. Peygamber, ileride bir topluluğun dinden fırlayacağını söylemişti. Bunlar Kur\'an okuyacak, ama okudukları Kur\'an onların aleyhine bir delil olacaktı. Peygamber, onları iki taraftan hakka daha yakın olanın öldüreceğini de haber vermişti. Bu hadis Müslim\'de geçer ve birçok Sünni âlim de bu hakka yakın tarafın Hz. Ali\'nin safı olduğunu kabul eder. Sıffin\'de başlayan bu ayrılık, Peygamber\'in verdiği bu haberin gerçekleşmesinin başlangıcı oldu.' },
+      cites: [{ side: 'sunni', i: 4 }, { side: 'sunni', i: 5 }],
       art: { bg: 'dawn', props: ['scroll'], actors: [{ kind: 'ali', x: 44, label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 78, scale: 5 }] },
       by: 'sunni',
     },
     {
       text: { tr: 'Sıffin\'den sonra **Muaviye**, kendi yönetimi altındaki minberlerde **Hz. Ali**\'ye ==lanet== okunmasını ve sövülmesini emretti. Kûfe\'ye vali olarak gönderdiği **Muğîre b. Şu\'be**\'ye verdiği öğütlerin başında, Hz. Ali\'ye sövmekten ve onu kötülemekten geri durmaması geliyordu. Cuma hutbelerinde Peygamber\'in vasisi ve damadı kötüleniyordu. Bir gün Muaviye, sahabe **Sa\'d b. Ebi Vakkas**\'a neden Ebu Turab\'a, yani Hz. Ali\'ye sövmediğini sordu. Sa\'d, Peygamber\'in Hz. Ali hakkında söylediği üç sözü saydı: Menzile hadisini, Hayber sancağını ve Mübahele gününü. Bu yüzden ona asla sövmeyeceğini söyledi. Bu zulüm, yıllar sonra Emevi halifesi **Ömer b. Abdülaziz** onu yasaklayıncaya kadar sürdü. Ömer b. Abdülaziz lanetin yerine hutbelerde Nahl Suresi\'nin 90. ayetinin okunmasını emretti.' },
-      cites: [{ side: 'sunni', i: 16 }, { side: 'sunni', i: 6 }],
+      cites: [{ side: 'sunni', i: 16 }, { side: 'sunni', i: 6 }, { side: 'shia', i: 4 }, { side: 'sunni', i: 9 }, { side: 'sunni', i: 10 }],
       art: { bg: 'interior', props: ['minbar', 'scroll'], actors: [{ kind: 'man', x: 28, label: { tr: 'Sa\'d b. Ebi Vakkas' } }, { kind: 'man', x: 62, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Hicretin 40. yılında, Ramazan ayında, Kûfe\'nin ulu camisinde sabah namazı kılınıyordu. **Hz. Ali** namaz kıldırırken Haricîlerden **İbn Mülcem**, bir ay boyunca zehre yatırdığı kılıcıyla onun mübarek başına vurdu. Hz. Ali mihrabın içine düştü. Rivayetlere göre o anda "Kâbe\'nin Rabbine yemin olsun ki kurtuldum" dedi. Yaralı halde evine taşındı. Katiline kin tutmadı. Ona yemek ve su verilmesini, esirliği boyunca iyi davranılmasını istedi. Kendisi ölürse, bir darbeye karşılık yalnızca bir darbe vurulmasını ve katilin uzuvlarının kesilmemesini vasiyet etti. Yaklaşık dört yıl dokuz ay süren halifeliğinin sonunda vasiyetini oğlu **Hz. Hasan**\'a bıraktı. Peygamber\'in Gadir\'de elini kaldırdığı imam, mihrapta şehit oldu.' },
-      cites: [{ side: 'sunni', i: 17 }],
+      text: { tr: 'Hicretin 40. yılında, Ramazan ayında, Kûfe\'nin ulu camisinde sabah namazı kılınıyordu. **Hz. Ali** namaz kıldırırken Haricîlerden **İbn Mülcem**, bir ay boyunca zehre yatırdığı kılıcıyla onun mübarek başına vurdu. Hz. Ali mihrabın içine düştü. O anda "Kâbe\'nin Rabbine yemin olsun ki kurtuldum" dedi. Yaralı halde evine taşındı. Katiline kin tutmadı. Ona yemek ve su verilmesini, esirliği boyunca iyi davranılmasını istedi. Kendisi ölürse, bir darbeye karşılık yalnızca bir darbe vurulmasını ve katilin uzuvlarının kesilmemesini vasiyet etti. Yaklaşık dört yıl dokuz ay süren halifeliğinin sonunda vasiyetini oğlu **Hz. Hasan**\'a bıraktı. Peygamber\'in Gadir\'de elini kaldırdığı imam, mihrapta şehit oldu.' },
+      cites: [{ side: 'sunni', i: 17 }, { side: 'shia', i: 2 }, { side: 'sunni', i: 11 }],
       art: { bg: 'dawn', props: ['moon'], actors: [{ kind: 'ali', x: 42, pose: 'sit', label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 66, label: { tr: 'Hz. Hasan' } }, { kind: 'crowd', x: 86, scale: 4 }] },
       by: 'both',
     },

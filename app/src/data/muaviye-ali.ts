@@ -32,7 +32,7 @@ export const muaviyeAli: HistEvent = {
       by: 'both',
       text: { tr: '**Sıffin**\'e ilk ulaşan Muaviye\'nin ordusu, Fırat\'ın kıyısını tuttu ve Hz. Ali\'nin askerlerine suyu kesti. Sonunda Hz. Ali\'nin askerleri nehrin kıyısını ele geçirdi. Bu kez su Hz. Ali\'nin elindeydi. Ama **Hz. Ali** misilleme yapmadı ve Şamlıların da nehirden su almasına müsaade etti. Düşmanına bile su verdi. Yıllar sonra aynı Fırat\'ın kıyısında, Muaviye\'nin oğlu Yezid\'in ordusu, Hz. Ali\'nin oğlu Hz. Hüseyin\'in çocuklarına bir yudum suyu bile çok görecekti.' },
       art,
-      cites: [{ side: 'shia', i: 0 }],
+      cites: [{ side: 'shia', i: 0 }, { side: 'sunni', i: 4 }],
     },
     {
       by: 'both',
@@ -50,11 +50,11 @@ export const muaviyeAli: HistEvent = {
       by: 'both',
       text: { tr: 'Hakem toplantısında Hz. Ali\'nin tarafını **Ebu Musa el-Eş\'arî**, Muaviye\'nin tarafını ise **Amr b. el-As** temsil etti. Yaygın anlatıya göre iki hakem halkın önüne çıktı. Önce Ebu Musa parmağındaki yüzüğü çıkardı. Yüzüğü çıkarmak, Hz. Ali\'nin artık halife olmadığını ilan etmek demekti. Ardından Amr b. el-As kalktı ve yüzüğünü parmağına taktı. Yüzüğü takmak, Muaviye\'nin halife olduğunu ilan etmek demekti. Bu anlatının güvenilirliği tartışmalıdır ve söylenen cümleler rivayetten rivayete değişir. **Hz. Ali** bu sonucu kabul etmedi, çünkü mızraklardaki hile hakem meclisinde de sürmüştü.' },
       art,
-      cites: [{ side: 'sunni', i: 3 }, { side: 'shia', i: 2 }],
+      cites: [{ side: 'sunni', i: 3 }, { side: 'shia', i: 2 }, { side: 'sunni', i: 4 }],
     },
     {
       by: 'both',
-      text: { tr: 'Hakemden sonra **Hz. Ali**\'nin safı bölündü ve Muaviye saldırılarını artırdı. Bu dönemde Hz. Ali\'nin en güvendiği insanlardan biri **Mâlik el-Eşter**\'di. Mâlik, Hz. Ali\'nin en sadık komutanıydı. Savaşta ordunun önünde savaşır, yönetimde ise güvenilir bir devlet adamı olarak bilinirdi. Hz. Ali onu Mısır\'a vali olarak gönderdi. Rivayetlere göre Mâlik yolda, Kulzüm\'de zehirlendi. Anlatılana göre bir görevliye rüşvet verilmiş ve zehir bala karıştırılmıştı. Haber Şam\'a ulaşınca sevinenler oldu. Muaviye\'nin, Hz. Ali\'nin iki kolundan birinin Sıffin\'de Ammâr\'la, diğerinin de şimdi kesildiğini söylediği anlatılır. Ardından Muaviye Mısır\'ı ele geçirdi ve vali **Muhammed b. Ebi Bekir** öldürüldü. **Busr b. Ertât** Hicaz\'da ve Yemen\'de kan döktü. Hicretin 40. yılında **Hz. Ali**, Kûfe\'de bir sabah namazında şehit edildi.' },
+      text: { tr: 'Hakemden sonra **Hz. Ali**\'nin safı bölündü ve Muaviye saldırılarını artırdı. Bu dönemde Hz. Ali\'nin en güvendiği insanlardan biri **Mâlik el-Eşter**\'di. Mâlik, Hz. Ali\'nin en sadık komutanıydı. Savaşta ordunun önünde savaşır, yönetimde ise güvenilir bir devlet adamı olarak bilinirdi. Hz. Ali onu Mısır\'a vali olarak gönderdi. Mâlik yolda, Kulzüm\'de zehirlendi. Anlatılana göre bir görevliye rüşvet verilmiş ve zehir bala karıştırılmıştı. Haber Şam\'a ulaşınca sevinenler oldu. Muaviye\'nin, Hz. Ali\'nin iki kolundan birinin Sıffin\'de Ammâr\'la, diğerinin de şimdi kesildiğini söylediği anlatılır. Ardından Muaviye Mısır\'ı ele geçirdi ve vali **Muhammed b. Ebi Bekir** öldürüldü. **Busr b. Ertât** Hicaz\'da ve Yemen\'de kan döktü. Hicretin 40. yılında **Hz. Ali**, Kûfe\'de bir sabah namazında şehit edildi.' },
       art,
       cites: [{ side: 'sunni', i: 3 }, { side: 'shia', i: 0 }],
     },

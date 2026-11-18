@@ -20,13 +20,13 @@ export const muaviyeHasan: HistEvent = {
       by: 'both',
       text: { tr: 'Kûfe ordusunun içinde ihanetler birbirini izledi. Hz. Hasan\'ın komutanlarından **Ubeydullah b. Abbas**, bir gece ordudan ayrılıp gizlice Muaviye\'nin yanına geçti. Komutanlar altınla satın alınıyor, askerler gece karanlığında dağılıyordu. **Hz. Hasan**, Ehl-i Beyt\'in sadık dostlarının böyle bir orduda boşuna kırılacağını gördü. Kan dökülmesin diye savaşı durdurdu ve yönetimi **Muaviye**\'ye bıraktı. Peygamber, "Bu oğlum seyyiddir. Allah onun aracılığıyla Müslümanların iki büyük grubunu barıştıracak" demişti. Bu sulh bir zayıflık değil, satın alınmış bir ordunun içinde ümmetin kanını durdurmaktı.' },
       art,
-      cites: [{ side: 'sunni', i: 0 }, { side: 'shia', i: 3 }],
+      cites: [{ side: 'sunni', i: 0 }, { side: 'shia', i: 3 }, { side: 'shia', i: 4 }],
     },
     {
       by: 'partial',
       text: { tr: 'Sulh anlaşmasında **Hz. Hasan**\'ın koyduğu şartlar açıktı. **Muaviye** Allah\'ın Kitabı ve Peygamber\'in sünnetiyle hükmedecekti. Kimseye Hz. Ali\'yi kötületmeyecek ve minberlerde ona sövdürmeyecekti. Kendisinden sonra yerine bir halife tayin etmeyecekti. Hz. Hasan bu şartlarla ==Ehl-i Beyt==\'in onurunu, dostlarının canını ve minberin temizliğini korumak istiyordu. Muaviye bu şartların hepsini kabul etti ve anlaşma imzalandı. Kûfe halkı bir süre rahat bir nefes aldı. Ama imzalanan kâğıdın ömrü, Muaviye\'nin sözüne bağlıydı.' },
       art,
-      cites: [{ side: 'shia', i: 1 }, { side: 'shia', i: 3 }, { side: 'sunni', i: 2 }],
+      cites: [{ side: 'shia', i: 1 }, { side: 'shia', i: 3 }, { side: 'sunni', i: 2 }, { side: 'shia', i: 5 }],
     },
     {
       by: 'partial',
@@ -42,7 +42,7 @@ export const muaviyeHasan: HistEvent = {
     },
     {
       by: 'partial',
-      text: { tr: 'Rivayetlere göre **Muaviye**, oğlu **Yezid**\'i kendisinden sonra halife yapmak istiyordu. Bunun önündeki en büyük engel, sulh şartlarını bilen ve halkın sevgisini taşıyan Hz. Hasan\'dı. Muaviye, Hz. Hasan\'ın eşi **Ca\'de bint Eş\'as**\'a gizlice haber gönderdi. Ona, Hz. Hasan\'ı zehirlerse oğlu Yezid\'le evlendireceğini ve yüz bin dirhem vereceğini vaat etti. Ca\'de bu vaade kandı. Hz. Hasan şehit olduktan sonra Muaviye vaadini tutmadı. Ca\'de ne Yezid\'le evlendi ne de paranın tamamını aldı.' },
+      text: { tr: '**Muaviye**, oğlu **Yezid**\'i kendisinden sonra halife yapmak istiyordu. Bunun önündeki en büyük engel, sulh şartlarını bilen ve halkın sevgisini taşıyan Hz. Hasan\'dı. Muaviye, Hz. Hasan\'ın eşi **Ca\'de bint Eş\'as**\'a gizlice haber gönderdi. Ona, Hz. Hasan\'ı zehirlerse oğlu Yezid\'le evlendireceğini ve yüz bin dirhem vereceğini vaat etti. Ca\'de bu vaade kandı. Hz. Hasan şehit olduktan sonra Muaviye vaadini tutmadı. Ca\'de ne Yezid\'le evlendi ne de paranın tamamını aldı.' },
       art,
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }, { side: 'sunni', i: 1 }],
     },

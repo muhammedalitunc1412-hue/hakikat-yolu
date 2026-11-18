@@ -15,6 +15,7 @@ export const istihlaf: HistEvent = {
     {
       by: 'sunni',
       text: { tr: 'Ebu Bekir, bu kararı vermeden önce **Abdurrahman b. Avf** ve **Osman** ile görüştü. Ömer\'in sert mizacını bilen bazı sahabeler bu seçimden endişe ediyordu. **Talha** itiraz etti ve Ebu Bekir\'e, "Böyle sert birini başımıza getirirsen Rabbine ne cevap vereceksin?" diye sordu. Ebu Bekir ise Allah\'a, kullarının en hayırlısını seçtiğini söyleyeceğini bildirdi. Danışılanlar arasında Peygamber\'in amcasının oğlu ve damadı **Hz. Ali** yoktu. Ehl-i Beyt\'in görüşü bu kararda hiç alınmadı.' },
+      cites: [{ side: 'sunni', i: 1 }, { side: 'sunni', i: 3 }],
       art: { bg: 'interior', actors: [{ kind: 'man', x: 30, label: { tr: 'Talha' } }, { kind: 'man', x: 68, pose: 'sit', label: { tr: 'Ebu Bekir' } }, { kind: 'crowd', x: 50, scale: 0.6 }] },
     },
     {
@@ -30,21 +31,24 @@ export const istihlaf: HistEvent = {
     {
       by: 'both',
       text: { tr: 'Yaralı Ömer, şuraya katılacak altı kişiyi tek tek saydı: **Hz. Ali**, **Osman**, **Zübeyr**, **Talha**, **Sa\'d b. Ebi Vakkas** ve **Abdurrahman b. Avf**. Oğlu Abdullah da toplantıya tanık olarak katılacak, ama halife seçilemeyecekti. Gadir\'de hakkı ilan edilen Hz. Ali, bu kurulun sıradan bir üyesi yapılmıştı. Kurula üye olmak, seçilmek anlamına gelmiyordu.' },
+      cites: [{ side: 'shia', i: 3 }, { side: 'sunni', i: 0 }],
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 22, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 40, label: { tr: 'Osman' } }, { kind: 'man', x: 58, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'crowd', x: 78, scale: 0.7 }] },
     },
     {
       by: 'both',
       text: { tr: 'Altı kişi bir odada toplandı. Tartışmalar birkaç gün sürdü. **Zübeyr**, kendi hakkını **Hz. Ali**\'ye bıraktı. **Talha** ise hakkını **Osman**\'a bıraktı. **Sa\'d b. Ebi Vakkas** da hakkını **Abdurrahman b. Avf**\'a devretti. Böylece geriye Hz. Ali, Osman ve Abdurrahman kaldı. Seçimin ipi artık Abdurrahman\'ın elindeydi. Hz. Ali ile Osman\'dan, kim seçilirse seçilsin ona itaat edeceklerine dair söz aldı. Artık ümmetin yöneticisini tek bir kişi belirleyecekti.' },
+      cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 4 }],
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 52, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'ali', x: 26, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 76, label: { tr: 'Osman' } }] },
     },
     {
       by: 'both',
       text: { tr: 'Abdurrahman önce **Hz. Ali**\'ye döndü ve ona bir şart sundu: Allah\'ın Kitabı, Peygamber\'in sünneti ve önceki iki halifenin yolu üzerine biat edecekti. Biat, bağlılık sözüdür. Hz. Ali şöyle cevap verdi: "Allah\'ın Kitabı ve Peygamber\'in sünneti üzerine, bir de kendi içtihadıma göre." Önceki iki halifenin yolunu bir şart olarak kabul etmedi. Haksız yere başa geçen halifelerin izini değil, Peygamber\'in izini ön planda tutmak istiyordu. Bu cevap, hilafetin kapısını ona bir kez daha kapattı. Abdurrahman aynı şartı **Osman**\'a sundu. Osman ise makam ve mevki uğruna, hakkı olmadan hilafete geçenlerin yoluna bağlanmayı tercih etti ve şartı hiç tereddüt etmeden kabul etti. Bunun üzerine Abdurrahman, Osman\'a biat etti ve diğerleri de onu izledi.' },
+      cites: [{ side: 'sunni', i: 4 }],
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 30, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 56, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'man', x: 78, label: { tr: 'Osman' } }] },
     },
     {
       by: 'partial',
-      cites: [{ side: 'sunni', i: 5 }, { side: 'sunni', i: 2 }],
+      cites: [{ side: 'sunni', i: 5 }, { side: 'sunni', i: 2 }, { side: 'shia', i: 0 }, { side: 'shia', i: 1 }, { side: 'shia', i: 2 }],
       text: { tr: 'Böylece **Osman** üçüncü halife oldu. Yıllar sonra **Hz. Ali**, Şıkşıkıyye adıyla bilinen hutbesinde bu günleri acıyla anlatacaktı. Ömer\'in kendisini o altı kişiden biri sayıp onlarla bir tutmasından yakındı. Şuranın düzeninin, sonucu daha baştan belirlediğini de anlattı. Sakife\'den şuraya kadar hakkı üç kez bir kenara konmuştu. Yine de kılıç çekmedi, ümmetin birliğini kendi hakkının önünde tuttu. Bu hutbede Hz. Ali, o yılları gözünde diken, boğazında kemik varken sabrederek geçirdiğini söyler.' },
       art: { bg: 'mountain', props: ['stars'], actors: [{ kind: 'ali', x: 50, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
     },

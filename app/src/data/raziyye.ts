@@ -9,31 +9,37 @@ export const raziyye: HistEvent = {
   scenes: [
     {
       text: { tr: 'Peygamber\'in hayatının son haftalarıydı. **Hz. Peygamber**, Şam yönündeki Belka bölgesine gönderilmek üzere bir ordu hazırladı ve başına genç **Usame b. Zeyd**\'i getirdi. Usame çok gençti. Babası Zeyd b. Harise daha önce bir seferde şehit düşmüştü. Ordu, Medine\'nin hemen dışındaki Cürf\'te toplanmaya başladı. Ancak bazı kişiler, bu kadar genç birinin kendilerine komutan olmasını kabullenemedi ve itirazlarını açıkça dile getirdiler. Peygamber\'in hayatının son günlerindeki ilk anlaşmazlık böyle başladı.' },
+      cites: [{ side: 'shia', i: 0 }, { side: 'sunni', i: 4 }, { side: 'sunni', i: 5 }],
       art: { bg: 'dune-day', props: ['sun', 'tents', 'flags'], actors: [{ kind: 'crowd', x: 30, scale: 8 }, { kind: 'man', x: 62, label: { tr: 'Usame b. Zeyd' } }, { kind: 'prophet', x: 82, label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
     {
       text: { tr: 'İtirazlar Peygamber\'in kulağına kadar geldi. O sırada hastalığı ağırlaşmaya başlamıştı. Buna rağmen mescide gelip minbere çıktı. İtiraz edenlere seslenerek Usame\'nin komutanlığa layık olduğunu söyledi ve ordunun yola çıkmasını emretti. Ama Cürf\'teki ordugâhta çadırlar kurulu kaldı. Askerler bir türlü yola çıkmadı. Medine\'den gelen hastalık haberleri, ordunun ayağını bağlayan bir bahane oldu. Peygamber\'in emri yerine getirilmeden günler geçti.' },
+      cites: [{ side: 'shia', i: 1 }, { side: 'sunni', i: 4 }],
       art: { bg: 'city', props: ['minbar', 'flags'], actors: [{ kind: 'crowd', x: 30, scale: 7 }, { kind: 'prophet', x: 68, pose: 'raise', label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Hastalığın en ağır günlerinden birinde Peygamber, Medine\'deki odasında yanında bulunanlara döndü. Güçlükle konuşarak şöyle dedi: "Bana bir kalem ve kâğıt getirin. Size bir yazı yazayım ki benden sonra asla yolunuzu şaşırmayasınız." Bu istek Buhari\'de ve Müslim\'de aktarılır. Peygamber, kendisinden sonra ümmetin sapmaması için son bir vasiyet bırakmak istiyordu. Ne yazacağını o anda söylemedi. Şiiler, bu yazının Gadir\'de **Hz. Ali** için yapılan ilanı kâğıda geçirecek olduğunu düşünür. Çünkü Peygamber Gadir\'de de Kitap ile Ehl-i Beyt\'e sarılanların sapmayacağını söylemişti.' },
+      cites: [{ side: 'sunni', i: 3 }],
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 32, pose: 'sit', label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 68, scale: 4 }] },
       by: 'both',
     },
     {
       text: { tr: 'Kalem ve kâğıt getirilmeden odada bir anlaşmazlık çıktı. Kaynaklarda Ömer\'e atfedilen söz şudur: "Peygamber\'e hastalığın ağrısı galip geldi. Allah\'ın Kitabı bize yeter." Odadakilerin bir kısmı Peygamber\'in istediğinin getirilmesini söyledi. Diğerleri ise Ömer\'in sözünü destekledi. Sesler giderek yükseldi. Hasta yatağında yatan Peygamber, başucunda bir tartışmanın büyüdüğünü duyuyordu. Onun son isteği, odadakilerin çekişmesinin ortasında kaldı. Kâğıt, Peygamber\'in eline hiç ulaşmadı.' },
+      cites: [{ side: 'sunni', i: 0 }],
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 26, pose: 'sit', label: { tr: 'Hz. Peygamber' } }, { kind: 'man', x: 56, pose: 'raise', label: { tr: 'Ömer' } }, { kind: 'crowd', x: 80, scale: 3 }] },
       by: 'both',
     },
     {
       text: { tr: 'Tartışma büyüyünce Peygamber, "Kalkın, yanımdan gidin" dedi. Yazı hiç yazılmadı. Yıllar sonra **İbn Abbas** bu günü anlatırken gözyaşlarını tutamazdı. Şöyle derdi: "Asıl musibet, gürültünün ve anlaşmazlığın Resulullah ile o yazı arasına girmesidir." Bu söz de Buhari\'de geçer. Şiilere göre o odada yazılmasına engel olunan vasiyet, birkaç gün sonra Sakife\'de Hz. Ali\'nin hakkının bir kenara konmasının yolunu açtı.' },
+      cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 1 }, { side: 'sunni', i: 3 }],
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 36, pose: 'sit', label: { tr: 'Hz. Peygamber' } }, { kind: 'man', x: 70, label: { tr: 'İbn Abbas' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Aynı rivayet, yazı yazılamadıktan sonra Peygamber\'in sözlü olarak üç vasiyette bulunduğunu da aktarır. Birincisi, müşriklerin Arap Yarımadası\'ndan çıkarılmasıydı. İkincisi, Medine\'ye gelen elçi heyetlerinin kendisinin ağırladığı gibi ağırlanmasıydı. Râvi, üçüncü vasiyeti ise unuttuğunu söyler. Peygamber\'in son vasiyetlerinden biri, rivayeti aktaranın hafızasında kaybolmuştu. Unutulanın ne olduğu rivayette yazılmaz. Peygamber\'i sevenler o eksik cümlenin acısını hâlâ yüreklerinde taşır.' },
+      cites: [{ side: 'sunni', i: 2 }],
       art: { bg: 'night', props: ['moon', 'stars'], actors: [{ kind: 'prophet', x: 50, pose: 'sit', label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
@@ -44,6 +50,7 @@ export const raziyye: HistEvent = {
     },
     {
       text: { tr: 'Vefat haberi duyulunca Medine\'de büyük bir karışıklık oldu. Ömer ilk anda Peygamber\'in öldüğünü kabul etmedi. Ebu Bekir gelip halka Peygamber\'in vefat ettiğini duyurdu. **Hz. Ali** ve Hâşimoğulları ise cenazenin başından ayrılmadı. Peygamber\'in bedenini yıkamak ve defin hazırlıklarını yapmak onlara düşmüştü. Şehrin bir yanında insanlar gözyaşı dökerken, diğer yanında bir grup Sakife\'ye doğru yola çıkmıştı. Peygamber\'in bedeni henüz toprağa verilmemişken yönetimin kime geçeceği konuşulmaya başlanmıştı.' },
+      cites: [{ side: 'sunni', i: 6 }],
       art: { bg: 'city', props: ['palms'], actors: [{ kind: 'crowd', x: 24, scale: 6 }, { kind: 'man', x: 48, label: { tr: 'Ömer' } }, { kind: 'man', x: 66, label: { tr: 'Ebu Bekir' } }, { kind: 'ali', x: 84, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },

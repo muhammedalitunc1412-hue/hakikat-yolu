@@ -22,31 +22,37 @@ export const ehlibeyt: HistEvent = {
     {
       by: 'both',
       text: { tr: 'Veda Haccı\'ndan dönerken kafile, Mekke ile Medine arasındaki Hum suyunun başında durdu. Peygamber orada ümmetine iki ağır emanet bıraktığını söyledi: Allah\'ın Kitabı ve itreti, yani ==Ehl-i Beyt==\'i. "Ehl-i Beytim hakkında size Allah\'ı hatırlatırım" sözünü tekrar tekrar söyledi. Bu iki emanetin, Havz\'da Peygamber\'e kavuşuncaya kadar birbirinden ayrılmayacağını söyledi. Havz, kıyamet günündeki havuzdur. Yıllar sonra sahabe **Zeyd b. Erkam**\'a Ehl-i Beyt\'in kim olduğu soruldu. Zeyd, Peygamber\'in hanımlarını bu yakın halkanın dışında tuttu ve Hz. Ali\'nin, Akîl\'in, Cafer\'in ve Abbas\'ın ailelerini saydı. Peygamber, Kur\'an\'ın doğru anlaşılması için onun yanına kendi ailesini koymuştu.' },
+      cites: [{ side: 'sunni', i: 1 }, { side: 'sunni', i: 2 }],
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 82, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
       text: { tr: 'Peygamber, Ehl-i Beyt\'in yerini anlatmak için bir benzetme daha yaptı: "Ehl-i Beytimin örneği Nuh\'un gemisi gibidir. Ona binen kurtulur, ondan geri kalan boğulur." Bu söze **Safine hadisi** denir. Safine, gemi demektir. Nuh\'un zamanında tufan, yeryüzünü kaplayan suydu ve yalnızca gemiye binenler kurtulmuştu. Bu hadiste tufan, Peygamber\'den sonra ümmetin içine düşeceği ayrılıklar ve karışıklıklardır. O fırtınada kurtuluşun gemisi ise Ehl-i Beyt\'tir. Şiiler, Peygamber\'den sonra yönünü kaybetmemek için bu gemiye tutunmak gerektiğine inanır.' },
+      cites: [{ side: 'shia', i: 3 }, { side: 'sunni', i: 3 }],
       art: { bg: 'river', props: ['palms'], actors: [{ kind: 'crowd', x: 40, scale: 5 }] },
     },
     {
       by: 'both',
       text: { tr: 'Sahabe **Câbir b. Semüre** bir gün Peygamber\'in yanındaydı. Peygamber şöyle dedi: "Bu din, içinizden on iki halife gelinceye kadar güçlü kalacak." Sonra sesini alçalttı ve Câbir bir cümleyi duyamadı. Babasına Peygamber\'in ne dediğini sordu. Babası, "Hepsi Kureyş\'tendir" dediğini söyledi. Bu hadis Buhari\'de ve Müslim\'de geçer. Sünni âlimler bu on iki kişinin kimler olduğu konusunda farklı listeler verir. Şii okuyuşu ise bu sayıyı Ehl-i Beyt\'in on iki imamıyla doldurur. Peygamber\'in verdiği sayı, Hz. Ali ile başlayıp Hz. Mehdî ile tamamlanan on iki imamla tam olarak örtüşür.' },
+      cites: [{ side: 'shia', i: 2 }, { side: 'sunni', i: 4 }, { side: 'sunni', i: 5 }],
       art: { bg: 'city', props: ['sun', 'minbar'], actors: [{ kind: 'prophet', x: 60, label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 28, scale: 6 }] },
     },
     {
       by: 'shia',
       text: { tr: 'Ehl-i Beyt rivayetlerinde Câbir b. Abdullah\'ın yaşadığı bir olay da anlatılır. Câbir, **Hz. Fatıma**\'nın yanında bir levha gördü. Levhada, Peygamber\'den sonra gelecek imamların adları tek tek yazılıydı. Levhadaki ilk isim **Hz. Ali**\'ydi. Ardından Hz. Fatıma\'nın oğulları **Hz. Hasan** ve **Hz. Hüseyin** geliyordu. Son isim ise ahir zamanda ortaya çıkacak olan **Hz. Mehdî**\'ydi. Bu rivayete göre imamların isimleri, onlar daha dünyaya gelmeden önce belirlenmişti.' },
+      cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 4 }],
       art: { bg: 'night', props: ['stars', 'scroll'], actors: [{ kind: 'fatima', x: 50, label: { tr: 'Hz. Fatıma' } }] },
     },
     {
       by: 'shia',
       text: { tr: '==İmamet==, Şii inancında Allah\'ın açık bir bildirimle belirlediği önderliktir. Bu açık bildirime **nass** denir. İmam, Allah\'ın koruması altında günahtan uzak tutulmuştur ve ilimde de herkesten üstündür. Şiilere göre yeryüzü hiçbir zaman Allah\'ın hücceti, yani insanlara yol gösteren delili olan bir imamdan boş kalmaz. Her imam, kendisinden sonra gelecek olanı açıkça bildirir. Bu sıra, insanların oyuna ya da seçimine bırakılmaz. Gadir Hum\'da Peygamber, bu sıranın ilk halkasını, Hz. Ali\'yi, herkesin önünde göstermişti. Sakife\'de bu seçim bir kenara bırakıldı, ama imamların sırası hiç kopmadı.' },
+      cites: [{ side: 'shia', i: 0 }],
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'ali', x: 42, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 62, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 74, scale: 0.75, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
       by: 'shia',
       text: { tr: 'Şiilerin On İki İmamı sırasıyla şunlardır: **Hz. Ali**, **Hz. Hasan**, **Hz. Hüseyin**, **Hz. Zeynelâbidîn**, **Hz. Muhammed Bâkır**, **Hz. Ca\'fer-i Sâdık**, **Hz. Musa Kâzım**, **Hz. Ali Rızâ**, **Hz. Muhammed Takî**, **Hz. Ali Nakî**, **Hz. Hasan Askerî** ve **Hz. Mehdî**. Bu zincir, Kerbelâ\'da Hz. Hüseyin şehit edildiğinde bile kopmadı. Hasta oğlu Hz. Zeynelâbidîn sağ kaldı ve imamet onunla sürdü. Sonraki imamlar Medine\'de ders halkalarında, Bağdat\'ta ve Samarra\'da zindanlarda ve gözetim altında yaşadı. On İkinci İmam Hz. Mehdî ise gaybettedir. Gaybet ölüm değil, gizlenmedir. Şiiler, zamanı geldiğinde onun adaletle ortaya çıkacağına inanır.' },
+      cites: [{ side: 'shia', i: 1 }, { side: 'shia', i: 2 }],
       art: { bg: 'dawn', props: ['sun'], actors: [{ kind: 'ali', x: 30, label: { tr: 'Hz. Ali' } }, { kind: 'hasan', x: 46, scale: 0.8, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 60, scale: 0.8, label: { tr: 'Hz. Hüseyin' } }] },
     },
   ],

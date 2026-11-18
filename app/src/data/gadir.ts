@@ -8,12 +8,13 @@ export const gadir: HistEvent = {
   hook: { tr: 'Çölün ortasında kafile durdu. Bir el havaya kalktı. O gün Hz. Ali\'nin velayeti ilan edildi.', en: 'A caravan halted in the desert, and a raised hand.' },
   scenes: [
     {
-      text: { tr: 'Veda Haccı sona ermişti. **Hz. Peygamber**, kendisiyle birlikte hac yapan kalabalık bir toplulukla Mekke\'den Medine\'ye dönüyordu. Yemen\'den gelip hacda ona katılan **Hz. Ali** de kafiledeydi. Develer sıcak çölde ağır ağır ilerliyor, insanlar hac günlerinin heyecanını birbirlerine anlatıyordu. Birçoğu artık evine dönmenin hesabını yapıyordu. Peygamber ise bu dönüş yolunda ümmetine önemli bir şey söyleyecekti. Rivayetlere göre yolda Maide Suresi\'nin "Rabbinden sana indirileni tebliğ et" diye başlayan ayeti indi. Kafile, Cuhfe yakınlarında **Gadir Hum** denen su başına geldiğinde Peygamber durma emri verdi.' },
+      text: { tr: 'Veda Haccı sona ermişti. **Hz. Peygamber**, kendisiyle birlikte hac yapan kalabalık bir toplulukla Mekke\'den Medine\'ye dönüyordu. Yemen\'den gelip hacda ona katılan **Hz. Ali** de kafiledeydi. Develer sıcak çölde ağır ağır ilerliyor, insanlar hac günlerinin heyecanını birbirlerine anlatıyordu. Birçoğu artık evine dönmenin hesabını yapıyordu. Peygamber ise bu dönüş yolunda ümmetine önemli bir şey söyleyecekti. Yolda Maide Suresi\'nin "Rabbinden sana indirileni tebliğ et" diye başlayan ayeti indi. Kafile, Cuhfe yakınlarında **Gadir Hum** denen su başına geldiğinde Peygamber durma emri verdi.' },
       art: { bg: 'dune-day', props: ['sun', 'camels'], actors: [{ kind: 'crowd', x: 40, scale: 8 }, { kind: 'prophet', x: 74, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 88, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Hum, çölün ortasında küçük bir su gölüydü ve çevresinde birkaç ağaç vardı. Mekke\'den dönenlerin yolları burada ayrılırdı. Kimi Medine\'ye, kimi Irak\'a, kimi Yemen\'e giderdi. **Hz. Peygamber** önden gidenlerin geri çağrılmasını, geride kalanların beklenmesini istedi. Öğle sıcağı yakıcıydı ve insanlar ağaçların gölgesine sığınmaya çalışıyordu. Rivayetler orada toplananların sayısını farklı verir, ama hepsi büyük bir kalabalıktan söz eder. Kalabalık toplanınca Peygamber hutbeye başladı ve herkes onun sesini duymak için sustu.' },
+      cites: [{ side: 'sunni', i: 2 }],
       art: { bg: 'oasis', props: ['sun', 'palms', 'well'], actors: [{ kind: 'crowd', x: 36, scale: 9 }, { kind: 'prophet', x: 70, label: { tr: 'Hz. Peygamber' } }] },
       by: 'both',
     },
@@ -24,21 +25,25 @@ export const gadir: HistEvent = {
     },
     {
       text: { tr: 'Sonra **Hz. Peygamber**, yanında duran **Hz. Ali**\'nin elinden tuttu ve onu herkesin görebileceği şekilde havaya kaldırdı. Binlerce göz o iki ele çevrildi. Peygamber şöyle dedi: "Ben kimin mevlâsıysam, Ali de onun mevlâsıdır." Bazı rivayetlerde ardından şu dua gelir: "Allah\'ım, onu seveni sev, ona düşman olana düşman ol." **Mevlâ** kelimesi farklı şekillerde anlaşılmıştır. Kimisi onu dost diye anlamış, kimisi sahip ve önder diye. Şii okuyuşu kelimeyi Peygamber\'in az önce sorduğu soruyla birlikte okur. Peygamber önce kendi yakınlığını ve yetkisini insanlara kabul ettirmiş, sonra aynı yakınlığı ve yetkiyi Hz. Ali\'ye vermiştir. Şiiler bu ilana velayet, yani Hz. Ali\'nin önderliği der.' },
+      cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 2 }, { side: 'shia', i: 3 }, { side: 'sunni', i: 0 }, { side: 'sunni', i: 8 }],
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 62, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 78, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Aynı konuşmada **Hz. Peygamber** ümmetine iki ağır emanet bıraktığını söyledi. Bunlardan biri **Allah\'ın Kitabı**, diğeri de **Ehl-i Beyt**\'iydi. "Bu ikisi Havz\'da bana gelinceye kadar birbirinden ayrılmaz" dedi. Havz, kıyamet günündeki havuzdur. Peygamber bu uyarıyı bir kez söylemekle yetinmedi, birkaç kez tekrar etti. Hadiste geçen itret kelimesi Peygamber\'in yakın ailesi demektir. Yani Kur\'an\'ı doğru anlamak isteyen, onu Peygamber\'in ailesinden ayırmamalıydı. Bu sözler, kendi yurtlarına dağılacak olan hacıların hafızasına yazıldı. Onlar da bunu gittikleri şehirlere, köylere ve çadırlara taşıdı.' },
+      cites: [{ side: 'sunni', i: 3 }, { side: 'sunni', i: 4 }],
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 82, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Konuşma bitince insanlar **Hz. Ali**\'yi tebrik etmek için onun yanına geldi. Rivayetlere göre tebrik edenler arasında **Ömer** de vardı. Ömer, Hz. Ali\'ye "Tebrikler ey Ebu Talib\'in oğlu, bütün mümin erkeklerin ve kadınların mevlâsı oldun" dedi. Kalabalık uzun bir süre Hz. Ali\'nin elini sıktı. Ardından kafileler yeniden yola koyuldu ve hacılar Hum\'dan kendi yurtlarına dağıldı. Bu olaydan yaklaşık iki buçuk ay sonra Peygamber vefat etti. Gadir\'de Hz. Ali\'yi tebrik edenlerin bir kısmı, Peygamber\'in cenazesi daha yıkanmadan Sakife\'de toplandı. Orada Hz. Ali\'nin adı anılmadı.' },
+      text: { tr: 'Konuşma bitince insanlar **Hz. Ali**\'yi tebrik etmek için onun yanına geldi. Tebrik edenler arasında **Ömer** de vardı. Ömer, Hz. Ali\'ye "Tebrikler ey Ebu Talib\'in oğlu, bütün mümin erkeklerin ve kadınların mevlâsı oldun" dedi. Kalabalık uzun bir süre Hz. Ali\'nin elini sıktı. Ardından kafileler yeniden yola koyuldu ve hacılar Hum\'dan kendi yurtlarına dağıldı. Bu olaydan yaklaşık iki buçuk ay sonra Peygamber vefat etti. Gadir\'de Hz. Ali\'yi tebrik edenlerin bir kısmı, Peygamber\'in cenazesi daha yıkanmadan Sakife\'de toplandı. Orada Hz. Ali\'nin adı anılmadı.' },
+      cites: [{ side: 'shia', i: 1 }, { side: 'sunni', i: 2 }],
       art: { bg: 'dune-dusk', props: ['sun', 'tents'], actors: [{ kind: 'crowd', x: 30, scale: 6 }, { kind: 'man', x: 56 }, { kind: 'ali', x: 74, label: { tr: 'Hz. Ali' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Gadir Hum, Peygamber\'in Hz. Ali\'yle ilgili tek sözü değildi. **Hayber**\'de sancağı ona vermiş ve onu Allah\'ı ve Resulünü seven, onlar tarafından da sevilen kişi diye tanıtmıştı. **Tebük** seferine çıkarken Hz. Ali\'yi Medine\'de bırakmış ve ona "Harun Musa\'ya nasıl ise sen de bana öylesin" demişti. **Gadir Hum**\'da ise hacdan dönen kalabalığın önünde onun elini kaldırmıştı. Bu üç olay farklı yıllarda yaşandı, ama hepsi aynı kişiyi işaret ediyordu. Yıllar sonra sahabe **Sa\'d b. Ebi Vakkas**, Muaviye ona Hz. Ali\'ye neden sövmediğini sorduğunda tam da bu üç faziletini sayarak cevap verecekti.' },
+      cites: [{ side: 'sunni', i: 1 }, { side: 'sunni', i: 5 }, { side: 'sunni', i: 6 }, { side: 'sunni', i: 7 }],
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'ali', x: 50, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'crowd', x: 22, scale: 5 }] },
       by: 'both',
     },

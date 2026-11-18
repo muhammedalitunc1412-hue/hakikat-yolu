@@ -48,7 +48,7 @@ export const kerbela: HistEvent = {
       image: 'kerbela-muslim-su',
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 40, label: { tr: 'Müslim' } }, { kind: 'man', x: 72, label: { tr: 'Amr b. Hureys' } }] },
       by: 'partial',
-      cites: [{ side: 'sunni', i: 6 }],
+      cites: [{ side: 'sunni', i: 6 }, { side: 'shia', i: 25 }],
     },
 
     {
@@ -59,7 +59,7 @@ export const kerbela: HistEvent = {
       cites: [{ side: 'shia', i: 0 }],
     },
     {
-      text: { tr: 'Muharrem\'in ikinci günü atlar bir çölde durdu ve bir adım daha atmadı. **Hz. Hüseyin** buranın adını sordu. "Kerbelâ" dediler. Bu ad, keder ve belâ anlamını taşıyordu. Rivayete göre Peygamber, torununun şehit edileceği yerin adını yıllar önce haber vermişti. Cebrail\'in getirdiği bir avuç toprağı da **Ümmü Seleme**\'ye emanet etmiş, bu toprak kana döndüğünde Hz. Hüseyin\'in şehit edildiğini anlayacağını söylemişti. Hz. Hüseyin atından indi ve şöyle dedi: "Burası kerb ve belâ yeridir. Konaklayın, kanımız burada dökülecek." Rivayete göre çölü Nineva ve Gâdiriye halkından altmış bin dirheme satın aldı, sonra kabrini ziyarete gelenlere yol göstermeleri ve onları üç gün misafir etmeleri şartıyla yine onlara bağışladı. Çadırlar Fırat\'ın kıyısına kuruldu. Kısa süre sonra **Ömer b. Sa\'d** büyük bir orduyla geldi. Kendisine bu iş karşılığında Rey valiliği vaat edilmişti.' },
+      text: { tr: 'Muharrem\'in ikinci günü atlar bir çölde durdu ve bir adım daha atmadı. **Hz. Hüseyin** buranın adını sordu. "Kerbelâ" dediler. Bu ad, keder ve belâ anlamını taşıyordu. Peygamber, torununun şehit edileceği yerin adını yıllar önce haber vermişti. Cebrail\'in getirdiği bir avuç toprağı da **Ümmü Seleme**\'ye emanet etmiş, bu toprak kana döndüğünde Hz. Hüseyin\'in şehit edildiğini anlayacağını söylemişti. Hz. Hüseyin atından indi ve şöyle dedi: "Burası kerb ve belâ yeridir. Konaklayın, kanımız burada dökülecek." Rivayete göre çölü Nineva ve Gâdiriye halkından altmış bin dirheme satın aldı, sonra kabrini ziyarete gelenlere yol göstermeleri ve onları üç gün misafir etmeleri şartıyla yine onlara bağışladı. Çadırlar Fırat\'ın kıyısına kuruldu. Kısa süre sonra **Ömer b. Sa\'d** büyük bir orduyla geldi. Kendisine bu iş karşılığında Rey valiliği vaat edilmişti.' },
       image: 'kerbela-19',
       art: { bg: 'dune-dusk', props: ['tents', 'flags'], actors: [{ kind: 'husayn', x: 60, label: { tr: 'Hz. Hüseyin' } }, { kind: 'man', x: 28, label: { tr: 'Ömer b. Sa\'d' } }] },
       by: 'partial',
@@ -98,7 +98,7 @@ export const kerbela: HistEvent = {
       image: 'kerbela-seccad-1',
       art: { bg: 'night', props: ['tents', 'moon'], actors: [{ kind: 'man', x: 46, label: { tr: 'Hz. Zeynelâbidîn' }, pose: 'sit' }, { kind: 'woman', x: 72, label: { tr: 'Hz. Zeyneb' } }] },
       by: 'partial',
-      cites: [{ side: 'sunni', i: 6 }],
+      cites: [{ side: 'sunni', i: 6 }, { side: 'shia', i: 26 }],
     },
 
     {
@@ -144,7 +144,7 @@ export const kerbela: HistEvent = {
       cites: [{ side: 'sunni', i: 5 }, { side: 'shia', i: 14 }, { side: 'shia', i: 15 }, { side: 'shia', i: 16 }],
     },
     {
-      text: { tr: 'Öğleden sonra **Hz. Ali Ekber** meydana çıkmak için babasından izin istedi. Hz. Hüseyin\'in genç oğluydu ve rivayetlere göre on sekiz yaşındaydı. Ehl-i Beyt ailesinde yüzüyle, sesiyle ve konuşmasıyla Peygamber\'e en çok benzeyen insan oydu. Peygamber\'i özleyenler, onu görmek ve sesini duymak için Hz. Ali Ekber\'e bakarlardı. **Hz. Hüseyin** oğluna uzun uzun baktı, gözleri doldu ve ellerini göğe kaldırdı: "Allah\'ım, bunlara karşı sana şikâyetçiyim. Senin Resulüne en çok benzeyen genci öldürüyorlar." Hz. Ali Ekber atını sürdü. Peygamber\'e bu kadar benzeyen bir genci karşılarında görünce karşı safta bir şaşkınlık oldu. Kılıcı güneşte parlıyordu ve birçok kez saldırdı. Sonunda oklar ve mızraklar onu çevreledi. Yaralı halde babasının kucağına döndü ve orada şehit oldu. Hz. Hüseyin oğlunu yavaşça yere bıraktı. Çadırdaki kadınlar onu bu halde görünce yürek parçalayan bir çığlık kopardı.' },
+      text: { tr: 'Öğleden sonra **Hz. Ali Ekber** meydana çıkmak için babasından izin istedi. Hz. Hüseyin\'in genç oğluydu ve on sekiz yaşındaydı. Ehl-i Beyt ailesinde yüzüyle, sesiyle ve konuşmasıyla Peygamber\'e en çok benzeyen insan oydu. Peygamber\'i özleyenler, onu görmek ve sesini duymak için Hz. Ali Ekber\'e bakarlardı. **Hz. Hüseyin** oğluna uzun uzun baktı, gözleri doldu ve ellerini göğe kaldırdı: "Allah\'ım, bunlara karşı sana şikâyetçiyim. Senin Resulüne en çok benzeyen genci öldürüyorlar." Hz. Ali Ekber atını sürdü. Peygamber\'e bu kadar benzeyen bir genci karşılarında görünce karşı safta bir şaşkınlık oldu. Kılıcı güneşte parlıyordu ve birçok kez saldırdı. Sonunda oklar ve mızraklar onu çevreledi. Yaralı halde babasının kucağına döndü ve orada şehit oldu. Hz. Hüseyin oğlunu yavaşça yere bıraktı. Çadırdaki kadınlar onu bu halde görünce yürek parçalayan bir çığlık kopardı.' },
       image: 'kerbela-9',
       art: { bg: 'battle', props: ['flags', 'swords'], actors: [{ kind: 'husayn', x: 36, label: { tr: 'Hz. Hüseyin' } }, { kind: 'man', x: 62, label: { tr: 'Hz. Ali Ekber' }, pose: 'raise' }] },
       by: 'partial',
@@ -155,7 +155,7 @@ export const kerbela: HistEvent = {
       image: 'kerbela-23',
       art: { bg: 'battle', props: ['flags'], actors: [{ kind: 'husayn', x: 40, label: { tr: 'Hz. Hüseyin' } }, { kind: 'man', x: 66, label: { tr: 'Hz. Kasım' }, scale: 0.75 }] },
       by: 'partial',
-      cites: [{ side: 'shia', i: 20 }, { side: 'shia', i: 5 }, { side: 'sunni', i: 6 }],
+      cites: [{ side: 'shia', i: 20 }, { side: 'shia', i: 5 }, { side: 'sunni', i: 6 }, { side: 'shia', i: 27 }],
     },
     {
       text: { tr: 'Çadırlarda kız çocukları susuzluktan ağlıyordu. "Su, amca, su!" diye **Hz. Abbas**\'a sesleniyorlardı. Ordunun sancağı Hz. Abbas\'ın elindeydi. Hâşimoğullarının en güçlü savaşçılarından biriydi. Babası Hz. Ali\'nin cesaretini ve kılıç gücünü taşıyordu. Çocukların çığlığına daha fazla dayanamadı. Boş bir kırbayı omzuna aldı, atını Fırat\'a doğru sürdü. Nehrin kıyısını yüzlerce atlı tutuyordu. Hz. Abbas onların arasına daldı. Bir yandan kılıç sallıyor, bir yandan atını ileri sürüyordu. Önüne çıkan saflar onun karşısında dağıldı. Her adımı bir çarpışmayla geçti, bedeninde yaralar açıldı ama durmadı. Sonunda savaşa savaşa düşman saflarını yardı ve Fırat\'ın kıyısına ulaştı. Atından eğildi, elini serin suya daldırdı. Kendisi de günlerdir susuzdu. Avucuna su aldı ve dudaklarına yaklaştırdı. Tam o anda kardeşi Hz. Hüseyin\'in ve çadırdaki çocukların susuz olduğunu hatırladı. Suyu içmeden nehre geri döktü. Kırbayı ağzına kadar doldurup omzuna vurdu ve çadırlara doğru yola çıktı. Bu kez düşman dönüş yolunu kesmişti. Hurma ağaçlarının arkasında pusuya yatanlardan biri ani bir darbeyle onun sağ kolunu kesti. Hz. Abbas sendeledi ama kırbayı bırakmadı. Sol elinde tuttuğu kırbayı ağzına götürdü ve dişleriyle sımsıkı kavradı. Sonra yere düşen sağ kolunun tuttuğu kılıcı sol eline aldı. Kırba dişlerinin arasında, kılıç sol elinde, atını çadırlara doğru sürmeye devam etti. Tek eliyle önüne çıkanlara karşı koyuyor, gözünü çadırlardan ayırmıyordu. Az sonra başka bir darbe sol kolunu da kesti. Artık ne kılıç tutacak eli ne de kırbayı kavrayacak kolu kalmıştı. Yine de kırbayı ağzında tutarak atını ileri sürdü. Bu kez üzerine ok yağdırdılar. Oklardan biri kırbayı deldi ve çocuklar için taşıdığı bütün su toprağa aktı. Hz. Abbas\'ın son umudu da o suyla birlikte toprağa karıştı. Ardından bir ok da gözüne saplandı. Bir darbeyle atından yere düştü. Hz. Hüseyin kardeşinin başucuna koştu. Onu bu halde görünce "Şimdi belim kırıldı" dedi. Çünkü Hz. Abbas, ordusunun sancaktarıydı ve Hz. Hüseyin\'in en çok güvendiği kişiydi. Hz. Hüseyin\'in ona olan muhabbeti bir kardeşe duyulandan çok daha derindi, çok daha sevgi doluydu.' },
@@ -221,7 +221,7 @@ export const kerbela: HistEvent = {
       cites: [{ side: 'sunni', i: 6 }],
     },
     {
-      text: { tr: 'Kûfe\'den sonra yol Şam\'a çevrildi. Rivayetlere göre **Hz. Zeyneb**, hasta **Hz. Zeynelâbidîn**, kadınlar ve çocuklar eğersiz develere bindirildi. Eğersiz bir devenin sırtında günlerce yolculuk etmek, kemiklere işleyen bir acıydı. Bunu, Peygamber\'in ailesini aşağılamak ve onlara eziyet etmek için yaptılar. Çöl güneşi gündüzleri yakıyor, geceleri soğuk iliklere işliyordu. Küçük çocuklar develerin tüylü sırtına tutunarak düşmemeye çalışıyordu. Hz. Zeyneb geceleri uyumadan çocukları ve yeğenini gözetti. Kendi payına düşen az yiyeceği küçüklere verdi. Kafile kasabalardan geçtikçe insanlar yol kenarına dizilip esirleri seyretti. Uzun yolun sonunda Şam\'ın kapıları göründü.' },
+      text: { tr: 'Kûfe\'den sonra yol Şam\'a çevrildi. **Hz. Zeyneb**, hasta **Hz. Zeynelâbidîn**, kadınlar ve çocuklar eğersiz develere bindirildi. Eğersiz bir devenin sırtında günlerce yolculuk etmek, kemiklere işleyen bir acıydı. Bunu, Peygamber\'in ailesini aşağılamak ve onlara eziyet etmek için yaptılar. Çöl güneşi gündüzleri yakıyor, geceleri soğuk iliklere işliyordu. Küçük çocuklar develerin tüylü sırtına tutunarak düşmemeye çalışıyordu. Hz. Zeyneb geceleri uyumadan çocukları ve yeğenini gözetti. Kendi payına düşen az yiyeceği küçüklere verdi. Kafile kasabalardan geçtikçe insanlar yol kenarına dizilip esirleri seyretti. Uzun yolun sonunda Şam\'ın kapıları göründü.' },
       image: 'kerbela-egersiz',
       art: { bg: 'dune-day', props: ['camels', 'sun'], actors: [{ kind: 'woman', x: 42, label: { tr: 'Hz. Zeyneb' } }, { kind: 'man', x: 64, label: { tr: 'Hz. Zeynelâbidîn' }, pose: 'sit' }, { kind: 'crowd', x: 22, scale: 4 }] },
       by: 'shia',
@@ -256,6 +256,7 @@ export const kerbela: HistEvent = {
     },
     {
       text: { tr: 'Kerbelâ\'nın üzerinden yüzyıllar geçti, ama şehitlerin adı unutulmadı. Hz. Hüseyin\'in şehadetinin kırkıncı gününe Erbaîn denir ve her yıl bu günde milyonlarca insan Kerbelâ\'ya yürür. Yol boyunca kurulan çadırlarda yürüyenlere yemek ve su ikram edilir. Kerbelâ\'daki Hz. Abbas türbesinin resmi açıklamasına göre 2024 yılının Erbaîn ziyaretinde Kerbelâ\'ya 21.480.525 ziyaretçi geldi. Suudi Arabistan\'ın resmi verilerine göre aynı yıl hacca gelenlerin sayısı 1.833.164\'tü. Yani Erbaîn\'de Kerbelâ\'ya akın eden insanların sayısı, hacca gidenlerin on katından fazladır.' },
+      cites: [{ side: 'shia', i: 28 }, { side: 'shia', i: 29 }],
       image: 'kerbela-erbain',
       art: { bg: 'dawn', props: ['flags', 'sun'], actors: [{ kind: 'crowd', x: 46, scale: 8 }] },
       by: 'both',

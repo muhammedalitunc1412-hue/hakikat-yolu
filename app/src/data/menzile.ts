@@ -17,6 +17,7 @@ export const menzile: HistEvent = {
     {
       by: 'both',
       text: { tr: 'Ordu yola çıkmadan önce **Hz. Peygamber**, Medine\'yi ve kendi ailesini **Hz. Ali**\'ye emanet etti. Şehirde kadınlar, çocuklar ve yaşlılar kalıyordu. Peygamber uzaktayken şehri ve ailesini koruyacak kişinin, en çok güvendiği biri olması gerekiyordu. Hz. Ali, ordunun peşinden gitmedi ve emri kabul ederek Medine\'de kaldı. Geride kalmak, ona duyulan güvenin bir işaretiydi. Peygamber, en değerli emanetini en güvendiği kişiye bırakmıştı.' },
+      cites: [{ side: 'sunni', i: 1 }],
       image: 'menzile-2',
       art: { bg: 'city', props: ['sun'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 62, label: { tr: 'Hz. Ali' } }] },
     },
@@ -29,6 +30,7 @@ export const menzile: HistEvent = {
     {
       by: 'both',
       text: { tr: '**Hz. Ali**, Medine\'den biraz uzaklaşmış olan orduya yetişti ve **Hz. Peygamber**\'in yanına vardı. Sesinde bir sitem vardı: "Ya Resulallah, beni kadınların ve çocukların yanında mı bırakıyorsun?" Peygamber onu azarlamadı. Sevgiyle ona baktı ve şöyle dedi: "Harun\'un Musa\'nın yanındaki yeri neyse, senin de benim yanımdaki yerin odur. Ancak benden sonra peygamber yoktur. Buna razı değil misin?" Bu söz Buhari ve Müslim\'de de geçer. Hz. Ali\'nin yüzündeki gölge kayboldu. Peygamber onu bir kenara itmemiş, kendi yanında Hz. **Hârûn**\'un Hz. **Mûsâ**\'nın yanındaki yerine koymuştu.' },
+      cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 2 }],
       image: 'menzile-4',
       art: { bg: 'dune-dusk', actors: [{ kind: 'prophet', x: 42, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 64, label: { tr: 'Hz. Ali' } }] },
     },
@@ -47,12 +49,14 @@ export const menzile: HistEvent = {
     {
       by: 'shia',
       text: { tr: 'Menzile Hadisi\'nde peygamberlik açıkça ayrılır, çünkü Peygamber\'den sonra başka bir peygamber gelmeyecektir. Ama geriye kalan bağlar çok büyüktür. Hz. Harun, Hz. Musa\'nın kardeşi, yardımcısı ve vekiliydi. Peygamber de **Hz. Ali**\'yi bu bağlarla kendisine bağladı. Şii okuyuşuna göre bu söz, Hz. Ali\'nin Peygamber\'den sonra ümmetin önderi olacağının açık bir işaretidir. Çünkü Hz. Harun, Hz. Musa yokken halkın başında duruyordu. Birkaç ay sonra Gadir Hum\'da Peygamber, bu yakınlığı binlerce hacının önünde, Hz. Ali\'nin elini kaldırarak ilan edecekti.' },
+      cites: [{ side: 'shia', i: 0 }],
       image: 'menzile-6',
       art: { bg: 'night', props: ['stars', 'scroll'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'both',
       text: { tr: 'Yıllar sonra **Muaviye**, sahabe **Sa\'d b. Ebû Vakkās**\'a neden Hz. Ali\'ye sövmediğini sordu. O günlerde Emevi minberlerinde Hz. Ali\'ye lanet okunması isteniyordu. Sa\'d, Peygamber\'den duyduğu üç hatırayı saydı. Birincisi, Tebük yolundaki Harun benzetmesiydi. İkincisi, Hayber\'de sancağın Hz. Ali\'ye verilmesiydi. Üçüncüsü ise Mübahele günü Peygamber\'in Hz. Ali\'yi ve ailesini yanına almasıydı. Muaviye\'nin istediği lanet, Peygamber\'in Hz. Ali için söylediği sözler karşısında cevapsız kaldı.' },
+      cites: [{ side: 'sunni', i: 2 }, { side: 'sunni', i: 3 }],
       image: 'menzile-7',
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'crowd', x: 36, scale: 3 }] },
     },

@@ -15,7 +15,7 @@ export const meysem: HistEvent = {
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }, { side: 'sunni', i: 0 }],
     },
     {
-      text: { tr: 'Rivayete göre bir gün **Hz. Ali**, **Meysem**\'e Ehl-i Beyt\'e olan bağlılığı yüzünden öldürüleceğini haber verdi. Ona asılacağı hurma ağacını gösterdi ve dilinin kesileceğini de söyledi. Meysem bu haberden korkmadı. Kaçmak yerine, o günden sonra sık sık o ağacın yanına gitti. Ağacın dibinde namaz kıldı ve kökünü suladı. Kûfe\'de herkesin önünden geçip gittiği sıradan bir hurma ağacı, Meysem için ölümünü ve imamına olan sadakatini hatırlatan bir yer oldu. Ölümünü önceden bilen bu adam, o ağaca sevgiyle bakıyordu.' },
+      text: { tr: 'Bir gün **Hz. Ali**, **Meysem**\'e Ehl-i Beyt\'e olan bağlılığı yüzünden öldürüleceğini haber verdi. Ona asılacağı hurma ağacını gösterdi ve dilinin kesileceğini de söyledi. Meysem bu haberden korkmadı. Kaçmak yerine, o günden sonra sık sık o ağacın yanına gitti. Ağacın dibinde namaz kıldı ve kökünü suladı. Kûfe\'de herkesin önünden geçip gittiği sıradan bir hurma ağacı, Meysem için ölümünü ve imamına olan sadakatini hatırlatan bir yer oldu. Ölümünü önceden bilen bu adam, o ağaca sevgiyle bakıyordu.' },
       art: { bg: 'oasis', props: ['palms', 'sun'], actors: [{ kind: 'ali', x: 36, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 64, pose: 'sit', label: { tr: 'Meysem' } }] },
       by: 'partial',
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 2 }, { side: 'sunni', i: 0 }],
@@ -33,7 +33,7 @@ export const meysem: HistEvent = {
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }, { side: 'sunni', i: 0 }],
     },
     {
-      text: { tr: 'Rivayete göre **Meysem**, **Hz. Ali**\'nin yıllar önce gösterdiği o hurma ağacına asıldı. Darağacında bile susmadı. Kendisini görmeye gelen kalabalığa seslendi ve Ehl-i Beyt\'in faziletlerini anlatmaya devam etti. Halk etrafında toplanıp onu dinliyordu. İbn Ziyâd, Meysem\'in asıldığı yerden konuşmaya devam ettiğini duyunca öfkelendi ve dilinin kesilmesini emretti. Meysem orada şehit edildi. Yıllarca kökünü suladığı ağaç, onun son sözlerine şahit oldu. Hz. Ali\'nin yıllar önce haber verdiği her şey, bir bir gerçekleşmişti.' },
+      text: { tr: '**Meysem**, **Hz. Ali**\'nin yıllar önce gösterdiği o hurma ağacına asıldı. Darağacında bile susmadı. Kendisini görmeye gelen kalabalığa seslendi ve Ehl-i Beyt\'in faziletlerini anlatmaya devam etti. Halk etrafında toplanıp onu dinliyordu. İbn Ziyâd, Meysem\'in asıldığı yerden konuşmaya devam ettiğini duyunca öfkelendi ve dilinin kesilmesini emretti. Meysem orada şehit edildi. Yıllarca kökünü suladığı ağaç, onun son sözlerine şahit oldu. Hz. Ali\'nin yıllar önce haber verdiği her şey, bir bir gerçekleşmişti.' },
       art: { bg: 'dawn', props: ['palms'], actors: [{ kind: 'man', x: 48, label: { tr: 'Meysem' } }, { kind: 'crowd', x: 74, scale: 5 }] },
       by: 'partial',
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }, { side: 'shia', i: 2 }, { side: 'sunni', i: 0 }],

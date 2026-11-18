@@ -13,13 +13,13 @@ export const fedek: HistEvent = {
       text: { tr: 'Medine\'nin kuzeyinde, Hayber\'e yakın bir yerde **Fedek** adında verimli bir hurmalık vardı. Buranın halkı, Müslümanlarla savaşmadan anlaşma yapmıştı. Savaşsız alınan topraklar doğrudan Peygamber\'in tasarrufuna bırakılırdı. **Hz. Peygamber** de bu bahçeyi kızı **Hz. Fatıma**\'ya hibe etti ve ona miras olarak bıraktı. Hibe, bir malı karşılıksız olarak bağışlamak demektir. Fedek\'in hurmaları her yıl Hz. Fatıma\'nın evine bereket getiriyordu. Bu gelir, ==Ehl-i Beyt==\'in geçiminin büyük kısmını karşılıyordu. Peygamber vefat ettiğinde **Hz. Ali** onun cenazesinin başındaydı ve aile derin bir yasın içindeydi. Tam o günlerde, Sakife\'de biat alınırken Fedek için de yeni bir hesap başladı.' },
       art: { bg: 'oasis', props: ['sun', 'palms', 'well'], actors: [{ kind: 'prophet', x: 36, label: { tr: 'Hz. Peygamber' } }, { kind: 'fatima', x: 64, label: { tr: 'Hz. Fatıma' } }] },
       by: 'partial',
-      cites: [{ side: 'shia', i: 0 }, { side: 'sunni', i: 5 }, { side: 'sunni', i: 4 }],
+      cites: [{ side: 'shia', i: 0 }, { side: 'sunni', i: 5 }, { side: 'sunni', i: 4 }, { side: 'shia', i: 2 }],
     },
     {
       text: { tr: 'Peygamber\'in vefatının üzerinden çok geçmeden **Halife Ebu Bekir**, Fedek\'e el koydu. **Hz. Fatıma**, babasının kendisine bağışladığı bu toprağı geri istedi. Önce Fedek\'in kendisine hibe edildiğini söyledi. Bu kabul edilmeyince, babasının kızı olarak mirasını istedi. İki talep de geri çevrildi. Şii okuyuşuna göre bu el koyuş yalnızca bir mal meselesi değildi. Fedek\'in geliri ==Ehl-i Beyt==\'i güçlü tutuyordu. Bu gelir ellerinden alınırsa, **Hz. Ali** halifelik hakkını savunacak gücü de bulamayacaktı. Hz. Fatıma için ise mesele, babasının sözüne ve kendi hakkına sahip çıkmaktı.' },
       art: { bg: 'city', props: ['sun'], actors: [{ kind: 'fatima', x: 34, label: { tr: 'Hz. Fatıma' } }, { kind: 'man', x: 66, label: { tr: 'Ebu Bekir' } }] },
       by: 'both',
-      cites: [{ side: 'shia', i: 0 }, { side: 'sunni', i: 0 }],
+      cites: [{ side: 'shia', i: 0 }, { side: 'sunni', i: 0 }, { side: 'sunni', i: 2 }],
     },
     {
       text: { tr: 'Bunun üzerine **Hz. Fatıma** Peygamber\'in mescidine gitti. Mescit kalabalıktı ve cemaat onun ne söyleyeceğini merakla bekliyordu. Hz. Fatıma orada, sonradan Fedek Hutbesi diye anılacak konuşmasını yaptı. Sesi, babasını yeni kaybetmiş bir kızın sesiydi, ama sözleri hakkını iyi bilen birinin sözleriydi. Kendisine söylenen söz şuydu: "Biz peygamberler miras bırakmayız. Bıraktığımız sadakadır." Hz. Fatıma buna Kur\'an\'la cevap verdi. Neml Suresi\'nin 16. ayetinde Süleyman\'ın Davud\'a varis olduğunu, Meryem Suresi\'nin 6. ayetinde de Zekeriyya\'nın oğlu Yahya\'nın ona varis olmasını istediğini hatırlattı. Peygamberlerin çocukları miras alabiliyorsa, Peygamber\'in kızı neden alamıyordu?' },

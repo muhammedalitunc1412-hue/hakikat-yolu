@@ -21,6 +21,7 @@ export const hayber: HistEvent = {
     {
       by: 'both',
       text: { tr: 'O akşam Peygamber ashabını topladı ve şöyle dedi: "Yarın sancağı, Allah\'ı ve Resulünü seven, Allah\'ın ve Resulünün de sevdiği birine vereceğim. Allah fethi onun eliyle nasip edecek." Peygamber bir isim söylememişti. O gece çadırlarda bu sözden başka bir şey konuşulmadı. Ashabın her biri sancağın kendisine verilmesini umarak uyudu, çünkü bu söz, sancağı alacak kişinin Allah\'ın ve Resulünün sevgisini kazandığını müjdeliyordu. Bu sözü Buhari ve Müslim de aktarır. Gece boyunca ordugâhta herkes sabahı bekledi.' },
+      cites: [{ side: 'shia', i: 0 }],
       art: { bg: 'night', props: ['stars'], actors: [{ kind: 'prophet', x: 46, label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 74, scale: 5 }] },
     },
     {
@@ -37,14 +38,14 @@ export const hayber: HistEvent = {
     },
     {
       by: 'partial',
-      cites: [{ side: 'sunni', i: 5 }],
+      cites: [{ side: 'sunni', i: 5 }, { side: 'shia', i: 0 }],
       text: { tr: 'Ehl-i Beyt rivayetlerinde o günden bir sahne daha anlatılır. Savaşın en kızgın anında **Hz. Ali**, Hayber kalesinin ağır kapısını yerinden söktü ve onu bir kalkan gibi önünde tutarak savaştı. Okları ve darbeleri bu kapıyla karşıladı. Arkadaşları bu gücü yıllarca anlata anlata andı. Rivayetler kapının ağırlığı için kesin bir ölçü vermez, ama hepsi bu gücü Hayber\'in fethine bağlar. Şiiler bu sahneyi anlatırken Peygamber\'in akşam söylediği sözü hatırlar: Allah fethi onun eliyle nasip edecekti.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'partial',
       cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 2 }, { side: 'sunni', i: 3 }],
-      text: { tr: 'Sancak, Peygamber\'in sözüyle, Allah\'ı ve Resulünü seven ve onlar tarafından sevilen kişiye verilmişti. O kişi **Hz. Ali**\'ydi. Rivayetlere göre Peygamber onu, savaştan kaçmayan ve hep ileri atılan biri olarak da tanıtmıştı. Önceki günlerde kaleyi alamadan dönenler vardı. Savaşta geri dönmek kimse için bir ayıp sayılmazdı. Ama Peygamber\'in, ordunun en zor gününde kimi öne çağırdığı herkesin gözü önündeydi. Bu seçim, Allah\'ın ve Resulünün sevgisine dayanıyordu. Sahabe Sa\'d b. Ebi Vakkas yıllar sonra Hz. Ali\'nin faziletlerini sayarken Hayber sancağını da anacaktı.' },
+      text: { tr: 'Sancak, Peygamber\'in sözüyle, Allah\'ı ve Resulünü seven ve onlar tarafından sevilen kişiye verilmişti. O kişi **Hz. Ali**\'ydi. Peygamber onu, savaştan kaçmayan ve hep ileri atılan biri olarak da tanıtmıştı. Önceki günlerde kaleyi alamadan dönenler vardı. Savaşta geri dönmek kimse için bir ayıp sayılmazdı. Ama Peygamber\'in, ordunun en zor gününde kimi öne çağırdığı herkesin gözü önündeydi. Bu seçim, Allah\'ın ve Resulünün sevgisine dayanıyordu. Sahabe Sa\'d b. Ebi Vakkas yıllar sonra Hz. Ali\'nin faziletlerini sayarken Hayber sancağını da anacaktı.' },
       art: { bg: 'night', props: ['stars', 'scroll'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {

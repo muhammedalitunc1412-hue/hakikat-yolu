@@ -9,11 +9,13 @@ export const hasan: HistEvent = {
   scenes: [
     {
       text: { tr: 'Medine\'de, Peygamber\'in mescidinde, cemaat minberin önünde toplanırdı. Peygamber konuşurken zaman zaman küçük torunu **Hz. Hasan** da yanında olurdu. Hz. Fatıma ile Hz. Ali\'nin ilk oğluydu ve Peygamber ona derin bir sevgiyle bağlıydı. Peygamber konuşurken bir cemaate bakar, bir de yanındaki torununa dönerdi. Cemaat, Peygamber\'in yüzünde bu çocuğa duyduğu sevgiyi açıkça görürdü. Peygamber, Hz. Hasan ve kardeşi Hz. Hüseyin için "Bu ikisi cennet gençlerinin efendileridir" derdi. Medine halkı bu çocuğun Peygamber\'in yanında büyüyüşünü sevgiyle izledi.' },
+      cites: [{ side: 'sunni', i: 2 }],
       art: { bg: 'city', props: ['sun', 'minbar'], actors: [{ kind: 'crowd', x: 26, scale: 7 }, { kind: 'prophet', x: 62, label: { tr: 'Hz. Peygamber' } }, { kind: 'hasan', x: 80, scale: 0.7, label: { tr: 'Hz. Hasan' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Bir gün yine minberdeyken Peygamber, yanındaki **Hz. Hasan**\'ı gösterdi ve cemaate şöyle dedi: "Bu oğlum seyyiddir. Allah onun aracılığıyla Müslümanların iki büyük grubunu barıştıracak." Seyyid, efendi ve önder demektir. Bu söz Buhari\'de geçer. O gün cemaatin hiçbiri bu sözün ne zaman ve nasıl gerçekleşeceğini bilmiyordu. Ama Peygamber, torununun ileride ümmetin kanını durduracak bir barışa imza atacağını önceden haber veriyordu. Yıllar sonra Hz. Hasan\'ın yaptığı sulh, bir yenilgi değil, dedesinin önceden müjdelediği bir merhamet olarak anılacaktı.' },
+      cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 1 }],
       art: { bg: 'city', props: ['sun', 'minbar'], actors: [{ kind: 'prophet', x: 44, pose: 'raise', label: { tr: 'Hz. Peygamber' } }, { kind: 'hasan', x: 64, scale: 0.7, label: { tr: 'Hz. Hasan' } }, { kind: 'crowd', x: 22, scale: 5 }] },
       by: 'both',
     },
@@ -25,6 +27,7 @@ export const hasan: HistEvent = {
     },
     {
       text: { tr: 'Hicretin 40. yılında, Ramazan ayında, **Hz. Ali** Kûfe mescidinde şehit edildi. Kûfe halkı, cenazenin ardından onun büyük oğlu **Hz. Hasan**\'a biat etti. Biat, bağlılık sözüdür. Hz. Hasan, babasının vasiyetiyle ümmetin yeni imamı oldu. Kûfe mescidinde minbere çıktığında yüzünde babasını kaybetmiş bir oğulun acısı vardı. Babasının kanı daha kurumamıştı ve ümmetin bütün yükü artık onun omuzlarındaydı. Ama Şam\'da biat etmeyen bir vali hâlâ duruyordu ve Hz. Hasan\'ın imamlığı ilk günden büyük bir sınavla karşılaşacaktı.' },
+      cites: [{ side: 'shia', i: 0 }],
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'hasan', x: 66, label: { tr: 'Hz. Hasan' } }] },
       by: 'both',
     },
@@ -48,25 +51,29 @@ export const hasan: HistEvent = {
       text: { tr: 'Sulhtan sonra **Hz. Hasan** Kûfe\'den ayrılıp Medine\'ye döndü. Orada yaklaşık on yıl, dedesinin şehrinde sessiz bir hayat sürdü. **Muaviye** ise oğlu **Yezid**\'i kendisinden sonra halife yapmak istiyordu. Bu yolun önündeki en büyük engel, sulh şartlarını bilen ve halkın sevgisini taşıyan Hz. Hasan\'dı. Muaviye, Hz. Hasan\'ın eşi **Ca\'de bint Eş\'as**\'a gizlice haber gönderdi. Hz. Hasan\'ı zehirlerse onu oğlu Yezid\'le evlendireceğini ve yüz bin dirhem vereceğini vaat etti. Ca\'de bu vaade kandı ve Muaviye\'nin gönderdiği zehri kocasına içirdi. Hz. Hasan kırk gün kadar acı çektikten sonra vefat etti. Vefatı, 28 Safer 49 ya da 50 yılı olarak anılır. Hz. Câfer-i Sâdık\'tan gelen rivayete göre Hz. Hasan\'ı zehirleyen Ca\'de\'dir. Hz. Hasan şehit olunca Muaviye sözünü tutmadı. Ca\'de ne Yezid\'le evlendi ne de vaat edilen paranın tamamını aldı. Böylece Yezid\'in veliahtlığının önündeki son engel de Muaviye\'nin eliyle kaldırılmış oldu.' },
       art: { bg: 'night', props: ['moon', 'stars'], actors: [{ kind: 'hasan', x: 40, pose: 'sit', label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 62, scale: 0.9, label: { tr: 'Hz. Hüseyin' } }] },
       by: 'partial',
-      cites: [{ side: 'shia', i: 5 }, { side: 'shia', i: 6 }, { side: 'shia', i: 7 }, { side: 'shia', i: 10 }, { side: 'sunni', i: 10 }, { side: 'sunni', i: 13 }],
+      cites: [{ side: 'shia', i: 5 }, { side: 'shia', i: 6 }, { side: 'shia', i: 7 }, { side: 'shia', i: 10 }, { side: 'sunni', i: 10 }, { side: 'sunni', i: 13 }, { side: 'shia', i: 0 }, { side: 'shia', i: 8 }, { side: 'sunni', i: 11 }, { side: 'sunni', i: 12 }],
     },
     {
-      text: { tr: 'Ölüm döşeğindeyken **Hz. Hasan**, kardeşi **Hz. Hüseyin**\'i yanına çağırdı ve ona vasiyet etti. Kendisini dedesi Resûlullah\'ın yanına defnetmelerini istedi. Ama bir şart koştu: "Cenazemde bir damla bile kan dökülmesin." Eğer Peygamber\'in yanına defnedilmesine engel olunur ve kan dökülme tehlikesi doğarsa, kendisini Bakî mezarlığına, ninesi **Fatıma bint Esed**\'in yanına gömmelerini söyledi. Rivayetlere göre Hz. Hasan, Peygamber\'in yanına defnedilmesine engel olunacağını önceden haber vermişti. Hayatı boyunca ümmetin kanını korumak için hakkından vazgeçen imam, ölümünde bile aynı merhameti gösteriyordu.' },
+      text: { tr: 'Ölüm döşeğindeyken **Hz. Hasan**, kardeşi **Hz. Hüseyin**\'i yanına çağırdı ve ona vasiyet etti. Kendisini dedesi Resûlullah\'ın yanına defnetmelerini istedi. Ama bir şart koştu: "Cenazemde bir damla bile kan dökülmesin." Eğer Peygamber\'in yanına defnedilmesine engel olunur ve kan dökülme tehlikesi doğarsa, kendisini Bakî mezarlığına, ninesi **Fatıma bint Esed**\'in yanına gömmelerini söyledi. Hz. Hasan, Peygamber\'in yanına defnedilmesine engel olunacağını önceden haber vermişti. Hayatı boyunca ümmetin kanını korumak için hakkından vazgeçen imam, ölümünde bile aynı merhameti gösteriyordu.' },
+      cites: [{ side: 'shia', i: 3 }, { side: 'shia', i: 4 }],
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'hasan', x: 38, pose: 'sit', label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 62, scale: 0.9, label: { tr: 'Hz. Hüseyin' } }] },
       by: 'both',
     },
     {
       text: { tr: '**Hz. Hüseyin** ve Hâşimoğulları, Hz. Hasan\'ın tabutunu omuzlarına alıp Peygamber\'in kabrine doğru yürüdü. Tam o sırada **Aişe**, bir katıra binmiş halde **Mervan** ve Ümeyyeoğullarıyla birlikte yolu kesti. Tabutun Peygamber\'in yanına gömülmesine izin vermedi. Mervan da, "Osman Bakî\'de gömülürken Hasan mı Peygamber\'in evine gömülecek?" diyerek bağırdı. Aişe\'nin emriyle Peygamber\'in torununun tabutuna oklar atıldı. Bunu gören **İbn Abbas** dayanamadı ve Aişe\'ye şöyle dedi: "Bir gün deveye, bir gün katıra binersin." Cemel\'de Hz. Ali\'ye karşı deveye binmişti, şimdi de Hz. Hasan\'ın cenazesine karşı katıra binmişti.' },
+      cites: [{ side: 'shia', i: 1 }, { side: 'shia', i: 9 }, { side: 'sunni', i: 5 }, { side: 'sunni', i: 6 }, { side: 'sunni', i: 7 }, { side: 'sunni', i: 8 }],
       art: { bg: 'city', props: ['flags'], actors: [{ kind: 'man', x: 26, label: { tr: 'Mervan' } }, { kind: 'woman', x: 52, label: { tr: 'Aişe' } }, { kind: 'husayn', x: 78, scale: 0.9, label: { tr: 'Hz. Hüseyin' } }] },
       by: 'both',
     },
     {
       text: { tr: 'Mervan\'ın adamları emri yerine getirdi ve tabutu okladı. Oklar, Peygamber\'in seyyid dediği torununun naaşını taşıyan tabuta saplandı. Bazı rivayetler okları atanların Emeviler olduğunu söyler. Bir rivayet ise yetmiş okun tabuta isabet ettiğini anlatır, ama bu sayı yalnızca tek bir kaynakta geçer. Okların sayısı ne olursa olsun, Peygamber\'in torununun cenazesi, dedesinin şehrinde oklarla karşılanmıştı. Tabutu taşıyanlar okların altında öfkeyle beklerken herkesin gözü, kardeşinin tabutunun yanında duran Hz. Hüseyin\'e çevrildi.' },
+      cites: [{ side: 'shia', i: 2 }, { side: 'sunni', i: 9 }],
       art: { bg: 'dune-dusk', props: ['swords'], actors: [{ kind: 'crowd', x: 28, scale: 6 }, { kind: 'hasan', x: 54, label: { tr: 'Hz. Hasan' } }, { kind: 'crowd', x: 78, scale: 5 }] },
       by: 'both',
     },
     {
       text: { tr: '**Hz. Hüseyin** kılıcını çekmedi ve Hâşimoğullarına da çekmemelerini söyledi. Kardeşinin "Cenazemde bir damla kan dökülmesin" vasiyetini hatırlıyordu. Tabut, Peygamber\'in kabrinden geri çevrilip Bakî mezarlığına götürüldü. **Hz. Hasan**, orada ninesi **Fatıma bint Esed**\'in yanına defnedildi. Cenazede büyük bir kalabalık toplanmıştı ve Medine halkı gözyaşı döküyordu. Hz. Hüseyin, kardeşini toprağa verirken onun vasiyetini harfiyen yerine getirdi. O gün tek bir damla kan dökülmedi. Hz. Hasan\'ın kabri bugün de Medine\'de, Bakî mezarlığındadır.' },
+      cites: [{ side: 'shia', i: 1 }, { side: 'sunni', i: 4 }],
       art: { bg: 'night', props: ['moon', 'stars'], actors: [{ kind: 'husayn', x: 40, label: { tr: 'Hz. Hüseyin' } }, { kind: 'crowd', x: 66, scale: 5 }] },
       by: 'both',
     },

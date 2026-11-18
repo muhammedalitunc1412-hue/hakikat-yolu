@@ -15,18 +15,19 @@ export const sebb: HistEvent = {
     },
     {
       text: { tr: 'Kûfe, Hz. Ali\'nin halifelik yıllarındaki başkentiydi ve onu sevenlerin en kalabalık olduğu şehirdi. **Muaviye**, Kûfe valisi **Muğîre b. Şu\'be**\'ye Hz. Ali\'yi kötülemeyi sürdürmesini emretti. Muğîre de hutbelerinde hem Hz. Ali\'ye hem de onu sevenlere sövdürdü. Muğîre\'den sonra Kûfe\'ye vali olan **Ziyâd** aynı zulmü daha da sert bir şekilde devam ettirdi. Valiler, bu laneti minberlerden bütün ümmete duyurdu. Cuma namazına gelen cemaat, amin diyeceği yerde Peygamber\'in en yakınına okunan bir laneti duyuyordu.' },
-      cites: [{ side: 'sunni', i: 3 }, { side: 'shia', i: 0 }],
+      cites: [{ side: 'sunni', i: 3 }, { side: 'shia', i: 0 }, { side: 'sunni', i: 4 }],
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'man', x: 34, pose: 'raise', label: { tr: 'Muğîre' } }, { kind: 'crowd', x: 68, scale: 6 }] },
       by: 'both',
     },
     {
       text: { tr: 'Bir gün **Muaviye**, sahabe **Sa\'d b. Ebi Vakkas**\'a sordu: "Seni Ebu Turab\'a sövmekten alıkoyan nedir?" Ebu Turab, Peygamber\'in Hz. Ali\'ye verdiği sevimli bir lakaptı. Sa\'d, Peygamber\'in Hz. Ali hakkında söylediği üç sözü hatırlattı. Birincisi, Tebük\'te söylenen Menzile hadisiydi. İkincisi, Hayber\'de sancağın Allah\'ı ve Resulünü seven kişiye verilmesiydi. Üçüncüsü ise Mübahele günü Peygamber\'in Hz. Ali\'yi ve ailesini yanına almasıydı. Sa\'d, bu sözleri duyduğu için Hz. Ali\'ye asla sövmeyeceğini söyledi. Bu konuşma Müslim\'de geçer.' },
+      cites: [{ side: 'sunni', i: 0 }],
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 28, label: { tr: 'Sa\'d b. Ebî Vakkâs' } }, { kind: 'man', x: 64, label: { tr: 'Muaviye' } }] },
       by: 'both',
     },
     {
-      text: { tr: 'Rivayetlere göre **Muaviye**, bütün valilerine bir genelge gönderdi. Genelge, valilere yazılan resmî emirdir. Bu emirde Hz. Ali\'ye sövülmesini, onu öven ve sevenlerin cezalandırılmasını istedi. Hz. Ali\'nin faziletlerini anlatanlar devletin düşmanı ilan edildi. Ehl-i Beyt\'i sevenler, sevgilerini gizlemek zorunda kaldı. Evlerde bile Hz. Ali\'nin adı fısıltıyla anılır oldu. Peygamber\'in ailesine duyulan sevgi, Emevi topraklarında can pahasına taşınan bir sırra dönüştü.' },
-      cites: [{ side: 'shia', i: 0 }, { side: 'sunni', i: 3 }],
+      text: { tr: '**Muaviye**, bütün valilerine bir genelge gönderdi. Genelge, valilere yazılan resmî emirdir. Bu emirde Hz. Ali\'ye sövülmesini, onu öven ve sevenlerin cezalandırılmasını istedi. Hz. Ali\'nin faziletlerini anlatanlar devletin düşmanı ilan edildi. Ehl-i Beyt\'i sevenler, sevgilerini gizlemek zorunda kaldı. Evlerde bile Hz. Ali\'nin adı fısıltıyla anılır oldu. Peygamber\'in ailesine duyulan sevgi, Emevi topraklarında can pahasına taşınan bir sırra dönüştü.' },
+      cites: [{ side: 'shia', i: 0 }, { side: 'sunni', i: 3 }, { side: 'sunni', i: 5 }],
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 40, pose: 'sit', label: { tr: 'Muaviye' } }, { kind: 'crowd', x: 72, scale: 4 }] },
       by: 'partial',
     },
@@ -38,12 +39,13 @@ export const sebb: HistEvent = {
     },
     {
       text: { tr: 'Kûfe\'de **Hucr b. Adî**, Cemel ve Sıffin\'de Hz. Ali\'nin safında savaşmış yiğit bir komutandı. Bir cuma günü vali Muğîre hutbede **Hz. Ali**\'yi kötülerken Hucr dayanamadı ve ayağa kalktı. Hz. Ali\'nin faziletinin, onu kötüleyenlerden çok daha üstün olduğunu yüksek sesle söyledi. Muğîre\'den sonra Kûfe\'ye vali olan **Ziyâd**, Hucr\'u yakalattı. Hucr, on iki kadar arkadaşıyla birlikte Şam yoluna çıkarıldı. Tek suçları, minberden okunan laneti kabul etmemekti.' },
+      cites: [{ side: 'shia', i: 2 }, { side: 'shia', i: 3 }, { side: 'sunni', i: 4 }, { side: 'sunni', i: 10 }],
       art: { bg: 'city', props: ['minbar'], actors: [{ kind: 'man', x: 30, pose: 'raise', label: { tr: 'Hucr b. Adî' } }, { kind: 'crowd', x: 66, scale: 6 }] },
       by: 'both',
     },
     {
       text: { tr: 'Şam\'a götürülen **Hucr** ve arkadaşlarından, Hz. Ali\'ye sövmeleri ve ondan uzaklaştıklarını söylemeleri istendi. Hucr ve onunla birlikte direnenler bunu reddetti. Hicretin 51. yılında, Şam yolundaki **Mercü Azra** denen yerde ==katledildiler.== Hucr öldürülmeden önce izin isteyip iki rekât namaz kıldı. Namazdan sonra şehit olacağını bildiğini söyledi. **Muaviye**, kendisine bu katliamdan dolayı itiraz edenlere karşı bu kanı savundu. Hucr ve arkadaşları, Hz. Ali\'ye lanet etmeyi reddettikleri için öldürülmüştü. Hucr\'un son ibadeti, bu iki rekât namaz oldu.' },
-      cites: [{ side: 'sunni', i: 1 }],
+      cites: [{ side: 'sunni', i: 1 }, { side: 'shia', i: 3 }],
       art: { bg: 'dune-dusk', props: ['swords'], actors: [{ kind: 'man', x: 34, label: { tr: 'Hucr b. Adî' } }, { kind: 'crowd', x: 70, scale: 5 }] },
       by: 'both',
     },
@@ -54,7 +56,8 @@ export const sebb: HistEvent = {
       cites: [{ side: 'sunni', i: 2 }, { side: 'sunni', i: 8 }],
     },
     {
-      text: { tr: '**Ömer b. Abdülaziz** halife olunca bu laneti kaldırdı. Rivayetlere göre bütün beldelere yazı gönderip uygulamanın durdurulmasını emretti. Hutbelerde lanetin yerine Nahl Suresi\'nin 90. ayeti okunmaya başlandı: "Allah adaleti, iyiliği ve yakınlara yardım etmeyi emreder. Hayâsızlığı, kötülüğü ve zulmü yasaklar." Altmış yıla yakın süren bu zulüm böylece sona erdi. Minberlerde artık Hz. Ali\'ye lanet okunmuyordu. Ama yılların açtığı yara kolayca kapanmadı ve Ehl-i Beyt\'i sevenler o yılları hiçbir zaman unutmadı.' },
+      text: { tr: '**Ömer b. Abdülaziz** halife olunca bu laneti kaldırdı. Bütün beldelere yazı gönderip uygulamanın durdurulmasını emretti. Hutbelerde lanetin yerine Nahl Suresi\'nin 90. ayeti okunmaya başlandı: "Allah adaleti, iyiliği ve yakınlara yardım etmeyi emreder. Hayâsızlığı, kötülüğü ve zulmü yasaklar." Altmış yıla yakın süren bu zulüm böylece sona erdi. Minberlerde artık Hz. Ali\'ye lanet okunmuyordu. Ama yılların açtığı yara kolayca kapanmadı ve Ehl-i Beyt\'i sevenler o yılları hiçbir zaman unutmadı.' },
+      cites: [{ side: 'sunni', i: 9 }],
       art: { bg: 'dawn', props: ['minbar', 'sun'], actors: [{ kind: 'man', x: 40, pose: 'raise', label: { tr: 'Ömer b. Abdülaziz' } }, { kind: 'crowd', x: 72, scale: 6 }] },
       by: 'both',
     },

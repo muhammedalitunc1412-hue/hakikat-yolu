@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import test from 'node:test';
 
 const read = (p: string) => readFileSync(new URL(p, import.meta.url), 'utf8');
@@ -27,7 +27,8 @@ test('Sakîfe resimleri kaymaz, kuyu ayrı anahtardadır', () => {
   assert.ok(imgs.indexOf('sakife-7') < yalniz && yalniz < kuyu && kuyu < imgs.indexOf('sakife-8'));
   assert.match(src, /insanların Hz\. Ali\\'ye karşı tavrı değişti/);
   assert.match(src, /Buhari 4240/);
-  assert.match(src, /Rivayetlere göre \*\*Hz\. Ali\*\* sokakta selam verirdi/);
+  assert.match(src, /başka rivayetlerde daha açık anlatılır\. \*\*Hz\. Ali\*\* sokakta selam verirdi/);
+  assert.doesNotMatch(src, /Rivayetlere göre \*\*Hz\. Ali\*\* sokakta/);
   assert.match(src, /İnsanlar selamını almazdı/);
   assert.doesNotMatch(src, /Buhari 4240[^.]*selam/);
   assert.match(read('./sceneImages.ts'), /'ali-kuyu-1':/);
@@ -110,4 +111,44 @@ test('genişleme sahnelerinin görseli kayıtlı, yer tutucu kalmaz', () => {
   bound('./sakife.ts', 10);
   assert.match(events, /export function nextStory/);
   assert.match(events, /TEACHING_IDS = new Set\(\['mezhepler', 'sadik', 'muta', 'abdest', 'ibadet-farklari'\]\)/);
+});
+
+test('hikâye olaylarındaki her kaynak en az bir sahnede atıflıdır', async () => {
+  const dir = new URL('./', import.meta.url);
+  const teaching = new Set(['mezhepler', 'sadik', 'muta', 'abdest', 'ibadet-farklari']);
+  const files = readdirSync(dir).filter((f: string) => f.endsWith('.ts') && !f.includes('.test.') && /: HistEvent = \{/.test(read('./' + f)));
+  assert.ok(files.length >= 25);
+  const problems: string[] = [];
+  let checked = 0;
+  for (const f of files) {
+    const mod: any = await import(new URL(f, dir).href);
+    const ev: any = Object.values(mod).find((v: any) => v && typeof v === 'object' && Array.isArray(v.scenes) && v.id);
+    if (!ev || teaching.has(ev.id)) continue;
+    checked++;
+    const cited = new Set<string>();
+    for (const sc of ev.scenes) for (const c of sc.cites ?? []) {
+      assert.ok(c.side === 'shia' || c.side === 'sunni', `${ev.id}: geçersiz taraf ${c.side}`);
+      assert.ok(Number.isInteger(c.i) && c.i >= 0 && c.i < ev[c.side].length, `${ev.id}: ${c.side}[${c.i}] yok`);
+      cited.add(c.side + ':' + c.i);
+    }
+    for (const side of ['shia', 'sunni']) ev[side].forEach((s: any, i: number) => {
+      if (!cited.has(side + ':' + i)) problems.push(`${ev.id} ${side}[${i}] ${s.book}`);
+    });
+  }
+  assert.ok(checked >= 20);
+  assert.deepEqual(problems, []);
+});
+
+test('hikâye olaylarının sahne metinlerinde "Rivayete/Rivayetlere göre" çekincesi yok', async () => {
+  const teaching = new Set(['mezhepler', 'sadik', 'muta', 'abdest', 'ibadet-farklari']);
+  const hits: string[] = [];
+  for (const f of readdirSync(new URL('./', import.meta.url))) {
+    if (!f.endsWith('.ts') || f.includes('.test.') || teaching.has(f.slice(0, -3))) continue;
+    const src = read('./' + f);
+    if (!/: HistEvent = \{/.test(src)) continue;
+    src.split('\n').forEach((line: string, n: number) => {
+      if (/^\s*text:/.test(line) && /(^|[.!?:'] |[,'] |\bve )[Rr]ivayet(e|lere) göre /.test(line.replace(/^\s*text: \{ tr: /, ''))) hits.push(f + ':' + (n + 1));
+    });
+  }
+  assert.deepEqual(hits, []);
 });

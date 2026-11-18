@@ -11,7 +11,7 @@ export const muaviyeIktidar: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Peygamber, kendisinden sonra hilafetin otuz yıl süreceğini, ardından ısırıcı bir krallığa dönüşeceğini haber vermişti. Hz. Hasan\'ın sulhuyla birlikte bu otuz yıl doldu. Rivayetlere göre **Muaviye** bir gün, "Ben kralların ilkiyim" dedi. Hilafet, ümmetin işlerini Allah\'ın rızasına göre yürütmek için verilmiş bir emanetti. Muaviye ise bu emaneti kendi ailesinin mülküne çevirdi. Şam\'daki saray her geçen yıl daha da büyüdü. Ümmetin ortak hazinesi bir ailenin kesesine aktı. O sarayda ==Ehl-i Beyt==\'in hakkı tanınmadı, minberlerde ise onlara lanet okundu.' },
+      text: { tr: 'Peygamber, kendisinden sonra hilafetin otuz yıl süreceğini, ardından ısırıcı bir krallığa dönüşeceğini haber vermişti. Hz. Hasan\'ın sulhuyla birlikte bu otuz yıl doldu. **Muaviye** bir gün, "Ben kralların ilkiyim" dedi. Hilafet, ümmetin işlerini Allah\'ın rızasına göre yürütmek için verilmiş bir emanetti. Muaviye ise bu emaneti kendi ailesinin mülküne çevirdi. Şam\'daki saray her geçen yıl daha da büyüdü. Ümmetin ortak hazinesi bir ailenin kesesine aktı. O sarayda ==Ehl-i Beyt==\'in hakkı tanınmadı, minberlerde ise onlara lanet okundu.' },
       art,
       cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 1 }],
     },
@@ -19,7 +19,7 @@ export const muaviyeIktidar: HistEvent = {
       by: 'partial',
       text: { tr: 'Halife **Osman** döneminde Şam valisi olan Muaviye, Şam\'da Yeşil Saray anlamına gelen **Hadrâ**\'yı yaptırdı. Sarayın parlaklığı uzaktan göze çarpıyordu. Peygamber\'in yakın sahabelerinden **Ebuzer el-Gifârî** bir gün Muaviye\'nin karşısına dikildi ve ona şöyle dedi: "Bu sarayı Allah\'ın malından yaptırdıysan hıyanettir, kendi malından yaptırdıysan israftır." Bu söz Belâzurî\'nin Ensâbü\'l-Eşrâf adlı eserinde aktarılır. Muaviye cevap veremedi, ama Ebuzer\'i Medine\'deki Halife **Osman**\'a şikâyet etti. Ebuzer Şam\'dan sürüldü ve sonunda Rebeze çölünde yalnızlık içinde vefat etti. Ebuzer, saray karşısında hakkı söylemekten korkmayan, Peygamber\'in sevdiği bir sahabeydi.' },
       art,
-      cites: [{ side: 'shia', i: 2 }, { side: 'sunni', i: 6 }],
+      cites: [{ side: 'shia', i: 2 }, { side: 'sunni', i: 6 }, { side: 'sunni', i: 4 }],
     },
     {
       by: 'both',
@@ -29,7 +29,7 @@ export const muaviyeIktidar: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Muaviye\'nin emriyle Cuma hutbelerinde, minberlerden **Hz. Ali**\'ye ==lanet== okutuldu. Haftanın en mübarek günü, Peygamber\'in kardeşine ve damadına sövülen bir güne dönüştü. Muaviye, sahabe **Sa\'d b. Ebi Vakkas**\'a da neden Hz. Ali\'ye sövmediğini sordu. Rivayetlere göre valilerine mektuplar yazarak Hz. Ali\'ye sövülmesini ve onu sevenlerin cezalandırılmasını emretti. Bu zulüm, yıllar sonra Emevi halifesi **Ömer b. Abdülaziz** onu yasaklayıncaya kadar sürdü. O yıllarda ==Ehl-i Beyt==\'i sevmek, Emevi topraklarında bir suç sayılıyordu.' },
+      text: { tr: 'Muaviye\'nin emriyle Cuma hutbelerinde, minberlerden **Hz. Ali**\'ye ==lanet== okutuldu. Haftanın en mübarek günü, Peygamber\'in kardeşine ve damadına sövülen bir güne dönüştü. Muaviye, sahabe **Sa\'d b. Ebi Vakkas**\'a da neden Hz. Ali\'ye sövmediğini sordu. Valilerine mektuplar yazarak Hz. Ali\'ye sövülmesini ve onu sevenlerin cezalandırılmasını emretti. Bu zulüm, yıllar sonra Emevi halifesi **Ömer b. Abdülaziz** onu yasaklayıncaya kadar sürdü. O yıllarda ==Ehl-i Beyt==\'i sevmek, Emevi topraklarında bir suç sayılıyordu.' },
       art,
       cites: [{ side: 'sunni', i: 2 }, { side: 'shia', i: 0 }],
     },

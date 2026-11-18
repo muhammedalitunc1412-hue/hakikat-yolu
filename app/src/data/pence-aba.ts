@@ -6,26 +6,30 @@ export const penceAba: HistEvent = {
   id: 'pence-aba',
   date: { tr: 'Medine, Peygamber dönemi', en: 'Medina, the Prophet\'s era' },
   title: { tr: 'Pence-i Âl-i Aba (Kisa Olayı): Ehl-i Beyt kimdir?', en: 'The Five of the Cloak (Hadith al-Kisa): who are the Ahl al-Bayt?' },
-  hook: { tr: 'Rivayetlere göre Medine\'de bir sabah Peygamber evinden çıktı ve beş kişiyi bir örtünün altında topladı. Onlara "Ehl-i Beytim" diyor. Bu beş kim?', en: 'Whom did the Prophet gather under the cloak, and whom did he mean by "my Ahl al-Bayt"?' },
+  hook: { tr: 'Medine\'de bir sabah Peygamber evinden çıktı ve beş kişiyi bir örtünün altında topladı. Onlara "Ehl-i Beytim" diyor. Bu beş kim?', en: 'Whom did the Prophet gather under the cloak, and whom did he mean by "my Ahl al-Bayt"?' },
   scenes: [
     {
       by: 'both',
       text: { tr: 'Bir sabah **Hz. Peygamber**, omzunda siyah yünden dokunmuş bir örtüyle evinden çıktı ve Ehl-i Beyt\'ini yanına çağırdı. Bu buluşma, Peygamber\'in eşi Ümmü Seleme\'nin evinde oldu. İlk gelen torunu **Hz. Hasan**\'dı. Peygamber onu örtünün altına aldı. Ardından küçük kardeşi **Hz. Hüseyin** geldi ve o da dedesinin yanına sokuldu. Sonra Peygamber\'in kızı **Hz. Fatıma** geldi. En son **Hz. Ali** geldi. Peygamber dördünü de örtünün altına aldı ve onu üzerlerine kapattı. Beşi aynı örtünün altında bir araya geldiğinde Peygamber Ahzâb 33:33\'ü okudu: "Ey Ehl-i Beyt, Allah sizden kiri gidermek ve sizi tertemiz yapmak ister."' },
+      cites: [{ side: 'sunni', i: 0 }],
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 38, label: { tr: 'Hz. Peygamber' } }, { kind: 'ali', x: 52, label: { tr: 'Hz. Ali' } }, { kind: 'fatima', x: 62, label: { tr: 'Hz. Fatıma' } }, { kind: 'hasan', x: 72, scale: 0.7, label: { tr: 'Hz. Hasan' } }, { kind: 'husayn', x: 80, scale: 0.65, label: { tr: 'Hz. Hüseyin' } }] },
     },
     {
       by: 'both',
       text: { tr: 'Örtünün altındakiler için Peygamber ellerini kaldırıp dua etti: "Allah\'ım, bunlar benim Ehl-i Beyt\'imdir. Onlardan kiri uzaklaştır ve onları tertemiz yap." **Ümmü Seleme** o sırada evdeydi ve bu duayı duydu. Kendisi de bu şerefe ortak olmak istedi ve örtüye doğru yaklaşarak sordu: "Ya Resulallah, ben de onlarla birlikte miyim?" Peygamber onu kırmadı ve "Sen hayır üzeresin" dedi. Ama örtüyü onun için açmadı. Ümmü Seleme, Peygamber\'in değerli bir eşiydi ve hayır üzere olduğu Peygamber\'in kendi sözüyle sabitti. Yine de o sabah örtünün altında yalnızca Peygamber, **Hz. Ali**, **Hz. Fatıma**, **Hz. Hasan** ve **Hz. Hüseyin** vardı.' },
+      cites: [{ side: 'sunni', i: 1 }],
       art: { bg: 'interior', actors: [{ kind: 'prophet', x: 38, label: { tr: 'Hz. Peygamber' } }, { kind: 'woman', x: 70 }] },
     },
     {
       by: 'shia',
       text: { tr: 'Bu ayete Ayet-i Tathir denir. Tathir, kirden arındırmak demektir. Ayette geçen "ehl" kelimesi ev halkı anlamına gelir. Peygamber bu ayeti rastgele bir topluluğun üzerine okumadı. Kendi elleriyle örtünün altına aldığı beş kişinin üzerine okudu ve onlar için dua etti. Şii okuyuşunda bu arındırma, onların günahtan ve hatadan korunmuş olmaları anlamına gelir. Buna ==ismet== denir. İmamet, yani Allah\'ın bildirdiği önderlik, bu temizliğe dayanır. Çünkü insanlara yol gösterecek olanın, Allah\'ın tertemiz kıldığı biri olması gerekir. Sonraki imamların hepsi de bu örtünün altındaki ailenin soyundan gelir.' },
+      cites: [{ side: 'shia', i: 1 }],
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'prophet', x: 40, label: { tr: 'Hz. Peygamber' } }, { kind: 'woman', x: 66 }] },
     },
     {
       by: 'both',
       text: { tr: 'Peygamber\'in vefatından yıllar sonra sahabe **Zeyd b. Erkam**\'a Ehl-i Beyt\'in kimler olduğu soruldu. Zeyd, Peygamber\'in hanımlarını bu yakın halkanın dışında tuttu. Ardından zekât almaları yasak olan aileleri saydı: **Hz. Ali**\'nin, **Akîl**\'in, **Cafer**\'in ve **Abbas**\'ın aileleri. Bu, Peygamber\'in geniş akrabalarını kapsayan uzun bir listeydi. Ama listenin tam merkezinde, o sabah örtünün altında toplanan beş kişi duruyordu. Zeyd\'in cevabı, Ehl-i Beyt sözünün Peygamber\'in kan bağıyla bağlı ailesine işaret ettiğini gösteriyordu. Şii okuyuşunda bu geniş halkanın kalbi, örtünün altındaki beş kişidir.' },
+      cites: [{ side: 'sunni', i: 2 }],
       art: { bg: 'dune-dusk', props: ['scroll'], actors: [{ kind: 'crowd', x: 28, scale: 8 }, { kind: 'prophet', x: 66, label: { tr: 'Hz. Peygamber' } }] },
     },
     {
@@ -36,6 +40,7 @@ export const penceAba: HistEvent = {
     {
       by: 'shia',
       text: { tr: 'Ehl-i Beyt rivayetlerinde bu olay, **Hz. Fatıma**\'nın ağzından daha uzun bir şekilde anlatılır. Bu anlatının adı Hadis-i Kisa\'dır. Kisa, Arapçada örtü demektir. Bu rivayete göre örtünün altında beş kişi toplandığında Allah, meleklerine bu beş kişiyi tanıtır. Cebrail de yeryüzüne inip örtünün altına girmek için izin ister. Hadis-i Kisa, Şii evlerinde özellikle dilek ve dua meclislerinde okunur. Okunurken insanlar başlarını eğer, ellerini açar ve bu beş kişinin hatırına dua eder. Şiiler, bu meclislerde dileklerin kabul olacağına inanır.' },
+      cites: [{ side: 'shia', i: 0 }],
       art: { bg: 'interior', props: ['scroll', 'stars'], actors: [{ kind: 'fatima', x: 50, label: { tr: 'Hz. Fatıma' } }] },
     },
     {
