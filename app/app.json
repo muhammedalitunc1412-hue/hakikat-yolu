@@ -13,7 +13,7 @@
       "backgroundColor": "#95a98e"
     },
     "android": {
-      "package": "com.tuncgames.hakikatyolu",
+      "package": "com.hakikatyolu.app",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",

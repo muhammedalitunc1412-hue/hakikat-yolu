@@ -2,7 +2,7 @@
   "android": {
     "minVersionCode": 1,
     "latestVersionCode": 1,
-    "storeUrl": "https://play.google.com/store/apps/details?id=com.tuncgames.hakikatyolu"
+    "storeUrl": "https://play.google.com/store/apps/details?id=com.hakikatyolu.app"
   },
   "ios": {
     "minVersionCode": 0,

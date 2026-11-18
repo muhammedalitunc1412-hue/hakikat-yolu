@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { applyFreshConfig, buildNumber, evaluateUpdate, fetchAppConfig, marketUrl, readStoredState, STORED_KEY } from './policy.ts';
 
-const id = 'com.tuncgames.hakikatyolu';
+const id = 'com.hakikatyolu.app';
 const storeUrl = 'https://play.google.com/store/apps/details?id=' + id;
 const url = 'https://example.com/config/app-config.json';
 const config = (min, latest, message) => ({ android: { minVersionCode: min, latestVersionCode: latest, storeUrl }, message });

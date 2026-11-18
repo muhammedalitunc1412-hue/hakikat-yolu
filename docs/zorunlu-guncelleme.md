@@ -63,7 +63,7 @@ görünmez.
   "android": {
     "minVersionCode": 2,
     "latestVersionCode": 2,
-    "storeUrl": "https://play.google.com/store/apps/details?id=com.tuncgames.hakikatyolu"
+    "storeUrl": "https://play.google.com/store/apps/details?id=com.hakikatyolu.app"
   }
 }
 ```
