@@ -12,7 +12,7 @@ import { EVENTS } from './src/data/events';
 import { DUAS } from './src/data/duas';
 import { LANGUAGES, languageOption, setLang, ui } from './src/i18n';
 import type { Lang } from './src/types';
-import { RequiredUpdate, useRequiredUpdate } from './src/update/RequiredUpdate';
+import { OptionalUpdate, RequiredUpdate, useAppUpdate } from './src/update/RequiredUpdate';
 import { C, PAGE_MAX, TOP, font, setTheme } from './src/ui/theme';
 import { FontButton, FontScaleProvider, useFontScale } from './src/ui/FontScale';
 import { cancel, ensurePermission, loadEnabled, nextReminder, openOf, saveEnabled, schedule, setupNotifications, useLastResponse } from './src/notifications';
@@ -45,7 +45,8 @@ export default function Root() {
 function App() {
   const { scale } = useFontScale();
   const [lang, setLanguage] = useState<Lang>('tr');
-  const requiredStore = useRequiredUpdate();
+  const { state: update, dismissOptional } = useAppUpdate();
+  const requiredUpdate = update.kind === 'required' ? update : null;
   const [ready, setReady] = useState(false);
   const [choosing, setChoosing] = useState(true);
   const [purposeSeen, setPurposeSeen] = useState(false);
@@ -127,7 +128,7 @@ function App() {
 
   useEffect(() => {
     const sub = BackHandler.addEventListener('hardwareBackPress', () => {
-      if (requiredStore) return true;
+      if (requiredUpdate) return true;
       if (editingLanguage) {
         setEditingLanguage(false);
         return true;
@@ -137,14 +138,14 @@ function App() {
       return true;
     });
     return () => sub.remove();
-  }, [requiredStore, editingLanguage]);
+  }, [requiredUpdate, editingLanguage]);
 
   // Kerbela ve Hz. Hüseyin alanları kan kırmızısı temayla açılır
   setTheme((route.name === 'event' && (route.id === 'kerbela' || route.id === 'fatima-vefat')) || (route.name === 'imam' && route.id === 'huseyin') ? 'blood' : 'default');
 
   // Bildirime dokunulunca ilgili dua / olay / imam sayfasını aç.
   useEffect(() => {
-    if (!ready || requiredStore || !lastResponse) return;
+    if (!ready || requiredUpdate || !lastResponse) return;
     const key = lastResponse.notification.request.identifier;
     if (handledResponse.current === key) return;
     handledResponse.current = key;
@@ -152,7 +153,7 @@ function App() {
     if (!o) return;
     setEditingLanguage(false);
     setStack(o.kind === 'event' ? [{ name: 'home' }, { name: 'stories' }, { name: 'event', id: o.id }] : [{ name: 'home' }, o.kind === 'dua' ? { name: 'dua', id: o.id } : { name: 'imam', id: o.id }]);
-  }, [ready, requiredStore, lastResponse]);
+  }, [ready, requiredUpdate, lastResponse]);
 
   const ev = route.name === 'event' ? EVENTS.find(e => e.id === route.id) : undefined;
   const dua = route.name === 'dua' ? DUAS.find(d => d.id === route.id) : undefined;
@@ -161,7 +162,7 @@ function App() {
     <View style={{ flex: 1, backgroundColor: C.bgDeep, alignItems: 'center' }}>
       <StatusBar style="light" />
       <View style={{ flex: 1, width: '100%', maxWidth: PAGE_MAX, backgroundColor: C.bg }}>
-        {!ready ? null : requiredStore ? <RequiredUpdate lang={lang} storeUrl={requiredStore} /> : (choosing || editingLanguage) ? (
+        {!ready ? null : requiredUpdate ? <RequiredUpdate lang={lang} storeUrl={requiredUpdate.storeUrl} message={requiredUpdate.message} /> : (choosing || editingLanguage) ? (
           <ScrollView contentContainerStyle={{ padding: 24, paddingTop: TOP, gap: 10 }}>
             {editingLanguage && (
               <>
@@ -225,6 +226,7 @@ function App() {
         )}
         </>}
       </View>
+      {ready && !choosing && update.kind === 'optional' && <OptionalUpdate storeUrl={update.storeUrl} onClose={dismissOptional} />}
     </View>
   );
 }

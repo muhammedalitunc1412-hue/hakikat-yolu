@@ -1,69 +1,112 @@
-import { useEffect, useState } from 'react';
-import { AppState, Linking, Platform, Pressable, Text, View } from 'react-native';
+import { useCallback, useEffect, useState } from 'react';
+import { AppState, Linking, Modal, Platform, Pressable, Text, View } from 'react-native';
+import * as Application from 'expo-application';
 import config from '../../app.json';
+import { ui } from '../i18n';
 import type { Lang } from '../types';
 import { C, TOP } from '../ui/theme';
-import { checkUpdate } from './policy';
+import { CONFIG_URL, evaluateUpdate, fetchAppConfig, marketUrl, type UpdateState } from './policy';
 
-const policyUrl = process.env.EXPO_PUBLIC_UPDATE_POLICY_URL;
-const copy: Record<Lang, [string, string, string]> = {
-  tr: ['Güncelleme gerekli', 'Devam etmek için uygulamanın yeni sürümünü yükle.', 'Mağazayı aç'],
-  en: ['Update required', 'Install the latest version to continue.', 'Open store'],
-  ar: ['التحديث مطلوب', 'ثبّت أحدث إصدار للمتابعة.', 'افتح المتجر'],
-  fa: ['به‌روزرسانی لازم است', 'برای ادامه آخرین نسخه را نصب کنید.', 'باز کردن فروشگاه'],
-  ur: ['اپ ڈیٹ ضروری ہے', 'جاری رکھنے کے لیے تازہ ترین ورژن انسٹال کریں۔', 'اسٹور کھولیں'],
-  az: ['Yeniləmə tələb olunur', 'Davam etmək üçün ən son versiyanı quraşdır.', 'Mağazanı aç'],
-  es: ['Actualización requerida', 'Instala la última versión para continuar.', 'Abrir tienda'],
-  fr: ['Mise à jour requise', 'Installez la dernière version pour continuer.', 'Ouvrir la boutique'],
-  de: ['Update erforderlich', 'Installiere die neueste Version, um fortzufahren.', 'Store öffnen'],
-};
+const FETCH_TIMEOUT_MS = 5000;
+const NONE: UpdateState = { kind: 'none' };
+const androidPackage = config.expo.android.package;
+// The optional "new version" prompt is shown at most once per app session.
+let optionalHandled = false;
 
-export function useRequiredUpdate() {
-  const [storeUrl, setStoreUrl] = useState<string | null>(null);
+// Reads the remote config at launch and every time the app returns to the foreground.
+// Offline or broken config -> the app simply opens normally.
+export function useAppUpdate() {
+  const [state, setState] = useState<UpdateState>(NONE);
   useEffect(() => {
     const platform = Platform.OS;
-    if (__DEV__ || (platform !== 'android' && platform !== 'ios') || !policyUrl?.startsWith('https://')) return;
-    const url = policyUrl;
+    if (platform !== 'android' && platform !== 'ios') return;
     let request: AbortController | undefined;
+    let alive = true;
 
-    async function check(platform: 'android' | 'ios') {
+    async function check() {
       request?.abort();
       const controller = new AbortController();
       request = controller;
-      const timer = setTimeout(() => controller.abort(), 4000);
+      const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
       try {
-        const result = await checkUpdate(url, platform, config.expo.version, config.expo.android.package, controller.signal);
-        if (!controller.signal.aborted && result !== undefined) setStoreUrl(result);
+        const remote = await fetchAppConfig(CONFIG_URL, controller.signal);
+        if (!alive || controller.signal.aborted || remote === undefined) return;
+        const next = evaluateUpdate(remote, platform as 'android' | 'ios', Application.nativeBuildVersion, androidPackage);
+        setState(prev => (next.kind === 'optional' && optionalHandled && prev.kind !== 'optional' ? NONE : next));
       } catch {
-        // An unreachable server must not block a new session.
+        // Unreachable server or bad JSON must never lock anybody out.
       } finally {
         clearTimeout(timer);
       }
     }
 
-    void check(platform);
-    const subscription = AppState.addEventListener('change', state => {
-      if (state === 'active') void check(platform);
-    });
+    void check();
+    const subscription = AppState.addEventListener('change', s => { if (s === 'active') void check(); });
     return () => {
+      alive = false;
       request?.abort();
       subscription.remove();
     };
   }, []);
-  return storeUrl;
+  const dismissOptional = useCallback(() => {
+    optionalHandled = true;
+    setState(NONE);
+  }, []);
+  return { state, dismissOptional };
 }
 
-export function RequiredUpdate({ lang, storeUrl }: { lang: Lang; storeUrl: string }) {
-  const [title, message, button] = copy[lang];
+export async function openStore(storeUrl: string) {
+  if (Platform.OS === 'android') {
+    try {
+      await Linking.openURL(marketUrl(androidPackage));
+      return;
+    } catch {
+      // No market:// handler (e.g. no Play Store): fall back to the web page.
+    }
+  }
+  await Linking.openURL(storeUrl).catch(() => {});
+}
+
+function UpdateButton({ storeUrl }: { storeUrl: string }) {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', padding: 24, paddingTop: TOP, gap: 16 }}>
-      <Text accessibilityRole="header" style={{ color: C.gold, fontSize: 24, fontWeight: '700' }}>{title}</Text>
-      <Text style={{ color: C.cream, fontSize: 16 }}>{message}</Text>
-      <Pressable accessibilityRole="button" onPress={() => void Linking.openURL(storeUrl).catch(() => {})}
-        style={{ alignSelf: 'flex-start', backgroundColor: C.gold, borderRadius: 12, padding: 14 }}>
-        <Text style={{ color: C.ink, fontWeight: '700' }}>{button}</Text>
-      </Pressable>
-      <Text selectable style={{ color: C.dim }}>{storeUrl}</Text>
+    <Pressable accessibilityRole="button" onPress={() => void openStore(storeUrl)}
+      style={{ backgroundColor: C.gold, borderRadius: 14, minHeight: 52, paddingHorizontal: 28, alignItems: 'center', justifyContent: 'center', alignSelf: 'stretch' }}>
+      <Text style={{ color: C.ink, fontSize: 17, fontWeight: '700' }}>{ui('updateButton')}</Text>
+    </Pressable>
+  );
+}
+
+// Full-screen, non-dismissable. The Android back button is blocked in App.tsx.
+export function RequiredUpdate({ lang, storeUrl, message }: { lang: Lang; storeUrl: string; message?: Record<string, string> }) {
+  const body = message?.[lang] ?? ui('updateRequiredBody');
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 28, paddingTop: TOP, gap: 18 }}>
+      <View style={{ width: 84, height: 84, borderRadius: 42, borderWidth: 2, borderColor: C.gold, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ color: C.gold, fontSize: 40, fontWeight: '700' }}>↑</Text>
+      </View>
+      <Text accessibilityRole="header" style={{ color: C.gold, fontSize: 28, textAlign: 'center', fontWeight: '700' }}>{ui('updateRequiredTitle')}</Text>
+      <Text style={{ color: C.cream, fontSize: 17, lineHeight: 26, textAlign: 'center', maxWidth: 420 }}>{body}</Text>
+      <View style={{ alignSelf: 'stretch', maxWidth: 420, marginTop: 8 }}>
+        <UpdateButton storeUrl={storeUrl} />
+      </View>
     </View>
+  );
+}
+
+// Dismissable prompt for a newer, not mandatory, version.
+export function OptionalUpdate({ storeUrl, onClose }: { storeUrl: string; onClose: () => void }) {
+  return (
+    <Modal transparent animationType="fade" onRequestClose={onClose}>
+      <View style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.6)', justifyContent: 'center', alignItems: 'center', padding: 24 }}>
+        <View style={{ width: '100%', maxWidth: 420, backgroundColor: C.bg, borderColor: C.gold, borderWidth: 1, borderRadius: 18, padding: 22, gap: 14 }}>
+          <Text accessibilityRole="header" style={{ color: C.gold, fontSize: 22, fontWeight: '700' }}>{ui('updateAvailableTitle')}</Text>
+          <Text style={{ color: C.cream, fontSize: 16, lineHeight: 24 }}>{ui('updateAvailableBody')}</Text>
+          <UpdateButton storeUrl={storeUrl} />
+          <Pressable accessibilityRole="button" onPress={onClose} style={{ minHeight: 44, alignItems: 'center', justifyContent: 'center' }}>
+            <Text style={{ color: C.dim, fontSize: 15 }}>{ui('updateLater')}</Text>
+          </Pressable>
+        </View>
+      </View>
+    </Modal>
   );
 }

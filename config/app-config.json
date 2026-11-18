@@ -1,0 +1,16 @@
+{
+  "android": {
+    "minVersionCode": 1,
+    "latestVersionCode": 1,
+    "storeUrl": "https://play.google.com/store/apps/details?id=com.tuncgames.hakikatyolu"
+  },
+  "ios": {
+    "minVersionCode": 0,
+    "latestVersionCode": 0,
+    "storeUrl": ""
+  },
+  "message": {
+    "tr": "Devam etmek için uygulamanın yeni sürümünü yüklemen gerekiyor.",
+    "en": "You need to install the new version of the app to continue."
+  }
+}
