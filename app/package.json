@@ -1,6 +1,6 @@
 {
   "name": "hakikatyolu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.ts",
   "dependencies": {
     "@expo/metro-runtime": "~57.0.16",
@@ -9,12 +9,9 @@
     "expo": "~57.0.27",
     "expo-application": "~57.0.3",
     "expo-build-properties": "~57.0.22",
-    "expo-location": "~57.0.22",
     "expo-notifications": "~57.0.25",
-    "expo-sensors": "~57.0.3",
     "expo-status-bar": "~57.0.1",
     "expo-video": "~57.0.5",
-    "geomagnetism": "^0.2.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-native": "0.86.3",

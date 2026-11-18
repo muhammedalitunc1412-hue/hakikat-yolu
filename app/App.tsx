@@ -6,7 +6,6 @@ import { DuaList, DuaScreen, EventScreen, Home, Method, Stories } from './src/ui
 import { PurposeScreen } from './src/ui/PurposeScreen';
 import { AhidnameScreen } from './src/ui/AhidnameScreen';
 import { MapDetail, MapList } from './src/ui/MapScreens';
-import { QiblaScreen } from './src/ui/Qibla';
 import { ImamDetail, ImamList } from './src/ui/ImamScreens';
 import { EVENTS } from './src/data/events';
 import { DUAS } from './src/data/duas';
@@ -25,7 +24,6 @@ type Route =
   | { name: 'duas' }
   | { name: 'dua'; id: string }
   | { name: 'maps' }
-  | { name: 'qibla' }
   | { name: 'imams' }
   | { name: 'imam'; id: string }
   | { name: 'map'; id: string }
@@ -210,7 +208,6 @@ function App() {
         {route.name === 'duas' && <DuaList duas={DUAS} onOpen={id => push({ name: 'dua', id })} onBack={back} />}
         {route.name === 'dua' && dua && <DuaScreen key={dua.id} dua={dua} onBack={back} />}
         {route.name === 'dua' && !dua && <Missing onBack={back} />}
-        {route.name === 'qibla' && <QiblaScreen onBack={back} />}
         {route.name === 'imams' && <ImamList onOpen={id => push({ name: 'imam', id })} onBack={back} />}
         {route.name === 'imam' && <ImamDetail key={route.id} id={route.id} onBack={back} onOpenEvent={id => push({ name: 'event', id })} onOpenImam={id => setStack(s => { const n = s.slice(); n[n.length - 1] = { name: 'imam', id }; return n; })} />}
         {route.name === 'maps' && <MapList onOpen={id => push({ name: 'map', id })} onBack={back} />}
