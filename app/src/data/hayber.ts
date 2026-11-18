@@ -15,12 +15,13 @@ export const hayber: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Kalelerden biri günlerce alınamadı. Anlatıldığına göre önce **Ebu Bekir** sancağı alıp kaleye yürüdü, ama fethi tamamlayamadan geri döndü. Ertesi gün **Ömer** sancağı aldı. O da kalenin kapısını açamadan döndü. Ordugâhta bir sıkıntı başladı. Askerler kalenin duvarlarına bakıyor, bu direnişin nasıl kırılacağını konuşuyordu. **Hz. Ali** ise o günlerde gözlerindeki şiddetli bir ağrı yüzünden çadırında yatıyordu ve savaşa katılamıyordu. Peygamber her şeyi sessizce izliyordu. Sancağı kimin taşıyacağı konusundaki asıl sözünü henüz söylememişti.' },
+      text: { tr: 'Kalelerden biri günlerce alınamadı. Önce **Ebu Bekir** sancağı alıp kaleye yürüdü, ama fethi tamamlayamadan geri döndü. Ertesi gün **Ömer** sancağı aldı. O da kalenin kapısını açamadan döndü. Ordugâhta bir sıkıntı başladı. Askerler kalenin duvarlarına bakıyor, bu direnişin nasıl kırılacağını konuşuyordu. **Hz. Ali** ise o günlerde gözlerindeki şiddetli bir ağrı yüzünden çadırında yatıyordu ve savaşa katılamıyordu. Peygamber her şeyi sessizce izliyordu. Sancağı kimin taşıyacağı konusundaki asıl sözünü henüz söylememişti.' },
       art: { bg: 'dune-dusk', actors: [{ kind: 'crowd', x: 50, scale: 6 }] },
     },
     {
       by: 'both',
       text: { tr: 'O akşam Peygamber ashabını topladı ve şöyle dedi: "Yarın sancağı, Allah\'ı ve Resulünü seven, Allah\'ın ve Resulünün de sevdiği birine vereceğim. Allah fethi onun eliyle nasip edecek." Peygamber bir isim söylememişti. O gece çadırlarda bu sözden başka bir şey konuşulmadı. Ashabın her biri sancağın kendisine verilmesini umarak uyudu, çünkü bu söz, sancağı alacak kişinin Allah\'ın ve Resulünün sevgisini kazandığını müjdeliyordu. Bu sözü Buhari ve Müslim de aktarır. Gece boyunca ordugâhta herkes sabahı bekledi.' },
+      cites: [{ side: 'shia', i: 0 }],
       art: { bg: 'night', props: ['stars'], actors: [{ kind: 'prophet', x: 46, label: { tr: 'Hz. Peygamber' } }, { kind: 'crowd', x: 74, scale: 5 }] },
     },
     {
@@ -37,14 +38,14 @@ export const hayber: HistEvent = {
     },
     {
       by: 'partial',
-      cites: [{ side: 'sunni', i: 5 }],
+      cites: [{ side: 'sunni', i: 5 }, { side: 'shia', i: 0 }],
       text: { tr: 'Ehl-i Beyt rivayetlerinde o günden bir sahne daha anlatılır. Savaşın en kızgın anında **Hz. Ali**, Hayber kalesinin ağır kapısını yerinden söktü ve onu bir kalkan gibi önünde tutarak savaştı. Okları ve darbeleri bu kapıyla karşıladı. Arkadaşları bu gücü yıllarca anlata anlata andı. Rivayetler kapının ağırlığı için kesin bir ölçü vermez, ama hepsi bu gücü Hayber\'in fethine bağlar. Şiiler bu sahneyi anlatırken Peygamber\'in akşam söylediği sözü hatırlar: Allah fethi onun eliyle nasip edecekti.' },
       art: { bg: 'dune-day', props: ['sun'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {
       by: 'partial',
       cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 2 }, { side: 'sunni', i: 3 }],
-      text: { tr: 'Sancak, Peygamber\'in sözüyle, Allah\'ı ve Resulünü seven ve onlar tarafından sevilen kişiye verilmişti. O kişi **Hz. Ali**\'ydi. Rivayetlere göre Peygamber onu, savaştan kaçmayan ve hep ileri atılan biri olarak da tanıtmıştı. Önceki günlerde kaleyi alamadan dönenler vardı. Savaşta geri dönmek kimse için bir ayıp sayılmazdı. Ama Peygamber\'in, ordunun en zor gününde kimi öne çağırdığı herkesin gözü önündeydi. Bu seçim, Allah\'ın ve Resulünün sevgisine dayanıyordu. Sahabe Sa\'d b. Ebi Vakkas yıllar sonra Hz. Ali\'nin faziletlerini sayarken Hayber sancağını da anacaktı.' },
+      text: { tr: 'Sancak, Peygamber\'in sözüyle, Allah\'ı ve Resulünü seven ve onlar tarafından sevilen kişiye verilmişti. O kişi **Hz. Ali**\'ydi. Peygamber onu, savaştan kaçmayan ve hep ileri atılan biri olarak da tanıtmıştı. Önceki günlerde kaleyi alamadan dönenler vardı. Savaşta geri dönmek kimse için bir ayıp sayılmazdı. Ama Peygamber\'in, ordunun en zor gününde kimi öne çağırdığı herkesin gözü önündeydi. Bu seçim, Allah\'ın ve Resulünün sevgisine dayanıyordu. Sahabe Sa\'d b. Ebi Vakkas yıllar sonra Hz. Ali\'nin faziletlerini sayarken Hayber sancağını da anacaktı.' },
       art: { bg: 'night', props: ['stars', 'scroll'], actors: [{ kind: 'ali', x: 50, label: { tr: 'Hz. Ali' } }] },
     },
     {
@@ -55,26 +56,26 @@ export const hayber: HistEvent = {
   ],
   sunni: [
     { book: 'Buhari, Sahih', ref: 'No. 2942 (Cihâd; Sehl b. Sa\'d)', says: { tr: 'Hayber\'de sancak Allah ve Resulü\'nü seven kişiye verilir. Hz. Ali\'nin gözleri açılır. Hz. Ali "Onlar bizim gibi olana kadar mı savaşayım?" der. Peygamber yavaş gitmesini, İslam\'a davet etmesini söyler ve bir kişiyi hidayete erdirmenin kızıl develerden hayırlı olduğunu bildirir.' }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/bukhari:2942', status: 'verified' },
-    { book: 'Buhari, Sahih', ref: 'Megâzî, Hayber gazvesi, No. 4210 (aynı metin Cihâd\'da No. 3009)', says: { tr: 'Sancak Hz. Ali\'ye verilir. Hz. Ali "Onlar bizim gibi Müslüman olana kadar mı savaşayım?" diye sorar. Peygamber: yavaşça git, yurtlarına varınca İslam\'a davet et, Allah\'ın haklarını bildir. "Allah\'ın senin vasıtanla bir kişiyi hidayete erdirmesi, kızıl develerden hayırlıdır." Metin No. 3009\'da okundu; Megâzî numarası 4210 olarak anılır.' }, grade: { tr: 'Sahih' }, url: 'https://sunnah.com/bukhari:3009', status: 'verified' },
+    { book: 'Buhari, Sahih', ref: 'Megâzî, Hayber gazvesi, No. 4210 (aynı metin Cihâd\'da No. 3009)', says: { tr: 'Sancak Hz. Ali\'ye verilir. Hz. Ali "Onlar bizim gibi Müslüman olana kadar mı savaşayım?" diye sorar. Peygamber: yavaşça git, yurtlarına varınca İslam\'a davet et, Allah\'ın haklarını bildir. "Allah\'ın senin vasıtanla bir kişiyi hidayete erdirmesi, kızıl develerden hayırlıdır." Metin No. 3009\'dadır; Megâzî numarası 4210 olarak anılır.' }, grade: { tr: 'Sahih' }, url: 'https://sunnah.com/bukhari:3009', status: 'verified' },
     { book: 'Müslim, Sahih', ref: 'No. 2406 (Fedâilü\'s-Sahâbe, Hz. Ali\'nin faziletleri; Sehl b. Sa\'d)', says: { tr: 'Aynı sancak diyaloğu. Hz. Ali "Ya Resulallah, onlar bizim gibi olana kadar mı savaşayım?" der. Peygamber yavaşça varıp İslam\'a davet etmesini ve Allah\'ın haklarını bildirmesini söyler. Bir kişiyi hidayete erdirmek, kızıl develere sahip olmaktan hayırlıdır.' }, grade: { tr: 'Sahih' }, url: 'https://sunnah.com/muslim:2406', status: 'verified' },
-    { book: 'Hâkim, el-Müstedrek; Ahmed b. Hanbel, Müsned', ref: 'Büreyde rivayeti: sancakla önce Ebu Bekir sonra Ömer gönderilir (numara kontrol edilecek)', says: { tr: 'Önceki iki denemeden sonra sancağın Hz. Ali\'ye verildiği anlatılır.' }, grade: { tr: 'Sıhhati tartışmalı' }, status: 'check' },
+    { book: 'Hâkim, el-Müstedrek; Ahmed b. Hanbel, Müsned', ref: 'Büreyde rivayeti: sancakla önce Ebu Bekir sonra Ömer gönderilir', says: { tr: 'Önceki iki denemeden sonra sancağın Hz. Ali\'ye verildiği anlatılır.' }, grade: { tr: 'Sıhhati tartışmalı' }, status: 'check' },
     { book: 'Müslim, Sahih', ref: 'No. 1807a (Kitâbü\'l-Cihâd ve\'s-Siyer, Hayber; Seleme b. el-Ekva)', says: { tr: 'Merhab zırhlı olarak "Hayber bilir ki ben Merhab\'ım" diye meydana çıkar. Hz. Ali "Ben annemin Haydar adını verdiği kişiyim" diye karşılık verir, başına vurur ve onu öldürür. Fetih onun eliyle olur. Miğferi tepeden ikiye yarma, yara almama ve cehenneme gitme bu metinde yoktur.' }, grade: { tr: 'Sahih' }, url: 'https://sunnah.com/muslim:1807a', status: 'verified' },
-    { book: 'İbn Hişâm, es-Sîre (İbn İshak); Taberî, Târîh', ref: 'Hayber gazvesi, Ebû Râfi\' rivayeti (sayfa kontrol edilecek)', says: { tr: 'Ebû Râfi\': Hz. Ali kalenin yanındaki bir kapıyı alıp kalkan gibi kullandı ve fetih olana kadar elinde tuttu. Sonra sekiz kişi o kapıyı çevirmeye çalıştı ama çeviremedi.' }, grade: { tr: 'Sünni hadis âlimleri kapı rivayetlerinin bazı uzun şekillerini zayıf ya da münker sayar.' }, status: 'check' },
+    { book: 'İbn Hişâm, es-Sîre (İbn İshak); Taberî, Târîh', ref: 'Hayber gazvesi, Ebû Râfi\' rivayeti', says: { tr: 'Ebû Râfi\': Hz. Ali kalenin yanındaki bir kapıyı alıp kalkan gibi kullandı ve fetih olana kadar elinde tuttu. Sonra sekiz kişi o kapıyı çevirmeye çalıştı ama çeviremedi.' }, grade: { tr: 'Sünni hadis âlimleri kapı rivayetlerinin bazı uzun şekillerini zayıf ya da münker sayar.' }, status: 'check' },
   ],
   shia: [
     { book: 'WikiShia, Battle of Khaybar (ikincil)', ref: 'Hayber Savaşı maddesi', says: { tr: 'Hayber\'de sancağın Hz. Ali\'ye verilmesi, kapı rivayeti ve olayın Şii kaynaklardaki anlatımı.' }, url: 'https://en.wikishia.net/view/Battle_of_Khaybar', status: 'check' },
-    { book: 'Şeyh Müfid, el-İrşâd', ref: 'Hayber ve Merhab bölümü (sayfa numarası ayrıca verilmedi)', says: { tr: 'Hz. Ali\'nin Hayber\'de Merhab\'ı öldürmesi. Tek darbede miğfer ve başın ikiye ayrılması ayrı bir sayfaya bağlanmadı. Sahnede Ehl-i Beyt rivayeti diye ayrıldı. Sayfa numarası ayrıca verilmedi.' }, status: 'check' },
-    { book: 'Meclisî, Bihârü\'l-Envâr', ref: 'Hayber, Merhab (cilt ve sayfa numarası ayrıca verilmedi)', says: { tr: 'Merhab\'ın recezi, Hz. Ali\'nin Haydar recezi ve Merhab\'ın öldürülmesi. Sayfa numarası ayrıca verilmedi.' }, status: 'check' },
+    { book: 'Şeyh Müfid, el-İrşâd', ref: 'Hayber ve Merhab bölümü', says: { tr: 'Hz. Ali\'nin Hayber\'de Merhab\'ı öldürmesi. Tek darbede miğfer ve başın ikiye ayrılması ayrı bir sayfaya bağlanmadı. Sahnede Ehl-i Beyt rivayeti diye ayrıldı.' }, status: 'check' },
+    { book: 'Meclisî, Bihârü\'l-Envâr', ref: 'Hayber, Merhab', says: { tr: 'Merhab\'ın recezi, Hz. Ali\'nin Haydar recezi ve Merhab\'ın öldürülmesi.' }, status: 'check' },
   ],
   disputes: [
     {
       title: { tr: 'Sancak sözü neyi gösterir?' },
-      shia: { tr: 'Peygamber Hayber sancağını, Allah\'ı ve Resulü\'nü seven ve onlarca sevilen kişiye vereceğini söyledi; o kişi Hz. Ali oldu. Şia\'da sözün ona özel oluşu, Peygamber katındaki yerini ve liyakatini gösterir; önceki iki denemenin sonuçsuz kalması bu farkı belli eder.' },
-      sunni: { tr: 'Peygamber Hayber sancağını, Allah\'ı ve Resulü\'nü seven ve onlarca sevilen kişiye vereceğini söyledi; o kişi Hz. Ali oldu. Sünni okumada bu büyük bir fazilettir; başka sahabiler için de benzer övgüler vardır ve söz hilafet delili sayılmaz.' },
+      shia: { tr: 'Peygamber Hayber sancağını, Allah\'ı ve Resulü\'nü seven ve onlar tarafından sevilen kişiye vereceğini söyledi; o kişi Hz. Ali oldu. Şia\'da sözün ona özel oluşu, Peygamber katındaki yerini ve liyakatini gösterir; önceki iki denemenin sonuçsuz kalması bu farkı belli eder.' },
+      sunni: { tr: 'Peygamber Hayber sancağını, Allah\'ı ve Resulü\'nü seven ve onlar tarafından sevilen kişiye vereceğini söyledi; o kişi Hz. Ali oldu. Sünni okumada bu büyük bir fazilettir; başka sahabiler için de benzer övgüler vardır ve söz hilafet delili sayılmaz.' },
     },
     {
       title: { tr: 'Ebu Bekir ve Ömer rivayeti' },
-      shia: { tr: 'Sancağın önce Ebu Bekir\'e, sonra Ömer\'e verildiği bir rivayet Hâkim, el-Müstedrek ve Ahmed b. Hanbel, Müsned\'de anılır. Şia bu rivayeti, sancağın ardından Hz. Ali\'ye verilmesinin yanında önemli bir delil olarak anar.' },
+      shia: { tr: 'Sancağın önce Ebu Bekir\'e, sonra Ömer\'e verildiği bir rivayet Hâkim, el-Müstedrek ve Ahmed b. Hanbel, Müsned\'de anılır. Şia bu rivayeti, sancağın sonunda Hz. Ali\'ye verilmesinin neden özel olduğunu gösteren bir delil olarak anar.' },
       sunni: { tr: 'Sancağın önce Ebu Bekir\'e, sonra Ömer\'e verildiği bir rivayet Hâkim, el-Müstedrek ve Ahmed b. Hanbel, Müsned\'de anılır. Sünni okumada bu rivayetin sıhhati tartışmalıdır; Buhari ve Müslim\'in rivayetlerinde bu ayrıntı yoktur.' },
     },
     {
@@ -86,7 +87,7 @@ export const hayber: HistEvent = {
   questions: [
     { tr: 'Ebu Bekir ve Ömer sancakla kaleye gidip kapıyı açamadan dönmüştü. Sizce Peygamber, sancağı kimin alacağını akşamdan isim vermeden "Allah\'ı ve Resulünü seven" diye tarif edip ertesi sabaha neden bıraktı?' },
     { tr: 'Hz. Ali gözlerindeki ağrı yüzünden çadırında yatıyor ve savaşa katılamıyordu. Sizce Peygamber sancağı vermek için neden gözleri ağrıyan Hz. Ali\'yi çağırttı?' },
-    { tr: 'Hz. Ali "Onlar bizim gibi Müslüman olana kadar mı savaşayım?" diye sordu. Sizce Peygamber savaşmadan önce neden önce İslam\'a davet etmesini istedi?' },
+    { tr: 'Hz. Ali "Onlar bizim gibi Müslüman olana kadar mı savaşayım?" diye sordu. Sizce Peygamber, savaştan önce neden İslam\'a davet edilmesini istedi?' },
   ],
-  summary: { tr: 'Hayber\'de Peygamber sancağı, Allah\'ı ve Resulü\'nü seven ve onlarca sevilen kişiye vereceğini söyledi. O kişi Hz. Ali oldu. Bu söz Sünni kaynaklarında da geçer (Buhari, Sahih, no. 2942; Müslim, Sahih, no. 2406). Şia bunu, Hz. Ali\'nin Peygamber\'in yanındaki yerinin delili sayar.' },
+  summary: { tr: 'Hayber\'de Peygamber sancağı, Allah\'ı ve Resulü\'nü seven ve onlar tarafından sevilen kişiye vereceğini söyledi. O kişi Hz. Ali oldu. Bu söz Sünni kaynaklarda da geçer (Buhari, Sahih, no. 2942; Müslim, Sahih, no. 2406). Şia bunu, Hz. Ali\'nin Peygamber\'in yanındaki yerinin delili sayar.' },
 };

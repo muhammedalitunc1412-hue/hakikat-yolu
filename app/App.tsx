@@ -197,7 +197,7 @@ function App() {
         ) : <>
         <View key={'fs' + scale} style={{ flex: 1 }}>
         {route.name === 'home' && (
-          <Home langName={languageOption(lang).name} onSettings={() => { setDraftLanguage(lang); setEditingLanguage(true); }} onStories={() => push({ name: 'stories' })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onQibla={() => push({ name: 'qibla' })} onImams={() => push({ name: 'imams' })} />
+          <Home langName={languageOption(lang).name} onSettings={() => { setDraftLanguage(lang); setEditingLanguage(true); }} onStories={() => push({ name: 'stories' })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onMaps={() => push({ name: 'maps' })} onImams={() => push({ name: 'imams' })} />
         )}
         {route.name === 'stories' && (
           <Stories events={EVENTS} onBack={back} onOpen={id => push({ name: 'event', id })} onOpenAhid={() => push({ name: 'ahidname' })} />

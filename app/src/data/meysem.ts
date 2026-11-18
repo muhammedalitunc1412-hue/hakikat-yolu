@@ -1,7 +1,7 @@
 import type { HistEvent } from '../types';
 
 // Keşşî, Ricâl; Şeyh Müfid, el-İrşâd; Meclisî, Bihârü'l-Envâr.
-// Bu turda cilt/sayfa kilitlenmedi. Sayfa numarası ayrıca verilmedi.
+// Bu turda cilt/sayfa kilitlenmedi.
 export const meysem: HistEvent = {
   id: 'meysem',
   date: { tr: '60 H (680), Kûfe', en: '60 AH (680), Kufa' },
@@ -15,7 +15,7 @@ export const meysem: HistEvent = {
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }, { side: 'sunni', i: 0 }],
     },
     {
-      text: { tr: 'Rivayete göre bir gün **Hz. Ali**, **Meysem**\'e Ehl-i Beyt\'e olan bağlılığı yüzünden öldürüleceğini haber verdi. Ona asılacağı hurma ağacını gösterdi ve dilinin kesileceğini de söyledi. Meysem bu haberden korkmadı. Kaçmak yerine, o günden sonra sık sık o ağacın yanına gitti. Ağacın dibinde namaz kıldı ve kökünü suladı. Kûfe\'de herkesin önünden geçip gittiği sıradan bir hurma ağacı, Meysem için ölümünü ve imamına olan sadakatini hatırlatan bir yer oldu. Ölümünü önceden bilen bu adam, o ağaca sevgiyle bakıyordu.' },
+      text: { tr: 'Bir gün **Hz. Ali**, **Meysem**\'e Ehl-i Beyt\'e olan bağlılığı yüzünden öldürüleceğini haber verdi. Ona asılacağı hurma ağacını gösterdi ve dilinin kesileceğini de söyledi. Meysem bu haberden korkmadı. Kaçmak yerine, o günden sonra sık sık o ağacın yanına gitti. Ağacın dibinde namaz kıldı ve kökünü suladı. Kûfe\'de herkesin önünden geçip gittiği sıradan bir hurma ağacı, Meysem için ölümünü ve imamına olan sadakatini hatırlatan bir yer oldu. Ölümünü önceden bilen bu adam, o ağaca sevgiyle bakıyordu.' },
       art: { bg: 'oasis', props: ['palms', 'sun'], actors: [{ kind: 'ali', x: 36, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 64, pose: 'sit', label: { tr: 'Meysem' } }] },
       by: 'partial',
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 2 }, { side: 'sunni', i: 0 }],
@@ -33,7 +33,7 @@ export const meysem: HistEvent = {
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }, { side: 'sunni', i: 0 }],
     },
     {
-      text: { tr: 'Rivayete göre **Meysem**, **Hz. Ali**\'nin yıllar önce gösterdiği o hurma ağacına asıldı. Darağacında bile susmadı. Kendisini görmeye gelen kalabalığa seslendi ve Ehl-i Beyt\'in faziletlerini anlatmaya devam etti. Halk etrafında toplanıp onu dinliyordu. İbn Ziyâd, Meysem\'in asıldığı yerden konuşmaya devam ettiğini duyunca öfkelendi ve dilinin kesilmesini emretti. Meysem orada şehit edildi. Yıllarca kökünü suladığı ağaç, onun son sözlerine şahit oldu. Hz. Ali\'nin yıllar önce haber verdiği her şey, bir bir gerçekleşmişti.' },
+      text: { tr: '**Meysem**, **Hz. Ali**\'nin yıllar önce gösterdiği o hurma ağacına asıldı. Darağacında bile susmadı. Kendisini görmeye gelen kalabalığa seslendi ve Ehl-i Beyt\'in faziletlerini anlatmaya devam etti. Halk etrafında toplanıp onu dinliyordu. İbn Ziyâd, Meysem\'in asıldığı yerden konuşmaya devam ettiğini duyunca öfkelendi ve dilinin kesilmesini emretti. Meysem orada şehit edildi. Yıllarca kökünü suladığı ağaç, onun son sözlerine şahit oldu. Hz. Ali\'nin yıllar önce haber verdiği her şey, bir bir gerçekleşmişti.' },
       art: { bg: 'dawn', props: ['palms'], actors: [{ kind: 'man', x: 48, label: { tr: 'Meysem' } }, { kind: 'crowd', x: 74, scale: 5 }] },
       by: 'partial',
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }, { side: 'shia', i: 2 }, { side: 'sunni', i: 0 }],
@@ -46,12 +46,12 @@ export const meysem: HistEvent = {
     },
   ],
   sunni: [
-    { book: 'İbn Hacer el-Askalânî, el-İsâbe fî temyîzi\'s-sahâbe', ref: 'No. 8493, "Meysem et-Temmâr el-Esedî" (Dârü\'l-Kütübi\'l-İlmiyye, cilt 6, s. 249-250; eş-Şâmile)', says: { tr: 'Meysem\'in Benî Esed\'den bir kadının kölesi iken Hz. Ali tarafından satın alınıp azat edildiği; Hz. Ali\'nin ona asılacağını haber verip hurma ağacını gösterdiği; Meysem\'in o ağacın yanında namaz kıldığı; İbn Ziyâd\'ın onu yakalatıp Amr b. Hureys\'in kapısında astırdığı; asılıyken Hâşimoğullarının faziletlerini anlattığı için ağzının bağlatıldığı anlatılır.' }, grade: { tr: 'İbn Hacer bu haberi Şii müellif el-Müeyyed b. en-Nu\'mân\'ın Menâkıb\'ından nakleder ve kendisi hüküm vermez. Yani haber Sünni bir kaynakta geçer, ama Sünni ana akım onu kendi rivayeti saymaz.' }, url: 'https://shamela.ws/book/9767/3214', status: 'verified' },
+    { book: 'İbn Hacer el-Askalânî, el-İsâbe fî temyîzi\'s-sahâbe', ref: 'No. 8493, "Meysem et-Temmâr el-Esedî" (Dârü\'l-Kütübi\'l-İlmiyye, cilt 6, s. 249-250; eş-Şâmile)', says: { tr: 'Meysem\'in Benî Esed\'den bir kadının kölesi iken Hz. Ali tarafından satın alınıp azat edildiği; Hz. Ali\'nin ona asılacağını haber verip hurma ağacını gösterdiği; Meysem\'in o ağacın yanında namaz kıldığı; İbn Ziyâd\'ın onu yakalatıp Amr b. Hureys\'in kapısında astırdığı; asılıyken Haşimoğullarının faziletlerini anlattığı için ağzının bağlatıldığı anlatılır.' }, grade: { tr: 'İbn Hacer bu haberi Şii müellif el-Müeyyed b. en-Nu\'mân\'ın Menâkıb\'ından nakleder ve kendisi hüküm vermez. Yani haber Sünni bir kaynakta geçer, ama Sünni ana akım onu kendi rivayeti saymaz.' }, url: 'https://shamela.ws/book/9767/3214', status: 'verified' },
   ],
   shia: [
-    { book: 'Keşşî, Ricâl', ref: 'Meysem et-Temmâr maddesi (sayfa numarası ayrıca verilmedi)', says: { tr: 'Hz. Ali\'nin Meysem\'e asılacağını, dilinin kesileceğini ve hurma ağacını haber vermesi. Meysem\'in o ağacın yanında namaz kılıp su vermesi. Hicri 60\'ta İbn Ziyâd\'ın onu astırması. Sayfa numarası ayrıca verilmedi.' }, status: 'check' },
-    { book: 'Şeyh Müfid, el-İrşâd', ref: 'Meysem bölümü (sayfa numarası ayrıca verilmedi)', says: { tr: 'Meysem\'in Kûfe\'de hurma sattığı, Hz. Ali\'nin dostu olduğu, teberriyi reddettiği ve asıldığı. Sayfa numarası ayrıca verilmedi.' }, url: 'https://al-islam.org/kitab-al-irshad-book-shaykh-al-mufid', status: 'check' },
-    { book: 'Meclisî, Bihârü\'l-Envâr', ref: 'Meysem et-Temmâr (cilt ve sayfa numarası ayrıca verilmedi)', says: { tr: 'Kehanet, ağaç, asılma, gem ve dilin kesilmesi bu derlemede nakledilir. Sayfa numarası ayrıca verilmedi.' }, status: 'check' },
+    { book: 'Keşşî, Ricâl', ref: 'Meysem et-Temmâr maddesi', says: { tr: 'Hz. Ali\'nin Meysem\'e asılacağını, dilinin kesileceğini ve hurma ağacını haber vermesi. Meysem\'in o ağacın yanında namaz kılıp su vermesi. Hicri 60\'ta İbn Ziyâd\'ın onu astırması.' }, status: 'check' },
+    { book: 'Şeyh Müfid, el-İrşâd', ref: 'Meysem bölümü', says: { tr: 'Meysem\'in Kûfe\'de hurma sattığı, Hz. Ali\'nin dostu olduğu, teberriyi reddettiği ve asıldığı.' }, url: 'https://al-islam.org/kitab-al-irshad-book-shaykh-al-mufid', status: 'check' },
+    { book: 'Meclisî, Bihârü\'l-Envâr', ref: 'Meysem et-Temmâr', says: { tr: 'Kehanet, ağaç, asılma, gem ve dilin kesilmesi bu derlemede nakledilir.' }, status: 'check' },
   ],
   questions: [
     { tr: 'Hz. Ali, Meysem\'e asılacağı hurma ağacını gösterdi. Sizce Meysem kaçmak yerine neden o ağacın yanına gidip kökünü suladı?' },

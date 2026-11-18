@@ -1,7 +1,7 @@
 import type { HistEvent } from '../types';
 
 // Taberî, Ebü'l-Ferec el-İsfahânî (Mekâtilü't-Tâlibiyyîn), İbn Ebi'l-Hadîd ve Şii kaynaklardan özetlenmiştir.
-// Hz. Hasan'ın zehirlenmesinde Muaviye'nin rolü Şii kaynaklarında anlatılır; İbn Teymiye ve İbn Kesîr bunu sabit görmez.
+// Hz. Hasan'ın zehirlenmesinde Muaviye'nin rolü Şii kaynaklarda anlatılır; İbn Teymiye ve İbn Kesîr bunu sabit görmez.
 const art = { bg: 'interior' as const, actors: [{ kind: 'crowd' as const, x: 50, scale: 4 }] };
 
 export const muaviyeHasan: HistEvent = {
@@ -20,13 +20,13 @@ export const muaviyeHasan: HistEvent = {
       by: 'both',
       text: { tr: 'Kûfe ordusunun içinde ihanetler birbirini izledi. Hz. Hasan\'ın komutanlarından **Ubeydullah b. Abbas**, bir gece ordudan ayrılıp gizlice Muaviye\'nin yanına geçti. Komutanlar altınla satın alınıyor, askerler gece karanlığında dağılıyordu. **Hz. Hasan**, Ehl-i Beyt\'in sadık dostlarının böyle bir orduda boşuna kırılacağını gördü. Kan dökülmesin diye savaşı durdurdu ve yönetimi **Muaviye**\'ye bıraktı. Peygamber, "Bu oğlum seyyiddir. Allah onun aracılığıyla Müslümanların iki büyük grubunu barıştıracak" demişti. Bu sulh bir zayıflık değil, satın alınmış bir ordunun içinde ümmetin kanını durdurmaktı.' },
       art,
-      cites: [{ side: 'sunni', i: 0 }, { side: 'shia', i: 3 }],
+      cites: [{ side: 'sunni', i: 0 }, { side: 'shia', i: 3 }, { side: 'shia', i: 4 }],
     },
     {
       by: 'partial',
       text: { tr: 'Sulh anlaşmasında **Hz. Hasan**\'ın koyduğu şartlar açıktı. **Muaviye** Allah\'ın Kitabı ve Peygamber\'in sünnetiyle hükmedecekti. Kimseye Hz. Ali\'yi kötületmeyecek ve minberlerde ona sövdürmeyecekti. Kendisinden sonra yerine bir halife tayin etmeyecekti. Hz. Hasan bu şartlarla ==Ehl-i Beyt==\'in onurunu, dostlarının canını ve minberin temizliğini korumak istiyordu. Muaviye bu şartların hepsini kabul etti ve anlaşma imzalandı. Kûfe halkı bir süre rahat bir nefes aldı. Ama imzalanan kâğıdın ömrü, Muaviye\'nin sözüne bağlıydı.' },
       art,
-      cites: [{ side: 'shia', i: 1 }, { side: 'shia', i: 3 }, { side: 'sunni', i: 2 }],
+      cites: [{ side: 'shia', i: 1 }, { side: 'shia', i: 3 }, { side: 'sunni', i: 2 }, { side: 'shia', i: 5 }],
     },
     {
       by: 'partial',
@@ -42,41 +42,41 @@ export const muaviyeHasan: HistEvent = {
     },
     {
       by: 'partial',
-      text: { tr: 'Rivayetlere göre **Muaviye**, oğlu **Yezid**\'i kendisinden sonra halife yapmak istiyordu. Bunun önündeki en büyük engel, sulh şartlarını bilen ve halkın sevgisini taşıyan Hz. Hasan\'dı. Muaviye, Hz. Hasan\'ın eşi **Ca\'de bint Eş\'as**\'a gizlice haber gönderdi. Ona, Hz. Hasan\'ı zehirlerse oğlu Yezid\'le evlendireceğini ve yüz bin dirhem vereceğini vaat etti. Ca\'de bu vaade kandı. Hz. Hasan şehit olduktan sonra Muaviye vaadini tutmadı. Ca\'de ne Yezid\'le evlendi ne de paranın tamamını aldı.' },
+      text: { tr: '**Muaviye**, oğlu **Yezid**\'i kendisinden sonra halife yapmak istiyordu. Bunun önündeki en büyük engel, sulh şartlarını bilen ve halkın sevgisini taşıyan Hz. Hasan\'dı. Muaviye, Hz. Hasan\'ın eşi **Ca\'de bint Eş\'as**\'a gizlice haber gönderdi. Ona, Hz. Hasan\'ı zehirlerse oğlu Yezid\'le evlendireceğini ve yüz bin dirhem vereceğini vaat etti. Ca\'de bu vaade kandı. Hz. Hasan şehit olduktan sonra Muaviye vaadini tutmadı. Ca\'de ne Yezid\'le evlendi ne de paranın tamamını aldı.' },
       art,
       cites: [{ side: 'shia', i: 0 }, { side: 'shia', i: 1 }, { side: 'sunni', i: 1 }],
     },
     {
       by: 'both',
-      text: { tr: 'Medine\'de **Hz. Hasan**\'ın zehirlendiği ve kırk gün kadar acı çektiği nakledilir. Rivayetlerde ciğerinin parçalandığı anlatılır. Bu bir hekim raporu değil, acının dile getirilişidir. Katâde, Hz. Hasan\'ın kendisi için ciğerinin parçalandığını söylediğini aktarır. Sünni âlim İbn Abdilberr, bir grup insanın zehri Muaviye\'ye bağladığını nakleder, ama kendisi kesin bir hüküm vermez. Şii kaynaklarında ise zehrin arkasında Muaviye\'nin olduğu açıkça yazılır. Peygamber\'in cennet gençlerinin efendisi dediği torun, Medine\'de, kendi evinde zehirle şehit edildi.' },
+      text: { tr: 'Medine\'de **Hz. Hasan**\'ın zehirlendiği ve kırk gün kadar acı çektiği nakledilir. Rivayetlerde ciğerinin parçalandığı anlatılır. Bu bir hekim raporu değil, acının dile getirilişidir. Katâde, Hz. Hasan\'ın kendisi için ciğerinin parçalandığını söylediğini aktarır. Sünni âlim İbn Abdilberr, bir grup insanın zehri Muaviye\'ye bağladığını nakleder, ama kendisi kesin bir hüküm vermez. Şii kaynaklarda ise zehrin arkasında Muaviye\'nin olduğu açıkça yazılır. Peygamber\'in cennet gençlerinin efendisi dediği torun, Medine\'de, kendi evinde zehirle şehit edildi.' },
       art,
       cites: [{ side: 'shia', i: 0 }],
     },
     {
       by: 'both',
-      text: { tr: '**Hz. Hüseyin**, kardeşi **Hz. Hasan**\'ın naaşını dedesi Resûlullah\'ın yanına defnetmek için götürdü. Ama Aişe ve Mervan yolu kesti. Aişe\'nin emriyle Peygamber\'in torununun tabutuna oklar atıldı. Hz. Hasan ölmeden önce, "Cenazemde bir damla kan dökülmesin" diye vasiyet etmişti. Engel çıkarsa kendisini Bakî\'ye gömmelerini istemişti. Hz. Hüseyin kılıç çekmedi ve tabutu Bakî\'ye çevirdi. **Hz. Hasan**, Bakî mezarlığında ninesi **Fatıma bint Esed**\'in yanına defnedildi. Kardeşinin vasiyeti sayesinde o gün kan dökülmedi. Ama Medine, Peygamber\'in torununun cenazesine ok atıldığını hiç unutmadı.' },
+      text: { tr: '**Hz. Hüseyin**, kardeşi **Hz. Hasan**\'ın naaşını dedesi Resulullah\'ın yanına defnetmek için götürdü. Ama Aişe ve Mervan yolu kesti. Aişe\'nin emriyle Peygamber\'in torununun tabutuna oklar atıldı. Hz. Hasan ölmeden önce, "Cenazemde bir damla kan dökülmesin" diye vasiyet etmişti. Engel çıkarsa kendisini Bakî\'ye gömmelerini istemişti. Hz. Hüseyin kılıç çekmedi ve tabutu Bakî\'ye çevirdi. **Hz. Hasan**, Bakî mezarlığında ninesi **Fatıma bint Esed**\'in yanına defnedildi. Kardeşinin vasiyeti sayesinde o gün kan dökülmedi. Ama Medine, Peygamber\'in torununun cenazesine ok atıldığını hiç unutmadı.' },
       art,
       cites: [{ side: 'shia', i: 1 }],
     },
   ],
   sunni: [
     { book: 'Buhari, Sahih', ref: 'No. 2704 (Sulh; Hz. Hasan hadisi)', says: { tr: "Peygamber'in Hz. Hasan için «seyyid» demesi ve «iki büyük grubu barıştıracak» sözü." }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/bukhari:2704', status: 'check' },
-    { book: 'İbn Teymiye, Minhâcü\'s-Sünne; İbn Kesîr, el-Bidâye ve\'n-Nihâye', ref: 'Hz. Hasan\'ın zehirlenmesi (cilt/sayfa kontrol edilecek)', says: { tr: "Muaviye'nin Cü'de'ye vaat ettiği rivayetini sabit görmezler; zehirlenmeyi bir olay olarak aktarırlar." }, status: 'check' },
-    { book: 'Taberî, Târîhu\'r-Rusül ve\'l-Mülûk', ref: '41 H olayları (sulh ve Âmü\'l-Cemâa; cilt/sayfa kontrol edilecek)', says: { tr: "Sulhun şartları, Muaviye'nin Kûfe'ye girişi ve birlik yılı." }, status: 'check' },
+    { book: 'İbn Teymiye, Minhâcü\'s-Sünne; İbn Kesîr, el-Bidâye ve\'n-Nihâye', ref: 'Hz. Hasan\'ın zehirlenmesi', says: { tr: "Muaviye'nin Cü'de'ye vaat ettiği rivayetini sabit görmezler; zehirlenmeyi bir olay olarak aktarırlar." }, status: 'check' },
+    { book: 'Taberî, Târîhu\'r-Rusül ve\'l-Mülûk', ref: '41 H olayları (sulh ve Âmü\'l-Cemâa)', says: { tr: "Sulhun şartları, Muaviye'nin Kûfe'ye girişi ve birlik yılı." }, status: 'check' },
     { book: 'İbn Ebî Şeybe, el-Musannef', ref: 'No. 31197 (Kitâbü\'l-Ümerâ; başka baskıda No. 29962); aynı haber İbn Sa\'d ve İbn Kesîr\'de (el-Bidâye 8/140) de anılır', says: { tr: 'Saîd b. Süveyd\'den: Muaviye Nuhayle\'de cuma kıldırıp hutbede "Sizinle namaz kılasınız, oruç tutasınız, hac edesiniz, zekât veresiniz diye savaşmadım. Sizin başınıza emir olmak için savaştım" der.' }, grade: { tr: 'Senetteki Saîd b. Süveyd\'i İbn Adî zayıflar arasında anar. Bu yüzden bazı Sünni âlimler haberi sabit saymaz.' }, url: 'https://hdith.com/encyclopedia/book/b-15/h/273036', status: 'verified' },
   ],
   shia: [
-    { book: 'Şeyh Müfid, el-İrşâd', ref: 'Hz. Hasan bölümü (sayfa kontrol edilecek)', says: { tr: "Zehirlenme, Cü'de ve Muaviye'nin vaadi." }, status: 'check' },
-    { book: 'Ebü\'l-Ferec el-İsfahânî, Mekâtilü\'t-Tâlibiyyîn', ref: 'Hz. Hasan bölümü (sayfa kontrol edilecek)', says: { tr: "Sulh şartları, Muaviye'nin Nuhayle konuşması ve zehirlenme." }, status: 'check' },
-    { book: 'İbn Ebi\'l-Hadîd, Şerhu Nehci\'l-Belâğa', ref: 'Sulh bölümü (cilt/sayfa kontrol edilecek)', says: { tr: "Muaviye'nin şartlara bakışı ve Hz. Hasan'ın sulhunun gerekçeleri." }, status: 'check' },
-    { book: 'Şeyh Müfid, el-İrşâd; Meclisî, Bihârü\'l-Envâr', ref: 'Hz. Hasan\'ın cenazesi (sayfa numarası ayrıca verilmedi)', says: { tr: 'Aişe\'nin tabutun Peygamber\'in yanına gömülmesini bizzat engellediği ve ok emrini verdiği, Mervan\'ın adamlarının bu emirle okladığı, İbn Abbas\'ın deve ve katır sözü ve Hz. Hüseyin\'in kılıç çekmeden Bakî\'ye defnettiği nakledilir. Sayfa numarası ayrıca verilmedi.' }, status: 'check' },
-    { book: 'Taberî, Târîh; Şeyh Müfid, el-İrşâd', ref: '41 H, Ubeydullah b. Abbas (sayfa numarası ayrıca verilmedi)', says: { tr: 'Hz. Hasan\'ın komutanı Ubeydullah b. Abbas\'ın gece Muaviye\'nin yanına geçtiği anlatılır. Sayfa numarası ayrıca verilmedi.' }, status: 'check' },
+    { book: 'Şeyh Müfid, el-İrşâd', ref: 'Hz. Hasan bölümü', says: { tr: "Zehirlenme, Cü'de ve Muaviye'nin vaadi." }, status: 'check' },
+    { book: 'Ebü\'l-Ferec el-İsfahânî, Mekâtilü\'t-Tâlibiyyîn', ref: 'Hz. Hasan bölümü', says: { tr: "Sulh şartları, Muaviye'nin Nuhayle konuşması ve zehirlenme." }, status: 'check' },
+    { book: 'İbn Ebi\'l-Hadîd, Şerhu Nehci\'l-Belâğa', ref: 'Sulh bölümü', says: { tr: "Muaviye'nin şartlara bakışı ve Hz. Hasan'ın sulhunun gerekçeleri." }, status: 'check' },
+    { book: 'Şeyh Müfid, el-İrşâd; Meclisî, Bihârü\'l-Envâr', ref: 'Hz. Hasan\'ın cenazesi', says: { tr: 'Aişe\'nin tabutun Peygamber\'in yanına gömülmesini bizzat engellediği ve ok emrini verdiği, Mervan\'ın adamlarının bu emirle okladığı, İbn Abbas\'ın deve ve katır sözü ve Hz. Hüseyin\'in kılıç çekmeden Bakî\'ye defnettiği nakledilir.' }, status: 'check' },
+    { book: 'Taberî, Târîh; Şeyh Müfid, el-İrşâd', ref: '41 H, Ubeydullah b. Abbas', says: { tr: 'Hz. Hasan\'ın komutanı Ubeydullah b. Abbas\'ın gece Muaviye\'nin yanına geçtiği anlatılır.' }, status: 'check' },
     { book: 'WikiShia, Peace treaty of Imam al-Hasan (ikincil)', ref: 'Madde', says: { tr: "Sulh şartları ve Muaviye'nin bunlara uymaması." }, url: 'https://en.wikishia.net/view/Peace_Treaty_of_Imam_al-Hasan_(a)', status: 'check' },
   ],
   disputes: [
     {
       title: { tr: "Hz. Hasan'ı kim zehirledi?" },
-      sunni: { tr: "Hz. Hasan'ın zehirlendiğinin anlatıldığı birçok kaynak vardır. Sünni âlimlerin bir kısmı Muaviye'nin emrini sabit görmez; vefatın hastalık da olabileceği söylenir." },
+      sunni: { tr: "Hz. Hasan'ın zehirlendiğinin anlatıldığı birçok kaynak vardır. Sünni âlimlerin bir kısmı Muaviye'nin emrini sabit görmez; ölümün hastalıktan olabileceği de söylenir." },
       shia: { tr: "Hz. Hasan'ın zehirlendiğinin anlatıldığı birçok kaynak vardır. Şii kitaplarda Müfid, Kuleynî ve Tabersî, Muaviye'nin Cü'de'yi buna ikna ettiğini aktarır." },
     },
     {
@@ -90,5 +90,5 @@ export const muaviyeHasan: HistEvent = {
     { tr: "Sulhun ardından minberlerde sövme yayıldı ve veliahtlık gündeme geldi. Sizce bu iki uygulama, sulh şartlarının tam da bu iki maddesine neden dokundu?" },
     { tr: "Hz. Hasan'ın zehirlenmesi birçok kitapta geçiyor, fail ise ihtilaflı kalıyor. Sizce failin ihtilaflı olması, olayın kendisini neden ortadan kaldırmıyor?" },
   ],
-  summary: { tr: "Muaviye Şam'ın ticaret yollarıyla zengindi. Ubeydullah b. Abbas'ı ve komutanları satın aldı. Hz. Hasan kan dökülmesin diye savaşı bitirdi. Muaviye sulhun şartlarını çiğnedi. Hz. Hasan 50 H civarında zehirlenerek vefat etti." },
+  summary: { tr: "Muaviye Şam'ın ticaret yollarıyla zengindi. Ubeydullah b. Abbas'ı ve komutanları satın aldı. Hz. Hasan kan dökülmesin diye savaşı bitirdi. Muaviye sulhun şartlarını çiğnedi. Hz. Hasan 50 H civarında zehirlenerek şehit oldu." },
 };

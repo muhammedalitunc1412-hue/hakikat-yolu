@@ -15,6 +15,7 @@ export const istihlaf: HistEvent = {
     {
       by: 'sunni',
       text: { tr: 'Ebu Bekir, bu kararı vermeden önce **Abdurrahman b. Avf** ve **Osman** ile görüştü. Ömer\'in sert mizacını bilen bazı sahabeler bu seçimden endişe ediyordu. **Talha** itiraz etti ve Ebu Bekir\'e, "Böyle sert birini başımıza getirirsen Rabbine ne cevap vereceksin?" diye sordu. Ebu Bekir ise Allah\'a, kullarının en hayırlısını seçtiğini söyleyeceğini bildirdi. Danışılanlar arasında Peygamber\'in amcasının oğlu ve damadı **Hz. Ali** yoktu. Ehl-i Beyt\'in görüşü bu kararda hiç alınmadı.' },
+      cites: [{ side: 'sunni', i: 1 }, { side: 'sunni', i: 3 }],
       art: { bg: 'interior', actors: [{ kind: 'man', x: 30, label: { tr: 'Talha' } }, { kind: 'man', x: 68, pose: 'sit', label: { tr: 'Ebu Bekir' } }, { kind: 'crowd', x: 50, scale: 0.6 }] },
     },
     {
@@ -30,38 +31,41 @@ export const istihlaf: HistEvent = {
     {
       by: 'both',
       text: { tr: 'Yaralı Ömer, şuraya katılacak altı kişiyi tek tek saydı: **Hz. Ali**, **Osman**, **Zübeyr**, **Talha**, **Sa\'d b. Ebi Vakkas** ve **Abdurrahman b. Avf**. Oğlu Abdullah da toplantıya tanık olarak katılacak, ama halife seçilemeyecekti. Gadir\'de hakkı ilan edilen Hz. Ali, bu kurulun sıradan bir üyesi yapılmıştı. Kurula üye olmak, seçilmek anlamına gelmiyordu.' },
+      cites: [{ side: 'shia', i: 3 }, { side: 'sunni', i: 0 }],
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 22, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 40, label: { tr: 'Osman' } }, { kind: 'man', x: 58, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'crowd', x: 78, scale: 0.7 }] },
     },
     {
       by: 'both',
       text: { tr: 'Altı kişi bir odada toplandı. Tartışmalar birkaç gün sürdü. **Zübeyr**, kendi hakkını **Hz. Ali**\'ye bıraktı. **Talha** ise hakkını **Osman**\'a bıraktı. **Sa\'d b. Ebi Vakkas** da hakkını **Abdurrahman b. Avf**\'a devretti. Böylece geriye Hz. Ali, Osman ve Abdurrahman kaldı. Seçimin ipi artık Abdurrahman\'ın elindeydi. Hz. Ali ile Osman\'dan, kim seçilirse seçilsin ona itaat edeceklerine dair söz aldı. Artık ümmetin yöneticisini tek bir kişi belirleyecekti.' },
+      cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 4 }],
       art: { bg: 'interior', props: ['scroll'], actors: [{ kind: 'man', x: 52, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'ali', x: 26, label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 76, label: { tr: 'Osman' } }] },
     },
     {
       by: 'both',
       text: { tr: 'Abdurrahman önce **Hz. Ali**\'ye döndü ve ona bir şart sundu: Allah\'ın Kitabı, Peygamber\'in sünneti ve önceki iki halifenin yolu üzerine biat edecekti. Biat, bağlılık sözüdür. Hz. Ali şöyle cevap verdi: "Allah\'ın Kitabı ve Peygamber\'in sünneti üzerine, bir de kendi içtihadıma göre." Önceki iki halifenin yolunu bir şart olarak kabul etmedi. Haksız yere başa geçen halifelerin izini değil, Peygamber\'in izini ön planda tutmak istiyordu. Bu cevap, hilafetin kapısını ona bir kez daha kapattı. Abdurrahman aynı şartı **Osman**\'a sundu. Osman ise makam ve mevki uğruna, hakkı olmadan hilafete geçenlerin yoluna bağlanmayı tercih etti ve şartı hiç tereddüt etmeden kabul etti. Bunun üzerine Abdurrahman, Osman\'a biat etti ve diğerleri de onu izledi.' },
+      cites: [{ side: 'sunni', i: 4 }],
       art: { bg: 'interior', actors: [{ kind: 'ali', x: 30, pose: 'raise', label: { tr: 'Hz. Ali' } }, { kind: 'man', x: 56, label: { tr: 'Abdurrahman b. Avf' } }, { kind: 'man', x: 78, label: { tr: 'Osman' } }] },
     },
     {
       by: 'partial',
-      cites: [{ side: 'sunni', i: 5 }, { side: 'sunni', i: 2 }],
+      cites: [{ side: 'sunni', i: 5 }, { side: 'sunni', i: 2 }, { side: 'shia', i: 0 }, { side: 'shia', i: 1 }, { side: 'shia', i: 2 }],
       text: { tr: 'Böylece **Osman** üçüncü halife oldu. Yıllar sonra **Hz. Ali**, Şıkşıkıyye adıyla bilinen hutbesinde bu günleri acıyla anlatacaktı. Ömer\'in kendisini o altı kişiden biri sayıp onlarla bir tutmasından yakındı. Şuranın düzeninin, sonucu daha baştan belirlediğini de anlattı. Sakife\'den şuraya kadar hakkı üç kez bir kenara konmuştu. Yine de kılıç çekmedi, ümmetin birliğini kendi hakkının önünde tuttu. Bu hutbede Hz. Ali, o yılları gözünde diken, boğazında kemik varken sabrederek geçirdiğini söyler.' },
       art: { bg: 'mountain', props: ['stars'], actors: [{ kind: 'ali', x: 50, pose: 'raise', label: { tr: 'Hz. Ali' } }] },
     },
   ],
   sunni: [
     { book: 'Buhari, Sahih', ref: 'No. 3700 (Fedâilü\'s-Sahâbe, Osman\'ın biatı bölümü)', says: { tr: 'Halife Ömer yaralanır; Hz. Ali, Osman, Zübeyr, Talha, Sa\'d ve Abdurrahman b. Avf\'ı belirler; Zübeyr ve Talha Hz. Ali ve Osman lehine, Sa\'d Abdurrahman lehine çekilir; Abdurrahman ikisinden adaletle hükmetme ve seçilene itaat sözü alır, Osman\'ı seçer, Hz. Ali biat eder.' }, grade: { tr: 'Sahih' }, url: 'https://ihadis.com/en/bukhari/hadith/3700', status: 'verified' },
-    { book: 'İbn Sa\'d, et-Tabakâtü\'l-Kübrâ', ref: 'Halife Ebu Bekir\'in istihlafı; cilt ve sayfa DOĞRULANMADI', says: { tr: 'Halife Ebu Bekir\'in Abdurrahman b. Avf ve Osman\'a danışması; bir grup sahabinin Halife Ömer\'in sertliği hakkında itirazı (ikincil olarak IslamQA özetinde görüldü).' }, url: 'https://islamqa.org/?p=17591', status: 'check' },
-    { book: 'Taberî, Târîh', ref: '3. ve 4. cilt, 13 H ve 23-24 H olayları; sayfa DOĞRULANMADI', says: { tr: 'Halife Ebu Bekir\'in vasiyeti, Halife Ömer\'in şurası, Abdurrahman\'ın "Allah\'ın kitabı, sünnet, iki şeyhin sireti" şartı ve Hz. Ali\'nin "kendi içtihadım" cevabı (varyantlıdır).' }, status: 'check' },
-    { book: 'İbnü\'l-Esîr, el-Kâmil; İbn Kesîr, el-Bidâye', ref: 'DOĞRULANMADI (sayfa/cilt)', says: { tr: 'Talha\'nın Halife Ömer\'in tayinine itirazı (ikincil olarak WikiShia ve çeşitli sitelerde atıf olarak görüldü).' }, status: 'check' },
-    { book: 'Belâzurî, Ensâbü\'l-Eşrâf', ref: 'DOĞRULANMADI (cilt/sayfa)', says: { tr: 'Şura ve Osman\'ın biatı ayrıntıları.' }, status: 'check' },
-    { book: 'İbn Ebi\'l-Hadîd, Şerhu Nehci\'l-Belâğa; Sıbt İbnü\'l-Cevzî, Tezkiretü\'l-Havâs', ref: '3. hutbe (Şıkşıkıyye) şerhi ve aktarımı; cilt/sayfa kontrol edilecek', says: { tr: 'Mu\'tezilî âlim İbn Ebi\'l-Hadîd ve Hanefî âlim Sıbt İbnü\'l-Cevzî, Şıkşıkıyye hutbesini nakleder. Sünni ana akım hutbenin Hz. Ali\'ye aidiyetini tartışır.' }, status: 'check' },
+    { book: 'İbn Sa\'d, et-Tabakâtü\'l-Kübrâ', ref: 'Halife Ebu Bekir\'in istihlafı', says: { tr: 'Halife Ebu Bekir\'in Abdurrahman b. Avf ve Osman\'a danışması; bir grup sahabinin Halife Ömer\'in sertliği hakkında itirazı (ikincil olarak IslamQA özetinde görüldü).' }, url: 'https://islamqa.org/?p=17591', status: 'check' },
+    { book: 'Taberî, Târîh', ref: '3. ve 4. cilt, 13 H ve 23-24 H olayları', says: { tr: 'Halife Ebu Bekir\'in vasiyeti, Halife Ömer\'in şurası, Abdurrahman\'ın "Allah\'ın kitabı, sünnet, iki şeyhin sireti" şartı ve Hz. Ali\'nin "kendi içtihadım" cevabı (varyantlıdır).' }, status: 'check' },
+    { book: 'İbnü\'l-Esîr, el-Kâmil; İbn Kesîr, el-Bidâye', ref: '', says: { tr: 'Talha\'nın Halife Ömer\'in tayinine itirazı (ikincil olarak WikiShia ve çeşitli sitelerde atıf olarak görüldü).' }, status: 'check' },
+    { book: 'Belâzurî, Ensâbü\'l-Eşrâf', ref: '', says: { tr: 'Şura ve Osman\'ın biatı ayrıntıları.' }, status: 'check' },
+    { book: 'İbn Ebi\'l-Hadîd, Şerhu Nehci\'l-Belâğa; Sıbt İbnü\'l-Cevzî, Tezkiretü\'l-Havâs', ref: '3. hutbe (Şıkşıkıyye) şerhi ve aktarımı', says: { tr: 'Mu\'tezilî âlim İbn Ebi\'l-Hadîd ve Hanefî âlim Sıbt İbnü\'l-Cevzî, Şıkşıkıyye hutbesini nakleder. Sünni ana akım hutbenin Hz. Ali\'ye aidiyetini tartışır.' }, status: 'check' },
   ],
   shia: [
-    { book: 'Nehcü\'l-Belağa (Şerif er-Radî)', ref: '3. hutbe (Şıkşıkıyye)', says: { tr: 'Hz. Ali\'nin hilafetin devri, Halife Ömer\'in şurası ve kendisinin onlardan biri sayılması hakkındaki yakınması. Metni bu oturumda okunamadı; özet WikiShia\'dan.' }, url: 'https://en.wikishia.net/view/Shiqshiqiyya_sermon', status: 'check' },
-    { book: 'Şeyh Müfid, el-İrşâd; Şeyh Saduk, İlelü\'ş-Şerâi\' ve Meânî\'l-Ahbâr', ref: 'Şıkşıkıyye rivayeti; cilt/sayfa DOĞRULANMADI', says: { tr: 'Hutbenin Radî\'den önceki kaynaklarda isnadla geçtiği iddiası (WikiShia özetinden; kitapların kendisi açılmadı).' }, url: 'https://en.wikishia.net/view/Shiqshiqiyya_sermon', status: 'check' },
-    { book: 'İbn Ebi\'l-Hadîd, Şerhu Nehci\'l-Belağa', ref: '3. hutbe şerhi; cilt/sayfa DOĞRULANMADI', says: { tr: 'Mutezilî şârih; hutbeyi Belhî ve İbn Kıbe gibi Radî\'den önceki yazarların eserlerinde gördüğünü söyler (WikiShia aktarımı).' }, status: 'check' },
-    { book: 'Kuleynî, el-Kâfî; Mes\'ûdî ve Ya\'kûbî', ref: 'DOĞRULANMADI', says: { tr: 'Şii imamet anlayışı ve şuraya ilişkin aktarımlar; bu oturumda doğrulanmadı.' }, status: 'check' },
+    { book: 'Nehcü\'l-Belağa (Şerif er-Radî)', ref: '3. hutbe (Şıkşıkıyye)', says: { tr: 'Hz. Ali\'nin hilafetin devri, Halife Ömer\'in şurası ve kendisinin onlardan biri sayılması hakkındaki yakınması. Özet WikiShia\'dan.' }, url: 'https://en.wikishia.net/view/Shiqshiqiyya_sermon', status: 'check' },
+    { book: 'Şeyh Müfid, el-İrşâd; Şeyh Saduk, İlelü\'ş-Şerâi\' ve Meânî\'l-Ahbâr', ref: 'Şıkşıkıyye rivayeti', says: { tr: 'Hutbenin Radî\'den önceki kaynaklarda isnadla geçtiği iddiası (WikiShia özetinden).' }, url: 'https://en.wikishia.net/view/Shiqshiqiyya_sermon', status: 'check' },
+    { book: 'İbn Ebi\'l-Hadîd, Şerhu Nehci\'l-Belağa', ref: '3. hutbe şerhi', says: { tr: 'Mutezilî şârih; hutbeyi Belhî ve İbn Kıbe gibi Radî\'den önceki yazarların eserlerinde gördüğünü söyler (WikiShia aktarımı).' }, status: 'check' },
+    { book: 'Kuleynî, el-Kâfî; Mes\'ûdî ve Ya\'kûbî', ref: '', says: { tr: 'Şii imamet anlayışı ve şuraya ilişkin aktarımlar.' }, status: 'check' },
   ],
   disputes: [
     {

@@ -8,7 +8,7 @@ import { duaNudbe } from './duas/dua-nudbe';
 import { tesbihFatima } from './duas/tesbih-fatima';
 import { salavat } from './duas/salavat';
 
-const NOTE = 'Türkçe okunuş ve anlam hazırlama metnidir; yayın öncesinde bir uzman tarafından kontrol edilmelidir.';
+const NOTE = 'Türkçe okunuş ve anlam hazırlanmış bir metindir; ibadette kullanmadan önce güvenilir bir basılı kaynakla karşılaştırmanız önerilir.';
 
 // Kaynağı Vikipedi olanlar (Tesbih, Salavat) güvenilir dua sitesinden teyit edilene kadar "kontrol edilmeli" gösterilir.
 const base: Dua[] = [

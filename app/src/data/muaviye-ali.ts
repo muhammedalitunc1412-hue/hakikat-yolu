@@ -1,6 +1,6 @@
 import type { HistEvent } from '../types';
 
-// Taberî, Nasr b. Muzâhim (Vak'atü Sıffîn), İbn Kesîr ve Sahih hadis kitaplarının genel anlatımından özetlenmiştir.
+// Taberî, Nasr b. Muzâhim (Vak'atü Sıffin), İbn Kesîr ve Sahih hadis kitaplarının genel anlatımından özetlenmiştir.
 // Ebû Mihnef ve Nasr b. Muzâhim rivayetleri Sünni hadisçiler tarafından zayıf sayıldığı için ilgili ayrıntılar 'check'tir.
 const art = { bg: 'dune-day' as const, props: ['sun' as const], actors: [{ kind: 'crowd' as const, x: 50, scale: 6 }] };
 
@@ -32,11 +32,11 @@ export const muaviyeAli: HistEvent = {
       by: 'both',
       text: { tr: '**Sıffin**\'e ilk ulaşan Muaviye\'nin ordusu, Fırat\'ın kıyısını tuttu ve Hz. Ali\'nin askerlerine suyu kesti. Sonunda Hz. Ali\'nin askerleri nehrin kıyısını ele geçirdi. Bu kez su Hz. Ali\'nin elindeydi. Ama **Hz. Ali** misilleme yapmadı ve Şamlıların da nehirden su almasına müsaade etti. Düşmanına bile su verdi. Yıllar sonra aynı Fırat\'ın kıyısında, Muaviye\'nin oğlu Yezid\'in ordusu, Hz. Ali\'nin oğlu Hz. Hüseyin\'in çocuklarına bir yudum suyu bile çok görecekti.' },
       art,
-      cites: [{ side: 'shia', i: 0 }],
+      cites: [{ side: 'shia', i: 0 }, { side: 'sunni', i: 4 }],
     },
     {
       by: 'both',
-      text: { tr: 'Sıffin\'de, Hz. Ali\'nin safında savaşan yaşlı sahabe **Ammâr b. Yâsir** şehit oldu. Peygamber yıllar önce onun ==bâği bir grup== tarafından öldürüleceğini haber vermişti. Bâği, meşru imama karşı ayaklanan taraf demektir. Ammâr\'ı öldüren grup, **Muaviye**\'nin ordusuydu. Bu hadis Buhari\'de ve Müslim\'de geçer. Ammâr\'ın ölümü Şam ordusunda büyük bir tedirginlik yarattı. **Amr b. el-As** hadisi Muaviye\'ye hatırlattığında Muaviye, "Onu biz mi öldürdük? Onu buraya getirenler öldürdü" diyerek suçu Hz. Ali\'ye yüklemeye çalıştı. Ama Peygamber\'in sözü açıktı ve Ammâr, Hz. Ali\'nin safında can vermişti.' },
+      text: { tr: 'Sıffin\'de, Hz. Ali\'nin safında savaşan yaşlı sahabe **Ammar b. Yâsir** şehit oldu. Peygamber yıllar önce onun ==bâği bir grup== tarafından öldürüleceğini haber vermişti. Bâği, meşru imama karşı ayaklanan taraf demektir. Ammar\'ı öldüren grup, **Muaviye**\'nin ordusuydu. Bu hadis Buhari\'de ve Müslim\'de geçer. Ammar\'ın ölümü Şam ordusunda büyük bir tedirginlik yarattı. **Amr b. el-As** hadisi Muaviye\'ye hatırlattığında Muaviye, "Onu biz mi öldürdük? Onu buraya getirenler öldürdü" diyerek suçu Hz. Ali\'ye yüklemeye çalıştı. Ama Peygamber\'in sözü açıktı ve Ammar, Hz. Ali\'nin safında can vermişti.' },
       art,
       cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 1 }, { side: 'sunni', i: 2 }],
     },
@@ -50,25 +50,25 @@ export const muaviyeAli: HistEvent = {
       by: 'both',
       text: { tr: 'Hakem toplantısında Hz. Ali\'nin tarafını **Ebu Musa el-Eş\'arî**, Muaviye\'nin tarafını ise **Amr b. el-As** temsil etti. Yaygın anlatıya göre iki hakem halkın önüne çıktı. Önce Ebu Musa parmağındaki yüzüğü çıkardı. Yüzüğü çıkarmak, Hz. Ali\'nin artık halife olmadığını ilan etmek demekti. Ardından Amr b. el-As kalktı ve yüzüğünü parmağına taktı. Yüzüğü takmak, Muaviye\'nin halife olduğunu ilan etmek demekti. Bu anlatının güvenilirliği tartışmalıdır ve söylenen cümleler rivayetten rivayete değişir. **Hz. Ali** bu sonucu kabul etmedi, çünkü mızraklardaki hile hakem meclisinde de sürmüştü.' },
       art,
-      cites: [{ side: 'sunni', i: 3 }, { side: 'shia', i: 2 }],
+      cites: [{ side: 'sunni', i: 3 }, { side: 'shia', i: 2 }, { side: 'sunni', i: 4 }],
     },
     {
       by: 'both',
-      text: { tr: 'Hakemden sonra **Hz. Ali**\'nin safı bölündü ve Muaviye saldırılarını artırdı. Bu dönemde Hz. Ali\'nin en güvendiği insanlardan biri **Mâlik el-Eşter**\'di. Mâlik, Hz. Ali\'nin en sadık komutanıydı. Savaşta ordunun önünde savaşır, yönetimde ise güvenilir bir devlet adamı olarak bilinirdi. Hz. Ali onu Mısır\'a vali olarak gönderdi. Rivayetlere göre Mâlik yolda, Kulzüm\'de zehirlendi. Anlatılana göre bir görevliye rüşvet verilmiş ve zehir bala karıştırılmıştı. Haber Şam\'a ulaşınca sevinenler oldu. Muaviye\'nin, Hz. Ali\'nin iki kolundan birinin Sıffin\'de Ammâr\'la, diğerinin de şimdi kesildiğini söylediği anlatılır. Ardından Muaviye Mısır\'ı ele geçirdi ve vali **Muhammed b. Ebi Bekir** öldürüldü. **Busr b. Ertât** Hicaz\'da ve Yemen\'de kan döktü. Hicretin 40. yılında **Hz. Ali**, Kûfe\'de bir sabah namazında şehit edildi.' },
+      text: { tr: 'Hakemden sonra **Hz. Ali**\'nin safı bölündü ve Muaviye saldırılarını artırdı. Bu dönemde Hz. Ali\'nin en güvendiği insanlardan biri **Mâlik el-Eşter**\'di. Mâlik, Hz. Ali\'nin en sadık komutanıydı. Savaşta ordunun önünde savaşır, yönetimde ise güvenilir bir devlet adamı olarak bilinirdi. Hz. Ali onu Mısır\'a vali olarak gönderdi. Mâlik yolda, Kulzüm\'de zehirlendi. Bir görevliye rüşvet verilmiş ve zehir bala karıştırılmıştı. Haber Şam\'a ulaşınca sevinenler oldu. Muaviye\'nin, Hz. Ali\'nin iki kolundan birinin Sıffin\'de Ammar\'la, diğerinin de şimdi kesildiğini söylediği anlatılır. Ardından Muaviye Mısır\'ı ele geçirdi ve vali **Muhammed b. Ebi Bekir** öldürüldü. **Busr b. Ertât** Hicaz\'da ve Yemen\'de kan döktü. Hicretin 40. yılında **Hz. Ali**, Kûfe\'de bir sabah namazında şehit edildi.' },
       art,
       cites: [{ side: 'sunni', i: 3 }, { side: 'shia', i: 0 }],
     },
   ],
   sunni: [
-    { book: 'Buhari, Sahih', ref: 'No. 447 (Salât; Ammar hadisi; numara kontrol edilecek)', says: { tr: "Peygamber'in Ammar için «seni azgın bir grup öldürecek» demesi." }, grade: { tr: 'Sahih' }, status: 'check' },
-    { book: 'Müslim, Sahih', ref: 'No. 2915 (Fiten; Ammar hadisi; numara kontrol edilecek)', says: { tr: "Aynı hadis; Ammar'ı öldürecek grup." }, grade: { tr: 'Sahih' }, status: 'check' },
-    { book: 'Ahmed b. Hanbel, Müsned', ref: "Ammar hadisi ve Muaviye'nin cevabı (numara kontrol edilecek)", says: { tr: "Amr b. el-As'ın Muaviye'ye hadisi hatırlatması; «onu getirenler öldürdü» cevabı." }, status: 'check' },
-    { book: 'Taberî, Târîhu\'r-Rusül ve\'l-Mülûk', ref: 'Sıffin ve Hakem bölümleri (cilt/sayfa kontrol edilecek)', says: { tr: "Fırat kıyısı, mushafların kaldırılması, Hakem ve sonraki olaylar." }, status: 'check' },
-    { book: 'İbn Kesîr, el-Bidâye ve\'n-Nihâye', ref: 'Sıffin bölümü (cilt/sayfa kontrol edilecek)', says: { tr: "Sıffin'i ve Hakem'i ayrıntılı anlatır; Hz. Ali'nin hakka daha yakın olduğunu da belirtir." }, status: 'check' },
+    { book: 'Buhari, Sahih', ref: 'No. 447 (Salât; Ammar hadisi)', says: { tr: "Peygamber'in Ammar için «seni azgın bir grup öldürecek» demesi." }, grade: { tr: 'Sahih' }, status: 'check' },
+    { book: 'Müslim, Sahih', ref: 'No. 2915 (Fiten; Ammar hadisi)', says: { tr: "Aynı hadis; Ammar'ı öldürecek grup." }, grade: { tr: 'Sahih' }, status: 'check' },
+    { book: 'Ahmed b. Hanbel, Müsned', ref: "Ammar hadisi ve Muaviye'nin cevabı", says: { tr: "Amr b. el-As'ın Muaviye'ye hadisi hatırlatması; «onu getirenler öldürdü» cevabı." }, status: 'check' },
+    { book: 'Taberî, Târîhu\'r-Rusül ve\'l-Mülûk', ref: 'Sıffin ve Hakem bölümleri', says: { tr: "Fırat kıyısı, mushafların kaldırılması, Hakem ve sonraki olaylar." }, status: 'check' },
+    { book: 'İbn Kesîr, el-Bidâye ve\'n-Nihâye', ref: 'Sıffin bölümü', says: { tr: "Sıffin'i ve Hakem'i ayrıntılı anlatır; Hz. Ali'nin hakka daha yakın olduğunu da belirtir." }, status: 'check' },
   ],
   shia: [
-    { book: 'Nasr b. Muzâhim, Vak\'atü Sıffîn', ref: 'Fırat, Ammar ve mushaf bölümleri (sayfa kontrol edilecek)', says: { tr: "Sıffin'in ayrıntılı anlatımı; Fırat'ın ele geçirilmesi ve mushafların mızraklara bağlanması." }, status: 'check' },
-    { book: 'Nehcü\'l-Belâğa', ref: 'Muaviye\'ye mektuplar (numara kontrol edilecek)', says: { tr: "Hz. Ali'nin Muaviye'ye yazdığı mektuplar ve Sıffin'e dair hutbeleri." }, status: 'check' },
+    { book: 'Nasr b. Muzâhim, Vak\'atü Sıffin', ref: 'Fırat, Ammar ve mushaf bölümleri', says: { tr: "Sıffin'in ayrıntılı anlatımı; Fırat'ın ele geçirilmesi ve mushafların mızraklara bağlanması." }, status: 'check' },
+    { book: 'Nehcü\'l-Belâğa', ref: 'Muaviye\'ye mektuplar', says: { tr: "Hz. Ali'nin Muaviye'ye yazdığı mektuplar ve Sıffin'e dair hutbeleri." }, status: 'check' },
     { book: 'WikiShia, Muawiya b. Abi Sufyan (ikincil)', ref: 'Madde', says: { tr: "Muaviye'nin Hz. Ali'ye karşı tutumu ve Sıffin'deki rolü." }, url: 'https://en.wikishia.net/view/Mu%27awiya_b._Abi_Sufyan', status: 'check' },
   ],
   disputes: [

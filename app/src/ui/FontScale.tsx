@@ -117,7 +117,7 @@ function FontSheet({ visible, onClose, scale, setScale }: { visible: boolean; on
 }
 
 const b = themedStyles(() => StyleSheet.create({
-  btn: { minHeight: 36, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, paddingHorizontal: 12, backgroundColor: C.card, borderRadius: 12, borderWidth: 1, borderColor: C.lineStrong },
+  btn: { minHeight: 44, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, paddingHorizontal: 12, backgroundColor: C.card, borderRadius: 12, borderWidth: 1, borderColor: C.lineStrong },
   compact: { minHeight: 44, borderRadius: 22, paddingHorizontal: 14 },
   icon: { flexDirection: 'row', alignItems: 'flex-end', gap: 1 },
   small: { color: C.gold, fontFamily: font.serif, fontSize: 12, lineHeight: 15, fontWeight: '700' },

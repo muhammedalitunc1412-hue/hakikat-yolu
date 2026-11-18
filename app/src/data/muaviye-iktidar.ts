@@ -1,6 +1,6 @@
 import type { HistEvent } from '../types';
 
-// Taberî, İbn Abdilber (el-İstîâb), Zehebî, Tirmizî ve Ebû Dâvûd'un genel anlatımından özetlenmiştir; numaralar 'check'tir.
+// Taberî, İbn Abdilber (el-İstîâb), Zehebî, Tirmizi ve Ebû Dâvûd'un genel anlatımından özetlenmiştir; numaralar 'check'tir.
 const art = { bg: 'city' as const, props: ['sun' as const, 'minbar' as const], actors: [{ kind: 'crowd' as const, x: 50, scale: 6 }] };
 
 export const muaviyeIktidar: HistEvent = {
@@ -11,15 +11,15 @@ export const muaviyeIktidar: HistEvent = {
   scenes: [
     {
       by: 'both',
-      text: { tr: 'Peygamber, kendisinden sonra hilafetin otuz yıl süreceğini, ardından ısırıcı bir krallığa dönüşeceğini haber vermişti. Hz. Hasan\'ın sulhuyla birlikte bu otuz yıl doldu. Rivayetlere göre **Muaviye** bir gün, "Ben kralların ilkiyim" dedi. Hilafet, ümmetin işlerini Allah\'ın rızasına göre yürütmek için verilmiş bir emanetti. Muaviye ise bu emaneti kendi ailesinin mülküne çevirdi. Şam\'daki saray her geçen yıl daha da büyüdü. Ümmetin ortak hazinesi bir ailenin kesesine aktı. O sarayda ==Ehl-i Beyt==\'in hakkı tanınmadı, minberlerde ise onlara lanet okundu.' },
+      text: { tr: 'Peygamber, kendisinden sonra hilafetin otuz yıl süreceğini, ardından ısırıcı bir krallığa dönüşeceğini haber vermişti. Hz. Hasan\'ın sulhuyla birlikte bu otuz yıl doldu. **Muaviye** bir gün, "Ben kralların ilkiyim" dedi. Hilafet, ümmetin işlerini Allah\'ın rızasına göre yürütmek için verilmiş bir emanetti. Muaviye ise bu emaneti kendi ailesinin mülküne çevirdi. Şam\'daki saray her geçen yıl daha da büyüdü. Ümmetin ortak hazinesi bir ailenin kesesine aktı. O sarayda ==Ehl-i Beyt==\'in hakkı tanınmadı, minberlerde ise onlara lanet okundu.' },
       art,
       cites: [{ side: 'sunni', i: 0 }, { side: 'sunni', i: 1 }],
     },
     {
       by: 'partial',
-      text: { tr: 'Halife **Osman** döneminde Şam valisi olan Muaviye, Şam\'da Yeşil Saray anlamına gelen **Hadrâ**\'yı yaptırdı. Sarayın parlaklığı uzaktan göze çarpıyordu. Peygamber\'in yakın sahabelerinden **Ebuzer el-Gifârî** bir gün Muaviye\'nin karşısına dikildi ve ona şöyle dedi: "Bu sarayı Allah\'ın malından yaptırdıysan hıyanettir, kendi malından yaptırdıysan israftır." Bu söz Belâzurî\'nin Ensâbü\'l-Eşrâf adlı eserinde aktarılır. Muaviye cevap veremedi, ama Ebuzer\'i Medine\'deki Halife **Osman**\'a şikâyet etti. Ebuzer Şam\'dan sürüldü ve sonunda Rebeze çölünde yalnızlık içinde vefat etti. Ebuzer, saray karşısında hakkı söylemekten korkmayan, Peygamber\'in sevdiği bir sahabeydi.' },
+      text: { tr: 'Halife **Osman** döneminde Şam valisi olan Muaviye, Şam\'da Yeşil Saray anlamına gelen **Hadrâ**\'yı yaptırdı. Sarayın parlaklığı uzaktan göze çarpıyordu. Peygamber\'in yakın sahabelerinden **Ebu Zer el-Gifârî** bir gün Muaviye\'nin karşısına dikildi ve ona şöyle dedi: "Bu sarayı Allah\'ın malından yaptırdıysan hıyanettir, kendi malından yaptırdıysan israftır." Bu söz Belâzurî\'nin Ensâbü\'l-Eşrâf adlı eserinde aktarılır. Muaviye cevap veremedi, ama Ebu Zer\'i Medine\'deki Halife **Osman**\'a şikâyet etti. Ebu Zer Şam\'dan sürüldü ve sonunda Rebeze çölünde yalnızlık içinde vefat etti. Ebu Zer, saray karşısında hakkı söylemekten korkmayan, Peygamber\'in sevdiği bir sahabeydi.' },
       art,
-      cites: [{ side: 'shia', i: 2 }, { side: 'sunni', i: 6 }],
+      cites: [{ side: 'shia', i: 2 }, { side: 'sunni', i: 6 }, { side: 'sunni', i: 4 }],
     },
     {
       by: 'both',
@@ -29,7 +29,7 @@ export const muaviyeIktidar: HistEvent = {
     },
     {
       by: 'both',
-      text: { tr: 'Muaviye\'nin emriyle Cuma hutbelerinde, minberlerden **Hz. Ali**\'ye ==lanet== okutuldu. Haftanın en mübarek günü, Peygamber\'in kardeşine ve damadına sövülen bir güne dönüştü. Muaviye, sahabe **Sa\'d b. Ebi Vakkas**\'a da neden Hz. Ali\'ye sövmediğini sordu. Rivayetlere göre valilerine mektuplar yazarak Hz. Ali\'ye sövülmesini ve onu sevenlerin cezalandırılmasını emretti. Bu zulüm, yıllar sonra Emevi halifesi **Ömer b. Abdülaziz** onu yasaklayıncaya kadar sürdü. O yıllarda ==Ehl-i Beyt==\'i sevmek, Emevi topraklarında bir suç sayılıyordu.' },
+      text: { tr: 'Muaviye\'nin emriyle Cuma hutbelerinde, minberlerden **Hz. Ali**\'ye ==lanet== okutuldu. Haftanın en mübarek günü, Peygamber\'in kardeşine ve damadına sövülen bir güne dönüştü. Muaviye, sahabe **Sa\'d b. Ebi Vakkas**\'a da neden Hz. Ali\'ye sövmediğini sordu. Valilerine mektuplar yazarak Hz. Ali\'ye sövülmesini ve onu sevenlerin cezalandırılmasını emretti. Bu zulüm, yıllar sonra Emevi halifesi **Ömer b. Abdülaziz** onu yasaklayıncaya kadar sürdü. O yıllarda ==Ehl-i Beyt==\'i sevmek, Emevi topraklarında bir suç sayılıyordu.' },
       art,
       cites: [{ side: 'sunni', i: 2 }, { side: 'shia', i: 0 }],
     },
@@ -59,18 +59,18 @@ export const muaviyeIktidar: HistEvent = {
     },
   ],
   sunni: [
-    { book: 'Tirmizi, el-Câmi\'', ref: 'No. 2226 (Fiten; hilafet otuz yıl; numara kontrol edilecek)', says: { tr: "«Hilafet otuz yıldır, sonra mülk olacak» hadisi." }, status: 'check' },
-    { book: 'Ebû Dâvûd, Sünen', ref: 'No. 4646 (Sünnet; numara kontrol edilecek)', says: { tr: "Aynı hadisin başka rivayeti." }, status: 'check' },
+    { book: 'Tirmizi, el-Câmi\'', ref: 'No. 2226 (Fiten; hilafet otuz yıl)', says: { tr: "«Hilafet otuz yıldır, sonra mülk olacak» hadisi." }, status: 'check' },
+    { book: 'Ebû Dâvûd, Sünen', ref: 'No. 4646 (Sünnet)', says: { tr: "Aynı hadisin başka rivayeti." }, status: 'check' },
     { book: 'Müslim, Sahih', ref: 'No. 2404 (Fezâilü\'s-sahâbe)', says: { tr: "Muaviye'nin Sa'd b. Ebi Vakkas'a Hz. Ali'ye neden sövmediğini sorması." }, grade: { tr: 'Sahih' }, url: 'https://hadithunlocked.com/muslim:2404a', status: 'verified' },
-    { book: 'Buhari, Sahih', ref: 'No. 4827 (Tefsir, Ahkâf; Abdurrahman b. Ebi Bekir; numara kontrol edilecek)', says: { tr: "Abdurrahman b. Ebi Bekir'in Yezid'in biatına itirazı." }, grade: { tr: 'Sahih' }, status: 'check' },
-    { book: 'Buhari, Sahih', ref: 'No. 3764-3765 (Menâkıb; Muaviye; numara kontrol edilecek)', says: { tr: "İbn Abbas'ın Muaviye hakkındaki «fakihtir» sözü." }, grade: { tr: 'Sahih' }, status: 'check' },
-    { book: 'Taberî, Târîhu\'r-Rusül ve\'l-Mülûk; İbn Abdilber, el-İstîâb', ref: 'Hucr, Amr b. Hamk ve Ziyâd istilhakı (cilt/sayfa kontrol edilecek)', says: { tr: "51 H olayları, Ziyâd'ın Muaviye'nin kardeşi ilan edilmesi ve Yezid'in veliahtlığı." }, status: 'check' },
-    { book: 'Belâzurî, Ensâbü\'l-Eşrâf', ref: 'cilt 5, s. 542', says: { tr: 'Ebuzer\'in Muaviye\'ye Hadrâ sarayı için "Allah\'ın malından yaptırdıysan hıyanet, kendi malından yaptırdıysan israftır" demesi.' }, status: 'check' },
+    { book: 'Buhari, Sahih', ref: 'No. 4827 (Tefsir, Ahkâf; Abdurrahman b. Ebi Bekir)', says: { tr: "Abdurrahman b. Ebi Bekir'in Yezid'in biatına itirazı." }, grade: { tr: 'Sahih' }, status: 'check' },
+    { book: 'Buhari, Sahih', ref: 'No. 3764-3765 (Menâkıb; Muaviye)', says: { tr: "İbn Abbas'ın Muaviye hakkındaki «fakihtir» sözü." }, grade: { tr: 'Sahih' }, status: 'check' },
+    { book: 'Taberî, Târîhu\'r-Rusül ve\'l-Mülûk; İbn Abdilber, el-İstîâb', ref: 'Hucr, Amr b. Hamk ve Ziyâd istilhakı', says: { tr: "51 H olayları, Ziyâd'ın Muaviye'nin kardeşi ilan edilmesi ve Yezid'in veliahtlığı." }, status: 'check' },
+    { book: 'Belâzurî, Ensâbü\'l-Eşrâf', ref: 'cilt 5, s. 542', says: { tr: 'Ebu Zer\'in Muaviye\'ye Hadrâ sarayı için "Allah\'ın malından yaptırdıysan hıyanet, kendi malından yaptırdıysan israftır" demesi.' }, status: 'check' },
   ],
   shia: [
-    { book: 'İbn Ebi\'l-Hadîd, Şerhu Nehci\'l-Belâğa', ref: 'Muaviye ve sövme genelgeleri (cilt/sayfa kontrol edilecek)', says: { tr: "Muaviye'nin valilerine Hz. Ali'ye sövülmesini emretmesi; Medâinî'den aktarım." }, status: 'check' },
+    { book: 'İbn Ebi\'l-Hadîd, Şerhu Nehci\'l-Belâğa', ref: 'Muaviye ve sövme genelgeleri', says: { tr: "Muaviye'nin valilerine Hz. Ali'ye sövülmesini emretmesi; Medâinî'den aktarım." }, status: 'check' },
     { book: 'WikiShia, Muawiya b. Abi Sufyan (ikincil)', ref: 'Madde', says: { tr: "Muaviye'nin iktidarı, Hucr b. Adî ve Yezid'in veliahtlığı." }, url: 'https://en.wikishia.net/view/Mu%27awiya_b._Abi_Sufyan', status: 'check' },
-    { book: 'Belâzurî, Ensâbü\'l-Eşrâf', ref: 'cilt 5, s. 542', says: { tr: 'Muaviye Şam\'da Hadrâ\'yı yaptırır. Ebuzer, Allah\'ın malındansa hıyanet, kendi malınsa israf der. Muaviye susar.' }, url: 'https://lib.eshia.ir/40503/5/542', status: 'verified' },
+    { book: 'Belâzurî, Ensâbü\'l-Eşrâf', ref: 'cilt 5, s. 542', says: { tr: 'Muaviye Şam\'da Hadrâ\'yı yaptırır. Ebu Zer, Allah\'ın malındansa hıyanet, kendi malınsa israf der. Muaviye susar.' }, url: 'https://lib.eshia.ir/40503/5/542', status: 'verified' },
   ],
   disputes: [
     {
@@ -89,5 +89,5 @@ export const muaviyeIktidar: HistEvent = {
     { tr: "Muaviye Cuma hutbelerinde Hz. Ali'ye lanet okuttu ve Hucr b. Adî laneti reddedince Mercü Azra'da öldürüldü. Sizce Muaviye laneti neden hutbeye, reddedenleri neden ölüme bağladı?" },
     { tr: "Sizce Hz. Hüseyin ve Abdurrahman b. Ebi Bekir, Yezid'in veliahtlığına neden razı olmadı?" },
   ],
-  summary: { tr: "Muaviye 41 H'den sonra Şam merkezli bir yönetim kurdu. Ziyâd'ı kardeşi ilan etti. Hutbelerde Hz. Ali'ye sövüldü. Hucr b. Adî öldürüldü ve oğlu Yezid veliaht oldu. Sünni kitaplarda Muaviye, sahabi ve yönetici olarak da anılır. Şii anlatıda bu yıllar, Kerbela'ya giden yolu hazırlamıştır." },
+  summary: { tr: "Muaviye 41 H'den sonra Şam merkezli bir yönetim kurdu. Ziyâd'ı kardeşi ilan etti. Hutbelerde Hz. Ali'ye sövüldü. Hucr b. Adî öldürüldü ve oğlu Yezid veliaht oldu. Sünni kitaplarda Muaviye, sahabi ve yönetici olarak da anılır. Şii anlatıda bu yıllar, Kerbelâ'ya giden yolu hazırlamıştır." },
 };

@@ -150,11 +150,11 @@ export const IMAMS: Imam[] = [
     students: [
       {
         name: 'Ebû Hanîfe', years: 'ö. 150 H', group: 'sunni',
-        note: "Hz. Ca\'fer-i Sâdık'ın çağdaşıdır. TDV, Medine ve Irak'ta ilmî görüşmeler yaptıklarını yazar; ancak onu açıkça «hocası» saymaz (Ebû Hanîfe'nin asıl hocaları Hammâd b. Ebû Süleyman ve İbrahim en-Nehaî çizgisindendir). Şii kaynaklarında öğrencisi olarak anılır; «o iki yıl olmasaydı Nu'mân helak olurdu» sözü ise erken kaynaklarda bulunamadı.",
+        note: "Hz. Ca\'fer-i Sâdık'ın çağdaşıdır. TDV, Medine ve Irak'ta ilmî görüşmeler yaptıklarını yazar; ancak onu açıkça «hocası» saymaz (Ebû Hanîfe'nin asıl hocaları Hammâd b. Ebû Süleyman ve İbrahim en-Nehaî çizgisindendir). Şii kaynaklarında öğrencisi olarak anılır; «o iki yıl olmasaydı Nu'mân helak olurdu» sözü ise erken bir kaynağa dayandırılmamıştır.",
       },
       {
         name: 'Mâlik b. Enes', years: 'ö. 179 H', group: 'sunni',
-        note: "TDV, Mâlik'in Hz. Ca\'fer-i Sâdık'tan hadis dinleyenler arasında olduğunu yazar. Şii kaynaklarında (Saduk, el-Hısâl) imama giderek hadis dinlediği aktarılır. Muvatta'daki yeri birincil metinden doğrulanmadı.",
+        note: "TDV, Mâlik'in Hz. Ca\'fer-i Sâdık'tan hadis dinleyenler arasında olduğunu yazar. Şii kaynaklarında (Saduk, el-Hısâl) imama giderek hadis dinlediği aktarılır.",
       },
       {
         name: 'Şâfiî', years: '150–204 H', group: 'sunni',
@@ -162,7 +162,7 @@ export const IMAMS: Imam[] = [
       },
       {
         name: 'Süfyân es-Sevrî, İbn Cüreyc, Süfyân b. Uyeyne, Yahyâ b. Saîd el-Ensârî', group: 'sunni',
-        note: "Sünni hadis ricâl kitaplarında Hz. Ca\'fer-i Sâdık'tan rivayet eden râviler arasında sayılırlar (ayrıntılar kaynaklardan kontrol edilmelidir).",
+        note: "Sünni hadis ricâl kitaplarında Hz. Ca\'fer-i Sâdık'tan rivayet eden râviler arasında sayılırlar.",
       },
       {
         name: 'Zürâre b. A\'yen, Muhammed b. Müslim, Hişâm b. el-Hakem, Ebân b. Teğlib', group: 'shia',
