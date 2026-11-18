@@ -361,6 +361,8 @@ type StoryPage =
 
 // Hikâyenin bütün kaynakları: son sahnedeki "Kaynaklar" düğmesiyle açılan alt sayfa (varsayılan kapalı).
 function SourcesSheet({ ev, onClose }: { ev: HistEvent; onClose: () => void }) {
+  // Sheet her açılışta yeniden bağlanır; iki bölüm de kapalı başlar.
+  const [expanded, setExpanded] = useState<{ shia: boolean; sunni: boolean }>({ shia: false, sunni: false });
   const sections = [
     { key: 'shia', title: ui('shiaSourceList'), color: C.shia, list: ev.shia },
     { key: 'sunni', title: ui('sunniSourceList'), color: C.sunni, list: ev.sunni },
@@ -378,12 +380,21 @@ function SourcesSheet({ ev, onClose }: { ev: HistEvent; onClose: () => void }) {
             </Pressable>
           </View>
           <ScrollView style={{ flexShrink: 1 }} contentContainerStyle={{ padding: 16, paddingBottom: 32 }} showsVerticalScrollIndicator>
-            {sections.map(sec => (
-              <View key={sec.key} style={{ marginBottom: 8 }}>
-                <Text style={[s.panelTitle, { color: sec.color }, align()]}>{sec.title} ({sec.list.length})</Text>
-                {sec.list.length ? sec.list.map((x, i) => <SourceCard key={i} src={x} tone={sec.color} />) : <Text style={s.dim}>{ui('none')}</Text>}
-              </View>
-            ))}
+            {sections.map(sec => {
+              const on = expanded[sec.key as 'shia' | 'sunni'];
+              return (
+                <View key={sec.key} style={{ marginBottom: 12 }}>
+                  <Pressable
+                    onPress={() => setExpanded(v => ({ ...v, [sec.key]: !v[sec.key as 'shia' | 'sunni'] }))}
+                    accessibilityRole="button" accessibilityState={{ expanded: on }}
+                    style={[s.sheetSection, { borderColor: sec.color }, on && { backgroundColor: sec.color }, webHit]}>
+                    <Text style={[s.sheetSectionText, { color: on ? C.ink : sec.color }, align()]}>{sec.title} ({sec.list.length})</Text>
+                    <Text style={[s.sheetSectionText, { color: on ? C.ink : sec.color }]}>{on ? '▲' : '▼'}</Text>
+                  </Pressable>
+                  {on && (sec.list.length ? sec.list.map((x, i) => <SourceCard key={i} src={x} tone={sec.color} />) : <Text style={[s.dim, { marginTop: 10 }]}>{ui('none')}</Text>)}
+                </View>
+              );
+            })}
           </ScrollView>
         </View>
       </View>
@@ -851,6 +862,8 @@ const s = themedStyles(() => StyleSheet.create({
   sheet: { width: '100%', maxWidth: 720, maxHeight: '88%', backgroundColor: C.bg, borderTopLeftRadius: 24, borderTopRightRadius: 24, borderWidth: 1, borderBottomWidth: 0, borderColor: C.lineStrong },
   sheetGrip: { alignSelf: 'center', width: 44, height: 5, borderRadius: 3, backgroundColor: C.lineStrong, marginTop: 8 },
   sheetHead: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingHorizontal: 16, paddingTop: 10, paddingBottom: 10, borderBottomWidth: 1, borderBottomColor: C.line },
+  sheetSection: { minHeight: 52, alignSelf: 'stretch', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 10, borderWidth: 1.5, borderRadius: 16, paddingHorizontal: 16, paddingVertical: 10, marginBottom: 10 },
+  sheetSectionText: { fontFamily: font.sans, fontWeight: '800', fontSize: 16, lineHeight: 22, flexShrink: 1 },
   sheetTitle: { color: C.cream, fontFamily: font.serif, fontSize: 20, fontWeight: '700' },
   sheetClose: { minHeight: 44, minWidth: 44, paddingHorizontal: 16, borderRadius: 22, borderWidth: 1.5, borderColor: C.gold, alignItems: 'center', justifyContent: 'center' },
   sheetCloseText: { color: C.gold, fontFamily: font.sans, fontSize: 14, fontWeight: '800' },
