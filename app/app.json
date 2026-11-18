@@ -33,6 +33,12 @@
           "locationWhenInUsePermission": "Kıble yönünü hesaplamak için konumun yalnızca telefonunda kullanılır; hiçbir yere gönderilmez ve kaydedilmez."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "2f1e9f87-d78c-4343-9696-3aca80c59b11"
+      }
+    },
+    "owner": "hakikatyolus-team"
   }
 }
