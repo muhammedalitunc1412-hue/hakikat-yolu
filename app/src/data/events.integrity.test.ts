@@ -86,8 +86,9 @@ test('genişleme sahnelerinin görseli kayıtlı, yer tutucu kalmaz', () => {
     const block = src.slice(src.indexOf('scenes: ['), src.indexOf('\n  sunni:'));
     const texts = [...block.matchAll(/text: \{ tr:/g)];
     const keys = [...block.matchAll(/image: '([^']+)'/g)].map(m => m[1]);
+    const textOnly = [...block.matchAll(/textOnly: true/g)];
     assert.equal(texts.length, expected);
-    assert.equal(keys.length, texts.length);
+    assert.equal(keys.length + textOnly.length, texts.length);
     assert.equal(new Set(keys).size, keys.length);
     const pending = new Set([] as string[]);
     for (const id of keys) {
@@ -99,7 +100,7 @@ test('genişleme sahnelerinin görseli kayıtlı, yer tutucu kalmaz', () => {
     }
   };
   const events = read('./events.ts');
-  bound('./kerbela.ts', 36);
+  bound('./kerbela.ts', 37);
   assert.doesNotMatch(read('./kerbela.ts'), /Harre|mancınık/);
   bound('./harre.ts', 5);
   assert.match(read('./harre.ts'), /image: 'harre-1'/);

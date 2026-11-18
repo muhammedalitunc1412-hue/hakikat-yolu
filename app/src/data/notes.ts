@@ -167,7 +167,6 @@ export const NOTES: Record<string, string[]> = {
     "Mektelde Hz. Rukayye Şam harabesinde babasının başına sarılır ve orada şehit olur (Nefesü'l-Mehmûm, cilt 1, s. 416).",
     "9 Muharrem gecesi Hz. Hüseyin bey'ati kaldırdı. Karanlıkta gidenler oldu. Kalanlar «bin kere dirilsek de ayrılmayız» dedi.",
     "Müslim b. Akîl'in yetimleri Muhammed ve İbrahim, Kûfe zindanından sonra Fırat kıyısında şehit edildi (Şeyh Sadûk, el-Emâlî; Bihâr).",
-    "Emeviler, Kerbelâ'yı örtmek için aşure tatlısını icat edip yaygınlaştırdı. Bugün bu maalesef çok başarılı oldu: insanlar Aşûrâ denince Kerbelâ'yı değil tatlıyı düşünüyor.",
   ],
   harre: [
     "Medine heyeti Şam'dan dönünce Yezid'in şarap içtiğini, köpeklerle oynadığını ve namazı terk ettiğini anlattı; halk biatı bozdu (Taberî 5/480, el-Bidâye 6/262).",
