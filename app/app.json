@@ -2,7 +2,7 @@
   "expo": {
     "name": "Hakikat Yolu",
     "slug": "hakikatyolu",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
@@ -12,9 +12,17 @@
       "resizeMode": "contain",
       "backgroundColor": "#95a98e"
     },
+    "ios": {
+      "bundleIdentifier": "com.hakikatyolu.app",
+      "buildNumber": "1",
+      "supportsTablet": false,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
     "android": {
       "package": "com.hakikatyolu.app",
-      "versionCode": 2,
+      "versionCode": 3,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#95a98e"
@@ -32,7 +40,8 @@
     },
     "plugins": [
       "expo-video",
-      "expo-notifications"
+      "expo-notifications",
+      "./plugins/withPortraitNotRequired"
     ],
     "extra": {
       "eas": {
