@@ -14,7 +14,7 @@
     },
     "ios": {
       "bundleIdentifier": "com.hakikatyolu.app",
-      "buildNumber": "1",
+      "buildNumber": "2",
       "supportsTablet": false,
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
