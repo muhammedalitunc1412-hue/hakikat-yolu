@@ -95,3 +95,28 @@ export function ChatIcon({ size = 22, color = C.gold }: { size?: number; color?:
     </Svg>
   );
 }
+
+export function BellIcon({ size = 22, color = C.gold }: { size?: number; color?: string }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path d="M6 9.5a6 6 0 1 1 12 0c0 4 1.2 5.8 1.8 6.5H4.2C4.8 15.3 6 13.5 6 9.5z" stroke={color} strokeWidth={1.6} fill="none" strokeLinejoin="round" />
+      <Path d="M10 18.2a2 2 0 0 0 4 0" stroke={color} strokeWidth={1.6} fill="none" strokeLinecap="round" />
+    </Svg>
+  );
+}
+
+export function HandIcon({ size = 28, color = C.gold }: { size?: number; color?: string }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path
+        d="M8.2 11.2V6.6a1.4 1.4 0 0 1 2.8 0v4.1M11 10.2V5.8a1.4 1.4 0 0 1 2.8 0v4.6M13.8 10.6V7.2a1.4 1.4 0 0 1 2.8 0V13c0 2.6-1.3 5.4-4.6 6.4-2.2.7-4.6-.2-5.6-2.2L5.2 14a1.5 1.5 0 0 1 2.5-1.6l.5.8"
+        stroke={color}
+        strokeWidth={1.55}
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+

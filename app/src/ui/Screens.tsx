@@ -15,6 +15,7 @@ import { Rich } from './Rich';
 import { EventVideo } from './EventVideo';
 import { ArchIcon, BookIcon, ChatIcon, Chevron, PinIcon, SearchIcon } from './icons';
 import { ContactSheet } from './ContactSheet';
+import { EdgeFade, PeekChevron, SwipeHintLabel } from './SwipeHint';
 import { C, TOP, align, font, usePageWidth, themedStyles, BLOOD } from './theme';
 import { rememberScene, rememberedScene, useScrollMemory } from './scrollMemory';
 
@@ -168,7 +169,7 @@ export function Stories({ events, onBack, onOpen, onOpenAhid }: {
   const setCatI = (i: number) => { lastCat = i; setCatIState(i); };
   const catRef = useRef<FlatList<(typeof CATEGORIES)[number]>>(null);
   const query = norm(q.trim());
-  const cardW = Math.min(width - 64, 460);
+  const cardW = Math.min(width - 100, 460);
   const gap = 12;
   let shown = 0;
   return (
@@ -226,40 +227,45 @@ export function Stories({ events, onBack, onOpen, onOpenAhid }: {
         );
       }) : (
         <View style={{ marginTop: 22 }}>
-          <FlatList
-            ref={catRef}
-            onLayout={() => { if (lastCat > 0) catRef.current?.scrollToOffset({ offset: lastCat * (cardW + gap), animated: false }); }}
-            data={CATEGORIES}
-            horizontal
-            keyExtractor={c => c.id}
-            showsHorizontalScrollIndicator={false}
-            snapToInterval={cardW + gap}
-            decelerationRate="fast"
-            contentContainerStyle={{ paddingRight: 28 }}
-            onMomentumScrollEnd={e => {
-              const i = Math.max(0, Math.min(CATEGORIES.length - 1, Math.round(e.nativeEvent.contentOffset.x / (cardW + gap))));
-              setCatI(i);
-            }}
-            renderItem={({ item: cat, index }) => {
-              const on = index === catI;
-              return (
-                <Pressable
-                  onPress={() => { setCatI(index); catRef.current?.scrollToOffset({ offset: index * (cardW + gap), animated: true }); }}
-                  accessibilityRole="button"
-                  accessibilityState={{ selected: on }}
-                  style={[s.catCard, { width: cardW, marginRight: gap }, on && s.catCardOn, webHit]}
-                >
-                  <Text style={s.catIndex}>{String(index + 1).padStart(2, '0')} / {String(CATEGORIES.length).padStart(2, '0')}</Text>
-                  <Text style={[s.catTitle, align()]} numberOfLines={2}>{cat.title}</Text>
-                  <Text style={[s.catSub, align(), { marginBottom: 0 }]} numberOfLines={3}>{cat.sub}</Text>
-                </Pressable>
-              );
-            }}
-          />
+          <View>
+            <FlatList
+              ref={catRef}
+              onLayout={() => { if (lastCat > 0) catRef.current?.scrollToOffset({ offset: lastCat * (cardW + gap), animated: false }); }}
+              data={CATEGORIES}
+              horizontal
+              keyExtractor={c => c.id}
+              showsHorizontalScrollIndicator={false}
+              snapToInterval={cardW + gap}
+              decelerationRate="fast"
+              contentContainerStyle={{ paddingRight: Math.max(24, width - 36 - cardW) }}
+              onMomentumScrollEnd={e => {
+                const i = Math.max(0, Math.min(CATEGORIES.length - 1, Math.round(e.nativeEvent.contentOffset.x / (cardW + gap))));
+                setCatI(i);
+              }}
+              renderItem={({ item: cat, index }) => {
+                const on = index === catI;
+                return (
+                  <Pressable
+                    onPress={() => { setCatI(index); catRef.current?.scrollToOffset({ offset: index * (cardW + gap), animated: true }); }}
+                    accessibilityRole="button"
+                    accessibilityState={{ selected: on }}
+                    style={[s.catCard, { width: cardW, marginRight: gap }, on && s.catCardOn, webHit]}
+                  >
+                    <Text style={s.catIndex}>{String(index + 1).padStart(2, '0')} / {String(CATEGORIES.length).padStart(2, '0')}</Text>
+                    <Text style={[s.catTitle, align()]} numberOfLines={2}>{cat.title}</Text>
+                    <Text style={[s.catSub, align(), { marginBottom: 0 }]} numberOfLines={3}>{cat.sub}</Text>
+                  </Pressable>
+                );
+              }}
+            />
+            {catI > 0 && <EdgeFade side="left" />}
+            {catI < CATEGORIES.length - 1 && <EdgeFade side="right" />}
+            <PeekChevron visible={catI < CATEGORIES.length - 1} side="right" />
+          </View>
           <View style={s.catDots}>
             {CATEGORIES.map((c, i) => <View key={c.id} style={[s.dot, i === catI && s.dotOn]} />)}
           </View>
-          <Text style={s.swipe}>Sola kaydır, sonraki başlıklar sağda</Text>
+          <SwipeHintLabel text={ui('catSwipeHint')} animate={catI < CATEGORIES.length - 1} />
           <View style={{ marginTop: 8 }}>
             {(() => {
               const evs = (CATEGORIES[catI]?.ids ?? [])

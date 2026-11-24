@@ -4,6 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StatusBar } from 'expo-status-bar';
 import { DuaList, DuaScreen, EventScreen, Home, Method, Stories } from './src/ui/Screens';
 import { PurposeScreen } from './src/ui/PurposeScreen';
+import { Onboarding } from './src/ui/Onboarding';
 import { AhidnameScreen } from './src/ui/AhidnameScreen';
 import { MapDetail, MapList } from './src/ui/MapScreens';
 import { ImamDetail, ImamList } from './src/ui/ImamScreens';
@@ -35,6 +36,7 @@ const LANGUAGE_KEY = 'hakikat-yolu:language';
 const PURPOSE_AT_KEY = 'hakikat-yolu:purpose-seen-at';
 const PURPOSE_LEGACY_KEY = 'hakikat-yolu:purpose-seen';
 const PURPOSE_INTERVAL_MS = 4 * 24 * 60 * 60 * 1000;
+const ONBOARDING_KEY = 'hakikat-yolu:onboarding-seen';
 
 export default function Root() {
   return <FontScaleProvider>{() => <App />}</FontScaleProvider>;
@@ -48,6 +50,7 @@ function App() {
   const [ready, setReady] = useState(false);
   const [choosing, setChoosing] = useState(true);
   const [purposeSeen, setPurposeSeen] = useState(false);
+  const [onboardingSeen, setOnboardingSeen] = useState(false);
   const [editingLanguage, setEditingLanguage] = useState(false);
   const [draftLanguage, setDraftLanguage] = useState<Lang>('tr');
   const [remind, setRemind] = useState(false);
@@ -60,12 +63,14 @@ function App() {
       AsyncStorage.getItem(LANGUAGE_KEY),
       AsyncStorage.getItem(PURPOSE_AT_KEY),
       AsyncStorage.getItem(PURPOSE_LEGACY_KEY),
-    ]).then(([saved, seenAt, legacy]) => {
+      AsyncStorage.getItem(ONBOARDING_KEY),
+    ]).then(([saved, seenAt, legacy, onb]) => {
       if (!active) return;
       const option = languageOption(saved);
       setLanguage(option.id);
       setDraftLanguage(option.id);
       setChoosing(saved !== option.id);
+      setOnboardingSeen(onb === '1');
       const t = seenAt ? Number(seenAt) : NaN;
       if (Number.isFinite(t)) {
         setPurposeSeen(Date.now() - t < PURPOSE_INTERVAL_MS);
@@ -112,6 +117,16 @@ function App() {
     void AsyncStorage.setItem(PURPOSE_AT_KEY, String(Date.now())).catch(() => {});
   }
 
+  function confirmOnboarding() {
+    setOnboardingSeen(true);
+    void AsyncStorage.setItem(ONBOARDING_KEY, '1').catch(() => {});
+  }
+
+  function replayOnboarding() {
+    setEditingLanguage(false);
+    setOnboardingSeen(false);
+  }
+
   setLang(lang);
   const [stack, setStack] = useState<Route[]>([{ name: 'home' }]);
   const stackRef = useRef(stack);
@@ -131,12 +146,13 @@ function App() {
         setEditingLanguage(false);
         return true;
       }
+      if (!onboardingSeen) return true;
       if (stackRef.current.length <= 1) return false;
       setStack(s => (s.length > 1 ? s.slice(0, -1) : s));
       return true;
     });
     return () => sub.remove();
-  }, [requiredUpdate, editingLanguage]);
+  }, [requiredUpdate, editingLanguage, onboardingSeen]);
 
   // Kerbela ve Hz. Hüseyin alanları kan kırmızısı temayla açılır
   setTheme((route.name === 'event' && (route.id === 'kerbela' || route.id === 'fatima-vefat')) || (route.name === 'imam' && route.id === 'huseyin') ? 'blood' : 'default');
@@ -187,10 +203,17 @@ function App() {
                 {remind && (() => { const n = nextReminder(lang); return n ? <Text style={{ color: C.text, fontSize: 14, lineHeight: 21 }}>{ui('occasionsNext')}: {n.title} · {n.at.toLocaleDateString(lang, { day: 'numeric', month: 'long' })}</Text> : null; })()}
               </View>
             )}
+            {editingLanguage && (
+              <Pressable onPress={replayOnboarding} accessibilityRole="button" style={{ padding: 14, alignItems: 'center', backgroundColor: C.card, borderWidth: 1, borderColor: C.lineStrong, marginTop: 8 }}>
+                <Text style={{ color: C.gold, fontSize: 17, fontWeight: '700' }}>{ui('onbReplay')}</Text>
+              </Pressable>
+            )}
             <Pressable onPress={confirmLanguage} accessibilityRole="button" style={{ padding: 14, alignItems: 'center', backgroundColor: C.card }}>
               <Text style={{ color: C.gold, fontSize: 17, fontWeight: '700' }}>{editingLanguage ? ui('saveLanguage') : languageOption(draftLanguage).confirm}</Text>
             </Pressable>
           </ScrollView>
+        ) : !onboardingSeen ? (
+          <Onboarding key={'ob' + scale + lang} onDone={confirmOnboarding} />
         ) : !purposeSeen ? (
           <PurposeScreen key={'fs' + scale} onContinue={confirmPurpose} />
         ) : <>
