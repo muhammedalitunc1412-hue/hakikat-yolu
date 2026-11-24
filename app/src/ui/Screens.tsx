@@ -4,7 +4,7 @@ import type { Accept, Dispute, Dua, HistEvent, Scene, Source } from '../types';
 import { getLang, tx, ui } from '../i18n';
 import { FontButton, useFontScale } from './FontScale';
 import { SCENE_IMAGES } from '../data/sceneImages';
-import { CATEGORIES, isStory, nextEvent } from '../data/events';
+import { CATEGORIES, EVENTS, isStory, nextEvent } from '../data/events';
 import { SCENE_VIDEOS } from '../data/sceneVideos';
 import { mapsForEvent } from '../data/maps';
 import { PurposeCopy } from './PurposeCopy';
@@ -13,8 +13,10 @@ import { LogoZoom } from './LogoZoom';
 import { ImageViewer } from './ImageViewer';
 import { Rich } from './Rich';
 import { EventVideo } from './EventVideo';
-import { ArchIcon, BookIcon, ChatIcon, Chevron, PinIcon, SearchIcon } from './icons';
+import { ArchIcon, BookIcon, BookmarkIcon, ChatIcon, Chevron, NoteIcon, PinIcon, SearchIcon } from './icons';
 import { ContactSheet } from './ContactSheet';
+import { SceneMarkBar } from './SceneMarks';
+import { markLastScene, useMarks } from './marks';
 import { EdgeFade, PeekChevron, SwipeHintLabel } from './SwipeHint';
 import { C, TOP, align, font, usePageWidth, themedStyles, BLOOD } from './theme';
 import { rememberScene, rememberedScene, useScrollMemory } from './scrollMemory';
@@ -66,7 +68,7 @@ function Back({ onPress }: { onPress: () => void }) {
 
 let lastCat = 0; // Hikâyeden dönünce aynı kategoride kalmak için
 
-export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps, onImams }: {
+export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps, onImams, onNotes, onBookmarks, onOpenEvent }: {
   langName: string;
   onSettings: () => void;
   onStories: () => void;
@@ -74,11 +76,16 @@ export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps
   onDuas: () => void;
   onMaps: () => void;
   onImams: () => void;
+  onNotes: () => void;
+  onBookmarks: () => void;
+  onOpenEvent: (id: string, scene?: number) => void;
 }) {
   const sc = useScrollMemory('home');
   const width = usePageWidth();
   const wide = width >= 560;
   const [contactOpen, setContactOpen] = useState(false);
+  const { last } = useMarks();
+  const lastEv = last ? EVENTS.find(e => e.id === last.eventId) : undefined;
   return (
     <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page} keyboardShouldPersistTaps="handled">
       <View style={s.topRow}>
@@ -107,6 +114,37 @@ export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps
         </View>
         <Chevron color={C.gold} />
       </Pressable>
+
+      {lastEv && last && (
+        <Pressable onPress={() => onOpenEvent(last.eventId, last.scene)} accessibilityRole="button" accessibilityLabel={ui('continueReading')} style={({ pressed }) => [s.continue, pressed && s.pressed, webHit]}>
+          <View style={s.bubble}><BookmarkIcon size={20} filled /></View>
+          <View style={{ flex: 1 }}>
+            <Text style={s.continueKicker}>{ui('continueReading')}</Text>
+            <Text style={[s.continueTitle, align()]} numberOfLines={2}>{tx(lastEv.title)}</Text>
+            <Text style={s.continueSub}>{ui('scene')} {last.scene + 1}</Text>
+          </View>
+          <Chevron color={C.gold} />
+        </Pressable>
+      )}
+
+      <View style={{ flexDirection: wide ? 'row' : 'column', gap: 12, marginTop: 12 }}>
+        <Pressable style={({ pressed }) => [s.feature, wide && { flex: 1 }, pressed && s.pressed, webHit]} onPress={onNotes} accessibilityRole="button">
+          <View style={s.bubble}><NoteIcon /></View>
+          <View style={{ flex: 1 }}>
+            <Text style={[s.featureTitle, align()]}>{ui('myNotes')}</Text>
+            <Text style={[s.featureSub, align()]} numberOfLines={2}>{ui('myNotesSub')}</Text>
+          </View>
+          <Chevron color={C.gold} />
+        </Pressable>
+        <Pressable style={({ pressed }) => [s.feature, wide && { flex: 1 }, pressed && s.pressed, webHit]} onPress={onBookmarks} accessibilityRole="button">
+          <View style={s.bubble}><BookmarkIcon /></View>
+          <View style={{ flex: 1 }}>
+            <Text style={[s.featureTitle, align()]}>{ui('bookmarks')}</Text>
+            <Text style={[s.featureSub, align()]} numberOfLines={2}>{ui('bookmarksSub')}</Text>
+          </View>
+          <Chevron color={C.gold} />
+        </Pressable>
+      </View>
 
       <View style={{ flexDirection: wide ? 'row' : 'column', gap: 12, marginTop: 14 }}>
         <Pressable style={({ pressed }) => [s.feature, s.featureAlt, wide && { flex: 1 }, pressed && s.pressed, webHit]} onPress={onDuas} accessibilityRole="button">
@@ -169,8 +207,11 @@ export function Stories({ events, onBack, onOpen, onOpenAhid }: {
   const setCatI = (i: number) => { lastCat = i; setCatIState(i); };
   const catRef = useRef<FlatList<(typeof CATEGORIES)[number]>>(null);
   const query = norm(q.trim());
-  const cardW = Math.min(width - 100, 460);
+  const pagePad = 18;
+  const peek = 48;
   const gap = 12;
+  const cardW = Math.min(width - pagePad - peek, 460);
+  const interval = cardW + gap;
   let shown = 0;
   return (
     <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page} keyboardShouldPersistTaps="handled">
@@ -227,26 +268,32 @@ export function Stories({ events, onBack, onOpen, onOpenAhid }: {
         );
       }) : (
         <View style={{ marginTop: 22 }}>
-          <View>
+          <View style={{ marginHorizontal: -pagePad }}>
             <FlatList
               ref={catRef}
-              onLayout={() => { if (lastCat > 0) catRef.current?.scrollToOffset({ offset: lastCat * (cardW + gap), animated: false }); }}
+              onLayout={() => { if (lastCat > 0) catRef.current?.scrollToOffset({ offset: lastCat * interval, animated: false }); }}
               data={CATEGORIES}
               horizontal
               keyExtractor={c => c.id}
               showsHorizontalScrollIndicator={false}
-              snapToInterval={cardW + gap}
+              snapToInterval={interval}
+              snapToAlignment="start"
+              disableIntervalMomentum
               decelerationRate="fast"
-              contentContainerStyle={{ paddingRight: Math.max(24, width - 36 - cardW) }}
+              contentContainerStyle={{ paddingLeft: pagePad, paddingRight: Math.max(peek, width - pagePad - cardW) }}
               onMomentumScrollEnd={e => {
-                const i = Math.max(0, Math.min(CATEGORIES.length - 1, Math.round(e.nativeEvent.contentOffset.x / (cardW + gap))));
+                const i = Math.max(0, Math.min(CATEGORIES.length - 1, Math.round(e.nativeEvent.contentOffset.x / interval)));
+                setCatI(i);
+              }}
+              onScrollEndDrag={e => {
+                const i = Math.max(0, Math.min(CATEGORIES.length - 1, Math.round(e.nativeEvent.contentOffset.x / interval)));
                 setCatI(i);
               }}
               renderItem={({ item: cat, index }) => {
                 const on = index === catI;
                 return (
                   <Pressable
-                    onPress={() => { setCatI(index); catRef.current?.scrollToOffset({ offset: index * (cardW + gap), animated: true }); }}
+                    onPress={() => { setCatI(index); catRef.current?.scrollToOffset({ offset: index * interval, animated: true }); }}
                     accessibilityRole="button"
                     accessibilityState={{ selected: on }}
                     style={[s.catCard, { width: cardW, marginRight: gap }, on && s.catCardOn, webHit]}
@@ -258,8 +305,7 @@ export function Stories({ events, onBack, onOpen, onOpenAhid }: {
                 );
               }}
             />
-            {catI > 0 && <EdgeFade side="left" />}
-            {catI < CATEGORIES.length - 1 && <EdgeFade side="right" />}
+            {catI < CATEGORIES.length - 1 && <EdgeFade side="right" width={36} />}
             <PeekChevron visible={catI < CATEGORIES.length - 1} side="right" />
           </View>
           <View style={s.catDots}>
@@ -431,10 +477,10 @@ const ScenePage = React.memo(function ScenePage({ ev, item, index, width, lang, 
   );
 });
 
-export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; onBack: () => void; onOpenMap: (mapId: string) => void; onNext?: (id: string) => void }) {
+export function EventScreen({ ev, onBack, onOpenMap, onNext, startScene }: { ev: HistEvent; onBack: () => void; onOpenMap: (mapId: string) => void; onNext?: (id: string) => void; startScene?: number }) {
   const sc = useScrollMemory('event:' + ev.id);
   const width = usePageWidth();
-  const [idx, setIdx] = useState(() => rememberedScene('event:' + ev.id));
+  const [idx, setIdx] = useState(() => (typeof startScene === 'number' && startScene >= 0 ? startScene : rememberedScene('event:' + ev.id)));
   const [open, setOpen] = useState<Panel[]>([]);
   const [sourcesOpen, setSourcesOpen] = useState(false);
   const listRef = useRef<FlatList<StoryPage>>(null);
@@ -494,9 +540,19 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
   const commit = (i: number) => {
     idxRef.current = i;
     rememberScene('event:' + ev.id, i);
+    const page = pages[i];
+    const scene = page && page.kind === 'scene' ? page.n : Math.max(0, ev.scenes.length - 1);
+    markLastScene(ev.id, scene);
     setIdx(cur => (cur === i ? cur : i));
     armIdle();
   };
+  useEffect(() => {
+    const page = pages[idx];
+    const scene = page && page.kind === 'scene' ? page.n : Math.max(0, ev.scenes.length - 1);
+    markLastScene(ev.id, scene);
+    // yalnızca bu olay açılınca; sahne değişimini commit yazar
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ev.id]);
   const go = (i: number) => {
     const next = Math.max(0, Math.min(total - 1, i));
     pendingGo.current = next;
@@ -670,6 +726,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext }: { ev: HistEvent; 
         directionalLockEnabled
       >
         {header}
+        <SceneMarkBar ev={ev} scene={pages[idx] && pages[idx].kind === 'scene' ? pages[idx].n : Math.max(0, ev.scenes.length - 1)} />
 
         <FlatList
           ref={listRef}
@@ -889,6 +946,10 @@ const s = themedStyles(() => StyleSheet.create({
   keyLine: { color: C.gold, fontFamily: font.serif, fontSize: 14, lineHeight: 20, marginTop: 6, fontStyle: 'italic' },
   cardHook: { color: C.dim, fontFamily: font.sans, fontSize: 14.5, lineHeight: 21, marginTop: 6 },
   empty: { color: C.dim, fontFamily: font.sans, fontSize: 15, marginTop: 22 },
+  continue: { flexDirection: 'row', alignItems: 'center', gap: 12, marginTop: 12, padding: 14, borderRadius: 18, borderWidth: 1.5, borderColor: C.gold, backgroundColor: C.card, minHeight: 80 },
+  continueKicker: { color: C.goldDeep, fontFamily: font.sans, fontSize: 11, fontWeight: '800', letterSpacing: 1.2 },
+  continueTitle: { color: C.cream, fontFamily: font.serif, fontSize: 17, fontWeight: '700', marginTop: 2 },
+  continueSub: { color: C.gold, fontFamily: font.sans, fontSize: 12, fontWeight: '700', marginTop: 3 },
   method: { flexDirection: 'row', alignItems: 'center', gap: 12, marginTop: 22, padding: 14, borderRadius: 18, borderWidth: 1, borderColor: C.line, backgroundColor: C.card2, minHeight: 72 },
   methodText: { flex: 1, color: C.cream, fontFamily: font.sans, fontSize: 16, fontWeight: '700' },
   back: { alignSelf: 'flex-start', minHeight: 44, justifyContent: 'center', paddingRight: 12, marginBottom: 4 },

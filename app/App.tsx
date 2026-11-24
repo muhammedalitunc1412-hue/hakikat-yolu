@@ -3,6 +3,7 @@ import { BackHandler, Pressable, ScrollView, Text, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StatusBar } from 'expo-status-bar';
 import { DuaList, DuaScreen, EventScreen, Home, Method, Stories } from './src/ui/Screens';
+import { BookmarksList, NotesList } from './src/ui/MarksScreens';
 import { PurposeScreen } from './src/ui/PurposeScreen';
 import { Onboarding } from './src/ui/Onboarding';
 import { AhidnameScreen } from './src/ui/AhidnameScreen';
@@ -20,7 +21,7 @@ import { cancel, ensurePermission, loadEnabled, nextReminder, openOf, saveEnable
 type Route =
   | { name: 'home' }
   | { name: 'stories' }
-  | { name: 'event'; id: string }
+  | { name: 'event'; id: string; scene?: number }
   | { name: 'method' }
   | { name: 'duas' }
   | { name: 'dua'; id: string }
@@ -28,7 +29,9 @@ type Route =
   | { name: 'imams' }
   | { name: 'imam'; id: string }
   | { name: 'map'; id: string }
-  | { name: 'ahidname' };
+  | { name: 'ahidname' }
+  | { name: 'my-notes' }
+  | { name: 'bookmarks' };
 
 setupNotifications();
 
@@ -136,6 +139,7 @@ function App() {
   const back = () => setStack(s => (s.length > 1 ? s.slice(0, -1) : s));
   const home = () => setStack([{ name: 'home' }]);
   const toStories = () => setStack([{ name: 'home' }, { name: 'stories' }]);
+  const openEvent = (id: string, scene?: number) => setStack([{ name: 'home' }, { name: 'stories' }, { name: 'event', id, scene }]);
   // Hikâye içinden (olay, ahidnâme, hikâyeden açılan harita) alttaki düğme Hikâyeler sayfasına döner.
   const inStories = (route.name === 'event' || route.name === 'ahidname' || route.name === 'map') && stack.some(r => r.name === 'stories');
 
@@ -204,9 +208,17 @@ function App() {
               </View>
             )}
             {editingLanguage && (
-              <Pressable onPress={replayOnboarding} accessibilityRole="button" style={{ padding: 14, alignItems: 'center', backgroundColor: C.card, borderWidth: 1, borderColor: C.lineStrong, marginTop: 8 }}>
-                <Text style={{ color: C.gold, fontSize: 17, fontWeight: '700' }}>{ui('onbReplay')}</Text>
-              </Pressable>
+              <View style={{ marginTop: 18, gap: 10 }}>
+                <Pressable onPress={() => { setEditingLanguage(false); push({ name: 'my-notes' }); }} accessibilityRole="button" style={{ padding: 12, backgroundColor: C.card, borderWidth: 1, borderColor: C.lineStrong }}>
+                  <Text style={{ color: C.cream, fontSize: 17 }}>{ui('myNotes')}</Text>
+                </Pressable>
+                <Pressable onPress={() => { setEditingLanguage(false); push({ name: 'bookmarks' }); }} accessibilityRole="button" style={{ padding: 12, backgroundColor: C.card, borderWidth: 1, borderColor: C.lineStrong }}>
+                  <Text style={{ color: C.cream, fontSize: 17 }}>{ui('bookmarks')}</Text>
+                </Pressable>
+                <Pressable onPress={replayOnboarding} accessibilityRole="button" style={{ padding: 14, alignItems: 'center', backgroundColor: C.card, borderWidth: 1, borderColor: C.lineStrong }}>
+                  <Text style={{ color: C.gold, fontSize: 17, fontWeight: '700' }}>{ui('onbReplay')}</Text>
+                </Pressable>
+              </View>
             )}
             <Pressable onPress={confirmLanguage} accessibilityRole="button" style={{ padding: 14, alignItems: 'center', backgroundColor: C.card }}>
               <Text style={{ color: C.gold, fontSize: 17, fontWeight: '700' }}>{editingLanguage ? ui('saveLanguage') : languageOption(draftLanguage).confirm}</Text>
@@ -219,14 +231,16 @@ function App() {
         ) : <>
         <View key={'fs' + scale} style={{ flex: 1 }}>
         {route.name === 'home' && (
-          <Home langName={languageOption(lang).name} onSettings={() => { setDraftLanguage(lang); setEditingLanguage(true); }} onStories={() => push({ name: 'stories' })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onMaps={() => push({ name: 'maps' })} onImams={() => push({ name: 'imams' })} />
+          <Home langName={languageOption(lang).name} onSettings={() => { setDraftLanguage(lang); setEditingLanguage(true); }} onStories={() => push({ name: 'stories' })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onMaps={() => push({ name: 'maps' })} onImams={() => push({ name: 'imams' })} onNotes={() => push({ name: 'my-notes' })} onBookmarks={() => push({ name: 'bookmarks' })} onOpenEvent={openEvent} />
         )}
         {route.name === 'stories' && (
           <Stories events={EVENTS} onBack={back} onOpen={id => push({ name: 'event', id })} onOpenAhid={() => push({ name: 'ahidname' })} />
         )}
-        {route.name === 'event' && ev && <EventScreen key={ev.id} ev={ev} onBack={back} onOpenMap={id => push({ name: 'map', id })} onNext={id => push({ name: 'event', id })} />}
+        {route.name === 'event' && ev && <EventScreen key={ev.id + ':' + (route.scene ?? '')} ev={ev} startScene={route.scene} onBack={back} onOpenMap={id => push({ name: 'map', id })} onNext={id => push({ name: 'event', id })} />}
         {route.name === 'event' && !ev && <Missing onBack={back} />}
         {route.name === 'method' && <Method onBack={back} />}
+        {route.name === 'my-notes' && <NotesList onBack={back} onOpen={(id, scene) => push({ name: 'event', id, scene })} />}
+        {route.name === 'bookmarks' && <BookmarksList onBack={back} onOpen={(id, scene) => push({ name: 'event', id, scene })} />}
         {route.name === 'ahidname' && <AhidnameScreen onBack={back} />}
         {route.name === 'duas' && <DuaList duas={DUAS} onOpen={id => push({ name: 'dua', id })} onBack={back} />}
         {route.name === 'dua' && dua && <DuaScreen key={dua.id} dua={dua} onBack={back} />}

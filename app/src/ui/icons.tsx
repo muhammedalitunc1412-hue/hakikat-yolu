@@ -120,3 +120,28 @@ export function HandIcon({ size = 28, color = C.gold }: { size?: number; color?:
   );
 }
 
+export function BookmarkIcon({ size = 22, color = C.gold, filled }: { size?: number; color?: string; filled?: boolean }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path
+        d="M7 4.5h10a1 1 0 0 1 1 1V20l-6-3.4L6 20V5.5a1 1 0 0 1 1-1z"
+        stroke={color}
+        strokeWidth={1.6}
+        fill={filled ? color : 'none'}
+        fillOpacity={filled ? 0.95 : 0}
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
+export function NoteIcon({ size = 22, color = C.gold, filled }: { size?: number; color?: string; filled?: boolean }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24">
+      <Path d="M7 4.5h7.2L18.5 9v10.5a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-15a1 1 0 0 1 1-1z" stroke={color} strokeWidth={1.55} fill={filled ? color : 'none'} fillOpacity={filled ? 0.16 : 0} strokeLinejoin="round" />
+      <Path d="M14 4.8V9h4.3" stroke={color} strokeWidth={1.5} fill="none" strokeLinejoin="round" />
+      <Path d="M9 12.2h6.2M9 15.6h4.4" stroke={color} strokeWidth={1.5} strokeLinecap="round" />
+    </Svg>
+  );
+}
+
