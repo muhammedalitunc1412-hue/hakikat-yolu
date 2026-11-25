@@ -5,6 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 import { DuaList, DuaScreen, EventScreen, Home, Method, Stories } from './src/ui/Screens';
 import { FavoritesList, NotesList } from './src/ui/MarksScreens';
 import { SearchScreen } from './src/ui/SearchScreen';
+import { QuizScreen } from './src/ui/QuizScreen';
 import { PurposeScreen } from './src/ui/PurposeScreen';
 import { Onboarding } from './src/ui/Onboarding';
 import { AhidnameScreen } from './src/ui/AhidnameScreen';
@@ -33,7 +34,8 @@ type Route =
   | { name: 'ahidname' }
   | { name: 'my-notes' }
   | { name: 'favorites' }
-  | { name: 'search'; q?: string };
+  | { name: 'search'; q?: string }
+  | { name: 'quiz'; id: string };
 
 setupNotifications();
 
@@ -143,7 +145,7 @@ function App() {
   const toStories = () => setStack([{ name: 'home' }, { name: 'stories' }]);
   const openEvent = (id: string, scene?: number) => setStack([{ name: 'home' }, { name: 'stories' }, { name: 'event', id, scene }]);
   // Hikâye içinden (olay, ahidnâme, hikâyeden açılan harita) alttaki düğme Hikâyeler sayfasına döner.
-  const inStories = (route.name === 'event' || route.name === 'ahidname' || route.name === 'map') && stack.some(r => r.name === 'stories');
+  const inStories = (route.name === 'event' || route.name === 'quiz' || route.name === 'ahidname' || route.name === 'map') && stack.some(r => r.name === 'stories');
 
   useEffect(() => {
     const sub = BackHandler.addEventListener('hardwareBackPress', () => {
@@ -176,6 +178,7 @@ function App() {
   }, [ready, requiredUpdate, lastResponse]);
 
   const ev = route.name === 'event' ? EVENTS.find(e => e.id === route.id) : undefined;
+  const quizEv = route.name === 'quiz' ? EVENTS.find(e => e.id === route.id) : undefined;
   const dua = route.name === 'dua' ? DUAS.find(d => d.id === route.id) : undefined;
 
   return (
@@ -238,9 +241,11 @@ function App() {
         {route.name === 'stories' && (
           <Stories events={EVENTS} onBack={back} onSearch={q => push({ name: 'search', q })} onOpen={id => push({ name: 'event', id })} onOpenAhid={() => push({ name: 'ahidname' })} />
         )}
-        {route.name === 'event' && ev && <EventScreen key={ev.id + ':' + (route.scene ?? '')} ev={ev} startScene={route.scene} onBack={back} onOpenMap={id => push({ name: 'map', id })} onNext={id => push({ name: 'event', id })} />}
+        {route.name === 'event' && ev && <EventScreen key={ev.id + ':' + (route.scene ?? '')} ev={ev} startScene={route.scene} onBack={back} onOpenMap={id => push({ name: 'map', id })} onNext={id => push({ name: 'event', id })} onQuiz={id => push({ name: 'quiz', id })} />}
         {route.name === 'event' && !ev && <Missing onBack={back} />}
         {route.name === 'method' && <Method onBack={back} />}
+        {route.name === 'quiz' && quizEv && <QuizScreen key={quizEv.id} ev={quizEv} onBack={back} onOpenScene={scene => push({ name: 'event', id: quizEv.id, scene })} />}
+        {route.name === 'quiz' && !quizEv && <Missing onBack={back} />}
         {route.name === 'search' && <SearchScreen initial={route.q} onBack={back} onOpen={(id, scene) => push({ name: 'event', id, scene })} />}
         {route.name === 'my-notes' && <NotesList onBack={back} onOpen={(id, scene) => push({ name: 'event', id, scene })} />}
         {route.name === 'favorites' && <FavoritesList onBack={back} onOpen={(id, scene) => push({ name: 'event', id, scene })} />}

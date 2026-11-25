@@ -7,13 +7,14 @@ import { SCENE_IMAGES } from '../data/sceneImages';
 import { CATEGORIES, EVENTS, isStory, nextEvent } from '../data/events';
 import { SCENE_VIDEOS } from '../data/sceneVideos';
 import { mapsForEvent } from '../data/maps';
+import { QUIZZES, hasQuiz } from '../data/quizzes';
 import { PurposeCopy } from './PurposeCopy';
 import { AHIDNAME_DATE, AHIDNAME_HOOK, AHIDNAME_TITLE } from '../data/malik-ahidname';
 import { LogoZoom } from './LogoZoom';
 import { ImageViewer } from './ImageViewer';
 import { Rich } from './Rich';
 import { EventVideo } from './EventVideo';
-import { ArchIcon, BookIcon, BookmarkIcon, ChatIcon, Chevron, HeartIcon, NoteIcon, PinIcon, SearchIcon } from './icons';
+import { ArchIcon, BookIcon, BookmarkIcon, ChatIcon, Chevron, HeartIcon, NoteIcon, PinIcon, QuizIcon, SearchIcon } from './icons';
 import { ContactSheet } from './ContactSheet';
 import { SceneMarkBar } from './SceneMarks';
 import { useMarks } from './marks';
@@ -491,7 +492,8 @@ const ScenePage = React.memo(function ScenePage({ ev, item, index, width, lang, 
   );
 });
 
-export function EventScreen({ ev, onBack, onOpenMap, onNext, startScene }: { ev: HistEvent; onBack: () => void; onOpenMap: (mapId: string) => void; onNext?: (id: string) => void; startScene?: number }) {
+export function EventScreen({ ev, onBack, onOpenMap, onNext, onQuiz, startScene }: { ev: HistEvent; onBack: () => void; onOpenMap: (mapId: string) => void; onNext?: (id: string) => void; onQuiz?: (id: string) => void; startScene?: number }) {
+  const { quizBest } = useMarks();
   const sc = useScrollMemory('event:' + ev.id);
   const width = usePageWidth();
   const [idx, setIdx] = useState(() => (typeof startScene === 'number' && startScene >= 0 ? startScene : rememberedScene('event:' + ev.id)));
@@ -778,7 +780,7 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext, startScene }: { ev:
             <Text style={s.pillIcon}>›</Text>
           </Pressable>
         </View>
-        {idx === 0 && <Text style={s.swipe}>Kaydır veya oklara bas</Text>}
+        {idx === 0 && <Text style={s.swipe}>{ui('sceneSwipeHint')}</Text>}
 
         {below}
       </ScrollView>
@@ -796,6 +798,14 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext, startScene }: { ev:
             </Pressable>
           )}
         </View>
+      )}
+      {idx === total - 1 && story && onQuiz && hasQuiz(ev.id) && (
+        <Pressable onPress={() => onQuiz(ev.id)} accessibilityRole="button" accessibilityLabel={ui('quizStart')} style={({ pressed }) => [s.sourcesBtn, s.quizBar, { flexDirection: rowDir() }, pressed && s.pressed, webHit]}>
+          <QuizIcon size={20} />
+          <Text style={s.sourcesBtnText} numberOfLines={1} adjustsFontSizeToFit>
+            {ui('quizTitle')} · {ui('quizStart')}{typeof quizBest[ev.id] === 'number' ? `  (${quizBest[ev.id]}/${QUIZZES[ev.id].length})` : ''}
+          </Text>
+        </Pressable>
       )}
       {idx === total - 1 && nxt && onNext && (
         <Pressable onPress={() => onNext(nxt.id)} accessibilityRole="button" accessibilityLabel={ui('nextEvent')} style={({ pressed }) => [s.nextBar, pressed && s.pressed, webHit]}>
@@ -926,6 +936,7 @@ const s = themedStyles(() => StyleSheet.create({
   lastRow: { flexDirection: 'row', gap: 10, marginHorizontal: 16, marginBottom: 10 },
   lastBtn: { flex: 1, marginHorizontal: 0, marginBottom: 0, paddingHorizontal: 10 },
   sourcesBtn: { minHeight: 52, borderRadius: 26, borderWidth: 1.5, borderColor: C.gold, backgroundColor: 'rgba(228,197,106,0.12)', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8 },
+  quizBar: { marginHorizontal: 16, marginBottom: 10, paddingHorizontal: 16 },
   sourcesBtnText: { color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '800' },
   sheetWrap: { flex: 1, backgroundColor: 'rgba(0,0,0,0.6)', justifyContent: 'flex-end', alignItems: 'center' },
   sheet: { width: '100%', maxWidth: 720, maxHeight: '88%', backgroundColor: C.bg, borderTopLeftRadius: 24, borderTopRightRadius: 24, borderWidth: 1, borderBottomWidth: 0, borderColor: C.lineStrong },
