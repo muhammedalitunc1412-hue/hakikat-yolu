@@ -4,6 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StatusBar } from 'expo-status-bar';
 import { DuaList, DuaScreen, EventScreen, Home, Method, Stories } from './src/ui/Screens';
 import { FavoritesList, NotesList } from './src/ui/MarksScreens';
+import { SearchScreen } from './src/ui/SearchScreen';
 import { PurposeScreen } from './src/ui/PurposeScreen';
 import { Onboarding } from './src/ui/Onboarding';
 import { AhidnameScreen } from './src/ui/AhidnameScreen';
@@ -31,7 +32,8 @@ type Route =
   | { name: 'map'; id: string }
   | { name: 'ahidname' }
   | { name: 'my-notes' }
-  | { name: 'favorites' };
+  | { name: 'favorites' }
+  | { name: 'search'; q?: string };
 
 setupNotifications();
 
@@ -231,14 +233,15 @@ function App() {
         ) : <>
         <View key={'fs' + scale} style={{ flex: 1 }}>
         {route.name === 'home' && (
-          <Home langName={languageOption(lang).name} onSettings={() => { setDraftLanguage(lang); setEditingLanguage(true); }} onStories={() => push({ name: 'stories' })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onMaps={() => push({ name: 'maps' })} onImams={() => push({ name: 'imams' })} onNotes={() => push({ name: 'my-notes' })} onFavorites={() => push({ name: 'favorites' })} onOpenEvent={openEvent} />
+          <Home langName={languageOption(lang).name} onSettings={() => { setDraftLanguage(lang); setEditingLanguage(true); }} onStories={() => push({ name: 'stories' })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onMaps={() => push({ name: 'maps' })} onImams={() => push({ name: 'imams' })} onNotes={() => push({ name: 'my-notes' })} onFavorites={() => push({ name: 'favorites' })} onSearch={() => push({ name: 'search' })} onOpenEvent={openEvent} />
         )}
         {route.name === 'stories' && (
-          <Stories events={EVENTS} onBack={back} onOpen={id => push({ name: 'event', id })} onOpenAhid={() => push({ name: 'ahidname' })} />
+          <Stories events={EVENTS} onBack={back} onSearch={q => push({ name: 'search', q })} onOpen={id => push({ name: 'event', id })} onOpenAhid={() => push({ name: 'ahidname' })} />
         )}
         {route.name === 'event' && ev && <EventScreen key={ev.id + ':' + (route.scene ?? '')} ev={ev} startScene={route.scene} onBack={back} onOpenMap={id => push({ name: 'map', id })} onNext={id => push({ name: 'event', id })} />}
         {route.name === 'event' && !ev && <Missing onBack={back} />}
         {route.name === 'method' && <Method onBack={back} />}
+        {route.name === 'search' && <SearchScreen initial={route.q} onBack={back} onOpen={(id, scene) => push({ name: 'event', id, scene })} />}
         {route.name === 'my-notes' && <NotesList onBack={back} onOpen={(id, scene) => push({ name: 'event', id, scene })} />}
         {route.name === 'favorites' && <FavoritesList onBack={back} onOpen={(id, scene) => push({ name: 'event', id, scene })} />}
         {route.name === 'ahidname' && <AhidnameScreen onBack={back} />}

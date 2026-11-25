@@ -18,7 +18,7 @@ import { ContactSheet } from './ContactSheet';
 import { SceneMarkBar } from './SceneMarks';
 import { useMarks } from './marks';
 import { EdgeFade, PeekChevron, SwipeHintLabel } from './SwipeHint';
-import { C, TOP, align, font, usePageWidth, themedStyles, BLOOD } from './theme';
+import { C, TOP, align, font, rowDir, usePageWidth, themedStyles, BLOOD } from './theme';
 import { rememberScene, rememberedScene, useScrollMemory } from './scrollMemory';
 
 const webHit = Platform.OS === 'web' ? { cursor: 'pointer' as const } : null;
@@ -68,7 +68,7 @@ function Back({ onPress }: { onPress: () => void }) {
 
 let lastCat = 0; // Hikâyeden dönünce aynı kategoride kalmak için
 
-export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps, onImams, onNotes, onFavorites, onOpenEvent }: {
+export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps, onImams, onNotes, onFavorites, onSearch, onOpenEvent }: {
   langName: string;
   onSettings: () => void;
   onStories: () => void;
@@ -78,6 +78,7 @@ export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps
   onImams: () => void;
   onNotes: () => void;
   onFavorites: () => void;
+  onSearch: () => void;
   onOpenEvent: (id: string, scene?: number) => void;
 }) {
   const sc = useScrollMemory('home');
@@ -103,6 +104,11 @@ export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps
         <LogoZoom size={84} />
       </View>
       <View style={s.rule} />
+
+      <Pressable onPress={onSearch} accessibilityRole="search" accessibilityLabel={ui('searchAll')} style={({ pressed }) => [s.search, s.homeSearch, { flexDirection: rowDir() }, pressed && s.pressed, webHit]}>
+        <SearchIcon />
+        <Text style={[s.homeSearchText, align()]} numberOfLines={1}>{ui('searchAll')}</Text>
+      </Pressable>
 
       <Pressable onPress={onStories} accessibilityRole="button" accessibilityLabel={ui('stories')} style={({ pressed }) => [s.hikaye, pressed && s.pressed, webHit]}>
         <View style={s.hikayeGlow} pointerEvents="none" />
@@ -194,9 +200,10 @@ export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps
   );
 }
 
-export function Stories({ events, onBack, onOpen, onOpenAhid }: {
+export function Stories({ events, onBack, onOpen, onOpenAhid, onSearch }: {
   events: HistEvent[];
   onBack: () => void;
+  onSearch: (q: string) => void;
   onOpen: (id: string) => void;
   onOpenAhid: () => void;
 }) {
@@ -328,6 +335,13 @@ export function Stories({ events, onBack, onOpen, onOpenAhid }: {
         </View>
       )}
       {query && shown === 0 && <Text style={[s.empty, align()]}>{ui('noResult')}</Text>}
+      {!!query && (
+        <Pressable onPress={() => onSearch(q)} accessibilityRole="button" style={({ pressed }) => [s.method, { flexDirection: rowDir() }, pressed && s.pressed, webHit]}>
+          <View style={s.bubble}><SearchIcon color={C.gold} /></View>
+          <Text style={[s.methodText, align()]}>{ui('searchInScenes')}</Text>
+          <Chevron color={C.gold} />
+        </Pressable>
+      )}
     </ScrollView>
   );
 }
@@ -895,6 +909,8 @@ const s = themedStyles(() => StyleSheet.create({
   storiesTitle: { color: C.cream, fontFamily: font.serif, fontSize: 36, lineHeight: 42, fontWeight: '700', marginTop: 2 },
   backInline: { flex: 1, minHeight: 44, justifyContent: 'center' },
   search: { flexDirection: 'row', alignItems: 'center', gap: 10, marginTop: 16, backgroundColor: C.card, borderRadius: 16, paddingHorizontal: 14, minHeight: 52, borderWidth: 1, borderColor: C.line },
+  homeSearch: { marginTop: 0, marginBottom: 14 },
+  homeSearchText: { flex: 1, color: C.faint, fontFamily: font.sans, fontSize: 16 },
   searchInput: { flex: 1, color: C.cream, fontFamily: font.sans, fontSize: 16, paddingVertical: 12 },
   clear: { color: C.gold, fontSize: 22, fontWeight: '600', paddingHorizontal: 4 },
   catIndex: { color: C.gold, fontFamily: font.sans, fontSize: 12, fontWeight: '800', letterSpacing: 1.5 },
