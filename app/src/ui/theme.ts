@@ -107,3 +107,8 @@ export function align(): Pick<TextStyle, 'textAlign' | 'writingDirection'> {
     writingDirection: isRtl() ? 'rtl' : 'ltr',
   };
 }
+
+// Sağdan sola dillerde (ar, fa) yatay satırların yönü: simge ve metin yer değiştirir.
+export function rowDir(): 'row' | 'row-reverse' {
+  return isRtl() ? 'row-reverse' : 'row';
+}

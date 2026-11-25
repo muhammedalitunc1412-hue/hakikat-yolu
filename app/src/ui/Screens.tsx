@@ -13,10 +13,10 @@ import { LogoZoom } from './LogoZoom';
 import { ImageViewer } from './ImageViewer';
 import { Rich } from './Rich';
 import { EventVideo } from './EventVideo';
-import { ArchIcon, BookIcon, BookmarkIcon, ChatIcon, Chevron, NoteIcon, PinIcon, SearchIcon } from './icons';
+import { ArchIcon, BookIcon, BookmarkIcon, ChatIcon, Chevron, HeartIcon, NoteIcon, PinIcon, SearchIcon } from './icons';
 import { ContactSheet } from './ContactSheet';
 import { SceneMarkBar } from './SceneMarks';
-import { markLastScene, useMarks } from './marks';
+import { useMarks } from './marks';
 import { EdgeFade, PeekChevron, SwipeHintLabel } from './SwipeHint';
 import { C, TOP, align, font, usePageWidth, themedStyles, BLOOD } from './theme';
 import { rememberScene, rememberedScene, useScrollMemory } from './scrollMemory';
@@ -68,7 +68,7 @@ function Back({ onPress }: { onPress: () => void }) {
 
 let lastCat = 0; // Hikâyeden dönünce aynı kategoride kalmak için
 
-export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps, onImams, onNotes, onBookmarks, onOpenEvent }: {
+export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps, onImams, onNotes, onFavorites, onOpenEvent }: {
   langName: string;
   onSettings: () => void;
   onStories: () => void;
@@ -77,15 +77,15 @@ export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps
   onMaps: () => void;
   onImams: () => void;
   onNotes: () => void;
-  onBookmarks: () => void;
+  onFavorites: () => void;
   onOpenEvent: (id: string, scene?: number) => void;
 }) {
   const sc = useScrollMemory('home');
   const width = usePageWidth();
   const wide = width >= 560;
   const [contactOpen, setContactOpen] = useState(false);
-  const { last } = useMarks();
-  const lastEv = last ? EVENTS.find(e => e.id === last.eventId) : undefined;
+  const { marker } = useMarks();
+  const markerEv = marker ? EVENTS.find(e => e.id === marker.eventId) : undefined;
   return (
     <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page} keyboardShouldPersistTaps="handled">
       <View style={s.topRow}>
@@ -115,36 +115,17 @@ export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps
         <Chevron color={C.gold} />
       </Pressable>
 
-      {lastEv && last && (
-        <Pressable onPress={() => onOpenEvent(last.eventId, last.scene)} accessibilityRole="button" accessibilityLabel={ui('continueReading')} style={({ pressed }) => [s.continue, pressed && s.pressed, webHit]}>
+      {markerEv && marker && (
+        <Pressable onPress={() => onOpenEvent(marker.eventId, marker.scene)} accessibilityRole="button" accessibilityLabel={ui('continueReading')} style={({ pressed }) => [s.continue, pressed && s.pressed, webHit]}>
           <View style={s.bubble}><BookmarkIcon size={20} filled /></View>
           <View style={{ flex: 1 }}>
             <Text style={s.continueKicker}>{ui('continueReading')}</Text>
-            <Text style={[s.continueTitle, align()]} numberOfLines={2}>{tx(lastEv.title)}</Text>
-            <Text style={s.continueSub}>{ui('scene')} {last.scene + 1}</Text>
+            <Text style={[s.continueTitle, align()]} numberOfLines={2}>{tx(markerEv.title)}</Text>
+            <Text style={s.continueSub}>{ui('scene')} {marker.scene + 1}</Text>
           </View>
           <Chevron color={C.gold} />
         </Pressable>
       )}
-
-      <View style={{ flexDirection: wide ? 'row' : 'column', gap: 12, marginTop: 12 }}>
-        <Pressable style={({ pressed }) => [s.feature, wide && { flex: 1 }, pressed && s.pressed, webHit]} onPress={onNotes} accessibilityRole="button">
-          <View style={s.bubble}><NoteIcon /></View>
-          <View style={{ flex: 1 }}>
-            <Text style={[s.featureTitle, align()]}>{ui('myNotes')}</Text>
-            <Text style={[s.featureSub, align()]} numberOfLines={2}>{ui('myNotesSub')}</Text>
-          </View>
-          <Chevron color={C.gold} />
-        </Pressable>
-        <Pressable style={({ pressed }) => [s.feature, wide && { flex: 1 }, pressed && s.pressed, webHit]} onPress={onBookmarks} accessibilityRole="button">
-          <View style={s.bubble}><BookmarkIcon /></View>
-          <View style={{ flex: 1 }}>
-            <Text style={[s.featureTitle, align()]}>{ui('bookmarks')}</Text>
-            <Text style={[s.featureSub, align()]} numberOfLines={2}>{ui('bookmarksSub')}</Text>
-          </View>
-          <Chevron color={C.gold} />
-        </Pressable>
-      </View>
 
       <View style={{ flexDirection: wide ? 'row' : 'column', gap: 12, marginTop: 14 }}>
         <Pressable style={({ pressed }) => [s.feature, s.featureAlt, wide && { flex: 1 }, pressed && s.pressed, webHit]} onPress={onDuas} accessibilityRole="button">
@@ -174,6 +155,25 @@ export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps
         </View>
         <Chevron color={C.gold} />
       </Pressable>
+
+      <View style={{ flexDirection: wide ? 'row' : 'column', gap: 12, marginTop: 12 }}>
+        <Pressable style={({ pressed }) => [s.feature, wide && { flex: 1 }, pressed && s.pressed, webHit]} onPress={onNotes} accessibilityRole="button">
+          <View style={s.bubble}><NoteIcon /></View>
+          <View style={{ flex: 1 }}>
+            <Text style={[s.featureTitle, align()]}>{ui('myNotes')}</Text>
+            <Text style={[s.featureSub, align()]} numberOfLines={2}>{ui('myNotesSub')}</Text>
+          </View>
+          <Chevron color={C.gold} />
+        </Pressable>
+        <Pressable style={({ pressed }) => [s.feature, wide && { flex: 1 }, pressed && s.pressed, webHit]} onPress={onFavorites} accessibilityRole="button">
+          <View style={s.bubble}><HeartIcon /></View>
+          <View style={{ flex: 1 }}>
+            <Text style={[s.featureTitle, align()]}>{ui('favorites')}</Text>
+            <Text style={[s.featureSub, align()]} numberOfLines={2}>{ui('favoritesSub')}</Text>
+          </View>
+          <Chevron color={C.gold} />
+        </Pressable>
+      </View>
 
       <Pressable onPress={() => setContactOpen(true)} accessibilityRole="button" accessibilityLabel={ui('contact')} style={({ pressed }) => [s.method, pressed && s.pressed, webHit]}>
         <View style={s.bubble}><ChatIcon /></View>
@@ -540,19 +540,9 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext, startScene }: { ev:
   const commit = (i: number) => {
     idxRef.current = i;
     rememberScene('event:' + ev.id, i);
-    const page = pages[i];
-    const scene = page && page.kind === 'scene' ? page.n : Math.max(0, ev.scenes.length - 1);
-    markLastScene(ev.id, scene);
     setIdx(cur => (cur === i ? cur : i));
     armIdle();
   };
-  useEffect(() => {
-    const page = pages[idx];
-    const scene = page && page.kind === 'scene' ? page.n : Math.max(0, ev.scenes.length - 1);
-    markLastScene(ev.id, scene);
-    // yalnızca bu olay açılınca; sahne değişimini commit yazar
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ev.id]);
   const go = (i: number) => {
     const next = Math.max(0, Math.min(total - 1, i));
     pendingGo.current = next;

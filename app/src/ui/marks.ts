@@ -1,52 +1,36 @@
 import { useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { rememberScene } from './scrollMemory';
+
+// Kullanıcının yerel işaretleri: tek "kaldığım yer" işareti, favori sahneler, notlar ve test sonuçları.
+// Hepsi yalnızca bu cihazda (AsyncStorage) saklanır.
+import { type Favorite, type Marker, type UserNote, parseStored, sameScene } from './marksData';
+export type { Favorite, Marker, UserNote } from './marksData';
 
 const KEY = 'hakikat-yolu:marks';
 
-export type UserNote = { eventId: string; scene: number; text: string; updatedAt: number };
-export type Bookmark = { eventId: string; scene: number; savedAt: number };
-export type LastScene = { eventId: string; scene: number; at: number };
-
 type State = {
   ready: boolean;
+  marker: Marker | null;
+  favorites: Favorite[];
   notes: UserNote[];
-  bookmarks: Bookmark[];
-  last: LastScene | null;
-  recents: Record<string, number>;
+  quizBest: Record<string, number>;
 };
 
-const empty: State = { ready: false, notes: [], bookmarks: [], last: null, recents: {} };
+const empty: State = { ready: false, marker: null, favorites: [], notes: [], quizBest: {} };
 let state: State = { ...empty };
 const listeners = new Set<() => void>();
 let loadOnce: Promise<void> | null = null;
 
-function emit() {
-  for (const fn of listeners) fn();
-}
-
-function hydrate(recents: Record<string, number>) {
-  for (const [id, i] of Object.entries(recents)) {
-    if (Number.isFinite(i) && i >= 0) rememberScene('event:' + id, i);
-  }
-}
+const emit = () => { for (const fn of listeners) fn(); };
 
 function load() {
   if (!loadOnce) {
     loadOnce = AsyncStorage.getItem(KEY)
       .then(raw => {
-        if (!raw) { state = { ...empty, ready: true }; emit(); return; }
-        try {
-          const d = JSON.parse(raw) as Partial<State>;
-          const notes = Array.isArray(d.notes) ? d.notes.filter(n => n && typeof n.text === 'string' && n.eventId) : [];
-          const bookmarks = Array.isArray(d.bookmarks) ? d.bookmarks.filter(b => b && b.eventId && Number.isFinite(b.scene)) : [];
-          const recents = d.recents && typeof d.recents === 'object' ? d.recents : {};
-          const last = d.last && d.last.eventId && Number.isFinite(d.last.scene) ? d.last : null;
-          state = { ready: true, notes, bookmarks, last, recents };
-          hydrate(recents);
-        } catch {
-          state = { ...empty, ready: true };
-        }
+        const parsed = parseStored(raw);
+        state = { ready: true, ...parsed };
+        // Eski biçimden geldiyse yeni biçimde yeniden yaz (bookmarks/last/recents alanları düşer).
+        if (raw && raw.includes('"bookmarks"')) persist();
         emit();
       })
       .catch(() => { state = { ...empty, ready: true }; emit(); });
@@ -55,8 +39,14 @@ function load() {
 }
 
 function persist() {
-  const { notes, bookmarks, last, recents } = state;
-  void AsyncStorage.setItem(KEY, JSON.stringify({ notes, bookmarks, last, recents })).catch(() => {});
+  const { marker, favorites, notes, quizBest } = state;
+  void AsyncStorage.setItem(KEY, JSON.stringify({ v: 2, marker, favorites, notes, quizBest })).catch(() => {});
+}
+
+function set(next: Partial<State>) {
+  state = { ...state, ...next };
+  persist();
+  emit();
 }
 
 export function useMarks() {
@@ -70,52 +60,44 @@ export function useMarks() {
   return state;
 }
 
-export function noteOf(eventId: string, scene: number): UserNote | undefined {
-  return state.notes.find(n => n.eventId === eventId && n.scene === scene);
-}
-
-export function isBookmarked(eventId: string, scene: number): boolean {
-  return state.bookmarks.some(b => b.eventId === eventId && b.scene === scene);
-}
+export const noteOf = (eventId: string, scene: number) => state.notes.find(n => sameScene(n, eventId, scene));
+export const isFavorite = (eventId: string, scene: number) => state.favorites.some(f => sameScene(f, eventId, scene));
+export const isMarker = (eventId: string, scene: number) => !!state.marker && sameScene(state.marker, eventId, scene);
 
 export function saveNote(eventId: string, scene: number, text: string) {
   const trimmed = text.trim();
-  const updatedAt = Date.now();
-  const rest = state.notes.filter(n => !(n.eventId === eventId && n.scene === scene));
-  state = {
-    ...state,
-    notes: trimmed ? [{ eventId, scene, text: trimmed, updatedAt }, ...rest].sort((a, b) => b.updatedAt - a.updatedAt) : rest,
-  };
-  persist();
-  emit();
+  const rest = state.notes.filter(n => !sameScene(n, eventId, scene));
+  set({ notes: trimmed ? [{ eventId, scene, text: trimmed, updatedAt: Date.now() }, ...rest] : rest });
 }
 
 export function deleteNote(eventId: string, scene: number) {
-  state = { ...state, notes: state.notes.filter(n => !(n.eventId === eventId && n.scene === scene)) };
-  persist();
-  emit();
+  set({ notes: state.notes.filter(n => !sameScene(n, eventId, scene)) });
 }
 
-export function toggleBookmark(eventId: string, scene: number) {
-  const on = isBookmarked(eventId, scene);
-  const bookmarks = on
-    ? state.bookmarks.filter(b => !(b.eventId === eventId && b.scene === scene))
-    : [{ eventId, scene, savedAt: Date.now() }, ...state.bookmarks];
-  state = { ...state, bookmarks };
-  persist();
-  emit();
+// Tek işaret: yeni sahnede işaretlemek eskisinin yerine geçer; aynı sahnede tekrar basmak kaldırır.
+export function toggleMarker(eventId: string, scene: number) {
+  set({ marker: isMarker(eventId, scene) ? null : { eventId, scene, savedAt: Date.now() } });
 }
 
-export function removeBookmark(eventId: string, scene: number) {
-  if (!isBookmarked(eventId, scene)) return;
-  toggleBookmark(eventId, scene);
+export function clearMarker() {
+  if (state.marker) set({ marker: null });
 }
 
-export function markLastScene(eventId: string, scene: number) {
-  const recents = { ...state.recents, [eventId]: scene };
-  state = { ...state, last: { eventId, scene, at: Date.now() }, recents };
-  persist();
-  emit();
+export function toggleFavorite(eventId: string, scene: number) {
+  set({
+    favorites: isFavorite(eventId, scene)
+      ? state.favorites.filter(f => !sameScene(f, eventId, scene))
+      : [{ eventId, scene, savedAt: Date.now() }, ...state.favorites],
+  });
+}
+
+export function removeFavorite(eventId: string, scene: number) {
+  if (isFavorite(eventId, scene)) toggleFavorite(eventId, scene);
+}
+
+export function recordQuiz(eventId: string, score: number) {
+  if ((state.quizBest[eventId] ?? -1) >= score) return;
+  set({ quizBest: { ...state.quizBest, [eventId]: score } });
 }
 
 void load();

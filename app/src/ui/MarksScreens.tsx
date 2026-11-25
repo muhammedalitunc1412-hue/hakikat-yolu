@@ -2,8 +2,8 @@ import React from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View, Platform } from 'react-native';
 import { EVENTS } from '../data/events';
 import { tx, ui } from '../i18n';
-import { BookmarkIcon, Chevron, NoteIcon } from './icons';
-import { type Bookmark, type UserNote, deleteNote, removeBookmark, useMarks } from './marks';
+import { Chevron, HeartIcon, NoteIcon } from './icons';
+import { type Favorite, type UserNote, deleteNote, removeFavorite, useMarks } from './marks';
 import { useScrollMemory } from './scrollMemory';
 import { C, TOP, align, font, themedStyles } from './theme';
 
@@ -65,39 +65,39 @@ function NoteRow({ note, onOpen }: { note: UserNote; onOpen: (eventId: string, s
   );
 }
 
-export function BookmarksList({ onBack, onOpen }: { onBack: () => void; onOpen: (eventId: string, scene: number) => void }) {
-  const sc = useScrollMemory('bookmarks');
-  const { bookmarks, ready } = useMarks();
+export function FavoritesList({ onBack, onOpen }: { onBack: () => void; onOpen: (eventId: string, scene: number) => void }) {
+  const sc = useScrollMemory('favorites');
+  const { favorites, ready } = useMarks();
   return (
     <ScrollView {...sc} style={{ flex: 1, backgroundColor: C.bg }} contentContainerStyle={s.page}>
       <Back onPress={onBack} />
       <View style={s.headRow}>
-        <View style={s.bubble}><BookmarkIcon size={22} /></View>
+        <View style={s.bubble}><HeartIcon size={22} /></View>
         <View style={{ flex: 1 }}>
-          <Text accessibilityRole="header" style={[s.title, align()]}>{ui('bookmarks')}</Text>
-          <Text style={[s.sub, align()]}>{ui('bookmarksSub')}</Text>
+          <Text accessibilityRole="header" style={[s.title, align()]}>{ui('favorites')}</Text>
+          <Text style={[s.sub, align()]}>{ui('favoritesSub')}</Text>
         </View>
       </View>
-      {ready && bookmarks.length === 0 && <Text style={[s.empty, align()]}>{ui('bookmarksEmpty')}</Text>}
-      {bookmarks.map(b => <BookmarkRow key={b.eventId + ':' + b.scene} mark={b} onOpen={onOpen} />)}
+      {ready && favorites.length === 0 && <Text style={[s.empty, align()]}>{ui('favoritesEmpty')}</Text>}
+      {favorites.map(f => <FavoriteRow key={f.eventId + ':' + f.scene} fav={f} onOpen={onOpen} />)}
     </ScrollView>
   );
 }
 
-function BookmarkRow({ mark, onOpen }: { mark: Bookmark; onOpen: (eventId: string, scene: number) => void }) {
-  const { title, line, ok } = sceneLabel(mark.eventId, mark.scene);
+function FavoriteRow({ fav, onOpen }: { fav: Favorite; onOpen: (eventId: string, scene: number) => void }) {
+  const { title, line, ok } = sceneLabel(fav.eventId, fav.scene);
   return (
     <Pressable
-      onPress={() => ok && onOpen(mark.eventId, mark.scene)}
+      onPress={() => ok && onOpen(fav.eventId, fav.scene)}
       accessibilityRole="button"
       style={({ pressed }) => [s.card, pressed && s.pressed, webHit]}
     >
-      <BookmarkIcon size={20} filled />
+      <HeartIcon size={20} filled />
       <View style={{ flex: 1 }}>
         <Text style={[s.cardTitle, align()]}>{title}</Text>
         <Text style={[s.cardMeta, align()]}>{line}</Text>
       </View>
-      <Pressable onPress={() => removeBookmark(mark.eventId, mark.scene)} hitSlop={8} accessibilityRole="button" accessibilityLabel={ui('unbookmark')} style={s.iconBtn}>
+      <Pressable onPress={() => removeFavorite(fav.eventId, fav.scene)} hitSlop={8} accessibilityRole="button" accessibilityLabel={ui('favRemove')} style={s.iconBtn}>
         <Text style={s.del}>×</Text>
       </Pressable>
       <Chevron color={C.gold} />

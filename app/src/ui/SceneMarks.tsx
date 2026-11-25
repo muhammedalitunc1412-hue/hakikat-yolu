@@ -2,42 +2,58 @@ import React, { useEffect, useState } from 'react';
 import { Alert, KeyboardAvoidingView, Modal, Platform, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import { ui } from '../i18n';
 import type { HistEvent } from '../types';
-import { BookmarkIcon, NoteIcon } from './icons';
-import { deleteNote, isBookmarked, noteOf, saveNote, toggleBookmark, useMarks } from './marks';
-import { C, PAGE_MAX, align, font, themedStyles } from './theme';
+import { BookmarkIcon, HeartIcon, NoteIcon } from './icons';
+import { deleteNote, isFavorite, isMarker, noteOf, saveNote, toggleFavorite, toggleMarker, useMarks } from './marks';
+import { C, PAGE_MAX, align, font, rowDir, themedStyles } from './theme';
 
 const webHit = Platform.OS === 'web' ? { cursor: 'pointer' as const } : null;
 
-export function SceneMarkBar({ ev, scene }: { ev: HistEvent; scene: number }) {
+export function SceneMarkBar({ ev, scene, extra }: { ev: HistEvent; scene: number; extra?: React.ReactNode }) {
   useMarks();
   const [editing, setEditing] = useState(false);
-  const marked = isBookmarked(ev.id, scene);
+  const marked = isMarker(ev.id, scene);
+  const fav = isFavorite(ev.id, scene);
   const note = noteOf(ev.id, scene);
   return (
     <>
-      <View style={s.bar}>
-        <Pressable
-          onPress={() => toggleBookmark(ev.id, scene)}
-          accessibilityRole="button"
-          accessibilityState={{ selected: marked }}
-          accessibilityLabel={marked ? ui('unbookmark') : ui('bookmark')}
-          style={({ pressed }) => [s.btn, marked && s.btnOn, pressed && { opacity: 0.85 }, webHit]}
-        >
-          <BookmarkIcon size={18} filled={marked} />
-          <Text style={[s.btnText, marked && s.btnTextOn]} numberOfLines={1}>{marked ? ui('bookmarked') : ui('bookmark')}</Text>
-        </Pressable>
-        <Pressable
+      <View style={[s.bar, { flexDirection: rowDir() }]}>
+        <ActionBtn
+          on={marked}
+          onPress={() => toggleMarker(ev.id, scene)}
+          icon={<BookmarkIcon size={18} filled={marked} />}
+          label={marked ? ui('markerRemove') : ui('markerSet')}
+        />
+        <ActionBtn
+          on={fav}
+          onPress={() => toggleFavorite(ev.id, scene)}
+          icon={<HeartIcon size={18} filled={fav} />}
+          label={fav ? ui('favRemove') : ui('favAdd')}
+        />
+        <ActionBtn
+          on={!!note}
           onPress={() => setEditing(true)}
-          accessibilityRole="button"
-          accessibilityLabel={note ? ui('editNote') : ui('addNote')}
-          style={({ pressed }) => [s.btn, note && s.btnOn, pressed && { opacity: 0.85 }, webHit]}
-        >
-          <NoteIcon size={18} filled={!!note} />
-          <Text style={[s.btnText, note && s.btnTextOn]} numberOfLines={1}>{note ? ui('editNote') : ui('addNote')}</Text>
-        </Pressable>
+          icon={<NoteIcon size={18} filled={!!note} />}
+          label={note ? ui('editNote') : ui('addNote')}
+        />
+        {extra}
       </View>
       {editing && <NoteEditor ev={ev} scene={scene} onClose={() => setEditing(false)} />}
     </>
+  );
+}
+
+export function ActionBtn({ on, onPress, icon, label }: { on?: boolean; onPress: () => void; icon: React.ReactNode; label: string }) {
+  return (
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityState={on === undefined ? undefined : { selected: on }}
+      accessibilityLabel={label}
+      style={({ pressed }) => [s.btn, { flexDirection: rowDir() }, on && s.btnOn, pressed && { opacity: 0.85 }, webHit]}
+    >
+      {icon}
+      <Text style={s.btnText} numberOfLines={2}>{label}</Text>
+    </Pressable>
   );
 }
 
@@ -96,11 +112,10 @@ function NoteEditor({ ev, scene, onClose }: { ev: HistEvent; scene: number; onCl
 }
 
 const s = themedStyles(() => StyleSheet.create({
-  bar: { flexDirection: 'row', gap: 8, paddingHorizontal: 18, paddingBottom: 10 },
-  btn: { flex: 1, minHeight: 44, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 7, paddingHorizontal: 8, borderRadius: 14, borderWidth: 1, borderColor: C.lineStrong, backgroundColor: C.card },
+  bar: { flexWrap: 'wrap', gap: 8, paddingHorizontal: 18, paddingBottom: 10 },
+  btn: { flexGrow: 1, flexBasis: '46%', minHeight: 44, alignItems: 'center', justifyContent: 'center', gap: 7, paddingHorizontal: 8, borderRadius: 14, borderWidth: 1, borderColor: C.lineStrong, backgroundColor: C.card },
   btnOn: { borderColor: C.gold, backgroundColor: 'rgba(228,197,106,0.12)' },
   btnText: { color: C.gold, fontFamily: font.sans, fontSize: 12.5, fontWeight: '700', flexShrink: 1 },
-  btnTextOn: { color: C.gold },
   modalRoot: { flex: 1, justifyContent: 'flex-end', alignItems: 'center', backgroundColor: 'rgba(4,12,11,0.62)' },
   sheet: { width: '100%', maxWidth: PAGE_MAX, backgroundColor: C.card, borderTopLeftRadius: 24, borderTopRightRadius: 24, borderTopWidth: 1, borderColor: C.lineStrong, paddingHorizontal: 20, paddingTop: 10, paddingBottom: 28 },
   grab: { alignSelf: 'center', width: 40, height: 4, borderRadius: 2, backgroundColor: C.lineStrong, marginBottom: 14 },

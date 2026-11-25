@@ -3,7 +3,7 @@ import { BackHandler, Pressable, ScrollView, Text, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StatusBar } from 'expo-status-bar';
 import { DuaList, DuaScreen, EventScreen, Home, Method, Stories } from './src/ui/Screens';
-import { BookmarksList, NotesList } from './src/ui/MarksScreens';
+import { FavoritesList, NotesList } from './src/ui/MarksScreens';
 import { PurposeScreen } from './src/ui/PurposeScreen';
 import { Onboarding } from './src/ui/Onboarding';
 import { AhidnameScreen } from './src/ui/AhidnameScreen';
@@ -31,7 +31,7 @@ type Route =
   | { name: 'map'; id: string }
   | { name: 'ahidname' }
   | { name: 'my-notes' }
-  | { name: 'bookmarks' };
+  | { name: 'favorites' };
 
 setupNotifications();
 
@@ -212,8 +212,8 @@ function App() {
                 <Pressable onPress={() => { setEditingLanguage(false); push({ name: 'my-notes' }); }} accessibilityRole="button" style={{ padding: 12, backgroundColor: C.card, borderWidth: 1, borderColor: C.lineStrong }}>
                   <Text style={{ color: C.cream, fontSize: 17 }}>{ui('myNotes')}</Text>
                 </Pressable>
-                <Pressable onPress={() => { setEditingLanguage(false); push({ name: 'bookmarks' }); }} accessibilityRole="button" style={{ padding: 12, backgroundColor: C.card, borderWidth: 1, borderColor: C.lineStrong }}>
-                  <Text style={{ color: C.cream, fontSize: 17 }}>{ui('bookmarks')}</Text>
+                <Pressable onPress={() => { setEditingLanguage(false); push({ name: 'favorites' }); }} accessibilityRole="button" style={{ padding: 12, backgroundColor: C.card, borderWidth: 1, borderColor: C.lineStrong }}>
+                  <Text style={{ color: C.cream, fontSize: 17 }}>{ui('favorites')}</Text>
                 </Pressable>
                 <Pressable onPress={replayOnboarding} accessibilityRole="button" style={{ padding: 14, alignItems: 'center', backgroundColor: C.card, borderWidth: 1, borderColor: C.lineStrong }}>
                   <Text style={{ color: C.gold, fontSize: 17, fontWeight: '700' }}>{ui('onbReplay')}</Text>
@@ -231,7 +231,7 @@ function App() {
         ) : <>
         <View key={'fs' + scale} style={{ flex: 1 }}>
         {route.name === 'home' && (
-          <Home langName={languageOption(lang).name} onSettings={() => { setDraftLanguage(lang); setEditingLanguage(true); }} onStories={() => push({ name: 'stories' })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onMaps={() => push({ name: 'maps' })} onImams={() => push({ name: 'imams' })} onNotes={() => push({ name: 'my-notes' })} onBookmarks={() => push({ name: 'bookmarks' })} onOpenEvent={openEvent} />
+          <Home langName={languageOption(lang).name} onSettings={() => { setDraftLanguage(lang); setEditingLanguage(true); }} onStories={() => push({ name: 'stories' })} onMethod={() => push({ name: 'method' })} onDuas={() => push({ name: 'duas' })} onMaps={() => push({ name: 'maps' })} onImams={() => push({ name: 'imams' })} onNotes={() => push({ name: 'my-notes' })} onFavorites={() => push({ name: 'favorites' })} onOpenEvent={openEvent} />
         )}
         {route.name === 'stories' && (
           <Stories events={EVENTS} onBack={back} onOpen={id => push({ name: 'event', id })} onOpenAhid={() => push({ name: 'ahidname' })} />
@@ -240,7 +240,7 @@ function App() {
         {route.name === 'event' && !ev && <Missing onBack={back} />}
         {route.name === 'method' && <Method onBack={back} />}
         {route.name === 'my-notes' && <NotesList onBack={back} onOpen={(id, scene) => push({ name: 'event', id, scene })} />}
-        {route.name === 'bookmarks' && <BookmarksList onBack={back} onOpen={(id, scene) => push({ name: 'event', id, scene })} />}
+        {route.name === 'favorites' && <FavoritesList onBack={back} onOpen={(id, scene) => push({ name: 'event', id, scene })} />}
         {route.name === 'ahidname' && <AhidnameScreen onBack={back} />}
         {route.name === 'duas' && <DuaList duas={DUAS} onOpen={id => push({ name: 'dua', id })} onBack={back} />}
         {route.name === 'dua' && dua && <DuaScreen key={dua.id} dua={dua} onBack={back} />}
