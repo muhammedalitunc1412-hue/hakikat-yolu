@@ -101,6 +101,12 @@ export function usePageWidth() {
   return Math.min(width, PAGE_MAX);
 }
 
+// iPad ve geniş tabletler: pencere en az 768 pt genişse içerik (PAGE_MAX içinde) iki/üç sütuna açılır.
+export const WIDE_MIN = 768;
+export function useWide() {
+  return useWindowDimensions().width >= WIDE_MIN;
+}
+
 export function align(): Pick<TextStyle, 'textAlign' | 'writingDirection'> {
   return {
     textAlign: isRtl() ? 'right' : 'left',

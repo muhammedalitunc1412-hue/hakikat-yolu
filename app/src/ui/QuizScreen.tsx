@@ -32,6 +32,10 @@ export function QuizScreen({ ev, onBack, onOpenScene }: { ev: HistEvent; onBack:
   const total = questions.length;
   const score = picked.filter(p => p === 0).length;
   const lang = getLang();
+  // Soru metni yalnızca tr/en'de var; diğer dillerde İngilizce gösterilir ve o zaman soldan sağa yazılır.
+  const native = lang === 'tr' || lang === 'en';
+  const qa = native ? align() : { textAlign: 'left' as const, writingDirection: 'ltr' as const };
+  const qRow = native ? rowDir() : 'row';
 
   const restart = () => { setAttempt(a => a + 1); setPicked(questions.map(() => null)); setI(0); setDone(false); };
   const choose = (opt: number) => {
@@ -77,9 +81,9 @@ export function QuizScreen({ ev, onBack, onOpenScene }: { ev: HistEvent; onBack:
           const ok = picked[k] === 0;
           return (
             <View key={k} style={[s.review, { borderColor: ok ? OK : BAD }]}>
-              <Text style={[s.reviewQ, align()]}>{k + 1}. {tx(q.q)}</Text>
-              <Text style={[s.reviewA, align(), { color: ok ? OK : BAD }]}>{ok ? '✓ ' : '✗ '}{tx(q.options[picked[k] ?? 0])}</Text>
-              {!ok && <Text style={[s.reviewA, align()]}>{ui('quizWrong')} {tx(q.options[0])}</Text>}
+              <Text style={[s.reviewQ, qa]}>{k + 1}. {tx(q.q)}</Text>
+              <Text style={[s.reviewA, qa, { color: ok ? OK : BAD }]}>{ok ? '✓ ' : '✗ '}{tx(q.options[picked[k] ?? 0])}</Text>
+              {!ok && <Text style={[s.reviewA, qa]}>{ui('quizWrong')} {tx(q.options[0])}</Text>}
               <Pressable onPress={() => onOpenScene(q.scene)} accessibilityRole="button" style={({ pressed }) => [s.sceneLink, { flexDirection: rowDir() }, pressed && s.pressed, webHit]}>
                 <Text style={s.sceneLinkText}>{ui('quizSeeScene')} · {ui('scene')} {q.scene + 1}</Text>
                 <Chevron color={C.gold} size={14} />
@@ -111,7 +115,7 @@ export function QuizScreen({ ev, onBack, onOpenScene }: { ev: HistEvent; onBack:
           {questions.map((_, k) => <View key={k} style={[s.dot, k === i && s.dotOn, k < i && { backgroundColor: picked[k] === 0 ? OK : BAD }]} />)}
         </View>
       </View>
-      <Text style={[s.question, align()]} accessibilityRole="header">{tx(q.q)}</Text>
+      <Text style={[s.question, qa]} accessibilityRole="header">{tx(q.q)}</Text>
       {orders[i].map(opt => {
         const isPicked = picked[i] === opt;
         const isRight = opt === 0;
@@ -123,9 +127,9 @@ export function QuizScreen({ ev, onBack, onOpenScene }: { ev: HistEvent; onBack:
             disabled={answered}
             accessibilityRole="button"
             accessibilityState={{ selected: isPicked, disabled: answered }}
-            style={({ pressed }) => [s.option, { flexDirection: rowDir() }, tone ? { borderColor: tone, backgroundColor: tone + '22' } : null, pressed && s.pressed, webHit]}
+            style={({ pressed }) => [s.option, { flexDirection: qRow }, tone ? { borderColor: tone, backgroundColor: tone + '22' } : null, pressed && s.pressed, webHit]}
           >
-            <Text style={[s.optionText, align(), tone ? { color: C.cream } : null]}>{tx(q.options[opt])}</Text>
+            <Text style={[s.optionText, qa, tone ? { color: C.cream } : null]}>{tx(q.options[opt])}</Text>
             {tone && <Text style={[s.mark, { color: tone }]}>{isRight ? '✓' : '✗'}</Text>}
           </Pressable>
         );

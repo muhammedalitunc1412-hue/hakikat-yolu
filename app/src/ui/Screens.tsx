@@ -19,7 +19,7 @@ import { ContactSheet } from './ContactSheet';
 import { SceneMarkBar } from './SceneMarks';
 import { useMarks } from './marks';
 import { EdgeFade, PeekChevron, SwipeHintLabel } from './SwipeHint';
-import { C, TOP, align, font, rowDir, usePageWidth, themedStyles, BLOOD } from './theme';
+import { C, TOP, align, font, rowDir, usePageWidth, useWide, themedStyles, BLOOD } from './theme';
 import { rememberScene, rememberedScene, useScrollMemory } from './scrollMemory';
 
 const webHit = Platform.OS === 'web' ? { cursor: 'pointer' as const } : null;
@@ -28,10 +28,10 @@ function norm(s: string) {
   return s.toLocaleLowerCase('tr').replace(/â/g, 'a').replace(/î/g, 'i').replace(/û/g, 'u').replace(/ı/g, 'i');
 }
 
-function EventCard({ e, i, onOpen }: { e: HistEvent; i: number; onOpen: (id: string) => void }) {
+function EventCard({ e, i, onOpen, fill }: { e: HistEvent; i: number; onOpen: (id: string) => void; fill?: boolean }) {
   const red = e.id === 'kerbela' || e.id === 'fatima-vefat';
   return (
-    <Pressable onPress={() => onOpen(e.id)} accessibilityRole="button" style={({ pressed }) => [s.card, red && { backgroundColor: BLOOD.card, borderColor: BLOOD.lineStrong, borderLeftWidth: 4, borderLeftColor: BLOOD.gold }, pressed && s.pressed, webHit]}>
+    <Pressable onPress={() => onOpen(e.id)} accessibilityRole="button" style={({ pressed }) => [s.card, red && { backgroundColor: BLOOD.card, borderColor: BLOOD.lineStrong, borderLeftWidth: 4, borderLeftColor: BLOOD.gold }, fill && s.fill, pressed && s.pressed, webHit]}>
       <View style={[s.numWrap, red && { backgroundColor: BLOOD.gold }]}><Text style={[s.num, red && { color: BLOOD.ink }]}>{i + 1}</Text></View>
       <View style={{ flex: 1 }}>
         <Text style={[s.cardTitle, red && { color: BLOOD.gold }, align()]}>{tx(e.title)}</Text>
@@ -45,9 +45,9 @@ function EventCard({ e, i, onOpen }: { e: HistEvent; i: number; onOpen: (id: str
 }
 
 
-function AhidCard({ i, onOpen }: { i: number; onOpen: () => void }) {
+function AhidCard({ i, onOpen, fill }: { i: number; onOpen: () => void; fill?: boolean }) {
   return (
-    <Pressable onPress={onOpen} accessibilityRole="button" style={({ pressed }) => [s.card, s.ahidCard, pressed && s.pressed, webHit]}>
+    <Pressable onPress={onOpen} accessibilityRole="button" style={({ pressed }) => [s.card, s.ahidCard, fill && s.fill, pressed && s.pressed, webHit]}>
       <View style={s.numWrap}><Text style={s.num}>{i + 1}</Text></View>
       <View style={{ flex: 1 }}>
         <Text style={[s.cardTitle, align()]}>{tx(AHIDNAME_TITLE)}</Text>
@@ -64,6 +64,16 @@ function Back({ onPress }: { onPress: () => void }) {
     <Pressable onPress={onPress} hitSlop={8} style={s.back} accessibilityRole="button">
       <Text style={s.backText}>‹  {ui('back')}</Text>
     </Pressable>
+  );
+}
+
+// Geniş ekranda (iPad) kartları iki sütuna dizer; dar ekranda olduğu gibi alt alta bırakır.
+function Grid({ wide, children }: { wide: boolean; children: React.ReactNode }) {
+  if (!wide) return <>{children}</>;
+  return (
+    <View style={[s.grid, { flexDirection: rowDir() }]}>
+      {React.Children.toArray(children).filter(Boolean).map((c, k) => <View key={k} style={s.cell}>{c}</View>)}
+    </View>
   );
 }
 
@@ -85,6 +95,7 @@ export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps
   const sc = useScrollMemory('home');
   const width = usePageWidth();
   const wide = width >= 560;
+  const tablet = useWide();
   const [contactOpen, setContactOpen] = useState(false);
   const { marker } = useMarks();
   const markerEv = marker ? EVENTS.find(e => e.id === marker.eventId) : undefined;
@@ -134,8 +145,8 @@ export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps
         </Pressable>
       )}
 
-      <View style={{ flexDirection: wide ? 'row' : 'column', gap: 12, marginTop: 14 }}>
-        <Pressable style={({ pressed }) => [s.feature, s.featureAlt, wide && { flex: 1 }, pressed && s.pressed, webHit]} onPress={onDuas} accessibilityRole="button">
+      <View style={{ flexDirection: tablet ? rowDir() : 'column', gap: 12, marginTop: 14 }}>
+        <Pressable style={({ pressed }) => [s.feature, s.featureAlt, tablet && s.fill, pressed && s.pressed, webHit]} onPress={onDuas} accessibilityRole="button">
           <View style={s.bubble}><ArchIcon /></View>
           <View style={{ flex: 1 }}>
             <Text style={[s.featureTitle, align()]}>{ui('duas')}</Text>
@@ -143,9 +154,8 @@ export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps
           </View>
           <Chevron color={C.gold} />
         </Pressable>
-      </View>
 
-      <Pressable style={({ pressed }) => [s.feature, { marginTop: 12 }, pressed && s.pressed, webHit]} onPress={onImams} accessibilityRole="button">
+        <Pressable style={({ pressed }) => [s.feature, tablet && s.fill, pressed && s.pressed, webHit]} onPress={onImams} accessibilityRole="button">
         <View style={s.bubble}><Text style={{ color: C.gold, fontFamily: font.serif, fontSize: 17, fontWeight: '700' }}>12</Text></View>
         <View style={{ flex: 1 }}>
           <Text style={[s.featureTitle, align()]}>{ui('imams')}</Text>
@@ -154,7 +164,7 @@ export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps
         <Chevron color={C.gold} />
       </Pressable>
 
-      <Pressable style={({ pressed }) => [s.feature, { marginTop: 12 }, pressed && s.pressed, webHit]} onPress={onMaps} accessibilityRole="button">
+        <Pressable style={({ pressed }) => [s.feature, tablet && s.fill, pressed && s.pressed, webHit]} onPress={onMaps} accessibilityRole="button">
         <View style={s.bubble}><PinIcon /></View>
         <View style={{ flex: 1 }}>
           <Text style={[s.featureTitle, align()]}>{ui('maps')}</Text>
@@ -162,6 +172,7 @@ export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps
         </View>
         <Chevron color={C.gold} />
       </Pressable>
+      </View>
 
       <View style={{ flexDirection: wide ? 'row' : 'column', gap: 12, marginTop: 12 }}>
         <Pressable style={({ pressed }) => [s.feature, wide && { flex: 1 }, pressed && s.pressed, webHit]} onPress={onNotes} accessibilityRole="button">
@@ -182,7 +193,8 @@ export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps
         </Pressable>
       </View>
 
-      <Pressable onPress={() => setContactOpen(true)} accessibilityRole="button" accessibilityLabel={ui('contact')} style={({ pressed }) => [s.method, pressed && s.pressed, webHit]}>
+      <View style={{ flexDirection: tablet ? rowDir() : 'column', gap: tablet ? 12 : 0 }}>
+      <Pressable onPress={() => setContactOpen(true)} accessibilityRole="button" accessibilityLabel={ui('contact')} style={({ pressed }) => [s.method, tablet && s.fill, pressed && s.pressed, webHit]}>
         <View style={s.bubble}><ChatIcon /></View>
         <View style={{ flex: 1 }}>
           <Text style={s.methodText}>{ui('contact')}</Text>
@@ -191,11 +203,12 @@ export function Home({ langName, onSettings, onStories, onMethod, onDuas, onMaps
         <Chevron />
       </Pressable>
 
-      <Pressable onPress={onMethod} accessibilityRole="button" style={({ pressed }) => [s.method, { marginTop: 12 }, pressed && s.pressed, webHit]}>
+      <Pressable onPress={onMethod} accessibilityRole="button" style={({ pressed }) => [s.method, { marginTop: tablet ? 22 : 12 }, tablet && s.fill, pressed && s.pressed, webHit]}>
         <View style={s.bubble}><BookIcon /></View>
         <Text style={s.methodText}>{ui('method')}</Text>
         <Chevron />
       </Pressable>
+      </View>
       <ContactSheet visible={contactOpen} onClose={() => setContactOpen(false)} />
     </ScrollView>
   );
@@ -210,6 +223,7 @@ export function Stories({ events, onBack, onOpen, onOpenAhid, onSearch }: {
 }) {
   const sc = useScrollMemory('stories');
   const width = usePageWidth();
+  const tablet = useWide();
   const [q, setQ] = useState('');
   const [catI, setCatIState] = useState(lastCat);
   const setCatI = (i: number) => { lastCat = i; setCatIState(i); };
@@ -251,7 +265,7 @@ export function Stories({ events, onBack, onOpen, onOpenAhid, onSearch }: {
           accessibilityLabel={ui('search')}
         />
         {q.length > 0 && (
-          <Pressable onPress={() => setQ('')} hitSlop={10} accessibilityRole="button" accessibilityLabel="Temizle">
+          <Pressable onPress={() => setQ('')} hitSlop={10} accessibilityRole="button" accessibilityLabel={ui('close')}>
             <Text style={s.clear}>×</Text>
           </Pressable>
         )}
@@ -270,8 +284,10 @@ export function Stories({ events, onBack, onOpen, onOpenAhid, onSearch }: {
             <Text style={s.catIndex}>{String(catIndex + 1).padStart(2, '0')}</Text>
             <Text style={[s.catTitle, align()]}>{cat.title}</Text>
             <Text style={[s.catSub, align()]}>{cat.sub}</Text>
-            {list.map((e, i) => <EventCard key={e.id} e={e} i={i} onOpen={onOpen} />)}
-            {ahidHit && <AhidCard i={list.length} onOpen={onOpenAhid} />}
+            <Grid wide={tablet}>
+              {list.map((e, i) => <EventCard key={e.id} e={e} i={i} onOpen={onOpen} fill={tablet} />)}
+              {ahidHit && <AhidCard i={list.length} onOpen={onOpenAhid} fill={tablet} />}
+            </Grid>
           </View>
         );
       }) : (
@@ -326,10 +342,10 @@ export function Stories({ events, onBack, onOpen, onOpenAhid, onSearch }: {
                 .map(id => events.find(e => e.id === id))
                 .filter((e): e is HistEvent => !!e);
               return (
-                <>
-                  {evs.map((e, i) => <EventCard key={e.id} e={e} i={i} onOpen={onOpen} />)}
-                  {CATEGORIES[catI]?.id === 'ali' && <AhidCard i={evs.length} onOpen={onOpenAhid} />}
-                </>
+                <Grid wide={tablet}>
+                  {evs.map((e, i) => <EventCard key={e.id} e={e} i={i} onOpen={onOpen} fill={tablet} />)}
+                  {CATEGORIES[catI]?.id === 'ali' && <AhidCard i={evs.length} onOpen={onOpenAhid} fill={tablet} />}
+                </Grid>
               );
             })()}
           </View>
@@ -395,13 +411,13 @@ function SceneImage({ evId, n, title, width, image }: { evId: string; n: number;
   if (imgs.length) {
     return (
       <>
-        <Pressable onPress={() => setViewer(0)} accessibilityRole="button" accessibilityLabel="Görseli tam ekran aç">
+        <Pressable onPress={() => setViewer(0)} accessibilityRole="button" accessibilityLabel={ui('imageFullscreen')}>
           <Image source={cur} resizeMode="cover" resizeMethod="resize" style={{ width, height: h }} />
           <View style={s.imgCount}>
-            <Text style={s.imgCountText}>⤢{imgs.length > 1 ? ` ${imgs.length} görsel` : ''}</Text>
+            <Text style={s.imgCountText}>⤢{imgs.length > 1 ? ` ${imgs.length}` : ''}</Text>
           </View>
         </Pressable>
-        {viewer !== null && <ImageViewer images={imgs} start={viewer} caption={title + ' · Sahne ' + n} onClose={() => setViewer(null)} />}
+        {viewer !== null && <ImageViewer images={imgs} start={viewer} caption={title + ' · ' + ui('scene') + ' ' + n} onClose={() => setViewer(null)} />}
       </>
     );
   }
@@ -781,6 +797,14 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext, onQuiz, startScene 
           </Pressable>
         </View>
         {idx === 0 && <Text style={s.swipe}>{ui('sceneSwipeHint')}</Text>}
+        {idx === total - 1 && story && onQuiz && hasQuiz(ev.id) && (
+          <Pressable onPress={() => onQuiz(ev.id)} accessibilityRole="button" accessibilityLabel={ui('quizStart')} style={({ pressed }) => [s.sourcesBtn, s.quizBar, { flexDirection: rowDir() }, pressed && s.pressed, webHit]}>
+            <QuizIcon size={20} />
+            <Text style={s.sourcesBtnText} numberOfLines={1} adjustsFontSizeToFit>
+              {ui('quizTitle')} · {ui('quizStart')}{typeof quizBest[ev.id] === 'number' ? `  (${quizBest[ev.id]}/${QUIZZES[ev.id].length})` : ''}
+            </Text>
+          </Pressable>
+        )}
 
         {below}
       </ScrollView>
@@ -798,14 +822,6 @@ export function EventScreen({ ev, onBack, onOpenMap, onNext, onQuiz, startScene 
             </Pressable>
           )}
         </View>
-      )}
-      {idx === total - 1 && story && onQuiz && hasQuiz(ev.id) && (
-        <Pressable onPress={() => onQuiz(ev.id)} accessibilityRole="button" accessibilityLabel={ui('quizStart')} style={({ pressed }) => [s.sourcesBtn, s.quizBar, { flexDirection: rowDir() }, pressed && s.pressed, webHit]}>
-          <QuizIcon size={20} />
-          <Text style={s.sourcesBtnText} numberOfLines={1} adjustsFontSizeToFit>
-            {ui('quizTitle')} · {ui('quizStart')}{typeof quizBest[ev.id] === 'number' ? `  (${quizBest[ev.id]}/${QUIZZES[ev.id].length})` : ''}
-          </Text>
-        </Pressable>
       )}
       {idx === total - 1 && nxt && onNext && (
         <Pressable onPress={() => onNext(nxt.id)} accessibilityRole="button" accessibilityLabel={ui('nextEvent')} style={({ pressed }) => [s.nextBar, pressed && s.pressed, webHit]}>
@@ -936,7 +952,7 @@ const s = themedStyles(() => StyleSheet.create({
   lastRow: { flexDirection: 'row', gap: 10, marginHorizontal: 16, marginBottom: 10 },
   lastBtn: { flex: 1, marginHorizontal: 0, marginBottom: 0, paddingHorizontal: 10 },
   sourcesBtn: { minHeight: 52, borderRadius: 26, borderWidth: 1.5, borderColor: C.gold, backgroundColor: 'rgba(228,197,106,0.12)', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8 },
-  quizBar: { marginHorizontal: 16, marginBottom: 10, paddingHorizontal: 16 },
+  quizBar: { marginHorizontal: 16, marginTop: 14, marginBottom: 4, paddingHorizontal: 16 },
   sourcesBtnText: { color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '800' },
   sheetWrap: { flex: 1, backgroundColor: 'rgba(0,0,0,0.6)', justifyContent: 'flex-end', alignItems: 'center' },
   sheet: { width: '100%', maxWidth: 720, maxHeight: '88%', backgroundColor: C.bg, borderTopLeftRadius: 24, borderTopRightRadius: 24, borderWidth: 1, borderBottomWidth: 0, borderColor: C.lineStrong },
@@ -956,6 +972,9 @@ const s = themedStyles(() => StyleSheet.create({
   card: { flexDirection: 'row', gap: 12, alignItems: 'flex-start', backgroundColor: C.card, borderRadius: 18, padding: 14, marginBottom: 10, borderWidth: 1, borderColor: C.line },
   ahidCard: { borderColor: C.gold, borderLeftWidth: 3, borderLeftColor: C.gold },
   pressed: { opacity: 0.86 },
+  fill: { flex: 1 },
+  grid: { flexWrap: 'wrap', justifyContent: 'space-between' },
+  cell: { width: '49%' },
   numWrap: { width: 32, height: 32, borderRadius: 16, backgroundColor: C.gold, alignItems: 'center', justifyContent: 'center', marginTop: 2 },
   num: { color: C.ink, fontFamily: font.sans, fontWeight: '800', fontSize: 14 },
   cardTitle: { color: C.cream, fontFamily: font.serif, fontSize: 18, lineHeight: 24, fontWeight: '700' },

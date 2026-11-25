@@ -5,7 +5,7 @@ import { tx, ui } from '../i18n';
 import { Chevron, HeartIcon, NoteIcon } from './icons';
 import { type Favorite, type UserNote, deleteNote, removeFavorite, useMarks } from './marks';
 import { useScrollMemory } from './scrollMemory';
-import { C, TOP, align, font, themedStyles } from './theme';
+import { C, TOP, align, font, rowDir, themedStyles, useWide } from './theme';
 
 const webHit = Platform.OS === 'web' ? { cursor: 'pointer' as const } : null;
 
@@ -24,6 +24,7 @@ function sceneLabel(eventId: string, scene: number) {
 }
 
 export function NotesList({ onBack, onOpen }: { onBack: () => void; onOpen: (eventId: string, scene: number) => void }) {
+  const wide = useWide();
   const sc = useScrollMemory('my-notes');
   const { notes, ready } = useMarks();
   return (
@@ -37,7 +38,9 @@ export function NotesList({ onBack, onOpen }: { onBack: () => void; onOpen: (eve
         </View>
       </View>
       {ready && notes.length === 0 && <Text style={[s.empty, align()]}>{ui('myNotesEmpty')}</Text>}
-      {notes.map(n => <NoteRow key={n.eventId + ':' + n.scene} note={n} onOpen={onOpen} />)}
+      <View style={wide ? [s.grid, { flexDirection: rowDir() }] : null}>
+        {notes.map(n => <View key={n.eventId + ':' + n.scene} style={wide ? s.cell : null}><NoteRow note={n} onOpen={onOpen} /></View>)}
+      </View>
     </ScrollView>
   );
 }
@@ -66,6 +69,7 @@ function NoteRow({ note, onOpen }: { note: UserNote; onOpen: (eventId: string, s
 }
 
 export function FavoritesList({ onBack, onOpen }: { onBack: () => void; onOpen: (eventId: string, scene: number) => void }) {
+  const wide = useWide();
   const sc = useScrollMemory('favorites');
   const { favorites, ready } = useMarks();
   return (
@@ -79,7 +83,9 @@ export function FavoritesList({ onBack, onOpen }: { onBack: () => void; onOpen: 
         </View>
       </View>
       {ready && favorites.length === 0 && <Text style={[s.empty, align()]}>{ui('favoritesEmpty')}</Text>}
-      {favorites.map(f => <FavoriteRow key={f.eventId + ':' + f.scene} fav={f} onOpen={onOpen} />)}
+      <View style={wide ? [s.grid, { flexDirection: rowDir() }] : null}>
+        {favorites.map(f => <View key={f.eventId + ':' + f.scene} style={wide ? s.cell : null}><FavoriteRow fav={f} onOpen={onOpen} /></View>)}
+      </View>
     </ScrollView>
   );
 }
@@ -107,6 +113,8 @@ function FavoriteRow({ fav, onOpen }: { fav: Favorite; onOpen: (eventId: string,
 
 const s = themedStyles(() => StyleSheet.create({
   page: { paddingHorizontal: 18, paddingTop: TOP, paddingBottom: 56 },
+  grid: { flexWrap: 'wrap', justifyContent: 'space-between' },
+  cell: { width: '49%' },
   back: { minHeight: 44, justifyContent: 'center', alignSelf: 'flex-start', marginBottom: 8 },
   backText: { color: C.gold, fontFamily: font.sans, fontSize: 16, fontWeight: '700' },
   headRow: { flexDirection: 'row', alignItems: 'center', gap: 14, marginBottom: 18 },

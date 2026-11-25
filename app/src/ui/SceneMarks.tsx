@@ -5,12 +5,13 @@ import type { HistEvent } from '../types';
 import { BookmarkIcon, HeartIcon, NoteIcon, ShareIcon } from './icons';
 import { plain } from './search';
 import { deleteNote, isFavorite, isMarker, noteOf, saveNote, toggleFavorite, toggleMarker, useMarks } from './marks';
-import { C, PAGE_MAX, align, font, rowDir, themedStyles } from './theme';
+import { C, PAGE_MAX, align, font, rowDir, themedStyles, useWide } from './theme';
 
 const webHit = Platform.OS === 'web' ? { cursor: 'pointer' as const } : null;
 
 export function SceneMarkBar({ ev, scene, extra }: { ev: HistEvent; scene: number; extra?: React.ReactNode }) {
   useMarks();
+  const wide = useWide();
   const [editing, setEditing] = useState(false);
   const marked = isMarker(ev.id, scene);
   const fav = isFavorite(ev.id, scene);
@@ -23,20 +24,23 @@ export function SceneMarkBar({ ev, scene, extra }: { ev: HistEvent; scene: numbe
           onPress={() => toggleMarker(ev.id, scene)}
           icon={<BookmarkIcon size={18} filled={marked} />}
           label={marked ? ui('markerRemove') : ui('markerSet')}
+          wide={wide}
         />
         <ActionBtn
           on={fav}
           onPress={() => toggleFavorite(ev.id, scene)}
           icon={<HeartIcon size={18} filled={fav} />}
           label={fav ? ui('favRemove') : ui('favAdd')}
+          wide={wide}
         />
         <ActionBtn
           on={!!note}
           onPress={() => setEditing(true)}
           icon={<NoteIcon size={18} filled={!!note} />}
           label={note ? ui('editNote') : ui('addNote')}
+          wide={wide}
         />
-        <ActionBtn onPress={() => void shareScene(ev, scene)} icon={<ShareIcon size={18} />} label={ui('shareScene')} />
+        <ActionBtn onPress={() => void shareScene(ev, scene)} icon={<ShareIcon size={18} />} label={ui('shareScene')} wide={wide} />
         {extra}
       </View>
       {editing && <NoteEditor ev={ev} scene={scene} onClose={() => setEditing(false)} />}
@@ -63,14 +67,14 @@ async function shareScene(ev: HistEvent, scene: number) {
   }
 }
 
-export function ActionBtn({ on, onPress, icon, label }: { on?: boolean; onPress: () => void; icon: React.ReactNode; label: string }) {
+export function ActionBtn({ on, onPress, icon, label, wide }: { on?: boolean; onPress: () => void; icon: React.ReactNode; label: string; wide?: boolean }) {
   return (
     <Pressable
       onPress={onPress}
       accessibilityRole="button"
       accessibilityState={on === undefined ? undefined : { selected: on }}
       accessibilityLabel={label}
-      style={({ pressed }) => [s.btn, { flexDirection: rowDir() }, on && s.btnOn, pressed && { opacity: 0.85 }, webHit]}
+      style={({ pressed }) => [s.btn, { flexDirection: rowDir() }, wide && { flexBasis: '22%' }, on && s.btnOn, pressed && { opacity: 0.85 }, webHit]}
     >
       {icon}
       <Text style={s.btnText} numberOfLines={2}>{label}</Text>
