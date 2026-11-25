@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Alert, KeyboardAvoidingView, Modal, Platform, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
-import { ui } from '../i18n';
+import { Alert, KeyboardAvoidingView, Modal, Platform, Pressable, Share, StyleSheet, Text, TextInput, View } from 'react-native';
+import { tx, ui } from '../i18n';
 import type { HistEvent } from '../types';
-import { BookmarkIcon, HeartIcon, NoteIcon } from './icons';
+import { BookmarkIcon, HeartIcon, NoteIcon, ShareIcon } from './icons';
+import { plain } from './search';
 import { deleteNote, isFavorite, isMarker, noteOf, saveNote, toggleFavorite, toggleMarker, useMarks } from './marks';
 import { C, PAGE_MAX, align, font, rowDir, themedStyles } from './theme';
 
@@ -35,11 +36,31 @@ export function SceneMarkBar({ ev, scene, extra }: { ev: HistEvent; scene: numbe
           icon={<NoteIcon size={18} filled={!!note} />}
           label={note ? ui('editNote') : ui('addNote')}
         />
+        <ActionBtn onPress={() => void shareScene(ev, scene)} icon={<ShareIcon size={18} />} label={ui('shareScene')} />
         {extra}
       </View>
       {editing && <NoteEditor ev={ev} scene={scene} onClose={() => setEditing(false)} />}
     </>
   );
+}
+
+// Sahneyi paylaş: hikâye adı, sahne numarası, kısa metin ve uygulamanın adı (sistem paylaşım sayfası).
+export function shareText(ev: HistEvent, scene: number, max = 280): string {
+  const body = plain(tx(ev.scenes[scene]?.text ?? ''));
+  let short = body;
+  if (body.length > max) {
+    const cut = body.lastIndexOf(' ', max);
+    short = body.slice(0, cut > max * 0.6 ? cut : max).replace(/[\s,;:]+$/, '') + '…';
+  }
+  return `${plain(tx(ev.title))} · ${ui('scene')} ${scene + 1}\n\n${short}\n\n— ${ui('appTitle')}`;
+}
+
+async function shareScene(ev: HistEvent, scene: number) {
+  try {
+    await Share.share({ message: shareText(ev, scene), title: plain(tx(ev.title)) });
+  } catch {
+    // Kullanıcı vazgeçti ya da paylaşım sayfası açılamadı: sessizce geç.
+  }
 }
 
 export function ActionBtn({ on, onPress, icon, label }: { on?: boolean; onPress: () => void; icon: React.ReactNode; label: string }) {
